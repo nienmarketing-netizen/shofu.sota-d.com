@@ -1,0 +1,6 @@
+{
+  "name": "VIDEC 2026 | Sota-D SHOFU Booth",
+  "description": "Trang đăng ký tham dự Báo cáo khoa học & Demo Hands-on của Sota-D / SHOFU tại VIDEC 2026 (Gian hàng B75–B77).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

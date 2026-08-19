@@ -1,0 +1,35 @@
+        {/* Technology Report - S-PRG */}
+        <div className="pt-8 sm:pt-12">
+          
+          {/* Report Header */}
+          <div className="bg-slate-900 rounded-[2.5rem] px-8 py-12 sm:px-12 relative overflow-hidden mb-8 shadow-xl shadow-slate-900/10">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#00ADEF] opacity-20 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#C43838] opacity-20 blur-3xl rounded-full -translate-x-1/2 translate-y-1/2"></div>
+            
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-sm">
+                <BookOpen className="w-4 h-4 text-[#00ADEF]" />
+                <span className="font-mono text-xs font-bold text-white uppercase tracking-widest">Báo cáo Chuyên môn</span>
+              </div>
+              <h3 className="font-heading font-extrabold text-3xl md:text-5xl text-white mb-6 leading-tight">
+                Công nghệ hạt độn sinh học <span className="text-[#00ADEF]">S-PRG</span>
+              </h3>
+              <p className="font-body text-lg text-slate-300 max-w-3xl leading-relaxed">
+                Từ phục hồi thụ động sang trị liệu sinh học chủ động. S-PRG không đơn thuần là hạt độn, mà là một cỗ máy vi thể thay đổi hoàn toàn môi trường phục hình.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mb-12">
+            <button 
+              onClick={() => setIsReportExpanded(!isReportExpanded)}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-slate-900 text-white font-bold hover:bg-[#00ADEF] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            >
+              {isReportExpanded ? 'Thu gọn báo cáo' : 'Xem toàn bộ thông tin'}
+              {isReportExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+            </button>
+          </div>
+
+          <AnimatePresence>
+            {isReportExpanded && (
+              <motion.div

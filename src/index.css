@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  overflow-x: clip !important;
+
+}
+
+body {
+  position: relative;
+  touch-action: pan-y;
+}
+
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  overflow-x: clip !important;
+  position: relative;
+}
+
+main, section, header, footer {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  overflow-x: clip !important;
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Plus Jakarta Sans', 'Montserrat', 'Inter', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.025em;
+    font-stretch: normal;
+  }
+  .font-body {
+    font-family: 'Inter', 'Roboto', system-ui, -apple-system, sans-serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Sota-D (#C43838) & SHOFU (#00ADEF) Brand Guideline Theme */
+.bg-grid-pattern {
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, rgba(0, 173, 239, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 173, 239, 0.1) 1px, transparent 1px);
+}
+
+/* Brand Gradients */
+.sota-gradient { background: #C43838; }
+.shofu-gradient { background: #00ADEF; }
+.sota-shofu-gradient { background: #00ADEF; }
+.bitcoin-gradient {
+  background: linear-gradient(135deg, #C43838 0%, #00ADEF 100%);
+}
+
+/* Text Gradients */
+.text-gradient { color: #00ADEF; }
+.text-sota {
+  color: #C43838;
+}
+.text-shofu {
+  color: #00ADEF;
+}
+
+/* Solid Content Cards */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0; /* slate-200 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card-hover:hover {
+  border-color: rgba(0, 173, 239, 0.45);
+  box-shadow: 0 10px 25px -5px rgba(0, 173, 239, 0.15), 0 8px 10px -6px rgba(0, 173, 239, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Tech Corner Accents */
+.corner-accents {
+  position: relative;
+}
+.corner-accents::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #C43838;
+  border-left: 2px solid #C43838;
+  border-top-left-radius: 4px;
+}
+.corner-accents::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #00ADEF;
+  border-right: 2px solid #00ADEF;
+  border-bottom-right-radius: 4px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ADEF;
+}
