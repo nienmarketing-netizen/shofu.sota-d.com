@@ -3,7 +3,7 @@ import { Download, FileText, CheckCircle2 } from 'lucide-react';
 
 export function ShofuLeadMagnet() {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState({ name: '', phone: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -74,7 +74,7 @@ export function ShofuLeadMagnet() {
                     placeholder="VD: BS. Nguyễn Văn A"
                   />
                 </div>
-                <div className="mb-6">
+                <div className="mb-4">
                   <label className="block font-mono text-xs font-bold text-slate-700 uppercase mb-2">
                     Số điện thoại (Zalo)
                   </label>
@@ -85,6 +85,19 @@ export function ShofuLeadMagnet() {
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:outline-none focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF]"
                     placeholder="VD: 0967 287 139"
+                  />
+                </div>
+                <div className="mb-6">
+                  <label className="block font-mono text-xs font-bold text-slate-700 uppercase mb-2">
+                    Địa chỉ Email
+                  </label>
+                  <input 
+                    type="email" 
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:outline-none focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF]"
+                    placeholder="VD: bacsi@nhakhoa.com"
                   />
                 </div>
                 <button 
