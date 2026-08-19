@@ -47,7 +47,7 @@ export function ShofuAbout() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#00ADEF]/20 to-[#C43838]/20 rounded-3xl blur-3xl transform -rotate-6 opacity-60"></div>
             <img 
-              src="/images/Shofu-1922-office.png" 
+              src="/images/Shofu-1922-office.webp" 
               alt="Shofu History 1922" 
               className="relative w-full h-auto object-cover rounded-3xl mix-blend-multiply"
               style={{ 
@@ -56,7 +56,7 @@ export function ShofuAbout() {
               }}
               onError={(e) => {
                 if (!e.currentTarget.src.includes("raw.githubusercontent.com")) {
-                  e.currentTarget.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/Shofu-1922-office.png";
+                  e.currentTarget.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/Shofu-1922-office.webp";
                 }
               }}
             />

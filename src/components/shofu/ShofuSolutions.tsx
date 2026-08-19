@@ -111,12 +111,12 @@ export function ShofuSolutions() {
             <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
                 <img 
-                  src="/images/super-snap-xtreme.png" 
+                  src="/images/super-snap-xtreme.webp" 
                   alt="Super-Snap Xtreme" 
                   className="w-full h-full object-cover mix-blend-multiply" 
                   onError={(e) => {
                     if (!e.currentTarget.src.includes("raw.githubusercontent.com")) {
-                      e.currentTarget.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/super-snap-xtreme.png";
+                      e.currentTarget.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/super-snap-xtreme.webp";
                     }
                   }}
                 />

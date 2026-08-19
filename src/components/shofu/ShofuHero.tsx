@@ -15,12 +15,12 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
       {/* Main Image - Aligned with Content */}
       <div className="w-[90%] lg:w-[80%] mx-auto relative z-10 mb-10 md:mb-16 mix-blend-multiply opacity-90">
         <img
-          src="/images/background-hero-section-full-solution-shofu.png"
+          src="/images/background-hero-section-full-solution-shofu.webp"
           alt="Shofu Full Solution"
           className="w-full h-auto object-cover block mix-blend-multiply"
           onError={(e) => {
             if (!e.currentTarget.src.includes("raw.githubusercontent.com")) {
-              e.currentTarget.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/background-hero-section-full-solution-shofu.png";
+              e.currentTarget.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/background-hero-section-full-solution-shofu.webp";
             }
           }}
         />
