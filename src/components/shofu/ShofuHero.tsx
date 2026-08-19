@@ -19,8 +19,9 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
           alt="Shofu Full Solution"
           className="w-full h-auto object-cover block mix-blend-multiply"
           onError={(e) => {
-            // Hiển thị placeholder nếu ảnh chưa được tải lên
-            e.currentTarget.src = "https://placehold.co/1200x600/f8fafc/94a3b8?text=Đang+chờ+ảnh:+background-hero-section-full-solution-shofu.png";
+            if (!e.currentTarget.src.includes("raw.githubusercontent.com")) {
+              e.currentTarget.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/background-hero-section-full-solution-shofu.png";
+            }
           }}
         />
       </div>

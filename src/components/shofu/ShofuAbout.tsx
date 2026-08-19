@@ -54,6 +54,11 @@ export function ShofuAbout() {
                 WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)',
                 maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)' 
               }}
+              onError={(e) => {
+                if (!e.currentTarget.src.includes("raw.githubusercontent.com")) {
+                  e.currentTarget.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/Shofu-1922-office.png";
+                }
+              }}
             />
           </div>
         </div>
