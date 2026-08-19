@@ -25,9 +25,10 @@ export function ShofuLeadMagnet() {
               <span className="font-mono text-xs font-bold text-[#C43838] uppercase tracking-widest">Tài Liệu Độc Quyền</span>
             </div>
             
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 leading-tight">
-              Nhận Trọn Bộ <br />
-              <span className="text-[#00ADEF]">Bảng Giá Sỉ & Protocol</span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-4 leading-[1.3] sm:leading-tight">
+              Nhận trọn bộ <br />
+              tài liệu độc quyền, <br />
+              <span className="text-[#00ADEF]">video protocol chi tiết</span>
             </h2>
             
             <p className="font-body text-slate-600 mb-8">
@@ -35,9 +36,10 @@ export function ShofuLeadMagnet() {
             </p>
             
             <ul className="space-y-3 font-body text-sm text-slate-700">
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Bảng giá sỉ vật liệu tiêu hao 2026</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Protocol trám răng sau Beautifil Injectable</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Cẩm nang chống ê buốt với Giomer</li>
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Protocol Posterior Restoration</li>
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Protocol 3D Printed Technical</li>
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Ưu đãi đặc biệt gói trám MiCD</li>
             </ul>
           </div>
 
@@ -50,13 +52,16 @@ export function ShofuLeadMagnet() {
                 </div>
                 <h3 className="font-heading font-bold text-xl text-sky-900 mb-2">Đăng Ký Thành Công!</h3>
                 <p className="font-body text-sky-700 text-sm">
-                  Chuyên viên Sota-D sẽ liên hệ và gửi tài liệu qua Zalo của Bác sĩ trong ít phút tới.
+                  Cảm ơn Bác sĩ đã tạo cơ hội cho Sota-D được phục vụ. Chuyên viên Sota-D sẽ sớm liên hệ và gửi thông tin đến Bác sĩ.
                 </p>
                 <button 
-                  onClick={() => setIsSubmitted(false)}
+                  onClick={() => {
+                    setIsSubmitted(false);
+                    setFormData({ name: '', phone: '', email: '' });
+                  }}
                   className="mt-6 text-[#00ADEF] text-sm font-bold hover:underline"
                 >
-                  Đăng ký tài khoản khác
+                  Đóng thông báo
                 </button>
               </div>
             ) : (
