@@ -8,8 +8,31 @@ export function ShofuLeadMagnet() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Demo submission
-    setIsSubmitted(true);
+    
+    const payload = {
+      name: formData.name,
+      phone: formData.phone,
+      clinic: '',
+      wantsCustomOffer: 'No',
+      selectedPromos: 'Lead Magnet: Đăng ký nhận cẩm nang 3D Printed Technique'
+    };
+
+    fetch('/api/submit-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (!data.error) {
+        setIsSubmitted(true);
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      // fallback
+      setIsSubmitted(true);
+    });
   };
 
   return (
