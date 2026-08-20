@@ -211,19 +211,57 @@ export function ShofuOfferModal() {
             {/* Right Panel - Form */}
             <div className="w-full lg:w-2/5 p-6 lg:p-8 bg-white flex flex-col justify-center shrink-0">
               {isSuccess ? (
-                <div className="text-center py-12">
-                  <div className="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="w-10 h-10" />
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8" />
                   </div>
-                  <h3 className="font-heading font-bold text-2xl text-slate-900 mb-2">Đăng ký thành công!</h3>
-                  <p className="text-slate-600 mb-8">
-                    Cảm ơn Bác sĩ. Chuyên viên Sota-D sẽ liên hệ ngay để xác nhận đơn hàng và ưu đãi.
+                  <h3 className="font-heading font-bold text-2xl text-slate-900 mb-2">Yêu cầu đã được ghi nhận!</h3>
+                  <p className="text-slate-600 mb-6 text-sm sm:text-base px-4">
+                    Cảm ơn Quý Bác sĩ đã cho Sota-D cơ hội được phục vụ.<br className="hidden sm:block" />
+                    Sota-D sẽ sớm liên hệ với Quý Bác sĩ!
                   </p>
+                  
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-left mb-6">
+                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Thông tin đã ghi nhận</h4>
+                    <div className="space-y-3">
+                      <div className="flex">
+                        <span className="w-28 text-slate-500 text-sm">Bác sĩ:</span>
+                        <span className="font-bold text-slate-900 text-sm flex-1">{formData.name}</span>
+                      </div>
+                      <div className="flex">
+                        <span className="w-28 text-slate-500 text-sm">SĐT:</span>
+                        <span className="font-bold text-slate-900 text-sm flex-1">{formData.phone}</span>
+                      </div>
+                      {formData.clinic && (
+                        <div className="flex">
+                          <span className="w-28 text-slate-500 text-sm">Phòng khám:</span>
+                          <span className="font-bold text-slate-900 text-sm flex-1">{formData.clinic}</span>
+                        </div>
+                      )}
+                      <div className="flex">
+                        <span className="w-28 text-slate-500 text-sm">Chương trình:</span>
+                        <span className="font-bold text-slate-900 text-sm flex-1">
+                          {[
+                            ...selectedPromos.map(p => promos.find(x => x.id === p)?.title),
+                            formData.wantsCustomOffer ? 'Tư vấn chương trình riêng' : ''
+                          ].filter(Boolean).join(', ')}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-slate-500 mb-6">
+                    Nếu Quý Bác sĩ cần hỗ trợ ngay, vui lòng liên hệ hotline:<br />
+                    <a href="tel:0967287139" className="text-[#00ADEF] font-bold hover:underline">0967 287 139</a>
+                    <span className="mx-2 text-slate-300">|</span>
+                    <a href="tel:0901769510" className="text-[#00ADEF] font-bold hover:underline">0901 769 510</a>
+                  </p>
+
                   <button 
                     onClick={close}
-                    className="bg-slate-100 text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-slate-200 transition-colors"
+                    className="w-full bg-[#111827] text-white font-bold px-8 py-4 rounded-xl hover:bg-slate-800 transition-colors tracking-widest text-sm"
                   >
-                    Đóng cửa sổ
+                    HOÀN TẤT
                   </button>
                 </div>
               ) : (
