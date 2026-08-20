@@ -157,7 +157,7 @@ export function ShofuOfferModal() {
 
                       {/* Image Placeholder */}
                       <div className="h-32 bg-slate-100 relative overflow-hidden group">
-                        <img src={promo.image} alt={promo.title} className="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" />
+                        <img referrerPolicy="no-referrer" src={promo.image} alt={promo.title} className="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         <div className="absolute bottom-2 left-3">
                            <span className="inline-block bg-[#C43838] text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded">

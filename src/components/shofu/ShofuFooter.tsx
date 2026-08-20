@@ -27,9 +27,9 @@ export function ShofuFooter() {
           {/* Brand Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-3">
             <div className="flex items-center gap-3 mb-6 bg-white p-2 rounded-xl w-fit">
-              <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Sota-D%20logo%20(1).png" alt="Sota-D" className="h-6 object-contain" />
+              <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Sota-D%20logo%20(1).png" alt="Sota-D" className="h-6 object-contain" />
               <div className="w-[1px] h-4 bg-slate-300"></div>
-              <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Logo_Shofu%20(1).png" alt="Shofu" className="h-6 object-contain" />
+              <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Logo_Shofu%20(1).png" alt="Shofu" className="h-6 object-contain" />
             </div>
             <p className="font-body text-sm text-slate-400 leading-relaxed mb-6">
               Sota-D tự hào là nhà phân phối chiến lược các giải pháp lâm sàng từ tập đoàn nha khoa Shofu (Nhật Bản) tại Việt Nam.

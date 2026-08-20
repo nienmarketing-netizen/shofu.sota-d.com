@@ -124,7 +124,7 @@ export function ShofuSolutions() {
             {/* Product 1 */}
             <motion.div variants={cardVariants} className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
-                <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautifil-injectable-x.png" alt="Beautifil Injectable X" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" />
+                <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautifil-injectable-x.png" alt="Beautifil Injectable X" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" />
               </div>
               <div className="font-mono text-[10px] text-[#00ADEF] font-semibold uppercase tracking-widest mb-2">COMPOSITE LỎNG CAO CẤP</div>
               <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Beautifil Injectable X</h4>
@@ -134,7 +134,7 @@ export function ShofuSolutions() {
             {/* Product 2 */}
             <motion.div variants={cardVariants} className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
-                <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png" alt="BeautiBond Xtreme" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" />
+                <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png" alt="BeautiBond Xtreme" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" />
               </div>
               <div className="font-mono text-[10px] text-[#00ADEF] font-semibold uppercase tracking-widest mb-2">KEO DÁN ĐA NĂNG HEMA-FREE</div>
               <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">BeautiBond Xtreme</h4>
@@ -144,7 +144,7 @@ export function ShofuSolutions() {
             {/* Product 3 */}
             <motion.div variants={cardVariants} className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
-                <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png" alt="Beautilink SA" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" />
+                <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png" alt="Beautilink SA" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" />
               </div>
               <div className="font-mono text-[10px] text-[#C43838] font-semibold uppercase tracking-widest mb-2">XI MĂNG TỰ DÁN THẾ HỆ MỚI</div>
               <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Beautilink SA</h4>
@@ -154,14 +154,14 @@ export function ShofuSolutions() {
             {/* Product 4 */}
             <motion.div variants={cardVariants} className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
-                <img 
-                  src="/images/super-snap-xtreme.webp" 
+                <img referrerPolicy="no-referrer" 
+                  src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/super-snap-xtreme.webp" 
                   alt="Super-Snap Xtreme" 
                   className="w-full h-full object-cover mix-blend-multiply"
                   loading="lazy"
                   onError={(e) => {
                     if (!e.currentTarget.src.includes("cdn.jsdelivr.net")) {
-                      e.currentTarget.src = "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/super-snap-xtreme.webp";
+                      e.currentTarget.src = "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/super-snap-xtreme.webp";
                     }
                   }}
                 />

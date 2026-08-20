@@ -20,8 +20,8 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="w-[90%] lg:w-[80%] mx-auto relative z-10 mb-10 md:mb-16 mix-blend-multiply opacity-90"
       >
-        <img
-          src="/images/background-hero-section-full-solution-shofu.webp"
+        <img referrerPolicy="no-referrer"
+          src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/background-hero-section-full-solution-shofu.webp"
           alt="Shofu Full Solution"
           className="w-full h-auto object-cover block mix-blend-multiply"
           loading="eager"
@@ -29,7 +29,7 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
           fetchPriority="high"
           onError={(e) => {
             if (!e.currentTarget.src.includes("cdn.jsdelivr.net")) {
-              e.currentTarget.src = "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/background-hero-section-full-solution-shofu.webp";
+              e.currentTarget.src = "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/background-hero-section-full-solution-shofu.webp";
             }
           }}
         />

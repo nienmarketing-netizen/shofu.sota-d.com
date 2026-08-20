@@ -51,8 +51,8 @@ export function ShofuAbout() {
           
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#00ADEF]/20 to-[#C43838]/20 rounded-3xl blur-3xl transform -rotate-6 opacity-60"></div>
-            <img 
-              src="/images/Shofu-1922-office.webp" 
+            <img referrerPolicy="no-referrer" 
+              src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/Shofu-1922-office.webp" 
               alt="Shofu History 1922" 
               className="relative w-full h-auto object-cover rounded-3xl mix-blend-multiply"
               style={{ 
@@ -61,7 +61,7 @@ export function ShofuAbout() {
               }}
               onError={(e) => {
                 if (!e.currentTarget.src.includes("cdn.jsdelivr.net")) {
-                  e.currentTarget.src = "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Shofu-1922-office.webp";
+                  e.currentTarget.src = "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/Shofu-1922-office.webp";
                 }
               }}
             />

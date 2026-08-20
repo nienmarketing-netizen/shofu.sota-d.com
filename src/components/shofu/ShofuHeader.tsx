@@ -34,9 +34,9 @@ export function ShofuHeader({ onNavigate, onOpenQuote }: ShofuHeaderProps) {
       <div className="w-[90%] lg:w-[80%] mx-auto relative z-20">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Sota-D%20logo%20(1).png" alt="Sota-D" className="h-6 sm:h-8 object-contain" />
+            <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Sota-D%20logo%20(1).png" alt="Sota-D" className="h-6 sm:h-8 object-contain" />
             <div className="w-[1px] h-6 bg-slate-300 hidden sm:block"></div>
-            <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Logo_Shofu%20(1).png" alt="Shofu" className="h-6 sm:h-8 object-contain hidden sm:block" />
+            <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Logo_Shofu%20(1).png" alt="Shofu" className="h-6 sm:h-8 object-contain hidden sm:block" />
           </div>
 
           {/* Desktop Navigation */}

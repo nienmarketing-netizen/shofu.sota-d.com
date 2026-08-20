@@ -23,7 +23,7 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Organised By */}
       <div className="flex items-center gap-2 sm:gap-3">
         <span className="font-mono text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap">Organised by</span>
-        <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Sota-D%20logo%20(1).png" alt="Sota-D Logo" className="h-5 sm:h-7 object-contain" />
+        <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Sota-D%20logo%20(1).png" alt="Sota-D Logo" className="h-5 sm:h-7 object-contain" />
       </div>
 
       {/* Divider */}
@@ -32,7 +32,7 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Supported By */}
       <div className="flex items-center gap-2 sm:gap-3">
         <span className="font-mono text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap">Supported by</span>
-        <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Logo_Shofu%20(1).png" alt="Shofu Logo" className="h-5 sm:h-7 object-contain" />
+        <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Logo_Shofu%20(1).png" alt="Shofu Logo" className="h-5 sm:h-7 object-contain" />
       </div>
     </div>
 
