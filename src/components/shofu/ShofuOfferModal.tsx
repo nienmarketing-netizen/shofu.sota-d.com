@@ -91,7 +91,7 @@ export function ShofuOfferModal() {
       id: 4,
       title: 'Trợ Giá Trực Tiếp',
       subtitle: 'Keo Dán BeautiBond Xtreme (BBX)',
-      description: 'Trải nghiệm keo dán công nghệ Quadra-Functional Monomer (chứa 10-MDP) với mức giá cực kỳ tối ưu.',
+      description: 'Keo dán HEMA-free thế hệ mới, loại bỏ hoàn toàn ê buốt. Lực dán vượt trội với công nghệ Quadra-Functional (10-MDP).',
       priceLabel: 'Giá ưu đãi:',
       price: '990.000đ',
       oldPrice: '1.420.000đ',
