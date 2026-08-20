@@ -8,6 +8,7 @@ import { ShofuSocialProof } from '../components/shofu/ShofuSocialProof';
 import { ShofuLeadMagnet } from '../components/shofu/ShofuLeadMagnet';
 import { ShofuFooter } from '../components/shofu/ShofuFooter';
 import { ContactModal } from '../components/ContactModal';
+import { ShofuOfferModal } from "../components/shofu/ShofuOfferModal";
 
 export default function ShofuLanding() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,6 +45,7 @@ export default function ShofuLanding() {
 
       <ShofuFooter />
 
+      <ShofuOfferModal />
       <ContactModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
