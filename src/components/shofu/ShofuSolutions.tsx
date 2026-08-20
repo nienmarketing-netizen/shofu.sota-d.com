@@ -160,8 +160,8 @@ export function ShofuSolutions() {
                   className="w-full h-full object-cover mix-blend-multiply"
                   loading="lazy"
                   onError={(e) => {
-                    if (!e.currentTarget.src.includes("raw.githubusercontent.com")) {
-                      e.currentTarget.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/super-snap-xtreme.webp";
+                    if (!e.currentTarget.src.includes("cdn.jsdelivr.net")) {
+                      e.currentTarget.src = "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/super-snap-xtreme.webp";
                     }
                   }}
                 />

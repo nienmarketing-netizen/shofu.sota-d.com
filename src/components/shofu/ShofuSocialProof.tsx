@@ -27,7 +27,7 @@ export function ShofuSocialProof() {
       role: 'Chuyên khoa Nha nhi (ABPD), California, Mỹ',
       topic: 'Nha khoa trẻ em & Hiệu quả vận hành phòng khám',
       content: 'Dòng sản phẩm tự dán ứng dụng công nghệ S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ 2 bước nhạy cảm kỹ thuật là etch và bond. Đây thực sự là một công cụ thu hút khách hàng tuyệt vời cho phòng khám khi các bậc cha mẹ luôn hạnh phúc chia sẻ câu chuyện thành công này với người thân của họ!',
-      avatar: '/images/Shukan-Kanuga_img.png',      fallbackAvatar: 'https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/Shukan-Kanuga_img.png'
+      avatar: '/images/Shukan-Kanuga_img.png',      fallbackAvatar: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Shukan-Kanuga_img.png'
     },
     {
       name: 'BS. Dương Bảo Ngọc',
@@ -41,7 +41,7 @@ export function ShofuSocialProof() {
       role: 'Thành viên Viện Thẩm mỹ Nha khoa Quốc tế, Mỹ',
       topic: 'Sự dịch chuyển sang Nha khoa trị liệu sinh học',
       content: 'Nha khoa hiện đại đang dịch chuyển mạnh mẽ sang xu hướng lựa chọn các vật liệu sinh học có khả năng tự sửa chữa mô răng và duy trì lợi ích trị liệu lâu dài cho bệnh nhân sau khi kết thúc điều trị. Hệ thống Giomer đáp ứng trọn vẹn điều này nhờ cơ chế trung hòa axit, phóng thích và tái nạp ion liên tục, cùng khả năng kháng khuẩn vượt trội.',
-      avatar: '/images/Dr.%20Jennifer%20Bell,%20DDS,%20FAGD,%20FICD.jpg',      fallbackAvatar: 'https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/Dr.%20Jennifer%20Bell,%20DDS,%20FAGD,%20FICD.jpg'
+      avatar: '/images/Dr.%20Jennifer%20Bell,%20DDS,%20FAGD,%20FICD.jpg',      fallbackAvatar: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Dr.%20Jennifer%20Bell,%20DDS,%20FAGD,%20FICD.jpg'
     },
     {
       name: 'ThS.BS Trần Quang Khánh',
@@ -55,21 +55,21 @@ export function ShofuSocialProof() {
       role: 'Chuyên gia Thẩm mỹ Nha khoa (AACD), Mỹ',
       topic: 'Thẩm mỹ tự nhiên – "Hòa sắc vô ảnh" không đắp lớp',
       content: 'Khả năng khúc xạ, truyền truyền và khuếch tán ánh sáng tương đồng tự nhiên với cả men và ngà răng thật giúp miếng trám tệp màu hoàn hảo vào mô răng xung quanh. Nhờ hiệu ứng tắc kè hoa đỉnh cao này, Bác sĩ chỉ cần sử dụng kỹ thuật đơn giản vẫn đạt được kết quả thẩm mỹ tối ưu mà không cần đắp lớp layering phức tạp.',
-      avatar: '/images/Dr.%20Frank%20J.%20Milnar,%20DDS,%20AAACD.jpg',      fallbackAvatar: 'https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/Dr.%20Frank%20J.%20Milnar,%20DDS,%20AAACD.jpg'
+      avatar: '/images/Dr.%20Frank%20J.%20Milnar,%20DDS,%20AAACD.jpg',      fallbackAvatar: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Dr.%20Frank%20J.%20Milnar,%20DDS,%20AAACD.jpg'
     },
     {
       name: 'Professor Keiichi Hosaka',
       role: 'Trưởng khoa Phục hồi tái tạo, Đại học Tokushima, Nhật Bản',
       topic: 'Sức mạnh liên kết siêu mỏng & Khít sát vi thể',
       content: 'Việc ứng dụng lớp keo dán siêu mỏng dưới 5 micron không chỉ tối ưu hóa khoảng xi măng ghép giúp phục hình gián tiếp đạt độ khít sát tuyệt đối, mà còn là chiếc cầu nối lý tưởng giúp các ion sinh học từ hạt độn S-PRG phía trên dễ dàng khuếch tán xuyên qua để bảo vệ mô răng sống bên dưới lớp lai.',
-      avatar: '/images/Professor%20Keiichi%20Hosaka.webp',      fallbackAvatar: 'https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/Professor%20Keiichi%20Hosaka.webp'
+      avatar: '/images/Professor%20Keiichi%20Hosaka.webp',      fallbackAvatar: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Professor%20Keiichi%20Hosaka.webp'
     },
     {
       name: 'Dr. Valeria V. Gordan, DDS, MS',
       role: 'Giám đốc Nghiên cứu Lâm sàng Đại học Florida, Mỹ',
       topic: 'Bảo chứng lâm sàng dài hạn và không sâu tái phát',
       content: 'Qua nghiên cứu lâm sàng độc lập dài hạn, hệ thống dán dính và vật liệu sinh học Giomer chứng minh độ bền bỉ đáng kinh ngạc. Sau 8 năm theo dõi, chúng tôi ghi nhận tỷ lệ lưu giữ phục hình là 100%, hoàn toàn không có sâu răng thứ phát và không có nhạy cảm hậu phẫu. Thậm chí sau 13 năm, có tới 96% phục hình vẫn hoàn toàn sạch bóng sâu răng tái phát.',
-      avatar: '/images/Dr.%20Valeria%20V.%20Gordan,%20DDS,%20MS.jpeg',      fallbackAvatar: 'https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/Dr.%20Valeria%20V.%20Gordan,%20DDS,%20MS.jpeg'
+      avatar: '/images/Dr.%20Valeria%20V.%20Gordan,%20DDS,%20MS.jpeg',      fallbackAvatar: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Dr.%20Valeria%20V.%20Gordan,%20DDS,%20MS.jpeg'
     }
   ];
 
@@ -273,7 +273,7 @@ export function ShofuSocialProof() {
                       className="w-12 h-12 lg:w-14 lg:h-14 rounded-full object-cover object-top bg-white p-0.5 border border-slate-200"
                       onError={(e) => {
                         // @ts-ignore
-                        if (test.fallbackAvatar && !e.currentTarget.src.includes("raw.githubusercontent.com")) {
+                        if (test.fallbackAvatar && !e.currentTarget.src.includes("cdn.jsdelivr.net")) {
                           // @ts-ignore
                           e.currentTarget.src = test.fallbackAvatar;
                         }
