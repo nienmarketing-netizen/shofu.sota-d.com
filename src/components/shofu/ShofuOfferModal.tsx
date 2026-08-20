@@ -57,8 +57,9 @@ export function ShofuOfferModal() {
       title: 'Mua 7 Tặng 2',
       subtitle: 'Dòng Composite BeautiFil',
       description: 'Áp dụng cho BeautiFil Injectable X/X SL hoặc BeautiFil II. Giảm sâu chi phí vốn trên mỗi ca phục hình.',
-      priceLabel: 'Đơn giá:',
-      price: '495K - 595K /tuýp',
+      priceLabel: 'Giá ưu đãi (9 tuýp):',
+      oldPrice: '4.455.000đ - 5.355.000đ',
+      price: '3.465.000đ - 4.165.000đ',
       giftValue: 'Tặng 2 tuýp',
       image: 'https://placehold.co/400x300/00ADEF/ffffff?text=BeautiFil+Composite'
     },
@@ -161,7 +162,7 @@ export function ShofuOfferModal() {
                         <div className="flex items-end justify-between mt-auto">
                           <div>
                             {promo.oldPrice && (
-                              <div className="text-xs text-slate-400 line-through mb-0.5">{promo.oldPrice}</div>
+                              <div className="text-[12px] text-slate-500 font-semibold line-through mb-0.5">{promo.oldPrice}</div>
                             )}
                             <div className="flex items-baseline gap-1.5">{promo.priceLabel && <span className="text-[11px] text-slate-500 font-medium">{promo.priceLabel}</span>}<span className="font-mono font-bold text-[#00ADEF] text-sm">{promo.price}</span></div>
                           </div>
