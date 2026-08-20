@@ -64,20 +64,24 @@ async function startServer() {
         .map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value))
         .join('&');
 
-      // Server-side fetch bypassing browser CORS
-      const response = await fetch(webhookUrl, {
+      // Server-side fetch bypassing browser CORS - RUN IN BACKGROUND to avoid 504 timeouts
+      fetch(webhookUrl, {
         method: 'POST',
         body: bodyString,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
         redirect: 'follow'
+      }).then(async (response) => {
+        console.log("Google Apps Script HTTP Status:", response.status);
+        const text = await response.text();
+        console.log("Response text:", text);
+      }).catch(err => {
+        console.error("Background fetch error:", err);
       });
       
-      console.log("Google Apps Script HTTP Status:", response.status);
-      const text = await response.text();
-      console.log("Response text:", text);
-      res.json({ success: true, text });
+      // Respond immediately to the client
+      res.json({ success: true, message: "Lead submitted in background" });
     } catch (err: any) {
       console.error("Google Sheets Submission Error:", err);
       res.status(500).json({ error: "Failed to submit lead" });
