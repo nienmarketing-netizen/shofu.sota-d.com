@@ -44,8 +44,9 @@ export function ShofuOfferModal() {
     {
       id: 1,
       title: 'Mua 1 Tặng 1',
-      subtitle: 'Lợi Ích Kép Cho Xi Măng Gắn BeautiCem SA',
-      description: 'Mua 01 xi măng gắn tự dán BeautiCem SA, tặng ngay 01 bộ keo dán Universal cao cấp BeautiBond Xtreme.',
+      subtitle: 'Xi Măng Gắn BeautiCem SA',
+      description: 'Mua 01 hộp BeautiCem SA, tặng ngay 01 bộ keo dán Universal BeautiBond Xtreme (trị giá 1.420.000đ).',
+      priceLabel: 'Giá 1 hộp:',
       price: '1.575.000đ',
       giftValue: 'Tiết kiệm gần 50%',
       image: 'https://placehold.co/400x300/00ADEF/ffffff?text=BeautiCem+SA'
@@ -53,26 +54,29 @@ export function ShofuOfferModal() {
     {
       id: 2,
       title: 'Mua 7 Tặng 2',
-      subtitle: 'Tối Ưu Chi Phí Dòng Composite BeautiFil',
-      description: 'Áp dụng cho BeautiFil Injectable X/X SL (595.000đ/tuýp) hoặc BeautiFil II (495.000đ/tuýp).',
-      price: 'Từ 495.000đ',
-      giftValue: 'Tặng 2 tuýp cùng loại',
+      subtitle: 'Dòng Composite BeautiFil',
+      description: 'Áp dụng cho BeautiFil Injectable X/X SL hoặc BeautiFil II. Giảm sâu chi phí vốn trên mỗi ca phục hình.',
+      priceLabel: 'Đơn giá:',
+      price: '495K - 595K /tuýp',
+      giftValue: 'Tặng 2 tuýp',
       image: 'https://placehold.co/400x300/00ADEF/ffffff?text=BeautiFil+Composite'
     },
     {
       id: 3,
       title: 'Mua 4 Tặng 1',
-      subtitle: 'Dành Riêng Cho Composite Thẩm Mỹ BeautiFil II LS',
-      description: 'Sở hữu dòng composite có độ co rút cực thấp (chỉ 0.85% Vol) và kháng mòn cao.',
+      subtitle: 'Composite Thẩm Mỹ BeautiFil II LS',
+      description: 'Sở hữu dòng composite có độ co rút cực thấp (0.85% Vol) và kháng mòn cao.',
+      priceLabel: 'Giá 1 tuýp:',
       price: '695.000đ',
-      giftValue: 'Tặng 1 tuýp',
+      giftValue: 'Tiết kiệm 20%',
       image: 'https://placehold.co/400x300/00ADEF/ffffff?text=BeautiFil+II+LS'
     },
     {
       id: 4,
       title: 'Trợ Giá Trực Tiếp',
       subtitle: 'Keo Dán BeautiBond Xtreme (BBX)',
-      description: 'Giảm ngay 430.000 VNĐ tiền mặt. Trải nghiệm keo dán công nghệ Quadra-Functional Monomer.',
+      description: 'Trải nghiệm keo dán công nghệ Quadra-Functional Monomer (chứa 10-MDP) với mức giá cực kỳ tối ưu.',
+      priceLabel: 'Giá ưu đãi:',
       price: '990.000đ',
       oldPrice: '1.420.000đ',
       giftValue: 'Giảm 430K',
@@ -148,17 +152,17 @@ export function ShofuOfferModal() {
                         </div>
                       </div>
 
-                      <div className="p-4">
+                      <div className="p-4 flex flex-col h-[180px]">
                         <h3 className="font-heading font-bold text-slate-900 leading-tight mb-1">{promo.title}</h3>
                         <p className="font-body text-xs text-slate-600 mb-2 font-medium">{promo.subtitle}</p>
-                        <p className="font-body text-[11px] text-slate-500 line-clamp-2 mb-3">{promo.description}</p>
+                        <p className="font-body text-[11px] text-slate-500 line-clamp-3 mb-3">{promo.description}</p>
                         
                         <div className="flex items-end justify-between mt-auto">
                           <div>
                             {promo.oldPrice && (
                               <div className="text-xs text-slate-400 line-through mb-0.5">{promo.oldPrice}</div>
                             )}
-                            <div className="font-mono font-bold text-[#00ADEF] text-sm">{promo.price}</div>
+                            <div className="flex items-baseline gap-1.5">{promo.priceLabel && <span className="text-[11px] text-slate-500 font-medium">{promo.priceLabel}</span>}<span className="font-mono font-bold text-[#00ADEF] text-sm">{promo.price}</span></div>
                           </div>
                         </div>
                       </div>
