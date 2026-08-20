@@ -46,7 +46,8 @@ export function ShofuOfferModal() {
       title: 'Mua 1 Tặng 1',
       subtitle: 'Xi Măng Gắn BeautiCem SA',
       description: 'Mua 01 hộp BeautiCem SA, tặng ngay 01 bộ keo dán Universal BeautiBond Xtreme (trị giá 1.420.000đ).',
-      priceLabel: 'Giá 1 hộp:',
+      priceLabel: 'Giá ưu đãi:',
+      oldPrice: '2.995.000đ',
       price: '1.575.000đ',
       giftValue: 'Tiết kiệm gần 50%',
       image: 'https://placehold.co/400x300/00ADEF/ffffff?text=BeautiCem+SA'
