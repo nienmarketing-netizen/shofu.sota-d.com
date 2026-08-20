@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Download, FileText, CheckCircle2 } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export function ShofuLeadMagnet() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -12,11 +13,17 @@ export function ShofuLeadMagnet() {
   };
 
   return (
-    <section id="lead-magnet" className="py-20 relative border-b border-slate-200 bg-slate-100 bg-grid-pattern">
+    <section id="lead-magnet" className="py-20 relative border-b border-slate-200 bg-slate-100 bg-grid-pattern overflow-hidden">
       <div className="absolute inset-0 bitcoin-gradient opacity-10"></div>
       
       <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
-        <div className="bg-white rounded-[2.5rem] p-8 sm:p-12 md:p-16 shadow-2xl border border-slate-100 flex flex-col md:flex-row gap-12 items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="bg-white rounded-[2.5rem] p-8 sm:p-12 md:p-16 shadow-2xl border border-slate-100 flex flex-col md:flex-row gap-12 items-center"
+        >
           
           {/* Content */}
           <div className="flex-1">
@@ -46,7 +53,11 @@ export function ShofuLeadMagnet() {
           {/* Form */}
           <div className="w-full md:w-[400px] shrink-0">
             {isSubmitted ? (
-              <div className="bg-sky-50 rounded-2xl p-8 text-center border border-sky-100 h-full flex flex-col justify-center">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="bg-sky-50 rounded-2xl p-8 text-center border border-sky-100 h-full flex flex-col justify-center"
+              >
                 <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle2 className="w-8 h-8 text-[#00ADEF]" />
                 </div>
@@ -63,7 +74,7 @@ export function ShofuLeadMagnet() {
                 >
                   Đóng thông báo
                 </button>
-              </div>
+              </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
                 <div className="mb-4">
@@ -118,8 +129,7 @@ export function ShofuLeadMagnet() {
               </form>
             )}
           </div>
-
-        </div>
+        </motion.div>
       </div>
     </section>
   );

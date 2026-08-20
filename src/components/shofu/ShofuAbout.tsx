@@ -15,12 +15,17 @@ export function ShofuAbout() {
   ];
 
   return (
-    <section id="about-shofu" className="py-20 relative border-b border-slate-200 bg-slate-100 bg-grid-pattern">
+    <section id="about-shofu" className="py-20 relative border-b border-slate-200 bg-slate-100 bg-grid-pattern overflow-hidden">
       <div className="w-[90%] lg:w-[80%] mx-auto">
         
         {/* Brand History */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
-          <div>
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-6 uppercase">
               Di Sản 100 Năm <br />
               Nha Khoa Nhật Bản
@@ -42,7 +47,7 @@ export function ShofuAbout() {
                 <div className="font-mono text-xs text-slate-500 uppercase mt-1">Quốc Gia Phân Phối</div>
               </div>
             </div>
-          </div>
+          </motion.div>
           
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#00ADEF]/20 to-[#C43838]/20 rounded-3xl blur-3xl transform -rotate-6 opacity-60"></div>
