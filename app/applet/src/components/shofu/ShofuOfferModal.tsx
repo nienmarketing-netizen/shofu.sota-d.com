@@ -152,10 +152,10 @@ export function ShofuOfferModal() {
                         </div>
                       </div>
 
-                      <div className="p-4">
+                      <div className="p-4 flex flex-col h-[180px]">
                         <h3 className="font-heading font-bold text-slate-900 leading-tight mb-1">{promo.title}</h3>
                         <p className="font-body text-xs text-slate-600 mb-2 font-medium">{promo.subtitle}</p>
-                        <p className="font-body text-[11px] text-slate-500 line-clamp-2 mb-3">{promo.description}</p>
+                        <p className="font-body text-[11px] text-slate-500 line-clamp-3 mb-3">{promo.description}</p>
                         
                         <div className="flex items-end justify-between mt-auto">
                           <div>
