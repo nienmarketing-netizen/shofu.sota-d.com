@@ -54,19 +54,20 @@ export function ShofuOfferModal() {
       selectedPromos: selectedPromos.map(p => promos.find(x => x.id === p)?.title).filter(Boolean).join(', ')
     };
 
-    fetch('/api/submit-lead', {
+    const webhookUrl = "https://script.google.com/macros/s/AKfycbxc-EtHL1Un2AgalFAz8RvxlHX0TtE4q6OK2h0CiSNWBo7tvP1sDhBiJv7vvrRkJ3-zgQ/exec";
+    const bodyString = new URLSearchParams(payload as any).toString();
+
+    fetch(webhookUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: bodyString,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      mode: 'no-cors'
     })
-    .then(res => res.json())
-    .then(data => {
+    .then(() => {
       setIsSubmitting(false);
-      if (data.error) {
-        setFormError('Có lỗi xảy ra, vui lòng thử lại sau.');
-      } else {
-        setIsSuccess(true);
-      }
+      setIsSuccess(true);
     })
     .catch(err => {
       console.error(err);
