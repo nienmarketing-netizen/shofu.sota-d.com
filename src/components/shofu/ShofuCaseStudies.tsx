@@ -109,15 +109,17 @@ export function ShofuCaseStudies() {
   };
 
   return (
-    <section id="case-studies" className="py-20 bg-white relative">
-      <div className="w-[90%] lg:w-[80%] mx-auto mb-12 text-center">
+    <section id="case-studies" className="py-20 relative border-t border-slate-200 bg-slate-50 bg-grid-pattern overflow-hidden">
+      <div className="absolute inset-0 bitcoin-gradient opacity-[0.03]"></div>
+      
+      <div className="w-[90%] lg:w-[80%] mx-auto mb-12 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 mb-6 shadow-sm">
             <span className="font-mono text-xs font-bold text-slate-600 uppercase tracking-widest">Thư viện Case Study</span>
           </div>
           <h2 className="font-heading font-extrabold text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight">
@@ -132,8 +134,8 @@ export function ShofuCaseStudies() {
       </div>
 
       {/* Instagram-style Grid */}
-      <div className="w-full max-w-[1400px] mx-auto px-1 sm:px-4 mb-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 sm:gap-4">
+      <div className="w-[90%] lg:w-[80%] mx-auto mb-16 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 sm:gap-2">
           {caseStudies.map((item, index) => (
             <motion.div
               key={item.id}
@@ -160,7 +162,7 @@ export function ShofuCaseStudies() {
       </div>
 
       {/* CTA Button */}
-      <div className="text-center px-4">
+      <div className="text-center px-4 relative z-10">
         <motion.button
           onClick={scrollToOffers}
           whileHover={{ scale: 1.05 }}
