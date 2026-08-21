@@ -88,7 +88,7 @@ export function ShofuOffers() {
                 <span className="text-sm sm:text-base text-[#00ADEF]">Giomer không ê buốt</span>
               </h3>
               <p className="font-body text-sm text-slate-300 mb-6 flex-1 leading-relaxed">
-                Triệt tiêu ê buốt tức thì nhờ <strong>cơ chế 6 Ion</strong> bít kín ống ngà. Chặn đứng ê buốt muộn với <strong>công nghệ HEMA-Free</strong>. Lực dán 50MPa tạo khoảng xi măng vô hình, lưu giữ 100% sau 8 năm lâm sàng.
+                Triệt tiêu ê buốt tức thì nhờ màng dán dính khóa kín ống ngà từ Keo dán BeautiBond Xtreme (HEMA-Free) kỵ nước tuyệt đối, chống thoái hóa lớp lai. Xi măng tự dán BeautiLink SA phóng thích 6 ion sinh học S-PRG liên tục tái khoáng ngà răng, bảo vệ khỏi sâu răng tái phát.
               </p>
               
               <div className="flex flex-col gap-2 mb-4 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">
@@ -103,7 +103,7 @@ export function ShofuOffers() {
               </div>
               
               <div className="mb-6 text-center">
-                <span className="inline-block bg-white/5 text-white/70 text-[10px] sm:text-[11px] font-medium px-3 py-1.5 rounded-lg border border-white/10">
+                <span className="inline-block bg-emerald-500/10 text-emerald-400 text-[9px] sm:text-xs font-bold uppercase tracking-normal sm:tracking-wider px-2 sm:px-3 py-1.5 rounded-lg border border-emerald-500/20 whitespace-nowrap">
                   Hoàn tiền 100% nếu Bác sĩ không hài lòng
                 </span>
               </div>
@@ -112,7 +112,7 @@ export function ShofuOffers() {
                 <span className="font-mono text-xs text-red-400 font-bold">Chỉ còn 15 suất</span>
                 <button 
                   onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))}
-                  className="inline-flex items-center gap-2 text-[#00ADEF] font-mono text-xs font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider"
+                  className="inline-flex items-center gap-2 text-[#00ADEF] font-mono text-xs font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider animate-slow-scale-pulse"
                 >
                   ĐĂNG KÝ NGAY <ArrowRight className="w-4 h-4" />
                 </button>
@@ -128,18 +128,36 @@ export function ShofuOffers() {
               <div className="w-12 h-12 rounded-xl bg-[#C43838]/20 flex items-center justify-center mb-6 shrink-0">
                 <Gift className="w-6 h-6 text-[#C43838]" />
               </div>
-              <h3 className="font-heading font-bold text-lg sm:text-xl mb-3 text-white">
-                Gói khởi động trám MiCD
+              <h3 className="font-heading font-bold mb-3 text-white flex flex-col gap-1">
+                <span className="text-lg sm:text-xl">Gói khởi động Trám MiCD</span>
+                <span className="text-sm sm:text-base text-[#C43838]">Giải pháp trám thẩm mỹ sinh học</span>
               </h3>
-              <p className="font-body text-sm text-slate-300 mb-8 flex-1 leading-relaxed">
-                Trải nghiệm đỉnh cao composite với ưu đãi chiết khấu trực tiếp lên đến 25% + Tặng kèm khóa học Online.
+              <p className="font-body text-sm text-slate-300 mb-6 flex-1 leading-relaxed">
+                Đồng bộ hóa quy trình trám thẩm mỹ từ dán dính đến đánh bóng chỉ trong một gói giải pháp. Loại bỏ các bước nhạy cảm kỹ thuật, bịt kín xoang sâu phức tạp, kết thúc bằng bộ mũi mài mịn màng chính hãng giúp mô nướu lành thương hồng hào và ngăn mảng bám tích tụ.
               </p>
               
-              <div className="flex items-center justify-between mt-auto pt-5 border-t border-transparent">
+              <div className="flex flex-col gap-2 mb-4 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-slate-400">Tổng giá trị:</span>
+                  <span className="text-slate-300 font-semibold">4.750.000đ</span>
+                </div>
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-slate-300 font-medium">Mức đầu tư ưu đãi:</span>
+                  <span className="text-[#C43838] font-heading font-extrabold text-lg sm:text-xl">3.250.000đ</span>
+                </div>
+              </div>
+              
+              <div className="mb-6 text-center">
+                <span className="inline-block bg-emerald-500/10 text-emerald-400 text-[9px] sm:text-xs font-bold uppercase tracking-normal sm:tracking-wider px-2 sm:px-3 py-1.5 rounded-lg border border-emerald-500/20 whitespace-nowrap">
+                  Hoàn tiền 100% nếu Bác sĩ không hài lòng
+                </span>
+              </div>
+              
+              <div className="flex items-center justify-between mt-auto pt-5 border-t border-white/10">
                 <span className="font-mono text-xs text-red-400 font-bold">Chỉ còn 8 suất</span>
                 <button 
                   onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))}
-                  className="inline-flex items-center gap-2 text-[#C43838] font-mono text-xs font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider"
+                  className="inline-flex items-center gap-2 text-[#C43838] font-mono text-xs font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider animate-slow-scale-pulse"
                 >
                   NHẬN ƯU ĐÃI <ArrowRight className="w-4 h-4" />
                 </button>

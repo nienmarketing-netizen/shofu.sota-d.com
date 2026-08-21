@@ -46,6 +46,14 @@ main, section, header, footer {
   .font-mono {
     font-family: 'JetBrains Mono', monospace;
   }
+  
+  @keyframes slow-scale-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+  }
+  .animate-slow-scale-pulse {
+    animation: slow-scale-pulse 2.5s ease-in-out infinite;
+  }
 }
 
 /* Sota-D (#C43838) & SHOFU (#00ADEF) Brand Guideline Theme */
