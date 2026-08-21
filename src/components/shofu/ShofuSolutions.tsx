@@ -1,29 +1,34 @@
 import React from 'react';
 import { Crown, Sparkles, Layers, ShieldPlus, ArrowUpRight, Syringe, Gem, ShoppingCart } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export function ShofuSolutions() {
   const solutions = [
     {
       id: 'indirect',
+      slug: 'phuc-hinh-gian-tiep',
       title: 'Phục Hình Gián Tiếp',
       icon: Gem,
       bgClass: 'bg-gradient-to-br from-[#33BDF2]/80 to-[#00ADEF]/80',
     },
     {
       id: 'direct',
+      slug: 'phuc-hinh-truc-tiep',
       title: 'Phục Hình Trực Tiếp',
       icon: Syringe,
       bgClass: 'bg-gradient-to-br from-[#00ADEF]/80 to-[#007AA8]/80',
     },
     {
       id: 'preventive',
+      slug: 'nha-khoa-phong-ngua',
       title: 'Nha Khoa Phòng Ngừa',
       icon: ShieldPlus,
       bgClass: 'bg-gradient-to-br from-[#E54848]/80 to-[#C43838]/80',
     },
     {
       id: 'masterclass',
+      slug: 'giai-phap-toan-dien',
       title: 'Giải Pháp Toàn Diện',
       icon: Layers,
       bgClass: 'bg-gradient-to-br from-[#C43838]/80 to-[#8C2828]/80',
@@ -77,23 +82,26 @@ export function ShofuSolutions() {
             <motion.div 
               variants={cardVariants}
               key={sol.id}
-              className={`relative overflow-hidden rounded-xl sm:rounded-2xl p-8 sm:p-10 flex flex-col items-center justify-center text-center group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${sol.bgClass}`}
+              className={`relative overflow-hidden rounded-xl sm:rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${sol.bgClass}`}
             >
-              {/* Subtle Pattern Overlay */}
-              <div className="absolute inset-0 opacity-10 bg-grid-pattern mix-blend-overlay"></div>
-              
-              <sol.icon className="w-10 h-10 sm:w-12 sm:h-12 text-white mb-4 sm:mb-5 stroke-[1.5] relative z-10 group-hover:scale-110 transition-transform duration-300" />
-              
-              <h3 className="font-mono font-bold text-xs sm:text-sm text-white tracking-widest uppercase relative z-10">
-                {sol.title}
-              </h3>
-              
-              {/* Corner CTA Triangle */}
-              <div 
-                className="absolute top-0 right-0 w-14 h-14 bg-white/20 group-hover:bg-white/40 transition-colors pointer-events-none"
-                style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }}
-              >
-                <ArrowUpRight className="absolute top-2 right-2 w-5 h-5 text-white opacity-70 group-hover:opacity-100 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <Link to={`/giai-phap/${sol.slug}`} className="absolute inset-0 z-30" aria-label={`Xem chi tiết ${sol.title}`}></Link>
+              <div className="p-8 sm:p-10 w-full h-full flex flex-col items-center justify-center relative z-10">
+                {/* Subtle Pattern Overlay */}
+                <div className="absolute inset-0 opacity-10 bg-grid-pattern mix-blend-overlay pointer-events-none"></div>
+                
+                <sol.icon className="w-10 h-10 sm:w-12 sm:h-12 text-white mb-4 sm:mb-5 stroke-[1.5] relative z-10 group-hover:scale-110 transition-transform duration-300" />
+                
+                <h3 className="font-mono font-bold text-xs sm:text-sm text-white tracking-widest uppercase relative z-10">
+                  {sol.title}
+                </h3>
+                
+                {/* Corner CTA Triangle */}
+                <div 
+                  className="absolute top-0 right-0 w-14 h-14 bg-white/20 group-hover:bg-white/40 transition-colors pointer-events-none"
+                  style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }}
+                >
+                  <ArrowUpRight className="absolute top-2 right-2 w-5 h-5 text-white opacity-70 group-hover:opacity-100 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </div>
               </div>
             </motion.div>
           ))}
