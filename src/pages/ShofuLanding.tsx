@@ -17,18 +17,6 @@ export default function ShofuLanding() {
 
   useEffect(() => {
     document.title = "Sota-D | Đối tác chính thức Shofu tại Việt Nam";
-    
-    const handleOpenContact = (e: Event) => {
-      const customEvent = e as CustomEvent;
-      const type = customEvent.detail?.type || 'quote';
-      setModalType(type);
-      setIsModalOpen(true);
-    };
-    
-    window.addEventListener('open-contact-modal', handleOpenContact);
-    return () => {
-      window.removeEventListener('open-contact-modal', handleOpenContact);
-    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
