@@ -415,9 +415,9 @@ export function ShofuOfferModal() {
                         <span className="w-28 text-slate-500 text-sm">Chương trình:</span>
                         <span className="font-bold text-slate-900 text-sm flex-1">
                           {[
-                            activeOffer.name,
-                            formData.wantsCustomOffer ? 'Tư vấn chương trình riêng' : ''
-                          ].filter(Boolean).join(', ')}
+                            modalMode === 'combo' ? offerDetails[activeOfferId].name : (activeProductIds.length > 0 ? activeProductIds.map(id => productDetails[id].name).join(", ") : ''),
+                            formData.wantsCustomOffer ? 'Tư vấn ưu đãi tùy chỉnh' : ''
+                          ].filter(Boolean).join(' và ')}
                         </span>
                       </div>
                     </div>
