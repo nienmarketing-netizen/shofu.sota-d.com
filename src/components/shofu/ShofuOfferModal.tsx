@@ -17,9 +17,13 @@ export function ShofuOfferModal() {
   const [isSuccess, setIsSuccess] = useState(false);
 
   useEffect(() => {
-    const handleOpen = () => {
+    const handleOpen = (e: Event) => {
       setIsOpen(true);
       document.body.style.overflow = 'hidden';
+      const customEvent = e as CustomEvent;
+      if (customEvent.detail && customEvent.detail.offerId) {
+        setSelectedPromos([customEvent.detail.offerId]);
+      }
     };
     window.addEventListener('open-offer-modal', handleOpen);
     return () => {
@@ -79,47 +83,25 @@ export function ShofuOfferModal() {
   const promos = [
     {
       id: 1,
-      title: 'Mua 1 Tặng 1',
-      subtitle: 'Xi Măng Gắn BeautiLink SA',
-      description: 'Mua 01 hộp BeautiLink SA, tặng ngay 01 bộ keo dán Universal BeautiBond Xtreme (trị giá 1.420.000đ).',
-      priceLabel: 'Giá ưu đãi:',
-      oldPrice: '2.995.000đ',
-      price: '1.575.000đ',
-      giftValue: 'Tiết kiệm gần 50%',
-      image: 'https://placehold.co/400x300/00ADEF/ffffff?text=BeautiLink+SA'
+      title: 'Combo Phục Hình Gián Tiếp',
+      subtitle: 'Giomer Không Ê Buốt - An Tâm Phục Hình',
+      description: 'Gồm: 1 Keo BBX + 1 Xi măng BeautiLink SA. Tặng: Bộ Polishing Kit (740K) + Đặc quyền Cố vấn 1:1 + Masterclass.',
+      priceLabel: 'Mức đầu tư:',
+      oldPrice: '8.155.000đ',
+      price: '3.415.000đ',
+      giftValue: 'Hoàn tiền 100%',
+      image: 'https://placehold.co/400x300/00ADEF/ffffff?text=Combo+Phuc+Hinh'
     },
     {
       id: 2,
-      title: 'Mua 7 Tặng 2',
-      subtitle: 'Dòng Composite BeautiFil',
-      description: 'Áp dụng cho BeautiFil Injectable X/X SL hoặc BeautiFil II. Giảm sâu chi phí vốn trên mỗi ca phục hình.',
-      priceLabel: 'Giá ưu đãi /tuýp:',
-      oldPrice: '495.000đ - 595.000đ',
-      price: '385.000đ - 463.000đ',
-      giftValue: 'Tặng 2 tuýp',
-      image: 'https://placehold.co/400x300/00ADEF/ffffff?text=BeautiFil+Composite'
-    },
-    {
-      id: 3,
-      title: 'Mua 4 Tặng 1',
-      subtitle: 'Composite Thẩm Mỹ BeautiFil II LS',
-      description: 'Sở hữu dòng composite có độ co rút cực thấp (0.85% Vol) và kháng mòn cao.',
-      priceLabel: 'Giá ưu đãi /tuýp:',
-      oldPrice: '695.000đ',
-      price: '556.000đ',
-      giftValue: 'Tiết kiệm 20%',
-      image: 'https://placehold.co/400x300/00ADEF/ffffff?text=BeautiFil+II+LS'
-    },
-    {
-      id: 4,
-      title: 'Trợ Giá Trực Tiếp',
-      subtitle: 'Keo Dán BeautiBond Xtreme (BBX)',
-      description: 'Keo dán HEMA-free thế hệ mới, loại bỏ hoàn toàn ê buốt. Lực dán vượt trội với công nghệ Quadra-Functional (10-MDP).',
-      priceLabel: 'Giá ưu đãi:',
-      price: '990.000đ',
-      oldPrice: '1.420.000đ',
-      giftValue: 'Giảm 430K',
-      image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png'
+      title: 'Gói Khởi Động Trám MiCD',
+      subtitle: 'Giải pháp trám thẩm mỹ sinh học',
+      description: 'Gồm: 1 Keo BBX + 1 Đặc Beautifil II + 1 Lỏng Injectable X + 1 Bộ Polishing Kit. Tặng: Video đắp lớp thực chiến.',
+      priceLabel: 'Mức đầu tư:',
+      oldPrice: '4.750.000đ',
+      price: '3.250.000đ',
+      giftValue: 'Hoàn tiền 100%',
+      image: 'https://placehold.co/400x300/C43838/ffffff?text=Goi+Tram+MiCD'
     }
   ];
 
@@ -157,7 +139,7 @@ export function ShofuOfferModal() {
               <div className="p-6 lg:p-8">
                 <div className="flex items-center gap-2 mb-6">
                   <Tag className="w-5 h-5 text-[#00ADEF]" />
-                  <span className="font-heading font-bold text-[#00ADEF] uppercase tracking-wider text-sm">Chương trình đặc quyền</span>
+                  <span className="font-heading font-bold text-[#00ADEF] uppercase tracking-wider text-sm">Lựa chọn Gói Ưu đãi</span>
                 </div>
                 
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -179,17 +161,17 @@ export function ShofuOfferModal() {
                       </div>
 
                       {/* Image Placeholder */}
-                      <div className="h-32 bg-slate-100 relative overflow-hidden group">
+                      <div className="h-40 bg-slate-100 relative overflow-hidden group">
                         <img referrerPolicy="no-referrer" src={promo.image} alt={promo.title} className="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         <div className="absolute bottom-2 left-3">
-                           <span className="inline-block bg-[#C43838] text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded">
+                           <span className="inline-block bg-[#00ADEF] text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded">
                             {promo.giftValue}
                            </span>
                         </div>
                       </div>
 
-                      <div className="p-4 flex flex-col h-[180px]">
+                      <div className="p-4 flex flex-col h-[200px]">
                         <h3 className="font-heading font-bold text-slate-900 leading-tight mb-1">{promo.title}</h3>
                         <p className="font-body text-xs text-slate-600 mb-2 font-medium">{promo.subtitle}</p>
                         <p className="font-body text-[11px] text-slate-500 line-clamp-3 mb-3">{promo.description}</p>
