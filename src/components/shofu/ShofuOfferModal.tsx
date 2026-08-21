@@ -6,7 +6,7 @@ export function ShofuOfferModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [modalMode, setModalMode] = useState<'combo' | 'product'>('combo');
   const [activeOfferId, setActiveOfferId] = useState<1 | 2>(1);
-  const [activeProductIds, setActiveProductIds] = useState<Array<1 | 2 | 3 | 4>>([1]);
+  const [activeProductIds, setActiveProductIds] = useState<Array<1 | 2 | 3 | 4>>([]);
   const [formData, setFormData] = useState({ name: '', phone: '', clinic: '', wantsCustomOffer: false });
   const [formError, setFormError] = useState('');
 
@@ -29,7 +29,7 @@ export function ShofuOfferModal() {
         setActiveOfferId(customEvent.detail.offerId as 1 | 2);
       } else {
         setModalMode('product');
-        setActiveProductIds([1]);
+        setActiveProductIds([]);
       }
     };
     window.addEventListener('open-offer-modal', handleOpen);
@@ -43,10 +43,6 @@ export function ShofuOfferModal() {
     setTimeout(() => {
       setIsSuccess(false);
       setFormData({ name: '', phone: '', clinic: '', wantsCustomOffer: false });
-    if (modalMode === 'product' && activeProductIds.length === 0) {
-      setFormError('Vui lòng chọn ít nhất 1 ưu đãi.');
-      return;
-    }
       setFormError('');
       document.body.style.overflow = 'auto';
     }, 300);
