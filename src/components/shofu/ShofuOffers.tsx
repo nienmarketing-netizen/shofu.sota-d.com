@@ -83,14 +83,26 @@ export function ShofuOffers() {
               <div className="w-16 h-16 rounded-2xl bg-[#00ADEF]/20 flex items-center justify-center mb-8 shrink-0">
                 <Gift className="w-8 h-8 text-[#00ADEF]" />
               </div>
-              <h3 className="font-heading font-bold text-2xl sm:text-3xl mb-4 text-white">
-                Combo Giomer Không Ê Buốt
+              <h3 className="font-heading font-bold mb-4 text-white flex flex-col gap-1">
+                <span className="text-2xl sm:text-3xl">Combo phục hình gián tiếp</span>
+                <span className="text-lg sm:text-xl text-[#00ADEF]">Giomer không ê buốt</span>
               </h3>
-              <p className="font-body text-base sm:text-lg text-slate-300 mb-12 flex-1 leading-relaxed">
+              <p className="font-body text-base sm:text-lg text-slate-300 mb-6 flex-1 leading-relaxed">
                 Khóa chặt vi kẽ, trị liệu sinh học 6 ion, chấm dứt 100% ám ảnh bảo hành răng sống. Nhận ngay bộ Quà tặng & Đặc quyền cố vấn trị giá <strong>4.740.000đ</strong>!
               </p>
               
-              <div className="flex items-center justify-between mt-auto pt-4">
+              <div className="flex flex-col gap-2 mb-8 bg-slate-900/50 p-4 sm:p-5 rounded-xl border border-white/5">
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-slate-400">Tổng giá trị:</span>
+                  <span className="text-slate-500 line-through decoration-red-500/50">8.155.000đ</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-300 font-medium">Mức đầu tư ưu đãi:</span>
+                  <span className="text-[#00ADEF] font-heading font-extrabold text-2xl sm:text-3xl">3.415.000đ</span>
+                </div>
+              </div>
+              
+              <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/10">
                 <span className="font-mono text-sm sm:text-base text-red-400 font-bold">Chỉ còn 15 suất</span>
                 <button 
                   onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))}
