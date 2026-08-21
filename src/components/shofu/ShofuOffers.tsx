@@ -112,7 +112,7 @@ export function ShofuOffers() {
                 <span className="font-mono text-xs text-red-400 font-bold">Chỉ còn 15 suất</span>
                 <button 
                   onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal", { detail: { offerId: 1 } }))}
-                  className="inline-flex items-center gap-2 text-[#00ADEF] font-mono text-xs font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider animate-slow-scale-pulse"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#00ADEF] border border-[#00ADEF] text-white font-mono text-xs font-bold uppercase hover:bg-[#00c2ff] hover:border-[#00c2ff] hover:shadow-[0_0_20px_rgba(0,173,239,0.5)] transition-all cursor-pointer tracking-wider animate-slow-scale-pulse"
                 >
                   ĐĂNG KÝ NGAY <ArrowRight className="w-4 h-4" />
                 </button>
@@ -157,7 +157,7 @@ export function ShofuOffers() {
                 <span className="font-mono text-xs text-red-400 font-bold">Chỉ còn 8 suất</span>
                 <button 
                   onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal", { detail: { offerId: 2 } }))}
-                  className="inline-flex items-center gap-2 text-[#C43838] font-mono text-xs font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider animate-slow-scale-pulse"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#C43838] border border-[#C43838] text-white font-mono text-xs font-bold uppercase hover:bg-[#e64242] hover:border-[#e64242] hover:shadow-[0_0_20px_rgba(196,56,56,0.5)] transition-all cursor-pointer tracking-wider animate-slow-scale-pulse"
                 >
                   NHẬN ƯU ĐÃI <ArrowRight className="w-4 h-4" />
                 </button>
