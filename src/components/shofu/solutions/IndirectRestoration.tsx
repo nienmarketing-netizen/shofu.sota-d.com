@@ -41,12 +41,13 @@ export function IndirectRestoration() {
   };
 
   return (
-    <div className="space-y-24">
+    <div className="w-full flex flex-col">
       {/* SECTION 1: HERO SECTION */}
-      <section className="bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 border border-slate-200 shadow-xl relative overflow-hidden">
+      <section className="py-16 lg:py-24 bg-white relative overflow-hidden border-b border-slate-200">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#00ADEF]/10 to-transparent rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
         
-        <div className="flex flex-col lg:flex-row gap-12 items-center relative z-10">
+        <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col lg:flex-row gap-12 items-center relative z-10">
           <div className="w-full lg:w-[60%]">
             <span className="font-mono text-xs text-[#00ADEF] font-semibold uppercase tracking-widest bg-[#00ADEF]/10 px-4 py-1.5 rounded-full mb-6 inline-block">
               XU THẾ NHA KHOA CAN THIỆP TỐI THIỂU (MiCD) & PHỤC HỒI BIOPLASTIC 2026
@@ -124,9 +125,10 @@ export function IndirectRestoration() {
       </section>
 
       {/* SECTION 2: THE PAIN POINTS */}
-      <section className="bg-slate-900 rounded-[2.5rem] p-8 md:p-12 lg:p-16 relative overflow-hidden text-center">
+      <section className="py-20 lg:py-28 bg-slate-900 relative overflow-hidden text-center">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 mix-blend-overlay"></div>
-        <div className="relative z-10 max-w-4xl mx-auto mb-16">
+        <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
+        <div className="max-w-4xl mx-auto mb-16">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-6 uppercase">
             CÓ PHẢI BÁC SĨ ĐANG ÂM THẦM CHỊU ĐỰNG NHỮNG RỦI RO NÀY MỖI NGÀY?
           </h2>
@@ -164,10 +166,12 @@ export function IndirectRestoration() {
             </p>
           </div>
         </div>
+        </div>
       </section>
 
       {/* SECTION 3: THE GOLD STANDARD */}
-      <section className="space-y-12">
+      <section className="py-20 lg:py-28 bg-slate-50 relative border-b border-slate-200">
+        <div className="w-[90%] lg:w-[80%] mx-auto space-y-12">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">
             TIÊU CHUẨN VÀNG MỚI:<br/>BỘ ĐÔI LIÊN KẾT SINH HỌC KHÔNG THỂ PHÁ HỦY
@@ -287,10 +291,13 @@ export function IndirectRestoration() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* SECTION 4: DEEP DIVE INTO USPS */}
-      <section className="space-y-8">
+      <section className="py-20 lg:py-28 bg-white relative border-b border-slate-200">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
+        <div className="w-[90%] lg:w-[80%] mx-auto space-y-8 relative z-10">
         <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 text-center mb-12 uppercase">SỨC MẠNH THUYẾT PHỤC TUYỆT ĐỐI</h2>
         
         {/* USP 1 */}
@@ -406,10 +413,12 @@ export function IndirectRestoration() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* SECTION 5: CLINICAL WORKFLOW */}
-      <section className="py-12">
+      <section className="py-20 lg:py-28 bg-slate-50 relative border-b border-slate-200">
+        <div className="w-[90%] lg:w-[80%] mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">QUY TRÌNH PHỐI HỢP DÁN - GẮN TIÊU CHUẨN</h2>
           <p className="text-slate-600 text-lg">5 phút giải phóng ghế nha với quy trình "True Universal" tối giản</p>
@@ -462,12 +471,14 @@ export function IndirectRestoration() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* SECTION 6: SOCIAL PROOF */}
-      <section className="bg-slate-100 rounded-[2.5rem] p-8 md:p-12 lg:p-16 relative">
-        <Quote className="absolute top-8 left-8 w-32 h-32 text-slate-200 opacity-50" />
-        <div className="text-center max-w-4xl mx-auto mb-16 relative z-10">
+      <section className="py-20 lg:py-28 bg-slate-100 relative overflow-hidden">
+        <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
+        <Quote className="absolute -top-10 -left-10 w-40 h-40 text-slate-200 opacity-50" />
+          <div className="text-center max-w-4xl mx-auto mb-16 relative z-10">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">HÀNG NGÀN NHA SĨ VÀ CHUYÊN GIA ĐÃ CHỌN</h2>
         </div>
         
@@ -502,10 +513,14 @@ export function IndirectRestoration() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* SECTION 7: THE CORE OFFER */}
-      <section className="bg-white rounded-[2.5rem] border-[3px] border-amber-400 p-2 shadow-[0_0_40px_rgba(251,191,36,0.2)]">
+      <section className="py-20 lg:py-28 bg-slate-200 relative border-b border-slate-300">
+        <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
+        <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
+          <div className="bg-white rounded-[2.5rem] border-[3px] border-amber-400 p-2 shadow-[0_0_40px_rgba(251,191,36,0.2)] max-w-5xl mx-auto">
         <div className="bg-slate-900 rounded-[2.2rem] p-8 md:p-12 lg:p-16 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
           
@@ -563,11 +578,15 @@ export function IndirectRestoration() {
               <ShieldCheck className="w-4 h-4 text-emerald-400" /> Cam kết hoàn tiền 100% trong 30 ngày nếu xảy ra ê buốt do vật liệu.
             </p>
           </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* SECTION 8: FAQ */}
-      <section className="max-w-3xl mx-auto pb-12">
+      <section className="py-20 lg:py-28 bg-white relative">
+        <div className="w-[90%] lg:w-[80%] mx-auto">
+          <div className="max-w-3xl mx-auto">
         <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 text-center mb-10 uppercase">GIẢI ĐÁP HOÀI NGHI LÂM SÀNG</h2>
         
         <FaqItem 
@@ -582,6 +601,8 @@ export function IndirectRestoration() {
           question="Keo dán màng 5µm và xi măng 14µm thì có ảnh hưởng lực dán cơ học của phục hình gián tiếp không?"
           answer="Ngược lại, đây là độ dày màng lý tưởng nhất cho phục hình gián tiếp! Lớp màng mỏng giúp giảm thiểu tối đa khoảng rỗng của xi măng, ngăn ngừa vi kẽ đường viền dán dính và tối ưu hóa sự truyền lực dán hóa học bền vững lên tới ~50 MPa của toàn bộ hệ thống."
         />
+          </div>
+        </div>
       </section>
 
     </div>
