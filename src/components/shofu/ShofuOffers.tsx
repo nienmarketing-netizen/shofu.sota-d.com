@@ -84,29 +84,35 @@ export function ShofuOffers() {
                 <Gift className="w-6 h-6 text-[#00ADEF]" />
               </div>
               <h3 className="font-heading font-bold mb-3 text-white flex flex-col gap-1">
-                <span className="text-xl sm:text-2xl">Combo phục hình gián tiếp</span>
-                <span className="text-base sm:text-lg text-[#00ADEF]">Giomer không ê buốt</span>
+                <span className="text-lg sm:text-xl">Combo phục hình gián tiếp</span>
+                <span className="text-sm sm:text-base text-[#00ADEF]">Giomer không ê buốt</span>
               </h3>
-              <p className="font-body text-sm sm:text-base text-slate-300 mb-6 flex-1 leading-relaxed">
-                Khóa chặt vi kẽ, trị liệu sinh học 6 ion, chấm dứt 100% ám ảnh bảo hành răng sống. Nhận ngay bộ Quà tặng & Đặc quyền cố vấn trị giá <strong>4.740.000đ</strong>!
+              <p className="font-body text-sm text-slate-300 mb-6 flex-1 leading-relaxed">
+                Triệt tiêu ê buốt tức thì nhờ <strong>cơ chế 6 Ion</strong> bít kín ống ngà. Chặn đứng ê buốt muộn với <strong>công nghệ HEMA-Free</strong>. Lực dán 50MPa tạo khoảng xi măng vô hình, lưu giữ 100% sau 8 năm lâm sàng.
               </p>
               
-              <div className="flex flex-col gap-2 mb-6 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">
-                <div className="flex justify-between items-center text-xs sm:text-sm">
+              <div className="flex flex-col gap-2 mb-4 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">
+                <div className="flex justify-between items-center text-sm">
                   <span className="text-slate-400">Tổng giá trị:</span>
-                  <span className="text-slate-500 line-through decoration-red-500/50">8.155.000đ</span>
+                  <span className="text-slate-300 font-semibold">8.155.000đ</span>
                 </div>
-                <div className="flex justify-between items-center text-sm sm:text-base">
+                <div className="flex justify-between items-center text-sm">
                   <span className="text-slate-300 font-medium">Mức đầu tư ưu đãi:</span>
-                  <span className="text-[#00ADEF] font-heading font-extrabold text-xl sm:text-2xl">3.415.000đ</span>
+                  <span className="text-[#00ADEF] font-heading font-extrabold text-lg sm:text-xl">3.415.000đ</span>
                 </div>
               </div>
               
+              <div className="mb-6 text-center">
+                <span className="inline-block bg-emerald-500/10 text-emerald-400 text-[11px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-emerald-500/20">
+                  Hoàn tiền 100% nếu Bác sĩ không hài lòng
+                </span>
+              </div>
+              
               <div className="flex items-center justify-between mt-auto pt-5 border-t border-white/10">
-                <span className="font-mono text-xs sm:text-sm text-red-400 font-bold">Chỉ còn 15 suất</span>
+                <span className="font-mono text-xs text-red-400 font-bold">Chỉ còn 15 suất</span>
                 <button 
                   onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))}
-                  className="inline-flex items-center gap-2 text-[#00ADEF] font-mono text-xs sm:text-sm font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider"
+                  className="inline-flex items-center gap-2 text-[#00ADEF] font-mono text-xs font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider"
                 >
                   ĐĂNG KÝ NGAY <ArrowRight className="w-4 h-4" />
                 </button>
@@ -122,18 +128,18 @@ export function ShofuOffers() {
               <div className="w-12 h-12 rounded-xl bg-[#C43838]/20 flex items-center justify-center mb-6 shrink-0">
                 <Gift className="w-6 h-6 text-[#C43838]" />
               </div>
-              <h3 className="font-heading font-bold text-xl sm:text-2xl mb-3 text-white">
+              <h3 className="font-heading font-bold text-lg sm:text-xl mb-3 text-white">
                 Gói khởi động trám MiCD
               </h3>
-              <p className="font-body text-sm sm:text-base text-slate-300 mb-8 flex-1 leading-relaxed">
+              <p className="font-body text-sm text-slate-300 mb-8 flex-1 leading-relaxed">
                 Trải nghiệm đỉnh cao composite với ưu đãi chiết khấu trực tiếp lên đến 25% + Tặng kèm khóa học Online.
               </p>
               
               <div className="flex items-center justify-between mt-auto pt-5 border-t border-transparent">
-                <span className="font-mono text-xs sm:text-sm text-red-400 font-bold">Chỉ còn 8 suất</span>
+                <span className="font-mono text-xs text-red-400 font-bold">Chỉ còn 8 suất</span>
                 <button 
                   onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))}
-                  className="inline-flex items-center gap-2 text-[#C43838] font-mono text-xs sm:text-sm font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider"
+                  className="inline-flex items-center gap-2 text-[#C43838] font-mono text-xs font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider"
                 >
                   NHẬN ƯU ĐÃI <ArrowRight className="w-4 h-4" />
                 </button>
