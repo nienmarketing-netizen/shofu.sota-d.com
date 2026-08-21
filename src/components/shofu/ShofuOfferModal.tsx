@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { X, Gift, ShoppingCart, CheckCircle, ArrowRight, Tag, ShieldCheck, CheckCircle2, Package } from 'lucide-react';
+import { X, Gift, ShoppingCart, CheckCircle, ArrowRight, Tag, ShieldCheck, CheckCircle2, Package, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function ShofuOfferModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [modalMode, setModalMode] = useState<'combo' | 'product'>('combo');
   const [activeOfferId, setActiveOfferId] = useState<1 | 2>(1);
-  const [activeProductId, setActiveProductId] = useState<1 | 2 | 3 | 4>(1);
+  const [activeProductIds, setActiveProductIds] = useState<Array<1 | 2 | 3 | 4>>([1]);
   const [formData, setFormData] = useState({ name: '', phone: '', clinic: '', wantsCustomOffer: false });
   const [formError, setFormError] = useState('');
 
@@ -29,7 +29,7 @@ export function ShofuOfferModal() {
         setActiveOfferId(customEvent.detail.offerId as 1 | 2);
       } else {
         setModalMode('product');
-        setActiveProductId(1);
+        setActiveProductIds([1]);
       }
     };
     window.addEventListener('open-offer-modal', handleOpen);
@@ -43,6 +43,10 @@ export function ShofuOfferModal() {
     setTimeout(() => {
       setIsSuccess(false);
       setFormData({ name: '', phone: '', clinic: '', wantsCustomOffer: false });
+    if (modalMode === 'product' && activeProductIds.length === 0) {
+      setFormError('Vui lòng chọn ít nhất 1 ưu đãi.');
+      return;
+    }
       setFormError('');
       document.body.style.overflow = 'auto';
     }, 300);
@@ -152,6 +156,10 @@ export function ShofuOfferModal() {
       setFormError('Vui lòng điền đầy đủ Tên và Số điện thoại.');
       return;
     }
+    if (modalMode === 'product' && activeProductIds.length === 0) {
+      setFormError('Vui lòng chọn ít nhất 1 ưu đãi.');
+      return;
+    }
     setFormError('');
     setIsSubmitting(true);
     const payload = {
@@ -159,7 +167,7 @@ export function ShofuOfferModal() {
       phone: formData.phone,
       clinic: formData.clinic,
       wantsCustomOffer: formData.wantsCustomOffer ? 'Yes' : 'No',
-      selectedPromos: modalMode === 'combo' ? offerDetails[activeOfferId].name : productDetails[activeProductId].name
+      selectedPromos: modalMode === 'combo' ? offerDetails[activeOfferId].name : activeProductIds.map(id => productDetails[id].name).join(", ")
     };
 
     const webhookUrl = "https://script.google.com/macros/s/AKfycbxc-EtHL1Un2AgalFAz8RvxlHX0TtE4q6OK2h0CiSNWBo7tvP1sDhBiJv7vvrRkJ3-zgQ/exec";
@@ -184,7 +192,7 @@ export function ShofuOfferModal() {
     });
   };
 
-  const activeOffer = modalMode === 'combo' ? offerDetails[activeOfferId] : productDetails[activeProductId];
+  const activeOffer = modalMode === 'combo' ? offerDetails[activeOfferId] : productDetails[1];
   const isBlue = modalMode === 'combo' ? (offerDetails[activeOfferId].theme === 'shofu') : true;
   const themeColor = isBlue ? '#00ADEF' : '#C43838';
   const themeBg = isBlue ? 'bg-[#00ADEF]' : 'bg-[#C43838]';
@@ -315,14 +323,17 @@ export function ShofuOfferModal() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                   {(Object.keys(productDetails) as unknown as Array<1|2|3|4>).map((key) => {
                     const offer = productDetails[key];
-                    const isActive = activeProductId === Number(key);
+                    const isActive = activeProductIds.includes(Number(key) as 1|2|3|4);
                     const newPriceParts = offer.newPrice.split(':');
                     const hasColon = newPriceParts.length > 1;
 
                     return (
                       <div 
                         key={key}
-                        onClick={() => setActiveProductId(Number(key) as 1|2|3|4)}
+                        onClick={() => {
+                          const id = Number(key) as 1|2|3|4;
+                          setActiveProductIds(prev => prev.includes(id) ? prev.filter(pId => pId !== id) : [...prev, id]);
+                        }}
                         className={`relative rounded-xl overflow-hidden bg-white border-2 cursor-pointer transition-all duration-300 flex flex-col ${isActive ? 'border-[#00ADEF] shadow-lg shadow-[#00ADEF]/20' : 'border-transparent shadow hover:border-slate-300'}`}
                       >
                         {/* Top Header */}
@@ -337,8 +348,8 @@ export function ShofuOfferModal() {
                           )}
                           
                           {/* Radio Button */}
-                          <div className={`absolute top-3 right-3 z-20 flex items-center justify-center w-6 h-6 rounded-full border-[2.5px] transition-colors ${isActive ? 'bg-[#00ADEF] border-[#00ADEF]' : 'bg-white/30 border-white/70'}`}>
-                            {isActive && <div className="w-2.5 h-2.5 bg-white rounded-full"></div>}
+                          <div className={`absolute top-3 right-3 z-20 flex items-center justify-center w-6 h-6 rounded-md border-[2.5px] transition-colors ${isActive ? 'bg-[#00ADEF] border-[#00ADEF]' : 'bg-white/30 border-white/70'}`}>
+                            {isActive && <Check className="w-4 h-4 text-white" strokeWidth={3} />}
                           </div>
 
                           {/* Badge */}
