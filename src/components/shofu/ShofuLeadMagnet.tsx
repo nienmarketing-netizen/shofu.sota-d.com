@@ -1,35 +1,42 @@
 import React, { useState } from 'react';
-import { Download, FileText, CheckCircle2 } from 'lucide-react';
+import { Download, FileText, CheckCircle2, Loader2 } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function ShofuLeadMagnet() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     const payload = {
       name: formData.name,
       phone: formData.phone,
-      clinic: '',
+      clinic: formData.email ? `Email: ${formData.email}` : '',
       wantsCustomOffer: 'No',
-      selectedPromos: 'Lead Magnet: Đăng ký nhận cẩm nang 3D Printed Technique'
+      selectedPromos: 'Lead Magnet: Đăng ký nhận tài liệu độc quyền'
     };
 
-    fetch('/api/submit-lead', {
+    const webhookUrl = "https://script.google.com/macros/s/AKfycbxc-EtHL1Un2AgalFAz8RvxlHX0TtE4q6OK2h0CiSNWBo7tvP1sDhBiJv7vvrRkJ3-zgQ/exec";
+    const bodyString = new URLSearchParams(payload as any).toString();
+
+    fetch(webhookUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: bodyString,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      mode: 'no-cors'
     })
-    .then(res => res.json())
-    .then(data => {
-      if (!data.error) {
-        setIsSubmitted(true);
-      }
+    .then(() => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
     })
     .catch(err => {
       console.error(err);
+      setIsSubmitting(false);
       // fallback
       setIsSubmitted(true);
     });
@@ -85,15 +92,34 @@ export function ShofuLeadMagnet() {
                   <CheckCircle2 className="w-8 h-8 text-[#00ADEF]" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-sky-900 mb-2">Đăng Ký Thành Công!</h3>
-                <p className="font-body text-sky-700 text-sm">
-                  Cảm ơn Bác sĩ đã tạo cơ hội cho Sota-D được phục vụ. Chuyên viên Sota-D sẽ sớm liên hệ và gửi thông tin đến Bác sĩ.
+                <p className="font-body text-sky-700 text-sm mb-6">
+                  Cảm ơn Bác sĩ đã tạo cơ hội cho Sota-D được phục vụ. Chúng tôi sẽ sớm liên hệ và gửi thông tin.
                 </p>
+
+                <div className="bg-white border border-sky-100 rounded-xl p-5 text-left mb-6 shadow-sm">
+                  <h4 className="text-xs font-bold text-sky-800 uppercase tracking-wider mb-3">Thông tin đã ghi nhận</h4>
+                  <div className="space-y-2">
+                    <div className="flex">
+                      <span className="w-24 text-slate-500 text-sm">Bác sĩ:</span>
+                      <span className="font-bold text-slate-900 text-sm flex-1">{formData.name}</span>
+                    </div>
+                    <div className="flex">
+                      <span className="w-24 text-slate-500 text-sm">SĐT:</span>
+                      <span className="font-bold text-slate-900 text-sm flex-1">{formData.phone}</span>
+                    </div>
+                    <div className="flex">
+                      <span className="w-24 text-slate-500 text-sm">Email:</span>
+                      <span className="font-bold text-slate-900 text-sm flex-1">{formData.email}</span>
+                    </div>
+                  </div>
+                </div>
+
                 <button 
                   onClick={() => {
                     setIsSubmitted(false);
                     setFormData({ name: '', phone: '', email: '' });
                   }}
-                  className="mt-6 text-[#00ADEF] text-sm font-bold hover:underline"
+                  className="w-full bg-[#00ADEF] text-white font-bold px-6 py-3 rounded-xl hover:bg-sky-500 transition-colors text-sm"
                 >
                   Đóng thông báo
                 </button>
@@ -141,10 +167,20 @@ export function ShofuLeadMagnet() {
                 </div>
                 <button 
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-[#00ADEF] text-white font-mono text-sm font-bold uppercase tracking-wider hover:bg-sky-500 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-sky-500/25"
+                  disabled={isSubmitting}
+                  className={`w-full py-4 rounded-xl bg-[#00ADEF] text-white font-mono text-sm font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-lg shadow-sky-500/25 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-sky-500'}`}
                 >
-                  <Download className="w-4 h-4" />
-                  Nhận Tài Liệu Ngay
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Đang ghi nhận...
+                    </>
+                  ) : (
+                    <>
+                      <Download className="w-4 h-4" />
+                      Nhận Tài Liệu Ngay
+                    </>
+                  )}
                 </button>
                 <p className="text-center font-body text-[10px] text-slate-500 mt-4">
                   Cam kết bảo mật thông tin tuyệt đối theo tiêu chuẩn Sota-D.
