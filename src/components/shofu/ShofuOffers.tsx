@@ -139,7 +139,7 @@ export function ShofuOffers() {
               <div className="flex flex-col gap-2 mb-4 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-slate-400">Tổng giá trị:</span>
-                  <span className="text-slate-300 font-semibold">4.750.000đ</span>
+                  <span className="text-slate-300 font-semibold">7.250.000đ</span>
                 </div>
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-slate-300 font-medium">Mức đầu tư ưu đãi:</span>
