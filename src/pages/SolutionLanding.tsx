@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ShofuHeader } from '../components/shofu/ShofuHeader';
 import { ShofuFooter } from '../components/shofu/ShofuFooter';
 import { ArrowLeft, CheckCircle, BookOpen, Quote, Sparkles, Gift } from 'lucide-react';
+import { IndirectRestoration } from '../components/shofu/solutions/IndirectRestoration';
 
 const solutionData = {
   'phuc-hinh-gian-tiep': {
@@ -78,63 +79,67 @@ export default function SolutionLanding() {
 
         {/* Content Structure Placeholder */}
         <section className="py-16">
-          <div className="container-custom max-w-5xl mx-auto px-4 space-y-24">
-            
-            {/* 1. Danh sách sản phẩm & Mô tả */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-3 mb-8">
-                <Sparkles className="w-8 h-8 text-[#00ADEF]" />
-                <h2 className="font-heading font-bold text-3xl text-slate-900">Danh mục Sản phẩm</h2>
-              </div>
-              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <p className="text-slate-500 italic text-center py-10">[Khối Hiển Thị Danh Sách & Mô Tả Sản Phẩm Sẽ Được Thiết Kế Tại Đây]</p>
-              </div>
-            </div>
+          <div className="container-custom max-w-5xl mx-auto px-4">
+            {slug === 'phuc-hinh-gian-tiep' ? (
+              <IndirectRestoration />
+            ) : (
+              <div className="space-y-24">
+                {/* 1. Danh sách sản phẩm & Mô tả */}
+                <div className="space-y-8">
+                  <div className="flex items-center gap-3 mb-8">
+                    <Sparkles className="w-8 h-8 text-[#00ADEF]" />
+                    <h2 className="font-heading font-bold text-3xl text-slate-900">Danh mục Sản phẩm</h2>
+                  </div>
+                  <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <p className="text-slate-500 italic text-center py-10">[Khối Hiển Thị Danh Sách & Mô Tả Sản Phẩm Sẽ Được Thiết Kế Tại Đây]</p>
+                  </div>
+                </div>
 
-            {/* 2. USP Sản phẩm */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-3 mb-8">
-                <CheckCircle className="w-8 h-8 text-[#00ADEF]" />
-                <h2 className="font-heading font-bold text-3xl text-slate-900">Điểm Ưu Việt (USP)</h2>
-              </div>
-              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <p className="text-slate-500 italic text-center py-10">[Các USP Của Giải Pháp Này Sẽ Được Trình Bày Tại Đây]</p>
-              </div>
-            </div>
+                {/* 2. USP Sản phẩm */}
+                <div className="space-y-8">
+                  <div className="flex items-center gap-3 mb-8">
+                    <CheckCircle className="w-8 h-8 text-[#00ADEF]" />
+                    <h2 className="font-heading font-bold text-3xl text-slate-900">Điểm Ưu Việt (USP)</h2>
+                  </div>
+                  <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <p className="text-slate-500 italic text-center py-10">[Các USP Của Giải Pháp Này Sẽ Được Trình Bày Tại Đây]</p>
+                  </div>
+                </div>
 
-            {/* 3. Y văn & Nghiên cứu */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-3 mb-8">
-                <BookOpen className="w-8 h-8 text-[#00ADEF]" />
-                <h2 className="font-heading font-bold text-3xl text-slate-900">Bảo Chứng Nghiên Cứu & Y Văn</h2>
-              </div>
-              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <p className="text-slate-500 italic text-center py-10">[Trích Dẫn Y Văn & Biểu Đồ Nghiên Cứu Sẽ Hiển Thị Ở Đây]</p>
-              </div>
-            </div>
+                {/* 3. Y văn & Nghiên cứu */}
+                <div className="space-y-8">
+                  <div className="flex items-center gap-3 mb-8">
+                    <BookOpen className="w-8 h-8 text-[#00ADEF]" />
+                    <h2 className="font-heading font-bold text-3xl text-slate-900">Bảo Chứng Nghiên Cứu & Y Văn</h2>
+                  </div>
+                  <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <p className="text-slate-500 italic text-center py-10">[Trích Dẫn Y Văn & Biểu Đồ Nghiên Cứu Sẽ Hiển Thị Ở Đây]</p>
+                  </div>
+                </div>
 
-            {/* 4. Feedback */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-3 mb-8">
-                <Quote className="w-8 h-8 text-[#00ADEF]" />
-                <h2 className="font-heading font-bold text-3xl text-slate-900">Đánh Giá Từ Chuyên Gia</h2>
-              </div>
-              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <p className="text-slate-500 italic text-center py-10">[Khối Feedback & Trải Nghiệm Khách Hàng Sẽ Đặt Tại Đây]</p>
-              </div>
-            </div>
+                {/* 4. Feedback */}
+                <div className="space-y-8">
+                  <div className="flex items-center gap-3 mb-8">
+                    <Quote className="w-8 h-8 text-[#00ADEF]" />
+                    <h2 className="font-heading font-bold text-3xl text-slate-900">Đánh Giá Từ Chuyên Gia</h2>
+                  </div>
+                  <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <p className="text-slate-500 italic text-center py-10">[Khối Feedback & Trải Nghiệm Khách Hàng Sẽ Đặt Tại Đây]</p>
+                  </div>
+                </div>
 
-            {/* 5. Offer & Call to action */}
-            <div className="space-y-8">
-              <div className="flex items-center justify-center gap-3 mb-8">
-                <Gift className="w-8 h-8 text-[#C43838]" />
-                <h2 className="font-heading font-bold text-3xl text-slate-900 text-center">Ưu Đãi Đặc Quyền</h2>
+                {/* 5. Offer & Call to action */}
+                <div className="space-y-8">
+                  <div className="flex items-center justify-center gap-3 mb-8">
+                    <Gift className="w-8 h-8 text-[#C43838]" />
+                    <h2 className="font-heading font-bold text-3xl text-slate-900 text-center">Ưu Đãi Đặc Quyền</h2>
+                  </div>
+                  <div className="bg-slate-900 p-10 rounded-2xl border border-slate-800 shadow-xl text-center">
+                    <p className="text-slate-400 italic py-10">[Gói Ưu Đãi & Form Đăng Ký Chuyên Sâu Của Riêng Giải Pháp Này Sẽ Nằm Ở Đây]</p>
+                  </div>
+                </div>
               </div>
-              <div className="bg-slate-900 p-10 rounded-2xl border border-slate-800 shadow-xl text-center">
-                <p className="text-slate-400 italic py-10">[Gói Ưu Đãi & Form Đăng Ký Chuyên Sâu Của Riêng Giải Pháp Này Sẽ Nằm Ở Đây]</p>
-              </div>
-            </div>
-
+            )}
           </div>
         </section>
       </main>
