@@ -103,7 +103,7 @@ export function ShofuOffers() {
               </div>
               
               <div className="mb-6 text-center">
-                <span className="inline-block bg-emerald-500/10 text-emerald-400 text-[11px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-emerald-500/20">
+                <span className="inline-block bg-white/5 text-white/70 text-[10px] sm:text-[11px] font-medium px-3 py-1.5 rounded-lg border border-white/10">
                   Hoàn tiền 100% nếu Bác sĩ không hài lòng
                 </span>
               </div>
