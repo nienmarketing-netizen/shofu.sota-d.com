@@ -48,10 +48,10 @@ export function IndirectRestoration() {
         
         <div className="flex flex-col lg:flex-row gap-12 items-center relative z-10">
           <div className="w-full lg:w-[60%]">
-            <span className="inline-block px-4 py-1.5 bg-[#00ADEF]/10 text-[#008BBF] text-xs md:text-sm font-bold uppercase tracking-wider rounded-full mb-6">
+            <span className="font-mono text-xs text-[#00ADEF] font-semibold uppercase tracking-widest bg-[#00ADEF]/10 px-4 py-1.5 rounded-full mb-6 inline-block">
               XU THẾ NHA KHOA CAN THIỆP TỐI THIỂU (MiCD) & PHỤC HỒI BIOPLASTIC 2026
             </span>
-            <h1 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-[1.1] mb-6">
+            <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 mb-6 uppercase tracking-tight leading-[1.1]">
               CHẤM DỨT ÁM ẢNH SÚT MÃO, Ê BUỐT SAU GẮN VÀ LÃNG PHÍ VẬT TƯ!
             </h1>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
@@ -90,13 +90,13 @@ export function IndirectRestoration() {
 
             <button 
               onClick={openOffer}
-              className="w-full sm:w-auto bg-gradient-to-r from-yellow-500 to-amber-500 hover:from-yellow-400 hover:to-amber-400 text-white font-bold px-8 py-5 rounded-2xl shadow-xl shadow-amber-500/20 hover:shadow-amber-500/40 hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group"
+              className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto"
             >
-              <span className="text-lg md:text-xl mb-1 flex items-center gap-2">
-                NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <span className="text-sm font-medium opacity-90 block">Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor</span>
+              <Gift className="w-5 h-5" />
+              <span>NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI</span>
+              <ArrowRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </button>
+            <p className="text-sm font-medium opacity-90 text-slate-500 mt-4 text-center sm:text-left">Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor</p>
           </div>
           
           <div className="w-full lg:w-[40%] relative">
@@ -124,10 +124,10 @@ export function IndirectRestoration() {
       </section>
 
       {/* SECTION 2: THE PAIN POINTS */}
-      <section className="bg-slate-900 rounded-[2.5rem] p-8 md:p-12 lg:p-16 relative overflow-hidden text-center -mx-4 md:mx-0">
+      <section className="bg-slate-900 rounded-[2.5rem] p-8 md:p-12 lg:p-16 relative overflow-hidden text-center">
         <div className="absolute inset-0 bg-grid-pattern opacity-5 mix-blend-overlay"></div>
         <div className="relative z-10 max-w-4xl mx-auto mb-16">
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white mb-6 uppercase">
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-6 uppercase">
             CÓ PHẢI BÁC SĨ ĐANG ÂM THẦM CHỊU ĐỰNG NHỮNG RỦI RO NÀY MỖI NGÀY?
           </h2>
           <div className="w-24 h-1 bg-red-500 mx-auto"></div>
@@ -169,7 +169,7 @@ export function IndirectRestoration() {
       {/* SECTION 3: THE GOLD STANDARD */}
       <section className="space-y-12">
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-slate-900 mb-4">
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">
             TIÊU CHUẨN VÀNG MỚI:<br/>BỘ ĐÔI LIÊN KẾT SINH HỌC KHÔNG THỂ PHÁ HỦY
           </h2>
           <p className="text-slate-600 text-lg">Sự kết hợp hoàn hảo tạo nên khoảng ghép vô hình 24µm vững chắc.</p>
@@ -291,7 +291,7 @@ export function IndirectRestoration() {
 
       {/* SECTION 4: DEEP DIVE INTO USPS */}
       <section className="space-y-8">
-        <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-slate-900 text-center mb-12">SỨC MẠNH THUYẾT PHỤC TUYỆT ĐỐI</h2>
+        <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 text-center mb-12 uppercase">SỨC MẠNH THUYẾT PHỤC TUYỆT ĐỐI</h2>
         
         {/* USP 1 */}
         <div className="bg-white rounded-3xl border border-slate-200 p-8 md:p-12 shadow-sm flex flex-col md:flex-row gap-8 items-center hover:border-slate-300 transition-colors">
@@ -411,7 +411,7 @@ export function IndirectRestoration() {
       {/* SECTION 5: CLINICAL WORKFLOW */}
       <section className="py-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-slate-900 mb-4">QUY TRÌNH PHỐI HỢP DÁN - GẮN TIÊU CHUẨN</h2>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">QUY TRÌNH PHỐI HỢP DÁN - GẮN TIÊU CHUẨN</h2>
           <p className="text-slate-600 text-lg">5 phút giải phóng ghế nha với quy trình "True Universal" tối giản</p>
         </div>
 
@@ -468,7 +468,7 @@ export function IndirectRestoration() {
       <section className="bg-slate-100 rounded-[2.5rem] p-8 md:p-12 lg:p-16 relative">
         <Quote className="absolute top-8 left-8 w-32 h-32 text-slate-200 opacity-50" />
         <div className="text-center max-w-4xl mx-auto mb-16 relative z-10">
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-slate-900 mb-4">HÀNG NGÀN NHA SĨ VÀ CHUYÊN GIA ĐÃ CHỌN</h2>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">HÀNG NGÀN NHA SĨ VÀ CHUYÊN GIA ĐÃ CHỌN</h2>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10">
@@ -510,10 +510,10 @@ export function IndirectRestoration() {
           <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
           
           <div className="relative z-10 max-w-3xl mx-auto">
-            <span className="inline-block px-4 py-1.5 bg-amber-500/20 text-amber-400 text-sm font-bold uppercase tracking-wider rounded-full mb-6 border border-amber-500/30">
+            <span className="font-mono text-xs text-amber-400 font-semibold uppercase tracking-widest bg-amber-500/20 border border-amber-500/30 px-4 py-1.5 rounded-full mb-6 inline-block">
               ĐẶC QUYỀN ĐỒNG HÀNH KHÔNG THỂ TỪ CHỐI
             </span>
-            <h2 className="font-heading font-black text-3xl md:text-4xl text-white mb-10 leading-tight">
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-10 leading-tight uppercase">
               GÓI GIẢI PHÁP ĐỒNG BỘ "GIOMER KHÔNG Ê BUỐT" – AN TÂM LÂM SÀNG
             </h2>
             
@@ -553,9 +553,10 @@ export function IndirectRestoration() {
 
             <button 
               onClick={openOffer}
-              className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-black text-lg md:text-xl px-8 py-6 rounded-2xl shadow-xl shadow-red-500/20 hover:shadow-red-500/40 hover:-translate-y-1 transition-all duration-300 animate-bounce hover:animate-none"
+              className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto"
             >
-              ĐĂNG KÝ "GIOMER KHÔNG Ê BUỐT" - NHẬN QUÀ 2.5TR!
+              <span>ĐĂNG KÝ "GIOMER KHÔNG Ê BUỐT" - NHẬN QUÀ 2.5TR!</span>
+              <ArrowRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </button>
             
             <p className="mt-6 text-sm text-slate-400 flex items-center justify-center gap-2">
@@ -567,7 +568,7 @@ export function IndirectRestoration() {
 
       {/* SECTION 8: FAQ */}
       <section className="max-w-3xl mx-auto pb-12">
-        <h2 className="font-heading font-extrabold text-3xl text-slate-900 text-center mb-10">GIẢI ĐÁP HOÀI NGHI LÂM SÀNG</h2>
+        <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 text-center mb-10 uppercase">GIẢI ĐÁP HOÀI NGHI LÂM SÀNG</h2>
         
         <FaqItem 
           question="Xi măng trộn tay (Handmix) liệu có đều và đồng nhất bằng vòi Automix tự động không?"

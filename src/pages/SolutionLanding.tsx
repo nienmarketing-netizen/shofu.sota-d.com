@@ -60,10 +60,11 @@ export default function SolutionLanding() {
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-body">
       <ShofuHeader onNavigate={() => {}} onOpenQuote={() => {}} />
       
-      <main className="flex-1 pt-24 pb-20">
+      <main className="flex-1 pt-24 pb-20 bg-slate-50 relative">
         {/* Hero Section */}
-        <section className={`${data.bgClass} py-16 md:py-24 border-b border-slate-200`}>
-          <div className="container-custom max-w-5xl mx-auto px-4 text-center">
+        <section className={`${data.bgClass} py-16 md:py-24 border-b border-slate-200 relative overflow-hidden`}>
+          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+          <div className="w-[90%] lg:w-[80%] mx-auto text-center relative z-10">
             <Link to="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors mb-8 text-sm font-medium">
               <ArrowLeft className="w-4 h-4" />
               Trở lại trang chủ
@@ -78,8 +79,9 @@ export default function SolutionLanding() {
         </section>
 
         {/* Content Structure Placeholder */}
-        <section className="py-16">
-          <div className="container-custom max-w-5xl mx-auto px-4">
+        <section className="py-16 relative">
+          <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none mix-blend-overlay"></div>
+          <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
             {slug === 'phuc-hinh-gian-tiep' ? (
               <IndirectRestoration />
             ) : (
