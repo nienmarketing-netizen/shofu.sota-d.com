@@ -5,6 +5,7 @@ import { ShofuSolutions } from '../components/shofu/ShofuSolutions';
 import { ShofuOffers } from '../components/shofu/ShofuOffers';
 import { ShofuAbout } from '../components/shofu/ShofuAbout';
 import { ShofuSocialProof } from '../components/shofu/ShofuSocialProof';
+import { ShofuCaseStudies } from '../components/shofu/ShofuCaseStudies';
 import { ShofuLeadMagnet } from '../components/shofu/ShofuLeadMagnet';
 import { ShofuFooter } from '../components/shofu/ShofuFooter';
 import { ContactModal } from '../components/ContactModal';
@@ -40,6 +41,7 @@ export default function ShofuLanding() {
         <ShofuOffers />
         <ShofuAbout />
         <ShofuSocialProof />
+        <ShofuCaseStudies />
         <ShofuLeadMagnet />
       </main>
 
