@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ChevronLeft, ChevronRight, ZoomIn, ShoppingCart } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ZoomIn, ShoppingCart, ArrowUpRight } from 'lucide-react';
 
 const caseStudies = [
   {
@@ -101,13 +101,6 @@ export function ShofuCaseStudies() {
     setSelectedIndex((prev) => (prev! > 0 ? prev! - 1 : caseStudies.length - 1));
   };
 
-  const scrollToOffers = () => {
-    const offersSection = document.getElementById('offers');
-    if (offersSection) {
-      offersSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="case-studies" className="py-20 relative border-t border-slate-200 bg-slate-50 bg-grid-pattern overflow-hidden">
       <div className="absolute inset-0 bitcoin-gradient opacity-[0.03]"></div>
@@ -163,15 +156,11 @@ export function ShofuCaseStudies() {
 
       {/* CTA Button */}
       <div className="text-center px-4 relative z-10">
-        <motion.button
-          onClick={scrollToOffers}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-xl font-mono text-sm font-bold uppercase tracking-wider hover:bg-sky-500 transition-colors shadow-lg shadow-sky-500/25"
-        >
+        <button onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
           <ShoppingCart className="w-5 h-5" />
-          Xem ưu đãi và đặt hàng
-        </motion.button>
+          <span>Xem ưu đãi và đặt hàng</span>
+          <ArrowUpRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+        </button>
       </div>
 
       {/* Lightbox Modal */}
