@@ -76,66 +76,66 @@ export function ShofuOffers() {
 
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {/* Offer 1 */}
-          <div className="bg-slate-800/40 border border-white/5 rounded-3xl p-8 sm:p-10 backdrop-blur-md relative group overflow-hidden flex flex-col h-full hover:bg-slate-800/60 transition-all duration-500">
+          <div className="bg-slate-800/40 border border-white/5 rounded-3xl p-6 sm:p-8 backdrop-blur-md relative group overflow-hidden flex flex-col h-full hover:bg-slate-800/60 transition-all duration-500">
             <div className="absolute inset-0 bg-gradient-to-br from-[#00ADEF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
             
             <div className="relative z-10 flex-1 flex flex-col">
-              <div className="w-16 h-16 rounded-2xl bg-[#00ADEF]/20 flex items-center justify-center mb-8 shrink-0">
-                <Gift className="w-8 h-8 text-[#00ADEF]" />
+              <div className="w-12 h-12 rounded-xl bg-[#00ADEF]/20 flex items-center justify-center mb-6 shrink-0">
+                <Gift className="w-6 h-6 text-[#00ADEF]" />
               </div>
-              <h3 className="font-heading font-bold mb-4 text-white flex flex-col gap-1">
-                <span className="text-2xl sm:text-3xl">Combo phục hình gián tiếp</span>
-                <span className="text-lg sm:text-xl text-[#00ADEF]">Giomer không ê buốt</span>
+              <h3 className="font-heading font-bold mb-3 text-white flex flex-col gap-1">
+                <span className="text-xl sm:text-2xl">Combo phục hình gián tiếp</span>
+                <span className="text-base sm:text-lg text-[#00ADEF]">Giomer không ê buốt</span>
               </h3>
-              <p className="font-body text-base sm:text-lg text-slate-300 mb-6 flex-1 leading-relaxed">
+              <p className="font-body text-sm sm:text-base text-slate-300 mb-6 flex-1 leading-relaxed">
                 Khóa chặt vi kẽ, trị liệu sinh học 6 ion, chấm dứt 100% ám ảnh bảo hành răng sống. Nhận ngay bộ Quà tặng & Đặc quyền cố vấn trị giá <strong>4.740.000đ</strong>!
               </p>
               
-              <div className="flex flex-col gap-2 mb-8 bg-slate-900/50 p-4 sm:p-5 rounded-xl border border-white/5">
-                <div className="flex justify-between items-center text-sm">
+              <div className="flex flex-col gap-2 mb-6 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">
+                <div className="flex justify-between items-center text-xs sm:text-sm">
                   <span className="text-slate-400">Tổng giá trị:</span>
                   <span className="text-slate-500 line-through decoration-red-500/50">8.155.000đ</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center text-sm sm:text-base">
                   <span className="text-slate-300 font-medium">Mức đầu tư ưu đãi:</span>
-                  <span className="text-[#00ADEF] font-heading font-extrabold text-2xl sm:text-3xl">3.415.000đ</span>
+                  <span className="text-[#00ADEF] font-heading font-extrabold text-xl sm:text-2xl">3.415.000đ</span>
                 </div>
               </div>
               
-              <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/10">
-                <span className="font-mono text-sm sm:text-base text-red-400 font-bold">Chỉ còn 15 suất</span>
+              <div className="flex items-center justify-between mt-auto pt-5 border-t border-white/10">
+                <span className="font-mono text-xs sm:text-sm text-red-400 font-bold">Chỉ còn 15 suất</span>
                 <button 
                   onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))}
-                  className="inline-flex items-center gap-2 text-[#00ADEF] font-mono text-sm sm:text-base font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider"
+                  className="inline-flex items-center gap-2 text-[#00ADEF] font-mono text-xs sm:text-sm font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider"
                 >
-                  ĐĂNG KÝ NGAY <ArrowRight className="w-5 h-5" />
+                  ĐĂNG KÝ NGAY <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
           </div>
 
           {/* Offer 2 */}
-          <div className="bg-slate-800/40 border border-white/5 rounded-3xl p-8 sm:p-10 backdrop-blur-md relative group overflow-hidden flex flex-col h-full hover:bg-slate-800/60 transition-all duration-500">
+          <div className="bg-slate-800/40 border border-white/5 rounded-3xl p-6 sm:p-8 backdrop-blur-md relative group overflow-hidden flex flex-col h-full hover:bg-slate-800/60 transition-all duration-500">
             <div className="absolute inset-0 bg-gradient-to-br from-[#C43838]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
             
             <div className="relative z-10 flex-1 flex flex-col">
-              <div className="w-16 h-16 rounded-2xl bg-[#C43838]/20 flex items-center justify-center mb-8 shrink-0">
-                <Gift className="w-8 h-8 text-[#C43838]" />
+              <div className="w-12 h-12 rounded-xl bg-[#C43838]/20 flex items-center justify-center mb-6 shrink-0">
+                <Gift className="w-6 h-6 text-[#C43838]" />
               </div>
-              <h3 className="font-heading font-bold text-2xl sm:text-3xl mb-4 text-white">
+              <h3 className="font-heading font-bold text-xl sm:text-2xl mb-3 text-white">
                 Gói khởi động trám MiCD
               </h3>
-              <p className="font-body text-base sm:text-lg text-slate-300 mb-12 flex-1 leading-relaxed">
+              <p className="font-body text-sm sm:text-base text-slate-300 mb-8 flex-1 leading-relaxed">
                 Trải nghiệm đỉnh cao composite với ưu đãi chiết khấu trực tiếp lên đến 25% + Tặng kèm khóa học Online.
               </p>
               
-              <div className="flex items-center justify-between mt-auto pt-4">
-                <span className="font-mono text-sm sm:text-base text-red-400 font-bold">Chỉ còn 8 suất</span>
+              <div className="flex items-center justify-between mt-auto pt-5 border-t border-transparent">
+                <span className="font-mono text-xs sm:text-sm text-red-400 font-bold">Chỉ còn 8 suất</span>
                 <button 
                   onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))}
-                  className="inline-flex items-center gap-2 text-[#C43838] font-mono text-sm sm:text-base font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider"
+                  className="inline-flex items-center gap-2 text-[#C43838] font-mono text-xs sm:text-sm font-bold uppercase hover:text-white transition-colors cursor-pointer tracking-wider"
                 >
-                  NHẬN ƯU ĐÃI <ArrowRight className="w-5 h-5" />
+                  NHẬN ƯU ĐÃI <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
