@@ -157,7 +157,7 @@ export function ShofuOfferModal() {
       return;
     }
     if (modalMode === 'product' && activeProductIds.length === 0 && !formData.wantsCustomOffer) {
-      setFormError('Vui lòng chọn ít nhất 1 ưu đãi hoặc đánh dấu vào ô "Tôi cần thêm tư vấn..."');
+      setFormError('Vui lòng chọn ít nhất 1 ưu đãi hoặc đánh dấu vào ô yêu cầu tư vấn tùy chỉnh.');
       return;
     }
     setFormError('');
@@ -494,7 +494,11 @@ export function ShofuOfferModal() {
                           className="mt-0.5 w-5 h-5 rounded border-slate-300 text-slate-900 focus:ring-slate-900 bg-white transition-colors cursor-pointer shrink-0"
                         />
                         <span className="text-sm font-medium text-slate-700 leading-relaxed group-hover:text-slate-900 transition-colors">
-                          Tôi cần thêm tư vấn để thiết kế gói <span className="font-bold text-slate-900">Combo tùy chỉnh</span> phù hợp với phòng khám.
+                          {modalMode === 'combo' ? (
+                            <>Tôi cần thêm tư vấn để thiết kế gói <span className="font-bold text-slate-900">Combo tùy chỉnh</span> phù hợp với phòng khám.</>
+                          ) : (
+                            <>Tôi cần tư vấn thêm để thiết kế <span className="font-bold text-slate-900">ưu đãi tùy chỉnh</span> phù hợp với phòng khám.</>
+                          )}
                         </span>
                       </label>
                     </div>
