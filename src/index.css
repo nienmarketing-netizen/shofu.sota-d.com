@@ -130,3 +130,16 @@ main, section, header, footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #00ADEF;
 }
+
+
+@layer base {
+  button,
+  a,
+  [role="button"],
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  .cursor-pointer {
+    cursor: pointer !important;
+  }
+}
