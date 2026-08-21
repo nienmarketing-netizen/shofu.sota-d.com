@@ -129,10 +129,7 @@ export function ShofuSolutions() {
               <div className="font-mono text-[10px] text-[#00ADEF] font-semibold uppercase tracking-widest mb-2">COMPOSITE LỎNG CAO CẤP</div>
               <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Beautifil Injectable X</h4>
               <div className="font-mono text-xs text-slate-500 mb-4">Độ bóng & Độ bền vượt trội</div>
-              <div className="mt-auto pt-4 w-full border-t border-slate-100 flex items-end justify-between gap-2">
-                <span className="font-mono font-bold text-[#C43838] text-base sm:text-lg leading-none">595.000đ</span>
-                <span className="font-mono text-xs text-slate-500 font-medium leading-none mb-[2px]">/ tuýp</span>
-              </div>
+
             </motion.div>
 
             {/* Product 2 */}
@@ -143,10 +140,7 @@ export function ShofuSolutions() {
               <div className="font-mono text-[10px] text-[#00ADEF] font-semibold uppercase tracking-widest mb-2">KEO DÁN ĐA NĂNG HEMA-FREE</div>
               <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">BeautiBond Xtreme</h4>
               <div className="font-mono text-xs text-slate-500 mb-4">Lực dán chắc chắn mọi bề mặt</div>
-              <div className="mt-auto pt-4 w-full border-t border-slate-100 flex items-end justify-between gap-2">
-                <span className="font-mono font-bold text-[#C43838] text-base sm:text-lg leading-none">1.420.000đ</span>
-                <span className="font-mono text-xs text-slate-500 font-medium leading-none mb-[2px]">/ set</span>
-              </div>
+
             </motion.div>
 
             {/* Product 3 */}
@@ -157,10 +151,7 @@ export function ShofuSolutions() {
               <div className="font-mono text-[10px] text-[#C43838] font-semibold uppercase tracking-widest mb-2">XI MĂNG TỰ DÁN THẾ HỆ MỚI</div>
               <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Beautilink SA</h4>
               <div className="font-mono text-xs text-slate-500 mb-4">One-Sweep sạch xi măng dư</div>
-              <div className="mt-auto pt-4 w-full border-t border-slate-100 flex items-end justify-between gap-2">
-                <span className="font-mono font-bold text-[#C43838] text-base sm:text-lg leading-none">1.575.000đ</span>
-                <span className="font-mono text-xs text-slate-500 font-medium leading-none mb-[2px]">/ tuýp</span>
-              </div>
+
             </motion.div>
 
             {/* Product 4 */}
@@ -181,10 +172,7 @@ export function ShofuSolutions() {
               <div className="font-mono text-[10px] text-[#00ADEF] font-semibold uppercase tracking-widest mb-2">HỆ THỐNG ĐÁNH BÓNG</div>
               <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Super-Snap Xtreme</h4>
               <div className="font-mono text-xs text-slate-500 mb-4">Độ bóng 3D hoàn hảo</div>
-              <div className="mt-auto pt-4 w-full border-t border-slate-100 flex items-end justify-between gap-2">
-                <span className="font-mono font-bold text-[#C43838] text-base sm:text-lg leading-none">620.000đ</span>
-                <span className="font-mono text-xs text-slate-500 font-medium leading-none mb-[2px]">/ hộp</span>
-              </div>
+
             </motion.div>
             
           </motion.div>
