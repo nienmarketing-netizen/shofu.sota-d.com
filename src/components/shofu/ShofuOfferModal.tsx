@@ -11,10 +11,10 @@ export function ShofuOfferModal() {
   const [formError, setFormError] = useState('');
 
   useEffect(() => {
-    if (formData.name && formData.phone) {
+    if (formError) {
       setFormError('');
     }
-  }, [formData]);
+  }, [formData, activeProductIds]);
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -156,8 +156,8 @@ export function ShofuOfferModal() {
       setFormError('Vui lòng điền đầy đủ Tên và Số điện thoại.');
       return;
     }
-    if (modalMode === 'product' && activeProductIds.length === 0) {
-      setFormError('Vui lòng chọn ít nhất 1 ưu đãi.');
+    if (modalMode === 'product' && activeProductIds.length === 0 && !formData.wantsCustomOffer) {
+      setFormError('Vui lòng chọn ít nhất 1 ưu đãi hoặc đánh dấu vào ô "Tôi cần thêm tư vấn..."');
       return;
     }
     setFormError('');
@@ -167,7 +167,7 @@ export function ShofuOfferModal() {
       phone: formData.phone,
       clinic: formData.clinic,
       wantsCustomOffer: formData.wantsCustomOffer ? 'Yes' : 'No',
-      selectedPromos: modalMode === 'combo' ? offerDetails[activeOfferId].name : activeProductIds.map(id => productDetails[id].name).join(", ")
+      selectedPromos: modalMode === 'combo' ? offerDetails[activeOfferId].name : (activeProductIds.length > 0 ? activeProductIds.map(id => productDetails[id].name).join(", ") : "Không chọn ưu đãi cụ thể")
     };
 
     const webhookUrl = "https://script.google.com/macros/s/AKfycbxc-EtHL1Un2AgalFAz8RvxlHX0TtE4q6OK2h0CiSNWBo7tvP1sDhBiJv7vvrRkJ3-zgQ/exec";
