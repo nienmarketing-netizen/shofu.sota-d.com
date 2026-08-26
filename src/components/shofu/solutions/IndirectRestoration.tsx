@@ -47,15 +47,15 @@ export function IndirectRestoration() {
         
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#00ADEF]/10 to-transparent rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
         
-        <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col lg:flex-row gap-12 items-center relative z-10">
-          <div className="w-full lg:w-[60%]">
+        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-center relative z-10">
+          <div className="w-full lg:w-[65%] xl:w-[60%]">
             <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#00ADEF]/10 border border-[#00ADEF]/20 mb-6 max-w-full overflow-hidden">
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00ADEF] animate-pulse shrink-0"></span>
               <span className="font-mono text-[9px] min-[375px]:text-[10px] sm:text-xs font-bold text-[#00ADEF] tracking-tight sm:tracking-wide whitespace-nowrap">
                 Xu thế nha khoa can thiệp tối thiểu & phục hồi Bioplastic
               </span>
             </span>
-            <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight">
+            <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12">
               Chấm dứt ám ảnh <span className="text-[#00ADEF]">sút mão</span>, <span className="text-[#00ADEF]">ê buốt sau gắn</span> và <span className="text-[#00ADEF]">lãng phí vật tư</span>!
             </h1>
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -103,7 +103,7 @@ export function IndirectRestoration() {
             <p className="font-body text-xs sm:text-sm font-medium opacity-90 text-slate-500 mt-4 text-center sm:text-left">Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor</p>
           </div>
           
-          <div className="w-full lg:w-[40%] relative flex justify-center">
+          <div className="w-full lg:w-[35%] xl:w-[40%] relative flex justify-center">
             {/* Lớp Hào quang sinh học tỏa sáng */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-[#00ADEF]/30 to-[#C43838]/30 blur-[80px] rounded-full z-0 animate-pulse"></div>
             
