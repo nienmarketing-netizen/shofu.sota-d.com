@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ShofuHeaderProps {
-  onNavigate: (sectionId: string) => void;
+  onNavigate?: (sectionId: string) => void;
   onOpenQuote?: () => void;
+  isLandingPage?: boolean;
 }
 
-export function ShofuHeader({ onNavigate, onOpenQuote }: ShofuHeaderProps) {
+export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -44,25 +46,37 @@ export function ShofuHeader({ onNavigate, onOpenQuote }: ShofuHeaderProps) {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => onNavigate(item.id)}
-                className="font-mono text-sm font-semibold text-slate-700 hover:text-[#00ADEF] transition-colors tracking-wide uppercase"
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
+          {!isLandingPage && (
+            <nav className="hidden md:flex items-center gap-8">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => onNavigate?.(item.id)}
+                  className="font-mono text-sm font-semibold text-slate-700 hover:text-[#00ADEF] transition-colors tracking-wide uppercase"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
+          )}
 
           <div className="hidden md:flex items-center gap-4">
-            <button 
-              onClick={() => onOpenQuote?.()}
-              className="px-5 py-2.5 rounded-full bg-[#00ADEF] text-white font-mono text-sm font-bold uppercase tracking-wider hover:bg-sky-500 transition-colors shadow-lg shadow-sky-500/25"
-            >
-              YÊU CẦU BÁO GIÁ
-            </button>
+            {isLandingPage ? (
+              <Link
+                to="/"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-100 text-slate-700 font-mono text-sm font-bold uppercase tracking-wider hover:bg-slate-200 transition-colors shadow-sm"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                TRỞ VỀ TRANG CHỦ
+              </Link>
+            ) : (
+              <button 
+                onClick={() => onOpenQuote?.()}
+                className="px-5 py-2.5 rounded-full bg-[#00ADEF] text-white font-mono text-sm font-bold uppercase tracking-wider hover:bg-sky-500 transition-colors shadow-lg shadow-sky-500/25"
+              >
+                YÊU CẦU BÁO GIÁ
+              </button>
+            )}
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -81,14 +95,14 @@ export function ShofuHeader({ onNavigate, onOpenQuote }: ShofuHeaderProps) {
       </div>
 
       {/* Mobile Navigation Dropdown */}
-      {isMobileMenuOpen && (
+      {isMobileMenuOpen && !isLandingPage && (
         <div className="md:hidden fixed top-[68px] left-0 right-0 w-full bg-white border-t border-slate-100 shadow-2xl z-[100] animate-in slide-in-from-top-2 fade-in duration-200">
           <div className="py-4 px-6 flex flex-col gap-4">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => {
-                onNavigate(item.id);
+                onNavigate?.(item.id);
                 setIsMobileMenuOpen(false);
               }}
               className="font-mono text-sm font-semibold text-slate-700 hover:text-[#00ADEF] transition-colors tracking-wide uppercase text-left py-2 border-b border-slate-50 last:border-0"
