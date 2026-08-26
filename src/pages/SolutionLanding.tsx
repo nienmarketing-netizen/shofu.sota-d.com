@@ -57,10 +57,10 @@ export default function SolutionLanding() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-body">
+    <div className="min-h-screen bg-slate-50 bg-grid-pattern text-slate-900 flex flex-col font-body selection:bg-sky-200 selection:text-sky-900">
       <ShofuHeader isLandingPage={true} />
       
-      <main className="flex-1 bg-slate-50 relative">
+      <main className="flex-1 bg-transparent relative">
         {slug === 'phuc-hinh-gian-tiep' ? (
           <IndirectRestoration />
         ) : (

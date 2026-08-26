@@ -43,8 +43,8 @@ export function IndirectRestoration() {
   return (
     <div className="w-full flex flex-col">
       {/* SECTION 1: HERO SECTION */}
-      <section className="pb-16 pt-[120px] lg:pb-24 lg:pt-[140px] bg-white relative overflow-hidden border-b border-slate-200">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
+      <section className="pb-16 pt-[120px] lg:pb-24 lg:pt-[140px] bg-transparent relative overflow-hidden border-b border-slate-200">
+        
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#00ADEF]/10 to-transparent rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
         
         <div className="w-[90%] lg:w-[80%] mx-auto flex flex-col lg:flex-row gap-12 items-center relative z-10">
