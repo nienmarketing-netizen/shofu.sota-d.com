@@ -51,8 +51,8 @@ export function IndirectRestoration() {
           <div className="w-full lg:w-[60%]">
             <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#00ADEF]/10 border border-[#00ADEF]/20 mb-6 max-w-full overflow-hidden">
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00ADEF] animate-pulse shrink-0"></span>
-              <span className="font-mono text-[9px] min-[375px]:text-[10px] sm:text-xs font-bold text-[#00ADEF] tracking-tight sm:tracking-wide whitespace-nowrap uppercase">
-                XU THẾ NHA KHOA CAN THIỆP TỐI THIỂU & PHỤC HỒI BIOPLASTIC
+              <span className="font-mono text-[9px] min-[375px]:text-[10px] sm:text-xs font-bold text-[#00ADEF] tracking-tight sm:tracking-wide whitespace-nowrap">
+                Xu thế nha khoa can thiệp tối thiểu & phục hồi Bioplastic
               </span>
             </span>
             <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-[1.3] mb-6 uppercase tracking-tight">
@@ -110,7 +110,7 @@ export function IndirectRestoration() {
             {/* Bức ảnh PNG tách nền duy nhất */}
             <img 
               referrerPolicy="no-referrer"
-              src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/BeautilinkSA%26BeautiBondXtreme.png" 
+              src="/images/BeautilinkSA%26BeautiBondXtreme.png" 
               alt="Bộ đôi BBX và BeautiLink SA" 
               className="w-full max-w-[550px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
             />
