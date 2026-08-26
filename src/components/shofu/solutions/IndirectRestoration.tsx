@@ -55,8 +55,8 @@ export function IndirectRestoration() {
                 Xu thế nha khoa can thiệp tối thiểu & phục hồi Bioplastic
               </span>
             </span>
-            <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-[1.3] mb-6 uppercase tracking-tight">
-              CHẤM DỨT ÁM ẢNH SÚT MÃO, Ê BUỐT SAU GẮN VÀ LÃNG PHÍ VẬT TƯ!
+            <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight">
+              Chấm dứt ám ảnh <span className="text-[#00ADEF]">sút mão</span>, <span className="text-[#00ADEF]">ê buốt sau gắn</span> và <span className="text-[#00ADEF]">lãng phí vật tư</span>!
             </h1>
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Kiến tạo liên kết sinh học kỵ nước siêu mỏng 24µm với bộ đôi <strong className="text-slate-900">BeautiBond Xtreme (HEMA-Free)</strong> & <strong className="text-slate-900">BeautiLink SA (S-PRG)</strong>. Dán chặt Zirconia ~50 MPa, lột sạch xi măng dư sau 1-2 giây Tack-cure và tối ưu hóa chi phí chạm đáy chỉ ~16.600đ/ca gắn.
