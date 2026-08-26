@@ -58,6 +58,16 @@ export function IndirectRestoration() {
                 </div>
               </div>
             </div>
+            {/* MOBILE ONLY IMAGE */}
+            <div className="w-full relative flex justify-center lg:hidden mb-10 mt-6">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-gradient-to-tr from-[#00ADEF]/30 to-[#C43838]/30 blur-[60px] rounded-full z-0 animate-pulse"></div>
+              <img 
+                referrerPolicy="no-referrer"
+                src="/images/beautilink-bbx.png" 
+                alt="Bộ đôi BBX và BeautiLink SA" 
+                className="w-full max-w-[400px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
+              />
+            </div>
             <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12">
               Chấm dứt ám ảnh <span className="text-[#00ADEF]">sút mão</span>, <span className="text-[#00ADEF]">ê buốt sau gắn</span> và <span className="text-[#00ADEF]">lãng phí vật tư</span>!
             </h1>
@@ -106,7 +116,7 @@ export function IndirectRestoration() {
             <p className="font-body text-xs sm:text-sm font-medium opacity-90 text-slate-500 mt-4 text-center sm:text-left">Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor</p>
           </div>
           
-          <div className="w-full lg:w-[35%] xl:w-[40%] relative flex justify-center">
+          <div className="hidden lg:flex w-full lg:w-[35%] xl:w-[40%] relative justify-center">
             {/* Lớp Hào quang sinh học tỏa sáng */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-[#00ADEF]/30 to-[#C43838]/30 blur-[80px] rounded-full z-0 animate-pulse"></div>
             
