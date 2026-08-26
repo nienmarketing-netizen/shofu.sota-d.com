@@ -58,6 +58,9 @@ export function IndirectRestoration() {
                 </div>
               </div>
             </div>
+            <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12">
+              Chấm dứt ám ảnh <span className="text-[#00ADEF]">sút mão</span>, <span className="text-[#00ADEF]">ê buốt sau gắn</span> và <span className="text-[#00ADEF]">lãng phí vật tư</span>!
+            </h1>
             {/* MOBILE ONLY IMAGE */}
             <div className="w-full relative flex justify-center lg:hidden mb-10 mt-6">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-gradient-to-tr from-[#00ADEF]/30 to-[#C43838]/30 blur-[60px] rounded-full z-0 animate-pulse"></div>
@@ -68,9 +71,6 @@ export function IndirectRestoration() {
                 className="w-full max-w-[400px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
               />
             </div>
-            <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12">
-              Chấm dứt ám ảnh <span className="text-[#00ADEF]">sút mão</span>, <span className="text-[#00ADEF]">ê buốt sau gắn</span> và <span className="text-[#00ADEF]">lãng phí vật tư</span>!
-            </h1>
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Kiến tạo liên kết sinh học kỵ nước siêu mỏng 24µm với bộ đôi <strong className="text-slate-900">BeautiBond Xtreme (HEMA-Free)</strong> & <strong className="text-slate-900">BeautiLink SA (S-PRG)</strong>. Dán chặt Zirconia ~50 MPa, lột sạch xi măng dư sau 1-2 giây Tack-cure và tối ưu hóa chi phí chạm đáy chỉ ~16.600đ/ca gắn.
             </p>
