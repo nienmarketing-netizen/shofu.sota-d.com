@@ -110,7 +110,7 @@ export function IndirectRestoration() {
             {/* Bức ảnh PNG tách nền duy nhất */}
             <img 
               referrerPolicy="no-referrer"
-              src="/images/BeautilinkSA%26BeautiBondXtreme.png" 
+              src="/images/beautilink-bbx.png" 
               alt="Bộ đôi BBX và BeautiLink SA" 
               className="w-full max-w-[550px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
             />
