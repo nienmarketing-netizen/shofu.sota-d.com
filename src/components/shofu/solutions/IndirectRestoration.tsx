@@ -201,7 +201,7 @@ export function IndirectRestoration() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-white bg-gradient-to-br from-[#00ADEF]/5 to-[#007AA8]/10 rounded-[2rem] p-8 md:p-12 border border-[#00ADEF]/20 relative overflow-hidden flex flex-col h-full justify-between">
+          <div className="bg-white bg-gradient-to-br from-[#00ADEF]/5 to-[#007AA8]/10 rounded-[2rem] px-5 py-8 sm:p-8 md:p-12 border border-[#00ADEF]/20 relative overflow-hidden flex flex-col h-full justify-between">
             <div className="relative z-10">
               <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">Keo dán BeautiBond Xtreme</h3>
               <p className="text-[#007AA8] font-bold text-sm uppercase tracking-wider mb-6">Universal Thế hệ thứ 8</p>
@@ -248,7 +248,7 @@ export function IndirectRestoration() {
             </div>
           </div>
 
-          <div className="bg-white bg-gradient-to-br from-[#C43838]/5 to-[#8C2828]/10 rounded-[2rem] p-8 md:p-12 border border-[#C43838]/20 relative overflow-hidden flex flex-col h-full justify-between">
+          <div className="bg-white bg-gradient-to-br from-[#C43838]/5 to-[#8C2828]/10 rounded-[2rem] px-5 py-8 sm:p-8 md:p-12 border border-[#C43838]/20 relative overflow-hidden flex flex-col h-full justify-between">
             <div className="relative z-10">
               <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">Xi măng BeautiLink SA</h3>
               <p className="text-[#C43838] font-bold text-sm uppercase tracking-wider mb-6">Tự dán sinh học Dual-Cure</p>
