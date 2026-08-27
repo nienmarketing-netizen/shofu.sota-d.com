@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
   ShieldCheck, Zap, Coins, AlertTriangle, HeartPulse, Banknote, 
   Droplet, Microscope, ArrowRight, Gift, ChevronDown, CheckCircle2,
-  Clock, Shield, BarChart3, TestTube, Quote
+  Clock, Shield, BarChart3, TestTube, Quote, Image as ImageIcon
 } from 'lucide-react';
 
 const FaqItem = ({ question, answer }: { question: string, answer: string }) => {
@@ -43,8 +43,7 @@ export function IndirectRestoration() {
   return (
     <div className="w-full flex flex-col">
       {/* SECTION 1: HERO SECTION */}
-      <section className="pb-16 pt-[120px] lg:pb-24 lg:pt-[140px] bg-transparent relative overflow-hidden border-b border-slate-200">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
+      <section className="pb-16 pt-[120px] lg:pb-24 lg:pt-[140px] bg-slate-50 bg-grid-pattern relative overflow-hidden border-b border-slate-200">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#00ADEF]/10 to-transparent rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
         
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-center relative z-10">
@@ -191,21 +190,28 @@ export function IndirectRestoration() {
       </section>
 
       {/* SECTION 3: THE GOLD STANDARD */}
-      <section className="py-20 lg:py-28 bg-slate-50 relative border-b border-slate-200">
-        <div className="w-[90%] lg:w-[80%] mx-auto space-y-12">
+      <section className="py-20 lg:py-28 bg-slate-50 bg-grid-pattern relative overflow-hidden border-b border-slate-200">
+        <div className="w-[90%] lg:w-[80%] mx-auto space-y-12 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">
-            TIÊU CHUẨN VÀNG MỚI:<br/>BỘ ĐÔI LIÊN KẾT SINH HỌC KHÔNG THỂ PHÁ HỦY
+          <h2 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-4 tracking-tight">
+            <span className="text-amber-500">Tiêu chuẩn vàng</span> mới:<br />Bộ đôi liên kết sinh học <span className="text-[#00ADEF]">không thể phá hủy</span>
           </h2>
           <p className="font-body text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">Sự kết hợp hoàn hảo tạo nên khoảng ghép vô hình 24µm vững chắc.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-[#00ADEF]/5 to-[#007AA8]/10 rounded-[2rem] p-8 md:p-12 border border-[#00ADEF]/20 relative overflow-hidden">
+          <div className="bg-white bg-gradient-to-br from-[#00ADEF]/5 to-[#007AA8]/10 rounded-[2rem] p-8 md:p-12 border border-[#00ADEF]/20 relative overflow-hidden flex flex-col h-full justify-between">
             <div className="relative z-10">
               <h3 className="font-heading font-black text-2xl text-slate-900 mb-2">Keo dán BeautiBond Xtreme</h3>
-              <p className="text-[#007AA8] font-bold text-sm uppercase tracking-wider mb-8">Universal Thế hệ thứ 8</p>
+              <p className="text-[#007AA8] font-bold text-sm uppercase tracking-wider mb-6">Universal Thế hệ thứ 8</p>
               
+              {/* Product Image Area */}
+              <div className="mb-8 relative z-10 flex justify-center items-center">
+                <div className="w-full rounded-2xl border border-[#00ADEF]/10 bg-white shadow-sm overflow-hidden relative group">
+                  <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png" alt="BeautiBond Xtreme" className="w-full h-auto object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                </div>
+              </div>
+
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
@@ -241,11 +247,18 @@ export function IndirectRestoration() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-[#C43838]/5 to-[#8C2828]/10 rounded-[2rem] p-8 md:p-12 border border-[#C43838]/20 relative overflow-hidden">
+          <div className="bg-white bg-gradient-to-br from-[#C43838]/5 to-[#8C2828]/10 rounded-[2rem] p-8 md:p-12 border border-[#C43838]/20 relative overflow-hidden flex flex-col h-full justify-between">
             <div className="relative z-10">
               <h3 className="font-heading font-black text-2xl text-slate-900 mb-2">Xi măng BeautiLink SA</h3>
-              <p className="text-[#C43838] font-bold text-sm uppercase tracking-wider mb-8">Tự dán sinh học Dual-Cure</p>
+              <p className="text-[#C43838] font-bold text-sm uppercase tracking-wider mb-6">Tự dán sinh học Dual-Cure</p>
               
+              {/* Product Image Area */}
+              <div className="mb-8 relative z-10 flex justify-center items-center">
+                <div className="w-full rounded-2xl border border-[#C43838]/10 bg-white shadow-sm overflow-hidden relative group">
+                  <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png" alt="BeautiLink SA" className="w-full h-auto object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                </div>
+              </div>
+
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
@@ -316,8 +329,7 @@ export function IndirectRestoration() {
       </section>
 
       {/* SECTION 4: DEEP DIVE INTO USPS */}
-      <section className="py-20 lg:py-28 bg-white relative border-b border-slate-200">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
+      <section className="py-20 lg:py-28 bg-slate-50 bg-grid-pattern relative overflow-hidden border-b border-slate-200">
         <div className="w-[90%] lg:w-[80%] mx-auto space-y-8 relative z-10">
         <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 text-center mb-12 uppercase">SỨC MẠNH THUYẾT PHỤC TUYỆT ĐỐI</h2>
         
