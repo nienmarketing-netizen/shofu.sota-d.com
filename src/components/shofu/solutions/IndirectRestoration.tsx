@@ -291,7 +291,7 @@ export function IndirectRestoration() {
         </div>
 
         {/* The 24um Diagram */}
-        <div className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm max-w-3xl mx-auto">
+        <div className="rounded-3xl p-8 max-w-3xl mx-auto">
           <h4 className="text-center font-heading font-bold text-xl text-slate-900 mb-8">Cấu Trúc Lớp Lai Kép Siêu Mỏng Khít Sát Tuyệt Đối</h4>
           <div className="flex flex-col items-center w-full max-w-md mx-auto">
             {/* Lòng mão sứ */}
