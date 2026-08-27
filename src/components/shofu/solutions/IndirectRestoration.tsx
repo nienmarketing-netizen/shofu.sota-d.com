@@ -135,7 +135,7 @@ export function IndirectRestoration() {
 
       {/* SECTION 2: THE PAIN POINTS */}
       <section className="py-20 lg:py-28 bg-slate-900 relative overflow-hidden text-center">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5 mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.15]"></div>
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
         <div className="max-w-4xl mx-auto mb-16">
           <h2 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-white leading-[1.3] mb-6 tracking-tight uppercase">
