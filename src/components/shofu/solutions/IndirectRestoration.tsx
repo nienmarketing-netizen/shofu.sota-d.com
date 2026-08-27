@@ -291,7 +291,7 @@ export function IndirectRestoration() {
         </div>
 
         {/* The 24um Diagram */}
-        <div className="rounded-3xl p-8 max-w-6xl mx-auto">
+        <div className="rounded-3xl py-8 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column: Text */}
             <div className="space-y-6">
