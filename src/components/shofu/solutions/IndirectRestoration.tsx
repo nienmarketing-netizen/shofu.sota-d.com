@@ -291,35 +291,61 @@ export function IndirectRestoration() {
         </div>
 
         {/* The 24um Diagram */}
-        <div className="rounded-3xl p-8 max-w-3xl mx-auto">
-          <h4 className="text-center font-heading font-bold text-xl text-slate-900 mb-8">Cấu trúc lớp lai kép <span className="text-[#00ADEF]">siêu mỏng</span> khít sát <span className="text-amber-500">tuyệt đối</span></h4>
-          <div className="flex flex-col items-center w-full max-w-md mx-auto">
-            {/* Lòng mão sứ */}
-            <div className="w-full h-12 bg-slate-200 rounded-t-xl flex items-center justify-center border-b-2 border-white">
-              <span className="font-bold text-slate-500 uppercase tracking-widest text-xs">Lòng mão sứ / Zirconia</span>
+        <div className="rounded-3xl p-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Text */}
+            <div className="space-y-6">
+              <h4 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight">
+                Cấu trúc lớp lai kép <span className="text-[#00ADEF]">siêu mỏng</span> khít sát <span className="text-amber-500">tuyệt đối</span>
+              </h4>
+              <p className="text-slate-600 text-base leading-relaxed">
+                Sự kết hợp hoàn hảo giữa màng keo kỷ lục 5µm của BeautiBond Xtreme và lớp xi măng siêu mỏng 14µm của BeautiLink SA tạo nên một khoảng ghép vô hình chỉ 24µm, thiết lập tiêu chuẩn mới trong phục hình gián tiếp.
+              </p>
+              <ul className="space-y-4 pt-2">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#00ADEF] shrink-0 mt-0.5" />
+                  <p className="text-sm text-slate-700"><strong>Thẩm mỹ hoàn hảo:</strong> Không ố vàng đường viền theo thời gian nhờ công nghệ HEMA-Free kỵ nước.</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#00ADEF] shrink-0 mt-0.5" />
+                  <p className="text-sm text-slate-700"><strong>Khớp cắn chuẩn xác:</strong> Triệt tiêu hoàn toàn rủi ro cộm cấn, kênh phục hình sau khi gắn.</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#00ADEF] shrink-0 mt-0.5" />
+                  <p className="text-sm text-slate-700"><strong>Bảo vệ sinh học:</strong> Hạt độn S-PRG ngăn chặn vi khuẩn xâm nhập vi kẽ, bảo vệ cùi răng vĩnh viễn.</p>
+                </li>
+              </ul>
             </div>
-            {/* BBX Layer */}
-            <div className="w-full h-8 bg-[#00ADEF]/20 flex items-center justify-between px-4 border-b-2 border-white relative group">
-              <span className="font-mono text-xs font-bold text-[#008BBF]">BBX</span>
-              <span className="font-mono text-xs font-bold text-[#008BBF] bg-white px-2 py-0.5 rounded-full shadow-sm">5µm</span>
-            </div>
-            {/* BeautiLink SA Layer */}
-            <div className="w-full h-16 bg-[#C43838]/20 flex items-center justify-between px-4 border-b-2 border-white relative">
-              <span className="font-mono text-xs font-bold text-[#A62C2C]">BeautiLink SA</span>
-              <span className="font-mono text-xs font-bold text-[#A62C2C] bg-white px-2 py-0.5 rounded-full shadow-sm">14µm</span>
-            </div>
-            {/* BBX Layer */}
-            <div className="w-full h-8 bg-[#00ADEF]/20 flex items-center justify-between px-4 border-b-2 border-white">
-              <span className="font-mono text-xs font-bold text-[#008BBF]">BBX</span>
-              <span className="font-mono text-xs font-bold text-[#008BBF] bg-white px-2 py-0.5 rounded-full shadow-sm">5µm</span>
-            </div>
-            {/* Cùi răng */}
-            <div className="w-full h-24 bg-amber-50 rounded-b-xl flex items-center justify-center border-t-2 border-white relative overflow-hidden">
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjZmVmM2M3IiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')] opacity-50"></div>
-              <span className="font-bold text-amber-700 uppercase tracking-widest text-xs relative z-10">Cùi ngà răng</span>
-            </div>
-            <div className="mt-4 bg-slate-900 text-white px-4 py-2 rounded-full font-mono font-bold text-sm shadow-md flex items-center gap-2">
-              Tổng chiều dày khoảng ghép = <span className="text-yellow-400">24µm</span>
+            
+            {/* Right Column: Diagram */}
+            <div className="flex flex-col items-center w-full max-w-md mx-auto lg:mx-0 lg:ml-auto">
+              {/* Lòng mão sứ */}
+              <div className="w-full h-12 bg-slate-200 rounded-t-xl flex items-center justify-center border-b-2 border-white">
+                <span className="font-bold text-slate-500 uppercase tracking-widest text-xs">Lòng mão sứ / Zirconia</span>
+              </div>
+              {/* BBX Layer */}
+              <div className="w-full h-8 bg-[#00ADEF]/20 flex items-center justify-between px-4 border-b-2 border-white relative group">
+                <span className="font-mono text-xs font-bold text-[#008BBF]">BBX</span>
+                <span className="font-mono text-xs font-bold text-[#008BBF] bg-white px-2 py-0.5 rounded-full shadow-sm">5µm</span>
+              </div>
+              {/* BeautiLink SA Layer */}
+              <div className="w-full h-16 bg-[#C43838]/20 flex items-center justify-between px-4 border-b-2 border-white relative">
+                <span className="font-mono text-xs font-bold text-[#A62C2C]">BeautiLink SA</span>
+                <span className="font-mono text-xs font-bold text-[#A62C2C] bg-white px-2 py-0.5 rounded-full shadow-sm">14µm</span>
+              </div>
+              {/* BBX Layer */}
+              <div className="w-full h-8 bg-[#00ADEF]/20 flex items-center justify-between px-4 border-b-2 border-white">
+                <span className="font-mono text-xs font-bold text-[#008BBF]">BBX</span>
+                <span className="font-mono text-xs font-bold text-[#008BBF] bg-white px-2 py-0.5 rounded-full shadow-sm">5µm</span>
+              </div>
+              {/* Cùi răng */}
+              <div className="w-full h-24 bg-amber-50 rounded-b-xl flex items-center justify-center border-t-2 border-white relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjZmVmM2M3IiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')] opacity-50"></div>
+                <span className="font-bold text-amber-700 uppercase tracking-widest text-xs relative z-10">Cùi ngà răng</span>
+              </div>
+              <div className="mt-4 bg-slate-900 text-white px-4 py-2 rounded-full font-mono font-bold text-sm shadow-md flex items-center gap-2">
+                Tổng chiều dày khoảng ghép = <span className="text-yellow-400">24µm</span>
+              </div>
             </div>
           </div>
         </div>
