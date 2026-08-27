@@ -354,26 +354,14 @@ export function IndirectRestoration() {
               BeautiLink SA sở hữu liên kết hóa học hóa trị trực tiếp với oxit kim loại của Zirconia. Báo cáo của The Dental Advisor (Số 168 - Tháng 8/2024) ghi nhận sản phẩm đạt lực dán trượt khổng lồ <strong className="text-slate-900">~50 MPa</strong> và phẳng lì không suy giảm sau 5.000 chu kỳ sốc nhiệt (Thermocycling).
             </p>
           </div>
-          <div className="w-full md:w-1/2 bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center relative overflow-hidden">
-            <BarChart3 className="w-24 h-24 text-slate-200 absolute -bottom-4 -right-4" />
-            <h4 className="font-bold text-slate-900 mb-6 relative z-10">Lực dán trượt (MPa) trên Zirconia sau Lão hóa nhiệt</h4>
-            <div className="flex items-end justify-center gap-4 h-40 relative z-10">
-              <div className="flex flex-col items-center">
-                <span className="font-bold text-slate-500 mb-2">~35</span>
-                <div className="w-16 bg-slate-300 h-[60%] rounded-t-md"></div>
-                <span className="text-xs text-slate-500 mt-2 font-medium w-16 text-center leading-tight">Đối thủ A</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="font-bold text-[#00ADEF] text-xl mb-2">~50</span>
-                <div className="w-20 bg-gradient-to-t from-[#00ADEF] to-[#33BDF2] h-[95%] rounded-t-md shadow-lg"></div>
-                <span className="text-xs font-bold text-slate-900 mt-2 w-20 text-center leading-tight">BeautiLink SA</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="font-bold text-slate-500 mb-2">~40</span>
-                <div className="w-16 bg-slate-300 h-[75%] rounded-t-md"></div>
-                <span className="text-xs text-slate-500 mt-2 font-medium w-16 text-center leading-tight">Đối thủ B</span>
-              </div>
-            </div>
+          <div className="w-full md:w-1/2">
+            <img 
+              src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/share-bond-strength-on-zirconia%20copy.webp" 
+              alt="Lực dán trượt (MPa) trên Zirconia sau Lão hóa nhiệt" 
+              className="w-full h-auto object-contain rounded-2xl drop-shadow-sm border border-slate-200"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+            />
           </div>
         </div>
 
