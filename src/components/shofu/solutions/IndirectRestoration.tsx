@@ -341,7 +341,14 @@ export function IndirectRestoration() {
       {/* SECTION 4: DEEP DIVE INTO USPS */}
       <section className="py-20 lg:py-28 bg-slate-200 bg-grid-pattern relative overflow-hidden border-b border-slate-300">
         <div className="w-[90%] lg:w-[80%] mx-auto space-y-8 relative z-10">
-        <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 text-center mb-12 uppercase">SỨC MẠNH THUYẾT PHỤC TUYỆT ĐỐI</h2>
+        <div className="text-center max-w-4xl mx-auto mb-12">
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">
+            Sức mạnh <span className="text-[#00ADEF]">thuyết phục</span> <span className="text-amber-500">tuyệt đối</span>
+          </h2>
+          <p className="font-body text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
+            Bảo chứng y văn vững chắc và hiệu suất thực tế được kiểm chứng bởi Bác sĩ trên hơn 100 quốc gia và vùng lãnh thổ.
+          </p>
+        </div>
         
         {/* USP 1 */}
         <div className="bg-white rounded-3xl border border-slate-200 p-8 md:p-12 shadow-sm flex flex-col md:flex-row gap-8 items-center hover:border-slate-300 transition-colors">
