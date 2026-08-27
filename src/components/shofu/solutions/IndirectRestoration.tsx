@@ -292,7 +292,7 @@ export function IndirectRestoration() {
 
         {/* The 24um Diagram */}
         <div className="rounded-3xl p-8 max-w-3xl mx-auto">
-          <h4 className="text-center font-heading font-bold text-xl text-slate-900 mb-8">Cấu Trúc Lớp Lai Kép Siêu Mỏng Khít Sát Tuyệt Đối</h4>
+          <h4 className="text-center font-heading font-bold text-xl text-slate-900 mb-8">Cấu trúc lớp lai kép <span className="text-[#00ADEF]">siêu mỏng</span> khít sát <span className="text-amber-500">tuyệt đối</span></h4>
           <div className="flex flex-col items-center w-full max-w-md mx-auto">
             {/* Lòng mão sứ */}
             <div className="w-full h-12 bg-slate-200 rounded-t-xl flex items-center justify-center border-b-2 border-white">
