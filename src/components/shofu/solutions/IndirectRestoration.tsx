@@ -59,7 +59,9 @@ export function IndirectRestoration() {
               </div>
             </div>
             <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12">
-              Chấm dứt ám ảnh <span className="text-[#00ADEF]">sút mão</span>, <span className="text-[#00ADEF]">ê buốt sau gắn</span> và <span className="text-[#00ADEF]">lãng phí vật tư</span>!
+              Chấm dứt ám ảnh <br className="md:hidden" />
+              <span className="text-[#00ADEF]">sút mão</span>, <span className="text-[#00ADEF]">ê buốt sau gắn</span> <br className="md:hidden" />
+              và <span className="text-[#00ADEF]">lãng phí vật tư</span>!
             </h1>
             {/* MOBILE ONLY IMAGE */}
             <div className="w-full relative flex justify-center lg:hidden mb-10 mt-6">
