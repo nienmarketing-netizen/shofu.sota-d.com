@@ -219,8 +219,8 @@ export function IndirectRestoration() {
                     <Microscope className="w-6 h-6 text-[#00ADEF]" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Màng keo kỷ lục 5µm</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Mỏng nhất thế giới, khóa chặt vi kẽ mà không lo cộm khớp.</p>
+                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Màng keo kỷ lục chỉ 5µm</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Khoá chặt vi kẽ, không lo cộm khớp, ngăn ngừa ố màu đường viền</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
