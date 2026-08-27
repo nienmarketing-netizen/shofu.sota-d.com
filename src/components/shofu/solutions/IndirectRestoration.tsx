@@ -76,32 +76,32 @@ export function IndirectRestoration() {
               Kiến tạo liên kết sinh học kỵ nước siêu mỏng 24µm với bộ đôi <strong className="text-slate-900">BeautiBond Xtreme (HEMA-Free)</strong> & <strong className="text-slate-900">BeautiLink SA (S-PRG)</strong>. Dán chặt Zirconia ~50 MPa, lột sạch xi măng dư sau 1-2 giây Tack-cure và tối ưu hóa chi phí chạm đáy chỉ ~16.600đ/ca gắn.
             </p>
             
-            <ul className="space-y-4 mb-10">
-              <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-1">
-                  <ShieldCheck className="w-5 h-5 text-[#C43838]" />
+            <ul className="space-y-3 mb-10">
+              <li className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
+                <div className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-0.5">
+                  <ShieldCheck className="w-4 h-4 text-[#C43838]" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 text-lg">Triệt ê buốt tức thì và muộn</h4>
-                  <p className="text-slate-600">Bảo vệ tủy răng sống bằng màng ngăn kỵ nước không chứa HEMA.</p>
+                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">Triệt tiêu ê buốt tức thì và muộn</h4>
+                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Bảo vệ tủy răng sống bằng màng ngăn kỵ nước không chứa HEMA.</p>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center shrink-0 mt-1">
-                  <Zap className="w-5 h-5 text-[#00ADEF]" />
+              <li className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
+                <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center shrink-0 mt-0.5">
+                  <Zap className="w-4 h-4 text-[#00ADEF]" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 text-lg">Quy trình "True Universal" 1 bước</h4>
-                  <p className="text-slate-600">Gắn chặt Zirconia, sứ Lithium Disilicate mà không cần Primer rời lách cách.</p>
+                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">Quy trình "True Universal" 1 bước</h4>
+                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Gắn chặt Zirconia, sứ Lithium Disilicate mà không cần Primer rời lách cách.</p>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center shrink-0 mt-1">
-                  <Coins className="w-5 h-5 text-amber-500" />
+              <li className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
+                <div className="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center shrink-0 mt-0.5">
+                  <Coins className="w-4 h-4 text-amber-500" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 text-lg">Hiệu năng kinh tế đỉnh cao</h4>
-                  <p className="text-slate-600">Ống Handmix khổng lồ 15.6g thực hiện tới 120 ca lâm sàng.</p>
+                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">Hiệu năng kinh tế đỉnh cao</h4>
+                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Ống Handmix khổng lồ 15.6g thực hiện tới 120 ca lâm sàng.</p>
                 </div>
               </li>
             </ul>
