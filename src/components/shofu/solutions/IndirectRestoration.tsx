@@ -339,7 +339,7 @@ export function IndirectRestoration() {
       </section>
 
       {/* SECTION 4: DEEP DIVE INTO USPS */}
-      <section className="py-20 lg:py-28 bg-slate-100 relative overflow-hidden border-b border-slate-200">
+      <section className="py-20 lg:py-28 bg-slate-200 bg-grid-pattern relative overflow-hidden border-b border-slate-300">
         <div className="w-[90%] lg:w-[80%] mx-auto space-y-8 relative z-10">
         <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 text-center mb-12 uppercase">SỨC MẠNH THUYẾT PHỤC TUYỆT ĐỐI</h2>
         
