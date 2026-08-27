@@ -203,7 +203,7 @@ export function IndirectRestoration() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-white bg-gradient-to-br from-[#00ADEF]/5 to-[#007AA8]/10 rounded-[2rem] p-8 md:p-12 border border-[#00ADEF]/20 relative overflow-hidden flex flex-col h-full justify-between">
             <div className="relative z-10">
-              <h3 className="font-heading font-black text-2xl text-slate-900 mb-2">Keo dán BeautiBond Xtreme</h3>
+              <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">Keo dán BeautiBond Xtreme</h3>
               <p className="text-[#007AA8] font-bold text-sm uppercase tracking-wider mb-6">Universal Thế hệ thứ 8</p>
               
               {/* Product Image Area */}
@@ -219,8 +219,8 @@ export function IndirectRestoration() {
                     <Microscope className="w-6 h-6 text-[#00ADEF]" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-lg text-slate-900">Màng keo kỷ lục 5µm</h4>
-                    <p className="text-slate-600 text-sm mt-1">Mỏng nhất thế giới, khóa chặt vi kẽ mà không lo cộm khớp.</p>
+                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Màng keo kỷ lục 5µm</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Mỏng nhất thế giới, khóa chặt vi kẽ mà không lo cộm khớp.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -231,8 +231,8 @@ export function IndirectRestoration() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-lg text-slate-900">Công nghệ HEMA-Free kỵ nước</h4>
-                    <p className="text-slate-600 text-sm mt-1">Tuyệt đối không hút nước, chống thủy phân và ngăn ngừa nhạy cảm ngà vĩnh viễn.</p>
+                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Công nghệ HEMA-Free kỵ nước</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Tuyệt đối không hút nước, chống thủy phân và ngăn ngừa nhạy cảm ngà vĩnh viễn.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -240,8 +240,8 @@ export function IndirectRestoration() {
                     <Zap className="w-6 h-6 text-[#00ADEF]" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-lg text-slate-900">Quadra-Functional & ARS</h4>
-                    <p className="text-slate-600 text-sm mt-1">Bọc giáp Silane kháng axit giúp dán bền bỉ lên men, ngà, Zirconia, sứ Lithium Disilicate không cần Primer rời.</p>
+                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Quadra-Functional & ARS</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Bọc giáp Silane kháng axit giúp dán bền bỉ lên men, ngà, Zirconia, sứ Lithium Disilicate không cần Primer rời.</p>
                   </div>
                 </li>
               </ul>
@@ -250,7 +250,7 @@ export function IndirectRestoration() {
 
           <div className="bg-white bg-gradient-to-br from-[#C43838]/5 to-[#8C2828]/10 rounded-[2rem] p-8 md:p-12 border border-[#C43838]/20 relative overflow-hidden flex flex-col h-full justify-between">
             <div className="relative z-10">
-              <h3 className="font-heading font-black text-2xl text-slate-900 mb-2">Xi măng BeautiLink SA</h3>
+              <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">Xi măng BeautiLink SA</h3>
               <p className="text-[#C43838] font-bold text-sm uppercase tracking-wider mb-6">Tự dán sinh học Dual-Cure</p>
               
               {/* Product Image Area */}
@@ -266,8 +266,8 @@ export function IndirectRestoration() {
                     <Microscope className="w-6 h-6 text-[#C43838]" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-lg text-slate-900">Màng phim siêu mỏng 14µm</h4>
-                    <p className="text-slate-600 text-sm mt-1">Chảy loang thixotropic tuyệt hảo tạo đường hoàn tất vô hình.</p>
+                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Màng phim siêu mỏng 14µm</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Chảy loang thixotropic tuyệt hảo tạo đường hoàn tất vô hình.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -275,8 +275,8 @@ export function IndirectRestoration() {
                     <Clock className="w-6 h-6 text-[#C43838]" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-lg text-slate-900">Dọn dư "One-Sweep" 1-2 giây</h4>
-                    <p className="text-slate-600 text-sm mt-1">Hóa dẻo dạng gel dai cao su, lột sạch nguyên khối chỉ bằng một đường gạt.</p>
+                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Dọn dư "One-Sweep" 1-2 giây</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Hóa dẻo dạng gel dai cao su, lột sạch nguyên khối chỉ bằng một đường gạt.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -284,8 +284,8 @@ export function IndirectRestoration() {
                     <Shield className="w-6 h-6 text-[#C43838]" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-lg text-slate-900">Hạt độn hoạt tính sinh học S-PRG</h4>
-                    <p className="text-slate-600 text-sm mt-1">Liên tục phóng thích 6 ion đệm giúp trung hòa axit, kháng mảng bám, ngăn ngừa sâu răng dưới viền dán.</p>
+                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Hạt độn hoạt tính sinh học S-PRG</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Liên tục phóng thích 6 ion đệm giúp trung hòa axit, kháng mảng bám, ngăn ngừa sâu răng dưới viền dán.</p>
                   </div>
                 </li>
               </ul>
@@ -340,8 +340,8 @@ export function IndirectRestoration() {
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-2">
               <span className="font-heading font-black text-xl">1</span>
             </div>
-            <h3 className="font-heading font-black text-2xl text-slate-900">Lực dán siêu cường ~50 MPa trên Zirconia – Kháng mỏi nhiệt</h3>
-            <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed">
+            <h3 className="font-heading font-bold text-xl text-slate-900">Lực dán siêu cường ~50 MPa trên Zirconia – Kháng mỏi nhiệt</h3>
+            <p className="font-body text-sm text-slate-600 leading-relaxed">
               BeautiLink SA sở hữu liên kết hóa học hóa trị trực tiếp với oxit kim loại của Zirconia. Báo cáo của The Dental Advisor (Số 168 - Tháng 8/2024) ghi nhận sản phẩm đạt lực dán trượt khổng lồ <strong className="text-slate-900">~50 MPa</strong> và phẳng lì không suy giảm sau 5.000 chu kỳ sốc nhiệt (Thermocycling).
             </p>
           </div>
@@ -374,8 +374,8 @@ export function IndirectRestoration() {
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-6">
               <span className="font-heading font-black text-xl">2</span>
             </div>
-            <h3 className="font-heading font-black text-2xl text-slate-900 mb-4">Sát thủ dọn dư "One-Sweep"</h3>
-            <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed mb-6">
+            <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Sát thủ dọn dư "One-Sweep"</h3>
+            <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
               Giải phóng 30% thời gian trên ghế nha. Không còn cạo vụn xi măng cứng ngắc làm tứa máu nướu. Chiếu đèn 1-2 giây (Tack-cure), xi măng hóa gel dai dẻo. Dùng thám châm bóc nguyên khối trong một đường gạt.
             </p>
             <div className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -388,8 +388,8 @@ export function IndirectRestoration() {
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-6">
               <span className="font-heading font-black text-xl">3</span>
             </div>
-            <h3 className="font-heading font-black text-2xl text-slate-900 mb-4">Lá chắn Sinh học S-PRG</h3>
-            <p className="text-slate-600 leading-relaxed mb-6">
+            <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Lá chắn Sinh học S-PRG</h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-6">
               S-PRG là "bình ắc quy sinh học". 6 Ion (F-, Sr2+, BO33-, Al3+, SiO32-, Na+) liên tục khuếch tán qua màng dán để bít kín ống ngà hở, trung hòa axit và tạo lớp màng kháng biofilm ngăn mảng bám.
             </p>
             <div className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -406,8 +406,8 @@ export function IndirectRestoration() {
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#00ADEF] text-white mb-6">
                 <span className="font-heading font-black text-xl">4</span>
               </div>
-              <h3 className="font-heading font-black text-3xl text-white mb-4">Tối ưu ROI – "Tuyên chiến" với lãng phí</h3>
-              <p className="text-slate-300 leading-relaxed mb-6">
+              <h3 className="font-heading font-bold text-xl text-white mb-4">Tối ưu ROI – "Tuyên chiến" với lãng phí</h3>
+              <p className="text-slate-300 text-sm leading-relaxed mb-6">
                 Thể tích chết trong vòi trộn Automix ngốn 0.25g - 0.44g xi măng mỗi ca. Định dạng Handmix khổng lồ 15.6g (9ml) của BeautiLink SA triệt tiêu 95% sự lãng phí này. Cho hiệu suất kỷ lục 120 ca gắn thực tế.
               </p>
               <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-400 font-bold px-4 py-2 rounded-lg">
@@ -466,41 +466,41 @@ export function IndirectRestoration() {
             {/* Step 1 */}
             <div className="relative z-10 flex flex-col items-center text-center group">
               <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-200 group-hover:border-[#00ADEF] transition-colors flex items-center justify-center text-slate-400 group-hover:text-[#00ADEF] mb-6 shadow-sm">
-                <span className="font-heading font-black text-3xl">1</span>
+                <span className="font-heading font-bold text-xl">1</span>
               </div>
-              <h4 className="font-heading font-bold text-lg text-slate-900 mb-3">Sửa soạn cùi ngà</h4>
+              <h4 className="font-heading font-bold text-[15px] text-slate-900 mb-2">Sửa soạn cùi ngà</h4>
               <p className="font-body text-sm sm:text-base text-slate-600 leading-relaxed">Xịt hạt nhôm oxit cát nhẹ. Giữ cùi răng ẩm nhẹ (moist ngà), <strong className="text-red-500">không thổi khô cong</strong> làm sụp Collagen.</p>
             </div>
             {/* Step 2 */}
             <div className="relative z-10 flex flex-col items-center text-center group">
               <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-200 group-hover:border-[#00ADEF] transition-colors flex items-center justify-center text-slate-400 group-hover:text-[#00ADEF] mb-6 shadow-sm">
-                <span className="font-heading font-black text-3xl">2</span>
+                <span className="font-heading font-bold text-xl">2</span>
               </div>
-              <h4 className="font-heading font-bold text-lg text-slate-900 mb-3">Quét BBX (Cùi răng)</h4>
+              <h4 className="font-heading font-bold text-[15px] text-slate-900 mb-2">Quét BBX (Cùi răng)</h4>
               <p className="font-body text-sm sm:text-base text-slate-600 leading-relaxed">Quét 1 lớp BBX 5s. Thổi hơi 3s bay dung môi dàn mỏng 5µm. Chiếu đèn LED 5s.</p>
             </div>
             {/* Step 3 */}
             <div className="relative z-10 flex flex-col items-center text-center group">
               <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-200 group-hover:border-[#00ADEF] transition-colors flex items-center justify-center text-slate-400 group-hover:text-[#00ADEF] mb-6 shadow-sm">
-                <span className="font-heading font-black text-3xl">3</span>
+                <span className="font-heading font-bold text-xl">3</span>
               </div>
-              <h4 className="font-heading font-bold text-lg text-slate-900 mb-3">Xử lý lòng mão</h4>
+              <h4 className="font-heading font-bold text-[15px] text-slate-900 mb-2">Xử lý lòng mão</h4>
               <p className="font-body text-sm sm:text-base text-slate-600 leading-relaxed">Làm sạch lòng mão. Quét lớp mỏng BBX, thổi khô mạnh. <strong className="text-slate-900">Không cần Primer sứ rời.</strong></p>
             </div>
             {/* Step 4 */}
             <div className="relative z-10 flex flex-col items-center text-center group">
               <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-200 group-hover:border-[#C43838] transition-colors flex items-center justify-center text-slate-400 group-hover:text-[#C43838] mb-6 shadow-sm">
-                <span className="font-heading font-black text-3xl">4</span>
+                <span className="font-heading font-bold text-xl">4</span>
               </div>
-              <h4 className="font-heading font-bold text-lg text-slate-900 mb-3">Trộn BeautiLink SA</h4>
+              <h4 className="font-heading font-bold text-[15px] text-slate-900 mb-2">Trộn BeautiLink SA</h4>
               <p className="font-body text-sm sm:text-base text-slate-600 leading-relaxed">Lấy tỷ lệ 1:1, trộn tay trên giấy 10s. Thoa một lớp mỏng xi măng vào lòng phục hình.</p>
             </div>
             {/* Step 5 */}
             <div className="relative z-10 flex flex-col items-center text-center group">
               <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-200 group-hover:border-[#C43838] transition-colors flex items-center justify-center text-slate-400 group-hover:text-[#C43838] mb-6 shadow-sm">
-                <span className="font-heading font-black text-3xl">5</span>
+                <span className="font-heading font-bold text-xl">5</span>
               </div>
-              <h4 className="font-heading font-bold text-lg text-slate-900 mb-3">Gắn & Dọn dư "One-Sweep"</h4>
+              <h4 className="font-heading font-bold text-[15px] text-slate-900 mb-2">Gắn & Dọn dư "One-Sweep"</h4>
               <p className="font-body text-sm sm:text-base text-slate-600 leading-relaxed">Ấn nhẹ mão. Chiếu đèn 1-2s. Lột sạch dư nguyên mảng. Chiếu hoàn thiện 10s/mặt.</p>
             </div>
           </div>
@@ -518,31 +518,31 @@ export function IndirectRestoration() {
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10">
           <div className="bg-white rounded-2xl p-8 shadow-sm flex flex-col">
-            <p className="font-body text-base sm:text-lg text-slate-600 italic mb-8 leading-relaxed flex-1">
+            <p className="font-body text-[14px] sm:text-[15px] text-slate-600 italic mb-8 leading-relaxed flex-1">
               "Dòng sản phẩm tự dán ứng dụng công nghệ S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ các bước nhạy cảm kỹ thuật. Đây thực sự là công cụ thu hút khách hàng tuyệt vời!"
             </p>
             <div className="border-t border-slate-100 pt-6">
-              <h4 className="font-heading font-bold text-lg text-slate-900">Dr. Shukan Kanuga</h4>
+              <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Dr. Shukan Kanuga</h4>
               <p className="text-xs text-slate-500 mt-1">Nha nhi - Hiệp hội Nha khoa Trẻ em Hoa Kỳ, Santa Clarita, CA</p>
             </div>
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-sm flex flex-col">
-            <p className="font-body text-base sm:text-lg text-slate-600 italic mb-8 leading-relaxed flex-1">
+            <p className="font-body text-[14px] sm:text-[15px] text-slate-600 italic mb-8 leading-relaxed flex-1">
               "Nha khoa hiện đại đang dịch chuyển sang vật liệu sinh học tự trị liệu mô răng lâu dài. Hệ thống Giomer đáp ứng trọn vẹn điều này nhờ cơ chế trung hòa axit, giải phóng và tái sạc ion liên tục."
             </p>
             <div className="border-t border-slate-100 pt-6">
-              <h4 className="font-heading font-bold text-lg text-slate-900">Dr. Jennifer Bell</h4>
+              <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Dr. Jennifer Bell</h4>
               <p className="text-xs text-slate-500 mt-1">Thành viên Viện Thẩm mỹ Nha khoa Quốc tế, Raleigh, NC</p>
             </div>
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-sm flex flex-col">
-            <p className="font-body text-base sm:text-lg text-slate-600 italic mb-8 leading-relaxed flex-1">
+            <p className="font-body text-[14px] sm:text-[15px] text-slate-600 italic mb-8 leading-relaxed flex-1">
               "Lớp keo dán siêu mỏng dưới 5 micron tối ưu hóa khoảng ghép khít sát tuyệt đối, đồng thời là chiếc cầu nối lý tưởng giúp ion sinh học từ S-PRG khuếch tán xuyên qua để bảo vệ mô răng sống bên dưới lớp lai."
             </p>
             <div className="border-t border-slate-100 pt-6">
-              <h4 className="font-heading font-bold text-lg text-slate-900">Prof. Keiichi Hosaka</h4>
+              <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Prof. Keiichi Hosaka</h4>
               <p className="text-xs text-slate-500 mt-1">Trưởng khoa Nha khoa Phục hồi tái tạo, ĐH Tokushima, Nhật Bản</p>
             </div>
           </div>
