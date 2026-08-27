@@ -318,34 +318,14 @@ export function IndirectRestoration() {
             </div>
             
             {/* Right Column: Diagram */}
-            <div className="flex flex-col items-center w-full max-w-md mx-auto lg:mx-0 lg:ml-auto">
-              {/* Lòng mão sứ */}
-              <div className="w-full h-12 bg-slate-200 rounded-t-xl flex items-center justify-center border-b-2 border-white">
-                <span className="font-bold text-slate-500 uppercase tracking-widest text-xs">Lòng mão sứ / Zirconia</span>
-              </div>
-              {/* BBX Layer */}
-              <div className="w-full h-8 bg-[#00ADEF]/20 flex items-center justify-between px-4 border-b-2 border-white relative group">
-                <span className="font-mono text-xs font-bold text-[#008BBF]">BBX</span>
-                <span className="font-mono text-xs font-bold text-[#008BBF] bg-white px-2 py-0.5 rounded-full shadow-sm">5µm</span>
-              </div>
-              {/* BeautiLink SA Layer */}
-              <div className="w-full h-16 bg-[#C43838]/20 flex items-center justify-between px-4 border-b-2 border-white relative">
-                <span className="font-mono text-xs font-bold text-[#A62C2C]">BeautiLink SA</span>
-                <span className="font-mono text-xs font-bold text-[#A62C2C] bg-white px-2 py-0.5 rounded-full shadow-sm">14µm</span>
-              </div>
-              {/* BBX Layer */}
-              <div className="w-full h-8 bg-[#00ADEF]/20 flex items-center justify-between px-4 border-b-2 border-white">
-                <span className="font-mono text-xs font-bold text-[#008BBF]">BBX</span>
-                <span className="font-mono text-xs font-bold text-[#008BBF] bg-white px-2 py-0.5 rounded-full shadow-sm">5µm</span>
-              </div>
-              {/* Cùi răng */}
-              <div className="w-full h-24 bg-amber-50 rounded-b-xl flex items-center justify-center border-t-2 border-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjZmVmM2M3IiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')] opacity-50"></div>
-                <span className="font-bold text-amber-700 uppercase tracking-widest text-xs relative z-10">Cùi ngà răng</span>
-              </div>
-              <div className="mt-4 bg-slate-900 text-white px-4 py-2 rounded-full font-mono font-bold text-sm shadow-md flex items-center gap-2">
-                Tổng chiều dày khoảng ghép = <span className="text-yellow-400">24µm</span>
-              </div>
+            <div className="flex flex-col items-center w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto">
+              <img 
+                src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/Shofu-double-hybrid-link-system.webp" 
+                alt="Sơ đồ cấu trúc lớp lai kép siêu mỏng 24µm" 
+                className="w-full h-auto object-contain drop-shadow-sm rounded-xl"
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </div>
         </div>
