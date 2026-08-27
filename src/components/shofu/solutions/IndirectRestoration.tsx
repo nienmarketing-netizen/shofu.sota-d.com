@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
   ShieldCheck, Zap, Coins, AlertTriangle, HeartPulse, Banknote, 
   Droplet, Microscope, ArrowRight, Gift, ChevronDown, CheckCircle2,
-  Clock, Shield, BarChart3, TestTube, Quote, Image as ImageIcon
+  Clock, Shield, BarChart3, TestTube, Quote, Image as ImageIcon,
+  Unlink, Layers
 } from 'lucide-react';
 
 const FaqItem = ({ question, answer }: { question: string, answer: string }) => {
@@ -146,7 +147,7 @@ export function IndirectRestoration() {
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
-              <HeartPulse className="w-8 h-8 text-red-400" />
+              <Unlink className="w-8 h-8 text-red-400" />
             </div>
             <h3 className="font-heading font-bold text-xl text-white mb-4">Sút phục hình & Ê buốt muộn</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -156,7 +157,7 @@ export function IndirectRestoration() {
 
           <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
+              <Layers className="w-8 h-8 text-red-400" />
             </div>
             <h3 className="font-heading font-bold text-xl text-white mb-4">Kênh cộm khớp & Hở đường viền</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
