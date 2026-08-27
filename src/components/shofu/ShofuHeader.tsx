@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from '../ui/Button';
 
 interface ShofuHeaderProps {
   onNavigate?: (sectionId: string) => void;
@@ -79,18 +80,31 @@ export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHea
             )}
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden p-2 text-slate-700 relative z-50"
-            onClick={(e) => {
-              e.preventDefault();
-              setIsMobileMenuOpen((prev) => !prev);
-            }}
-            aria-expanded={isMobileMenuOpen}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Menu Toggle / Landing CTA */}
+          <div className="md:hidden flex items-center relative z-50">
+            {isLandingPage ? (
+              <Button
+                variant="primary"
+                size="sm"
+                onClick={() => onOpenQuote?.()}
+                className="sota-gradient font-heading font-bold text-xs"
+              >
+                Nhận tư vấn ngay
+              </Button>
+            ) : (
+              <button 
+                className="p-2 text-slate-700"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen((prev) => !prev);
+                }}
+                aria-expanded={isMobileMenuOpen}
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            )}
+          </div>
         </div>
       </div>
 

@@ -135,11 +135,11 @@ export function IndirectRestoration() {
 
       {/* SECTION 2: THE PAIN POINTS */}
       <section className="py-20 lg:py-28 bg-slate-900 relative overflow-hidden text-center">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.15]"></div>
+        <div className="absolute inset-0 bg-grid-pattern-light opacity-100"></div>
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-white leading-[1.3] mb-6 tracking-tight uppercase">
-            CÓ PHẢI BÁC SĨ ĐANG ÂM THẦM CHỊU ĐỰNG NHỮNG RỦI RO NÀY MỖI NGÀY?
+          <h2 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-white leading-[1.3] mb-6 tracking-tight">
+            Có phải bác sĩ đang âm thầm chịu đựng những rủi ro này mỗi ngày?
           </h2>
           <div className="w-24 h-1 bg-red-500 mx-auto"></div>
         </div>
@@ -175,6 +175,18 @@ export function IndirectRestoration() {
             </p>
           </div>
         </div>
+
+        <div className="mt-12 md:mt-16 text-center relative z-10">
+          <button 
+            onClick={openOffer}
+            className="group relative inline-flex items-center justify-center gap-1 sm:gap-2 bg-[#00ADEF] text-white px-0.5 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-[11.5px] min-[400px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
+          >
+            <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
+            <span className="truncate">NHẬN TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO</span>
+            <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+          </button>
+        </div>
+
         </div>
       </section>
 
