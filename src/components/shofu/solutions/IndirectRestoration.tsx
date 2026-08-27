@@ -292,33 +292,17 @@ export function IndirectRestoration() {
 
         {/* The 24um Diagram */}
         <div className="rounded-3xl py-8 max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column: Text */}
-            <div className="space-y-6">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            
+            {/* Headline (Order 1 on Mobile, Top Left on Desktop) */}
+            <div className="order-1 lg:col-start-1 lg:row-start-1 lg:self-end">
               <h4 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight">
                 Cấu trúc lớp lai kép <span className="text-[#00ADEF]">siêu mỏng</span> khít sát <span className="text-amber-500">tuyệt đối</span>
               </h4>
-              <p className="text-slate-600 text-base leading-relaxed">
-                Sự kết hợp hoàn hảo giữa màng keo kỷ lục 5µm của BeautiBond Xtreme và lớp xi măng siêu mỏng 14µm của BeautiLink SA tạo nên một khoảng ghép vô hình chỉ 24µm, thiết lập tiêu chuẩn mới trong phục hình gián tiếp.
-              </p>
-              <ul className="space-y-4 pt-2">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#00ADEF] shrink-0 mt-0.5" />
-                  <p className="text-sm text-slate-700"><strong>Thẩm mỹ hoàn hảo:</strong> Không ố vàng đường viền theo thời gian nhờ công nghệ HEMA-Free kỵ nước.</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#00ADEF] shrink-0 mt-0.5" />
-                  <p className="text-sm text-slate-700"><strong>Khớp cắn chuẩn xác:</strong> Triệt tiêu hoàn toàn rủi ro cộm cấn, kênh phục hình sau khi gắn.</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#00ADEF] shrink-0 mt-0.5" />
-                  <p className="text-sm text-slate-700"><strong>Bảo vệ sinh học:</strong> Hạt độn S-PRG ngăn chặn vi khuẩn xâm nhập vi kẽ, bảo vệ cùi răng vĩnh viễn.</p>
-                </li>
-              </ul>
             </div>
-            
-            {/* Right Column: Diagram */}
-            <div className="flex flex-col items-center w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto">
+
+            {/* Diagram Image (Order 2 on Mobile, Right Column on Desktop) */}
+            <div className="order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 flex flex-col items-center w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto">
               <img 
                 src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/Shofu-double-hybrid-link-system.webp" 
                 alt="Sơ đồ cấu trúc lớp lai kép siêu mỏng 24µm" 
@@ -327,6 +311,28 @@ export function IndirectRestoration() {
                 referrerPolicy="no-referrer"
               />
             </div>
+
+            {/* USPs and Text (Order 3 on Mobile, Bottom Left on Desktop) */}
+            <div className="order-3 lg:col-start-1 lg:row-start-2 lg:self-start space-y-6">
+              <p className="text-slate-600 text-base leading-relaxed">
+                Sự kết hợp hoàn hảo giữa màng keo kỷ lục 5µm của BeautiBond Xtreme và lớp xi măng siêu mỏng 14µm của BeautiLink SA tạo nên một khoảng ghép vô hình chỉ 24µm, thiết lập tiêu chuẩn mới trong phục hình gián tiếp.
+              </p>
+              <ul className="space-y-4 pt-2">
+                <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
+                  <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
+                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Thẩm mỹ hoàn hảo:</strong> Không ố vàng đường viền theo thời gian nhờ công nghệ HEMA-Free kỵ nước.</p>
+                </li>
+                <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
+                  <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
+                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Khớp cắn chuẩn xác:</strong> Triệt tiêu hoàn toàn rủi ro cộm cấn, kênh phục hình sau khi gắn.</p>
+                </li>
+                <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
+                  <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
+                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Bảo vệ sinh học:</strong> Hạt độn S-PRG ngăn chặn vi khuẩn xâm nhập vi kẽ, bảo vệ cùi răng vĩnh viễn.</p>
+                </li>
+              </ul>
+            </div>
+            
           </div>
         </div>
         </div>
