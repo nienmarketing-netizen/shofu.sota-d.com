@@ -4,7 +4,7 @@ import {
   ShieldCheck, Zap, Coins, AlertTriangle, HeartPulse, Banknote, 
   Droplet, Microscope, ArrowRight, Gift, ChevronDown, CheckCircle2,
   Clock, Shield, BarChart3, TestTube, Quote, Image as ImageIcon,
-  Unlink, Layers
+  Unlink, Layers, Umbrella
 } from 'lucide-react';
 
 const FaqItem = ({ question, answer }: { question: string, answer: string }) => {
@@ -225,10 +225,7 @@ export function IndirectRestoration() {
                 </li>
                 <li className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <div className="relative">
-                      <Droplet className="w-6 h-6 text-slate-400" />
-                      <div className="absolute inset-0 bg-red-500 w-[2px] h-[30px] rotate-45 transform origin-center -translate-x-1 -translate-y-1"></div>
-                    </div>
+                    <Umbrella className="w-6 h-6 text-[#00ADEF]" />
                   </div>
                   <div>
                     <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Công nghệ HEMA-Free kỵ nước</h4>
@@ -237,7 +234,7 @@ export function IndirectRestoration() {
                 </li>
                 <li className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Zap className="w-6 h-6 text-[#00ADEF]" />
+                    <ShieldCheck className="w-6 h-6 text-[#00ADEF]" />
                   </div>
                   <div>
                     <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Quadra-Functional & ARS</h4>
