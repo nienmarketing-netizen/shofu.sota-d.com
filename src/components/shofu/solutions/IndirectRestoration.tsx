@@ -405,7 +405,7 @@ export function IndirectRestoration() {
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-6">
               <span className="font-heading font-black text-xl">2</span>
             </div>
-            <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Sát thủ dọn dư "One-Sweep"</h3>
+            <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">"Sát thủ" dọn xi măng dư "One-Sweep"</h3>
             <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
               Giải phóng 30% thời gian trên ghế nha. Không còn cạo vụn xi măng cứng ngắc làm tứa máu nướu. Chiếu đèn 1-2 giây (Tack-cure), xi măng hóa gel dai dẻo. Dùng thám châm bóc nguyên khối trong một đường gạt.
             </p>
