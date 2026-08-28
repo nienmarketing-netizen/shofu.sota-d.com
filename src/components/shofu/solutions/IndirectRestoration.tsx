@@ -355,7 +355,8 @@ export function IndirectRestoration() {
         <div className="w-[90%] lg:w-[80%] mx-auto space-y-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto mb-12">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">
-            Sức mạnh <span className="text-[#00ADEF]">thuyết phục</span> <span className="text-amber-500">tuyệt đối</span>
+            Sức mạnh <br className="sm:hidden" />
+            <span className="text-[#00ADEF]">thuyết phục</span> <span className="text-amber-500">tuyệt đối</span>
           </h2>
           <p className="font-body text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
             Bảo chứng y văn vững chắc và hiệu suất thực tế được kiểm chứng bởi Bác sĩ trên hơn 100 quốc gia và vùng lãnh thổ.
