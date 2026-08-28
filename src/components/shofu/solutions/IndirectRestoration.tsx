@@ -62,14 +62,18 @@ const YoutubeAutoplay = ({ videoId }: { videoId: string }) => {
   return (
     <div ref={ref} className="relative w-full aspect-video rounded-2xl overflow-hidden my-6 bg-slate-100 shadow-inner border border-slate-200">
       {inView ? (
-        <iframe
-          className="absolute top-0 left-0 w-full h-full"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=1`}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        <>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full pointer-events-none select-none"
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&disablekb=1&fs=0&modestbranding=1&playsinline=1&rel=0`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+          {/* Invisible overlay to block absolutely all pointer interactions */}
+          <div className="absolute inset-0 z-10 bg-transparent"></div>
+        </>
       ) : (
         <div className="absolute inset-0 flex items-center justify-center text-slate-300">
           <div className="w-8 h-8 rounded-full border-2 border-slate-300 border-t-slate-500 animate-spin"></div>
