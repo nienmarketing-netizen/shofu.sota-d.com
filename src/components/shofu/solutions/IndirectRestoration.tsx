@@ -68,7 +68,7 @@ export function IndirectRestoration() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-gradient-to-tr from-[#00ADEF]/30 to-[#C43838]/30 blur-[60px] rounded-full z-0 animate-pulse"></div>
               <img 
                 referrerPolicy="no-referrer"
-                src="/images/beautilink-bbx.png" 
+                src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/beautilink-bbx.webp" 
                 alt="Bộ đôi BBX và BeautiLink SA" 
                 className="w-full max-w-[400px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
               />
@@ -122,10 +122,10 @@ export function IndirectRestoration() {
             {/* Lớp Hào quang sinh học tỏa sáng */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-[#00ADEF]/30 to-[#C43838]/30 blur-[80px] rounded-full z-0 animate-pulse"></div>
             
-            {/* Bức ảnh PNG tách nền duy nhất */}
+            {/* Bức ảnh WebP tách nền duy nhất */}
             <img 
               referrerPolicy="no-referrer"
-              src="/images/beautilink-bbx.png" 
+              src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/beautilink-bbx.webp" 
               alt="Bộ đôi BBX và BeautiLink SA" 
               className="w-full max-w-[550px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
             />
