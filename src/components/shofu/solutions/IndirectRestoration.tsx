@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   ShieldCheck, Zap, Coins, AlertTriangle, HeartPulse, Banknote, 
@@ -32,6 +32,49 @@ const FaqItem = ({ question, answer }: { question: string, answer: string }) => 
           </motion.div>
         )}
       </AnimatePresence>
+    </div>
+  );
+};
+
+const YoutubeAutoplay = ({ videoId }: { videoId: string }) => {
+  const [inView, setInView] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div ref={ref} className="relative w-full aspect-video rounded-2xl overflow-hidden my-6 bg-slate-100 shadow-inner border border-slate-200">
+      {inView ? (
+        <iframe
+          className="absolute top-0 left-0 w-full h-full"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=1`}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center text-slate-300">
+          <div className="w-8 h-8 rounded-full border-2 border-slate-300 border-t-slate-500 animate-spin"></div>
+        </div>
+      )}
     </div>
   );
 };
@@ -406,6 +449,9 @@ export function IndirectRestoration() {
               <span className="font-heading font-black text-xl">2</span>
             </div>
             <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">"Sát thủ" dọn xi măng dư "One-Sweep"</h3>
+            
+            <YoutubeAutoplay videoId="K85voUZxMV8" />
+
             <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
               Giải phóng 30% thời gian trên ghế nha. Không còn cạo vụn xi măng cứng ngắc làm tứa máu nướu. Chiếu đèn 1-2 giây (Tack-cure), xi măng hóa gel dai dẻo. Dùng thám châm bóc nguyên khối trong một đường gạt.
             </p>
