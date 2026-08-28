@@ -87,7 +87,7 @@ export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHea
                 variant="primary"
                 size="sm"
                 onClick={() => onOpenQuote?.()}
-                className="sota-gradient font-heading font-bold text-xs"
+                className="sota-gradient font-heading font-bold text-xs tracking-wider uppercase [word-spacing:1px]"
               >
                 Nhận tư vấn ngay
               </Button>
