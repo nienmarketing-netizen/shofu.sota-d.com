@@ -382,8 +382,8 @@ export function IndirectRestoration() {
               />
             </div>
 
-            <p className="font-body text-sm text-slate-600 leading-relaxed">
-              BeautiLink SA sở hữu liên kết hóa học hóa trị trực tiếp với oxit kim loại của Zirconia. Báo cáo của The Dental Advisor (Số 168 - Tháng 8/2024) ghi nhận sản phẩm đạt lực dán trượt khổng lồ <strong className="text-slate-900">~50 MPa</strong> và phẳng lì không suy giảm sau 5.000 chu kỳ sốc nhiệt (Thermocycling).
+            <p className="font-body text-sm md:text-base text-slate-600 leading-relaxed">
+              Báo cáo của The Dental Advisor (Số 168 - Tháng 8/2024) ghi nhận BeautiLink SA đạt lực dán trượt khổng lồ <strong className="text-[#00ADEF] font-bold text-lg">~50 MPa</strong> và <strong className="text-slate-900 font-bold bg-amber-100 px-1 rounded">không suy giảm</strong> sau <strong className="text-slate-900 font-bold">5.000 chu kỳ sốc nhiệt</strong> (Thermocycling).
             </p>
           </div>
           
