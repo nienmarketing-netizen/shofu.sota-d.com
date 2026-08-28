@@ -370,11 +370,25 @@ export function IndirectRestoration() {
               <span className="font-heading font-black text-xl">1</span>
             </div>
             <h3 className="font-heading font-bold text-xl text-slate-900">Lực dán siêu cường không suy giảm qua 5,000 chu kỳ sốc nhiệt khắt khe</h3>
+            
+            {/* Mobile Image (Visible only on mobile, between headline and body) */}
+            <div className="w-full md:hidden my-6">
+              <img 
+                src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/share-bond-strength-on-zirconia%20copy.webp" 
+                alt="Lực dán trượt (MPa) trên Zirconia sau Lão hóa nhiệt" 
+                className="w-full h-auto object-contain rounded-2xl drop-shadow-sm border border-slate-200"
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+
             <p className="font-body text-sm text-slate-600 leading-relaxed">
               BeautiLink SA sở hữu liên kết hóa học hóa trị trực tiếp với oxit kim loại của Zirconia. Báo cáo của The Dental Advisor (Số 168 - Tháng 8/2024) ghi nhận sản phẩm đạt lực dán trượt khổng lồ <strong className="text-slate-900">~50 MPa</strong> và phẳng lì không suy giảm sau 5.000 chu kỳ sốc nhiệt (Thermocycling).
             </p>
           </div>
-          <div className="w-full md:w-1/2">
+          
+          {/* Desktop Image (Visible only on md and up) */}
+          <div className="w-full md:w-1/2 hidden md:block">
             <img 
               src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/share-bond-strength-on-zirconia%20copy.webp" 
               alt="Lực dán trượt (MPa) trên Zirconia sau Lão hóa nhiệt" 
