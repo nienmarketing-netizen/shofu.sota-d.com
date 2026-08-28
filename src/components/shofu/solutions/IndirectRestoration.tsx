@@ -79,11 +79,7 @@ const YoutubeAutoplay = ({ videoId }: { videoId: string }) => {
       ref={containerRef} 
       className="relative w-full aspect-video rounded-2xl overflow-hidden my-6 bg-slate-900 shadow-inner border border-slate-200 pointer-events-none select-none"
     >
-      {/* 
-        We slightly scale up the iframe to crop out the top YouTube title and bottom logo 
-        that appear momentarily on load, ensuring a 100% clean video experience.
-      */}
-      <div className="absolute inset-0 w-full h-full transform scale-[1.35] pointer-events-none">
+      <div className="absolute inset-0 w-full h-full pointer-events-none">
         <iframe
           ref={iframeRef}
           onLoad={() => setIsLoaded(true)}
