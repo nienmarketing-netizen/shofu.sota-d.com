@@ -37,44 +37,74 @@ const FaqItem = ({ question, answer }: { question: string, answer: string }) => 
 };
 
 const YoutubeAutoplay = ({ videoId }: { videoId: string }) => {
-  const [inView, setInView] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setInView(entry.isIntersecting);
+        if (!iframeRef.current?.contentWindow) return;
+        
+        if (entry.isIntersecting) {
+          // Send play command
+          iframeRef.current.contentWindow.postMessage(
+            JSON.stringify({ event: 'command', func: 'playVideo', args: [] }),
+            '*'
+          );
+        } else {
+          // Send pause command
+          iframeRef.current.contentWindow.postMessage(
+            JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }),
+            '*'
+          );
+        }
       },
       { threshold: 0.5 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
       }
     };
   }, []);
 
   return (
-    <div ref={ref} className="relative w-full aspect-video rounded-2xl overflow-hidden my-6 bg-slate-100 shadow-inner border border-slate-200">
-      {inView ? (
+    <div 
+      ref={containerRef} 
+      className="relative w-full aspect-video rounded-2xl overflow-hidden my-6 bg-slate-900 shadow-inner border border-slate-200 pointer-events-none select-none"
+    >
+      {/* 
+        We slightly scale up the iframe to crop out the top YouTube title and bottom logo 
+        that appear momentarily on load, ensuring a 100% clean video experience.
+      */}
+      <div className="absolute inset-0 w-full h-full transform scale-[1.35] pointer-events-none">
         <iframe
-          className="absolute top-0 left-0 w-full h-full"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=1`}
+          ref={iframeRef}
+          onLoad={() => setIsLoaded(true)}
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-700 pointer-events-none ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&disablekb=1&fs=0&modestbranding=1&playsinline=1&rel=0&iv_load_policy=3&enablejsapi=1`}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
-      ) : (
-        <div className="absolute inset-0 flex items-center justify-center text-slate-300">
+      </div>
+      
+      {/* Loading spinner while iframe initializes */}
+      {!isLoaded && (
+        <div className="absolute inset-0 flex items-center justify-center text-slate-300 bg-slate-100 z-10">
           <div className="w-8 h-8 rounded-full border-2 border-slate-300 border-t-slate-500 animate-spin"></div>
         </div>
       )}
+      
+      {/* Invisible overlay blocking absolutely all pointer interactions */}
+      <div className="absolute inset-0 z-20 w-full h-full bg-transparent"></div>
     </div>
   );
 };
