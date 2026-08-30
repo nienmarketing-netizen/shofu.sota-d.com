@@ -479,7 +479,7 @@ export function IndirectRestoration() {
             <YoutubeAutoplay videoId="K85voUZxMV8" />
 
             <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
-              Giải phóng 30% thời gian trên ghế nha. Không còn cạo vụn xi măng cứng ngắc làm tứa máu nướu. Chiếu đèn 1-2 giây (Tack-cure), xi măng hóa gel dai dẻo. Dùng thám châm bóc nguyên khối trong một đường gạt.
+              Giải phóng <strong className="text-amber-600 font-bold">30% thời gian</strong> trên ghế nha. Không còn cạo vụn xi măng cứng ngắc làm tứa máu nướu. Chiếu đèn <strong className="text-slate-800 font-bold">1-2 giây</strong> (Tack-cure), xi măng <strong className="text-[#00ADEF] font-bold">hóa gel dai dẻo</strong>. Dùng thám châm <strong className="text-slate-900 font-bold">bóc nguyên khối</strong> trong một đường gạt.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
