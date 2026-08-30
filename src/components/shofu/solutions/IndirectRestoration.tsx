@@ -514,7 +514,7 @@ export function IndirectRestoration() {
             </div>
             <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Lá chắn Sinh học S-PRG</h3>
             <p className="text-slate-600 text-sm leading-relaxed mb-6">
-              S-PRG là "bình ắc quy sinh học". 6 Ion (F-, Sr2+, BO33-, Al3+, SiO32-, Na+) liên tục khuếch tán qua màng dán để bít kín ống ngà hở, trung hòa axit và tạo lớp màng kháng biofilm ngăn mảng bám.
+              S-PRG là <strong className="text-emerald-600 font-bold">"bình ắc quy sinh học"</strong>. <strong className="text-[#00ADEF] font-bold text-base">6 Ion</strong> (F-, Sr2+, BO33-, Al3+, SiO32-, Na+) <strong className="text-slate-800 font-bold">liên tục khuếch tán</strong> qua màng dán để <strong className="text-slate-800 font-bold">bít kín ống ngà hở</strong>, <strong className="text-slate-800 font-bold">trung hòa axit</strong> và tạo lớp màng <strong className="text-slate-800 font-bold">kháng biofilm ngăn mảng bám</strong>.
             </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
