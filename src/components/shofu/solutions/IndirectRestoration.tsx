@@ -548,7 +548,7 @@ export function IndirectRestoration() {
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-600 leading-tight">Sâu răng thứ phát [12]</span>
+                    <span className="text-sm text-slate-600 leading-tight">Sâu răng thứ phát</span>
                   </div>
                 </div>
               </div>
@@ -563,7 +563,7 @@ export function IndirectRestoration() {
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-600 leading-tight">Triệt tiêu Biofilm [8]</span>
+                    <span className="text-sm text-slate-600 leading-tight">Triệt tiêu Biofilm</span>
                   </div>
                 </div>
               </div>
