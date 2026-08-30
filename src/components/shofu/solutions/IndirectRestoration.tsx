@@ -517,8 +517,56 @@ export function IndirectRestoration() {
               S-PRG là "bình ắc quy sinh học". 6 Ion (F-, Sr2+, BO33-, Al3+, SiO32-, Na+) liên tục khuếch tán qua màng dán để bít kín ống ngà hở, trung hòa axit và tạo lớp màng kháng biofilm ngăn mảng bám.
             </p>
             <div className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
-              <Shield className="w-6 h-6 text-emerald-500" />
+              <Shield className="w-6 h-6 text-emerald-500 shrink-0" />
               <span className="font-bold text-slate-800 text-sm">Bảo vệ tủy sống & margins nướu vĩnh viễn</span>
+            </div>
+
+            {/* Floating Badges */}
+            <div className="mt-8 grid gap-4">
+              <div className="bg-white p-4 rounded-2xl shadow-[0_8px_30px_-4px_rgba(0,0,0,0.06)] border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-[#00ADEF]"></div>
+                <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2 pl-3">JADA 8 Năm</div>
+                <div className="flex flex-col gap-2 pl-3">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#00ADEF] shrink-0 mt-0.5" />
+                    <span className="text-sm font-bold text-slate-800 leading-tight">100% Tỷ lệ lưu giữ</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#00ADEF] shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-600 leading-tight">0% Ê buốt / Sâu thứ phát</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white p-4 rounded-2xl shadow-[0_8px_30px_-4px_rgba(0,0,0,0.06)] border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-amber-500"></div>
+                <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2 pl-3">JADA 13 Năm</div>
+                <div className="flex flex-col gap-2 pl-3">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                    <span className="text-sm font-bold text-slate-800 leading-tight">96% Phục hình sạch</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-600 leading-tight">Sâu răng thứ phát [12]</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white p-4 rounded-2xl shadow-[0_8px_30px_-4px_rgba(0,0,0,0.06)] border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-emerald-500"></div>
+                <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2 pl-3">Nature Research</div>
+                <div className="flex flex-col gap-2 pl-3">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm font-bold text-slate-800 leading-tight">Ức chế gen pdh operon</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-slate-600 leading-tight">Triệt tiêu Biofilm [8]</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
