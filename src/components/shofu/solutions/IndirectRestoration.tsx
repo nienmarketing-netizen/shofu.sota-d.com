@@ -491,6 +491,21 @@ export function IndirectRestoration() {
                 <span className="font-bold text-slate-800 text-sm">Bảo vệ mô nướu & viền phục hình</span>
               </div>
             </div>
+
+            <div className="mt-8 pt-6 border-t border-slate-100 grid gap-4">
+              <div className="flex gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                <div className="font-heading font-black text-4xl text-[#00ADEF] tracking-tighter leading-none shrink-0">75<span className="text-2xl">%</span></div>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Bác sĩ đánh giá đặc tính thao tác & dọn xi măng dư <strong className="text-slate-800">"Tốt hơn" (Better)</strong> so với dòng xi măng tự dán họ đang sử dụng.
+                </p>
+              </div>
+              <div className="flex gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                <div className="font-heading font-black text-4xl text-amber-500 tracking-tighter leading-none shrink-0">86<span className="text-2xl">%</span></div>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Bác sĩ đánh giá thời gian làm việc (Working Time) ở mức <strong className="text-slate-800">"Rất tốt / Vừa vặn" (Good)</strong>, không gây áp lực vội vã.
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="bg-white rounded-3xl border border-slate-200 p-8 md:p-10 shadow-sm hover:border-slate-300 transition-colors">
