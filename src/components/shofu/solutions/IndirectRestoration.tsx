@@ -481,9 +481,15 @@ export function IndirectRestoration() {
             <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
               Giải phóng 30% thời gian trên ghế nha. Không còn cạo vụn xi măng cứng ngắc làm tứa máu nướu. Chiếu đèn 1-2 giây (Tack-cure), xi măng hóa gel dai dẻo. Dùng thám châm bóc nguyên khối trong một đường gạt.
             </p>
-            <div className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
-              <Clock className="w-6 h-6 text-amber-500" />
-              <span className="font-bold text-slate-800 text-sm">Tiết kiệm thời gian, tăng trải nghiệm bệnh nhân</span>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                <Clock className="w-6 h-6 text-amber-500 shrink-0" />
+                <span className="font-bold text-slate-800 text-sm">Tiết kiệm thời gian, tăng trải nghiệm bệnh nhân</span>
+              </div>
+              <div className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                <HeartPulse className="w-6 h-6 text-rose-500 shrink-0" />
+                <span className="font-bold text-slate-800 text-sm">Bảo vệ mô nướu & viền phục hình</span>
+              </div>
             </div>
           </div>
 
