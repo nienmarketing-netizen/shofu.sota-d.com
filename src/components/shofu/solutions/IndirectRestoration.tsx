@@ -689,9 +689,9 @@ export function IndirectRestoration() {
               <AlertTriangle className="w-4 h-4" />
               <span>TRIỆT TIÊU SAI SỐ LÂM SÀNG & TÀI CHÍNH</span>
             </div>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight uppercase">
-              ĐẬP TAN "MA TRẬN" <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-400">CHAI LỌ PHỤC HÌNH</span>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
+              Đập tan "ma trận" <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-400">chai lọ phục hình</span>
             </h2>
           </div>
 
