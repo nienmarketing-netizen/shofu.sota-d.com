@@ -433,7 +433,7 @@ export function IndirectRestoration() {
         </div>
         
         {/* USP 1 */}
-        <div className="bg-white rounded-3xl border border-slate-200 p-8 md:p-12 shadow-sm flex flex-col md:flex-row gap-8 items-center hover:border-slate-300 transition-colors">
+        <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-white p-8 md:p-12 shadow-sm flex flex-col md:flex-row gap-8 items-center hover:border-slate-200 hover:shadow-md transition-all">
           <div className="w-full md:w-1/2 space-y-4">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-2">
               <span className="font-heading font-black text-xl">1</span>
@@ -470,7 +470,7 @@ export function IndirectRestoration() {
 
         {/* USP 2 & 3 in Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-3xl border border-slate-200 p-8 md:p-10 shadow-sm hover:border-slate-300 transition-colors">
+          <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-white p-8 md:p-10 shadow-sm hover:border-slate-200 hover:shadow-md transition-all">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-6">
               <span className="font-heading font-black text-xl">2</span>
             </div>
@@ -508,7 +508,7 @@ export function IndirectRestoration() {
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl border border-slate-200 p-8 md:p-10 shadow-sm hover:border-slate-300 transition-colors">
+          <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-white p-8 md:p-10 shadow-sm hover:border-slate-200 hover:shadow-md transition-all">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-6">
               <span className="font-heading font-black text-xl">3</span>
             </div>
@@ -586,7 +586,7 @@ export function IndirectRestoration() {
         </div>
 
         {/* USP 4 */}
-        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-slate-200 hover:border-slate-300 transition-colors overflow-hidden relative">
+        <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl p-8 md:p-10 shadow-sm border border-white hover:border-slate-200 hover:shadow-md transition-all overflow-hidden relative">
           <div className="mb-6">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-6">
               <span className="font-heading font-black text-xl">4</span>
