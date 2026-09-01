@@ -680,7 +680,7 @@ export function IndirectRestoration() {
       {/* SECTION 5: CLINICAL WORKFLOW REWRITE */}
       <section className="py-20 lg:py-28 bg-slate-900 relative border-b border-slate-800 overflow-hidden">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.05] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-grid-pattern-light opacity-100 pointer-events-none"></div>
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#00ADEF]/10 blur-[120px] rounded-full pointer-events-none"></div>
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
           
