@@ -586,12 +586,12 @@ export function IndirectRestoration() {
         </div>
 
         {/* USP 4 */}
-        <div className="bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl p-8 md:p-10 shadow-xl border border-slate-800 overflow-hidden relative">
+        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-slate-200 hover:border-slate-300 transition-colors overflow-hidden relative">
           <div className="mb-6">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-800 text-white mb-6">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-6">
               <span className="font-heading font-black text-xl">4</span>
             </div>
-            <h3 className="font-heading font-bold text-xl text-white mb-4">
+            <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">
               Tối ưu ROI – "Tuyên chiến" với lãng phí
             </h3>
           </div>
@@ -602,26 +602,26 @@ export function IndirectRestoration() {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <AlertTriangle className="w-6 h-6 text-red-500 shrink-0" />
-                  <h4 className="font-heading font-bold text-lg text-white">Sự thật "đắt đỏ" của vòi trộn Automix</h4>
+                  <h4 className="font-heading font-bold text-lg text-slate-900">Sự thật "đắt đỏ" của vòi trộn Automix</h4>
                 </div>
-                <p className="font-body text-sm text-slate-300 leading-relaxed mb-6">
-                  Lượng xi măng kẹt lại trong vòi trộn (0.25g - 0.44g) <strong className="text-red-400 font-bold">lớn hơn hoặc bằng</strong> chính lượng xi măng được dùng cho răng của bệnh nhân.
+                <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
+                  Lượng xi măng kẹt lại trong vòi trộn (0.25g - 0.44g) <strong className="text-red-500 font-bold">lớn hơn hoặc bằng</strong> chính lượng xi măng được dùng cho răng của bệnh nhân.
                 </p>
               </div>
               
-              <div className="flex items-center gap-3 md:gap-4 bg-slate-900/80 rounded-xl p-4 md:p-5 border border-slate-700 mt-auto">
+              <div className="flex items-center gap-3 md:gap-4 bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-100 mt-auto">
                 <div className="flex-1 text-center">
-                  <div className="text-[10px] md:text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Phòng khám trả cho</div>
+                  <div className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Phòng khám trả cho</div>
                   <div className="text-2xl md:text-3xl font-black text-[#00ADEF]">100%</div>
-                  <div className="text-[10px] text-slate-500 uppercase mt-1 tracking-wider">Tuýp vật liệu</div>
+                  <div className="text-[10px] text-slate-400 uppercase mt-1 tracking-wider">Tuýp vật liệu</div>
                 </div>
-                <div className="text-slate-600 shrink-0 flex items-center justify-center">
+                <div className="text-slate-300 shrink-0 flex items-center justify-center">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </div>
                 <div className="flex-1 text-center">
-                  <div className="text-[10px] md:text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Nhưng chỉ dùng</div>
+                  <div className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider mb-1">Nhưng chỉ dùng</div>
                   <div className="text-2xl md:text-3xl font-black text-amber-500">{"< 50%"}</div>
-                  <div className="text-[10px] text-slate-500 uppercase mt-1 tracking-wider">Thực tế</div>
+                  <div className="text-[10px] text-slate-400 uppercase mt-1 tracking-wider">Thực tế</div>
                 </div>
               </div>
             </div>
@@ -629,42 +629,42 @@ export function IndirectRestoration() {
             {/* Block 2: Solution Comparison */}
             <div className="flex flex-col">
               <div className="text-center mb-6">
-                <h4 className="font-heading font-bold text-lg text-white mb-4">Tối ưu lợi nhuận với BeautiLink SA</h4>
-                <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 font-bold px-4 py-2 rounded-full text-sm border border-amber-500/20">
+                <h4 className="font-heading font-bold text-lg text-slate-900 mb-4">Tối ưu lợi nhuận với BeautiLink SA</h4>
+                <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-600 font-bold px-4 py-2 rounded-full text-sm border border-amber-200">
                   <TrendingUp className="w-4 h-4 shrink-0" /> 
                   <span>Tiết kiệm ~800 triệu VNĐ/năm</span>
-                  <span className="text-xs font-normal text-amber-500/70 hidden sm:inline-block ml-1">(Quy mô 500 răng/tháng)</span>
+                  <span className="text-xs font-normal text-amber-600/70 hidden sm:inline-block ml-1">(Quy mô 500 răng/tháng)</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mt-auto">
                 {/* Automix */}
-                <div className="bg-slate-900/80 rounded-xl p-4 md:p-5 border border-slate-700 text-center flex flex-col justify-center">
-                  <div className="text-[10px] md:text-xs text-slate-400 font-bold uppercase mb-4 tracking-wider">Automix (8.6g)</div>
+                <div className="bg-slate-50 rounded-xl p-4 md:p-5 border border-slate-100 text-center flex flex-col justify-center">
+                  <div className="text-[10px] md:text-xs text-slate-500 font-bold uppercase mb-4 tracking-wider">Automix (8.6g)</div>
                   <div className="space-y-4">
                     <div>
-                      <div className="text-[10px] text-slate-500 uppercase mb-1 tracking-wider">Số ca thực tế</div>
-                      <div className="text-xl font-bold text-white">22 <span className="text-xs font-normal text-slate-400">ca</span></div>
+                      <div className="text-[10px] text-slate-400 uppercase mb-1 tracking-wider">Số ca thực tế</div>
+                      <div className="text-xl font-bold text-slate-800">22 <span className="text-xs font-normal text-slate-500">ca</span></div>
                     </div>
                     <div>
-                      <div className="text-[10px] text-slate-500 uppercase mb-1 tracking-wider">Chi phí / Ca</div>
-                      <div className="text-lg font-bold text-red-400">159.000đ</div>
+                      <div className="text-[10px] text-slate-400 uppercase mb-1 tracking-wider">Chi phí / Ca</div>
+                      <div className="text-lg font-bold text-red-500">159.000đ</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Handmix */}
-                <div className="bg-[#00ADEF]/10 rounded-xl p-4 md:p-5 border border-[#00ADEF]/40 text-center relative overflow-hidden flex flex-col justify-center">
+                <div className="bg-[#00ADEF]/5 rounded-xl p-4 md:p-5 border border-[#00ADEF]/20 text-center relative overflow-hidden flex flex-col justify-center">
                   <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
                   <div className="text-[10px] md:text-xs text-[#00ADEF] font-bold uppercase mb-4 tracking-wider">Handmix (15.6g)</div>
                   <div className="space-y-4">
                     <div>
-                      <div className="text-[10px] text-slate-400 uppercase mb-1 tracking-wider">Số ca thực tế</div>
-                      <div className="text-xl font-black text-white">120 <span className="text-xs font-normal text-slate-300">ca</span></div>
+                      <div className="text-[10px] text-slate-500 uppercase mb-1 tracking-wider">Số ca thực tế</div>
+                      <div className="text-xl font-black text-slate-900">120 <span className="text-xs font-normal text-slate-500">ca</span></div>
                     </div>
                     <div>
-                      <div className="text-[10px] text-slate-400 uppercase mb-1 tracking-wider">Chi phí / Ca</div>
-                      <div className="text-lg font-black text-amber-400">26.600đ</div>
+                      <div className="text-[10px] text-slate-500 uppercase mb-1 tracking-wider">Chi phí / Ca</div>
+                      <div className="text-lg font-black text-amber-600">26.600đ</div>
                     </div>
                   </div>
                 </div>
