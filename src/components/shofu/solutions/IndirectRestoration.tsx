@@ -697,13 +697,22 @@ export function IndirectRestoration() {
             </div>
             
             <div className="flex justify-center flex-1 w-full lg:w-auto mt-2 lg:mt-0">
-              <img 
-                referrerPolicy="no-referrer"
-                src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/ma-tran-chai-lo-phuc-hinh.webp" 
-                alt="Ma trận chai lọ phục hình" 
-                className="w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[400px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 rounded-2xl" 
-                loading="lazy"
-              />
+              <div className="relative group inline-block">
+                <img 
+                  referrerPolicy="no-referrer"
+                  src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/ma-tran-chai-lo-phuc-hinh.webp" 
+                  alt="Ma trận chai lọ phục hình" 
+                  className="w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[400px] h-auto object-contain drop-shadow-2xl grayscale opacity-70 group-hover:scale-105 transition-transform duration-500 rounded-2xl" 
+                  loading="lazy"
+                />
+                {/* Red X Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:scale-105 transition-transform duration-500">
+                  <div className="relative w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 drop-shadow-[0_0_15px_rgba(239,68,68,0.7)]">
+                    <div className="absolute top-1/2 left-0 w-full h-4 sm:h-5 bg-red-600 rounded-full rotate-45 -translate-y-1/2 border-2 border-white/20 shadow-lg"></div>
+                    <div className="absolute top-1/2 left-0 w-full h-4 sm:h-5 bg-red-600 rounded-full -rotate-45 -translate-y-1/2 border-2 border-white/20 shadow-lg"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
