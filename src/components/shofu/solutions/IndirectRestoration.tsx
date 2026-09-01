@@ -13,9 +13,9 @@ const FaqItem = ({ question, answer }: { question: string, answer: React.ReactNo
     <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white mb-4 transition-all duration-300">
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-6 py-5 flex items-center justify-between text-left font-heading font-bold text-slate-900 focus:outline-none"
+        className="w-full px-5 py-4 sm:px-6 sm:py-5 flex items-center justify-between text-left font-heading font-bold text-slate-900 focus:outline-none"
       >
-        <span className="text-lg pr-8">{question}</span>
+        <span className="text-sm sm:text-base pr-8">{question}</span>
         <ChevronDown className={`w-5 h-5 text-[#00ADEF] shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       <AnimatePresence>
@@ -26,7 +26,7 @@ const FaqItem = ({ question, answer }: { question: string, answer: React.ReactNo
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+            <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
               {answer}
             </div>
           </motion.div>
