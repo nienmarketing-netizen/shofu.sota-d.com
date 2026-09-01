@@ -843,6 +843,17 @@ export function IndirectRestoration() {
               <h3 className="font-heading font-bold text-xl text-white mb-4">
                 Phác đồ <span className="text-[#00ADEF]">3 bước đơn giản</span>
               </h3>
+              
+              <div className="flex justify-center mb-6">
+                <img 
+                  referrerPolicy="no-referrer"
+                  src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/beautilink-bbx.webp" 
+                  alt="Bộ đôi BBX và BeautiLink SA" 
+                  className="w-full max-w-[200px] sm:max-w-[250px] h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" 
+                  loading="lazy"
+                />
+              </div>
+
               <p className="text-slate-400 text-lg">Bác sĩ nay chỉ cần thực hiện 3 bước thao tác đơn giản:</p>
             </div>
             
