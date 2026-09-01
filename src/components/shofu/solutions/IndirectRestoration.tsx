@@ -143,7 +143,7 @@ export function IndirectRestoration() {
               />
             </div>
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Kiến tạo liên kết sinh học kỵ nước siêu mỏng 24µm với bộ đôi <strong className="text-slate-900">BeautiBond Xtreme (HEMA-Free)</strong> & <strong className="text-slate-900">BeautiLink SA (S-PRG)</strong>. Dán chặt Zirconia ~50 MPa, lột sạch xi măng dư sau 1-2 giây Tack-cure và tối ưu hóa chi phí chạm đáy chỉ ~16.600đ/ca gắn.
+              Kiến tạo liên kết sinh học kỵ nước <strong className="text-slate-900">siêu mỏng 24µm</strong> với bộ đôi <strong className="text-slate-900">BeautiBond Xtreme (HEMA-Free)</strong> & <strong className="text-slate-900">BeautiLink SA (S-PRG)</strong>. Dán chặt Zirconia <strong className="text-slate-900">~50 MPa</strong>, lột sạch xi măng dư sau <strong className="text-amber-600">1-2 giây Tack-cure</strong> và tối ưu hóa chi phí chạm đáy chỉ <strong className="text-emerald-600">~16.600đ/ca gắn</strong>.
             </p>
             
             <ul className="space-y-3 mb-10">
