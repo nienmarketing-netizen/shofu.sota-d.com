@@ -558,11 +558,11 @@ export function IndirectRestoration() {
                 <div className="flex flex-col gap-2 pl-3">
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
-                    <span className="text-sm font-bold text-slate-800 leading-tight">96% Phục hình sạch</span>
+                    <span className="text-sm font-bold text-slate-800 leading-tight">96% tỉ lệ lưu giữ</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-600 leading-tight">Sâu răng thứ phát</span>
+                    <span className="text-sm font-bold text-slate-800 leading-tight">0% sâu răng thứ phát</span>
                   </div>
                 </div>
               </div>
