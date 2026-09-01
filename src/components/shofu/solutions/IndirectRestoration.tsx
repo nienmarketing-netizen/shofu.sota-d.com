@@ -731,14 +731,8 @@ export function IndirectRestoration() {
               <div className="bg-slate-800/50 border border-slate-700/50 p-6 sm:p-8 rounded-2xl flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
                 <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Sứ thủy tinh</h4>
-                <div className="flex justify-center items-center gap-3 mb-6">
-                  <div className="bg-slate-900 rounded-lg py-2 px-3 text-center border border-slate-700">
-                    <div className="text-red-400 font-bold text-sm">Acid HF</div>
-                  </div>
-                  <ArrowRight className="w-4 h-4 text-slate-500" />
-                  <div className="bg-slate-900 rounded-lg py-2 px-3 text-center border border-slate-700">
-                    <div className="text-slate-300 font-bold text-sm">gamma-MPTS</div>
-                  </div>
+                <div className="flex justify-center mb-6">
+                  <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/su-thuy-tinh.webp" alt="Sứ thủy tinh" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
                 </div>
                 <p className="text-slate-400 text-sm md:text-base leading-relaxed text-center mt-auto">
                   Đòi hỏi soi mòn vi cơ học bằng <strong className="text-red-400">Acid HF</strong>, sau đó bắt buộc quét Silane độc lập để tạo mạng lưới liên kết siloxane.
@@ -750,9 +744,7 @@ export function IndirectRestoration() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
                 <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Zirconia & kim loại</h4>
                 <div className="flex justify-center mb-6">
-                  <div className="bg-slate-900 rounded-lg py-2 px-4 text-center border border-slate-700">
-                    <div className="text-amber-500 font-bold text-sm text-center">10-MDP hoặc<br/>Phosphonic Acid</div>
-                  </div>
+                  <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/zironia.webp" alt="Zirconia & kim loại" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
                 </div>
                 <p className="text-slate-400 text-sm md:text-base leading-relaxed text-center mt-auto">
                   Bề mặt trơ với <strong className="text-red-400">Acid HF</strong>. Bắt buộc phải có các Primer chứa monomer chức năng để tạo liên kết ion trực tiếp.
@@ -764,9 +756,7 @@ export function IndirectRestoration() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
                 <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Mô răng</h4>
                 <div className="flex justify-center mb-6">
-                  <div className="bg-slate-900 rounded-lg py-2 px-6 text-center border border-slate-700">
-                    <div className="text-[#00ADEF] font-bold text-sm">Bond</div>
-                  </div>
+                  <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/mo-rang.webp" alt="Mô răng" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
                 </div>
                 <p className="text-slate-400 text-sm md:text-base leading-relaxed text-center mt-auto">
                   Đòi hỏi hệ thống keo dán (Bond) để xâm nhập và tạo ra lớp lai (hybrid layer) vững chắc.
