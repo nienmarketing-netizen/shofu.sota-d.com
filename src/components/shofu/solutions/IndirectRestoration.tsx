@@ -699,7 +699,8 @@ export function IndirectRestoration() {
           <div className="mb-20">
             <div className="text-center mb-10">
               <h3 className="font-heading font-bold text-xl text-white mb-4">
-                Nguồn gốc "ma trận": <span className="text-[#00ADEF]">Sự xung đột hóa học</span>
+                Nguồn gốc "ma trận": <br className="block sm:hidden" />
+                <span className="text-[#00ADEF]">Sự xung đột hóa học</span>
               </h3>
               <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">Để thấu hiểu "ma trận chai lọ", cần nhìn vào bản chất hóa học riêng biệt của từng giao diện bám dính.</p>
             </div>
