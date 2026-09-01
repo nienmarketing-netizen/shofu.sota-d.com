@@ -698,8 +698,8 @@ export function IndirectRestoration() {
           {/* SỰ XUNG ĐỘT HÓA HỌC */}
           <div className="mb-20">
             <div className="text-center mb-10">
-              <h3 className="font-heading font-bold text-2xl lg:text-3xl text-white mb-4 uppercase tracking-tight">
-                NGUỒN GỐC "MA TRẬN": <span className="text-[#00ADEF]">SỰ XUNG ĐỘT HÓA HỌC</span>
+              <h3 className="font-heading font-bold text-xl text-white mb-4">
+                Nguồn gốc "ma trận": <span className="text-[#00ADEF]">Sự xung đột hóa học</span>
               </h3>
               <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">Để thấu hiểu "ma trận chai lọ", cần nhìn vào bản chất hóa học riêng biệt của từng giao diện bám dính.</p>
             </div>
@@ -763,8 +763,8 @@ export function IndirectRestoration() {
           {/* HẬU QUẢ */}
           <div className="mb-24 bg-slate-800/30 rounded-3xl p-8 sm:p-12 border border-slate-700/50">
             <div className="text-center mb-12">
-              <h3 className="font-heading font-bold text-2xl lg:text-3xl text-red-500 mb-4 uppercase tracking-tight">
-                HẬU QUẢ CỦA CHUỖI THAO TÁC CỒNG KỀNH
+              <h3 className="font-heading font-bold text-xl text-red-500 mb-4">
+                Hậu quả của chuỗi thao tác cồng kềnh
               </h3>
             </div>
             
@@ -838,8 +838,8 @@ export function IndirectRestoration() {
           {/* PHÁC ĐỒ 3 BƯỚC */}
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h3 className="font-heading font-bold text-2xl lg:text-3xl text-white mb-4 uppercase tracking-tight">
-                PHÁC ĐỒ <span className="text-[#00ADEF]">3 BƯỚC ĐƠN GIẢN</span>
+              <h3 className="font-heading font-bold text-xl text-white mb-4">
+                Phác đồ <span className="text-[#00ADEF]">3 bước đơn giản</span>
               </h3>
               <p className="text-slate-400 text-lg">Bác sĩ nay chỉ cần thực hiện 3 bước thao tác đơn giản:</p>
             </div>
