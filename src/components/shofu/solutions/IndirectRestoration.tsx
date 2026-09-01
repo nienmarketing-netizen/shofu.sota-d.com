@@ -693,6 +693,16 @@ export function IndirectRestoration() {
               Đập tan "ma trận" <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-400">chai lọ phục hình</span>
             </h2>
+            
+            <div className="flex justify-center mt-8">
+              <img 
+                referrerPolicy="no-referrer"
+                src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/ma-tran-chai-lo-phuc-hinh.webp" 
+                alt="Ma trận chai lọ phục hình" 
+                className="w-full max-w-[280px] sm:max-w-[350px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 rounded-2xl" 
+                loading="lazy"
+              />
+            </div>
           </div>
 
           {/* SỰ XUNG ĐỘT HÓA HỌC */}
