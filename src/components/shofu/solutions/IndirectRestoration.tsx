@@ -860,12 +860,15 @@ export function IndirectRestoration() {
 
           {/* PHÁC ĐỒ 3 BƯỚC */}
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h3 className="font-heading font-bold text-xl text-white mb-4">
-                Phác đồ <span className="text-[#00ADEF]">3 bước đơn giản</span>
-              </h3>
+            <div className="max-w-3xl mx-auto mb-16 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              <div className="text-center md:text-left flex-1">
+                <h3 className="font-heading font-bold text-2xl md:text-3xl text-white mb-4">
+                  Phác đồ <span className="text-[#00ADEF]">3 bước đơn giản</span>
+                </h3>
+                <p className="text-slate-400 text-lg">Bác sĩ nay chỉ cần thực hiện 3 bước thao tác đơn giản:</p>
+              </div>
               
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center flex-1 w-full md:w-auto">
                 <img 
                   referrerPolicy="no-referrer"
                   src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/beautilink-bbx.webp" 
@@ -874,8 +877,6 @@ export function IndirectRestoration() {
                   loading="lazy"
                 />
               </div>
-
-              <p className="text-slate-400 text-lg">Bác sĩ nay chỉ cần thực hiện 3 bước thao tác đơn giản:</p>
             </div>
             
             <div className="space-y-6 relative before:absolute before:inset-0 before:ml-6 sm:before:ml-[3.25rem] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-[#00ADEF]/0 before:via-[#00ADEF]/50 before:to-[#00ADEF]/0">
