@@ -208,7 +208,7 @@ export function IndirectRestoration() {
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
         <div className="max-w-4xl mx-auto mb-16">
           <h2 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-white leading-[1.3] mb-6 tracking-tight">
-            Có phải bác sĩ đang âm thầm chịu đựng những rủi ro này mỗi ngày?
+            Có phải bác sĩ đang <span className="text-slate-400">âm thầm chịu đựng</span> <br className="md:hidden" /><span className="text-red-500">những rủi ro</span> này mỗi ngày?
           </h2>
           <div className="w-24 h-1 bg-red-500 mx-auto"></div>
         </div>
