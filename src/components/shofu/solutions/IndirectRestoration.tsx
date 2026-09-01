@@ -823,7 +823,7 @@ export function IndirectRestoration() {
                   </div>
                   
                   <div className="bg-red-500/20 border border-red-500/50 text-red-400 font-bold px-6 py-3 rounded-lg flex items-center gap-2">
-                    <AlertTriangle className="w-5 h-5" /> NGUY CƠ SỤP ĐỔ
+                    NGUY CƠ SỤP ĐỔ
                   </div>
                 </div>
               </div>
