@@ -139,7 +139,7 @@ export function IndirectRestoration() {
                 referrerPolicy="no-referrer"
                 src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/beautilink-bbx.webp" 
                 alt="Bộ đôi BBX và BeautiLink SA" 
-                className="w-full max-w-[400px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
+                className="w-[80%] max-w-[320px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
               />
             </div>
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
