@@ -587,11 +587,11 @@ export function IndirectRestoration() {
 
         {/* USP 4 */}
         <div className="bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl p-8 md:p-10 shadow-xl border border-slate-800 overflow-hidden relative">
-          <div className="flex items-center gap-4 mb-8 md:mb-10">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#00ADEF] text-white shrink-0">
+          <div className="mb-6">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-800 text-white mb-6">
               <span className="font-heading font-black text-xl">4</span>
             </div>
-            <h3 className="font-heading font-bold text-2xl lg:text-3xl text-white uppercase tracking-tight">
+            <h3 className="font-heading font-bold text-xl text-white mb-4">
               Tối ưu ROI – "Tuyên chiến" với lãng phí
             </h3>
           </div>
@@ -602,9 +602,9 @@ export function IndirectRestoration() {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <AlertTriangle className="w-6 h-6 text-red-500 shrink-0" />
-                  <h4 className="font-heading font-bold text-lg md:text-xl text-white uppercase leading-tight">Sự thật "đắt đỏ" của vòi trộn Automix</h4>
+                  <h4 className="font-heading font-bold text-lg text-white">Sự thật "đắt đỏ" của vòi trộn Automix</h4>
                 </div>
-                <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-8">
+                <p className="font-body text-sm text-slate-300 leading-relaxed mb-6">
                   Lượng xi măng kẹt lại trong vòi trộn (0.25g - 0.44g) <strong className="text-red-400 font-bold">lớn hơn hoặc bằng</strong> chính lượng xi măng được dùng cho răng của bệnh nhân.
                 </p>
               </div>
@@ -628,8 +628,8 @@ export function IndirectRestoration() {
 
             {/* Block 2: Solution Comparison */}
             <div className="bg-slate-800/50 rounded-2xl p-6 md:p-8 border border-amber-500/30 flex flex-col">
-              <div className="text-center mb-8">
-                <h4 className="font-heading font-bold text-lg md:text-xl text-white uppercase mb-4">Tối ưu lợi nhuận với BeautiLink SA</h4>
+              <div className="text-center mb-6">
+                <h4 className="font-heading font-bold text-lg text-white mb-4">Tối ưu lợi nhuận với BeautiLink SA</h4>
                 <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 font-bold px-4 py-2 rounded-full text-sm border border-amber-500/20">
                   <TrendingUp className="w-4 h-4 shrink-0" /> 
                   <span>Tiết kiệm ~800 triệu VNĐ/năm</span>
@@ -644,11 +644,11 @@ export function IndirectRestoration() {
                   <div className="space-y-4">
                     <div>
                       <div className="text-[10px] text-slate-500 uppercase mb-1 tracking-wider">Số ca thực tế</div>
-                      <div className="text-xl md:text-2xl font-bold text-white">22 <span className="text-xs font-normal text-slate-400">ca</span></div>
+                      <div className="text-xl font-bold text-white">22 <span className="text-xs font-normal text-slate-400">ca</span></div>
                     </div>
                     <div>
                       <div className="text-[10px] text-slate-500 uppercase mb-1 tracking-wider">Chi phí / Ca</div>
-                      <div className="text-lg md:text-xl font-bold text-red-400">159.000đ</div>
+                      <div className="text-lg font-bold text-red-400">159.000đ</div>
                     </div>
                   </div>
                 </div>
@@ -660,11 +660,11 @@ export function IndirectRestoration() {
                   <div className="space-y-4">
                     <div>
                       <div className="text-[10px] text-slate-400 uppercase mb-1 tracking-wider">Số ca thực tế</div>
-                      <div className="text-xl md:text-2xl font-black text-white">120 <span className="text-xs font-normal text-slate-300">ca</span></div>
+                      <div className="text-xl font-black text-white">120 <span className="text-xs font-normal text-slate-300">ca</span></div>
                     </div>
                     <div>
                       <div className="text-[10px] text-slate-400 uppercase mb-1 tracking-wider">Chi phí / Ca</div>
-                      <div className="text-lg md:text-xl font-black text-amber-400">26.600đ</div>
+                      <div className="text-lg font-black text-amber-400">26.600đ</div>
                     </div>
                   </div>
                 </div>
