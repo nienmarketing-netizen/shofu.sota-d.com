@@ -709,7 +709,7 @@ export function IndirectRestoration() {
               {/* Sứ thủy tinh */}
               <div className="bg-slate-800/50 border border-slate-700/50 p-6 sm:p-8 rounded-2xl flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
-                <h4 className="font-heading font-bold text-xl text-white mb-6 text-center pb-4 border-b border-slate-700">SỨ THỦY TINH</h4>
+                <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Sứ thủy tinh</h4>
                 <div className="flex justify-center items-center gap-3 mb-6">
                   <div className="bg-slate-900 rounded-lg py-2 px-3 text-center border border-slate-700">
                     <div className="text-red-400 font-bold text-sm">Acid HF</div>
@@ -727,7 +727,7 @@ export function IndirectRestoration() {
               {/* Zirconia */}
               <div className="bg-slate-800/50 border border-slate-700/50 p-6 sm:p-8 rounded-2xl flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
-                <h4 className="font-heading font-bold text-xl text-white mb-6 text-center pb-4 border-b border-slate-700">ZIRCONIA & KIM LOẠI</h4>
+                <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Zirconia & kim loại</h4>
                 <div className="flex justify-center mb-6">
                   <div className="bg-slate-900 rounded-lg py-2 px-4 text-center border border-slate-700">
                     <div className="text-amber-500 font-bold text-sm text-center">10-MDP hoặc<br/>Phosphonic Acid</div>
@@ -741,7 +741,7 @@ export function IndirectRestoration() {
               {/* Mô răng */}
               <div className="bg-slate-800/50 border border-slate-700/50 p-6 sm:p-8 rounded-2xl flex flex-col relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
-                <h4 className="font-heading font-bold text-xl text-white mb-6 text-center pb-4 border-b border-slate-700">MÔ RĂNG</h4>
+                <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Mô răng</h4>
                 <div className="flex justify-center mb-6">
                   <div className="bg-slate-900 rounded-lg py-2 px-6 text-center border border-slate-700">
                     <div className="text-[#00ADEF] font-bold text-sm">Bond</div>
@@ -854,7 +854,7 @@ export function IndirectRestoration() {
                   01
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
-                  <h4 className="font-heading font-bold text-[#00ADEF] text-xl mb-2">BƯỚC 1 – QUÉT KEO:</h4>
+                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 1 – Quét keo:</h4>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                     Nhỏ <strong className="text-white">một giọt duy nhất</strong> BeautiBond Xtreme và quét đều lên cả bề mặt cùi răng và lòng phục hình.
                   </p>
@@ -867,7 +867,7 @@ export function IndirectRestoration() {
                   02
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
-                  <h4 className="font-heading font-bold text-[#00ADEF] text-xl mb-2">BƯỚC 2 – THỔI HƠI:</h4>
+                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 2 – Thổi hơi:</h4>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                     Thổi hơi để dàn mỏng màng keo xuống ngưỡng <strong className="text-white">5µm</strong>. Sự bốc hơi dung môi làm tăng vọt nồng độ monomer acid, từ đó mở khóa màng bảo vệ của phân tử ARS.
                   </p>
@@ -880,7 +880,7 @@ export function IndirectRestoration() {
                   03
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
-                  <h4 className="font-heading font-bold text-[#00ADEF] text-xl mb-2">BƯỚC 3 – CHIẾU ĐÈN & BƠM XI MĂNG:</h4>
+                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 3 – Chiếu đèn & bơm xi măng:</h4>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                     Quang trùng hợp trong <strong className="text-white">5 đến 10 giây</strong>, sau đó bơm trực tiếp xi măng BeautiLink SA vào lòng phục hình.
                   </p>
