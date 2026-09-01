@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   ShieldCheck, Zap, Coins, AlertTriangle, HeartPulse, Banknote, TrendingUp, 
-  Droplet, Microscope, ArrowRight, Gift, ChevronDown, CheckCircle2,
+  Droplet, Droplets, Microscope, ArrowRight, Gift, ChevronDown, CheckCircle2,
   Clock, Shield, BarChart3, TestTube, Quote, Image as ImageIcon,
   Unlink, Layers, Umbrella
 } from 'lucide-react';
