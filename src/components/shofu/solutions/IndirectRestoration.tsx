@@ -1017,7 +1017,7 @@ export function IndirectRestoration() {
       <section className="py-20 lg:py-28 bg-white relative">
         <div className="w-[90%] lg:w-[80%] mx-auto">
           <div className="max-w-3xl mx-auto">
-        <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 text-center mb-10 uppercase">GIẢI ĐÁP HOÀI NGHI LÂM SÀNG</h2>
+        <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] text-center mb-10 tracking-tight">Giải đáp hoài nghi lâm sàng</h2>
         
         <FaqItem 
           question="Xi măng trộn tay (Handmix) liệu có đều và đồng nhất bằng vòi Automix tự động không?"
