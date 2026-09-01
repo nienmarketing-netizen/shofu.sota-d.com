@@ -768,69 +768,71 @@ export function IndirectRestoration() {
               </h3>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-rose-400 shrink-0 mt-1" />
-                  <p className="text-slate-300 leading-relaxed text-base sm:text-lg">Sự gia tăng tuyến tính của số lượng thao tác lâm sàng tỷ lệ thuận với rủi ro xảy ra <strong className="text-white">"sai số nhân sự"</strong>.</p>
+            <div className="flex flex-col space-y-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+                <div className="space-y-6 flex flex-col justify-center">
+                  <div className="flex gap-4">
+                    <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-rose-400 shrink-0 mt-1" />
+                    <p className="text-slate-300 leading-relaxed text-base sm:text-lg">Sự gia tăng tuyến tính của số lượng thao tác lâm sàng tỷ lệ thuận với rủi ro xảy ra <strong className="text-white">"sai số nhân sự"</strong>.</p>
+                  </div>
+                  <div className="flex gap-4">
+                    <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-amber-400 shrink-0 mt-1" />
+                    <p className="text-slate-300 leading-relaxed text-base sm:text-lg">Chỉ một khoảnh khắc đưa nhầm chai Primer hoặc sai lệch thời gian lưu dung dịch, <strong className="text-white">toàn bộ cấu trúc dán dính sẽ sụp đổ.</strong></p>
+                  </div>
                 </div>
-                <div className="flex gap-4">
-                  <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-amber-400 shrink-0 mt-1" />
-                  <p className="text-slate-300 leading-relaxed text-base sm:text-lg">Chỉ một khoảnh khắc đưa nhầm chai Primer hoặc sai lệch thời gian lưu dung dịch, <strong className="text-white">toàn bộ cấu trúc dán dính sẽ sụp đổ.</strong></p>
-                </div>
-                <div className="flex gap-4 bg-red-500/10 p-5 sm:p-6 rounded-2xl border border-red-500/20 mt-4">
-                  <AlertTriangle className="w-6 h-6 sm:w-8 sm:h-8 text-red-500 shrink-0 mt-1" />
-                  <p className="text-red-200 leading-relaxed text-base sm:text-lg">
-                    Hậu quả trực tiếp: <strong className="text-red-400 font-bold">Bong tróc phục hình, vi sút viền,</strong> và tình trạng <strong className="text-red-400 font-bold">nhạy cảm ê buốt trầm trọng</strong> cho bệnh nhân.
-                  </p>
+                {/* Visual Flowchart */}
+                <div className="flex flex-col items-center justify-center p-6 bg-slate-900/80 rounded-2xl border border-slate-700">
+                  <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-8">
+                    <div className="flex flex-col items-center opacity-40">
+                      <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">ETCH</div>
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
+                        <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
+                      </div>
+                    </div>
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
+                    <div className="flex flex-col items-center opacity-40">
+                      <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">SILANE</div>
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
+                        <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
+                      </div>
+                    </div>
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
+                    <div className="flex flex-col items-center relative scale-110 mx-2">
+                      <div className="text-[10px] sm:text-xs text-red-400 font-bold mb-2 tracking-wider">PRIMER</div>
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-900/30 rounded flex items-center justify-center border-2 border-red-500 relative">
+                        <Droplets className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-[120%] h-0.5 bg-red-500 rotate-45"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-red-500/50 mt-6" />
+                    <div className="flex flex-col items-center opacity-40">
+                      <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">BOND</div>
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
+                        <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
+                      </div>
+                    </div>
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
+                    <div className="flex flex-col items-center opacity-40">
+                      <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">CURE</div>
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
+                        <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-red-500/20 border border-red-500/50 text-red-400 font-bold px-6 py-3 rounded-lg flex items-center gap-2">
+                    <AlertTriangle className="w-5 h-5" /> NGUY CƠ SỤP ĐỔ
+                  </div>
                 </div>
               </div>
 
-              {/* Visual Flowchart */}
-              <div className="flex flex-col items-center justify-center p-6 bg-slate-900/80 rounded-2xl border border-slate-700">
-                 <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-8">
-                   <div className="flex flex-col items-center opacity-40">
-                     <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">ETCH</div>
-                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
-                       <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
-                     </div>
-                   </div>
-                   <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
-                   <div className="flex flex-col items-center opacity-40">
-                     <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">SILANE</div>
-                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
-                       <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
-                     </div>
-                   </div>
-                   <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
-                   <div className="flex flex-col items-center relative scale-110 mx-2">
-                     <div className="text-[10px] sm:text-xs text-red-400 font-bold mb-2 tracking-wider">PRIMER</div>
-                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-900/30 rounded flex items-center justify-center border-2 border-red-500 relative">
-                       <Droplets className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />
-                       <div className="absolute inset-0 flex items-center justify-center">
-                         <div className="w-[120%] h-0.5 bg-red-500 rotate-45"></div>
-                       </div>
-                     </div>
-                   </div>
-                   <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-red-500/50 mt-6" />
-                   <div className="flex flex-col items-center opacity-40">
-                     <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">BOND</div>
-                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
-                       <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
-                     </div>
-                   </div>
-                   <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
-                   <div className="flex flex-col items-center opacity-40">
-                     <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">CURE</div>
-                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
-                       <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
-                     </div>
-                   </div>
-                 </div>
-                 
-                 <div className="bg-red-500/20 border border-red-500/50 text-red-400 font-bold px-6 py-3 rounded-lg flex items-center gap-2">
-                   <AlertTriangle className="w-5 h-5" /> NGUY CƠ SỤP ĐỔ
-                 </div>
+              <div className="flex flex-col items-center justify-center text-center gap-4 bg-red-500/10 p-6 sm:p-8 rounded-2xl border border-red-500/20 w-full mt-4">
+                <AlertTriangle className="w-8 h-8 sm:w-10 sm:h-10 text-red-500 shrink-0" />
+                <p className="text-red-200 leading-relaxed text-base sm:text-lg max-w-3xl">
+                  Hậu quả trực tiếp: <strong className="text-red-400 font-bold">Bong tróc phục hình, vi sút viền,</strong> và tình trạng <strong className="text-red-400 font-bold">nhạy cảm ê buốt trầm trọng</strong> cho bệnh nhân.
+                </p>
               </div>
             </div>
           </div>
