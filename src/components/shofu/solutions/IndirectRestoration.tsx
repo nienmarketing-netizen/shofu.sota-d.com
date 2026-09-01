@@ -598,11 +598,11 @@ export function IndirectRestoration() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {/* Block 1: Problem */}
-            <div className="bg-slate-800/50 rounded-2xl p-6 md:p-8 border border-slate-700/50 flex flex-col justify-between">
+            <div className="flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <AlertTriangle className="w-6 h-6 text-red-500 shrink-0" />
-                  <h4 className="font-heading font-bold text-lg text-white">Sự thật "đắt đỏ" của vòi trộn Automix</h4>
+                  <h4 className="font-heading font-bold text-xl text-white">Sự thật "đắt đỏ" của vòi trộn Automix</h4>
                 </div>
                 <p className="font-body text-sm text-slate-300 leading-relaxed mb-6">
                   Lượng xi măng kẹt lại trong vòi trộn (0.25g - 0.44g) <strong className="text-red-400 font-bold">lớn hơn hoặc bằng</strong> chính lượng xi măng được dùng cho răng của bệnh nhân.
@@ -627,9 +627,9 @@ export function IndirectRestoration() {
             </div>
 
             {/* Block 2: Solution Comparison */}
-            <div className="bg-slate-800/50 rounded-2xl p-6 md:p-8 border border-amber-500/30 flex flex-col">
+            <div className="flex flex-col">
               <div className="text-center mb-6">
-                <h4 className="font-heading font-bold text-lg text-white mb-4">Tối ưu lợi nhuận với BeautiLink SA</h4>
+                <h4 className="font-heading font-bold text-xl text-white mb-4">Tối ưu lợi nhuận với BeautiLink SA</h4>
                 <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 font-bold px-4 py-2 rounded-full text-sm border border-amber-500/20">
                   <TrendingUp className="w-4 h-4 shrink-0" /> 
                   <span>Tiết kiệm ~800 triệu VNĐ/năm</span>
