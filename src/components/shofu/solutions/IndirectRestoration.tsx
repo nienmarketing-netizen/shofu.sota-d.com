@@ -658,7 +658,7 @@ export function IndirectRestoration() {
                 {/* Handmix */}
                 <div className="bg-[#00ADEF]/5 rounded-xl p-4 md:p-5 border border-[#00ADEF]/20 text-center relative overflow-hidden flex flex-col justify-center">
                   <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
-                  <div className="text-[10px] md:text-xs text-[#00ADEF] font-bold uppercase mb-4 tracking-wider">Handmix (15.6g)</div>
+                  <div className="text-[10px] md:text-xs text-[#00ADEF] font-bold uppercase mb-4 tracking-wider">BeautiLink SA Handmix (15.6g)</div>
                   <div className="space-y-4">
                     <div>
                       <div className="text-[10px] text-slate-500 uppercase mb-1 tracking-wider">Số ca thực tế</div>
