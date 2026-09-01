@@ -677,61 +677,216 @@ export function IndirectRestoration() {
         </div>
       </section>
 
-      {/* SECTION 5: CLINICAL WORKFLOW */}
-      <section className="py-20 lg:py-28 bg-slate-50 relative border-b border-slate-200">
-        <div className="w-[90%] lg:w-[80%] mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">QUY TRÌNH PHỐI HỢP DÁN - GẮN TIÊU CHUẨN</h2>
-          <p className="font-body text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">5 phút giải phóng ghế nha với quy trình "True Universal" tối giản</p>
-        </div>
+      {/* SECTION 5: CLINICAL WORKFLOW REWRITE */}
+      <section className="py-20 lg:py-28 bg-slate-900 relative border-b border-slate-800 overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#00ADEF]/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
+          
+          <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-24">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-bold text-sm tracking-wide mb-6">
+              <AlertTriangle className="w-4 h-4" />
+              <span>TRIỆT TIÊU SAI SỐ LÂM SÀNG & TÀI CHÍNH</span>
+            </div>
+            <h2 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white mb-6 uppercase tracking-tight">
+              ĐẬP TAN "MA TRẬN" <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-400">CHAI LỌ PHỤC HÌNH</span>
+            </h2>
+          </div>
 
-        <div className="relative">
-          {/* Connecting line for desktop */}
-          <div className="hidden lg:block absolute top-12 left-10 right-10 h-1 bg-slate-200 z-0"></div>
+          {/* SỰ XUNG ĐỘT HÓA HỌC */}
+          <div className="mb-20">
+            <div className="text-center mb-10">
+              <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-4 uppercase">
+                NGUỒN GỐC "MA TRẬN": <span className="text-[#00ADEF]">SỰ XUNG ĐỘT HÓA HỌC</span>
+              </h3>
+              <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">Để thấu hiểu "ma trận chai lọ", cần nhìn vào bản chất hóa học riêng biệt của từng giao diện bám dính.</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {/* Sứ thủy tinh */}
+              <div className="bg-slate-800/50 border border-slate-700/50 p-6 sm:p-8 rounded-2xl flex flex-col relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
+                <h4 className="font-heading font-bold text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">SỨ THỦY TINH</h4>
+                <div className="flex justify-center items-center gap-3 mb-6">
+                  <div className="bg-slate-900 rounded-lg py-2 px-3 text-center border border-slate-700">
+                    <div className="text-red-400 font-bold text-sm">Acid HF</div>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-slate-500" />
+                  <div className="bg-slate-900 rounded-lg py-2 px-3 text-center border border-slate-700">
+                    <div className="text-slate-300 font-bold text-sm">gamma-MPTS</div>
+                  </div>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed text-center mt-auto">
+                  Đòi hỏi soi mòn vi cơ học bằng <strong className="text-red-400">Acid HF</strong>, sau đó bắt buộc quét Silane độc lập để tạo mạng lưới liên kết siloxane.
+                </p>
+              </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-            {/* Step 1 */}
-            <div className="relative z-10 flex flex-col items-center text-center group">
-              <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-200 group-hover:border-[#00ADEF] transition-colors flex items-center justify-center text-slate-400 group-hover:text-[#00ADEF] mb-6 shadow-sm">
-                <span className="font-heading font-bold text-xl">1</span>
+              {/* Zirconia */}
+              <div className="bg-slate-800/50 border border-slate-700/50 p-6 sm:p-8 rounded-2xl flex flex-col relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
+                <h4 className="font-heading font-bold text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">ZIRCONIA & KIM LOẠI</h4>
+                <div className="flex justify-center mb-6">
+                  <div className="bg-slate-900 rounded-lg py-2 px-4 text-center border border-slate-700">
+                    <div className="text-amber-500 font-bold text-sm text-center">10-MDP hoặc<br/>Phosphonic Acid</div>
+                  </div>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed text-center mt-auto">
+                  Bề mặt trơ với <strong className="text-red-400">Acid HF</strong>. Bắt buộc phải có các Primer chứa monomer chức năng để tạo liên kết ion trực tiếp.
+                </p>
               </div>
-              <h4 className="font-heading font-bold text-[15px] text-slate-900 mb-2">Sửa soạn cùi ngà</h4>
-              <p className="font-body text-sm sm:text-base text-slate-600 leading-relaxed">Xịt hạt nhôm oxit cát nhẹ. Giữ cùi răng ẩm nhẹ (moist ngà), <strong className="text-red-500">không thổi khô cong</strong> làm sụp Collagen.</p>
+
+              {/* Mô răng */}
+              <div className="bg-slate-800/50 border border-slate-700/50 p-6 sm:p-8 rounded-2xl flex flex-col relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
+                <h4 className="font-heading font-bold text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">MÔ RĂNG</h4>
+                <div className="flex justify-center mb-6">
+                  <div className="bg-slate-900 rounded-lg py-2 px-6 text-center border border-slate-700">
+                    <div className="text-[#00ADEF] font-bold text-sm">Bond</div>
+                  </div>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed text-center mt-auto">
+                  Đòi hỏi hệ thống keo dán (Bond) để xâm nhập và tạo ra lớp lai (hybrid layer) vững chắc.
+                </p>
+              </div>
             </div>
-            {/* Step 2 */}
-            <div className="relative z-10 flex flex-col items-center text-center group">
-              <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-200 group-hover:border-[#00ADEF] transition-colors flex items-center justify-center text-slate-400 group-hover:text-[#00ADEF] mb-6 shadow-sm">
-                <span className="font-heading font-bold text-xl">2</span>
-              </div>
-              <h4 className="font-heading font-bold text-[15px] text-slate-900 mb-2">Quét BBX (Cùi răng)</h4>
-              <p className="font-body text-sm sm:text-base text-slate-600 leading-relaxed">Quét 1 lớp BBX 5s. Thổi hơi 3s bay dung môi dàn mỏng 5µm. Chiếu đèn LED 5s.</p>
-            </div>
-            {/* Step 3 */}
-            <div className="relative z-10 flex flex-col items-center text-center group">
-              <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-200 group-hover:border-[#00ADEF] transition-colors flex items-center justify-center text-slate-400 group-hover:text-[#00ADEF] mb-6 shadow-sm">
-                <span className="font-heading font-bold text-xl">3</span>
-              </div>
-              <h4 className="font-heading font-bold text-[15px] text-slate-900 mb-2">Xử lý lòng mão</h4>
-              <p className="font-body text-sm sm:text-base text-slate-600 leading-relaxed">Làm sạch lòng mão. Quét lớp mỏng BBX, thổi khô mạnh. <strong className="text-slate-900">Không cần Primer sứ rời.</strong></p>
-            </div>
-            {/* Step 4 */}
-            <div className="relative z-10 flex flex-col items-center text-center group">
-              <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-200 group-hover:border-[#C43838] transition-colors flex items-center justify-center text-slate-400 group-hover:text-[#C43838] mb-6 shadow-sm">
-                <span className="font-heading font-bold text-xl">4</span>
-              </div>
-              <h4 className="font-heading font-bold text-[15px] text-slate-900 mb-2">Trộn BeautiLink SA</h4>
-              <p className="font-body text-sm sm:text-base text-slate-600 leading-relaxed">Lấy tỷ lệ 1:1, trộn tay trên giấy 10s. Thoa một lớp mỏng xi măng vào lòng phục hình.</p>
-            </div>
-            {/* Step 5 */}
-            <div className="relative z-10 flex flex-col items-center text-center group">
-              <div className="w-24 h-24 rounded-full bg-white border-4 border-slate-200 group-hover:border-[#C43838] transition-colors flex items-center justify-center text-slate-400 group-hover:text-[#C43838] mb-6 shadow-sm">
-                <span className="font-heading font-bold text-xl">5</span>
-              </div>
-              <h4 className="font-heading font-bold text-[15px] text-slate-900 mb-2">Gắn & Dọn dư "One-Sweep"</h4>
-              <p className="font-body text-sm sm:text-base text-slate-600 leading-relaxed">Ấn nhẹ mão. Chiếu đèn 1-2s. Lột sạch dư nguyên mảng. Chiếu hoàn thiện 10s/mặt.</p>
+
+            <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6 text-center flex flex-col sm:flex-row items-center justify-center gap-4 max-w-4xl mx-auto">
+              <AlertTriangle className="w-8 h-8 text-red-500 shrink-0" />
+              <p className="text-red-100 text-sm sm:text-base text-left">
+                Chính sự khác biệt lý hóa khắt khe này đã ép buộc quy trình lâm sàng phải <strong className="text-red-400 font-bold text-lg uppercase block mt-1">sử dụng hàng loạt hóa chất rời rạc.</strong>
+              </p>
             </div>
           </div>
-        </div>
+
+          {/* HẬU QUẢ */}
+          <div className="mb-24 bg-slate-800/30 rounded-3xl p-8 sm:p-12 border border-slate-700/50">
+            <div className="text-center mb-12">
+              <h3 className="font-heading font-bold text-3xl sm:text-4xl text-red-500 mb-4 uppercase">
+                HẬU QUẢ CỦA CHUỖI THAO TÁC CỒNG KỀNH
+              </h3>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-rose-400 shrink-0 mt-1" />
+                  <p className="text-slate-300 leading-relaxed text-base sm:text-lg">Sự gia tăng tuyến tính của số lượng thao tác lâm sàng tỷ lệ thuận với rủi ro xảy ra <strong className="text-white">"sai số nhân sự"</strong>.</p>
+                </div>
+                <div className="flex gap-4">
+                  <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-amber-400 shrink-0 mt-1" />
+                  <p className="text-slate-300 leading-relaxed text-base sm:text-lg">Chỉ một khoảnh khắc đưa nhầm chai Primer hoặc sai lệch thời gian lưu dung dịch, <strong className="text-white">toàn bộ cấu trúc dán dính sẽ sụp đổ.</strong></p>
+                </div>
+                <div className="flex gap-4 bg-red-500/10 p-5 sm:p-6 rounded-2xl border border-red-500/20 mt-4">
+                  <AlertTriangle className="w-6 h-6 sm:w-8 sm:h-8 text-red-500 shrink-0 mt-1" />
+                  <p className="text-red-200 leading-relaxed text-base sm:text-lg">
+                    Hậu quả trực tiếp: <strong className="text-red-400 font-bold">Bong tróc phục hình, vi sút viền,</strong> và tình trạng <strong className="text-red-400 font-bold">nhạy cảm ê buốt trầm trọng</strong> cho bệnh nhân.
+                  </p>
+                </div>
+              </div>
+
+              {/* Visual Flowchart */}
+              <div className="flex flex-col items-center justify-center p-6 bg-slate-900/80 rounded-2xl border border-slate-700">
+                 <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-8">
+                   <div className="flex flex-col items-center opacity-40">
+                     <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">ETCH</div>
+                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
+                       <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
+                     </div>
+                   </div>
+                   <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
+                   <div className="flex flex-col items-center opacity-40">
+                     <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">SILANE</div>
+                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
+                       <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
+                     </div>
+                   </div>
+                   <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
+                   <div className="flex flex-col items-center relative scale-110 mx-2">
+                     <div className="text-[10px] sm:text-xs text-red-400 font-bold mb-2 tracking-wider">PRIMER</div>
+                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-900/30 rounded flex items-center justify-center border-2 border-red-500 relative">
+                       <Droplets className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />
+                       <div className="absolute inset-0 flex items-center justify-center">
+                         <div className="w-[120%] h-0.5 bg-red-500 rotate-45"></div>
+                       </div>
+                     </div>
+                   </div>
+                   <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-red-500/50 mt-6" />
+                   <div className="flex flex-col items-center opacity-40">
+                     <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">BOND</div>
+                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
+                       <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
+                     </div>
+                   </div>
+                   <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
+                   <div className="flex flex-col items-center opacity-40">
+                     <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">CURE</div>
+                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
+                       <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
+                     </div>
+                   </div>
+                 </div>
+                 
+                 <div className="bg-red-500/20 border border-red-500/50 text-red-400 font-bold px-6 py-3 rounded-lg flex items-center gap-2">
+                   <AlertTriangle className="w-5 h-5" /> NGUY CƠ SỤP ĐỔ
+                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* PHÁC ĐỒ 3 BƯỚC */}
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h3 className="font-heading font-bold text-3xl sm:text-4xl text-white mb-4 uppercase">
+                PHÁC ĐỒ <span className="text-[#00ADEF]">3 BƯỚC ĐƠN GIẢN</span>
+              </h3>
+              <p className="text-slate-400 text-lg">Bác sĩ nay chỉ cần thực hiện 3 bước thao tác đơn giản:</p>
+            </div>
+            
+            <div className="space-y-6 relative before:absolute before:inset-0 before:ml-6 sm:before:ml-[3.25rem] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-[#00ADEF]/0 before:via-[#00ADEF]/50 before:to-[#00ADEF]/0">
+              
+              {/* Step 1 */}
+              <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-slate-900 bg-[#00ADEF] text-white font-heading font-bold text-xl shadow-[0_0_0_4px_rgba(0,173,239,0.2)] z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                  01
+                </div>
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
+                  <h4 className="font-heading font-bold text-[#00ADEF] text-lg mb-2">BƯỚC 1 – QUÉT KEO:</h4>
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Nhỏ <strong className="text-white">một giọt duy nhất</strong> BeautiBond Xtreme và quét đều lên cả bề mặt cùi răng và lòng phục hình.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-slate-900 bg-[#00ADEF] text-white font-heading font-bold text-xl shadow-[0_0_0_4px_rgba(0,173,239,0.2)] z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                  02
+                </div>
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
+                  <h4 className="font-heading font-bold text-[#00ADEF] text-lg mb-2">BƯỚC 2 – THỔI HƠI:</h4>
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Thổi hơi để dàn mỏng màng keo xuống ngưỡng <strong className="text-white">5µm</strong>. Sự bốc hơi dung môi làm tăng vọt nồng độ monomer acid, từ đó mở khóa màng bảo vệ của phân tử ARS.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-slate-900 bg-[#00ADEF] text-white font-heading font-bold text-xl shadow-[0_0_0_4px_rgba(0,173,239,0.2)] z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                  03
+                </div>
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
+                  <h4 className="font-heading font-bold text-[#00ADEF] text-lg mb-2">BƯỚC 3 – CHIẾU ĐÈN & BƠM XI MĂNG:</h4>
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Quang trùng hợp trong <strong className="text-white">5 đến 10 giây</strong>, sau đó bơm trực tiếp xi măng BeautiLink SA vào lòng phục hình.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </section>
 
