@@ -754,7 +754,7 @@ export function IndirectRestoration() {
             </div>
 
             <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6 text-center flex flex-col sm:flex-row items-center justify-center gap-4 max-w-4xl mx-auto">
-              <p className="text-red-100 text-sm sm:text-base text-left">
+              <p className="text-red-100 text-sm sm:text-base text-center">
                 Chính sự khác biệt lý hóa khắt khe này đã ép buộc quy trình lâm sàng phải <strong className="text-red-400 font-bold text-lg uppercase block mt-1">sử dụng hàng loạt hóa chất rời rạc.</strong>
               </p>
             </div>
