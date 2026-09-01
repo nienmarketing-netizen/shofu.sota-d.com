@@ -865,7 +865,9 @@ export function IndirectRestoration() {
                 <h3 className="font-heading font-bold text-2xl md:text-3xl text-white mb-4">
                   Phác đồ <span className="text-[#00ADEF]">3 bước đơn giản</span>
                 </h3>
-                <p className="text-slate-400 text-lg">Bác sĩ nay chỉ cần thực hiện 3 bước thao tác đơn giản:</p>
+                <p className="text-slate-400 text-lg leading-relaxed">
+                  Bác sĩ nay chỉ cần thực hiện <strong className="text-white">3 bước thao tác đơn giản</strong> với bộ đôi <span className="text-[#00ADEF] font-bold">BeautiBond Xtreme</span> và <span className="text-[#C43838] font-bold">BeautiLink SA</span>:
+                </p>
               </div>
               
               <div className="flex justify-center flex-1 w-full md:w-auto">
