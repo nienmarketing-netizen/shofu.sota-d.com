@@ -7,7 +7,7 @@ import {
   Unlink, Layers, Umbrella
 } from 'lucide-react';
 
-const FaqItem = ({ question, answer }: { question: string, answer: string }) => {
+const FaqItem = ({ question, answer }: { question: string, answer: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white mb-4 transition-all duration-300">
@@ -1021,15 +1021,83 @@ export function IndirectRestoration() {
         
         <FaqItem 
           question="Xi măng trộn tay (Handmix) liệu có đều và đồng nhất bằng vòi Automix tự động không?"
-          answer="Hoàn toàn đều và đồng nhất! Hai thành phần BeautiLink SA được thiết kế có màu sắc tương phản rõ rệt. Khi trộn tay trên giấy trong 10 giây, sự hòa quyện màu sắc đồng nhất 100% sẽ là báo hiệu trực quan chính xác nhất giúp Bác sĩ nhận biết hỗn hợp đã sẵn sàng dán gắn, loại bỏ hoàn toàn sai số trộn."
+          answer={
+            <>
+              <strong>Giải đáp lâm sàng: Hoàn toàn đều và đồng nhất.</strong> Tỷ lệ 1:1 của hai dải xi măng BeautiLink SA được thiết kế với màu sắc tương phản rõ rệt. Khi trộn tay trên giấy trong 10 giây, sự chuyển màu đồng nhất 100% sẽ là tín hiệu trực quan báo hiệu xi măng đã đạt độ hòa quyện hoàn hảo. Định dạng Handmix tuýp khổng lồ 15.6g (9ml) đáp ứng tới 120 ca gắn, giúp triệt tiêu hoàn toàn lượng xi măng lãng phí bị đông cứng trong đầu vòi Automix.
+            </>
+          }
         />
         <FaqItem 
           question="Keo dán BeautiBond Xtreme kỵ nước và HEMA-free thì có khó thâm nhập vào ống ngà ẩm không?"
-          answer="Hoàn toàn không. BBX ứng dụng hệ dung môi Acetone thẩm thấu và bay hơi cực nhanh, giúp vận chuyển các monomer liên kết kỵ nước thâm nhập sâu vào ống ngà để tạo tua nhựa resin dẻo dai bít kín ống ngà, triệt tiêu ê buốt tức thì ngay cả trên cùi ngà ẩm nhẹ."
+          answer={
+            <>
+              <strong>Giải đáp lâm sàng: Hoàn toàn không.</strong> BBX ứng dụng hệ dung môi Acetone thẩm thấu nhanh, đóng vai trò là "chất dẫn" đưa các monomer kỵ nước thâm nhập sâu vào các ống ngà ẩm. Ngay sau khi thổi khô 3 giây để bay hơi dung môi, BBX tạo thành lớp màng dán dính kỵ nước mỏng 5µm bít kín ống ngà, ngăn chặn sự thâm nhập của dịch ngà và triệt tiêu hoàn toàn ê buốt.
+            </>
+          }
         />
         <FaqItem 
           question="Keo dán màng 5µm và xi măng 14µm thì có ảnh hưởng lực dán cơ học của phục hình gián tiếp không?"
-          answer="Ngược lại, đây là độ dày màng lý tưởng nhất cho phục hình gián tiếp! Lớp màng mỏng giúp giảm thiểu tối đa khoảng rỗng của xi măng, ngăn ngừa vi kẽ đường viền dán dính và tối ưu hóa sự truyền lực dán hóa học bền vững lên tới ~50 MPa của toàn bộ hệ thống."
+          answer={
+            <>
+              <strong>Giải đáp lâm sàng: Ngược lại, đây là độ dày lý tưởng nhất cho phục hình gián tiếp.</strong> Tổng độ dày lớp lai kép 24µm (BBX 5µm + BeautiLink SA 14µm) giúp viền dán khít sát tuyệt đối, loại bỏ nguy cơ cộm khớp hay vi kẽ đường hoàn tất. Thử nghiệm độc lập của The Dental Advisor ghi nhận lực dán trượt trên Zirconia đạt mức ~50 MPa và giữ vững ổn định sau 5.000 chu kỳ sốc nhiệt.
+            </>
+          }
+        />
+        <FaqItem 
+          question="Xi măng có trùng hợp (Self-cure) hoàn toàn dưới các mão Zirconia đục hoặc mão kim loại vùng tối không?"
+          answer={
+            <>
+              <strong>Giải đáp lâm sàng: Hoàn toàn đảm bảo.</strong> BeautiLink SA là xi măng resin tự dán Dual-cure (Trùng hợp kép) sở hữu hệ thống chất xúc tác phản ứng cao. Trong các vùng tối ánh sáng đèn không thể xuyên qua (như dưới mão Zirconia dày, mão kim loại, chốt tủy), phản ứng tự trùng hợp hóa học (Self-cure) tự động kích hoạt hoàn toàn ở 3 phút trong nhiệt độ miệng (37°C), đảm bảo lực dán trượt và độ bền uốn (flexural strength) tối đa mà không phụ thuộc vào đèn quang trùng hợp.
+            </>
+          }
+        />
+        <FaqItem 
+          question="Gắn mão Zirconia hay sứ Lithium Disilicate (E.max) với BeautiLink SA có bắt buộc phải bôi Silane hoặc Primer Zirconia rời không?"
+          answer={
+            <>
+              <strong>Giải đáp lâm sàng: Không cần thiết đối với các phục hình có độ lưu giữ cơ học tiêu chuẩn.</strong>
+              <br /><br />
+              Trong thành phần BeautiLink SA đã tích hợp sẵn Phosphonic Acid Monomer (tự liên kết hóa trị trực tiếp với oxit kim loại trên Zirconia/Kim loại) và Silane Coupling Agent thế hệ mới (tự liên kết với sứ thủy tinh/Lithium Disilicate).
+              <br /><br />
+              Đối với các phục hình lưu kém (Veneer, Tabletop, Onlay mỏng), Bác sĩ chỉ cần quét thêm 1 lớp keo dán Universal BeautiBond Xtreme vào lòng phục hình và cùi răng để nhân đôi lực dán mà không cần mua thêm bất kỳ chai Silane hay Primer Zirconia rời nào khác.
+            </>
+          }
+        />
+        <FaqItem 
+          question="Xi măng Dual-cure có bị đổi màu hay ố vàng đường viền dán sau một thời gian sử dụng không?"
+          answer={
+            <>
+              <strong>Giải đáp lâm sàng: Đảm bảo độ ổn định màu sắc vượt trội.</strong> BeautiLink SA được kỹ sư vật liệu Shofu tối ưu hóa hệ thống xúc tác trùng hợp, giúp giữ màu sắc ổn định (Stable shades) trọn đời phục hình. Sản phẩm cung cấp 3 tông màu lâm sàng thực tế (Clear, Ivory, Opaque) với khả năng che màu ngà chẻ/cùi kim loại tối màu hoàn hảo (đặc biệt là màu Opaque) mà không bị viền đen hay ố vàng theo thời gian.
+            </>
+          }
+        />
+        <FaqItem 
+          question="Nếu lỡ tay chiếu đèn quá 1–2 giây khi Tack-cure, xi măng dư có bị đông cứng ngắc gây kẹt kẽ răng không?"
+          answer={
+            <>
+              <strong>Giải đáp lâm sàng: Bác sĩ hoàn toàn có thể yên tâm điều khiển.</strong> Hệ xúc tác của BeautiLink SA được thiết kế để tạo ra khoảng cửa sổ thao tác linh hoạt. Chiếu đèn chớp 1–2 giây sẽ đưa xi măng dư trào ra về trạng thái gel dẻo như cao su. Bác sĩ có 2 phút thời gian làm việc (Working Time) thong thả từ lúc trộn, và ngay cả khi lỡ chiếu lâu hơn 1-2 giây, xi măng vẫn giữ độ đàn hồi dẻo dai đủ để thám trâm lột sạch nguyên khối mà không dính chặt vào nướu hay làm trầy xước viền sứ.
+            </>
+          }
+        />
+        <FaqItem 
+          question="Sau khi gắn phục hình trên cùi răng sống, bệnh nhân có bị nhạy cảm ngà hay ê buốt hậu phẫu không?"
+          answer={
+            <>
+              <strong>Giải đáp lâm sàng: Tỷ lệ ê buốt hậu phẫu tiệm cận mức 0%.</strong> Sự kết hợp giữa màng keo dán kỵ nước BBX không chứa HEMA bít kín ống ngà và hạt độn sinh học S-PRG trong BeautiLink SA liên tục giải phóng 6 ion đệm (đặc biệt là Fluoride & Strontium). Các ion này hỗ trợ tái khoáng hóa ngà răng và bịt kín mọi kẽ hở vi thể, mang lại sự dễ chịu tuyệt đối cho bệnh nhân ngay sau khi hết thuốc tê.
+            </>
+          }
+        />
+        <FaqItem 
+          question="Bộ đôi sản phẩm có bắt buộc phải bảo quản trong tủ lạnh không? Hạn sử dụng bao lâu trong điều kiện khí hậu Việt Nam?"
+          answer={
+            <>
+              <strong>Giải đáp lâm sàng: Không bắt buộc để tủ lạnh nếu nhiệt độ phòng dưới 25°C.</strong>
+              <br /><br />
+              BeautiLink SA có hạn sử dụng 24 tháng trong túi foil bạc niêm phong nguyên bản (dùng trong vòng 6 tháng sau khi mở túi).
+              <br /><br />
+              Sản phẩm ứng dụng công nghệ xúc tác "ngủ đông" (steric hindrance) kháng nhiệt ẩm vượt trội. Ở các vùng khí hậu nhiệt đới nóng ẩm có nhiệt độ phòng thường xuyên {'>'} 25°C, Bác sĩ chỉ cần cất tuýp xi măng vào ngăn mát tủ lạnh và lấy ra trước khi sử dụng để tuýp về nhiệt độ phòng là có thể thao tác hoàn hảo.
+            </>
+          }
         />
           </div>
         </div>
