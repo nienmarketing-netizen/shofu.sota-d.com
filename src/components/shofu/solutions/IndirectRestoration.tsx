@@ -684,22 +684,24 @@ export function IndirectRestoration() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#00ADEF]/10 blur-[120px] rounded-full pointer-events-none"></div>
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
           
-          <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-24">
-            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-bold text-[10px] min-[375px]:text-[11px] sm:text-xs md:text-sm tracking-wide mb-6 whitespace-nowrap">
-              <AlertTriangle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-              <span>Triệt tiêu sai số lâm sàng & tài chính</span>
+          <div className="max-w-5xl mx-auto mb-16 lg:mb-24 flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+            <div className="text-center lg:text-left flex-1">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-bold text-[10px] min-[375px]:text-[11px] sm:text-xs md:text-sm tracking-wide mb-6 whitespace-nowrap">
+                <AlertTriangle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                <span>Triệt tiêu sai số lâm sàng & tài chính</span>
+              </div>
+              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-0 tracking-tight">
+                Đập tan "ma trận" <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-400">chai lọ phục hình</span>
+              </h2>
             </div>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
-              Đập tan "ma trận" <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-400">chai lọ phục hình</span>
-            </h2>
             
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center flex-1 w-full lg:w-auto mt-2 lg:mt-0">
               <img 
                 referrerPolicy="no-referrer"
                 src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/ma-tran-chai-lo-phuc-hinh.webp" 
                 alt="Ma trận chai lọ phục hình" 
-                className="w-full max-w-[280px] sm:max-w-[350px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 rounded-2xl" 
+                className="w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[400px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 rounded-2xl" 
                 loading="lazy"
               />
             </div>
