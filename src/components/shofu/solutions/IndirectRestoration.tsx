@@ -793,48 +793,8 @@ export function IndirectRestoration() {
                 </div>
                 {/* Visual Flowchart */}
                 <div className="flex flex-col items-center justify-center p-6 bg-slate-900/80 rounded-2xl border border-slate-700">
-                  <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-8">
-                    <div className="flex flex-col items-center opacity-40">
-                      <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">ETCH</div>
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
-                        <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
-                      </div>
-                    </div>
-                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
-                    <div className="flex flex-col items-center opacity-40">
-                      <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">SILANE</div>
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
-                        <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
-                      </div>
-                    </div>
-                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
-                    <div className="flex flex-col items-center relative scale-110 mx-2">
-                      <div className="text-[10px] sm:text-xs text-red-400 font-bold mb-2 tracking-wider">PRIMER</div>
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-900/30 rounded flex items-center justify-center border-2 border-red-500 relative">
-                        <Droplets className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-[120%] h-0.5 bg-red-500 rotate-45"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-red-500/50 mt-6" />
-                    <div className="flex flex-col items-center opacity-40">
-                      <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">BOND</div>
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
-                        <Droplets className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
-                      </div>
-                    </div>
-                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-slate-600 mt-6" />
-                    <div className="flex flex-col items-center opacity-40">
-                      <div className="text-[10px] sm:text-xs text-slate-400 mb-2 font-bold tracking-wider">CURE</div>
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded flex items-center justify-center border border-slate-600">
-                        <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-red-500/20 border border-red-500/50 text-red-400 font-bold px-6 py-3 rounded-lg flex items-center gap-2">
-                    NGUY CƠ SỤP ĐỔ
+                  <div className="flex justify-center w-full">
+                    <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/chuoi-thao-tac-cong-kenh.webp" alt="Chuỗi thao tác cồng kềnh" className="w-full h-auto object-contain" referrerPolicy="no-referrer" />
                   </div>
                 </div>
               </div>
