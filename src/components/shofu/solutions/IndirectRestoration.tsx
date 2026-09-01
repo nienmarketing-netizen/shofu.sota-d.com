@@ -685,9 +685,9 @@ export function IndirectRestoration() {
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
           
           <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-24">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-bold text-sm tracking-wide mb-6">
-              <AlertTriangle className="w-4 h-4" />
-              <span>TRIỆT TIÊU SAI SỐ LÂM SÀNG & TÀI CHÍNH</span>
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-bold text-[10px] min-[375px]:text-[11px] sm:text-xs md:text-sm tracking-wide mb-6 whitespace-nowrap">
+              <AlertTriangle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span>Triệt tiêu sai số lâm sàng & tài chính</span>
             </div>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
               Đập tan "ma trận" <br />
