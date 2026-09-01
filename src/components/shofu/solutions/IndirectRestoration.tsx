@@ -598,7 +598,7 @@ export function IndirectRestoration() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {/* Block 1: Problem */}
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col justify-between lg:bg-white/40 lg:border lg:border-white/60 lg:rounded-2xl lg:p-8 lg:shadow-sm">
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <AlertTriangle className="w-6 h-6 text-red-500 shrink-0" />
@@ -627,7 +627,7 @@ export function IndirectRestoration() {
             </div>
 
             {/* Block 2: Solution Comparison */}
-            <div className="flex flex-col">
+            <div className="flex flex-col lg:bg-white/40 lg:border lg:border-white/60 lg:rounded-2xl lg:p-8 lg:shadow-sm">
               <div className="text-center mb-6">
                 <h4 className="font-heading font-bold text-lg text-slate-900 mb-4">Tối ưu lợi nhuận với BeautiLink SA</h4>
                 <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-600 font-bold px-4 py-2 rounded-full text-sm border border-amber-200">
