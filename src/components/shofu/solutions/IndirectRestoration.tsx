@@ -602,7 +602,7 @@ export function IndirectRestoration() {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <AlertTriangle className="w-6 h-6 text-red-500 shrink-0" />
-                  <h4 className="font-heading font-bold text-lg text-slate-900">Sự thật "đắt đỏ" của vòi trộn Automix</h4>
+                  <h4 className="font-heading font-bold text-sm md:text-lg text-slate-900">Sự thật "đắt đỏ" của vòi trộn Automix</h4>
                 </div>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
                   Lượng xi măng kẹt lại trong vòi trộn (0.25g - 0.44g) <strong className="text-red-500 font-bold">lớn hơn hoặc bằng</strong> chính lượng xi măng được dùng cho răng của bệnh nhân.
@@ -629,7 +629,7 @@ export function IndirectRestoration() {
             {/* Block 2: Solution Comparison */}
             <div className="flex flex-col lg:bg-white/40 lg:border lg:border-white/60 lg:rounded-2xl lg:p-8 lg:shadow-sm">
               <div className="text-center mb-6">
-                <h4 className="font-heading font-bold text-lg text-slate-900 mb-4">Tối ưu lợi nhuận với BeautiLink SA</h4>
+                <h4 className="font-heading font-bold text-sm md:text-lg text-slate-900 mb-4">Tối ưu lợi nhuận với BeautiLink SA</h4>
                 <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-600 font-bold px-4 py-2 rounded-full text-sm border border-amber-200">
                   <TrendingUp className="w-4 h-4 shrink-0" /> 
                   <span>Tiết kiệm ~800 triệu VNĐ/năm</span>
