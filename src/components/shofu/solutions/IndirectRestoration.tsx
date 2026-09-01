@@ -796,7 +796,7 @@ export function IndirectRestoration() {
                 <div className="space-y-6 flex flex-col justify-center">
                   <div className="flex gap-4">
                     <Coins className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400 shrink-0 mt-1" />
-                    <p className="text-slate-300 leading-relaxed text-base sm:text-lg">Tỷ lệ chi phí vật tư (COGS) liên tục leo thang do phức tạp trong quản lý tồn kho.</p>
+                    <p className="text-slate-300 leading-relaxed text-base sm:text-lg">Tỷ lệ <strong className="text-white">chi phí vật tư (COGS) liên tục leo thang</strong> do phức tạp trong <strong className="text-white">quản lý tồn kho</strong>.</p>
                   </div>
                   <div className="flex gap-4">
                     <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-rose-400 shrink-0 mt-1" />
