@@ -253,7 +253,7 @@ export function IndirectRestoration() {
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
-            <span className="truncate">NHẬN TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO</span>
+            <span className="truncate">TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO</span>
             <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
           </button>
         </div>
