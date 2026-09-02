@@ -1089,7 +1089,8 @@ export function IndirectRestoration() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* SECTION 8: FAQ */}
       <section className="py-20 lg:py-28 bg-white relative">
