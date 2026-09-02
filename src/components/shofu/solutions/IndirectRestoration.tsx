@@ -933,8 +933,9 @@ export function IndirectRestoration() {
           <div className="text-center max-w-4xl mx-auto mb-16 relative z-10">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4"><span className="text-[#00ADEF]">Hàng ngàn nha sĩ và chuyên gia</span> đã chọn</h2>
         </div>
+        </div> {/* Close w-[90%] container here so marquee can be full width */}
         
-                {/* Marquee Wrapper */}
+        {/* Marquee Wrapper (Full Width) */}
         <div className="relative z-10 w-full overflow-hidden flex flex-col gap-6 lg:gap-8 pb-4">
           
           {/* DESKTOP (1 Row) */}
@@ -1021,6 +1022,9 @@ export function IndirectRestoration() {
           </div>
 
         </div>
+        
+        {/* Re-open w-[90%] container for the button */}
+        <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
 <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
             onClick={openOffer}
