@@ -1125,7 +1125,7 @@ export function IndirectRestoration() {
     </section>
 
       {/* SECTION 8: FAQ */}
-      <section className="py-20 lg:py-28 bg-white relative">
+      <section className="py-20 lg:py-28 bg-slate-50 bg-grid-pattern relative border-t border-slate-200">
         <div className="w-[90%] lg:w-[80%] mx-auto">
           <div className="max-w-3xl mx-auto">
         <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] text-center mb-10 tracking-tight">Giải đáp <br className="block sm:hidden" /><span className="text-[#00ADEF]">hoài nghi lâm sàng</span></h2>
