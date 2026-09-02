@@ -603,9 +603,9 @@ export function IndirectRestoration() {
             {/* Block 1: Problem */}
             <div className="flex flex-col justify-between lg:bg-white/40 lg:border lg:border-white/60 lg:rounded-2xl lg:p-8 lg:shadow-sm">
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <AlertTriangle className="w-6 h-6 text-red-500 shrink-0" />
-                  <h4 className="font-heading font-bold text-sm md:text-lg text-slate-900">Sự thật "đắt đỏ" của vòi trộn Automix</h4>
+                <div className="inline-flex items-center gap-2 mb-4 bg-red-500/10 border border-red-500/20 px-3 py-2 rounded-xl">
+                  <AlertTriangle className="w-5 h-5 text-red-600 shrink-0" />
+                  <h4 className="font-heading font-bold text-sm md:text-base text-red-800">Sự thật "đắt đỏ" của vòi trộn Automix</h4>
                 </div>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
                   Lượng xi măng kẹt lại trong vòi trộn (0.25g - 0.44g) <strong className="text-red-500 font-bold">lớn hơn hoặc bằng</strong> chính lượng xi măng được dùng cho răng của bệnh nhân.
@@ -626,9 +626,9 @@ export function IndirectRestoration() {
             {/* Block 2: Solution Comparison */}
             <div className="flex flex-col lg:bg-white/40 lg:border lg:border-white/60 lg:rounded-2xl lg:p-8 lg:shadow-sm">
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <TrendingUp className="w-6 h-6 text-[#00ADEF] shrink-0" />
-                  <h4 className="font-heading font-bold text-sm md:text-lg text-slate-900">Tối ưu lợi nhuận với BeautiLink SA</h4>
+                <div className="inline-flex items-center gap-2 mb-4 bg-[#00ADEF]/10 border border-[#00ADEF]/20 px-3 py-2 rounded-xl">
+                  <TrendingUp className="w-5 h-5 text-[#00ADEF] shrink-0" />
+                  <h4 className="font-heading font-bold text-sm md:text-base text-sky-800">Tối ưu lợi nhuận với BeautiLink SA</h4>
                 </div>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
                   <strong className="text-slate-900">Chuẩn hóa quy trình</strong>, <strong className="text-[#00ADEF]">làm chủ lượng vật tư</strong> sử dụng, <strong className="text-slate-900">cắt giảm chi phí</strong> dán gắn về mức tối thiểu và giữ lại <strong className="text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded font-bold">nguồn lợi nhuận khổng lồ</strong> cho phòng khám.
