@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ShofuHeader } from '../components/shofu/ShofuHeader';
 import { ShofuFooter } from '../components/shofu/ShofuFooter';
 import { ArrowLeft, CheckCircle, BookOpen, Quote, Sparkles, Gift } from 'lucide-react';
 import { IndirectRestoration } from '../components/shofu/solutions/IndirectRestoration';
+import { CampaignModal } from '../components/CampaignModal';
 
 const solutionData = {
   'phuc-hinh-gian-tiep': {
@@ -33,6 +34,14 @@ const solutionData = {
 };
 
 export default function SolutionLanding() {
+  const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
+  const [campaignModalTitle, setCampaignModalTitle] = useState('');
+
+  const openCampaignModal = (title: string) => {
+    setCampaignModalTitle(title);
+    setIsCampaignModalOpen(true);
+  };
+
   const { slug } = useParams<{ slug: string }>();
   const data = slug ? solutionData[slug as keyof typeof solutionData] : null;
 
@@ -58,7 +67,7 @@ export default function SolutionLanding() {
 
   return (
     <div className="min-h-screen bg-slate-50 bg-grid-pattern text-slate-900 flex flex-col font-body selection:bg-sky-200 selection:text-sky-900">
-      <ShofuHeader isLandingPage={true} />
+      <ShofuHeader isLandingPage={true} onOpenQuote={() => openCampaignModal("Nhận tư vấn ngay")} />
       
       <main className="flex-1 bg-transparent relative">
         {slug === 'phuc-hinh-gian-tiep' ? (
@@ -146,6 +155,11 @@ export default function SolutionLanding() {
       </main>
 
       <ShofuFooter />
+      <CampaignModal
+        isOpen={isCampaignModalOpen}
+        onClose={() => setIsCampaignModalOpen(false)}
+        title={campaignModalTitle}
+      />
     </div>
   );
 }
