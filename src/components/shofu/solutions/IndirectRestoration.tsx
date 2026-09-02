@@ -216,7 +216,7 @@ export function IndirectRestoration() {
         </div>
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
+          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-1 sm:px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
               <Unlink className="w-8 h-8 text-red-400" />
             </div>
@@ -226,7 +226,7 @@ export function IndirectRestoration() {
             </p>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
+          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-1 sm:px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
               <Layers className="w-8 h-8 text-red-400" />
             </div>
@@ -236,11 +236,11 @@ export function IndirectRestoration() {
             </p>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
+          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-1 sm:px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
               <Banknote className="w-8 h-8 text-red-400" />
             </div>
-            <h3 className="font-heading font-bold text-[13px] min-[375px]:text-[14.5px] min-[400px]:text-[15.5px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">"Đốt tiền" do Thể tích chết Automix</h3>
+            <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">"Đốt tiền" do Thể tích chết Automix</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
               Vòi trộn Automix <strong className="text-red-400">lãng phí 0.25g - 0.44g xi măng</strong> kẹt lại mỗi lần bơm. Mỗi ca gắn <strong className="text-amber-400">vứt đi hàng chục ngàn đồng</strong>. Cộng thêm hàng tá chai Primer sứ lỉnh kỉnh dễ bay hơi làm <strong className="text-red-400">phồng rộp chi phí</strong>.
             </p>
