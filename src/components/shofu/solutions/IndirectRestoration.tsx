@@ -106,6 +106,14 @@ const YoutubeAutoplay = ({ videoId }: { videoId: string }) => {
 };
 
 export function IndirectRestoration() {
+    const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
+  const [campaignModalTitle, setCampaignModalTitle] = useState('');
+
+  const openCampaignModal = (title: string) => {
+    setCampaignModalTitle(title);
+    setIsCampaignModalOpen(true);
+  };
+
   const openOffer = () => {
     window.dispatchEvent(new CustomEvent("open-offer-modal", { detail: { offerId: 1 } }));
   };
@@ -177,7 +185,7 @@ export function IndirectRestoration() {
             </ul>
 
             <button 
-              onClick={openOffer}
+              onClick={() => openCampaignModal("Nhận mẫu thử BBX 2ml & Ưu đãi")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -249,7 +257,7 @@ export function IndirectRestoration() {
 
         <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-            onClick={openOffer}
+            onClick={() => openCampaignModal("Tư vấn giải pháp triệt tiêu rủi ro")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -410,7 +418,7 @@ export function IndirectRestoration() {
 
         <div className="mt-4 md:mt-12 text-center">
           <button 
-            onClick={openOffer}
+            onClick={() => openCampaignModal("Yêu cầu tư vấn")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -608,7 +616,7 @@ export function IndirectRestoration() {
         
         <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-            onClick={openOffer}
+            onClick={() => openCampaignModal("Tư vấn giải pháp tối ưu chi phí")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -823,7 +831,7 @@ export function IndirectRestoration() {
 
           <div className="mt-12 md:mt-16 text-center relative z-10">
             <button 
-              onClick={openOffer}
+              onClick={() => openCampaignModal("Trải nghiệm phác đồ 3 bước")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -928,7 +936,7 @@ export function IndirectRestoration() {
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
 <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-            onClick={openOffer}
+            onClick={() => openCampaignModal("Gia nhập cộng đồng MiCD")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -1035,7 +1043,7 @@ export function IndirectRestoration() {
 
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full">
                 <button 
-                  onClick={openOffer}
+                  onClick={() => openCampaignModal("Đăng ký combo 'Giomer không ê buốt'")}
                   className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-white hover:text-slate-900 hover:shadow-xl hover:shadow-white/20 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
                 >
                   <span className="truncate">ĐĂNG KÝ COMBO "GIOMER KHÔNG Ê BUỐT"</span>
@@ -1141,7 +1149,7 @@ export function IndirectRestoration() {
           
           <div className="mt-12 md:mt-16 text-center relative z-10">
             <button 
-              onClick={openOffer}
+              onClick={() => openCampaignModal("Bác sĩ còn câu hỏi? Nhận tư vấn ngay")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -1154,6 +1162,11 @@ export function IndirectRestoration() {
         </div>
       </section>
 
+      <CampaignModal
+        isOpen={isCampaignModalOpen}
+        onClose={() => setIsCampaignModalOpen(false)}
+        title={campaignModalTitle}
+      />
     </div>
   );
 }
