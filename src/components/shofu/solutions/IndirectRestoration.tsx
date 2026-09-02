@@ -1105,7 +1105,7 @@ export function IndirectRestoration() {
               </div>
               
               <p className="mt-6 text-sm text-slate-400 flex items-center justify-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" /> Cam kết hoàn tiền 100% trong 30 ngày nếu xảy ra ê buốt do vật liệu.
+                <ShieldCheck className="w-4 h-4 text-emerald-400" /> Hoàn tiền 100% nếu Bác sĩ không hài lòng.
               </p>
             </div>
           </div>
