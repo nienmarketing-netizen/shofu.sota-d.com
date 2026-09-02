@@ -61,7 +61,7 @@ async function startServer() {
       console.log("Sending data to Google Sheets:", JSON.stringify(payload));
 
       const bodyString = Object.entries(payload)
-        .map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value))
+        .map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value as string))
         .join('&');
 
       // Server-side fetch bypassing browser CORS - RUN IN BACKGROUND to avoid 504 timeouts

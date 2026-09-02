@@ -4,6 +4,7 @@ import { ShofuHeader } from '../components/shofu/ShofuHeader';
 import { ShofuFooter } from '../components/shofu/ShofuFooter';
 import { ArrowLeft, CheckCircle, BookOpen, Quote, Sparkles, Gift } from 'lucide-react';
 import { IndirectRestoration } from '../components/shofu/solutions/IndirectRestoration';
+import { DirectRestoration } from '../components/shofu/solutions/DirectRestoration';
 import { CampaignModal } from '../components/CampaignModal';
 
 const solutionData = {
@@ -72,6 +73,8 @@ export default function SolutionLanding() {
       <main className="flex-1 bg-transparent relative">
         {slug === 'phuc-hinh-gian-tiep' ? (
           <IndirectRestoration />
+        ) : slug === 'phuc-hinh-truc-tiep' ? (
+          <DirectRestoration />
         ) : (
           <>
             {/* Hero Section */}
