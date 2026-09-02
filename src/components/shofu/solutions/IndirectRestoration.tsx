@@ -495,7 +495,7 @@ export function IndirectRestoration() {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-slate-100 flex justify-center">
+            <div className="mt-3 pt-3 border-t border-slate-100 flex justify-center -mx-4 sm:-mx-6">
               <img 
                 src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/feedback-beautilink-SA.webp?v=1788334433590" 
                 alt="Đánh giá từ Bác sĩ về BeautiLink SA" 
@@ -534,7 +534,7 @@ export function IndirectRestoration() {
             </div>
 
             {/* S-PRG Image */}
-            <div className="mt-8 flex justify-center">
+            <div className="mt-3 flex justify-center -mx-4 sm:-mx-6">
               <img 
                 src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/S-PRG-triet-tieu-e-buot.webp?v=1788334169447" 
                 alt="S-PRG Triệt tiêu ê buốt" 
