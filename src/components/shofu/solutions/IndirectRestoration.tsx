@@ -217,8 +217,8 @@ export function IndirectRestoration() {
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-1 sm:px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
-              <Unlink className="w-8 h-8 text-red-400" />
+            <div className="w-11 h-11 md:w-16 md:h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
+              <Unlink className="w-6 h-6 md:w-8 md:h-8 text-red-400" />
             </div>
             <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Sút phục hình & Ê buốt muộn</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -227,8 +227,8 @@ export function IndirectRestoration() {
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-1 sm:px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
-              <Layers className="w-8 h-8 text-red-400" />
+            <div className="w-11 h-11 md:w-16 md:h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
+              <Layers className="w-6 h-6 md:w-8 md:h-8 text-red-400" />
             </div>
             <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Kênh cộm khớp & Hở đường viền</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -237,8 +237,8 @@ export function IndirectRestoration() {
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-1 sm:px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
-              <Banknote className="w-8 h-8 text-red-400" />
+            <div className="w-11 h-11 md:w-16 md:h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
+              <Banknote className="w-6 h-6 md:w-8 md:h-8 text-red-400" />
             </div>
             <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">"Đốt tiền" do Thể tích chết Automix</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
