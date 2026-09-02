@@ -64,10 +64,10 @@ export function ShofuSolutions() {
           className="text-center mb-16"
         >
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">
-            Giải Pháp Lâm Sàng Trọng Tâm
+            Giải Pháp Lâm Sàng <span className="text-[#00ADEF]">Trọng Tâm</span>
           </h2>
           <p className="font-body text-base text-slate-600 max-w-2xl mx-auto">
-            Khám phá hệ sinh thái sản phẩm Shofu được thiết kế chuyên sâu cho từng chỉ định lâm sàng, giúp nâng cao chất lượng điều trị và tối ưu chi phí vận hành tại phòng khám.
+            Khám phá hệ sinh thái sản phẩm Shofu được thiết kế <strong className="text-slate-900">chuyên sâu cho từng chỉ định lâm sàng</strong>, giúp <strong className="text-emerald-600">nâng cao chất lượng điều trị</strong> và <strong className="text-amber-600">tối ưu chi phí vận hành</strong> tại phòng khám.
           </p>
         </motion.div>
 

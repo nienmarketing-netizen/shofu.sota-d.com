@@ -121,7 +121,7 @@ export function ShofuCaseStudies() {
           </h2>
           <p className="font-body text-slate-600 max-w-2xl mx-auto">
             Khám phá những ca điều trị thành công sử dụng vật liệu nha khoa Shofu.
-            Công nghệ S-PRG và hệ thống vật liệu tiên tiến mang lại kết quả thẩm mỹ và độ bền tối ưu.
+            <strong className="text-slate-900">Công nghệ S-PRG</strong> và hệ thống vật liệu tiên tiến mang lại <strong className="text-emerald-600">kết quả thẩm mỹ</strong> và <strong className="text-amber-600">độ bền tối ưu</strong>.
           </p>
         </motion.div>
       </div>

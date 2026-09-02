@@ -69,7 +69,7 @@ export function ShofuLeadMagnet() {
             </h2>
             
             <p className="font-body text-slate-600 mb-8">
-              Đăng ký ngay để nhận báo giá chiết khấu đặc biệt dành cho Phòng khám/Nha khoa, kèm theo cẩm nang lâm sàng chi tiết quy trình ứng dụng vật liệu Shofu.
+              Đăng ký ngay để nhận <strong className="text-amber-600">báo giá chiết khấu đặc biệt</strong> dành cho Phòng khám/Nha khoa, kèm theo <strong className="text-[#00ADEF]">cẩm nang lâm sàng chi tiết</strong> quy trình ứng dụng vật liệu Shofu.
             </p>
             
             <ul className="space-y-3 font-body text-sm text-slate-700">

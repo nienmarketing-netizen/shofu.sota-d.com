@@ -88,7 +88,7 @@ export function ShofuOffers() {
                 <span className="text-sm sm:text-base text-[#00ADEF]">Giomer không ê buốt</span>
               </h3>
               <p className="font-body text-sm text-slate-300 mb-6 flex-1 leading-relaxed">
-                Triệt tiêu ê buốt tức thì nhờ màng dán dính khóa kín ống ngà từ Keo dán BeautiBond Xtreme (HEMA-Free) kỵ nước tuyệt đối, chống thoái hóa lớp lai. Xi măng tự dán BeautiLink SA phóng thích 6 ion sinh học S-PRG liên tục tái khoáng ngà răng, bảo vệ khỏi sâu răng tái phát.
+                Triệt tiêu ê buốt tức thì nhờ màng dán dính khóa kín ống ngà từ Keo dán BeautiBond Xtreme (HEMA-Free) <strong className="text-[#00ADEF]">kỵ nước tuyệt đối</strong>, <strong className="text-emerald-400">chống thoái hóa lớp lai</strong>. Xi măng tự dán BeautiLink SA phóng thích 6 ion sinh học S-PRG liên tục tái khoáng ngà răng, <strong className="text-emerald-400">bảo vệ khỏi sâu răng tái phát</strong>.
               </p>
               
               <div className="flex flex-col gap-2 mb-4 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">
@@ -133,7 +133,7 @@ export function ShofuOffers() {
                 <span className="text-sm sm:text-base text-[#C43838]">Giải pháp trám thẩm mỹ sinh học</span>
               </h3>
               <p className="font-body text-sm text-slate-300 mb-6 flex-1 leading-relaxed">
-                Đồng bộ hóa quy trình trám thẩm mỹ từ dán dính đến đánh bóng chỉ trong một gói giải pháp. Loại bỏ các bước nhạy cảm kỹ thuật, bịt kín xoang sâu phức tạp, kết thúc bằng bộ mũi mài mịn màng chính hãng giúp mô nướu lành thương hồng hào và ngăn mảng bám tích tụ.
+                Đồng bộ hóa quy trình trám thẩm mỹ từ dán dính đến đánh bóng chỉ trong một gói giải pháp. <strong className="text-emerald-400">Loại bỏ các bước nhạy cảm kỹ thuật</strong>, bịt kín xoang sâu phức tạp, kết thúc bằng bộ mũi mài mịn màng chính hãng giúp <strong className="text-amber-400">mô nướu lành thương hồng hào</strong> và <strong className="text-emerald-400">ngăn mảng bám tích tụ</strong>.
               </p>
               
               <div className="flex flex-col gap-2 mb-4 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">

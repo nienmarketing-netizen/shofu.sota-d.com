@@ -27,14 +27,14 @@ export function ShofuAbout() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-6 uppercase">
-              Di Sản 100 Năm <br />
-              Nha Khoa Nhật Bản
+              Di Sản <span className="text-[#C43838]">100 Năm</span> <br />
+              Nha Khoa <span className="text-[#00ADEF]">Nhật Bản</span>
             </h2>
             <p className="font-body text-base text-slate-600 mb-6 leading-relaxed">
-              Kể từ khi thành lập năm 1922 tại Kyoto, Shofu đã không ngừng tiên phong trong việc phát triển các vật liệu nha khoa mang tính đột phá. Sự tỉ mỉ, độ chính xác và cam kết chất lượng tuyệt đối của người Nhật được đúc kết trong từng sản phẩm.
+              Kể từ khi thành lập năm 1922 tại Kyoto, Shofu đã không ngừng <strong className="text-slate-900">tiên phong</strong> trong việc phát triển các vật liệu nha khoa mang tính <strong className="text-[#00ADEF]">đột phá</strong>. Sự tỉ mỉ, độ chính xác và <strong className="text-[#C43838]">cam kết chất lượng tuyệt đối</strong> của người Nhật được đúc kết trong từng sản phẩm.
             </p>
             <p className="font-body text-base text-slate-600 mb-8 leading-relaxed">
-              Hôm nay, Shofu tự hào là một trong những tập đoàn nha khoa toàn cầu, mang đến giải pháp lâm sàng đáng tin cậy cho hàng triệu Bác sĩ tại hơn 100 quốc gia.
+              Hôm nay, Shofu tự hào là một trong những tập đoàn nha khoa toàn cầu, mang đến <strong className="text-slate-900">giải pháp lâm sàng đáng tin cậy</strong> cho hàng triệu Bác sĩ tại <strong className="text-[#00ADEF]">hơn 100 quốc gia</strong>.
             </p>
             <div className="flex items-center gap-6 pt-6 border-t border-slate-200">
               <div>

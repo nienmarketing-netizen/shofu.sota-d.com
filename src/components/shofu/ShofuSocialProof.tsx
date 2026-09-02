@@ -84,10 +84,10 @@ export function ShofuSocialProof() {
             <span className="font-mono text-xs font-bold text-[#00ADEF] uppercase tracking-widest">Bảo Chứng Toàn Cầu</span>
           </div>
           <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 mb-6 leading-[1.4] max-w-3xl mx-auto uppercase">
-            4 Trụ Cột Khoa Học <br className="hidden md:block" />Khẳng Định Vị Thế
+            <span className="text-[#00ADEF]">4 Trụ Cột Khoa Học</span> <br className="hidden md:block" />Khẳng Định Vị Thế
           </h2>
           <p className="font-body text-lg text-slate-600 max-w-2xl mx-auto">
-            Hệ thống dữ liệu lâm sàng độc lập, nghiêm ngặt và minh bạch nhất từ các viện nghiên cứu hàng đầu thế giới minh chứng cho chất lượng của Shofu.
+            Hệ thống dữ liệu lâm sàng <strong className="text-slate-900">độc lập, nghiêm ngặt và minh bạch</strong> nhất từ các viện nghiên cứu hàng đầu thế giới <strong className="text-emerald-600">minh chứng cho chất lượng</strong> của Shofu.
           </p>
         </div>
 
