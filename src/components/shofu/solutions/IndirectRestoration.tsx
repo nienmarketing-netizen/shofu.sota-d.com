@@ -919,10 +919,10 @@ export function IndirectRestoration() {
             100% { transform: translateX(0); }
           }
           .animate-marquee-left {
-            animation: marquee-left 40s linear infinite;
+            animation: marquee-left 57s linear infinite;
           }
           .animate-marquee-right {
-            animation: marquee-right 40s linear infinite;
+            animation: marquee-right 57s linear infinite;
           }
           .animate-marquee-left:hover, .animate-marquee-right:hover {
             animation-play-state: paused;
