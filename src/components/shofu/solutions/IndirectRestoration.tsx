@@ -1021,15 +1021,15 @@ export function IndirectRestoration() {
           
           
           <div className="relative z-10 max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-amber-500/20 border border-amber-500/30 mb-6 max-w-full overflow-hidden font-mono text-[9px] min-[375px]:text-[10px] sm:text-xs font-bold text-amber-400 tracking-tight sm:tracking-wide uppercase">
-              ĐẶC QUYỀN ĐỒNG HÀNH KHÔNG THỂ TỪ CHỐI
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-amber-500/20 border border-amber-500/30 mb-6 max-w-full overflow-hidden font-mono text-[9px] min-[375px]:text-[10px] sm:text-xs font-bold text-amber-400 tracking-tight sm:tracking-wide">
+              Đặc quyền đồng hành không thể từ chối
             </span>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-10 leading-tight uppercase">
-              GÓI GIẢI PHÁP ĐỒNG BỘ "GIOMER KHÔNG Ê BUỐT" – AN TÂM LÂM SÀNG
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-10 tracking-tight">
+              Gói giải pháp đồng bộ <br className="hidden sm:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">"Giomer không ê buốt"</span> – An tâm lâm sàng
             </h2>
             
             <div className="bg-slate-800/80 rounded-2xl p-6 md:p-8 border border-slate-700 mb-8 text-left">
-              <h3 className="font-heading font-bold text-xl sm:text-2xl text-amber-400 mb-4 border-b border-slate-700 pb-4">Combo Dán - Gắn Đồng Bộ trị giá 3.415.000đ</h3>
+              <h3 className="font-heading font-bold text-xl md:text-2xl text-amber-400 mb-4 border-b border-slate-700 pb-4">Combo dán - gắn đồng bộ trị giá 3.415.000đ</h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
@@ -1043,8 +1043,8 @@ export function IndirectRestoration() {
             </div>
 
             <div className="bg-gradient-to-r from-amber-500/10 to-yellow-500/10 rounded-2xl p-6 md:p-8 border border-amber-500/30 mb-10 text-left">
-              <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-4 border-b border-amber-500/30 pb-4 flex items-center gap-2">
-                <Gift className="w-6 h-6 text-amber-400" /> BỘ QUÀ TẶNG ĐẶC QUYỀN (Trị giá 2.500.000đ)
+              <h3 className="font-heading font-bold text-xl md:text-2xl text-white mb-4 border-b border-amber-500/30 pb-4 flex items-center gap-2">
+                <Gift className="w-6 h-6 text-amber-400" /> Bộ quà tặng đặc quyền (Trị giá 2.500.000đ)
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
