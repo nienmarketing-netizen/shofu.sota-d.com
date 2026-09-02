@@ -601,7 +601,7 @@ export function IndirectRestoration() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {/* Block 1: Problem */}
-            <div className="flex flex-col justify-between lg:bg-white/40 lg:border lg:border-white/60 lg:rounded-2xl lg:p-8 lg:shadow-sm">
+            <div className="flex flex-col justify-between bg-white/40 border border-white/60 rounded-2xl p-6 lg:p-8 shadow-sm">
               <div>
                 <div className="inline-flex items-center gap-2 mb-4 bg-red-500/10 border border-red-500/20 px-3 py-2 rounded-xl">
                   <AlertTriangle className="w-5 h-5 text-red-600 shrink-0" />
@@ -624,7 +624,7 @@ export function IndirectRestoration() {
             </div>
 
             {/* Block 2: Solution Comparison */}
-            <div className="flex flex-col lg:bg-white/40 lg:border lg:border-white/60 lg:rounded-2xl lg:p-8 lg:shadow-sm">
+            <div className="flex flex-col bg-white/40 border border-white/60 rounded-2xl p-6 lg:p-8 shadow-sm">
               <div>
                 <div className="inline-flex items-center gap-2 mb-4 bg-[#00ADEF]/10 border border-[#00ADEF]/20 px-3 py-2 rounded-xl">
                   <TrendingUp className="w-5 h-5 text-[#00ADEF] shrink-0" />
