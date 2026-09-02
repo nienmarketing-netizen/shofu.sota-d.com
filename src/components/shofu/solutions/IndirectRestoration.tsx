@@ -1047,7 +1047,7 @@ export function IndirectRestoration() {
                   <img 
                     src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/beautilink-bbx.webp" 
                     alt="Combo BeautiLink SA và BeautiBond Xtreme" 
-                    className="w-full max-w-[280px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
+                    className="w-full max-w-[196px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"
                   />
                 </div>
