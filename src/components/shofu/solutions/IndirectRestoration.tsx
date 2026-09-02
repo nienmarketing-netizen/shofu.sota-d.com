@@ -616,7 +616,7 @@ export function IndirectRestoration() {
                 <img 
                   src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/voi-tron-automix-lang-phi-vat-lieu.webp" 
                   alt="Lãng phí vật liệu khi dùng vòi trộn Automix" 
-                  className="w-full h-auto object-contain rounded-xl drop-shadow-sm border border-slate-200"
+                  className="w-full h-auto object-contain"
                   loading="lazy"
                   referrerPolicy="no-referrer"
                 />
