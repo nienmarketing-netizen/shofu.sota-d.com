@@ -780,7 +780,7 @@ export function IndirectRestoration() {
 
             <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6 text-center flex flex-col sm:flex-row items-center justify-center gap-4 max-w-4xl mx-auto">
               <p className="text-red-100 text-sm sm:text-base text-center">
-                Chính sự khác biệt lý hóa khắt khe này đã ép buộc quy trình lâm sàng phải <strong className="text-red-400 font-bold text-lg uppercase block mt-1">sử dụng hàng loạt hóa chất rời rạc.</strong>
+                Chính sự khác biệt lý hóa khắt khe này đã ép buộc quy trình lâm sàng phải <strong className="text-red-400 font-bold text-lg uppercase block mt-1">SỬ DỤNG HÀNG LOẠT <br className="sm:hidden" /> HOÁ CHẤT RỜI RẠC</strong>
               </p>
             </div>
           </div>
@@ -789,7 +789,7 @@ export function IndirectRestoration() {
           <div className="mb-24 bg-slate-800/30 rounded-3xl p-8 sm:p-12 border border-slate-700/50">
             <div className="text-center mb-12">
               <h3 className="font-heading font-bold text-xl text-red-500 mb-4">
-                Hậu quả của chuỗi thao tác cồng kềnh
+                Hậu quả của chuỗi <br className="sm:hidden" /> thao tác cồng kềnh
               </h3>
             </div>
             
