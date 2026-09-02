@@ -912,7 +912,7 @@ export function IndirectRestoration() {
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
         <Quote className="absolute -top-10 -left-10 w-40 h-40 text-slate-200 opacity-50" />
           <div className="text-center max-w-4xl mx-auto mb-16 relative z-10">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase"><span className="text-[#00ADEF]">HÀNG NGÀN NHA SĨ VÀ CHUYÊN GIA</span> ĐÃ CHỌN</h2>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4"><span className="text-[#00ADEF]">Hàng ngàn nha sĩ và chuyên gia</span> đã chọn</h2>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10">
