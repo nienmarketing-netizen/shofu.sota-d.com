@@ -748,7 +748,7 @@ export function IndirectRestoration() {
                 <div className="flex justify-center mb-6">
                   <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/su-thuy-tinh.webp" alt="Sứ thủy tinh" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
                 </div>
-                <p className="text-slate-400 text-sm md:text-base leading-relaxed text-center mt-auto">
+                <p className="text-slate-400 text-sm sm:text-base leading-relaxed text-center mt-auto">
                   Đòi hỏi soi mòn vi cơ học bằng <strong className="text-red-400">Acid HF</strong>, sau đó bắt buộc quét Silane độc lập để tạo mạng lưới liên kết siloxane.
                 </p>
               </div>
@@ -760,7 +760,7 @@ export function IndirectRestoration() {
                 <div className="flex justify-center mb-6">
                   <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/zironia.webp" alt="Zirconia & kim loại" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
                 </div>
-                <p className="text-slate-400 text-sm md:text-base leading-relaxed text-center mt-auto">
+                <p className="text-slate-400 text-sm sm:text-base leading-relaxed text-center mt-auto">
                   Bề mặt trơ với <strong className="text-red-400">Acid HF</strong>. Bắt buộc phải có các Primer chứa monomer chức năng để tạo liên kết ion trực tiếp.
                 </p>
               </div>
@@ -772,7 +772,7 @@ export function IndirectRestoration() {
                 <div className="flex justify-center mb-6">
                   <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/mo-rang.webp" alt="Mô răng" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
                 </div>
-                <p className="text-slate-400 text-sm md:text-base leading-relaxed text-center mt-auto">
+                <p className="text-slate-400 text-sm sm:text-base leading-relaxed text-center mt-auto">
                   Đòi hỏi hệ thống keo dán (Bond) để xâm nhập và tạo ra lớp lai (hybrid layer) vững chắc.
                 </p>
               </div>
