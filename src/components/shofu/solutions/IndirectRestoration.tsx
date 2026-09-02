@@ -1017,7 +1017,7 @@ export function IndirectRestoration() {
         <div className="absolute inset-0 bg-grid-pattern-light opacity-100 pointer-events-none"></div>
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
           <div className="w-full">
-        <div className="py-8 md:py-12 lg:py-16 text-white text-center relative overflow-hidden">
+        <div className="text-white text-center relative overflow-hidden">
           
           
           <div className="relative z-10 w-full">
