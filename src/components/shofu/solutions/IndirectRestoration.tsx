@@ -386,7 +386,7 @@ export function IndirectRestoration() {
             {/* USPs and Text (Order 3 on Mobile, Bottom Left on Desktop) */}
             <div className="order-3 lg:col-start-1 lg:row-start-2 lg:self-start space-y-6">
               <p className="text-slate-600 text-base leading-relaxed">
-                Sự kết hợp hoàn hảo giữa màng keo kỷ lục 5µm của BeautiBond Xtreme và lớp xi măng siêu mỏng 14µm của BeautiLink SA tạo nên một khoảng ghép vô hình chỉ 24µm, thiết lập tiêu chuẩn mới trong phục hình gián tiếp.
+                Sự kết hợp hoàn hảo giữa <strong className="text-slate-900">màng keo kỷ lục 5µm</strong> của BeautiBond Xtreme và lớp <strong className="text-slate-900">xi măng siêu mỏng 14µm</strong> của BeautiLink SA tạo nên một <strong className="text-[#00ADEF]">khoảng ghép vô hình chỉ 24µm</strong>, thiết lập <strong className="text-amber-600">tiêu chuẩn mới</strong> trong phục hình gián tiếp.
               </p>
               <ul className="space-y-4 pt-2">
                 <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
