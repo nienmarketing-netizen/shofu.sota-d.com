@@ -1034,11 +1034,11 @@ export function IndirectRestoration() {
                   <ul className="space-y-4">
                     <li className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
-                      <span className="text-slate-300">01 Lọ Keo dán Universal BeautiBond Xtreme (5ml)</span>
+                      <span className="text-slate-300 text-sm sm:text-base leading-relaxed">01 Lọ Keo dán Universal BeautiBond Xtreme (5ml)</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
-                      <span className="text-slate-300">01 Ống Xi măng BeautiLink SA Handmix (15.6g) khổng lồ</span>
+                      <span className="text-slate-300 text-sm sm:text-base leading-relaxed">01 Ống Xi măng BeautiLink SA Handmix (15.6g) khổng lồ</span>
                     </li>
                   </ul>
                 </div>
@@ -1061,15 +1061,15 @@ export function IndirectRestoration() {
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <div className="mt-1"><Gift className="w-4 h-4 text-amber-400" /></div>
-                      <p className="text-slate-300"><strong className="text-white">Quà tặng vật lý:</strong> 01 Lọ BBX Trial (2ml) để trải nghiệm thực tế ngay tại phòng khám trước khi khui lọ chính.</p>
+                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed"><strong className="text-white">Quà tặng vật lý:</strong> 01 Lọ BBX Trial (2ml) để trải nghiệm thực tế ngay tại phòng khám trước khi khui lọ chính.</p>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="mt-1"><Gift className="w-4 h-4 text-amber-400" /></div>
-                      <p className="text-slate-300"><strong className="text-white">Tài liệu số chuyên sâu:</strong> Sổ tay E-Guide "Khoảng Xi Măng Ghép Lâm Sàng & Quy Trình Xử Lý Bề Mặt Sứ".</p>
+                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed"><strong className="text-white">Tài liệu số chuyên sâu:</strong> Sổ tay E-Guide "Khoảng Xi Măng Ghép Lâm Sàng & Quy Trình Xử Lý Bề Mặt Sứ".</p>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="mt-1"><Gift className="w-4 h-4 text-amber-400" /></div>
-                      <p className="text-slate-300"><strong className="text-white">Đặc quyền đào tạo:</strong> Vé tham gia Group Học Thuật Kín gỡ rối ca lâm sàng trực tiếp qua Zalo 1:1.</p>
+                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed"><strong className="text-white">Đặc quyền đào tạo:</strong> Vé tham gia Group Học Thuật Kín gỡ rối ca lâm sàng trực tiếp qua Zalo 1:1.</p>
                     </li>
                   </ul>
                 </div>
