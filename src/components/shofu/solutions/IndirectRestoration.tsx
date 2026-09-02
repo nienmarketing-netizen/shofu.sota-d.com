@@ -1016,7 +1016,7 @@ export function IndirectRestoration() {
       <section className="py-20 lg:py-28 bg-slate-200 relative border-b border-slate-300">
         <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
-          <div className="bg-white rounded-[2.5rem] p-2 shadow-[0_0_40px_rgba(251,191,36,0.2)] max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto">
         <div className="bg-slate-900 rounded-[2.2rem] p-8 md:p-12 lg:p-16 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
           
