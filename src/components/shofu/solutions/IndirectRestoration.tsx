@@ -222,7 +222,7 @@ export function IndirectRestoration() {
             </div>
             <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Sút phục hình & Ê buốt muộn</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Keo dán chứa HEMA hoạt động như "bọt biển" ngậm dịch ngà. Theo thời gian, HEMA bị thủy phân phân hủy lớp lai, gây bong sút, rò rỉ vi kẽ và ê buốt muộn tàn nhẫn cho bệnh nhân.
+              Keo dán chứa HEMA hoạt động như "bọt biển" <strong className="text-slate-300">ngậm dịch ngà</strong>. Theo thời gian, HEMA bị <strong className="text-red-400">thủy phân phân hủy lớp lai</strong>, gây <strong className="text-red-400">bong sút, rò rỉ vi kẽ</strong> và <strong className="text-amber-400">ê buốt muộn tàn nhẫn</strong> cho bệnh nhân.
             </p>
           </div>
 
@@ -232,7 +232,7 @@ export function IndirectRestoration() {
             </div>
             <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Kênh cộm khớp & Hở đường viền</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Lớp màng (film thickness) của xi măng/keo cũ quá dày (30-50µm) làm "đội" các phục hình Veneer, Tabletop siêu mỏng, gây cộm khớp, buộc phải mài chỉnh hoặc chịu rủi ro nứt vỡ sứ giòn.
+              Lớp màng (film thickness) của xi măng/keo cũ <strong className="text-red-400">quá dày (30-50µm)</strong> làm "đội" các phục hình Veneer, Tabletop siêu mỏng, <strong className="text-amber-400">gây cộm khớp</strong>, buộc phải mài chỉnh hoặc chịu rủi ro <strong className="text-red-400">nứt vỡ sứ giòn</strong>.
             </p>
           </div>
 
@@ -242,7 +242,7 @@ export function IndirectRestoration() {
             </div>
             <h3 className="font-heading font-bold text-[13px] min-[375px]:text-[14.5px] min-[400px]:text-[15.5px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">"Đốt tiền" do Thể tích chết Automix</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Vòi trộn Automix lãng phí 0.25g - 0.44g xi măng kẹt lại mỗi lần bơm. Mỗi ca gắn vứt đi hàng chục ngàn đồng. Cộng thêm hàng tá chai Primer sứ lỉnh kỉnh dễ bay hơi làm phồng rộp chi phí.
+              Vòi trộn Automix <strong className="text-red-400">lãng phí 0.25g - 0.44g xi măng</strong> kẹt lại mỗi lần bơm. Mỗi ca gắn <strong className="text-amber-400">vứt đi hàng chục ngàn đồng</strong>. Cộng thêm hàng tá chai Primer sứ lỉnh kỉnh dễ bay hơi làm <strong className="text-red-400">phồng rộp chi phí</strong>.
             </p>
           </div>
         </div>
@@ -430,7 +430,7 @@ export function IndirectRestoration() {
             <span className="text-[#00ADEF]">thuyết phục</span> <span className="text-amber-500">tuyệt đối</span>
           </h2>
           <p className="font-body text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
-            Bảo chứng y văn vững chắc và hiệu suất thực tế được kiểm chứng bởi Bác sĩ trên hơn 100 quốc gia và vùng lãnh thổ.
+            <strong className="text-slate-900">Bảo chứng y văn vững chắc</strong> và hiệu suất thực tế được <strong className="text-emerald-600">kiểm chứng bởi Bác sĩ trên hơn 100 quốc gia</strong> và vùng lãnh thổ.
           </p>
         </div>
         
@@ -737,7 +737,7 @@ export function IndirectRestoration() {
                 Nguồn gốc "ma trận": <br className="block sm:hidden" />
                 <span className="text-[#00ADEF]">Sự xung đột hóa học</span>
               </h3>
-              <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">Để thấu hiểu "ma trận chai lọ", cần nhìn vào bản chất hóa học riêng biệt của từng giao diện bám dính.</p>
+              <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">Để thấu hiểu "ma trận chai lọ", cần nhìn vào <strong className="text-white">bản chất hóa học riêng biệt</strong> của từng <strong className="text-amber-400">giao diện bám dính</strong>.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -912,7 +912,7 @@ export function IndirectRestoration() {
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
         <Quote className="absolute -top-10 -left-10 w-40 h-40 text-slate-200 opacity-50" />
           <div className="text-center max-w-4xl mx-auto mb-16 relative z-10">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">HÀNG NGÀN NHA SĨ VÀ CHUYÊN GIA ĐÃ CHỌN</h2>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase"><span className="text-[#00ADEF]">HÀNG NGÀN NHA SĨ VÀ CHUYÊN GIA</span> ĐÃ CHỌN</h2>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10">
