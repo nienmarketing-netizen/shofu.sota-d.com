@@ -1013,12 +1013,12 @@ export function IndirectRestoration() {
       </section>
 
       {/* SECTION 7: THE CORE OFFER */}
-      <section className="py-20 lg:py-28 bg-slate-200 relative border-b border-slate-300">
-        <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
+      <section className="py-20 lg:py-28 bg-slate-900 relative border-b border-slate-800">
+        <div className="absolute inset-0 bg-grid-pattern-light opacity-100 pointer-events-none"></div>
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
           <div className="max-w-5xl mx-auto">
-        <div className="bg-slate-900 rounded-[2.2rem] p-8 md:p-12 lg:p-16 text-white text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div className="p-8 md:p-12 lg:p-16 text-white text-center relative overflow-hidden">
+          
           
           <div className="relative z-10 max-w-3xl mx-auto">
             <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-amber-500/20 border border-amber-500/30 mb-6 max-w-full overflow-hidden font-mono text-[9px] min-[375px]:text-[10px] sm:text-xs font-bold text-amber-400 tracking-tight sm:tracking-wide uppercase">
