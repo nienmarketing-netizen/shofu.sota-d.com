@@ -737,7 +737,7 @@ export function IndirectRestoration() {
                 Nguồn gốc "ma trận": <br className="block sm:hidden" />
                 <span className="text-[#00ADEF]">Sự xung đột hóa học</span>
               </h3>
-              <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">Để thấu hiểu "ma trận chai lọ", cần nhìn vào <strong className="text-white">bản chất hóa học riêng biệt</strong> của từng <strong className="text-amber-400">giao diện bám dính</strong>.</p>
+              <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">Để thấu hiểu "ma trận chai lọ", cần nhìn vào <strong className="text-white">bản chất hóa học riêng biệt</strong> của từng <strong className="text-amber-400">giao diện bám dính</strong>.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -798,15 +798,15 @@ export function IndirectRestoration() {
                 <div className="space-y-6 flex flex-col justify-center">
                   <div className="flex gap-4">
                     <Coins className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400 shrink-0 mt-1" />
-                    <p className="text-slate-300 leading-relaxed text-base sm:text-lg">Tỷ lệ <strong className="text-white">chi phí vật tư (COGS) liên tục leo thang</strong> do phức tạp trong <strong className="text-white">quản lý tồn kho</strong>.</p>
+                    <p className="text-slate-300 leading-relaxed text-sm sm:text-base">Tỷ lệ <strong className="text-white">chi phí vật tư (COGS) liên tục leo thang</strong> do phức tạp trong <strong className="text-white">quản lý tồn kho</strong>.</p>
                   </div>
                   <div className="flex gap-4">
                     <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-rose-400 shrink-0 mt-1" />
-                    <p className="text-slate-300 leading-relaxed text-base sm:text-lg">Sự gia tăng tuyến tính của số lượng thao tác lâm sàng tỷ lệ thuận với rủi ro xảy ra <strong className="text-white">"sai số nhân sự"</strong>.</p>
+                    <p className="text-slate-300 leading-relaxed text-sm sm:text-base">Sự gia tăng tuyến tính của số lượng thao tác lâm sàng tỷ lệ thuận với rủi ro xảy ra <strong className="text-white">"sai số nhân sự"</strong>.</p>
                   </div>
                   <div className="flex gap-4">
                     <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-amber-400 shrink-0 mt-1" />
-                    <p className="text-slate-300 leading-relaxed text-base sm:text-lg">Chỉ một khoảnh khắc đưa nhầm chai Primer hoặc sai lệch thời gian lưu dung dịch, <strong className="text-white">toàn bộ cấu trúc dán dính sẽ sụp đổ.</strong></p>
+                    <p className="text-slate-300 leading-relaxed text-sm sm:text-base">Chỉ một khoảnh khắc đưa nhầm chai Primer hoặc sai lệch thời gian lưu dung dịch, <strong className="text-white">toàn bộ cấu trúc dán dính sẽ sụp đổ.</strong></p>
                   </div>
                 </div>
                 {/* Visual Flowchart */}
@@ -819,7 +819,7 @@ export function IndirectRestoration() {
 
               <div className="flex flex-col items-center justify-center text-center gap-4 bg-red-500/10 p-6 sm:p-8 rounded-2xl border border-red-500/20 w-full mt-4">
                 <AlertTriangle className="w-8 h-8 sm:w-10 sm:h-10 text-red-500 shrink-0" />
-                <p className="text-red-200 leading-relaxed text-base sm:text-lg max-w-3xl">
+                <p className="text-red-200 leading-relaxed text-sm sm:text-base max-w-3xl">
                   Hậu quả trực tiếp: <strong className="text-red-400 font-bold">Bong tróc phục hình, vi sút viền,</strong> và tình trạng <strong className="text-red-400 font-bold">nhạy cảm ê buốt trầm trọng</strong> cho bệnh nhân.
                 </p>
               </div>
@@ -833,7 +833,7 @@ export function IndirectRestoration() {
                 <h3 className="font-heading font-bold text-2xl md:text-3xl text-white mb-4">
                   Phác đồ <span className="text-[#00ADEF]">3 bước đơn giản</span>
                 </h3>
-                <p className="text-slate-400 text-lg leading-relaxed">
+                <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
                   Bác sĩ nay chỉ cần thực hiện <strong className="text-white">3 bước thao tác đơn giản</strong> với bộ đôi <span className="text-[#00ADEF] font-bold">BeautiBond Xtreme</span> và <span className="text-[#C43838] font-bold">BeautiLink SA</span>:
                 </p>
               </div>
