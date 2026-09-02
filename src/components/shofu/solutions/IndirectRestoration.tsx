@@ -264,9 +264,10 @@ export function IndirectRestoration() {
       {/* SECTION 3: THE GOLD STANDARD */}
       <section className="py-20 lg:py-28 bg-slate-50 bg-grid-pattern relative overflow-hidden border-b border-slate-200">
         <div className="w-[90%] lg:w-[80%] mx-auto space-y-12 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          <h2 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-4 tracking-tight">
-            <span className="text-amber-500">Tiêu chuẩn vàng</span> mới:<br />Bộ đôi liên kết sinh học <span className="text-[#00ADEF]">không thể phá hủy</span>
+        <div className="text-center w-full max-w-6xl mx-auto">
+          <h2 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-[3rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">
+            <span className="text-amber-500">Tiêu chuẩn vàng</span> mới:<br />
+            <span className="inline-block lg:whitespace-nowrap">Bộ đôi liên kết sinh học <span className="text-[#00ADEF]">không thể phá hủy</span></span>
           </h2>
           <p className="font-body text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">Sự kết hợp hoàn hảo tạo nên khoảng ghép vô hình 24µm vững chắc.</p>
         </div>
