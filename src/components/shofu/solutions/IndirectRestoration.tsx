@@ -614,7 +614,7 @@ export function IndirectRestoration() {
               
               <div className="flex justify-center mt-auto">
                 <img 
-                  src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/voi-tron-automix-lang-phi-vat-lieu.webp" 
+                  src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/voi-tron-automix-lang-phi-vat-lieu.webp?v=1788332053597" 
                   alt="Lãng phí vật liệu khi dùng vòi trộn Automix" 
                   className="w-full h-auto object-contain"
                   loading="lazy"
