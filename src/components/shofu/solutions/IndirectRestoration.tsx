@@ -908,7 +908,7 @@ export function IndirectRestoration() {
       </section>
 
       {/* SECTION 6: SOCIAL PROOF */}
-      <section className="py-20 lg:py-28 bg-slate-100 relative overflow-hidden">
+      <section className="py-20 lg:py-28 bg-slate-100 bg-grid-pattern relative overflow-hidden">
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes marquee-left {
             0% { transform: translateX(0); }
