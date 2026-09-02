@@ -216,31 +216,31 @@ export function IndirectRestoration() {
         </div>
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
+          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
               <Unlink className="w-8 h-8 text-red-400" />
             </div>
-            <h3 className="font-heading font-bold text-xl text-white mb-4">Sút phục hình & Ê buốt muộn</h3>
+            <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Sút phục hình & Ê buốt muộn</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
               Keo dán chứa HEMA hoạt động như "bọt biển" ngậm dịch ngà. Theo thời gian, HEMA bị thủy phân phân hủy lớp lai, gây bong sút, rò rỉ vi kẽ và ê buốt muộn tàn nhẫn cho bệnh nhân.
             </p>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
+          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
               <Layers className="w-8 h-8 text-red-400" />
             </div>
-            <h3 className="font-heading font-bold text-xl text-white mb-4">Kênh cộm khớp & Hở đường viền</h3>
+            <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Kênh cộm khớp & Hở đường viền</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
               Lớp màng (film thickness) của xi măng/keo cũ quá dày (30-50µm) làm "đội" các phục hình Veneer, Tabletop siêu mỏng, gây cộm khớp, buộc phải mài chỉnh hoặc chịu rủi ro nứt vỡ sứ giòn.
             </p>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
+          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
               <Banknote className="w-8 h-8 text-red-400" />
             </div>
-            <h3 className="font-heading font-bold text-xl text-white mb-4">"Đốt tiền" do Thể tích chết Automix</h3>
+            <h3 className="font-heading font-bold text-[13px] min-[375px]:text-[14.5px] min-[400px]:text-[15.5px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">"Đốt tiền" do Thể tích chết Automix</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
               Vòi trộn Automix lãng phí 0.25g - 0.44g xi măng kẹt lại mỗi lần bơm. Mỗi ca gắn vứt đi hàng chục ngàn đồng. Cộng thêm hàng tá chai Primer sứ lỉnh kỉnh dễ bay hơi làm phồng rộp chi phí.
             </p>
