@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+const fs = require('fs');
+
+let content = `import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronLeft, ChevronRight, ZoomIn, ShoppingCart, ArrowUpRight } from 'lucide-react';
 
@@ -213,7 +215,7 @@ export function ShofuCaseStudies() {
               <div className="flex-1 bg-black relative flex items-center justify-center min-h-[40vh] md:min-h-[60vh]">
                 <img
                   src={caseStudies[selectedCaseIndex].images[currentImageIndex]}
-                  alt={`${caseStudies[selectedCaseIndex].title} - Image ${currentImageIndex + 1}`}
+                  alt={\`\${caseStudies[selectedCaseIndex].title} - Image \${currentImageIndex + 1}\`}
                   className="max-w-full max-h-full object-contain"
                 />
                 
@@ -269,3 +271,6 @@ export function ShofuCaseStudies() {
     </section>
   );
 }
+`
+
+fs.writeFileSync('src/components/shofu/ShofuCaseStudies.tsx', content);
