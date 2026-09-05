@@ -84,7 +84,7 @@ export function ShofuOfferModal() {
         'Đồng bộ hóa quy trình trám từ dán dính đến đánh bóng.'
       ],
       products: [
-        { name: '01 Lọ Keo dán BeautiBond Xtreme', value: '1.420.000đ', image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png' },
+        { name: '01 Lọ Keo dán BeautiBond Xtreme', value: '1.420.000đ', image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-4-tang-1-Beautifil-II-LS.webp' },
         { name: '01 Composite đặc Beautifil II', value: '495.000đ', image: 'https://placehold.co/150x150/C43838/ffffff?text=Beautifil+II' },
         { name: '01 Composite lỏng Beautifil Injectable X', value: '595.000đ', image: 'https://placehold.co/150x150/C43838/ffffff?text=Injectable+X' },
         { name: '01 Bộ Đánh Bóng Composite Polishing Kit', value: '740.000đ', image: 'https://placehold.co/150x150/C43838/ffffff?text=Polishing+Kit' }
@@ -116,7 +116,7 @@ export function ShofuOfferModal() {
       name: 'Mua 4 Tặng 1 Composite Thẩm Mỹ BeautiFil II LS',
       badge: 'TIẾT KIỆM 20%',
       headerText: 'BeautiFil II LS',
-      headerImage: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png',
+      headerImage: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-4-tang-1-Beautifil-II-LS.webp',
       title: 'Mua 4 Tặng 1',
       subtitle: 'Composite Thẩm Mỹ BeautiFil II LS',
       desc: 'Sở hữu dòng composite có độ co rút cực thấp (0.85% Vol) và kháng mòn cao.',
