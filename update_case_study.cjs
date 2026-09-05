@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+const fs = require('fs');
+
+const fileContent = `import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronLeft, ChevronRight, ZoomIn, ShoppingCart, ArrowUpRight } from 'lucide-react';
 
@@ -218,7 +220,7 @@ export function ShofuCaseStudies() {
                     key={currentImageIndex}
                     src={caseStudies[selectedCaseIndex].images[currentImageIndex].url}
                     referrerPolicy="no-referrer"
-                    alt={`${caseStudies[selectedCaseIndex].title} - Image ${currentImageIndex + 1}`}
+                    alt={\`\${caseStudies[selectedCaseIndex].title} - Image \${currentImageIndex + 1}\`}
                     custom={direction}
                     variants={slideVariants}
                     initial="enter"
@@ -297,3 +299,6 @@ export function ShofuCaseStudies() {
     </section>
   );
 }
+`;
+fs.writeFileSync('src/components/shofu/ShofuCaseStudies.tsx', fileContent);
+console.log("Updated ShofuCaseStudies.tsx with slide transitions!");
