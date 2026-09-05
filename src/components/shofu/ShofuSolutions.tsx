@@ -167,9 +167,8 @@ export function ShofuSolutions() {
               <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
                 <img referrerPolicy="no-referrer" 
                   src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/super-snap-xtreme.webp" 
-                  alt="Super-Snap Xtreme" 
-                  className="w-full h-full object-cover mix-blend-multiply"
-                  loading="lazy"
+                  alt="Super-Snap X-Treme" 
+                  className="w-full h-full object-cover mix-blend-multiply" loading="lazy" 
                   onError={(e) => {
                     if (!e.currentTarget.src.includes("cdn.jsdelivr.net")) {
                       e.currentTarget.src = "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/super-snap-xtreme.webp";
@@ -177,9 +176,9 @@ export function ShofuSolutions() {
                   }}
                 />
               </div>
-              <div className="font-mono text-[10px] text-[#00ADEF] font-semibold uppercase tracking-widest mb-2">HỆ THỐNG ĐÁNH BÓNG</div>
-              <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Super-Snap Xtreme</h4>
-              <div className="font-mono text-xs text-slate-500 mb-4">Độ bóng 3D hoàn hảo</div>
+              <div className="font-mono text-[10px] text-[#8C2828] font-semibold uppercase tracking-widest mb-2">MŨI ĐÁNH BÓNG HOÀN THIỆN</div>
+              <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Super-Snap X-Treme</h4>
+              <div className="font-mono text-xs text-slate-500 mb-4">Bề mặt hoàn hảo tự nhiên</div>
 
             </motion.div>
             
