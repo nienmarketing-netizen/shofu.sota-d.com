@@ -7,14 +7,14 @@ const caseStudies = [
     id: 1,
     title: "Phục hình Răng thẩm mỹ",
     doctor: "Sử dụng: Beautifil Injectable X",
-    coverImage: "/images/Case Study/case-study-1.1.webp",
+    coverImage: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.1.webp",
     images: [
-      "/images/Case Study/case-study-1.1.webp",
-      "/images/Case Study/case-study-1.2.webp",
-      "/images/Case Study/case-study-1.3.webp",
-      "/images/Case Study/case-study-1.4.webp",
-      "/images/Case Study/case-study-1.5.webp",
-      "/images/Case Study/case-study-1.6.webp"
+      "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.1.webp",
+      "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.2.webp",
+      "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.3.webp",
+      "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.4.webp",
+      "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.5.webp",
+      "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.6.webp"
     ],
     description: "Hiệu ứng quang học xuất sắc, độ bóng tự nhiên duy trì lâu dài."
   },
@@ -139,8 +139,7 @@ export function ShofuCaseStudies() {
               className="relative aspect-square cursor-pointer group bg-slate-200 overflow-hidden sm:rounded-xl"
               onClick={() => openModal(index)}
             >
-              <img
-                src={item.coverImage}
+              <img src={item.coverImage} referrerPolicy="no-referrer"
                 alt={item.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -211,8 +210,7 @@ export function ShofuCaseStudies() {
             >
               {/* Image Area */}
               <div className="flex-1 bg-black relative flex items-center justify-center min-h-[40vh] md:min-h-[60vh]">
-                <img
-                  src={caseStudies[selectedCaseIndex].images[currentImageIndex]}
+                <img src={caseStudies[selectedCaseIndex].images[currentImageIndex]} referrerPolicy="no-referrer"
                   alt={`${caseStudies[selectedCaseIndex].title} - Image ${currentImageIndex + 1}`}
                   className="max-w-full max-h-full object-contain"
                 />
