@@ -42,7 +42,7 @@ main, section, header, footer {
     50% { transform: scale(1.08); }
   }
   .animate-slow-scale-pulse {
-    animation: slow-scale-pulse 2.5s ease-in-out infinite;
+    animation: slow-scale-pulse 2.5s ease-in-out 1;
   }
 }
 
@@ -142,7 +142,7 @@ main, section, header, footer {
     100% { transform: translateX(-50%); }
   }
   .animate-marquee {
-    animation: marquee 15s linear infinite;
+    animation: marquee 15s linear 1;
   }
   .animate-marquee:hover {
     animation-play-state: paused;
