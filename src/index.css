@@ -180,3 +180,8 @@ input[type="submit"],
 input[type="reset"] {
   cursor: pointer;
 }
+
+/* Force cursor pointer for utilities */
+.cursor-pointer {
+  cursor: pointer !important;
+}
