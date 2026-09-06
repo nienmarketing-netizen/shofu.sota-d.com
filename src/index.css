@@ -165,21 +165,14 @@ main, section, header, footer {
 
 
 
-
-
-@layer base {
-  button,
-  a,
-  [role="button"],
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"] {
-    cursor: pointer !important;
-  }
-}
-
-@layer utilities {
-  .cursor-pointer {
-    cursor: pointer !important;
-  }
+/* FORCE CURSOR POINTER GLOBALLY */
+button, 
+button *,
+a, 
+a *,
+[role="button"], 
+[role="button"] *,
+.cursor-pointer,
+.cursor-pointer * {
+  cursor: pointer !important;
 }
