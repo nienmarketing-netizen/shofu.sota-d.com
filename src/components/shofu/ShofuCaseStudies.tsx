@@ -77,10 +77,13 @@ const caseStudies = [
   },
   {
     id: 6,
-    title: "Đóng khe thưa",
+    title: "Thay miếng trám cũ răng cửa trên",
     doctor: "Sử dụng: Beautifil Injectable XSL",
-    coverImage: "https://images.unsplash.com/photo-1576092762791-dd9e2220c476?auto=format&fit=crop&q=80&w=1000",
-    images: [{ url: "https://images.unsplash.com/photo-1576092762791-dd9e2220c476?auto=format&fit=crop&q=80&w=1000", note: "Dễ dàng tạo hình, giữ form tốt, không bị chảy lún." }],
+    coverImage: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-6.1.webp",
+    images: [
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-6.1.webp", note: "Case Study 6 - Tình trạng ban đầu: Miếng trám cũ xỉn màu và hở bờ." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-6.2.webp", note: "Case Study 6 - Hoàn tất thay miếng trám mới, phục hồi thẩm mỹ tự nhiên." }
+    ],
     description: "Dễ dàng tạo hình, giữ form tốt, không bị chảy lún."
   },
   {
