@@ -52,7 +52,7 @@ export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHea
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                   style={{cursor: 'pointer'}} onClick={() => onNavigate?.(item.id)}
+                   onClick={() => onNavigate?.(item.id)}
                   className="font-mono text-sm font-semibold text-slate-700 hover:text-[#00ADEF] transition-colors tracking-wide uppercase"
                 >
                   {item.label}
@@ -72,7 +72,7 @@ export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHea
               </Link>
             ) : (
               <button 
-                 style={{cursor: 'pointer'}} onClick={() => onOpenQuote?.()}
+                 onClick={() => onOpenQuote?.()}
                 className="px-5 py-2.5 rounded-full bg-[#00ADEF] text-white font-mono text-sm font-bold uppercase tracking-wider hover:bg-sky-500 transition-colors shadow-lg shadow-sky-500/25"
               >
                 YÊU CẦU BÁO GIÁ
@@ -86,7 +86,7 @@ export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHea
               <Button
                 variant="primary"
                 size="sm"
-                 style={{cursor: 'pointer'}} onClick={() => onOpenQuote?.()}
+                 onClick={() => onOpenQuote?.()}
                 className="sota-gradient font-heading font-bold text-xs tracking-wider uppercase [word-spacing:1px]"
               >
                 Nhận tư vấn ngay
@@ -94,7 +94,7 @@ export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHea
             ) : (
               <button 
                 className="p-2 text-slate-700"
-                 style={{cursor: 'pointer'}} onClick={(e) => {
+                 onClick={(e) => {
                   e.preventDefault();
                   setIsMobileMenuOpen((prev) => !prev);
                 }}
@@ -115,7 +115,7 @@ export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHea
           {navItems.map((item) => (
             <button
               key={item.id}
-               style={{cursor: 'pointer'}} onClick={() => {
+               onClick={() => {
                 onNavigate?.(item.id);
                 setIsMobileMenuOpen(false);
               }}
@@ -125,7 +125,7 @@ export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHea
             </button>
           ))}
           <button 
-             style={{cursor: 'pointer'}} onClick={() => {
+             onClick={() => {
               onOpenQuote?.();
               setIsMobileMenuOpen(false);
             }}

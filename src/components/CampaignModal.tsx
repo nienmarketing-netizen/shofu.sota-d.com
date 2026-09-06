@@ -82,12 +82,12 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       <div 
         className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
-         style={{cursor: 'pointer'}} onClick={onClose}
+         onClick={onClose}
       />
       
       <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 sm:p-8 animate-in fade-in zoom-in-95 duration-200 overflow-y-auto max-h-[90vh]">
         <button 
-           style={{cursor: 'pointer'}} onClick={onClose}
+           onClick={onClose}
           className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors z-10"
         >
           <X className="w-5 h-5" />
@@ -134,7 +134,7 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
             </div>
             
             <button 
-               style={{cursor: 'pointer'}} onClick={onClose}
+               onClick={onClose}
               className="w-full mt-6 px-6 py-3 rounded-xl bg-slate-900 text-white font-mono text-sm font-bold uppercase tracking-wider hover:bg-slate-800 transition-all shadow-lg active:scale-[0.98]"
             >
               Hoàn tất

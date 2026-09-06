@@ -34,7 +34,7 @@ const AccordionItem: React.FC<{ question: string, answer: string, isOpen: boolea
   return (
     <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white mb-4 transition-all duration-300">
       <button 
-         style={{cursor: 'pointer'}} onClick={onClick}
+         onClick={onClick}
         className="w-full px-5 py-4 sm:px-6 sm:py-5 flex items-center justify-between text-left font-heading font-bold text-slate-900 focus:outline-none"
       >
         <span className="text-sm sm:text-base pr-8">{question}</span>
@@ -143,7 +143,7 @@ export function DirectRestoration() {
             </ul>
 
             <button 
-               style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Mở khóa combo trám MiCD chỉ với 3.250.000đ & nhận bộ kít mài bóng")}
+               onClick={() => openCampaignModal("Mở khóa combo trám MiCD chỉ với 3.250.000đ & nhận bộ kít mài bóng")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <span className="truncate">MỞ KHÓA COMBO TRÁM MiCD & QUÀ TẶNG</span>
@@ -220,7 +220,7 @@ export function DirectRestoration() {
 
           <div className="mt-12 md:mt-16 text-center">
             <button 
-               style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Sở hữu trọn bộ giải pháp trám sinh học & Đặc quyền đào tạo 1:1")}
+               onClick={() => openCampaignModal("Sở hữu trọn bộ giải pháp trám sinh học & Đặc quyền đào tạo 1:1")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <span className="truncate">SỞ HỮU TRỌN BỘ GIẢI PHÁP TRÁM SINH HỌC</span>
@@ -367,7 +367,7 @@ export function DirectRestoration() {
           
           <div className="mt-16 text-center">
              <button 
-               style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Tải miễn phí phác đồ 'Kiểm soát co ngót xoang II' cho phòng khám")}
+               onClick={() => openCampaignModal("Tải miễn phí phác đồ 'Kiểm soát co ngót xoang II' cho phòng khám")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-slate-900 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-slate-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <span className="truncate">TẢI MIỄN PHÍ PHÁC ĐỒ KIỂM SOÁT CO NGÓT XOANG II</span>
@@ -478,7 +478,7 @@ export function DirectRestoration() {
                 question={faq.q}
                 answer={faq.a}
                 isOpen={openFaqIndex === idx}
-                 style={{cursor: 'pointer'}} onClick={() => setOpenFaqIndex(openFaqIndex === idx ? -1 : idx)}
+                 onClick={() => setOpenFaqIndex(openFaqIndex === idx ? -1 : idx)}
               />
             ))}
           </div>
@@ -577,7 +577,7 @@ export function DirectRestoration() {
 
           <div className="flex justify-center w-full">
             <button 
-               style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Mở khóa combo trám MiCD chỉ với 3.250.000đ & nhận bộ kít mài bóng")}
+               onClick={() => openCampaignModal("Mở khóa combo trám MiCD chỉ với 3.250.000đ & nhận bộ kít mài bóng")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <span className="truncate">ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY</span>

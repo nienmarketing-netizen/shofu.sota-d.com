@@ -89,7 +89,7 @@ export function ShofuAbout() {
               </p>
               
               <button 
-                 style={{cursor: 'pointer'}} onClick={() => setIsReportExpanded(!isReportExpanded)}
+                 onClick={() => setIsReportExpanded(!isReportExpanded)}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#00ADEF] text-white font-bold hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm sm:text-base"
               >
                 {isReportExpanded ? 'Thu gọn báo cáo' : 'Xem toàn bộ thông tin'}

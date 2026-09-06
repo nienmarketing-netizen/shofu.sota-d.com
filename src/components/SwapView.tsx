@@ -66,7 +66,7 @@ export const SwapView: React.FC = () => {
        {[0.1, 0.5, 1.0].map((val) => (
         <button
          key={val}
-          style={{cursor: 'pointer'}} onClick={() => setSlippage(val)}
+          onClick={() => setSlippage(val)}
          className={`px-2 py-1 rounded text-xs font-mono transition-colors ${
           slippage === val 
            ? 'bg-[#EA580C] text-slate-900 font-bold' 
@@ -117,7 +117,7 @@ export const SwapView: React.FC = () => {
      {/* Switch Tokens Arrow */}
      <div className="flex justify-center -my-3 relative z-10">
       <button
-        style={{cursor: 'pointer'}} onClick={handleSwitchTokens}
+        onClick={handleSwitchTokens}
        className="p-3 bg-[#0F1115] border border-[#F7931A]/60 hover:border-[#F7931A] text-[#F7931A] hover:bg-[#EA580C]/20 rounded-full shadow-md hover:scale-110 transition-all"
       >
        <ArrowLeftRight className="w-5 h-5" />
@@ -183,7 +183,7 @@ export const SwapView: React.FC = () => {
       variant="primary"
       size="lg"
       fullWidth
-       style={{cursor: 'pointer'}} onClick={handleExecuteSwap}
+       onClick={handleExecuteSwap}
       disabled={isSwapping || parsedFrom <= 0}
       icon={<RefreshCw className={`w-5 h-5 ${isSwapping ? 'animate-spin' : ''}`} />}
      >

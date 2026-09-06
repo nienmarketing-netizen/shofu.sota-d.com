@@ -170,11 +170,20 @@ main, section, header, footer {
 
 
 
-/* RAW FORCE CURSOR POINTER */
-button, button *,
-a, a *,
-[role="button"], [role="button"] *,
-.cursor-pointer, .cursor-pointer *,
-[class*="cursor-pointer"], [class*="cursor-pointer"] * {
+
+@layer utilities {
+  .cursor-pointer {
+    cursor: pointer !important;
+  }
+}
+button, a, [role="button"] {
   cursor: pointer !important;
+}
+
+/* Fallback for cursors just in case */
+.cursor-pointer, button, a, [role="button"] {
+  cursor: pointer !important;
+}
+button:disabled, [disabled], .cursor-not-allowed {
+  cursor: not-allowed !important;
 }
