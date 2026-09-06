@@ -148,15 +148,7 @@ main, section, header, footer {
 
 
 
-  button,
-  a,
-  [role="button"],
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"],
-  .cursor-pointer {
-    cursor: pointer !important;
-  }
+  
 
 @layer utilities {
   @keyframes marquee {
@@ -171,17 +163,23 @@ main, section, header, footer {
   }
 }
 
-/* Restore cursor pointer for buttons and links (Tailwind v4 removed this) */
-button,
-a,
-[role="button"],
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
-  cursor: pointer;
+
+
+
+
+@layer base {
+  button,
+  a,
+  [role="button"],
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    cursor: pointer !important;
+  }
 }
 
-/* Force cursor pointer for utilities */
-.cursor-pointer {
-  cursor: pointer !important;
+@layer utilities {
+  .cursor-pointer {
+    cursor: pointer !important;
+  }
 }
