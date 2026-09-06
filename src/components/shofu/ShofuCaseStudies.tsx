@@ -208,7 +208,10 @@ export function ShofuCaseStudies() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                 <ZoomIn className="w-6 h-6 text-white mb-2" />
                 <h3 className="font-heading font-bold text-white text-sm sm:text-base leading-tight mb-1">{item.title}</h3>
-                <p className="font-body text-slate-300 text-xs truncate">{item.doctor}</p>
+                <p 
+                  className="font-body text-slate-300 text-xs truncate"
+                  dangerouslySetInnerHTML={{ __html: item.doctor }}
+                />
               </div>
             </motion.div>
           ))}
@@ -307,9 +310,10 @@ export function ShofuCaseStudies() {
                 <h3 className="font-heading font-bold text-2xl text-slate-900 mb-2">
                   {caseStudies[selectedCaseIndex].title}
                 </h3>
-                <div className="text-[#00ADEF] font-bold text-sm mb-4">
-                  {caseStudies[selectedCaseIndex].doctor}
-                </div>
+                <div 
+                  className="text-[#00ADEF] font-bold text-sm mb-4"
+                  dangerouslySetInnerHTML={{ __html: caseStudies[selectedCaseIndex].doctor }}
+                />
                 <div className="w-12 h-1 bg-slate-200 mb-4"></div>
                 
                 <div className="relative min-h-[80px]">
