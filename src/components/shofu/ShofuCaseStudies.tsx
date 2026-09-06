@@ -66,10 +66,13 @@ const caseStudies = [
   },
   {
     id: 5,
-    title: "Phục hình răng trước mẻ",
+    title: "Phục hồi đóng tam giác đen",
     doctor: "Sử dụng: Beautifil II",
-    coverImage: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=1000",
-    images: [{ url: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=1000", note: "Màu sắc tiệp hoàn toàn, đường hoàn tất vô hình." }],
+    coverImage: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-5.1.webp",
+    images: [
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-5.1.webp", note: "Case Study 5 - Tình trạng ban đầu: Tam giác đen vùng răng cửa dưới." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-5.2.webp", note: "Case Study 5 - Phục hình hoàn tất, khe hở được đóng kín thẩm mỹ." }
+    ],
     description: "Màu sắc tiệp hoàn toàn, đường hoàn tất vô hình."
   },
   {
