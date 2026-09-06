@@ -16,7 +16,7 @@ html, body {
 
 body {
   position: relative;
-  touch-action: pan-y;
+  
 }
 
 #root {
@@ -165,14 +165,15 @@ main, section, header, footer {
 
 
 
-/* FORCE CURSOR POINTER GLOBALLY */
-button, 
-button *,
-a, 
-a *,
-[role="button"], 
-[role="button"] *,
+
+
+
+
+/* RAW FORCE CURSOR POINTER */
+button,
+a,
+[role="button"],
 .cursor-pointer,
-.cursor-pointer * {
+[class*="cursor-pointer"] {
   cursor: pointer !important;
 }

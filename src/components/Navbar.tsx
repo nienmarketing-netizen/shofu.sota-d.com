@@ -17,7 +17,7 @@ export const Navbar: React.FC<NavbarProps> = ({
    <div className="w-[90%] lg:w-[80%] mx-auto h-20 flex items-center justify-between gap-4">
     {/* Brand Logo & Event Badge */}
     <div 
-     onClick={() => onScrollToSection('hero')}
+      style={{cursor: 'pointer'}} onClick={() => onScrollToSection('hero')}
      className="flex items-center gap-3 cursor-pointer group select-none"
     >
      {/* Sota-D Red & SHOFU Cyan Gradient Icon Circle */}
@@ -39,16 +39,16 @@ export const Navbar: React.FC<NavbarProps> = ({
 
     {/* Quick Anchor Navigation Links */}
     <nav className="hidden lg:flex items-center gap-6 font-mono text-xs uppercase tracking-wider text-slate-600">
-     <button onClick={() => onScrollToSection('loi-ich')} className="hover:text-[#00ADEF] transition-colors">
+     <button  style={{cursor: 'pointer'}} onClick={() => onScrollToSection('loi-ich')} className="hover:text-[#00ADEF] transition-colors">
       Công nghệ SHOFU
      </button>
-     <button onClick={() => onScrollToSection('lich-trinh')} className="hover:text-[#00ADEF] transition-colors">
+     <button  style={{cursor: 'pointer'}} onClick={() => onScrollToSection('lich-trinh')} className="hover:text-[#00ADEF] transition-colors">
       Lịch trình & Báo cáo viên
      </button>
-     <button onClick={() => onScrollToSection('dac-quyen')} className="hover:text-[#00ADEF] transition-colors">
+     <button  style={{cursor: 'pointer'}} onClick={() => onScrollToSection('dac-quyen')} className="hover:text-[#00ADEF] transition-colors">
       Đặc quyền tham dự
      </button>
-     <button onClick={() => onScrollToSection('dang-ky')} className="hover:text-[#C43838] font-semibold transition-colors flex items-center gap-1">
+     <button  style={{cursor: 'pointer'}} onClick={() => onScrollToSection('dang-ky')} className="hover:text-[#C43838] font-semibold transition-colors flex items-center gap-1">
       <UserCheck className="w-3.5 h-3.5 text-[#00ADEF]" />
       Đăng ký giữ suất
      </button>
@@ -59,7 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({
      <Button
       variant="outline"
       size="sm"
-      onClick={onOpenAiCopilot}
+       style={{cursor: 'pointer'}} onClick={onOpenAiCopilot}
       className="border-sky-300 text-[#00ADEF] hover:bg-sky-50 font-mono text-xs"
       icon={<Sparkles className="w-3.5 h-3.5 text-[#00ADEF] animate-pulse" />}
      >
@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({
      <Button
       variant="primary"
       size="sm"
-      onClick={() => onScrollToSection('dang-ky')}
+       style={{cursor: 'pointer'}} onClick={() => onScrollToSection('dang-ky')}
       className="sota-gradient font-heading font-bold text-xs"
      >
       Giữ suất ngay

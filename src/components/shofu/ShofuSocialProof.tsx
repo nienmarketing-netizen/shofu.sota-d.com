@@ -243,7 +243,7 @@ export function ShofuSocialProof() {
 
         {/* CTA Button After Pillars */}
         <div className="mt-8 mb-20 flex justify-center">
-          <button onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
+          <button  style={{cursor: 'pointer'}} onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
             <ShoppingCart className="w-5 h-5" />
             <span>Xem ưu đãi và đặt hàng</span>
             <ArrowUpRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -294,7 +294,7 @@ export function ShofuSocialProof() {
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                onClick={() => scrollTo(index)}
+                 style={{cursor: 'pointer'}} onClick={() => scrollTo(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === selectedIndex ? 'w-6 bg-[#00ADEF]' : 'bg-slate-300 hover:bg-slate-400'
                 }`}
@@ -305,7 +305,7 @@ export function ShofuSocialProof() {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <button onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
+          <button  style={{cursor: 'pointer'}} onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
             <ShoppingCart className="w-5 h-5" />
             <span>Xem ưu đãi và đặt hàng</span>
             <ArrowUpRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />

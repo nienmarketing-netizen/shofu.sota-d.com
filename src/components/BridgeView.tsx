@@ -56,7 +56,7 @@ export const BridgeView: React.FC = () => {
      {/* Direction Toggle */}
      <div className="flex items-center justify-between p-1 bg-black/60 border border-slate-200 rounded-xl font-heading text-xs font-semibold">
       <button
-       onClick={() => setDirection('L1-to-L2')}
+        style={{cursor: 'pointer'}} onClick={() => setDirection('L1-to-L2')}
        className={`flex-1 py-2.5 rounded-lg transition-all ${
         direction === 'L1-to-L2' 
          ? 'bg-gradient-to-r from-[#EA580C] to-[#F7931A] text-white shadow-md' 
@@ -66,7 +66,7 @@ export const BridgeView: React.FC = () => {
        Deposit: Bitcoin L1 → SatoshiFi L2
       </button>
       <button
-       onClick={() => setDirection('L2-to-L1')}
+        style={{cursor: 'pointer'}} onClick={() => setDirection('L2-to-L1')}
        className={`flex-1 py-2.5 rounded-lg transition-all ${
         direction === 'L2-to-L1' 
          ? 'bg-gradient-to-r from-[#EA580C] to-[#F7931A] text-white shadow-md' 
@@ -124,7 +124,7 @@ export const BridgeView: React.FC = () => {
       variant="primary"
       size="lg"
       fullWidth
-      onClick={handleStartBridge}
+       style={{cursor: 'pointer'}} onClick={handleStartBridge}
       disabled={isBridging || parseFloat(bridgeAmount || '0') <= 0}
       icon={<Bitcoin className={`w-5 h-5 ${isBridging ? 'animate-spin' : ''}`} />}
      >

@@ -13,7 +13,7 @@ const FaqItem = ({ question, answer }: { question: string, answer: React.ReactNo
   return (
     <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white mb-4 transition-all duration-300">
       <button 
-        onClick={() => setIsOpen(!isOpen)}
+         style={{cursor: 'pointer'}} onClick={() => setIsOpen(!isOpen)}
         className="w-full px-5 py-4 sm:px-6 sm:py-5 flex items-center justify-between text-left font-heading font-bold text-slate-900 focus:outline-none"
       >
         <span className="text-sm sm:text-base pr-8">{question}</span>
@@ -186,7 +186,7 @@ export function IndirectRestoration() {
             </ul>
 
             <button 
-              onClick={() => openCampaignModal("Nhận mẫu thử BBX 2ml & Ưu đãi")}
+               style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Nhận mẫu thử BBX 2ml & Ưu đãi")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -258,7 +258,7 @@ export function IndirectRestoration() {
 
         <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-            onClick={() => openCampaignModal("Tư vấn giải pháp triệt tiêu rủi ro")}
+             style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Tư vấn giải pháp triệt tiêu rủi ro")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -419,7 +419,7 @@ export function IndirectRestoration() {
 
         <div className="mt-4 md:mt-12 text-center">
           <button 
-            onClick={() => openCampaignModal("Yêu cầu tư vấn")}
+             style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Yêu cầu tư vấn")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -617,7 +617,7 @@ export function IndirectRestoration() {
         
         <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-            onClick={() => openCampaignModal("Tư vấn giải pháp tối ưu chi phí")}
+             style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Tư vấn giải pháp tối ưu chi phí")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -832,7 +832,7 @@ export function IndirectRestoration() {
 
           <div className="mt-12 md:mt-16 text-center relative z-10">
             <button 
-              onClick={() => openCampaignModal("Trải nghiệm phác đồ 3 bước")}
+               style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Trải nghiệm phác đồ 3 bước")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -937,7 +937,7 @@ export function IndirectRestoration() {
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
 <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-            onClick={() => openCampaignModal("Gia nhập cộng đồng MiCD")}
+             style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Gia nhập cộng đồng MiCD")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -1044,7 +1044,7 @@ export function IndirectRestoration() {
 
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full">
                 <button 
-                  onClick={() => openCampaignModal("Đăng ký combo 'Giomer không ê buốt'")}
+                   style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Đăng ký combo 'Giomer không ê buốt'")}
                   className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-white hover:text-slate-900 hover:shadow-xl hover:shadow-white/20 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
                 >
                   <span className="truncate">ĐĂNG KÝ COMBO "GIOMER KHÔNG Ê BUỐT"</span>
@@ -1150,7 +1150,7 @@ export function IndirectRestoration() {
           
           <div className="mt-12 md:mt-16 text-center relative z-10">
             <button 
-              onClick={() => openCampaignModal("Bác sĩ còn câu hỏi? Nhận tư vấn ngay")}
+               style={{cursor: 'pointer'}} onClick={() => openCampaignModal("Bác sĩ còn câu hỏi? Nhận tư vấn ngay")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />

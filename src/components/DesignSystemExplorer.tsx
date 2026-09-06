@@ -62,7 +62,7 @@ export const DesignSystemExplorer: React.FC = () => {
     ].map((tab) => (
      <button
       key={tab.id}
-      onClick={() => setActiveTab(tab.id as any)}
+       style={{cursor: 'pointer'}} onClick={() => setActiveTab(tab.id as any)}
       className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all ${
        activeTab === tab.id
         ? 'bg-gradient-to-r from-[#EA580C] to-[#F7931A] text-white shadow-md'
@@ -87,7 +87,7 @@ export const DesignSystemExplorer: React.FC = () => {
       {colors.map((c) => (
        <div
         key={c.name}
-        onClick={() => handleCopy(c.hex, c.name)}
+         style={{cursor: 'pointer'}} onClick={() => handleCopy(c.hex, c.name)}
         className="bg-[#0F1115] border border-slate-200 rounded-2xl p-5 hover:border-[#F7931A]/60 transition-all cursor-pointer group corner-accents"
        >
         <div 
@@ -265,7 +265,7 @@ export const DesignSystemExplorer: React.FC = () => {
       <Button
        variant="outline"
        size="sm"
-       onClick={() => handleCopy(cssSnippet, 'CSS Snippet')}
+        style={{cursor: 'pointer'}} onClick={() => handleCopy(cssSnippet, 'CSS Snippet')}
        icon={copiedText === 'CSS Snippet' ? <Check className="w-4 h-4 text-sky-500" /> : <Copy className="w-4 h-4" />}
       >
        {copiedText === 'CSS Snippet' ? "Copied Tokens!" : "Copy CSS Variables"}

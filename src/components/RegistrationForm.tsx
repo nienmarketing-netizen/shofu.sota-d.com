@@ -366,7 +366,7 @@ export const RegistrationForm: React.FC = () => {
        </div>
        <div className="flex justify-center gap-3 pt-2">
         <Button
-         onClick={handleDownloadTicket}
+          style={{cursor: 'pointer'}} onClick={handleDownloadTicket}
          disabled={isDownloading}
          className="font-mono text-xs bg-[#00ADEF] hover:bg-sky-600 text-white gap-2"
         >
@@ -377,7 +377,7 @@ export const RegistrationForm: React.FC = () => {
          variant="outline"
 
          size="sm"
-         onClick={handleResetForm}
+          style={{cursor: 'pointer'}} onClick={handleResetForm}
          className="font-mono text-xs"
         >
          Đăng ký cho đồng nghiệp khác
@@ -394,7 +394,7 @@ export const RegistrationForm: React.FC = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
           <div className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full relative shadow-2xl animate-in fade-in zoom-in duration-300">
             <button 
-              onClick={() => setShowPopup(false)}
+               style={{cursor: 'pointer'}} onClick={() => setShowPopup(false)}
               className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors"
             >
               <X className="w-5 h-5" />
@@ -414,7 +414,7 @@ export const RegistrationForm: React.FC = () => {
               </p>
               <div className="pt-4">
                 <Button 
-                  onClick={() => setShowPopup(false)}
+                   style={{cursor: 'pointer'}} onClick={() => setShowPopup(false)}
                   className="w-full font-heading uppercase"
                 >
                   Đóng thông báo

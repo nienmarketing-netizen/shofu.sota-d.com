@@ -209,7 +209,7 @@ export function ShofuOfferModal() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={close}
+             style={{cursor: 'pointer'}} onClick={close}
             className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
           />
 
@@ -222,7 +222,7 @@ export function ShofuOfferModal() {
           >
             {/* Close Button */}
             <button 
-              onClick={close}
+               style={{cursor: 'pointer'}} onClick={close}
               className="absolute top-4 right-4 z-50 p-2 bg-slate-100/80 backdrop-blur hover:bg-slate-200 text-slate-600 rounded-full transition-colors shadow-sm"
             >
               <X className="w-5 h-5" />
@@ -330,7 +330,7 @@ export function ShofuOfferModal() {
                     return (
                       <div 
                         key={key}
-                        onClick={() => {
+                         style={{cursor: 'pointer'}} onClick={() => {
                           const id = Number(key) as 1|2|3|4;
                           setActiveProductIds(prev => prev.includes(id) ? prev.filter(pId => pId !== id) : [...prev, id]);
                         }}
@@ -435,7 +435,7 @@ export function ShofuOfferModal() {
                   </p>
 
                   <button 
-                    onClick={close}
+                     style={{cursor: 'pointer'}} onClick={close}
                     className="w-full bg-[#111827] text-white font-bold px-8 py-4 rounded-xl hover:bg-slate-800 transition-colors tracking-widest text-sm"
                   >
                     HOÀN TẤT

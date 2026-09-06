@@ -115,7 +115,7 @@ export function ShofuLeadMagnet() {
                 </div>
 
                 <button 
-                  onClick={() => {
+                   style={{cursor: 'pointer'}} onClick={() => {
                     setIsSubmitted(false);
                     setFormData({ name: '', phone: '', email: '' });
                   }}

@@ -90,7 +90,7 @@ export const Hero: React.FC<HeroProps> = ({
        <Button
         variant="primary"
         size="lg"
-        onClick={onScrollToForm}
+         style={{cursor: 'pointer'}} onClick={onScrollToForm}
         className="sota-gradient font-heading font-bold text-xs sm:text-sm text-white hover:scale-[1.02] transition-transform w-full sm:w-auto justify-start text-left px-3.5 sm:px-7 py-3 leading-snug"
         icon={<UserCheck className="w-5 h-5 text-white shrink-0" />}
        >
@@ -103,7 +103,7 @@ export const Hero: React.FC<HeroProps> = ({
        <Button
         variant="outline"
         size="lg"
-        onClick={onScrollToSchedule}
+         style={{cursor: 'pointer'}} onClick={onScrollToSchedule}
         className="glass-card border-sky-200 text-slate-900 hover:bg-slate-100 font-heading font-semibold text-xs sm:text-sm w-full sm:w-auto justify-start text-left"
         icon={<Clock className="w-4 h-4 text-[#00ADEF] shrink-0" />}
        >

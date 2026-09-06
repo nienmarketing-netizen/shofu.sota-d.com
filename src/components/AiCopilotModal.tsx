@@ -113,7 +113,7 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({ isOpen, onClose 
       </div>
      </div>
 
-     <button onClick={onClose} className="text-slate-600 hover:text-slate-900 transition-colors p-1">
+     <button  style={{cursor: 'pointer'}} onClick={onClose} className="text-slate-600 hover:text-slate-900 transition-colors p-1">
       <X className="w-6 h-6" />
      </button>
     </div>
@@ -163,7 +163,7 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({ isOpen, onClose 
      {quickPrompts.map((p, idx) => (
       <button
        key={idx}
-       onClick={() => handleSendMessage(p)}
+        style={{cursor: 'pointer'}} onClick={() => handleSendMessage(p)}
        className="px-3 py-1 rounded-full bg-slate-50 hover:bg-sky-100 border border-slate-200 hover:border-sky-300 text-[11px] font-mono text-slate-600 hover:text-slate-900 whitespace-nowrap transition-all"
       >
        {p}
@@ -181,7 +181,7 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({ isOpen, onClose 
      />
      <Button
       variant="primary"
-      onClick={() => handleSendMessage()}
+       style={{cursor: 'pointer'}} onClick={() => handleSendMessage()}
       disabled={loading || !inputQuery.trim()}
       icon={<Send className="w-4 h-4" />}
      >

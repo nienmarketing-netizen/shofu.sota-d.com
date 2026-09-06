@@ -256,7 +256,7 @@ export const VaultsView: React.FC = () => {
        <Button
         variant="primary"
         size="md"
-        onClick={() => handleOpenStakeModal(vault)}
+         style={{cursor: 'pointer'}} onClick={() => handleOpenStakeModal(vault)}
         icon={<Zap className="w-4 h-4" />}
        >
         Stake {vault.asset}
@@ -279,7 +279,7 @@ export const VaultsView: React.FC = () => {
         </h3>
        </div>
        <button 
-        onClick={() => setIsStaking(false)}
+         style={{cursor: 'pointer'}} onClick={() => setIsStaking(false)}
         className="text-slate-600 hover:text-slate-900 transition-colors"
        >
         <X className="w-5 h-5" />
@@ -320,7 +320,7 @@ export const VaultsView: React.FC = () => {
          variant="primary"
          fullWidth
          size="lg"
-         onClick={handleConfirmStake}
+          style={{cursor: 'pointer'}} onClick={handleConfirmStake}
          icon={<Zap className="w-4 h-4" />}
         >
          Confirm Bitcoin Lock Script
@@ -348,7 +348,7 @@ export const VaultsView: React.FC = () => {
         <div className="bg-black/60 p-3 rounded-xl border border-slate-200 font-mono text-xs text-[#F7931A]">
          Tx Hash: 0x89fa21...384b
         </div>
-        <Button variant="gold" fullWidth onClick={() => setIsStaking(false)}>
+        <Button variant="gold" fullWidth  style={{cursor: 'pointer'}} onClick={() => setIsStaking(false)}>
          Close & View Position
         </Button>
        </div>

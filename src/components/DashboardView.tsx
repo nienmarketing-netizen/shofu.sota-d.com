@@ -98,7 +98,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
      <Button
       variant="outline"
       size="sm"
-      onClick={handleRefreshData}
+       style={{cursor: 'pointer'}} onClick={handleRefreshData}
       icon={<RefreshCw className={`w-4 h-4 ${refreshing ? 'animate-spin' : ''}`} />}
      >
       Refresh Feed
@@ -106,7 +106,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
      <Button
       variant="gold"
       size="sm"
-      onClick={onNavigateToVaults}
+       style={{cursor: 'pointer'}} onClick={onNavigateToVaults}
       icon={<Zap className="w-4 h-4" />}
      >
       Deposit & Stake
@@ -127,7 +127,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       </p>
      </div>
 
-     <Button variant="link" onClick={onNavigateToVaults} icon={<ArrowUpRight className="w-4 h-4" />}>
+     <Button variant="link"  style={{cursor: 'pointer'}} onClick={onNavigateToVaults} icon={<ArrowUpRight className="w-4 h-4" />}>
       View All 8 Vaults
      </Button>
     </div>
@@ -167,7 +167,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
        <CardFooter>
         <span className="font-mono text-xs text-slate-600">{vault.protocol}</span>
-        <Button variant="primary" size="sm" onClick={onNavigateToVaults}>
+        <Button variant="primary" size="sm"  style={{cursor: 'pointer'}} onClick={onNavigateToVaults}>
          Stake {vault.asset}
         </Button>
        </CardFooter>
@@ -298,10 +298,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
        Bridge native BTC instantly to SatoshiFi L2 to participate in Runes token trading and high-yield staking.
       </p>
       <div className="flex items-center gap-3 pt-2">
-       <Button variant="primary" size="sm" onClick={onNavigateToBridge} fullWidth>
+       <Button variant="primary" size="sm"  style={{cursor: 'pointer'}} onClick={onNavigateToBridge} fullWidth>
         Bridge BTC to L2
        </Button>
-       <Button variant="outline" size="sm" onClick={onNavigateToSwap} fullWidth>
+       <Button variant="outline" size="sm"  style={{cursor: 'pointer'}} onClick={onNavigateToSwap} fullWidth>
         Runes Swap
        </Button>
       </div>

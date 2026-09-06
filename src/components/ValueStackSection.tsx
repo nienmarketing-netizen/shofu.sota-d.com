@@ -343,7 +343,7 @@ export const ValueStackSection: React.FC = () => {
         {currentQuestion.options.map((opt, idx) => (
          <button
           key={idx}
-          onClick={() => handleQuizSubmit(idx)}
+           style={{cursor: 'pointer'}} onClick={() => handleQuizSubmit(idx)}
           disabled={showQuizResult}
           className={`p-3 rounded-xl text-left border transition-all ${
            quizAnswer === idx
@@ -372,7 +372,7 @@ export const ValueStackSection: React.FC = () => {
          {currentQuestion.insight}
         </div>
         <button
-         onClick={handleNextQuestion}
+          style={{cursor: 'pointer'}} onClick={handleNextQuestion}
          className="self-end px-5 py-2 bg-[#C43838] text-white font-bold text-xs rounded-full shadow-md hover:bg-red-700 transition-colors"
         >
          {currentQuestionIndex < quizData.length - 1 ? 'Câu tiếp theo →' : 'Làm lại từ đầu ↺'}

@@ -220,7 +220,7 @@ export function ShofuCaseStudies() {
 
       {/* CTA Button */}
       <div className="text-center px-4 relative z-10">
-        <button onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
+        <button  style={{cursor: 'pointer'}} onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
           <ShoppingCart className="w-5 h-5" />
           <span>Xem ưu đãi và đặt hàng</span>
           <ArrowUpRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -235,12 +235,12 @@ export function ShofuCaseStudies() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center backdrop-blur-sm"
-            onClick={() => setSelectedCaseIndex(null)}
+             style={{cursor: 'pointer'}} onClick={() => setSelectedCaseIndex(null)}
           >
             {/* Close Button */}
             <button
               className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/70 hover:text-white transition-colors z-[110] p-2 bg-black/20 rounded-full hover:bg-black/40"
-              onClick={() => setSelectedCaseIndex(null)}
+               style={{cursor: 'pointer'}} onClick={() => setSelectedCaseIndex(null)}
             >
               <X className="w-6 h-6" />
             </button>
@@ -253,7 +253,7 @@ export function ShofuCaseStudies() {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="relative w-full max-w-5xl max-h-[90vh] flex flex-col md:flex-row bg-slate-900 rounded-2xl overflow-hidden shadow-2xl m-4"
-              onClick={(e) => e.stopPropagation()}
+               style={{cursor: 'pointer'}} onClick={(e) => e.stopPropagation()}
             >
               {/* Image Area with Slide Animation */}
               <div className="flex-1 bg-black relative flex items-center justify-center min-h-[40vh] md:min-h-[60vh] overflow-hidden">
@@ -287,13 +287,13 @@ export function ShofuCaseStudies() {
                 {hasMultipleImages && (
                   <>
                     <button 
-                      onClick={handlePrev} 
+                       style={{cursor: 'pointer'}} onClick={handlePrev} 
                       className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-black/40 rounded-full text-white/70 hover:text-white hover:bg-black/60 transition-colors z-[120]"
                     >
                       <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
                     </button>
                     <button 
-                      onClick={handleNext} 
+                       style={{cursor: 'pointer'}} onClick={handleNext} 
                       className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-black/40 rounded-full text-white/70 hover:text-white hover:bg-black/60 transition-colors z-[120]"
                     >
                       <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />

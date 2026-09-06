@@ -81,7 +81,7 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
             >
               <button 
-                onClick={onCTA}
+                 style={{cursor: 'pointer'}} onClick={onCTA}
                 className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#00ADEF] text-white font-mono text-sm font-bold uppercase tracking-wider hover:bg-sky-500 transition-all shadow-xl shadow-sky-500/30 flex items-center justify-center gap-2 group"
               >
                 Nhận Tư Vấn Ngay
