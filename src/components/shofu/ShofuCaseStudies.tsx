@@ -22,8 +22,16 @@ const caseStudies = [
     id: 2,
     title: "Trám xoang II sâu",
     doctor: "Sử dụng: Beautilink SA & BeautiBond",
-    coverImage: "https://images.unsplash.com/photo-1598256989800-fea5ce5146f2?auto=format&fit=crop&q=80&w=1000",
-    images: [{ url: "https://images.unsplash.com/photo-1598256989800-fea5ce5146f2?auto=format&fit=crop&q=80&w=1000", note: "Độ khít sát biên hoàn hảo, ngăn ngừa nhạy cảm sau phục hình." }],
+    coverImage: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.1.webp",
+    images: [
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.1.webp", note: "Case Study 2 - Tình trạng ban đầu." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.2.webp", note: "Case Study 2 - Sửa soạn khoang trám." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.3.webp", note: "Case Study 2 - Xử lý bề mặt với hệ thống dán." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.4.webp", note: "Case Study 2 - Lớp composite đầu tiên." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.5.webp", note: "Case Study 2 - Tạo hình giải phẫu mặt nhai." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.6.webp", note: "Case Study 2 - Đánh bóng hoàn thiện." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.7.webp", note: "Case Study 2 - Kết quả sau điều trị: khít sát và thẩm mỹ cao." }
+    ],
     description: "Độ khít sát biên hoàn hảo, ngăn ngừa nhạy cảm sau phục hình."
   },
   {
