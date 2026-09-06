@@ -7,11 +7,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-  overflow-x: clip !important;
-
+  overflow-x: hidden;
 }
 
 body {
@@ -20,18 +16,12 @@ body {
 }
 
 #root {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-  overflow-x: clip !important;
   position: relative;
+  overflow-x: hidden;
 }
 
 main, section, header, footer {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-  overflow-x: clip !important;
+  position: relative;
 }
 
 @layer utilities {
@@ -160,15 +150,24 @@ main, section, header, footer {
 }
 
 /* Comprehensive Cursor Fix */
-button, button *, 
-a, a *, 
-[role="button"], [role="button"] *,
-.cursor-pointer, .cursor-pointer * {
+button, a, [role="button"], .cursor-pointer {
   cursor: pointer !important;
+}
+
+/* 
+  CRITICAL FIX: 
+  Prevent children of buttons/links from intercepting pointer events.
+  This stops the browser from switching event targets to <span> or <svg> 
+  inside the button, which often causes the cursor to flicker or disappear 
+  if there's a transition or React state update.
+*/
+button > *, a > *, [role="button"] > *, .cursor-pointer > * {
+  pointer-events: none !important;
 }
 
 button:disabled, button:disabled *,
 [disabled], [disabled] *,
 .cursor-not-allowed, .cursor-not-allowed * {
   cursor: not-allowed !important;
+  pointer-events: none !important;
 }

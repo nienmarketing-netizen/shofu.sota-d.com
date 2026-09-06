@@ -12,6 +12,7 @@ import { ContactModal } from '../components/ContactModal';
 import { ShofuOfferModal } from "../components/shofu/ShofuOfferModal";
 
 export default function ShofuLanding() {
+  console.log("ShofuLanding rendering");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState<'consult' | 'quote'>('consult');
 
