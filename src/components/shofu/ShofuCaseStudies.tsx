@@ -88,11 +88,14 @@ const caseStudies = [
   },
   {
     id: 7,
-    title: "Gắn Inlay/Onlay",
-    doctor: "Sử dụng: Beautilink SA",
-    coverImage: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1000",
-    images: [{ url: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1000", note: "Độ cứng uốn cao, dễ dàng làm sạch xi măng thừa." }],
-    description: "Độ cứng uốn cao, dễ dàng làm sạch xi măng thừa."
+    title: "Phục hồi thẩm mỹ răng cửa",
+    doctor: "Sử dụng: Beautifil II",
+    coverImage: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-7.1.webp",
+    images: [
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-7.1.webp", note: "Case Study 7 - Tình trạng ban đầu: Tổn thương răng cửa trước." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-7.2.webp", note: "Case Study 7 - Phục hình thẩm mỹ hoàn tất, khôi phục nụ cười rạng rỡ." }
+    ],
+    description: "Độ bền cơ học tốt và tính thẩm mỹ hoàn hảo."
   },
   {
     id: 8,
