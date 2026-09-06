@@ -38,8 +38,13 @@ const caseStudies = [
     id: 3,
     title: "Phục hồi cùi răng",
     doctor: "Sử dụng: Core Paste & Bond",
-    coverImage: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1000",
-    images: [{ url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1000", note: "Độ bền cơ học cao, chịu lực nén tốt, thao tác nhanh." }],
+    coverImage: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-3.1.webp",
+    images: [
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-3.1.webp", note: "Case Study 3 - Tình trạng ban đầu: cùi răng tổn thương." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-3.2.webp", note: "Case Study 3 - Sửa soạn và làm sạch bề mặt." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-3.3.webp", note: "Case Study 3 - Quá trình tái tạo cùi." },
+      { url: "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-3.4.webp", note: "Case Study 3 - Hoàn tất phục hình cùi răng vững chắc." }
+    ],
     description: "Độ bền cơ học cao, chịu lực nén tốt, thao tác nhanh."
   },
   {
