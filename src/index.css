@@ -147,7 +147,7 @@ main, section, header, footer {
 }
 
 
-@layer base {
+
   button,
   a,
   [role="button"],
@@ -157,7 +157,6 @@ main, section, header, footer {
   .cursor-pointer {
     cursor: pointer !important;
   }
-}
 
 @layer utilities {
   @keyframes marquee {
@@ -170,4 +169,14 @@ main, section, header, footer {
   .animate-marquee:hover {
     animation-play-state: paused;
   }
+}
+
+/* Restore cursor pointer for buttons and links (Tailwind v4 removed this) */
+button,
+a,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
 }
