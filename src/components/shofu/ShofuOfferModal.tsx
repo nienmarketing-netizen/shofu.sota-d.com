@@ -486,21 +486,31 @@ export function ShofuOfferModal() {
 
 
                     <div className="pt-3">
-                      <label className="flex items-start gap-4 p-4 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition-colors group">
-                        <input
-                          type="checkbox"
-                          checked={formData.wantsCustomOffer}
-                          onChange={(e) => setFormData({...formData, wantsCustomOffer: e.target.checked})}
-                          className="mt-0.5 w-5 h-5 rounded border-slate-300 text-slate-900 focus:ring-slate-900 bg-white transition-colors cursor-pointer shrink-0"
-                        />
-                        <span className="text-sm font-medium text-slate-700 leading-relaxed group-hover:text-slate-900 transition-colors">
+                      <div 
+                        onClick={() => setFormData({...formData, wantsCustomOffer: !formData.wantsCustomOffer})}
+                        className="flex items-start gap-4 p-4 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition-colors group select-none"
+                        style={{ cursor: 'pointer' }}
+                        role="checkbox"
+                        aria-checked={formData.wantsCustomOffer}
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            setFormData({...formData, wantsCustomOffer: !formData.wantsCustomOffer});
+                          }
+                        }}
+                      >
+                        <div className={`mt-0.5 w-5 h-5 rounded border flex items-center justify-center shrink-0 transition-colors ${formData.wantsCustomOffer ? 'bg-slate-900 border-slate-900' : 'bg-white border-slate-300'}`}>
+                           {formData.wantsCustomOffer && <Check className="w-3.5 h-3.5 text-white" />}
+                        </div>
+                        <span className="text-sm font-medium text-slate-700 leading-relaxed group-hover:text-slate-900 transition-colors pointer-events-none">
                           {modalMode === 'combo' ? (
                             <>Tôi cần thêm tư vấn để thiết kế gói <span className="font-bold text-slate-900">Combo tùy chỉnh</span> phù hợp với phòng khám.</>
                           ) : (
                             <>Tôi cần tư vấn thêm để thiết kế <span className="font-bold text-slate-900">ưu đãi tùy chỉnh</span> phù hợp với phòng khám.</>
                           )}
                         </span>
-                      </label>
+                      </div>
                     </div>
 
                     {formError && (

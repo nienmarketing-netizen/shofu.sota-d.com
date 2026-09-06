@@ -149,25 +149,5 @@ main, section, header, footer {
   }
 }
 
-/* Comprehensive Cursor Fix */
-button, a, [role="button"], .cursor-pointer {
-  cursor: pointer !important;
-}
 
-/* 
-  CRITICAL FIX: 
-  Prevent children of buttons/links from intercepting pointer events.
-  This stops the browser from switching event targets to <span> or <svg> 
-  inside the button, which often causes the cursor to flicker or disappear 
-  if there's a transition or React state update.
-*/
-button > *, a > *, [role="button"] > *, .cursor-pointer > * {
-  pointer-events: none !important;
-}
 
-button:disabled, button:disabled *,
-[disabled], [disabled] *,
-.cursor-not-allowed, .cursor-not-allowed * {
-  cursor: not-allowed !important;
-  pointer-events: none !important;
-}
