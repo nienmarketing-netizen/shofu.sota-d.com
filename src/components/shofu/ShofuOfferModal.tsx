@@ -194,6 +194,22 @@ export function ShofuOfferModal() {
           form_name: modalMode === 'combo' ? offerDetails[activeOfferId].name : 'Sản phẩm lẻ',
         });
       }
+      // Bắn CAPI Meta
+      try {
+        fetch('/api/meta-capi', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: "",
+            phone: formData.phone,
+            formName: modalMode === 'combo' ? offerDetails[activeOfferId].name : 'Sản phẩm lẻ',
+            eventSourceUrl: typeof window !== 'undefined' ? window.location.href : ''
+          })
+        }).catch(err => console.error('Lỗi khi đẩy CAPI ngầm:', err));
+      } catch (capiErr) {
+        console.error('Lỗi khi đẩy CAPI:', capiErr);
+      }
+
     })
     .catch(err => {
       console.error(err);
