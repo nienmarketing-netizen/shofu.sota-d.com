@@ -96,6 +96,22 @@ export const RegistrationForm: React.FC = () => {
         form_name: 'VIDEC 2024 Registration',
       });
     }
+    // Bắn CAPI Meta
+    try {
+      fetch('/api/meta-capi', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: "",
+          phone: phone,
+          formName: 'VIDEC 2024 Registration',
+          eventSourceUrl: typeof window !== 'undefined' ? window.location.href : ''
+        })
+      }).catch(err => console.error('Lỗi khi đẩy CAPI ngầm:', err));
+    } catch (capiErr) {
+      console.error('Lỗi khi đẩy CAPI:', capiErr);
+    }
+
   } catch (err: any) {
     console.error(err);
     setErrorMsg('Có lỗi xảy ra khi gửi đăng ký. Vui lòng thử lại.');
