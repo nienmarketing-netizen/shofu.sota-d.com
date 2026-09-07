@@ -2,9 +2,10 @@ import { CtaButton } from "../ui/CtaButton";
 import React from 'react';
 import { Crown, Sparkles, Layers, ShieldPlus, ArrowUpRight, Syringe, Gem, ShoppingCart } from 'lucide-react';
 import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export function ShofuSolutions() {
+  const navigate = useNavigate();
   const solutions = [
     {
       id: 'indirect',
@@ -83,9 +84,10 @@ export function ShofuSolutions() {
             <motion.div 
               variants={cardVariants}
               key={sol.id}
+              onClick={() => navigate(`/giai-phap/${sol.slug}`)}
               className={`relative overflow-hidden rounded-xl sm:rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${sol.bgClass}`}
             >
-              <Link to={`/giai-phap/${sol.slug}`} className="p-8 sm:p-10 w-full h-full flex flex-col items-center justify-center relative z-10 block" aria-label={`Xem chi tiết ${sol.title}`}>
+              <div className="p-8 sm:p-10 w-full h-full flex flex-col items-center justify-center relative z-10">
                 {/* Subtle Pattern Overlay */}
                 <div className="absolute inset-0 opacity-10 bg-grid-pattern mix-blend-overlay pointer-events-none"></div>
                 
@@ -102,7 +104,7 @@ export function ShofuSolutions() {
                 >
                   <ArrowUpRight className="absolute top-2 right-2 w-5 h-5 text-white opacity-70 group-hover:opacity-100 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
-              </Link>
+              </div>
             </motion.div>
           ))}
         </motion.div>
