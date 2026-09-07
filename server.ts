@@ -123,8 +123,7 @@ async function startServer() {
               form_name: formName
             }
           }
-        ],
-        test_event_code: "TEST4249"
+        ]
       };
 
       const response = await fetch(`https://graph.facebook.com/v19.0/${PIXEL_ID}/events?access_token=${ACCESS_TOKEN}`, {
