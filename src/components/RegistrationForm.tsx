@@ -86,6 +86,16 @@ export const RegistrationForm: React.FC = () => {
 
     setFormSubmitted(true);
     setShowPopup(true);
+    
+    // Tracking sự kiện đăng ký thành công
+    if (typeof window !== 'undefined') {
+      const win = window as any;
+      win.dataLayer = win.dataLayer || [];
+      win.dataLayer.push({
+        event: 'generate_lead',
+        form_name: 'VIDEC 2024 Registration',
+      });
+    }
   } catch (err: any) {
     console.error(err);
     setErrorMsg('Có lỗi xảy ra khi gửi đăng ký. Vui lòng thử lại.');

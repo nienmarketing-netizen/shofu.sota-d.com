@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowLeft } from 'lucide-react';
+import { CtaButton } from '../ui/CtaButton';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui/Button';
 

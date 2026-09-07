@@ -78,6 +78,16 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
 
       setIsSubmitting(false);
       setIsSuccess(true);
+      
+      // Tracking sự kiện đăng ký thành công
+      if (typeof window !== 'undefined') {
+        const win = window as any;
+        win.dataLayer = win.dataLayer || [];
+        win.dataLayer.push({
+          event: 'generate_lead',
+          form_name: title,
+        });
+      }
     } catch (err) {
       console.error('Error submitting form:', err);
       setError('Đã có lỗi xảy ra. Vui lòng thử lại sau.');

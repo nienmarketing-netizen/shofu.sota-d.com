@@ -1,3 +1,4 @@
+import { CtaButton } from "../../ui/CtaButton";
 import { CampaignModal } from '../../CampaignModal';
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';

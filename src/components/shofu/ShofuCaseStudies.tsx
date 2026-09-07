@@ -1,3 +1,4 @@
+import { CtaButton } from "../ui/CtaButton";
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronLeft, ChevronRight, ZoomIn, ShoppingCart, ArrowUpRight } from 'lucide-react';
@@ -220,11 +221,11 @@ export function ShofuCaseStudies() {
 
       {/* CTA Button */}
       <div className="text-center px-4 relative z-10">
-        <button  onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
+        <CtaButton ctaName="MoKhoaUuDai" onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
           <ShoppingCart className="w-5 h-5" />
           <span>Xem ưu đãi và đặt hàng</span>
           <ArrowUpRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-        </button>
+        </CtaButton>
       </div>
 
       {/* Lightbox Modal */}
@@ -243,7 +244,7 @@ export function ShofuCaseStudies() {
                onClick={() => setSelectedCaseIndex(null)}
             >
               <X className="w-6 h-6" />
-            </button>
+            </CtaButton>
 
             {/* Content (No key with image index, so it doesn't unmount) */}
             <motion.div
@@ -291,13 +292,13 @@ export function ShofuCaseStudies() {
                       className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-black/40 rounded-full text-white/70 hover:text-white hover:bg-black/60 transition-colors z-[120]"
                     >
                       <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
-                    </button>
+                    </CtaButton>
                     <button 
                        onClick={handleNext} 
                       className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-black/40 rounded-full text-white/70 hover:text-white hover:bg-black/60 transition-colors z-[120]"
                     >
                       <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
-                    </button>
+                    </CtaButton>
                   </>
                 )}
               </div>

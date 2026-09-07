@@ -1,3 +1,4 @@
+import { CtaButton } from "../ui/CtaButton";
 import React from 'react';
 import { ArrowRight, Atom, ShieldCheck, Feather, Zap } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -80,13 +81,13 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
             >
-              <button 
+              <CtaButton ctaName="XemGiaiPhap" 
                  onClick={onCTA}
                 className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#00ADEF] text-white font-mono text-sm font-bold uppercase tracking-wider hover:bg-sky-500 transition-all shadow-xl shadow-sky-500/30 flex items-center justify-center gap-2 group"
               >
                 Nhận Tư Vấn Ngay
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </CtaButton>
             </motion.div>
           </div>
 
