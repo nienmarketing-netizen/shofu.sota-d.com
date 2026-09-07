@@ -48,6 +48,8 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
     setError('');
     setIsSubmitting(true);
     
+    const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        
     try {
       const payload = {
         'Nguồn Lead': 'Landing Page Shofu',
@@ -86,6 +88,7 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
         win.dataLayer.push({
           event: 'generate_lead',
           form_name: title,
+          event_id: eventId,
         });
       }
       // Bắn CAPI Meta
@@ -97,7 +100,8 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
             email: "",
             phone: formData.phone,
             formName: title,
-            eventSourceUrl: typeof window !== 'undefined' ? window.location.href : ''
+            eventSourceUrl: typeof window !== 'undefined' ? window.location.href : '',
+            event_id: eventId
           })
         }).catch(err => console.error('Lỗi khi đẩy CAPI ngầm:', err));
       } catch (capiErr) {

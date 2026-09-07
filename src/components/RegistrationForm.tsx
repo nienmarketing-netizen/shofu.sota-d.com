@@ -58,8 +58,10 @@ export const RegistrationForm: React.FC = () => {
 
   setErrorMsg('');
   setIsSubmitting(true);
-  
-  try {
+    
+    const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        
+    try {
     let sessionValue = 'Cả 2';
     if (sessionOption === 'morning') sessionValue = 'Sáng';
     if (sessionOption === 'afternoon') sessionValue = 'Chiều';
@@ -94,7 +96,8 @@ export const RegistrationForm: React.FC = () => {
       win.dataLayer.push({
         event: 'generate_lead',
         form_name: 'VIDEC 2024 Registration',
-      });
+          event_id: eventId,
+        });
     }
     // Bắn CAPI Meta
     try {
@@ -105,8 +108,9 @@ export const RegistrationForm: React.FC = () => {
           email: "",
           phone: phone,
           formName: 'VIDEC 2024 Registration',
-          eventSourceUrl: typeof window !== 'undefined' ? window.location.href : ''
-        })
+          eventSourceUrl: typeof window !== 'undefined' ? window.location.href : '',
+            event_id: eventId
+          })
       }).catch(err => console.error('Lỗi khi đẩy CAPI ngầm:', err));
     } catch (capiErr) {
       console.error('Lỗi khi đẩy CAPI:', capiErr);

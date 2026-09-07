@@ -92,7 +92,7 @@ async function startServer() {
   // Meta CAPI Endpoint
   app.post("/api/meta-capi", async (req, res) => {
     try {
-      const { email, phone, formName, eventSourceUrl } = req.body;
+      const { email, phone, formName, eventSourceUrl, event_id } = req.body;
       
       const PIXEL_ID = "3049027828780371";
       const ACCESS_TOKEN = "EAAzL5m13KeABSUZAKUekFNzN8fuKak9erfFU2ccK1P78wxHAY2yaUlZCH9hBPAmq2pOjEeY82MRbdgkPlBka2yqWdMePdIfL4yXeplZBwFrfezrDndqZBzHRapMKCy4zKPOI6POpn30nvuYtva9DZBTVQGfXnHjmQnIVTudMYT2lZBZCZA6a05wHqJgRtOzRKQZDZD";
@@ -111,6 +111,7 @@ async function startServer() {
           {
             event_name: "Lead",
             event_time: Math.floor(Date.now() / 1000),
+            event_id: event_id,
             action_source: "website",
             event_source_url: eventSourceUrl,
             user_data: {
