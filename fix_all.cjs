@@ -1,66 +1,43 @@
 const fs = require('fs');
 
-let content = fs.readFileSync('src/components/shofu/ShofuCaseStudies.tsx', 'utf-8');
-
-const keywords = [
-    "Shofu BeautiBond Universal", 
-    "Shofu Beautifil II", 
-    "Shofu Beautifil Injectable XSL",
-    "Shofu Beautifil Injectable X",
-    "Shofu Beautifil Injectable",
-    "Shofu Beautifil Flow Plus",
-    "Shofu Super-Snap",
-    "Shofu Select Etch",
-    "Shofu Caries Detector",
-    "Shofu Etchant Gel",
-    "DirectDia Paste",
-    "OneGloss",
-    "BeautiBond Xtreme",
-    "Beautilink SA",
-    "Core Paste & Bond",
-    "BeautiBond Universal",
-    "BeautiBond",
-    "Beautifil II",
-    "Super-Snap",
-    "Select Etch",
-    "Caries Detector",
-    "Etchant Gel",
-    "đê cao su",
-    "rubber dam",
-    "composite sinh học"
-];
-
-const uniqueKeywords = [...new Set(keywords)].sort((a, b) => b.length - a.length);
-
-const startIndex = content.indexOf('const caseStudies = [');
-const endIndex = content.indexOf('];', startIndex);
-
-if (startIndex !== -1 && endIndex !== -1) {
-  let caseStudiesBlock = content.substring(startIndex, endIndex);
-
-  // We can just run a global replace on the block for the keywords.
-  // First, we need to replace all keywords, but avoid replacing inside existing HTML attributes.
-  // Since we know our keywords don't overlap with HTML tags or attributes (like text-slate-900),
-  // we can simply replace them.
+function replaceButtons(filePath, searchStr, ctaName) {
+  let code = fs.readFileSync(filePath, 'utf-8');
+  let newCode = "";
+  let i = 0;
   
-  // Wait, some are inside note: "..." and some inside description: "..."
-  // It's safe to just replace them globally in the block as they are specific names.
+  while(i < code.length) {
+    let tagStart = code.indexOf(searchStr, i);
+    if(tagStart === -1) {
+      newCode += code.slice(i);
+      break;
+    }
+    
+    // Replace the `<button` part with `<CtaButton ctaName="..."`
+    let replacedOpenTag = code.slice(i, tagStart + '<button'.length) + ' ctaName="' + ctaName + '"';
+    // Actually searchStr includes `<button`, we can replace that specifically.
+    
+    let tagEnd = code.indexOf('>', tagStart);
+    
+    // Find next </button>
+    let nextClose = code.indexOf('</button>', tagEnd);
+    let nextOpen = code.indexOf('<button', tagEnd);
+    let nextCtaClose = code.indexOf('</CtaButton>', tagEnd);
+    
+    if (nextClose !== -1 && (nextOpen === -1 || nextClose < nextOpen) && (nextCtaClose === -1 || nextClose < nextCtaClose)) {
+      // safe to replace
+      newCode += code.slice(i, tagStart) + code.slice(tagStart, tagEnd + 1).replace('<button', '<CtaButton ctaName="' + ctaName + '"');
+      newCode += code.slice(tagEnd + 1, nextClose) + '</CtaButton>';
+      i = nextClose + '</button>'.length;
+    } else {
+      newCode += code.slice(i, tagEnd + 1);
+      i = tagEnd + 1;
+    }
+  }
   
-  uniqueKeywords.forEach((kw, i) => {
-    // Only replace if it is NOT inside an HTML tag. (Quick hack: match if not immediately followed by HTML closing tag > or part of an attribute)
-    // Actually, just replace directly, since none of these keywords are HTML tags.
-    const escapedKw = kw.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-    const regex = new RegExp(escapedKw, 'g');
-    caseStudiesBlock = caseStudiesBlock.replace(regex, `__KW_${i}__`);
-  });
-
-  uniqueKeywords.forEach((kw, i) => {
-    const regex = new RegExp(`__KW_${i}__`, 'g');
-    caseStudiesBlock = caseStudiesBlock.replace(regex, `<span className=\\"text-[#00ADEF] font-bold\\">${kw}</span>`);
-  });
-
-  content = content.substring(0, startIndex) + caseStudiesBlock + content.substring(endIndex);
+  fs.writeFileSync(filePath, newCode);
+  console.log("Fixed: " + filePath);
 }
 
-fs.writeFileSync('src/components/shofu/ShofuCaseStudies.tsx', content);
-console.log("Fixed globally!");
+replaceButtons('src/components/shofu/ShofuSocialProof.tsx', '<button  onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))}', 'MoKhoaUuDai');
+replaceButtons('src/components/shofu/ShofuSolutions.tsx', '<button  onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))}', 'MoKhoaUuDai');
+replaceButtons('src/components/shofu/ShofuCaseStudies.tsx', '<button  onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))}', 'MoKhoaUuDai');
