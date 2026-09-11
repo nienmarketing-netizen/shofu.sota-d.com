@@ -446,10 +446,14 @@ export function DirectRestoration() {
             {/* Step 1 */}
             <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-white p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] flex flex-col lg:flex-row gap-10 items-center hover:border-slate-200 hover:shadow-md transition-all">
               <div className="w-full lg:w-1/2">
-                <ImagePlaceholder 
-                  className="aspect-[4/3] w-full bg-white shadow-lg rounded-2xl" 
-                  text="Ảnh chụp thực tế sản phẩm BeautiBond Xtreme 5ml thiết kế nắp bật một tay, bên cạnh là lát cắt kính hiển vi SEM mô tả lớp tua nhựa dán (resin tags) cắm sâu, đồng đều bịt kín các ống ngà." 
-                />
+                <div className="relative rounded-2xl overflow-hidden bg-white shadow-lg border border-slate-100 flex items-center justify-center p-2 sm:p-4">
+                  <img 
+                    src="/image/BeautiBond-Xtreme-One-Hand.webp" 
+                    alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
+                    className="w-full max-h-[420px] object-contain rounded-xl"
+                    loading="lazy"
+                  />
+                </div>
               </div>
               <div className="w-full lg:w-1/2">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4">
