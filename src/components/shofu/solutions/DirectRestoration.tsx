@@ -230,7 +230,7 @@ export function DirectRestoration() {
                   Áp lực thao tác trên ghế điều trị
                 </h3>
                 <p className="font-body text-sm sm:text-[15px] text-slate-400 mb-6 leading-relaxed">
-                  Những rào cản kỹ thuật khiến ca phục hồi xoang II trở thành phép thử căng thẳng cho mọi Bác sĩ:
+                  Những rào cản kỹ thuật khiến ca phục hồi xoang II trở thành phép thử căng thẳng cho nhiều Bác sĩ:
                 </p>
 
                 <div className="space-y-3">
