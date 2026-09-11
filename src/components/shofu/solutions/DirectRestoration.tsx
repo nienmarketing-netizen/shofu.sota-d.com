@@ -373,7 +373,7 @@ export function DirectRestoration() {
                   </ul>
                 </div>
                 <div className="mt-4 pt-3 border-t border-red-500/20 text-xs font-semibold text-red-400">
-                  Hậu quả: Nguy cơ cao ê buốt sau trám & sâu răng thứ phát tái phát.
+                  Hậu quả: Nguy cơ cao ê buốt sau trám & sâu răng thứ phát.
                 </div>
               </div>
 
@@ -400,7 +400,7 @@ export function DirectRestoration() {
                   </ul>
                 </div>
                 <div className="mt-4 pt-3 border-t border-[#00ADEF]/20 text-xs font-semibold text-[#00ADEF]">
-                  Thành quả: Triệt tiêu hoàn toàn ê buốt, bảo tồn cấu trúc ngà sống dài lâu.
+                  Thành quả: Triệt tiêu ê buốt, bảo tồn cấu trúc ngà sống dài lâu.
                 </div>
               </div>
             </div>
