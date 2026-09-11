@@ -467,12 +467,12 @@ export function DirectRestoration() {
 
           <div className="relative space-y-16 sm:space-y-20 lg:space-y-28">
             {/* Continuous Process Line: Left on mobile, Center on desktop */}
-            <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-3 bottom-8 w-1 bg-gradient-to-b from-sky-400 via-[#00ADEF] via-75% to-transparent rounded-full pointer-events-none z-0" />
+            <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-3 bottom-8 w-1 bg-gradient-to-b from-sky-400 via-[#00ADEF] via-75% to-transparent rounded-full pointer-events-none z-20" />
 
             {/* Step 1 */}
             <div className="relative pl-11 sm:pl-16 lg:pl-0 flex flex-col lg:flex-row gap-8 lg:gap-16 items-start lg:items-center">
               {/* Process Step Node on Process Line (Left on mobile, Center on desktop) */}
-              <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-1 lg:top-1/2 lg:-translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white border-2 sm:border-4 border-sky-100 shadow-[0_0_15px_rgba(0,173,239,0.25)] flex items-center justify-center z-10">
+              <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-1 lg:top-1/2 lg:-translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white border-2 sm:border-4 border-sky-100 shadow-[0_0_15px_rgba(0,173,239,0.25)] flex items-center justify-center z-30">
                 <span className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-heading font-extrabold text-xs sm:text-sm shadow-sm">
                   1
                 </span>
@@ -523,7 +523,7 @@ export function DirectRestoration() {
             {/* Step 2 */}
             <div className="relative pl-11 sm:pl-16 lg:pl-0 flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-start lg:items-center">
               {/* Process Step Node on Process Line (Left on mobile, Center on desktop) */}
-              <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-1 lg:top-1/2 lg:-translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white border-2 sm:border-4 border-sky-100 shadow-[0_0_15px_rgba(0,173,239,0.25)] flex items-center justify-center z-10">
+              <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-1 lg:top-1/2 lg:-translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white border-2 sm:border-4 border-sky-100 shadow-[0_0_15px_rgba(0,173,239,0.25)] flex items-center justify-center z-30">
                 <span className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-heading font-extrabold text-xs sm:text-sm shadow-sm">
                   2
                 </span>
@@ -570,7 +570,7 @@ export function DirectRestoration() {
             {/* Step 3 */}
             <div className="relative pl-11 sm:pl-16 lg:pl-0 flex flex-col lg:flex-row gap-8 lg:gap-16 items-start lg:items-center">
               {/* Process Step Node on Process Line (Left on mobile, Center on desktop) */}
-              <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-1 lg:top-1/2 lg:-translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white border-2 sm:border-4 border-sky-100 shadow-[0_0_15px_rgba(0,173,239,0.25)] flex items-center justify-center z-10">
+              <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-1 lg:top-1/2 lg:-translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white border-2 sm:border-4 border-sky-100 shadow-[0_0_15px_rgba(0,173,239,0.25)] flex items-center justify-center z-30">
                 <span className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-heading font-extrabold text-xs sm:text-sm shadow-sm">
                   3
                 </span>
