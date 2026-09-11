@@ -190,11 +190,7 @@ export function DirectRestoration() {
       </section>
 
       {/* SECTION 2: PAIN POINTS (GÓC KHUẤT LÂM SÀNG) */}
-      <section className="py-20 lg:py-28 bg-slate-50 bg-grid-pattern relative overflow-hidden border-t border-slate-200">
-        {/* Glowing Orbs */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-rose-500/10 via-red-500/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-[#00ADEF]/10 via-sky-400/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-
+      <section className="py-20 lg:py-28 bg-slate-100 bg-grid-pattern relative overflow-hidden border-t border-slate-200">
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
