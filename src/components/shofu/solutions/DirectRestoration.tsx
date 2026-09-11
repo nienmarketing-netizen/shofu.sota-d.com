@@ -465,12 +465,12 @@ export function DirectRestoration() {
             </p>
           </div>
 
-          <div className="relative space-y-16 sm:space-y-20 lg:space-y-28 z-0">
+          <div className="relative space-y-16 sm:space-y-20 lg:space-y-28 z-0 -mx-4 sm:-mx-6 lg:mx-0">
             {/* Continuous Process Line: Left on mobile, Center on desktop */}
             <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-3 bottom-8 w-1 bg-gradient-to-b from-sky-400 via-[#00ADEF] via-75% to-transparent rounded-full pointer-events-none z-20" />
 
             {/* Step 1 */}
-            <div className="relative pl-11 sm:pl-16 lg:pl-0 flex flex-col lg:flex-row gap-8 lg:gap-16 items-start lg:items-center">
+            <div className="relative pl-12 pr-4 sm:pl-16 sm:pr-6 lg:px-0 flex flex-col lg:flex-row gap-8 lg:gap-16 items-start lg:items-center">
               {/* Process Step Node on Process Line (Left on mobile, Center on desktop) */}
               <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-1 lg:top-1/2 lg:-translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white border-2 sm:border-4 border-sky-100 shadow-[0_0_15px_rgba(0,173,239,0.25)] flex items-center justify-center z-30">
                 <span className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-heading font-extrabold text-xs sm:text-sm shadow-sm">
@@ -479,7 +479,7 @@ export function DirectRestoration() {
               </div>
 
               <div className="w-full lg:w-1/2 flex items-center justify-start lg:justify-end">
-                <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] -ml-8 sm:-ml-12 lg:ml-0 -z-10 lg:z-auto">
+                <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] -ml-8 sm:-ml-10 lg:ml-0 -z-10 lg:z-auto">
                   <img 
                     src="/image/BeautiBond-Xtreme-One-Hand.webp" 
                     alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
@@ -521,7 +521,7 @@ export function DirectRestoration() {
             </div>
 
             {/* Step 2 */}
-            <div className="relative pl-11 sm:pl-16 lg:pl-0 flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-start lg:items-center">
+            <div className="relative pl-12 pr-4 sm:pl-16 sm:pr-6 lg:px-0 flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-start lg:items-center">
               {/* Process Step Node on Process Line (Left on mobile, Center on desktop) */}
               <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-1 lg:top-1/2 lg:-translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white border-2 sm:border-4 border-sky-100 shadow-[0_0_15px_rgba(0,173,239,0.25)] flex items-center justify-center z-30">
                 <span className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-heading font-extrabold text-xs sm:text-sm shadow-sm">
@@ -568,7 +568,7 @@ export function DirectRestoration() {
             </div>
 
             {/* Step 3 */}
-            <div className="relative pl-11 sm:pl-16 lg:pl-0 flex flex-col lg:flex-row gap-8 lg:gap-16 items-start lg:items-center">
+            <div className="relative pl-12 pr-4 sm:pl-16 sm:pr-6 lg:px-0 flex flex-col lg:flex-row gap-8 lg:gap-16 items-start lg:items-center">
               {/* Process Step Node on Process Line (Left on mobile, Center on desktop) */}
               <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-1 lg:top-1/2 lg:-translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white border-2 sm:border-4 border-sky-100 shadow-[0_0_15px_rgba(0,173,239,0.25)] flex items-center justify-center z-30">
                 <span className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-heading font-extrabold text-xs sm:text-sm shadow-sm">
