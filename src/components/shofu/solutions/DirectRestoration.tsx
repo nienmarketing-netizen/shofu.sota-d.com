@@ -106,7 +106,7 @@ export function DirectRestoration() {
             </div>
             
             <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12">
-              Chấm dứt ám ảnh ê buốt sau phục hồi & sâu răng thứ phát trong <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">phục hồi xoang II răng sau</span>
+              Chấm dứt ám ảnh ê buốt & sâu răng thứ phát trong <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">phục hồi xoang II răng sau</span>
             </h1>
             
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
