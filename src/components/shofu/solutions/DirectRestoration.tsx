@@ -207,8 +207,8 @@ export function DirectRestoration() {
 
             <div className="w-24 h-1 bg-red-500 mx-auto my-6"></div>
 
-            <p className="font-body text-base sm:text-lg text-slate-400 leading-relaxed max-w-3xl mx-auto">
-              Nhiều Bác sĩ trẻ thường tự dằn vặt và đổ lỗi cho kỹ năng thao tác thổi khô sai kỹ thuật hay đặt đai trám chưa khít. Nhưng sự thật y khoa chứng minh: <strong className="text-white font-semibold">gốc rễ thất bại nằm ở bản chất hạn chế của vật liệu thế hệ cũ</strong>.
+            <p className="font-body text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
+              Nhiều Bác sĩ thường <strong className="text-slate-100 font-semibold">tự dằn vặt và đổ lỗi</strong> cho kỹ năng thao tác <span className="text-amber-300 font-medium">thổi khô sai kỹ thuật</span> hay <span className="text-amber-300 font-medium">đặt đai trám chưa khít</span>. Nhưng <strong className="text-white font-semibold">sự thật chứng minh</strong>: <span className="text-red-400 font-bold">gốc rễ thất bại</span> nằm ở <span className="inline-block px-2.5 py-0.5 rounded-lg bg-red-500/15 border border-red-500/30 text-red-200 font-bold shadow-sm">bản chất hạn chế của vật liệu thế hệ cũ</span>.
             </p>
           </div>
 
