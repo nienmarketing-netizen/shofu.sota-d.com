@@ -340,6 +340,16 @@ export function DirectRestoration() {
             </div>
           </div>
 
+          {/* Microscopic Split-Screen SEM Graphic */}
+          <div className="w-full max-w-5xl mx-auto relative overflow-hidden mb-12 lg:mb-16">
+            <img 
+              src="/image/tri-lieu-sinh-hoc-micd.webp" 
+              alt="Cơ chế phục hồi trị liệu sinh học MiCD Shofu" 
+              className="w-full h-auto object-cover block"
+              loading="lazy"
+            />
+          </div>
+
           {/* Quick Comparative Matrix */}
           <div className="bg-slate-800/60 backdrop-blur-md rounded-3xl border border-slate-700/80 p-6 sm:p-8 md:p-10 shadow-2xl mb-12">
             <div className="text-center max-w-2xl mx-auto mb-8">
@@ -404,16 +414,6 @@ export function DirectRestoration() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Microscopic Split-Screen SEM Graphic */}
-          <div className="w-full max-w-5xl mx-auto relative overflow-hidden">
-            <img 
-              src="/image/tri-lieu-sinh-hoc-micd.webp" 
-              alt="Cơ chế phục hồi trị liệu sinh học MiCD Shofu" 
-              className="w-full h-auto object-cover block"
-              loading="lazy"
-            />
           </div>
 
           {/* Bottom CTA */}
