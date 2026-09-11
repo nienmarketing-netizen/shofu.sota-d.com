@@ -164,6 +164,7 @@ export function ShofuOfferModal() {
     }
     setFormError('');
     setIsSubmitting(true);
+    const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 11);
     const payload = {
       name: formData.name,
       phone: formData.phone,
