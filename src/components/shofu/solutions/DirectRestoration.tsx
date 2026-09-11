@@ -152,11 +152,25 @@ export function DirectRestoration() {
             </CtaButton>
           </div>
           
-          <div className="w-full lg:w-[35%] xl:w-[40%] relative flex justify-center">
-             <ImagePlaceholder 
-                className="aspect-[16/9] w-full shadow-xl bg-white/50 backdrop-blur-sm border-sky-200" 
-                text="Tỷ lệ khung hình: 16:9 nằm ngang, bố cục phẳng (Flat UI style) hiện đại. Visual: Một bên là hình ảnh lâm sàng chụp cận cảnh một ca phục hồi xoang II răng sau hoàn mỹ bằng composite Beautifil II LS. Bên cạnh là hình ảnh chụp Mockup sản phẩm sang trọng (BBX, Beautifil II LS, Injectable X). Mã màu ưu tiên: Cyan (#00adef) làm hiệu ứng hào quang ion." 
-             />
+          <div className="w-full lg:w-[35%] xl:w-[40%] relative flex justify-center items-center">
+            {/* Hào quang sinh học */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-gradient-to-tr from-[#00ADEF]/25 to-sky-400/20 blur-[70px] rounded-full z-0 pointer-events-none animate-pulse"></div>
+            
+            <div className="relative z-10 w-full max-w-[420px] rounded-2xl overflow-hidden shadow-2xl border border-sky-100 bg-white/80 backdrop-blur-sm hover:scale-[1.02] transition-transform duration-500">
+              <img 
+                referrerPolicy="no-referrer"
+                src="/images/giai-phap-phuc-hoi-truc-tiep-shofu.webp"
+                alt="Giải pháp phục hồi trực tiếp Shofu"
+                className="w-full h-auto object-contain block drop-shadow-sm"
+                loading="eager"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('raw.githubusercontent.com')) {
+                    target.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/giai-phap-phuc-hoi-truc-tiep-shofu.webp";
+                  }
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>
