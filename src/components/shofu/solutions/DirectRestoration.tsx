@@ -479,7 +479,7 @@ export function DirectRestoration() {
               </div>
 
               <div className="w-full lg:w-1/2 flex items-center justify-start lg:justify-end">
-                <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] -ml-3 sm:-ml-5 lg:ml-0">
+                <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] -ml-8 sm:-ml-12 lg:ml-0">
                   <img 
                     src="/image/BeautiBond-Xtreme-One-Hand.webp" 
                     alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
