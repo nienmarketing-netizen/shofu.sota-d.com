@@ -465,22 +465,32 @@ export function DirectRestoration() {
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="relative space-y-16 sm:space-y-20 lg:space-y-28">
+            {/* Central Process Line (Desktop) */}
+            <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-10 bottom-10 w-1 bg-gradient-to-b from-sky-200 via-[#00ADEF] to-sky-200 rounded-full pointer-events-none z-0" />
+
             {/* Step 1 */}
-            <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-white p-6 sm:p-8 md:p-12 lg:p-0 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] flex flex-col lg:flex-row gap-8 lg:gap-10 items-center lg:items-end hover:border-slate-200 hover:shadow-md transition-all overflow-hidden">
-              <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start lg:self-end leading-none">
+            <div className="relative flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+              {/* Process Step Node on Center Line (Desktop) */}
+              <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white border-4 border-sky-100 shadow-[0_0_20px_rgba(0,173,239,0.25)] items-center justify-center z-10">
+                <span className="w-7 h-7 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-heading font-extrabold text-sm shadow-sm">
+                  1
+                </span>
+              </div>
+
+              <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end">
                 <img 
                   src="/image/BeautiBond-Xtreme-One-Hand.webp" 
                   alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
-                  className="w-full max-w-[360px] sm:max-w-[420px] lg:max-w-none h-auto object-contain lg:object-left-bottom block"
+                  className="w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[460px] h-auto object-contain block drop-shadow-md"
                   loading="lazy"
                 />
               </div>
-              <div className="w-full lg:w-1/2 lg:py-12 lg:pr-12">
+              <div className="w-full lg:w-1/2 lg:pl-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4">
                   Bước 1
                 </div>
-                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Keo dán universal kỵ nước BeautiBond Xtreme (BBX)</h3>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3">Keo dán universal kỵ nước BeautiBond Xtreme (BBX)</h3>
                 <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Khóa chặt ống ngà kỵ nước – Chấm dứt hiện tượng thủy phân liên kết dán</h4>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
                   BBX loại bỏ hoàn toàn thành phần HEMA ưa nước. Ứng dụng hệ dung môi Acetone bay hơi nhanh giúp đưa 4 monomer chức năng (đặc biệt là biến thể 10-MDP và Carboxylic) thâm nhập sâu vào các ống ngà ẩm, tạo màng dán dính kỵ nước cực kỳ bền vững.
@@ -508,19 +518,35 @@ export function DirectRestoration() {
               </div>
             </div>
 
+            {/* Mobile Process Connector between Step 1 and Step 2 */}
+            <div className="lg:hidden flex flex-col items-center justify-center py-1" aria-hidden="true">
+              <div className="w-0.5 h-6 bg-gradient-to-b from-[#00ADEF] to-sky-300" />
+              <div className="w-6 h-6 rounded-full bg-sky-100 border border-[#00ADEF] text-[#00ADEF] flex items-center justify-center font-bold text-xs shadow-sm my-0.5">
+                ↓
+              </div>
+              <div className="w-0.5 h-6 bg-gradient-to-b from-sky-300 to-[#00ADEF]" />
+            </div>
+
             {/* Step 2 */}
-            <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-white p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] flex flex-col lg:flex-row-reverse gap-10 items-center hover:border-slate-200 hover:shadow-md transition-all">
-              <div className="w-full lg:w-1/2">
+            <div className="relative flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-center">
+              {/* Process Step Node on Center Line (Desktop) */}
+              <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white border-4 border-sky-100 shadow-[0_0_20px_rgba(0,173,239,0.25)] items-center justify-center z-10">
+                <span className="w-7 h-7 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-heading font-extrabold text-sm shadow-sm">
+                  2
+                </span>
+              </div>
+
+              <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start">
                 <ImagePlaceholder 
-                  className="aspect-[4/3] w-full bg-white shadow-lg" 
+                  className="aspect-[4/3] w-full max-w-[480px] bg-white shadow-lg rounded-2xl border border-slate-200" 
                   text="Ảnh chụp cận cảnh tuýp composite Beautifil II LS màu sắc sang trọng bên cạnh hình ảnh cùi răng sau khi hoàn thiện phục hồi mặt nhai, các múi răng được điêu khắc sắc nét, chân thực không tì vết." 
                 />
               </div>
-              <div className="w-full lg:w-1/2">
+              <div className="w-full lg:w-1/2 lg:pr-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4">
                   Bước 2
                 </div>
-                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Composite đặc giảm co rút Beautifil II LS</h3>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3">Composite đặc giảm co rút Beautifil II LS</h3>
                 <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Điêu khắc múi rãnh vững chãi – Triệt tiêu ứng suất co ngót trùng hợp</h4>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
                   Beautifil II LS sở hữu tỷ lệ hạt độn cao (83 wt%) giúp giảm thiểu tối đa độ co ngót thể tích xuống mức kỷ lục <strong>0.85% Vol</strong> và ứng suất co ngót tối thiểu chỉ <strong>1.37 MPa</strong>. Bảo vệ đường hoàn tất khỏi hiện tượng nứt kẽ vi thể và đổi màu đường viền sau nhiều năm ăn nhai.
@@ -548,19 +574,35 @@ export function DirectRestoration() {
               </div>
             </div>
 
+            {/* Mobile Process Connector between Step 2 and Step 3 */}
+            <div className="lg:hidden flex flex-col items-center justify-center py-1" aria-hidden="true">
+              <div className="w-0.5 h-6 bg-gradient-to-b from-[#00ADEF] to-sky-300" />
+              <div className="w-6 h-6 rounded-full bg-sky-100 border border-[#00ADEF] text-[#00ADEF] flex items-center justify-center font-bold text-xs shadow-sm my-0.5">
+                ↓
+              </div>
+              <div className="w-0.5 h-6 bg-gradient-to-b from-sky-300 to-[#00ADEF]" />
+            </div>
+
             {/* Step 3 */}
-            <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-white p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] flex flex-col lg:flex-row gap-10 items-center hover:border-slate-200 hover:shadow-md transition-all">
-              <div className="w-full lg:w-1/2">
+            <div className="relative flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+              {/* Process Step Node on Center Line (Desktop) */}
+              <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white border-4 border-sky-100 shadow-[0_0_20px_rgba(0,173,239,0.25)] items-center justify-center z-10">
+                <span className="w-7 h-7 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-heading font-extrabold text-sm shadow-sm">
+                  3
+                </span>
+              </div>
+
+              <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end">
                 <ImagePlaceholder 
-                  className="aspect-[4/3] w-full bg-white shadow-lg rounded-2xl" 
+                  className="aspect-[4/3] w-full max-w-[480px] bg-white shadow-lg rounded-2xl border border-slate-200" 
                   text="Hình ảnh mô phỏng 3D đầu bơm siêu nhỏ của xi-lanh Beautifil Injectable X đang bơm trực tiếp composite vào kẽ bên xoang II của răng cối một cách mượt mà, không bọt khí." 
                 />
               </div>
-              <div className="w-full lg:w-1/2">
+              <div className="w-full lg:w-1/2 lg:pl-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4">
                   Bước 3
                 </div>
-                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Composite đắp lớp Beautifil Injectable X</h3>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3">Composite đắp lớp Beautifil Injectable X</h3>
                 <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Sức mạnh hạt độn Nano-Optimized Silane – Lấp đầy mọi hốc sâu vi thể</h4>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
                   Với đặc tính lưu biến thông minh (thixotropic), Beautifil Injectable X định hình cực tốt khi đắp lớp nhưng tự động chảy loang phẳng láng dưới áp lực. Vật liệu len lỏi hoàn hảo vào các ngóc ngách xoang II hẹp dưới nướu mà không tạo bọt khí.
