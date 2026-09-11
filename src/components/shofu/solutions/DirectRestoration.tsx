@@ -16,7 +16,9 @@ import {
   Award,
   Microscope,
   Droplets,
-  Target
+  Target,
+  Quote,
+  XCircle
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { CampaignModal } from '../../CampaignModal';
@@ -187,64 +189,234 @@ export function DirectRestoration() {
         </div>
       </section>
 
-      {/* SECTION 2: PAIN POINTS */}
-      <section className="py-20 lg:py-28 bg-slate-100 bg-grid-pattern relative overflow-hidden border-t border-slate-200">
-        <div className="w-[90%] lg:w-[80%] mx-auto">
+      {/* SECTION 2: PAIN POINTS (GÓC KHUẤT LÂM SÀNG) */}
+      <section className="py-20 lg:py-28 bg-slate-50 bg-grid-pattern relative overflow-hidden border-t border-slate-200">
+        {/* Glowing Orbs */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-rose-500/10 via-red-500/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-[#00ADEF]/10 via-sky-400/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+
+        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
+          {/* Header */}
           <div className="text-center mb-12 md:mb-16">
-            <div className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-[10px] min-[375px]:text-[11px] sm:text-xs md:text-sm tracking-wide mb-6 whitespace-nowrap">
-              <AlertTriangle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-600 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider mb-6 shadow-sm">
+              <div className="w-2 h-2 rounded-full bg-rose-500 animate-pulse shrink-0"></div>
+              <AlertTriangle className="w-4 h-4 text-rose-500 shrink-0" />
               <span>Góc khuất lâm sàng</span>
             </div>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">Phục hồi răng xoang II sâu dưới nướu luôn là <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-600">"cơn ác mộng" âm thầm</span></h2>
-            <div className="max-w-5xl mx-auto mt-12 flex flex-col md:flex-row gap-6 text-left">
-              <div className="flex-1 bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-6 shrink-0">
-                  <AlertTriangle className="w-6 h-6 text-slate-500" />
+            
+            <h2 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight max-w-4xl mx-auto">
+              Phục hồi răng xoang II sâu dưới nướu luôn là <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-rose-500 to-amber-600">"cơn ác mộng" âm thầm</span>
+            </h2>
+
+            <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
+              Nhiều Bác sĩ trẻ thường tự dằn vặt và đổ lỗi cho kỹ năng thao tác thổi khô sai kỹ thuật hay đặt đai trám chưa khít. Nhưng sự thật y khoa chứng minh: <strong className="text-slate-900 font-semibold">gốc rễ thất bại nằm ở bản chất hạn chế của vật liệu thế hệ cũ</strong>.
+            </p>
+          </div>
+
+          {/* 2 Main Comparison Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 lg:mb-16">
+            {/* Card 1: Thách thức thao tác lâm sàng */}
+            <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 md:p-10 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-xl hover:border-slate-300 transition-all flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-slate-100 border border-slate-200/80 flex items-center justify-center text-slate-600 shrink-0 shadow-sm">
+                    <AlertTriangle className="w-6 h-6 text-slate-600" />
+                  </div>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 font-mono text-xs font-bold uppercase tracking-wider">
+                    Thực tế lâm sàng
+                  </span>
                 </div>
-                <div className="space-y-3 mb-5">
-                  <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0"></div>
-                    <span className="font-body text-slate-700 text-base sm:text-lg">Khó cô lập hoàn toàn</span>
+
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-2">
+                  Áp lực thao tác trên ghế điều trị
+                </h3>
+                <p className="font-body text-sm sm:text-[15px] text-slate-600 mb-6 leading-relaxed">
+                  Những rào cản kỹ thuật khiến ca phục hồi xoang II trở thành phép thử căng thẳng cho mọi Bác sĩ:
+                </p>
+
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-slate-100 bg-slate-50/70 hover:bg-white hover:border-slate-200 transition-all">
+                    <div className="w-6 h-6 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</div>
+                    <div>
+                      <h4 className="font-heading font-bold text-slate-900 text-sm sm:text-base">Khó cô lập bờ nướu sâu</h4>
+                      <p className="font-body text-slate-600 text-xs sm:text-sm leading-relaxed mt-0.5">Dịch khe nướu, máu và hơi thở rỉ liên tục làm phá vỡ bề mặt dán dính nhạy cảm.</p>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0"></div>
-                    <span className="font-body text-slate-700 text-base sm:text-lg">Dễ bị nhiễm ẩm</span>
+
+                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-slate-100 bg-slate-50/70 hover:bg-white hover:border-slate-200 transition-all">
+                    <div className="w-6 h-6 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</div>
+                    <div>
+                      <h4 className="font-heading font-bold text-slate-900 text-sm sm:text-base">Nhạy cảm kỹ thuật thổi khô</h4>
+                      <p className="font-body text-slate-600 text-xs sm:text-sm leading-relaxed mt-0.5">Quá khô làm sập khung collagen ngà; thổi chưa đủ ẩm làm loãng nồng độ keo dán.</p>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0"></div>
-                    <span className="font-body text-slate-700 text-base sm:text-lg">Khó tạo tiếp xúc bên</span>
+
+                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-slate-100 bg-slate-50/70 hover:bg-white hover:border-slate-200 transition-all">
+                    <div className="w-6 h-6 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</div>
+                    <div>
+                      <h4 className="font-heading font-bold text-slate-900 text-sm sm:text-base">Khó tạo tiếp xúc bên khít sát</h4>
+                      <p className="font-body text-slate-600 text-xs sm:text-sm leading-relaxed mt-0.5">Đáy xoang sâu khiến việc đặt đai trám khó khít sát, dễ gây nhồi nhét thức ăn dai dẳng.</p>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0"></div>
-                    <span className="font-body text-slate-700 text-base sm:text-lg">Áp lực co ngót vật liệu kéo giật cùi răng gây hở vi kẽ</span>
+
+                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-slate-100 bg-slate-50/70 hover:bg-white hover:border-slate-200 transition-all">
+                    <div className="w-6 h-6 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</div>
+                    <div>
+                      <h4 className="font-heading font-bold text-slate-900 text-sm sm:text-base">Ứng suất co ngót giật cùi răng (C-Factor cao)</h4>
+                      <p className="font-body text-slate-600 text-xs sm:text-sm leading-relaxed mt-0.5">Composite co ngót kéo rách đáy xoang, gây vi kẽ hở và cơn đau buốt tức thì khi ăn nhai.</p>
+                    </div>
                   </div>
                 </div>
-                <div className="pt-5 border-t border-slate-100">
-                  <p className="font-body text-slate-600 leading-relaxed text-base sm:text-lg italic">
-                    "Nhiều Bác sĩ trẻ thường tự đổ lỗi cho kỹ năng thao tác thổi khô sai kỹ thuật của mình."
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-slate-100">
+                <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3">
+                  <Quote className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
+                  <p className="font-body text-slate-600 text-sm sm:text-[15px] italic leading-relaxed">
+                    "Nhiều Bác sĩ luôn thắc thỏm mỗi khi bệnh nhân quay lại tái khám với lời than phiền: Răng trám xong về ăn nhai cứ bị buốt nhói."
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* Card 2: Sự thật khoa học do vật liệu cũ */}
+            <div className="bg-gradient-to-br from-rose-50/80 via-white to-red-50/40 rounded-3xl border border-rose-200/90 p-6 sm:p-8 md:p-10 shadow-[0_4px_25px_-4px_rgba(244,63,94,0.1)] hover:shadow-xl hover:border-rose-300 transition-all flex flex-col justify-between relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-52 h-52 bg-rose-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-rose-500/20 transition-all duration-500"></div>
               
-              <div className="flex-1 bg-red-50/80 border border-red-100 rounded-3xl p-8 md:p-10 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-md transition-shadow relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-red-500/10 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none group-hover:bg-red-500/20 transition-all duration-500"></div>
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-6 shrink-0 relative z-10">
-                  <ShieldAlert className="w-6 h-6 text-red-500" />
+              <div className="relative z-10">
+                <div className="flex items-center justify-between gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-rose-100 border border-rose-200 flex items-center justify-center text-rose-600 shrink-0 shadow-sm">
+                    <ShieldAlert className="w-6 h-6 text-rose-600" />
+                  </div>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-rose-100 text-rose-700 font-mono text-xs font-bold uppercase tracking-wider">
+                    Căn nguyên khoa học
+                  </span>
                 </div>
-                <p className="font-body text-base sm:text-lg text-slate-800 font-medium leading-relaxed relative z-10">
-                  Nhưng sự thật y khoa chứng minh: <strong className="text-red-600">lỗi lớn nằm ở bản chất vật liệu thế hệ cũ.</strong> Lớp keo dán chứa HEMA rất dễ hút nước, làm phân hủy lớp lai. Đồng thời, composite thông thường co ngót quá lớn kéo giật đường viền, tạo điều kiện cho vi khuẩn bám đọng gây sâu răng thứ phát.
+
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-2">
+                  Giới hạn cố hữu của vật liệu cũ
+                </h3>
+                <p className="font-body text-sm sm:text-[15px] text-slate-600 mb-6 leading-relaxed">
+                  Cơ chế hóa học và cấu trúc vật liệu cơ học thụ động chính là thủ phạm âm thầm gây hỏng phục hồi:
                 </p>
+
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-rose-100/80 bg-white/80 backdrop-blur-sm hover:bg-white hover:border-rose-200 transition-all shadow-sm">
+                    <div className="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">!</div>
+                    <div>
+                      <h4 className="font-heading font-bold text-slate-900 text-sm sm:text-base">Monomer HEMA ưa nước (Hydrophilic)</h4>
+                      <p className="font-body text-slate-600 text-xs sm:text-sm leading-relaxed mt-0.5">Hút ẩm từ ống ngà như một miếng bọt biển, kích hoạt men MMPs tự phân hủy lớp lai dán sau 6-12 tháng.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-rose-100/80 bg-white/80 backdrop-blur-sm hover:bg-white hover:border-rose-200 transition-all shadow-sm">
+                    <div className="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">!</div>
+                    <div>
+                      <h4 className="font-heading font-bold text-slate-900 text-sm sm:text-base">Độ co ngót thể tích cao (2.5% - 4% Vol)</h4>
+                      <p className="font-body text-slate-600 text-xs sm:text-sm leading-relaxed mt-0.5">Ứng suất co ngót lớn kéo tách rời màng dán, tạo đường vi nứt kẽ vi thể sâu dưới bờ nướu.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-rose-100/80 bg-white/80 backdrop-blur-sm hover:bg-white hover:border-rose-200 transition-all shadow-sm">
+                    <div className="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">!</div>
+                    <div>
+                      <h4 className="font-heading font-bold text-slate-900 text-sm sm:text-base">Vật liệu trơ, hoàn toàn thụ động</h4>
+                      <p className="font-body text-slate-600 text-xs sm:text-sm leading-relaxed mt-0.5">Không phóng thích ion kháng khuẩn, không trung hòa axit, biến vi kẽ hở thành ổ vi khuẩn gây sâu tái phát.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-rose-100 relative z-10">
+                <div className="bg-rose-500/10 border border-rose-500/20 rounded-2xl p-4 sm:p-5">
+                  <div className="flex items-center gap-2 mb-1 text-rose-700 font-bold font-heading text-sm sm:text-base">
+                    <ShieldAlert className="w-5 h-5 shrink-0 text-rose-600" />
+                    <span>Kết luận y khoa</span>
+                  </div>
+                  <p className="font-body text-slate-700 text-sm sm:text-[15px] leading-relaxed">
+                    Bác sĩ không thao tác sai — chính <strong className="text-rose-600">bản chất vật liệu thế hệ cũ</strong> đã âm thầm phá vỡ công sức tỉ mỉ của bạn!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="w-full max-w-5xl mx-auto relative rounded-3xl overflow-hidden shadow-2xl">
+          {/* Quick Comparative Matrix */}
+          <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 md:p-10 shadow-[0_4px_25px_-4px_rgba(0,0,0,0.06)] mb-12">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <span className="text-[#00ADEF] font-mono text-xs font-bold uppercase tracking-wider">Đối chiếu cơ chế</span>
+              <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mt-1">
+                Sự khác biệt giữa 2 trường phái phục hồi
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Cũ */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-rose-50/50 border border-rose-100 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2 text-rose-600 font-bold font-heading text-base mb-4">
+                    <XCircle className="w-5 h-5 shrink-0 text-rose-500" />
+                    <span>Vật liệu cũ (Cơ học thụ động)</span>
+                  </div>
+                  <ul className="space-y-3 text-sm text-slate-600 font-body">
+                    <li className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-2 shrink-0"></span>
+                      <span>Chứa HEMA ưa nước gây ngấm ẩm và thủy phân lớp lai sau thời gian ngắn.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-2 shrink-0"></span>
+                      <span>Co ngót thể tích cao (2.5% - 4.0%) kéo tách rời đường viền đáy xoang II.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-2 shrink-0"></span>
+                      <span>Vật liệu trơ sinh học: không bảo vệ men ngà, không kháng khuẩn.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="mt-4 pt-3 border-t border-rose-200/60 text-xs font-semibold text-rose-600">
+                  Hậu quả: Nguy cơ cao ê buốt sau trám & sâu răng thứ phát tái phát.
+                </div>
+              </div>
+
+              {/* Mới */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-sky-50/60 border border-sky-100 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2 text-[#007AA8] font-bold font-heading text-base mb-4">
+                    <CheckCircle2 className="w-5 h-5 shrink-0 text-[#00ADEF]" />
+                    <span>Hệ sinh thái Giomer Shofu (Trị liệu sinh học)</span>
+                  </div>
+                  <ul className="space-y-3 text-sm text-slate-700 font-body">
+                    <li className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00ADEF] mt-2 shrink-0"></span>
+                      <span>Keo BeautiBond Xtreme <strong>HEMA-Free kỵ nước</strong>, khóa chặt ống ngà vĩnh viễn.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00ADEF] mt-2 shrink-0"></span>
+                      <span>Composite Beautifil II LS <strong>co ngót kỷ lục 0.85% Vol</strong>, khít sát tuyệt đối.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00ADEF] mt-2 shrink-0"></span>
+                      <span>Hạt độn S-PRG <strong>phóng thích 6 loại ion sinh học</strong> kháng khuẩn, chống axit 24/7.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="mt-4 pt-3 border-t border-sky-200/60 text-xs font-semibold text-[#007AA8]">
+                  Thành quả: Triệt tiêu hoàn toàn ê buốt, bảo tồn cấu trúc ngà sống dài lâu.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Microscopic Split-Screen SEM Graphic Placeholder */}
+          <div className="w-full max-w-5xl mx-auto relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 bg-white">
             <ImagePlaceholder 
-              className="aspect-[16/9] w-full bg-slate-100 border-0" 
+              className="aspect-[16/9] w-full bg-slate-50 border-0" 
               text="Biểu đồ so sánh dạng Split-Screen 16:9 sắc nét. Bên trái (Đỏ): Lát cắt vi mô nứt dọc ống ngà do co rút, HEMA hút nước vi khuẩn bám. Bên phải (Cyan): Màng keo kỵ nước mỏng bít chặt, composite co rút thấp khít sát, giải phóng ion tiêu diệt vi khuẩn." 
             />
           </div>
 
+          {/* Bottom CTA */}
           <div className="mt-12 md:mt-16 text-center">
             <CtaButton ctaName="SoHuuTronBoGiaiPhap" 
                onClick={() => openCampaignModal("Sở hữu trọn bộ giải pháp phục hồi sinh học & Đặc quyền đào tạo 1:1")}
