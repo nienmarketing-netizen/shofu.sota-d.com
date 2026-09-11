@@ -48,7 +48,7 @@ export function ShofuSocialProof() {
       name: 'ThS.BS Trần Quang Khánh',
       role: 'Trainer MiCD Global Network',
       topic: 'Khóa kín viền ngà & Không ê buốt',
-      content: 'Hệ thống Cement dán của Shofu không chỉ đơn thuần là kết dính. Việc khóa kín viền ngà và giải phóng Fluoride liên tục đã giải quyết hoàn toàn vấn đề ê buốt sau phục hình gián tiếp mà nhiều bác sĩ e ngại.',
+      content: 'Hệ thống xi măng dán của Shofu vượt ra khỏi định nghĩa kết dính cơ học thông thường. Sự cộng hưởng giữa màng keo kỵ nước bít kín ống ngà và khả năng giải phóng 6 ion sinh học liên tục giúp giảm thiểu tối đa nguy cơ nhạy cảm ngà và bảo vệ nướu tại đường hoàn tất.',
       avatar: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BS%20Kha%CC%81nh.png'
     },
     {

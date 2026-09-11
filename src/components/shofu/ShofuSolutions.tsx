@@ -158,9 +158,9 @@ export function ShofuSolutions() {
               <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
                 <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png" alt="Beautilink SA" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" />
               </div>
-              <div className="font-mono text-[10px] text-[#C43838] font-semibold uppercase tracking-widest mb-2">XI MĂNG TỰ DÁN THẾ HỆ MỚI</div>
+              <div className="font-mono text-[10px] text-[#C43838] font-semibold uppercase tracking-widest mb-2">XI MĂNG RESIN TỰ DÁN LƯỠNG TRÙNG HỢP (DUAL-CURE)</div>
               <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Beautilink SA</h4>
-              <div className="font-mono text-xs text-slate-500 mb-4">One-Sweep sạch xi măng dư</div>
+              <div className="font-mono text-xs text-slate-500 mb-4">Liên kết hóa học đa bề mặt & Kiểm soát dư dạng Gel-State</div>
 
             </motion.div>
 

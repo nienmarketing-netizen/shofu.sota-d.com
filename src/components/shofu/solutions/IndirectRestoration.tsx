@@ -153,7 +153,7 @@ export function IndirectRestoration() {
               />
             </div>
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Kiến tạo liên kết sinh học kỵ nước <strong className="text-slate-900">siêu mỏng 24µm</strong> với bộ đôi <strong className="text-slate-900">BeautiBond Xtreme (HEMA-Free)</strong> & <strong className="text-slate-900">BeautiLink SA (S-PRG)</strong>. Dán chặt Zirconia <strong className="text-slate-900">~50 MPa</strong>, lột sạch xi măng dư sau <strong className="text-amber-600">1-2 giây Tack-cure</strong> và tối ưu hóa chi phí chạm đáy chỉ <strong className="text-emerald-600">~16.600đ/ca gắn</strong>.
+              Tối ưu hóa <strong className="text-slate-900">Khoảng xi măng ghép (Cement Space) chỉ 24µm</strong> nhờ sự kết hợp giữa màng keo 5µm (<strong className="text-slate-900">BeautiBond Xtreme</strong>) và lớp xi măng mỏng 14µm (<strong className="text-slate-900">BeautiLink SA</strong>). Tạo liên kết hóa học bền vững với lực dán trượt <strong className="text-[#00ADEF] font-bold">~50 MPa</strong> trên Zirconia và ổn định cấu trúc sau 5.000 chu kỳ nhồi nhiệt (<strong className="text-slate-900">Dental Advisor 2024</strong>).
             </p>
             
             <ul className="space-y-3 mb-10">
@@ -330,7 +330,7 @@ export function IndirectRestoration() {
           <div className="bg-white bg-gradient-to-br from-[#C43838]/5 to-[#8C2828]/10 rounded-[2rem] px-5 py-8 sm:p-8 md:p-12 border border-[#C43838]/20 relative overflow-hidden flex flex-col h-full justify-between">
             <div className="relative z-10">
               <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">Xi măng BeautiLink SA</h3>
-              <p className="text-[#C43838] font-bold text-sm uppercase tracking-wider mb-6">Tự dán sinh học Dual-Cure</p>
+              <p className="text-[#C43838] font-bold text-sm uppercase tracking-wider mb-6">Tự dán lưỡng trùng hợp tích hợp hạt độn Giomer S-PRG</p>
               
               {/* Product Image Area */}
               <div className="mb-8 relative z-10 flex justify-center items-center">

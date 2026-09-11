@@ -70,12 +70,12 @@ export const BenefitsSection: React.FC = () => {
        </div>
        <div>
         <span className="font-mono text-[10px] sm:text-xs text-[#C43838] font-bold uppercase tracking-wider block">Nội dung 2 • Triệt tiêu ê buốt</span>
-        <h3 className="font-heading font-bold text-lg sm:text-2xl text-slate-900 mt-0.5">Xi Măng Đa Năng Thế Hệ Mới & S-PRG</h3>
+        <h3 className="font-heading font-bold text-lg sm:text-2xl text-slate-900 mt-0.5">Xi Măng Resin Tự Dán Sinh Học & Công Nghệ Hạt Độn S-PRG</h3>
        </div>
       </div>
 
       <p className="font-body text-slate-600 text-xs sm:text-base leading-relaxed mb-4 sm:mb-6">
-       Khám phá xi măng đa năng thế hệ mới. Không chỉ <strong className="text-slate-900">"Thụ động"</strong> kết dính, mà <strong className="text-[#00ADEF]">"Chủ động"</strong> bảo vệ với công nghệ hạt độn S-PRG tái khoáng hóa.
+       Tích hợp các monomer chức năng (Phosphonic Acid & Silane thế hệ mới). Chuyển dịch từ kết dính cơ học thụ động sang liên kết hóa học vi thể & bảo vệ sinh học chủ động.
       </p>
 
 
@@ -90,7 +90,7 @@ export const BenefitsSection: React.FC = () => {
        </div>
        <div className="flex items-start gap-2.5 sm:gap-3 bg-white shadow-sm p-2.5 sm:p-3 rounded-xl border border-slate-200">
         <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-[#00ADEF] shrink-0 mt-0.5" />
-        <span className="leading-snug">Ứng dụng dòng xi măng <strong className="text-[#00ADEF]">Beautilink SA</strong> cho quy trình dán Zirconia, sứ thủy tinh, sứ lai bền vững.</span>
+        <span className="leading-snug">Tương thích liên kết trực tiếp trên Zirconia, Sứ thủy tinh (Lithium Disilicate), Sứ lai và Kim loại mà không cần Primer rời.</span>
        </div>
       </div>
      </div>
@@ -121,9 +121,9 @@ export const BenefitsSection: React.FC = () => {
       <div className="w-full bg-slate-100 rounded-lg mb-1.5 overflow-hidden border border-slate-200">
        <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png" alt="Beautilink SA" className="w-full h-auto object-contain" />
       </div>
-      <div className="font-mono text-[10px] text-[#C43838] uppercase mt-1">Xi măng tự dán thế hệ mới</div>
+      <div className="font-mono text-[10px] text-[#C43838] uppercase mt-1">XI MĂNG RESIN TỰ DÁN LƯỠNG TRÙNG HỢP (DUAL-CURE)</div>
       <div className="font-heading font-bold text-sm sm:text-base text-slate-900 mt-1">Beautilink SA</div>
-      <div className="font-mono text-[11px] sm:text-xs text-slate-600 mt-1">One-Sweep sạch xi măng dư</div>
+      <div className="font-mono text-[11px] sm:text-xs text-slate-600 mt-1">Liên kết hóa học đa bề mặt & Kiểm soát dư dạng Gel-State</div>
      </div>
 
      <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-fit">

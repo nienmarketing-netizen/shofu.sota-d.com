@@ -52,7 +52,7 @@ export function ShofuOfferModal() {
     1: {
       title: 'Giomer Không Ê Buốt',
       name: 'Combo Phục Hình Gián Tiếp',
-      description: 'Combo quyền lực BBX & BeautiLink SA: Khóa chặt vi kẽ - Trị liệu sinh học 6 ion - Chấm dứt 100% ám ảnh bảo hành.',
+      description: 'Chuẩn hóa phác đồ dán - gắn phục hình gián tiếp 3 bước: Khóa kín ống ngà bằng màng dán kỵ nước HEMA-Free (BeautiBond Xtreme), kết hợp Xi măng tự dán sinh học (BeautiLink SA) giải phóng 6 ion – Giảm thiểu nguy cơ thủy phân liên kết và bảo vệ viền sinh học bền vững.',
       theme: 'shofu',
       coreValues: [
         '"Trạm phát 6 Ion" triệt tiêu ê buốt tức thì.',

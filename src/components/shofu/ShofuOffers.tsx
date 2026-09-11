@@ -89,7 +89,7 @@ export function ShofuOffers() {
                 <span className="text-sm sm:text-base text-[#00ADEF]">Giomer không ê buốt</span>
               </h3>
               <p className="font-body text-sm text-slate-300 mb-6 flex-1 leading-relaxed">
-                Triệt tiêu ê buốt tức thì nhờ màng dán dính khóa kín ống ngà từ Keo dán BeautiBond Xtreme (HEMA-Free) <strong className="text-[#00ADEF]">kỵ nước tuyệt đối</strong>, <strong className="text-emerald-400">chống thoái hóa lớp lai</strong>. Xi măng tự dán BeautiLink SA phóng thích 6 ion sinh học S-PRG liên tục tái khoáng ngà răng, <strong className="text-emerald-400">bảo vệ khỏi sâu răng tái phát</strong>.
+                Chuẩn hóa phác đồ dán - gắn phục hình gián tiếp 3 bước: Khóa kín ống ngà bằng màng dán kỵ nước HEMA-Free (<strong className="text-[#00ADEF]">BeautiBond Xtreme</strong>), kết hợp Xi măng tự dán sinh học (<strong className="text-emerald-400">BeautiLink SA</strong>) giải phóng 6 ion – Giảm thiểu nguy cơ thủy phân liên kết và bảo vệ viền sinh học bền vững.
               </p>
               
               <div className="flex flex-col gap-2 mb-4 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">
