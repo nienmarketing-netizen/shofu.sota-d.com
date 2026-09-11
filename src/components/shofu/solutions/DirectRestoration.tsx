@@ -465,7 +465,7 @@ export function DirectRestoration() {
             </p>
           </div>
 
-          <div className="relative space-y-16 sm:space-y-20 lg:space-y-28">
+          <div className="relative space-y-16 sm:space-y-20 lg:space-y-28 z-0">
             {/* Continuous Process Line: Left on mobile, Center on desktop */}
             <div className="absolute left-4 sm:left-6 lg:left-1/2 -translate-x-1/2 top-3 bottom-8 w-1 bg-gradient-to-b from-sky-400 via-[#00ADEF] via-75% to-transparent rounded-full pointer-events-none z-20" />
 
@@ -479,7 +479,7 @@ export function DirectRestoration() {
               </div>
 
               <div className="w-full lg:w-1/2 flex items-center justify-start lg:justify-end">
-                <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] -ml-8 sm:-ml-12 lg:ml-0">
+                <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] -ml-8 sm:-ml-12 lg:ml-0 -z-10 lg:z-auto">
                   <img 
                     src="/image/BeautiBond-Xtreme-One-Hand.webp" 
                     alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
