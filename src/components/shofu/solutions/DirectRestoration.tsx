@@ -483,7 +483,7 @@ export function DirectRestoration() {
                   <img 
                     src="/image/BeautiBond-Xtreme-One-Hand.webp" 
                     alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
-                    className="w-full h-auto object-contain block [mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%)] lg:[mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] lg:[-webkit-mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)]"
+                    className="w-full h-auto object-contain block [mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%),linear-gradient(to_right,transparent_0%,black_15%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%),linear-gradient(to_right,transparent_0%,black_15%)] [mask-composite:intersect] [-webkit-mask-composite:source-in] lg:[mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] lg:[-webkit-mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] lg:[mask-composite:add] lg:[-webkit-mask-composite:source-over]"
                     loading="lazy"
                   />
                 </div>
