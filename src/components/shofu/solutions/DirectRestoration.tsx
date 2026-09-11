@@ -200,7 +200,6 @@ export function DirectRestoration() {
           <div className="text-center mb-12 md:mb-16">
             <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-600 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider mb-6 shadow-sm">
               <div className="w-2 h-2 rounded-full bg-rose-500 animate-pulse shrink-0"></div>
-              <AlertTriangle className="w-4 h-4 text-rose-500 shrink-0" />
               <span>Góc khuất lâm sàng</span>
             </div>
             
