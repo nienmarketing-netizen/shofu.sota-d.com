@@ -434,8 +434,11 @@ export function DirectRestoration() {
         
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">
-              Hệ sinh thái Giomer: <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">Quy trình phục hồi trực tiếp 3 bước tối giản</span>
+            <h2 className="font-heading font-extrabold text-2xl min-[400px]:text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">
+              <span className="block sm:inline">Hệ sinh thái Giomer<span className="hidden sm:inline">: </span></span>
+              <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">
+                Quy trình phục hồi trực tiếp với 3 bước tối giản
+              </span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
               Thiết lập quy trình phục hồi trực tiếp vị tha trên lâm sàng, giải phóng hoàn toàn áp lực kỹ thuật cho Bác sĩ.
