@@ -119,7 +119,7 @@ export function DirectRestoration() {
                   <ShieldCheck className="w-4 h-4 text-[#C43838]" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">Triệt tiêu 100% nguy cơ ê buốt tức thì</h4>
+                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">Triệt tiêu nguy cơ ê buốt tức thì</h4>
                   <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Nhờ màng dán kỵ nước HEMA-Free của keo dán thế hệ 8 BeautiBond Xtreme.</p>
                 </div>
               </li>
