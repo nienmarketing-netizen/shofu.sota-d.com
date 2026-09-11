@@ -12,28 +12,28 @@ export function ShofuSolutions() {
       slug: 'nha-khoa-phong-ngua',
       title: 'Nha Khoa Phòng Ngừa',
       icon: ShieldPlus,
-      bgClass: 'bg-gradient-to-br from-[#E54848]/80 to-[#C43838]/80',
+      bgClass: 'bg-gradient-to-br from-[#33BDF2] to-[#00ADEF]',
     },
     {
       id: 'direct',
       slug: 'phuc-hinh-truc-tiep',
       title: 'Phục Hồi Trực Tiếp',
       icon: Syringe,
-      bgClass: 'bg-gradient-to-br from-[#00ADEF]/80 to-[#007AA8]/80',
+      bgClass: 'bg-gradient-to-br from-[#00ADEF] to-[#006F9E]',
     },
     {
       id: 'indirect',
       slug: 'phuc-hinh-gian-tiep',
       title: 'Phục Hình Gián Tiếp',
       icon: Gem,
-      bgClass: 'bg-gradient-to-br from-[#33BDF2]/80 to-[#00ADEF]/80',
+      bgClass: 'bg-gradient-to-br from-[#F05A54] to-[#D9383A]',
     },
     {
       id: 'masterclass',
       slug: 'giai-phap-toan-dien',
       title: 'Giải Pháp Toàn Diện',
       icon: Layers,
-      bgClass: 'bg-gradient-to-br from-[#C43838]/80 to-[#8C2828]/80',
+      bgClass: 'bg-gradient-to-br from-[#C43838] to-[#801D1D]',
     }
   ];
 
