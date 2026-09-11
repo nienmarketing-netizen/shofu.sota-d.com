@@ -340,14 +340,16 @@ export function DirectRestoration() {
             </div>
           </div>
 
-          {/* Microscopic Split-Screen SEM Graphic */}
+          {/* Microscopic Split-Screen SEM Graphic with Bottom Fade */}
           <div className="w-screen relative left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:w-full sm:max-w-5xl sm:mx-auto overflow-hidden mb-12 lg:mb-16">
             <img 
               src="/image/tri-lieu-sinh-hoc-micd.webp" 
               alt="Cơ chế phục hồi trị liệu sinh học MiCD Shofu" 
-              className="w-full h-auto object-cover block"
+              className="w-full h-auto object-cover block [mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)]"
               loading="lazy"
             />
+            {/* Lớp gradient tiệp màu nền slate-900, xóa đường cắt ngang */}
+            <div className="absolute inset-x-0 bottom-0 h-16 sm:h-24 md:h-32 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent pointer-events-none" />
           </div>
 
           {/* Quick Comparative Matrix */}
