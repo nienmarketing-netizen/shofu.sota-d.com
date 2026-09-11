@@ -555,7 +555,7 @@ export function DirectRestoration() {
             <div className="text-center md:text-left relative z-10">
               <p className="text-slate-400 text-sm font-medium mb-1 uppercase tracking-wider">Tổng giá trị</p>
               <div className="flex items-baseline justify-center md:justify-start gap-2">
-                
+                <p className="text-slate-400 text-2xl md:text-3xl font-bold line-through decoration-red-500/50 decoration-2">7.250.000đ</p>
               </div>
               <p className="text-xs text-slate-500 mt-1">(Bác sĩ chỉ thanh toán phần vật lý 3 sản phẩm chính)</p>
             </div>
@@ -565,7 +565,7 @@ export function DirectRestoration() {
             
             <div className="text-center md:text-right relative z-10">
               <p className="text-amber-400 text-sm font-medium mb-1 uppercase tracking-wider">Mức đầu tư trải nghiệm</p>
-              <p className="font-heading font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200 text-center">Liên hệ báo giá</p>
+              <p className="font-heading font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">3.250.000đ</p>
             </div>
           </div>
 
