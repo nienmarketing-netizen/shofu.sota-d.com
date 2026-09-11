@@ -93,7 +93,7 @@ export function DirectRestoration() {
       {/* SECTION 1: HERO */}
       <section className="relative bg-slate-50 bg-grid-pattern pt-[100px] pb-16 md:pt-[120px] md:pb-24 overflow-hidden border-b border-slate-200">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#00ADEF]/10 to-transparent rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
-        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-center relative z-10">
+        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-start relative z-10">
           <div className="w-full lg:w-[65%] xl:w-[60%] text-left">
             <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#00ADEF]/10 border border-[#00ADEF]/20 mb-6 max-w-full overflow-hidden relative">
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00ADEF] animate-pulse shrink-0 relative z-10 shadow-[0_0_4px_rgba(0,173,239,0.8)]"></div>
@@ -105,12 +105,8 @@ export function DirectRestoration() {
               </div>
             </div>
             
-            <h1 className="font-heading font-extrabold text-[1.2rem] min-[375px]:text-[1.35rem] min-[414px]:text-[1.5rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.35] sm:leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12 text-left">
-              <span className="block sm:inline">Chấm dứt ám ảnh ê buốt</span>{" "}
-              <span className="block sm:inline">& sâu răng thứ phát</span>{" "}
-              <span className="block sm:inline">
-                trong <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">phục hồi xoang II răng sau</span>
-              </span>
+            <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12 text-left">
+              Chấm dứt ám ảnh ê buốt & sâu răng thứ phát trong <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">phục hồi xoang II răng sau</span>
             </h1>
 
             {/* Mobile Image: Hiển thị ngay dưới headline ở mobile, ẩn ở desktop */}
@@ -173,7 +169,7 @@ export function DirectRestoration() {
             </CtaButton>
           </div>
           
-          <div className="hidden lg:flex w-full lg:w-[35%] xl:w-[40%] relative justify-center items-center">
+          <div className="hidden lg:flex w-full lg:w-[35%] xl:w-[40%] relative justify-center items-start lg:pt-[54px]">
             <img 
               referrerPolicy="no-referrer"
               src="/images/giai-phap-phuc-hoi-truc-tiep-shofu.webp"
