@@ -91,7 +91,7 @@ export function DirectRestoration() {
   return (
     <div className="w-full flex flex-col">
       {/* SECTION 1: HERO */}
-      <section className="relative bg-slate-50 bg-grid-pattern pt-[100px] pb-16 md:pt-[120px] md:pb-24 overflow-hidden border-b border-slate-200">
+      <section className="relative bg-slate-50 bg-grid-pattern pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#00ADEF]/10 to-transparent rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-center relative z-10">
           <div className="w-full lg:w-[65%] xl:w-[60%] text-center lg:text-left">

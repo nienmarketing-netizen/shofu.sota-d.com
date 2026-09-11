@@ -36,7 +36,7 @@ export default function ShofuLanding() {
     <div className="min-h-screen bg-slate-50 bg-grid-pattern text-slate-900 flex flex-col font-body selection:bg-sky-200 selection:text-sky-900">
       <ShofuHeader onNavigate={scrollToSection} onOpenQuote={() => openModal('quote')} />
       
-      <main className="flex-1 pt-16 sm:pt-20">
+      <main className="flex-1">
         <ShofuHero onCTA={() => openModal('consult')} />
         <ShofuSolutions />
         <ShofuOffers />
