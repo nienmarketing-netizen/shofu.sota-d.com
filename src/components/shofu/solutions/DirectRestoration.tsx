@@ -479,18 +479,13 @@ export function DirectRestoration() {
               </div>
 
               <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end">
-                <div className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[460px] overflow-hidden">
+                <div className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[460px]">
                   <img 
                     src="/image/BeautiBond-Xtreme-One-Hand.webp" 
                     alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
-                    className="w-full h-auto object-contain block [mask-image:linear-gradient(to_right,transparent_0%,black_6%,black_100%),linear-gradient(to_bottom,black_0%,black_94%,transparent_100%)] [mask-composite:intersect] [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_6%,black_100%),linear-gradient(to_bottom,black_0%,black_94%,transparent_100%)] [-webkit-mask-composite:destination-in]"
+                    className="w-full h-auto object-contain block [mask-image:radial-gradient(ellipse_95%_88%_at_60%_36%,black_35%,rgba(0,0,0,0.92)_50%,rgba(0,0,0,0.65)_68%,rgba(0,0,0,0.25)_82%,transparent_95%)] [-webkit-mask-image:radial-gradient(ellipse_95%_88%_at_60%_36%,black_35%,rgba(0,0,0,0.92)_50%,rgba(0,0,0,0.65)_68%,rgba(0,0,0,0.25)_82%,transparent_95%)]"
                     loading="lazy"
                   />
-                  {/* Lớp gradient tiệp màu nền slate-50 rất nhẹ và hẹp bên trái */}
-                  <div className="absolute inset-y-0 left-0 w-5 sm:w-7 bg-gradient-to-r from-slate-50/70 to-transparent pointer-events-none z-10" />
-
-                  {/* Lớp gradient tiệp màu nền slate-50 rất nhẹ và hẹp bên dưới */}
-                  <div className="absolute inset-x-0 bottom-0 h-5 sm:h-7 bg-gradient-to-t from-slate-50/70 to-transparent pointer-events-none z-10" />
                 </div>
               </div>
               <div className="w-full lg:w-1/2 lg:pl-4">
