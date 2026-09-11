@@ -16,9 +16,11 @@ export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHea
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const scrollY = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      setIsScrolled(scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -31,8 +33,11 @@ export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHea
 
   return (
     <header 
-      className={`sticky top-0 z-50 w-full transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-200/80 ${
-        isScrolled || isMobileMenuOpen ? 'shadow-md py-2.5 sm:py-3' : 'shadow-xs py-3 sm:py-3.5'
+      id="shofu-header"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled || isMobileMenuOpen 
+          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80 py-3' 
+          : 'bg-transparent py-4 sm:py-5 border-b border-transparent'
       }`}
     >
       <div className="w-[90%] lg:w-[80%] mx-auto relative z-20">
@@ -111,7 +116,7 @@ export function ShofuHeader({ onNavigate, onOpenQuote, isLandingPage }: ShofuHea
 
       {/* Mobile Navigation Dropdown */}
       {isMobileMenuOpen && !isLandingPage && (
-        <div className="md:hidden absolute top-full left-0 right-0 w-full bg-white border-t border-slate-100 shadow-2xl z-[100] animate-in slide-in-from-top-2 fade-in duration-200">
+        <div className="md:hidden fixed top-[68px] left-0 right-0 w-full bg-white border-t border-slate-100 shadow-2xl z-[100] animate-in slide-in-from-top-2 fade-in duration-200">
           <div className="py-4 px-6 flex flex-col gap-4">
           {navItems.map((item) => (
             <button

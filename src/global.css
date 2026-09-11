@@ -7,7 +7,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 body {
@@ -17,11 +17,19 @@ body {
 
 #root {
   position: relative;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
-main, section, header, footer {
+main, section, footer {
   position: relative;
+}
+
+header#shofu-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
 }
 
 @layer utilities {

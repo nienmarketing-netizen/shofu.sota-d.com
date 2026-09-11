@@ -78,7 +78,7 @@ export default function SolutionLanding() {
         ) : (
           <>
             {/* Hero Section */}
-            <section className={`${data.bgClass} pb-12 pt-8 md:pb-20 md:pt-12 border-b border-slate-200 relative overflow-hidden`}>
+            <section className={`${data.bgClass} pb-12 pt-[100px] md:pb-20 md:pt-[120px] border-b border-slate-200 relative overflow-hidden`}>
               <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
               <div className="w-[90%] lg:w-[80%] mx-auto text-center relative z-10">
 
