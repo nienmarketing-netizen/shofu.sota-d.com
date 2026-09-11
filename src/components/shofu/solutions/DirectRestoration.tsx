@@ -284,7 +284,11 @@ export function DirectRestoration() {
             </div>
 
             {/* Card 2: Sự thật khoa học do vật liệu cũ */}
-            <div className="bg-slate-800/50 backdrop-blur-md rounded-3xl border border-red-500/30 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] p-6 sm:p-8 md:p-10 shadow-[0_4px_25px_-4px_rgba(239,68,68,0.1)] transition-all flex flex-col justify-between relative overflow-hidden group">
+            <div className="relative rounded-3xl p-6 sm:p-8 md:p-10 pb-0 sm:pb-8 md:pb-10 transition-all flex flex-col justify-between overflow-hidden group">
+              {/* Background & border frame with top-down opacity fade on mobile */}
+              <div 
+                className="absolute inset-0 rounded-3xl border border-red-500/30 bg-slate-800/50 backdrop-blur-md pointer-events-none hover:border-red-500/60 transition-colors shadow-[0_4px_25px_-4px_rgba(239,68,68,0.1)] [mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" 
+              />
               <div className="absolute top-0 right-0 w-52 h-52 bg-red-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-red-500/20 transition-all duration-500"></div>
               
               <div className="relative z-10">
@@ -304,7 +308,7 @@ export function DirectRestoration() {
                   Cơ chế hóa học và cấu trúc vật liệu cơ học thụ động chính là thủ phạm âm thầm gây hỏng phục hồi:
                 </p>
 
-                <div className="space-y-3">
+                <div className="space-y-3 -mx-6 sm:mx-0">
                   <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-red-500/20 bg-slate-800/80 hover:border-red-500/40 transition-all shadow-sm">
                     <div className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">!</div>
                     <div>
@@ -331,7 +335,7 @@ export function DirectRestoration() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-red-500/20 relative z-10">
+              <div className="mt-6 sm:mt-8 pt-0 sm:pt-6 border-t-0 sm:border-t sm:border-red-500/20 -mx-6 sm:mx-0 relative z-10">
                 <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-4 sm:p-5">
                   <div className="flex items-center gap-2 mb-1 text-red-400 font-bold font-heading text-sm sm:text-base">
                     <ShieldAlert className="w-5 h-5 shrink-0 text-red-400" />
