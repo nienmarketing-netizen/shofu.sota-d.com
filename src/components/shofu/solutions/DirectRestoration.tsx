@@ -195,9 +195,9 @@ export function DirectRestoration() {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
-            <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider mb-6 shadow-sm">
+            <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 font-mono text-xs sm:text-sm font-bold tracking-wider mb-6 shadow-sm">
               <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse shrink-0"></div>
-              <span>Góc khuất lâm sàng</span>
+              <span className="normal-case">Góc khuất lâm sàng</span>
             </div>
             
             <h2 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-4 tracking-tight max-w-4xl mx-auto">
