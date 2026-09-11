@@ -366,15 +366,20 @@ export function DirectRestoration() {
           </div>
 
           {/* Quick Comparative Matrix */}
-          <div className="bg-slate-800/60 backdrop-blur-md rounded-3xl border border-slate-700/80 p-6 sm:p-8 md:p-10 shadow-2xl mb-12">
-            <div className="text-center max-w-2xl mx-auto mb-8">
+          <div className="relative rounded-3xl p-6 sm:p-8 md:p-10 pb-0 sm:pb-8 md:pb-10 shadow-2xl mb-12">
+            {/* Background & border frame with top-down opacity fade on mobile */}
+            <div 
+              className="absolute inset-0 rounded-3xl border border-slate-700/80 bg-slate-800/60 backdrop-blur-md pointer-events-none [mask-image:linear-gradient(to_bottom,black_0px,black_105px,transparent_155px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_105px,transparent_155px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" 
+            />
+
+            <div className="relative z-10 text-center max-w-2xl mx-auto mb-8">
               <span className="text-[#00ADEF] font-mono text-xs font-bold uppercase tracking-wider">Đối chiếu cơ chế</span>
               <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mt-1">
                 Sự khác biệt giữa 2 trường phái phục hồi
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 -mx-6 sm:mx-0">
               {/* Cũ */}
               <div className="p-5 sm:p-6 rounded-2xl bg-red-950/20 border border-red-500/30 flex flex-col justify-between">
                 <div>
