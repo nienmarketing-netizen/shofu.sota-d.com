@@ -341,7 +341,7 @@ export function DirectRestoration() {
           </div>
 
           {/* Microscopic Split-Screen SEM Graphic */}
-          <div className="w-full max-w-5xl mx-auto relative overflow-hidden mb-12 lg:mb-16">
+          <div className="w-screen relative left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:w-full sm:max-w-5xl sm:mx-auto overflow-hidden mb-12 lg:mb-16">
             <img 
               src="/image/tri-lieu-sinh-hoc-micd.webp" 
               alt="Cơ chế phục hồi trị liệu sinh học MiCD Shofu" 
