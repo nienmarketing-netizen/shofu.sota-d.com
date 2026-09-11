@@ -330,10 +330,10 @@ export function DirectRestoration() {
                 <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-4 sm:p-5">
                   <div className="flex items-center gap-2 mb-1 text-red-400 font-bold font-heading text-sm sm:text-base">
                     <ShieldAlert className="w-5 h-5 shrink-0 text-red-400" />
-                    <span>Kết luận y khoa</span>
+                    <span>Kết luận thực tế</span>
                   </div>
                   <p className="font-body text-slate-300 text-sm sm:text-[15px] leading-relaxed">
-                    Bác sĩ không thao tác sai — chính <strong className="text-red-400">bản chất vật liệu thế hệ cũ</strong> đã âm thầm phá vỡ công sức tỉ mỉ của bạn!
+                    Bác sĩ không thao tác sai mà chính <strong className="text-red-400">bản chất vật liệu thế hệ cũ</strong> đã âm thầm phá vỡ công sức tỉ mỉ của Bác sĩ.
                   </p>
                 </div>
               </div>
