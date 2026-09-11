@@ -406,11 +406,13 @@ export function DirectRestoration() {
             </div>
           </div>
 
-          {/* Microscopic Split-Screen SEM Graphic Placeholder */}
-          <div className="w-full max-w-5xl mx-auto relative rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-800">
-            <ImagePlaceholder 
-              className="aspect-[16/9] w-full bg-slate-800 border-0" 
-              text="Biểu đồ so sánh dạng Split-Screen 16:9 sắc nét. Bên trái (Đỏ): Lát cắt vi mô nứt dọc ống ngà do co rút, HEMA hút nước vi khuẩn bám. Bên phải (Cyan): Màng keo kỵ nước mỏng bít chặt, composite co rút thấp khít sát, giải phóng ion tiêu diệt vi khuẩn." 
+          {/* Microscopic Split-Screen SEM Graphic */}
+          <div className="w-full max-w-5xl mx-auto relative rounded-3xl overflow-hidden shadow-2xl border border-slate-700/80 bg-slate-800">
+            <img 
+              src="/image/tri-lieu-sinh-hoc-micd.webp" 
+              alt="Cơ chế phục hồi trị liệu sinh học MiCD Shofu" 
+              className="w-full h-auto object-cover block"
+              loading="lazy"
             />
           </div>
 
