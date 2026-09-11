@@ -14,8 +14,14 @@ const solutionData = {
     color: '#00ADEF',
     bgClass: 'bg-gradient-to-br from-[#33BDF2]/10 to-[#00ADEF]/10',
   },
+  'phuc-hoi-truc-tiep': {
+    title: 'Phục Hồi Trực Tiếp',
+    subtitle: 'Hệ thống composite và keo dán sinh học tiên tiến',
+    color: '#007AA8',
+    bgClass: 'bg-gradient-to-br from-[#00ADEF]/10 to-[#007AA8]/10',
+  },
   'phuc-hinh-truc-tiep': {
-    title: 'Phục Hình Trực Tiếp',
+    title: 'Phục Hồi Trực Tiếp',
     subtitle: 'Hệ thống composite và keo dán sinh học tiên tiến',
     color: '#007AA8',
     bgClass: 'bg-gradient-to-br from-[#00ADEF]/10 to-[#007AA8]/10',
@@ -73,7 +79,7 @@ export default function SolutionLanding() {
       <main className="flex-1 bg-transparent relative">
         {slug === 'phuc-hinh-gian-tiep' ? (
           <IndirectRestoration />
-        ) : slug === 'phuc-hinh-truc-tiep' ? (
+        ) : (slug === 'phuc-hoi-truc-tiep' || slug === 'phuc-hinh-truc-tiep') ? (
           <DirectRestoration />
         ) : (
           <>

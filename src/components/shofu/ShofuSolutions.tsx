@@ -16,7 +16,7 @@ export function ShofuSolutions() {
     },
     {
       id: 'direct',
-      slug: 'phuc-hinh-truc-tiep',
+      slug: 'phuc-hoi-truc-tiep',
       title: 'Phục Hồi Trực Tiếp',
       icon: Syringe,
       bgClass: 'bg-gradient-to-br from-[#00ADEF] to-[#006F9E]',

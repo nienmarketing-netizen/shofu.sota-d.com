@@ -99,8 +99,8 @@ export function DirectRestoration() {
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00ADEF] animate-pulse shrink-0 relative z-10 shadow-[0_0_4px_rgba(0,173,239,0.8)]"></div>
               <div className="flex overflow-hidden relative w-full [mask-image:linear-gradient(to_right,transparent,black_10px,black_90%,transparent)] sm:[mask-image:none]">
                 <div className="font-mono text-[10.5px] min-[375px]:text-[11.5px] sm:text-xs font-bold text-[#00ADEF] tracking-tight sm:tracking-wide whitespace-nowrap flex animate-marquee sm:!animate-none sm:!transform-none w-max">
-                  <span className="pr-8 sm:pr-0">Giải pháp phục hình trực tiếp MiCD</span>
-                  <span className="pr-8 sm:hidden">Giải pháp phục hình trực tiếp MiCD</span>
+                  <span className="pr-8 sm:pr-0">Giải pháp phục hồi trực tiếp MiCD</span>
+                  <span className="pr-8 sm:hidden">Giải pháp phục hồi trực tiếp MiCD</span>
                 </div>
               </div>
             </div>
