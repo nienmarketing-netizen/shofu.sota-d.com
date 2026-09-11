@@ -8,25 +8,25 @@ export function ShofuSolutions() {
   const navigate = useNavigate();
   const solutions = [
     {
-      id: 'indirect',
-      slug: 'phuc-hinh-gian-tiep',
-      title: 'Phục Hình Gián Tiếp',
-      icon: Gem,
-      bgClass: 'bg-gradient-to-br from-[#33BDF2]/80 to-[#00ADEF]/80',
-    },
-    {
-      id: 'direct',
-      slug: 'phuc-hinh-truc-tiep',
-      title: 'Phục Hình Trực Tiếp',
-      icon: Syringe,
-      bgClass: 'bg-gradient-to-br from-[#00ADEF]/80 to-[#007AA8]/80',
-    },
-    {
       id: 'preventive',
       slug: 'nha-khoa-phong-ngua',
       title: 'Nha Khoa Phòng Ngừa',
       icon: ShieldPlus,
       bgClass: 'bg-gradient-to-br from-[#E54848]/80 to-[#C43838]/80',
+    },
+    {
+      id: 'direct',
+      slug: 'phuc-hinh-truc-tiep',
+      title: 'Phục Hồi Trực Tiếp',
+      icon: Syringe,
+      bgClass: 'bg-gradient-to-br from-[#00ADEF]/80 to-[#007AA8]/80',
+    },
+    {
+      id: 'indirect',
+      slug: 'phuc-hinh-gian-tiep',
+      title: 'Phục Hình Gián Tiếp',
+      icon: Gem,
+      bgClass: 'bg-gradient-to-br from-[#33BDF2]/80 to-[#00ADEF]/80',
     },
     {
       id: 'masterclass',
