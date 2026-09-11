@@ -479,12 +479,19 @@ export function DirectRestoration() {
               </div>
 
               <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end">
-                <img 
-                  src="/image/BeautiBond-Xtreme-One-Hand.webp" 
-                  alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
-                  className="w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[460px] h-auto object-contain block drop-shadow-md"
-                  loading="lazy"
-                />
+                <div className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[460px] overflow-hidden">
+                  <img 
+                    src="/image/BeautiBond-Xtreme-One-Hand.webp" 
+                    alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
+                    className="w-full h-auto object-contain block [mask-image:linear-gradient(to_right,transparent_0%,black_18%,black_100%),linear-gradient(to_bottom,black_0%,black_82%,transparent_100%)] [mask-composite:intersect] [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_18%,black_100%),linear-gradient(to_bottom,black_0%,black_82%,transparent_100%)] [-webkit-mask-composite:destination-in]"
+                    loading="lazy"
+                  />
+                  {/* Lớp gradient tiệp màu nền slate-50 bên trái, làm mềm hoàn toàn đường cắt dọc */}
+                  <div className="absolute inset-y-0 left-0 w-12 sm:w-16 lg:w-20 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent pointer-events-none z-10" />
+
+                  {/* Lớp gradient tiệp màu nền slate-50 bên dưới, làm mềm hoàn toàn đường cắt ngang */}
+                  <div className="absolute inset-x-0 bottom-0 h-12 sm:h-16 lg:h-20 bg-gradient-to-t from-slate-50 via-slate-50/80 to-transparent pointer-events-none z-10" />
+                </div>
               </div>
               <div className="w-full lg:w-1/2 lg:pl-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4">
