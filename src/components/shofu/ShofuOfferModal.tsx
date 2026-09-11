@@ -69,8 +69,9 @@ export function ShofuOfferModal() {
         { name: 'Cố vấn Lâm sàng 1:1 cùng ThS.BS Trần Quang Khánh', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Co+Van+1:1' },
         { name: 'Sổ tay E-Guide & Bộ Video Masterclass Thực chiến', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Masterclass' }
       ],
-      totalValue: '',
-      price: '',
+      totalValue: '8.155.000đ',
+      price: '3.415.000đ',
+      
       guarantee: 'Hoàn tiền 100% nếu Bác sĩ không hài lòng'
     },
     2: {
@@ -93,8 +94,9 @@ export function ShofuOfferModal() {
         { name: 'Cố vấn Lâm sàng 1:1 cùng ThS.BS Trần Quang Khánh', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Co+Van+1:1' },
         { name: 'Tặng kèm bộ video kỹ thuật đắp lớp thực chiến', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Video' }
       ],
-      totalValue: '',
-      price: '',
+      totalValue: '7.250.000đ',
+      price: '3.250.000đ',
+      
       guarantee: 'Hoàn tiền 100% nếu Bác sĩ không hài lòng'
     }
   };
