@@ -483,14 +483,14 @@ export function DirectRestoration() {
                   <img 
                     src="/image/BeautiBond-Xtreme-One-Hand.webp" 
                     alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
-                    className="w-full h-auto object-contain block [mask-image:linear-gradient(to_right,transparent_0%,black_18%,black_100%),linear-gradient(to_bottom,black_0%,black_82%,transparent_100%)] [mask-composite:intersect] [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_18%,black_100%),linear-gradient(to_bottom,black_0%,black_82%,transparent_100%)] [-webkit-mask-composite:destination-in]"
+                    className="w-full h-auto object-contain block [mask-image:linear-gradient(to_right,transparent_0%,black_6%,black_100%),linear-gradient(to_bottom,black_0%,black_94%,transparent_100%)] [mask-composite:intersect] [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_6%,black_100%),linear-gradient(to_bottom,black_0%,black_94%,transparent_100%)] [-webkit-mask-composite:destination-in]"
                     loading="lazy"
                   />
-                  {/* Lớp gradient tiệp màu nền slate-50 bên trái, làm mềm hoàn toàn đường cắt dọc */}
-                  <div className="absolute inset-y-0 left-0 w-12 sm:w-16 lg:w-20 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent pointer-events-none z-10" />
+                  {/* Lớp gradient tiệp màu nền slate-50 rất nhẹ và hẹp bên trái */}
+                  <div className="absolute inset-y-0 left-0 w-5 sm:w-7 bg-gradient-to-r from-slate-50/70 to-transparent pointer-events-none z-10" />
 
-                  {/* Lớp gradient tiệp màu nền slate-50 bên dưới, làm mềm hoàn toàn đường cắt ngang */}
-                  <div className="absolute inset-x-0 bottom-0 h-12 sm:h-16 lg:h-20 bg-gradient-to-t from-slate-50 via-slate-50/80 to-transparent pointer-events-none z-10" />
+                  {/* Lớp gradient tiệp màu nền slate-50 rất nhẹ và hẹp bên dưới */}
+                  <div className="absolute inset-x-0 bottom-0 h-5 sm:h-7 bg-gradient-to-t from-slate-50/70 to-transparent pointer-events-none z-10" />
                 </div>
               </div>
               <div className="w-full lg:w-1/2 lg:pl-4">
