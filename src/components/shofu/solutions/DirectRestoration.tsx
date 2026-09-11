@@ -444,16 +444,16 @@ export function DirectRestoration() {
 
           <div className="space-y-8">
             {/* Step 1 */}
-            <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-white p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] flex flex-col lg:flex-row gap-10 items-center hover:border-slate-200 hover:shadow-md transition-all">
-              <div className="w-full lg:w-1/2 flex items-center justify-center">
+            <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-white p-6 sm:p-8 md:p-12 lg:p-0 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] flex flex-col lg:flex-row gap-8 lg:gap-10 items-center lg:items-end hover:border-slate-200 hover:shadow-md transition-all overflow-hidden">
+              <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start lg:self-end leading-none">
                 <img 
                   src="/image/BeautiBond-Xtreme-One-Hand.webp" 
                   alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
-                  className="w-full max-h-[420px] object-contain block"
+                  className="w-full max-w-[360px] sm:max-w-[420px] lg:max-w-none h-auto object-contain lg:object-left-bottom block"
                   loading="lazy"
                 />
               </div>
-              <div className="w-full lg:w-1/2">
+              <div className="w-full lg:w-1/2 lg:py-12 lg:pr-12">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4">
                   Bước 1
                 </div>
