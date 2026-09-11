@@ -215,8 +215,13 @@ export function DirectRestoration() {
           {/* 2 Main Comparison Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 lg:mb-16">
             {/* Card 1: Thách thức thao tác lâm sàng */}
-            <div className="bg-slate-800/50 backdrop-blur-md rounded-3xl border border-slate-700/70 hover:border-slate-500/70 p-6 sm:p-8 md:p-10 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] transition-all flex flex-col justify-between">
-              <div>
+            <div className="relative rounded-3xl p-6 sm:p-8 md:p-10 pb-0 sm:pb-8 md:pb-10 transition-all flex flex-col justify-between">
+              {/* Background & border frame with top-down opacity fade on mobile */}
+              <div 
+                className="absolute inset-0 rounded-3xl border border-slate-700/70 bg-slate-800/50 backdrop-blur-md pointer-events-none hover:border-slate-500/70 transition-colors shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] [mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" 
+              />
+
+              <div className="relative z-10">
                 <div className="flex items-center justify-between gap-4 mb-6">
                   <div className="w-12 h-12 rounded-2xl bg-slate-700/50 border border-slate-600/50 flex items-center justify-center text-slate-300 shrink-0 shadow-sm">
                     <AlertTriangle className="w-6 h-6 text-slate-300" />
@@ -233,7 +238,7 @@ export function DirectRestoration() {
                   Những rào cản kỹ thuật khiến ca phục hồi xoang II trở thành phép thử căng thẳng cho nhiều Bác sĩ:
                 </p>
 
-                <div className="space-y-3">
+                <div className="space-y-3 -mx-6 sm:mx-0">
                   <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-slate-700/60 bg-slate-800/80 hover:bg-slate-800 hover:border-slate-600 transition-all">
                     <div className="w-6 h-6 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</div>
                     <div>
@@ -268,7 +273,7 @@ export function DirectRestoration() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-slate-700/80">
+              <div className="mt-6 sm:mt-8 pt-0 sm:pt-6 border-t-0 sm:border-t sm:border-slate-700/80 -mx-6 sm:mx-0 relative z-10">
                 <div className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3">
                   <Quote className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
                   <p className="font-body text-slate-300 text-sm sm:text-[15px] italic leading-relaxed">
