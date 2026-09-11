@@ -61,16 +61,16 @@ export function ShofuOfferModal() {
         'Bảo chứng lâm sàng 8 năm & 13 năm từ ĐH Florida.'
       ],
       products: [
-        { name: '01 Lọ Keo dán Universal BeautiBond Xtreme (5ml)', value: '1.420.000đ', image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-4-tang-1-Beautifil-II-LS.webp' },
-        { name: '01 Tuýp Xi măng BeautiLink SA Handmix 15.6g (120 ca)', value: '1.995.000đ', image: 'https://placehold.co/150x150/00ADEF/ffffff?text=BeautiLink+SA' }
+        { name: '01 Lọ Keo dán Universal BeautiBond Xtreme (5ml)', value: '', image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-4-tang-1-Beautifil-II-LS.webp' },
+        { name: '01 Tuýp Xi măng BeautiLink SA Handmix 15.6g (120 ca)', value: '', image: 'https://placehold.co/150x150/00ADEF/ffffff?text=BeautiLink+SA' }
       ],
       bonuses: [
-        { name: 'Bộ Đánh Bóng Composite Polishing Kit CA', value: '740.000đ', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Polishing+Kit' },
-        { name: 'Cố vấn Lâm sàng 1:1 cùng ThS.BS Trần Quang Khánh', value: '2.500.000đ', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Co+Van+1:1' },
-        { name: 'Sổ tay E-Guide & Bộ Video Masterclass Thực chiến', value: '1.500.000đ', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Masterclass' }
+        { name: 'Bộ Đánh Bóng Composite Polishing Kit CA', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Polishing+Kit' },
+        { name: 'Cố vấn Lâm sàng 1:1 cùng ThS.BS Trần Quang Khánh', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Co+Van+1:1' },
+        { name: 'Sổ tay E-Guide & Bộ Video Masterclass Thực chiến', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Masterclass' }
       ],
-      totalValue: '8.155.000đ',
-      price: '3.415.000đ',
+      totalValue: '',
+      price: '',
       guarantee: 'Hoàn tiền 100% nếu Bác sĩ không hài lòng'
     },
     2: {
@@ -84,17 +84,17 @@ export function ShofuOfferModal() {
         'Đồng bộ hóa quy trình phục hồi từ dán dính đến đánh bóng.'
       ],
       products: [
-        { name: '01 Lọ Keo dán BeautiBond Xtreme', value: '1.420.000đ', image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-4-tang-1-Beautifil-II-LS.webp' },
-        { name: '01 Composite đặc Beautifil II', value: '495.000đ', image: 'https://placehold.co/150x150/C43838/ffffff?text=Beautifil+II' },
-        { name: '01 Composite Beautifil Injectable X', value: '595.000đ', image: 'https://placehold.co/150x150/C43838/ffffff?text=Injectable+X' },
-        { name: '01 Bộ Đánh Bóng Composite Polishing Kit', value: '740.000đ', image: 'https://placehold.co/150x150/C43838/ffffff?text=Polishing+Kit' }
+        { name: '01 Lọ Keo dán BeautiBond Xtreme', value: '', image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-4-tang-1-Beautifil-II-LS.webp' },
+        { name: '01 Composite đặc Beautifil II', value: '', image: 'https://placehold.co/150x150/C43838/ffffff?text=Beautifil+II' },
+        { name: '01 Composite Beautifil Injectable X', value: '', image: 'https://placehold.co/150x150/C43838/ffffff?text=Injectable+X' },
+        { name: '01 Bộ Đánh Bóng Composite Polishing Kit', value: '', image: 'https://placehold.co/150x150/C43838/ffffff?text=Polishing+Kit' }
       ],
       bonuses: [
-        { name: 'Cố vấn Lâm sàng 1:1 cùng ThS.BS Trần Quang Khánh', value: '2.500.000đ', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Co+Van+1:1' },
-        { name: 'Tặng kèm bộ video kỹ thuật đắp lớp thực chiến', value: '1.500.000đ', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Video' }
+        { name: 'Cố vấn Lâm sàng 1:1 cùng ThS.BS Trần Quang Khánh', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Co+Van+1:1' },
+        { name: 'Tặng kèm bộ video kỹ thuật đắp lớp thực chiến', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Video' }
       ],
-      totalValue: '7.250.000đ',
-      price: '3.250.000đ',
+      totalValue: '',
+      price: '',
       guarantee: 'Hoàn tiền 100% nếu Bác sĩ không hài lòng'
     }
   };
@@ -108,8 +108,8 @@ export function ShofuOfferModal() {
       title: 'Mua 7 Tặng 2',
       subtitle: 'Dòng Composite BeautiFil',
       desc: 'Áp dụng cho BeautiFil Injectable X/X SL hoặc BeautiFil II. Giảm sâu chi phí vốn trên mỗi ca phục hình.',
-      oldPrice: 'Giá gốc: 495.000đ - 595.000đ',
-      newPrice: 'Giá ưu đãi /tuýp: 385.000đ - 463.000đ',
+      oldPrice: '',
+      newPrice: '',
       isBlueHeader: true
     },
     2: {
@@ -120,8 +120,8 @@ export function ShofuOfferModal() {
       title: 'Mua 4 Tặng 1',
       subtitle: 'Composite Thẩm Mỹ BeautiFil II LS',
       desc: 'Sở hữu dòng composite có độ co rút cực thấp (0.85% Vol) và kháng mòn cao.',
-      oldPrice: 'Giá gốc: 695.000đ',
-      newPrice: 'Giá ưu đãi /tuýp: 556.000đ',
+      oldPrice: '',
+      newPrice: '',
       isBlueHeader: true
     },
     3: {
@@ -132,8 +132,8 @@ export function ShofuOfferModal() {
       title: 'Trợ Giá Trực Tiếp',
       subtitle: 'Keo Dán BeautiBond Xtreme (BBX)',
       desc: 'Trải nghiệm keo dán công nghệ Quadra-Functional Monomer (chứa 10-MDP) với mức giá cực kỳ tối ưu.',
-      oldPrice: 'Giá gốc: 1.420.000đ',
-      newPrice: 'Giá ưu đãi: 990.000đ',
+      oldPrice: '',
+      newPrice: '',
       isBlueHeader: false
     },
     4: {
@@ -143,9 +143,9 @@ export function ShofuOfferModal() {
       headerImage: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-1-tang-1-BLSA-BBX.webp',
       title: 'Mua 1 Tặng 1',
       subtitle: 'Xi Măng Gắn BeautiLink SA 15.6g',
-      desc: 'Mua 01 hộp BeautiLink SA 15.6g, tặng ngay 01 bộ keo dán Universal BeautiBond Xtreme (trị giá 1.420.000đ).',
-      oldPrice: 'Giá gốc: 2.995.000đ',
-      newPrice: 'Giá ưu đãi: 1.575.000đ',
+      desc: 'Mua 01 hộp BeautiLink SA 15.6g, tặng ngay 01 bộ keo dán Universal BeautiBond Xtreme .',
+      oldPrice: '',
+      newPrice: '',
       isBlueHeader: true
     }
   };
@@ -319,6 +319,7 @@ export function ShofuOfferModal() {
                   <div className="bg-slate-900 rounded-2xl p-4 sm:p-6 relative overflow-hidden shadow-xl">
                     <div className={`absolute top-0 right-0 w-32 h-32 opacity-10 blur-3xl ${themeBg} rounded-full -mr-10 -mt-10`}></div>
                     
+                    {activeOffer.totalValue && (
                     <div className="relative z-10 flex flex-col gap-2 sm:gap-3 mb-4 bg-slate-800/50 p-3.5 sm:p-4 rounded-xl">
                       <div className="flex justify-between items-center text-[11px] sm:text-xs">
                         <span className="text-slate-400 whitespace-nowrap">Tổng giá trị:</span>
@@ -331,6 +332,7 @@ export function ShofuOfferModal() {
                         </span>
                       </div>
                     </div>
+                    )}
                     
                     <div className="relative z-10 text-center">
                       <span className="inline-block bg-[#0f3433] text-[#00c98f] text-[9.5px] sm:text-xs font-bold uppercase tracking-wider px-3 sm:px-4 py-2 rounded-lg border border-[#164d4b] whitespace-nowrap">

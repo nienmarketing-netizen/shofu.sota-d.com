@@ -198,7 +198,7 @@ export const ValueStackSection: React.FC = () => {
         "SHOFU QUIZ CHALLENGE"
        </div>
        <p className="font-body text-xs text-slate-600 pt-0.5 leading-relaxed">
-        Cơ hội trúng vé học 3D Printed Technique trị giá 3.000.000đ cùng vật tư cao cấp SHOFU
+        Cơ hội trúng vé học 3D Printed Technique cùng vật tư cao cấp SHOFU
        </p>
       </div>
      </div>
@@ -217,7 +217,7 @@ export const ValueStackSection: React.FC = () => {
          <Award className="w-4 h-4" /> GIẢI NHẤT
         </div>
         <p className="font-body text-xs text-slate-900 leading-relaxed">
-         • <strong>01 vé tham dự lớp 3D Printed Technique</strong> (trị giá 3.000.000đ)<br/>
+         • <strong>01 vé tham dự lớp 3D Printed Technique</strong><br/>
          • 01 tuýp Composite Injectable X A2 + 01 Direct Dia Paste + 01 Đánh bóng Snap Buff
         </p>
        </div>
@@ -228,7 +228,7 @@ export const ValueStackSection: React.FC = () => {
          <Star className="w-3.5 h-3.5 text-slate-700" /> GIẢI NHÌ
         </div>
         <p className="font-body text-xs text-slate-600 leading-relaxed">
-         • <strong>Voucher giảm 30% lớp 3D</strong> (trị giá 900.000đ)<br/>
+         • <strong>Voucher giảm 30% lớp 3D</strong><br/>
          • 01 tuýp Composite Injectable X A2 + 01 Direct Dia Paste + 01 Đánh bóng Snap Buff
         </p>
        </div>
@@ -239,7 +239,7 @@ export const ValueStackSection: React.FC = () => {
          <Award className="w-3.5 h-3.5 text-slate-700" /> GIẢI BA
         </div>
         <p className="font-body text-xs text-slate-600 leading-relaxed">
-         • <strong>Voucher giảm 20% lớp 3D</strong> (trị giá 600.000đ)<br/>
+         • <strong>Voucher giảm 20% lớp 3D</strong><br/>
          • 01 Direct Dia Paste + 01 Đánh bóng Snap Buff
         </p>
        </div>
@@ -258,7 +258,7 @@ export const ValueStackSection: React.FC = () => {
          <Award className="w-4 h-4" /> GIẢI NHẤT
         </div>
         <p className="font-body text-xs text-slate-900 leading-relaxed">
-         • <strong>01 vé tham dự lớp 3D Printed Technique</strong> (trị giá 3.000.000đ)<br/>
+         • <strong>01 vé tham dự lớp 3D Printed Technique</strong><br/>
          • 01 Xi măng Beautilink SA + 01 Keo dán BeautiBond Xtreme
         </p>
        </div>
@@ -269,7 +269,7 @@ export const ValueStackSection: React.FC = () => {
          <Star className="w-3.5 h-3.5 text-slate-700" /> GIẢI NHÌ
         </div>
         <p className="font-body text-xs text-slate-600 leading-relaxed">
-         • <strong>Voucher giảm 30% lớp 3D</strong> (trị giá 900.000đ)<br/>
+         • <strong>Voucher giảm 30% lớp 3D</strong><br/>
          • 01 Resin Cement Beautilink SA
         </p>
        </div>
@@ -280,7 +280,7 @@ export const ValueStackSection: React.FC = () => {
          <Award className="w-3.5 h-3.5 text-slate-700" /> GIẢI BA
         </div>
         <p className="font-body text-xs text-slate-600 leading-relaxed">
-         • <strong>Voucher giảm 20% lớp 3D</strong> (trị giá 600.000đ)<br/>
+         • <strong>Voucher giảm 20% lớp 3D</strong><br/>
          • 01 Keo dán BeautiBond Xtreme
         </p>
        </div>

@@ -95,11 +95,11 @@ export function ShofuOffers() {
               <div className="flex flex-col gap-2 mb-4 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-slate-400">Tổng giá trị:</span>
-                  <span className="text-slate-300 font-semibold">8.155.000đ</span>
+                  
                 </div>
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-slate-300 font-medium">Mức đầu tư ưu đãi:</span>
-                  <span className="text-[#00ADEF] font-heading font-extrabold text-lg sm:text-xl">3.415.000đ</span>
+                  <span className="text-[#00ADEF] font-heading font-extrabold text-lg sm:text-xl">Ưu Đãi Đặc Biệt</span>
                 </div>
               </div>
               
@@ -140,11 +140,11 @@ export function ShofuOffers() {
               <div className="flex flex-col gap-2 mb-4 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-slate-400">Tổng giá trị:</span>
-                  <span className="text-slate-300 font-semibold">7.250.000đ</span>
+                  
                 </div>
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-slate-300 font-medium">Mức đầu tư ưu đãi:</span>
-                  <span className="text-[#C43838] font-heading font-extrabold text-lg sm:text-xl">3.250.000đ</span>
+                  <span className="text-[#C43838] font-heading font-extrabold text-lg sm:text-xl">Ưu Đãi Đặc Biệt</span>
                 </div>
               </div>
               

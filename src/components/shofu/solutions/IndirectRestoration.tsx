@@ -1029,9 +1029,9 @@ export function IndirectRestoration() {
                 <div className="text-center md:text-left relative z-10">
                   <p className="text-slate-400 text-sm font-medium mb-1 uppercase tracking-wider">Tổng giá trị</p>
                   <div className="flex items-baseline justify-center md:justify-start gap-2">
-                    <p className="text-slate-400 text-2xl md:text-3xl font-bold line-through decoration-red-500/50 decoration-2">5.915.000đ</p>
+                    
                   </div>
-                  <p className="text-xs text-slate-500 mt-1">(Combo 3.415.000đ + Quà tặng 2.500.000đ)</p>
+                  
                 </div>
                 
                 <div className="hidden md:block w-px h-16 bg-slate-700 relative z-10"></div>
@@ -1039,7 +1039,7 @@ export function IndirectRestoration() {
                 
                 <div className="text-center md:text-right relative z-10">
                   <p className="text-amber-400 text-sm font-medium mb-1 uppercase tracking-wider">Mức đầu tư ưu đãi</p>
-                  <p className="font-heading font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">3.415.000đ</p>
+                  <p className="font-heading font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200 text-center">Liên hệ báo giá</p>
                 </div>
               </div>
 

@@ -144,7 +144,7 @@ export function DirectRestoration() {
             </ul>
 
             <CtaButton ctaName="MoKhoaCombo_MiCD" 
-               onClick={() => openCampaignModal("Mở khóa combo phục hồi MiCD chỉ với 3.250.000đ & nhận bộ kít mài bóng")}
+               onClick={() => openCampaignModal("Mở khóa combo phục hồi MiCD & nhận bộ kít mài bóng")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <span className="truncate">MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG</span>
@@ -508,15 +508,15 @@ export function DirectRestoration() {
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300">01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml) <span className="text-slate-500 line-through text-sm">(1.420.000 VNĐ)</span></span>
+                      <span className="text-slate-300">01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300">01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g) <span className="text-slate-500 line-through text-sm">(495.000 VNĐ)</span></span>
+                      <span className="text-slate-300">01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300">01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g) <span className="text-slate-500 line-through text-sm">(595.000 VNĐ)</span></span>
+                      <span className="text-slate-300">01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g)</span>
                     </li>
                   </ul>
                 </div>
@@ -526,15 +526,15 @@ export function DirectRestoration() {
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium">Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA <span className="text-amber-500/70 text-sm">(740.000 VNĐ)</span></span>
+                      <span className="text-amber-100 font-medium">Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium">Tài liệu: Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II" <span className="text-amber-500/70 text-sm">(1.500.000 VNĐ)</span></span>
+                      <span className="text-amber-100 font-medium">Tài liệu: Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II"</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium">Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày <span className="text-amber-500/70 text-sm">(2.500.000 VNĐ)</span></span>
+                      <span className="text-amber-100 font-medium">Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày</span>
                     </li>
                   </ul>
                 </div>
@@ -555,7 +555,7 @@ export function DirectRestoration() {
             <div className="text-center md:text-left relative z-10">
               <p className="text-slate-400 text-sm font-medium mb-1 uppercase tracking-wider">Tổng giá trị</p>
               <div className="flex items-baseline justify-center md:justify-start gap-2">
-                <p className="text-slate-400 text-2xl md:text-3xl font-bold line-through decoration-red-500/50 decoration-2">~ 7.250.000đ</p>
+                
               </div>
               <p className="text-xs text-slate-500 mt-1">(Bác sĩ chỉ thanh toán phần vật lý 3 sản phẩm chính)</p>
             </div>
@@ -565,7 +565,7 @@ export function DirectRestoration() {
             
             <div className="text-center md:text-right relative z-10">
               <p className="text-amber-400 text-sm font-medium mb-1 uppercase tracking-wider">Mức đầu tư trải nghiệm</p>
-              <p className="font-heading font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">3.250.000đ</p>
+              <p className="font-heading font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200 text-center">Liên hệ báo giá</p>
             </div>
           </div>
 
@@ -578,7 +578,7 @@ export function DirectRestoration() {
 
           <div className="flex justify-center w-full">
             <CtaButton ctaName="DangKyNhanUuDaiNgay" 
-               onClick={() => openCampaignModal("Mở khóa combo phục hồi MiCD chỉ với 3.250.000đ & nhận bộ kít mài bóng")}
+               onClick={() => openCampaignModal("Mở khóa combo phục hồi MiCD & nhận bộ kít mài bóng")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <span className="truncate">ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY</span>
