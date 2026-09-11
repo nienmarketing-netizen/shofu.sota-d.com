@@ -121,7 +121,7 @@ export const BenefitsSection: React.FC = () => {
       <div className="w-full bg-slate-100 rounded-lg mb-1.5 overflow-hidden border border-slate-200">
        <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png" alt="Beautilink SA" className="w-full h-auto object-contain" />
       </div>
-      <div className="font-mono text-[10px] text-[#C43838] uppercase mt-1">XI MĂNG RESIN TỰ DÁN LƯỠNG TRÙNG HỢP (DUAL-CURE)</div>
+      <div className="font-mono text-[10px] text-[#C43838] uppercase mt-1">XI MĂNG RESIN TỰ DÁN</div>
       <div className="font-heading font-bold text-sm sm:text-base text-slate-900 mt-1">Beautilink SA</div>
       <div className="font-mono text-[11px] sm:text-xs text-slate-600 mt-1">Liên kết hóa học đa bề mặt & Kiểm soát dư dạng Gel-State</div>
      </div>
