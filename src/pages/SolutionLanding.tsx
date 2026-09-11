@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, Navigate } from 'react-router-dom';
 import { ShofuHeader } from '../components/shofu/ShofuHeader';
 import { ShofuFooter } from '../components/shofu/ShofuFooter';
 import { ArrowLeft, CheckCircle, BookOpen, Quote, Sparkles, Gift } from 'lucide-react';
@@ -58,6 +58,10 @@ export default function SolutionLanding() {
       document.title = `${data.title} | Sota-D & Shofu`;
     }
   }, [slug, data]);
+
+  if (slug === 'phuc-hinh-truc-tiep') {
+    return <Navigate to="/giai-phap/phuc-hoi-truc-tiep" replace />;
+  }
 
   if (!data) {
     return (

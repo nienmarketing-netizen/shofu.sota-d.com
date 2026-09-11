@@ -147,6 +147,11 @@ async function startServer() {
     }
   });
 
+  // 301 Permanent Redirect for legacy solution URL
+  app.get(["/giai-phap/phuc-hinh-truc-tiep", "/giai-phap/phuc-hinh-truc-tiep/"], (req, res) => {
+    res.redirect(301, "/giai-phap/phuc-hoi-truc-tiep");
+  });
+
   // Vite middleware for development or static serving for production
 
   if (process.env.NODE_ENV !== "production") {
