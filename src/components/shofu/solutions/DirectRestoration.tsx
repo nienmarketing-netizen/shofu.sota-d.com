@@ -483,7 +483,7 @@ export function DirectRestoration() {
                   <img 
                     src="/image/BeautiBond-Xtreme-One-Hand.webp" 
                     alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
-                    className="w-full h-auto object-contain block [mask-image:radial-gradient(ellipse_95%_88%_at_60%_36%,black_35%,rgba(0,0,0,0.92)_50%,rgba(0,0,0,0.65)_68%,rgba(0,0,0,0.25)_82%,transparent_95%)] [-webkit-mask-image:radial-gradient(ellipse_95%_88%_at_60%_36%,black_35%,rgba(0,0,0,0.92)_50%,rgba(0,0,0,0.65)_68%,rgba(0,0,0,0.25)_82%,transparent_95%)]"
+                    className="w-full h-auto object-contain block [mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] [-webkit-mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)]"
                     loading="lazy"
                   />
                 </div>
