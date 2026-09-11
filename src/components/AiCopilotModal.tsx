@@ -71,11 +71,11 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({ isOpen, onClose 
 
     const q = query.toLowerCase();
     if (q.includes('3d') || q.includes('printed') || q.includes('ngọc') || q.includes('sáng')) {
-     responseText = "Phiên Sáng (10:30 - 11:15): Báo cáo viên BS. Dương Bảo Ngọc chia sẻ giải pháp phục hồi trực tiếp răng sau nhanh chóng với 3D Printed Technique. Kỹ thuật kết hợp máng hướng dẫn trong suốt và dòng Composite lỏng chịu lực Beautifil Injectable X/XSL + BeautiBond Xtreme.";
+     responseText = "Phiên Sáng (10:30 - 11:15): Báo cáo viên BS. Dương Bảo Ngọc chia sẻ giải pháp phục hồi trực tiếp răng sau nhanh chóng với 3D Printed Technique. Kỹ thuật kết hợp máng hướng dẫn trong suốt và dòng Composite chịu lực Beautifil Injectable X/XSL + BeautiBond Xtreme.";
     } else if (q.includes('s-prg') || q.includes('ê buốt') || q.includes('xi măng') || q.includes('khánh') || q.includes('chiều')) {
      responseText = "Phiên Chiều (14:15 - 15:00): ThS.BS Trần Quang Khánh trình bày về Xi măng đa năng thế hệ mới & Công nghệ S-PRG. Hạt độn S-PRG giải phóng 6 loại ion khoáng tự nhiên, chủ động tái khoáng hóa men răng và triệt tiêu ê buốt sau dán Zirconia/sứ với Beautilink SA.";
     } else if (q.includes('vật tư') || q.includes('sản phẩm') || q.includes('shofu') || q.includes('beautifil')) {
-     responseText = "Tại Gian hàng Sota-D B75–B77, Quý Bác sĩ sẽ trực tiếp trải nghiệm: Beautifil Injectable X/XSL (Composite lỏng siêu bền bóng), BeautiBond Xtreme (Keo dán 1 thành phần đa năng), Beautilink SA (Resin Cement tự dán) và Công nghệ hạt độn S-PRG.";
+     responseText = "Tại Gian hàng Sota-D B75–B77, Quý Bác sĩ sẽ trực tiếp trải nghiệm: Beautifil Injectable X/XSL (Composite siêu bền bóng), BeautiBond Xtreme (Keo dán 1 thành phần đa năng), Beautilink SA (Resin Cement tự dán) và Công nghệ hạt độn S-PRG.";
     } else if (q.includes('quà') || q.includes('ưu đãi') || q.includes('quiz') || q.includes('đặc quyền')) {
      responseText = "Bác sĩ tham dự đầy đủ sẽ nhận ngay 'Bộ quà trải nghiệm SHOFU', vé tham gia Mini Game 'SHOFU QUIZ CHALLENGE' nhận thêm quà tặng cao cấp, trọn bộ slide bài giảng gốc và voucher mua sắm ưu đãi tại VIDEC 2026!";
     }

@@ -71,15 +71,15 @@ export function DirectRestoration() {
 
   const faqs = [
     {
-      q: "Trám composite xoang II sâu có nhất thiết phải cô lập đê cao su tuyệt đối để tránh ê buốt không?",
-      a: "Đê cao su là tiêu chuẩn vàng. Tuy nhiên, keo dán BeautiBond Xtreme HEMA-Free kỵ nước với dung môi bay hơi siêu nhanh Acetone tự thâm nhập và bít kín ống ngà ẩm, triệt tiêu 100% ê buốt sau trám bất chấp độ ẩm lâm sàng."
+      q: "Phục hồi composite xoang II sâu có nhất thiết phải cô lập đê cao su tuyệt đối để tránh ê buốt không?",
+      a: "Đê cao su là tiêu chuẩn vàng. Tuy nhiên, keo dán BeautiBond Xtreme HEMA-Free kỵ nước với dung môi bay hơi siêu nhanh Acetone tự thâm nhập và bít kín ống ngà ẩm, triệt tiêu 100% ê buốt sau phục hồi bất chấp độ ẩm lâm sàng."
     },
     {
       q: "Làm thế nào để giải quyết triệt để tình trạng composite dính dụng cụ điêu khắc múi rãnh?",
       a: "Bác sĩ nên lau sạch dụng cụ định kỳ, vo tròn composite hoặc nhúng nhẹ đầu khắc vào dung dịch hỗ trợ tạo hình Modeling Liquid của Shofu để điêu khắc mượt mà, lướt êm không dính cây."
     },
     {
-      q: "Hạt độn S-PRG liên tục giải phóng ion thì miếng trám có bị mòn nhanh hay rỗng xốp theo thời gian không?",
+      q: "Hạt độn S-PRG liên tục giải phóng ion thì phục hồi có bị mòn nhanh hay rỗng xốp theo thời gian không?",
       a: "Hoàn toàn không. S-PRG được bọc trong màng biến tính bền vững và phân bổ đồng đều trong mạng nhựa polymer. Beautifil II LS đạt lực nén 364 MPa, lực uốn 120 MPa đảm bảo kháng mòn cao và bóng láng vĩnh cửu."
     },
     {
@@ -106,7 +106,7 @@ export function DirectRestoration() {
             </div>
             
             <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12">
-              Chấm dứt ám ảnh ê buốt sau trám & sâu răng thứ phát trong <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">phục hồi xoang II răng sau</span>
+              Chấm dứt ám ảnh ê buốt sau phục hồi & sâu răng thứ phát trong <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">phục hồi xoang II răng sau</span>
             </h1>
             
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -144,10 +144,10 @@ export function DirectRestoration() {
             </ul>
 
             <CtaButton ctaName="MoKhoaCombo_MiCD" 
-               onClick={() => openCampaignModal("Mở khóa combo trám MiCD chỉ với 3.250.000đ & nhận bộ kít mài bóng")}
+               onClick={() => openCampaignModal("Mở khóa combo phục hồi MiCD chỉ với 3.250.000đ & nhận bộ kít mài bóng")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
-              <span className="truncate">MỞ KHÓA COMBO TRÁM MiCD & QUÀ TẶNG</span>
+              <span className="truncate">MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </CtaButton>
           </div>
@@ -169,7 +169,7 @@ export function DirectRestoration() {
               <AlertTriangle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
               <span>Góc khuất lâm sàng</span>
             </div>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">Trám răng xoang II sâu dưới nướu luôn là <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-600">"cơn ác mộng" âm thầm</span></h2>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">Phục hồi răng xoang II sâu dưới nướu luôn là <br className="hidden md:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-600">"cơn ác mộng" âm thầm</span></h2>
             <div className="max-w-5xl mx-auto mt-12 flex flex-col md:flex-row gap-6 text-left">
               <div className="flex-1 bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-6 shrink-0">
@@ -221,10 +221,10 @@ export function DirectRestoration() {
 
           <div className="mt-12 md:mt-16 text-center">
             <CtaButton ctaName="SoHuuTronBoGiaiPhap" 
-               onClick={() => openCampaignModal("Sở hữu trọn bộ giải pháp trám sinh học & Đặc quyền đào tạo 1:1")}
+               onClick={() => openCampaignModal("Sở hữu trọn bộ giải pháp phục hồi sinh học & Đặc quyền đào tạo 1:1")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
-              <span className="truncate">SỞ HỮU TRỌN BỘ GIẢI PHÁP TRÁM SINH HỌC</span>
+              <span className="truncate">SỞ HỮU TRỌN BỘ GIẢI PHÁP PHỤC HỒI SINH HỌC</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </CtaButton>
           </div>
@@ -290,7 +290,7 @@ export function DirectRestoration() {
               <div className="w-full lg:w-1/2">
                 <ImagePlaceholder 
                   className="aspect-[4/3] w-full bg-white shadow-lg" 
-                  text="Ảnh chụp cận cảnh tuýp composite Beautifil II LS màu sắc sang trọng bên cạnh hình ảnh cùi răng sau khi hoàn thiện trám mặt nhai, các múi răng được điêu khắc sắc nét, chân thực không tì vết." 
+                  text="Ảnh chụp cận cảnh tuýp composite Beautifil II LS màu sắc sang trọng bên cạnh hình ảnh cùi răng sau khi hoàn thiện phục hồi mặt nhai, các múi răng được điêu khắc sắc nét, chân thực không tì vết." 
                 />
               </div>
               <div className="w-full lg:w-1/2">
@@ -330,14 +330,14 @@ export function DirectRestoration() {
               <div className="w-full lg:w-1/2">
                 <ImagePlaceholder 
                   className="aspect-[4/3] w-full bg-white shadow-lg rounded-2xl" 
-                  text="Hình ảnh mô phỏng 3D đầu bơm siêu nhỏ của xi-lanh Beautifil Injectable X đang bơm trực tiếp composite lỏng vào kẽ bên xoang II của răng cối một cách mượt mà, không bọt khí." 
+                  text="Hình ảnh mô phỏng 3D đầu bơm siêu nhỏ của xi-lanh Beautifil Injectable X đang bơm trực tiếp composite vào kẽ bên xoang II của răng cối một cách mượt mà, không bọt khí." 
                 />
               </div>
               <div className="w-full lg:w-1/2">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4">
                   Bước 3
                 </div>
-                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Composite lỏng đắp lớp Beautifil Injectable X</h3>
+                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Composite đắp lớp Beautifil Injectable X</h3>
                 <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Sức mạnh hạt độn Nano-Optimized Silane – Lấp đầy mọi hốc sâu vi thể</h4>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
                   Với đặc tính lưu biến thông minh (thixotropic), Beautifil Injectable X định hình cực tốt khi đắp lớp nhưng tự động chảy loang phẳng láng dưới áp lực. Vật liệu len lỏi hoàn hảo vào các ngóc ngách xoang II hẹp dưới nướu mà không tạo bọt khí.
@@ -358,7 +358,7 @@ export function DirectRestoration() {
                     </div>
                     <div>
                       <h5 className="font-bold text-slate-900 font-heading">Kiểm soát bám dính dụng cụ xuất sắc</h5>
-                      <p className="text-sm text-slate-600 font-body">Khắc phục triệt để rào cản dính cây trám. Thao tác nhàn tênh khi kết hợp các mẹo lâm sàng (như vo tròn composite, sử dụng đầu thám trâm nhọn, lau sạch dụng cụ định kỳ hoặc dùng dung dịch hỗ trợ tạo hình Modeling Liquid).</p>
+                      <p className="text-sm text-slate-600 font-body">Khắc phục triệt để rào cản dính cây phục hồi. Thao tác nhàn tênh khi kết hợp các mẹo lâm sàng (như vo tròn composite, sử dụng đầu thám trâm nhọn, lau sạch dụng cụ định kỳ hoặc dùng dung dịch hỗ trợ tạo hình Modeling Liquid).</p>
                     </div>
                   </div>
                 </div>
@@ -408,7 +408,7 @@ export function DirectRestoration() {
                   <Droplets className="w-5 h-5 text-emerald-500" />
                 </div>
                 <h4 className="font-heading font-bold text-slate-900 text-[15px]">Trung hòa Axit chủ động</h4>
-                <p className="text-sm text-slate-600 font-body leading-relaxed">Phóng thích ion để kiềm hóa môi trường quanh miếng trám khi pH &lt; 5.5, chặn đứng khử khoáng men ngà.</p>
+                <p className="text-sm text-slate-600 font-body leading-relaxed">Phóng thích ion để kiềm hóa môi trường quanh phục hồi khi pH &lt; 5.5, chặn đứng khử khoáng men ngà.</p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 flex flex-col gap-3">
                 <div className="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center">
@@ -496,7 +496,7 @@ export function DirectRestoration() {
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-10 tracking-tight">
               Gói giải pháp đồng bộ <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">combo "Trám sinh học MiCD - Chặn đứng ê buốt"</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">combo "Phục hồi sinh học MiCD - Chặn đứng ê buốt"</span>
             </h2>
           </div>
 
@@ -516,7 +516,7 @@ export function DirectRestoration() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300">01 Tuýp composite lỏng siêu lực nén Beautifil Injectable X (2.2g) <span className="text-slate-500 line-through text-sm">(595.000 VNĐ)</span></span>
+                      <span className="text-slate-300">01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g) <span className="text-slate-500 line-through text-sm">(595.000 VNĐ)</span></span>
                     </li>
                   </ul>
                 </div>
@@ -530,7 +530,7 @@ export function DirectRestoration() {
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium">Tài liệu: Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật trám xoang II" <span className="text-amber-500/70 text-sm">(1.500.000 VNĐ)</span></span>
+                      <span className="text-amber-100 font-medium">Tài liệu: Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II" <span className="text-amber-500/70 text-sm">(1.500.000 VNĐ)</span></span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0"><Award className="w-4 h-4 text-amber-400" /></div>
@@ -571,14 +571,14 @@ export function DirectRestoration() {
 
           <div className="w-full max-w-5xl mx-auto space-y-4 mb-10 text-slate-300 font-body text-sm md:text-base bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
             <h4 className="font-bold text-white mb-2 flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-emerald-400" /> Bảo chứng đồng hành 3 lớp (Rủi ro bằng 0)</h4>
-            <p><strong>Bảo chứng 1 (Dứt ê buốt):</strong> Hỗ trợ 1:1 trong 5 ca trám sống đầu tiên. Nếu bệnh nhân ê buốt, chuyên gia call gỡ lỗi. Nếu không hợp tay, thu hồi và hoàn tiền 100%.</p>
+            <p><strong>Bảo chứng 1 (Dứt ê buốt):</strong> Hỗ trợ 1:1 trong 5 ca phục hồi sống đầu tiên. Nếu bệnh nhân ê buốt, chuyên gia call gỡ lỗi. Nếu không hợp tay, thu hồi và hoàn tiền 100%.</p>
             <p><strong>Bảo chứng 2 (Bảo hiểm thói quen):</strong> Trong 30 ngày, nếu thao tác không hợp, hỗ trợ thu hồi sản phẩm chưa dùng và quy đổi vật tư khác giá trị tương đương.</p>
             <p><strong>Bảo chứng 3 (Bảo hành tồn kho 90 ngày):</strong> Đổi mới 1-1 ngay lập tức nếu lỗi đông cứng khi mở nắp trong vòng 90 ngày.</p>
           </div>
 
           <div className="flex justify-center w-full">
             <CtaButton ctaName="DangKyNhanUuDaiNgay" 
-               onClick={() => openCampaignModal("Mở khóa combo trám MiCD chỉ với 3.250.000đ & nhận bộ kít mài bóng")}
+               onClick={() => openCampaignModal("Mở khóa combo phục hồi MiCD chỉ với 3.250.000đ & nhận bộ kít mài bóng")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <span className="truncate">ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY</span>

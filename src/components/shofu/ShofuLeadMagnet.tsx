@@ -76,7 +76,7 @@ export function ShofuLeadMagnet() {
               <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Cẩm nang chống ê buốt với Giomer</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Protocol Posterior Restoration</li>
               <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Protocol 3D Printed Technical</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Ưu đãi đặc biệt gói trám MiCD</li>
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Ưu đãi đặc biệt gói phục hồi MiCD</li>
             </ul>
           </div>
 

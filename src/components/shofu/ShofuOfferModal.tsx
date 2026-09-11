@@ -74,19 +74,19 @@ export function ShofuOfferModal() {
       guarantee: 'Hoàn tiền 100% nếu Bác sĩ không hài lòng'
     },
     2: {
-      title: 'Giải Pháp Trám Thẩm Mỹ Sinh Học',
-      name: 'Gói Khởi Động Trám MiCD',
+      title: 'Giải Pháp Phục Hồi Thẩm Mỹ Sinh Học',
+      name: 'Gói Khởi Động Phục Hồi MiCD',
       description: 'Loại bỏ xi măng gắn. Tập trung 100% đạn dược vào kỹ thuật đắp lớp và màng keo chống thủy phân.',
       theme: 'sota',
       coreValues: [
         'Trọn bộ vũ khí Giomer chuyên phục vụ phục hình trực tiếp.',
         'Không áp lực vốn nhờ bóc tách xi măng gắn.',
-        'Đồng bộ hóa quy trình trám từ dán dính đến đánh bóng.'
+        'Đồng bộ hóa quy trình phục hồi từ dán dính đến đánh bóng.'
       ],
       products: [
         { name: '01 Lọ Keo dán BeautiBond Xtreme', value: '1.420.000đ', image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-4-tang-1-Beautifil-II-LS.webp' },
         { name: '01 Composite đặc Beautifil II', value: '495.000đ', image: 'https://placehold.co/150x150/C43838/ffffff?text=Beautifil+II' },
-        { name: '01 Composite lỏng Beautifil Injectable X', value: '595.000đ', image: 'https://placehold.co/150x150/C43838/ffffff?text=Injectable+X' },
+        { name: '01 Composite Beautifil Injectable X', value: '595.000đ', image: 'https://placehold.co/150x150/C43838/ffffff?text=Injectable+X' },
         { name: '01 Bộ Đánh Bóng Composite Polishing Kit', value: '740.000đ', image: 'https://placehold.co/150x150/C43838/ffffff?text=Polishing+Kit' }
       ],
       bonuses: [

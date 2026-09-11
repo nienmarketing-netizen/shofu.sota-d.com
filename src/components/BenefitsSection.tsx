@@ -103,7 +103,7 @@ export const BenefitsSection: React.FC = () => {
       <div className="w-full bg-slate-100 rounded-lg mb-1.5 overflow-hidden border border-slate-200">
        <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautifil-injectable-x.png" alt="Beautifil Injectable X" className="w-full h-auto object-contain" />
       </div>
-      <div className="font-mono text-[10px] text-[#00ADEF] uppercase mt-1">Composite lỏng cao cấp</div>
+      <div className="font-mono text-[10px] text-[#00ADEF] uppercase mt-1">Composite cao cấp</div>
       <div className="font-heading font-bold text-sm sm:text-base text-slate-900 mt-1">Beautifil Injectable X</div>
       <div className="font-mono text-[11px] sm:text-xs text-slate-600 mt-1">Độ bóng & Độ bền vượt trội</div>
      </div>

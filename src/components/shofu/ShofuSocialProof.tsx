@@ -34,7 +34,7 @@ export function ShofuSocialProof() {
       name: 'BS. Dương Bảo Ngọc',
       role: 'Chuyên gia Phục hồi Thẩm mỹ',
       topic: 'Thẩm mỹ & Bảo vệ tối ưu',
-      content: 'Chất lượng bề mặt và đặc tính quang học của Beautifil Injectable X thực sự khác biệt. Tính năng kháng khuẩn từ hạt S-PRG mang lại sự an tâm tuyệt đối khi tôi thực hiện các ca trám răng sau phức tạp.',
+      content: 'Chất lượng bề mặt và đặc tính quang học của Beautifil Injectable X thực sự khác biệt. Tính năng kháng khuẩn từ hạt S-PRG mang lại sự an tâm tuyệt đối khi tôi thực hiện các ca phục hồi răng sau phức tạp.',
       avatar: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BS.Ngo%CC%A3c.png'
     },
     {
@@ -55,7 +55,7 @@ export function ShofuSocialProof() {
       name: 'Dr. Frank J. Milnar, DDS, AAACD',
       role: 'Chuyên gia Thẩm mỹ Nha khoa (AACD), Mỹ',
       topic: 'Thẩm mỹ tự nhiên – "Hòa sắc vô ảnh" không đắp lớp',
-      content: 'Khả năng khúc xạ, truyền truyền và khuếch tán ánh sáng tương đồng tự nhiên với cả men và ngà răng thật giúp miếng trám tệp màu hoàn hảo vào mô răng xung quanh. Nhờ hiệu ứng tắc kè hoa đỉnh cao này, Bác sĩ chỉ cần sử dụng kỹ thuật đơn giản vẫn đạt được kết quả thẩm mỹ tối ưu mà không cần đắp lớp layering phức tạp.',
+      content: 'Khả năng khúc xạ, truyền truyền và khuếch tán ánh sáng tương đồng tự nhiên với cả men và ngà răng thật giúp phục hồi tệp màu hoàn hảo vào mô răng xung quanh. Nhờ hiệu ứng tắc kè hoa đỉnh cao này, Bác sĩ chỉ cần sử dụng kỹ thuật đơn giản vẫn đạt được kết quả thẩm mỹ tối ưu mà không cần đắp lớp layering phức tạp.',
       avatar: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/Dr.%20Frank%20J.%20Milnar,%20DDS,%20AAACD.jpg',      fallbackAvatar: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/Dr.%20Frank%20J.%20Milnar,%20DDS,%20AAACD.jpg'
     },
     {

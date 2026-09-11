@@ -12,7 +12,7 @@ const quizData = [
       "D. Strontium (Sr2+) & Silicate (SiO32−)"
     ],
     correctIndex: 1,
-    insight: "💡 Clinical Insight: Fluoride và Strontium cộng hưởng tạo mạng tinh thể Fluoro-Strontium-apatite cực bền, giúp tái khoáng và bít kín ống ngà hở. Đây là cơ chế bảo vệ tủy có mặt trong toàn bộ hệ sinh thái Giomer của Shofu, giải thích vì sao tỷ lệ ê buốt sau điều trị bằng 0 khi Bác sĩ trám răng với composite Beautifil hoặc gắn phục hình với xi măng tự dán BeautiLink SA."
+    insight: "💡 Clinical Insight: Fluoride và Strontium cộng hưởng tạo mạng tinh thể Fluoro-Strontium-apatite cực bền, giúp tái khoáng và bít kín ống ngà hở. Đây là cơ chế bảo vệ tủy có mặt trong toàn bộ hệ sinh thái Giomer của Shofu, giải thích vì sao tỷ lệ ê buốt sau điều trị bằng 0 khi Bác sĩ phục hồi răng với composite Beautifil hoặc gắn phục hình với xi măng tự dán BeautiLink SA."
   },
   {
     title: "CÂU 2: BƯỚC NGOẶT SINH HỌC PHÂN TỬ (NATURE 2018)",
@@ -24,7 +24,7 @@ const quizData = [
       "D. Trung hòa thụ động axit vi khuẩn tiết ra."
     ],
     correctIndex: 2,
-    insight: "💡 Clinical Insight: Hạt S-PRG can thiệp trực tiếp ở cấp độ gen để khóa con đường chuyển hóa đường của vi khuẩn S. mutans. Hoạt tính kháng khuẩn chủ động này được tích hợp đồng nhất trong mọi dòng composite thuộc hệ Giomer, giúp Bác sĩ yên tâm tuyệt đối khi đắp composite lỏng Beautifil Injectable X vào các hốc xoang sâu, khuất hoặc khó vệ sinh."
+    insight: "💡 Clinical Insight: Hạt S-PRG can thiệp trực tiếp ở cấp độ gen để khóa con đường chuyển hóa đường của vi khuẩn S. mutans. Hoạt tính kháng khuẩn chủ động này được tích hợp đồng nhất trong mọi dòng composite thuộc hệ Giomer, giúp Bác sĩ yên tâm tuyệt đối khi đắp composite Beautifil Injectable X vào các hốc xoang sâu, khuất hoặc khó vệ sinh."
   },
   {
     title: "CÂU 3: TRUNG HÒA AXIT CHỦ ĐỘNG",
@@ -60,7 +60,7 @@ const quizData = [
       "D. Strontium (Sr2+) & Silicate (SiO32−)"
     ],
     correctIndex: 2,
-    insight: "💡 Clinical Insight: Sự kết hợp giữa Borate và Fluoride để phá vỡ lực bám dính của vi khuẩn là lá chắn sinh học bảo vệ bề mặt có trên mọi phục hình Giomer. Nhờ cơ chế này, các miếng trám thẩm mỹ bằng composite Beautifil II hay phục hình gián tiếp được gắn bằng xi măng BeautiLink SA luôn giữ được bề mặt láng mịn, sạch bóng màng sinh học và kháng bám màu thực phẩm tối ưu."
+    insight: "💡 Clinical Insight: Sự kết hợp giữa Borate và Fluoride để phá vỡ lực bám dính của vi khuẩn là lá chắn sinh học bảo vệ bề mặt có trên mọi phục hình Giomer. Nhờ cơ chế này, các phục hồi thẩm mỹ bằng composite Beautifil II hay phục hình gián tiếp được gắn bằng xi măng BeautiLink SA luôn giữ được bề mặt láng mịn, sạch bóng màng sinh học và kháng bám màu thực phẩm tối ưu."
   }
 ];
 
@@ -142,7 +142,7 @@ export const ValueStackSection: React.FC = () => {
        <ul className="space-y-2.5 font-body text-xs sm:text-sm text-slate-600">
         <li className="flex items-center gap-2.5">
          <CheckCircle2 className="w-4 h-4 text-sky-500 shrink-0" />
-         <span>Bộ sample Composite lỏng <strong className="text-slate-900">Injectable X A2</strong></span>
+         <span>Bộ sample Composite <strong className="text-slate-900">Injectable X A2</strong></span>
         </li>
         <li className="flex items-center gap-2.5">
          <CheckCircle2 className="w-4 h-4 text-sky-500 shrink-0" />

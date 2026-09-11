@@ -130,11 +130,11 @@ export function ShofuOffers() {
                 <Gift className="w-6 h-6 text-[#C43838]" />
               </div>
               <h3 className="font-heading font-bold mb-3 text-white flex flex-col gap-1">
-                <span className="text-lg sm:text-xl">Gói khởi động Trám MiCD</span>
-                <span className="text-sm sm:text-base text-[#C43838]">Giải pháp trám thẩm mỹ sinh học</span>
+                <span className="text-lg sm:text-xl">Gói khởi động Phục Hồi MiCD</span>
+                <span className="text-sm sm:text-base text-[#C43838]">Giải pháp phục hồi thẩm mỹ sinh học</span>
               </h3>
               <p className="font-body text-sm text-slate-300 mb-6 flex-1 leading-relaxed">
-                Đồng bộ hóa quy trình trám thẩm mỹ từ dán dính đến đánh bóng chỉ trong một gói giải pháp. <strong className="text-emerald-400">Loại bỏ các bước nhạy cảm kỹ thuật</strong>, bịt kín xoang sâu phức tạp, kết thúc bằng bộ mũi mài mịn màng chính hãng giúp <strong className="text-amber-400">mô nướu lành thương hồng hào</strong> và <strong className="text-emerald-400">ngăn mảng bám tích tụ</strong>.
+                Đồng bộ hóa quy trình phục hồi thẩm mỹ từ dán dính đến đánh bóng chỉ trong một gói giải pháp. <strong className="text-emerald-400">Loại bỏ các bước nhạy cảm kỹ thuật</strong>, bịt kín xoang sâu phức tạp, kết thúc bằng bộ mũi mài mịn màng chính hãng giúp <strong className="text-amber-400">mô nướu lành thương hồng hào</strong> và <strong className="text-emerald-400">ngăn mảng bám tích tụ</strong>.
               </p>
               
               <div className="flex flex-col gap-2 mb-4 bg-slate-900/50 p-3 sm:p-4 rounded-xl border border-white/5">
