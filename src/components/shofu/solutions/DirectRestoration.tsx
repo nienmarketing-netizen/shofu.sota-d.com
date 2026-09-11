@@ -478,12 +478,12 @@ export function DirectRestoration() {
                 </span>
               </div>
 
-              <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end">
-                <div className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[460px]">
+              <div className="w-full lg:w-1/2 flex items-center justify-start lg:justify-end">
+                <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] -ml-3 sm:-ml-5 lg:ml-0">
                   <img 
                     src="/image/BeautiBond-Xtreme-One-Hand.webp" 
                     alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
-                    className="w-full h-auto object-contain block [mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] [-webkit-mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)]"
+                    className="w-full h-auto object-contain block [mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%)] lg:[mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] lg:[-webkit-mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)]"
                     loading="lazy"
                   />
                 </div>
