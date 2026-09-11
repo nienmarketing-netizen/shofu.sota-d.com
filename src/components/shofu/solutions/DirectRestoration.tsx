@@ -272,7 +272,7 @@ export function DirectRestoration() {
                 <div className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3">
                   <Quote className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
                   <p className="font-body text-slate-300 text-sm sm:text-[15px] italic leading-relaxed">
-                    "Nhiều Bác sĩ luôn thắc thỏm mỗi khi bệnh nhân quay lại tái khám với lời than phiền: Răng trám xong về ăn nhai cứ bị buốt nhói."
+                    "Nhiều Bác sĩ luôn thấp thỏm mỗi khi bệnh nhân quay lại tái khám với lời than phiền: Răng trám xong về ăn nhai cứ bị buốt nhói."
                   </p>
                 </div>
               </div>
