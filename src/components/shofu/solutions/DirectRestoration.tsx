@@ -340,7 +340,7 @@ export function DirectRestoration() {
             </div>
           </div>
 
-          {/* Microscopic Split-Screen SEM Graphic with Bottom Fade */}
+          {/* Microscopic Split-Screen SEM Graphic with Seamless Edge Fades */}
           <div className="w-screen relative left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:w-full sm:max-w-5xl sm:mx-auto overflow-hidden mb-12 lg:mb-16">
             <img 
               src="/image/tri-lieu-sinh-hoc-micd.webp" 
@@ -348,8 +348,12 @@ export function DirectRestoration() {
               className="w-full h-auto object-cover block [mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)]"
               loading="lazy"
             />
-            {/* Lớp gradient tiệp màu nền slate-900, xóa đường cắt ngang */}
-            <div className="absolute inset-x-0 bottom-0 h-16 sm:h-24 md:h-32 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent pointer-events-none" />
+            {/* Lớp gradient tiệp màu nền 2 bên cạnh ở PC */}
+            <div className="hidden sm:block absolute inset-y-0 left-0 w-10 sm:w-16 lg:w-24 bg-gradient-to-r from-slate-900 via-slate-900/60 to-transparent pointer-events-none z-10" />
+            <div className="hidden sm:block absolute inset-y-0 right-0 w-10 sm:w-16 lg:w-24 bg-gradient-to-l from-slate-900 via-slate-900/60 to-transparent pointer-events-none z-10" />
+
+            {/* Lớp gradient tiệp màu nền slate-900 bên dưới, xóa đường cắt ngang */}
+            <div className="absolute inset-x-0 bottom-0 h-16 sm:h-24 md:h-32 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent pointer-events-none z-10" />
           </div>
 
           {/* Quick Comparative Matrix */}
