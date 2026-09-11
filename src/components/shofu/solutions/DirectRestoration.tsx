@@ -105,8 +105,12 @@ export function DirectRestoration() {
               </div>
             </div>
             
-            <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12 text-left">
-              Chấm dứt ám ảnh ê buốt & sâu răng thứ phát trong <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">phục hồi xoang II răng sau</span>
+            <h1 className="font-heading font-extrabold text-[1.2rem] min-[375px]:text-[1.35rem] min-[414px]:text-[1.5rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.35] sm:leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12 text-left">
+              <span className="block sm:inline">Chấm dứt ám ảnh ê buốt</span>{" "}
+              <span className="block sm:inline">& sâu răng thứ phát</span>{" "}
+              <span className="block sm:inline">
+                trong <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">phục hồi xoang II răng sau</span>
+              </span>
             </h1>
 
             {/* Mobile Image: Hiển thị ngay dưới headline ở mobile, ẩn ở desktop */}
