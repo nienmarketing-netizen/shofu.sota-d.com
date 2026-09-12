@@ -530,10 +530,14 @@ export function DirectRestoration() {
               </div>
 
               <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start order-4 lg:order-none my-6 lg:my-0 w-full">
-                <ImagePlaceholder 
-                  className="aspect-[4/3] w-full max-w-[480px] bg-white shadow-lg rounded-2xl border border-slate-200" 
-                  text="Ảnh chụp cận cảnh tuýp composite Beautifil II LS màu sắc sang trọng bên cạnh hình ảnh cùi răng sau khi hoàn thiện phục hồi mặt nhai, các múi răng được điêu khắc sắc nét, chân thực không tì vết." 
-                />
+                <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] -ml-8 sm:-ml-10 lg:ml-0 -z-10 lg:z-auto">
+                  <img 
+                    src="/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp" 
+                    alt="Phục hồi trực tiếp Shofu Beautifil II LS" 
+                    className="w-full h-auto object-contain block [mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%),linear-gradient(to_right,transparent_0%,black_15%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%),linear-gradient(to_right,transparent_0%,black_15%)] [mask-composite:intersect] [-webkit-mask-composite:source-in] lg:[mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] lg:[-webkit-mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] lg:[mask-composite:add] lg:[-webkit-mask-composite:source-over]"
+                    loading="lazy"
+                  />
+                </div>
               </div>
               <div className="w-full lg:w-1/2 lg:pr-4 contents lg:block">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4 order-1 lg:order-none mt-2 lg:mt-0">
