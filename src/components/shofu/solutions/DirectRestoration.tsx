@@ -755,7 +755,7 @@ export function DirectRestoration() {
       </section>
 
       {/* SECTION 5.5: SOCIAL PROOF MARQUEE */}
-      <section className="py-20 lg:py-28 bg-white relative border-t border-slate-200 overflow-hidden">
+      <section className="py-20 lg:py-28 bg-slate-50 bg-grid-pattern relative border-t border-slate-200 overflow-hidden">
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes marquee-left {
             0% { transform: translateX(0); }
@@ -799,9 +799,9 @@ export function DirectRestoration() {
                   ];
                   const dup = [...t1, ...t1];
                   return dup.map((item, idx) => (
-                    <div key={`row-1-${idx}`} className="bg-slate-50 rounded-2xl p-5 lg:p-6 shadow-sm flex flex-col w-[280px] sm:w-[320px] lg:w-[350px] shrink-0 mx-2 sm:mx-3 border border-slate-200 whitespace-normal">
+                    <div key={`row-1-${idx}`} className="bg-white rounded-2xl p-5 lg:p-6 shadow-sm flex flex-col w-[280px] sm:w-[320px] lg:w-[350px] shrink-0 mx-2 sm:mx-3 border border-slate-100 whitespace-normal">
                       <p className="font-body text-[13.5px] sm:text-[14px] text-slate-600 italic mb-5 lg:mb-6 leading-relaxed flex-1">{item.text}</p>
-                      <div className="border-t border-slate-200 pt-4 lg:pt-5 mt-auto">
+                      <div className="border-t border-slate-100 pt-4 lg:pt-5 mt-auto">
                         <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 text-slate-900">{item.name}</h4>
                         <p className="text-[11px] sm:text-xs text-slate-500">{item.role}</p>
                       </div>
@@ -824,9 +824,9 @@ export function DirectRestoration() {
                   ];
                   const dup = [...t2, ...t2];
                   return dup.map((item, idx) => (
-                    <div key={`row-2-${idx}`} className="bg-slate-50 rounded-2xl p-5 lg:p-6 shadow-sm flex flex-col w-[280px] sm:w-[320px] lg:w-[350px] shrink-0 mx-2 sm:mx-3 border border-slate-200 whitespace-normal">
+                    <div key={`row-2-${idx}`} className="bg-white rounded-2xl p-5 lg:p-6 shadow-sm flex flex-col w-[280px] sm:w-[320px] lg:w-[350px] shrink-0 mx-2 sm:mx-3 border border-slate-100 whitespace-normal">
                       <p className="font-body text-[13.5px] sm:text-[14px] text-slate-600 italic mb-5 lg:mb-6 leading-relaxed flex-1">{item.text}</p>
-                      <div className="border-t border-slate-200 pt-4 lg:pt-5 mt-auto">
+                      <div className="border-t border-slate-100 pt-4 lg:pt-5 mt-auto">
                         <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 text-slate-900">{item.name}</h4>
                         <p className="text-[11px] sm:text-xs text-slate-500">{item.role}</p>
                       </div>
