@@ -691,6 +691,17 @@ export function DirectRestoration() {
               <p className="text-sm text-slate-600 font-body leading-relaxed">Kháng mảng bám sinh học giúp giữ vùng nướu quanh đường hoàn tất luôn hồng hào, săn chắc dài lâu.</p>
             </div>
           </div>
+          
+          <div className="flex justify-center mt-12 w-full">
+            <CtaButton ctaName="TuVanCongNgheSPRG" 
+               onClick={() => openCampaignModal("Nhận tư vấn & Báo giá combo vật liệu công nghệ S-PRG")}
+              className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
+            >
+              <span className="truncate">NHẬN TƯ VẤN CÔNG NGHỆ S-PRG NGAY</span>
+              <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+            </CtaButton>
+          </div>
+          
         </div>
       </section>
 
