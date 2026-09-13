@@ -692,7 +692,7 @@ export function DirectRestoration() {
             </div>
           </div>
           
-          <div className="flex justify-center mt-12 w-full">
+          <div className="flex justify-center mt-6 lg:mt-12 w-full order-5 lg:order-none">
             <CtaButton ctaName="TuVanCongNgheSPRG" 
                onClick={() => openCampaignModal("Nhận tư vấn & Báo giá combo vật liệu công nghệ S-PRG")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
