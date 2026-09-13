@@ -637,7 +637,7 @@ export function DirectRestoration() {
 
       {/* SECTION 4: CORE TECHNOLOGY */}
       <section className="py-20 lg:py-28 bg-slate-100 bg-grid-pattern relative overflow-hidden border-t border-slate-200">
-        <div className="w-[90%] lg:w-[80%] mx-auto relative z-10 flex flex-col lg:flex-row gap-12 items-center">
+        <div className="w-[90%] lg:w-[80%] mx-auto relative z-10 flex flex-col lg:flex-row gap-12 items-center lg:items-start">
           <div className="w-full lg:w-1/2">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">
               Công nghệ hạt độn sinh học S-PRG – <span className="text-[#00ADEF]">"Bình ắc quy" ion bảo vệ chủ động</span>
@@ -676,10 +676,12 @@ export function DirectRestoration() {
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-1/2">
-             <ImagePlaceholder 
-                className="aspect-square w-full" 
-                text="Sơ đồ 3D cấu tạo hạt độn S-PRG (Cyan & Đỏ). Hạt độn trung tâm tỏa 6 quầng sáng đại diện 6 ion bảo vệ hướng về phía chiếc răng thật đang được bao bọc bởi lớp màng sinh học lấp lánh." 
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+             <img 
+              src="/image/Shofu-S-PRG-technology.webp"
+              alt="Công nghệ hạt độn sinh học S-PRG"
+              className="w-full max-w-[500px] h-auto object-contain block lg:pt-2" 
+              loading="lazy"
              />
           </div>
         </div>
