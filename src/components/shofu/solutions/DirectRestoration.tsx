@@ -650,7 +650,7 @@ export function DirectRestoration() {
                 <div className="w-10 h-10 rounded-full bg-sky-50 flex items-center justify-center">
                   <Sparkles className="w-5 h-5 text-[#00ADEF]" />
                 </div>
-                <h4 className="font-heading font-bold text-slate-900 text-[15px]">Cơ chế sạc và nhả Fluoride ($F^-$) vĩnh cửu</h4>
+                <h4 className="font-heading font-bold text-slate-900 text-[15px]">Cơ chế sạc và nhả Fluoride (F<sup>-</sup>) vĩnh cửu</h4>
                 <p className="text-sm text-slate-600 font-body leading-relaxed">Phóng thích ion bảo vệ và tự sạc lại Fluoride ngoại sinh mỗi khi bệnh nhân đánh răng để tái khoáng hóa mô ngà răng thật.</p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 flex flex-col gap-3">
