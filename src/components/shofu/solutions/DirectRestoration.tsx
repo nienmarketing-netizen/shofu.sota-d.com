@@ -851,7 +851,7 @@ export function DirectRestoration() {
       </section>
 
       {/* SECTION 6: FAQ */}
-      <section className="py-20 lg:py-28 bg-slate-50 bg-grid-pattern relative border-t border-slate-200 overflow-hidden">
+      <section className="py-20 lg:py-28 bg-white relative border-t border-slate-200 overflow-hidden">
         <div className="w-[90%] lg:w-[80%] mx-auto max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">Câu hỏi thường gặp</h2>
@@ -882,7 +882,7 @@ export function DirectRestoration() {
       </section>
 
       {/* SECTION 7: THE CORE OFFER */}
-      <section className="py-20 lg:py-28 bg-slate-900 relative border-b border-slate-800 text-white overflow-hidden">
+      <section className="py-20 lg:py-28 bg-slate-950 relative border-b border-slate-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern-light opacity-100 pointer-events-none"></div>
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
           <div className="text-center relative">
