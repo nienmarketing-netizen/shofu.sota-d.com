@@ -643,7 +643,7 @@ export function DirectRestoration() {
               Công nghệ hạt độn sinh học S-PRG – <span className="text-[#00ADEF] block sm:inline mt-1 sm:mt-0">"Bình ắc quy" ion bảo vệ chủ động</span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed mb-8 order-3 lg:order-none w-full text-center lg:text-left">
-              Điểm cốt lõi làm nên sức mạnh trị liệu vượt trội của hệ sinh thái Giomer là hạt độn sinh học S-PRG độc quyền của Shofu. Cấu trúc hạt độn 3 lớp gồm lõi thủy tinh đa chức năng đã phản ứng trước, hoạt động như một "bình ắc quy sinh học" liên tục giải phóng và tự sạc lại 6 loại ion sinh học giúp tái khoáng hóa ngà răng và chống mảng bám vĩnh cửu.
+              Điểm cốt lõi làm nên <strong className="text-slate-900 font-bold">sức mạnh trị liệu vượt trội</strong> của hệ sinh thái Giomer là <strong className="text-[#00ADEF] font-bold">hạt độn sinh học S-PRG độc quyền</strong> của Shofu. <strong className="text-slate-900 font-bold">Cấu trúc hạt độn 3 lớp</strong> gồm lõi thủy tinh đa chức năng đã phản ứng trước, hoạt động như một "bình ắc quy sinh học" liên tục <strong className="text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">giải phóng và tự sạc lại 6 loại ion sinh học</strong> giúp <span className="text-slate-900 font-bold border-b-2 border-sky-300">tái khoáng hóa ngà răng</span> và <span className="text-slate-900 font-bold border-b-2 border-red-300">chống mảng bám vĩnh cửu</span>.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 order-4 lg:order-none w-full">
               <div className="bg-white rounded-2xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 flex flex-col gap-3">
