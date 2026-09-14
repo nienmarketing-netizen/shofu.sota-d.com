@@ -1071,11 +1071,13 @@ const faqs = [
                     </li>
                   </ul>
                 </div>
-                <div className="w-full lg:w-[45%] lg:max-w-[400px]">
-                   <ImagePlaceholder 
-                      className="min-h-[250px] w-full bg-slate-900 border-slate-700 rounded-2xl group-hover:border-amber-500/30 transition-colors duration-500" 
-                      text="Hình ảnh minh hoạ Bộ 3 sản phẩm cốt lõi (BBX, Beautifil II LS, Injectable X)" 
-                   />
+                <div className="w-full lg:w-[45%] lg:max-w-[400px] flex justify-center items-center">
+                  <img 
+                    src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/giai-phap-phuc-hoi-truc-tiep-shofu-bo-3-san-pham-cot-loi.webp" 
+                    alt="Bộ 3 sản phẩm cốt lõi Shofu" 
+                    className="w-full max-w-[280px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
               </div>
             </div>
