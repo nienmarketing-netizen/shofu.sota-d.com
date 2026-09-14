@@ -33,7 +33,7 @@ const ImagePlaceholder = ({ text, className = "" }: { text: string, className?: 
   </div>
 );
 
-const AccordionItem: React.FC<{ question: string, answer: string, isOpen: boolean, onClick: () => void }> = ({ question, answer, isOpen, onClick }) => {
+const AccordionItem: React.FC<{ question: string, answer: React.ReactNode, isOpen: boolean, onClick: () => void }> = ({ question, answer, isOpen, onClick }) => {
   return (
     <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white mb-4 transition-all duration-300">
       <button 
@@ -64,37 +64,61 @@ const AccordionItem: React.FC<{ question: string, answer: string, isOpen: boolea
 export function DirectRestoration() {
   const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
   const [campaignModalTitle, setCampaignModalTitle] = useState('');
-  const [openFaqIndex, setOpenFaqIndex] = useState<number>(0);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number>(-1);
 
   const openCampaignModal = (title: string) => {
     setCampaignModalTitle(title);
     setIsCampaignModalOpen(true);
   };
 
-  const faqs = [
+const faqs = [
     {
       q: "Phục hồi composite xoang II sâu có nhất thiết phải cô lập đê cao su tuyệt đối để tránh ê buốt sau điều trị không?",
-      a: "Đê cao su luôn là tiêu chuẩn vàng trong nha khoa. Tuy nhiên, căn nguyên thực sự của ê buốt sau trám không chỉ xuất phát từ độ ẩm lâm sàng mà từ hiện tượng thủy phân màng dán do thành phần HEMA ngấm nước. Keo dán BeautiBond Xtreme (BBX) loại bỏ hoàn toàn HEMA (HEMA-Free kỵ nước), ứng dụng hệ dung môi Acetone bay hơi chớp nhoáng giúp đưa monomer thâm nhập sâu và bít kín các ống ngà ẩm. Màng keo siêu mỏng ~5µm cùng lực dán Self-Etch bền bỉ ~30–35 MPa giúp khóa chặt vi kẽ và triệt tiêu nguy cơ ê buốt sau phục hồi."
+      a: (
+        <>
+          Đê cao su luôn là <strong className="text-slate-800 font-bold">tiêu chuẩn vàng</strong> trong nha khoa. Tuy nhiên, căn nguyên thực sự của ê buốt sau trám không chỉ xuất phát từ độ ẩm lâm sàng mà từ <strong className="text-blue-600 font-bold bg-blue-50 px-1 rounded">hiện tượng thủy phân màng dán</strong> do thành phần HEMA ngấm nước. Keo dán <strong className="text-amber-600 font-bold">BeautiBond Xtreme (BBX)</strong> loại bỏ hoàn toàn HEMA (<strong className="text-[#00ADEF] font-bold">HEMA-Free kỵ nước</strong>), ứng dụng <strong className="text-emerald-600 font-bold bg-emerald-50 px-1 rounded">hệ dung môi Acetone bay hơi chớp nhoáng</strong> giúp đưa monomer thâm nhập sâu và bít kín các ống ngà ẩm. Màng keo <strong className="text-purple-600 font-bold">siêu mỏng ~5µm</strong> cùng lực dán Self-Etch bền bỉ <strong className="text-slate-800 font-bold">~30–35 MPa</strong> giúp khóa chặt vi kẽ và <strong className="text-red-500 font-bold underline decoration-red-200 underline-offset-2">triệt tiêu nguy cơ ê buốt</strong> sau phục hồi.
+        </>
+      )
     },
     {
       q: "Làm thế nào để kiểm soát lực co ngót trùng hợp và hiện tượng hở bờ viền ở sàn ngà xoang II có C-Factor cao?",
-      a: "Sự nứt kẽ vi thể và cơn đau nhói khi ăn nhai chủ yếu do ứng suất co ngót kéo tách màng dán khỏi sàn ngà. Composite đặc Beautifil II LS sở hữu tỷ lệ hạt độn cao (83 wt%) giúp hạ độ co rút thể tích xuống mức kỷ lục 0.85% Vol và ứng suất co ngót tối thiểu chỉ 1.37 MPa. Đặc tính này giúp triệt tiêu lực kéo giật sàn ngà, ngăn chặn vi thấm và giữ cho đường hoàn tất khít sát tuyệt đối sau nhiều năm ăn nhai."
+      a: (
+        <>
+          Sự nứt kẽ vi thể và cơn đau nhói khi ăn nhai chủ yếu do <strong className="text-slate-800 font-bold">ứng suất co ngót kéo tách màng dán</strong> khỏi sàn ngà. Composite đặc <strong className="text-amber-600 font-bold">Beautifil II LS</strong> sở hữu tỷ lệ hạt độn cao (<strong className="text-emerald-600 font-bold">83 wt%</strong>) giúp hạ độ co rút thể tích xuống mức kỷ lục <strong className="text-[#00ADEF] font-bold bg-sky-50 px-1 rounded">0.85% Vol</strong> và ứng suất co ngót tối thiểu chỉ <strong className="text-blue-600 font-bold">1.37 MPa</strong>. Đặc tính này giúp <strong className="text-purple-600 font-bold">triệt tiêu lực kéo giật sàn ngà</strong>, ngăn chặn vi thấm và giữ cho đường hoàn tất <strong className="text-emerald-600 font-bold underline decoration-emerald-200 underline-offset-2">khít sát tuyệt đối</strong> sau nhiều năm ăn nhai.
+        </>
+      )
     },
     {
       q: "Composite đắp lót xoang II có đảm bảo độ bền chịu lực và không tạo bọt khí ở các hốc sâu vi thể?",
-      a: "Hoàn toàn đảm bảo với Beautifil Injectable X. Sản phẩm ứng dụng công nghệ Nano-Optimized Silane với đặc tính lưu biến thông minh (Thixotropic): tự động chảy loang phẳng láng dưới áp lực bơm để len lỏi bít kín mọi hốc sâu vi thể mà không đọng bọt khí, nhưng lập tức đứng yên định hình khi ngừng bơm. Đặc biệt, độ bền nén cơ học đạt 400 MPa (tương đương composite đặc), cho phép đắp khối chịu lực trực tiếp ở vùng răng sau."
+      a: (
+        <>
+          Hoàn toàn đảm bảo với <strong className="text-amber-600 font-bold">Beautifil Injectable X</strong>. Sản phẩm ứng dụng công nghệ <strong className="text-[#00ADEF] font-bold">Nano-Optimized Silane</strong> với đặc tính lưu biến thông minh (<strong className="text-blue-600 font-bold bg-blue-50 px-1 rounded">Thixotropic</strong>): <strong className="text-emerald-600 font-bold">tự động chảy loang phẳng láng</strong> dưới áp lực bơm để len lỏi bít kín mọi hốc sâu vi thể mà <strong className="text-red-500 font-bold">không đọng bọt khí</strong>, nhưng lập tức <strong className="text-purple-600 font-bold">đứng yên định hình</strong> khi ngừng bơm. Đặc biệt, độ bền nén cơ học đạt <strong className="text-slate-800 font-bold bg-slate-100 px-1 rounded">400 MPa</strong> (tương đương composite đặc), cho phép đắp khối chịu lực trực tiếp ở vùng răng sau.
+        </>
+      )
     },
     {
       q: "Làm thế nào để khắc phục triệt để tình trạng composite dính cây phục hình khi điêu khắc múi rãnh?",
-      a: "Bác sĩ nên lau sạch dụng cụ định kỳ, vo tròn khối composite hoặc nhúng nhẹ đầu khắc vào dung dịch hỗ trợ tạo hình Modeling Liquid của Shofu. Dung dịch này giúp bôi trơn bề mặt, giúp cây khắc lướt êm, không kéo rách hay dính composite, giúp thao tác điêu khắc hình thể múi rãnh chính xác, mượt mà và nhàn tênh."
+      a: (
+        <>
+          Bác sĩ nên lau sạch dụng cụ định kỳ, vo tròn khối composite hoặc nhúng nhẹ đầu khắc vào dung dịch hỗ trợ tạo hình <strong className="text-amber-600 font-bold">Modeling Liquid</strong> của Shofu. Dung dịch này giúp <strong className="text-[#00ADEF] font-bold bg-sky-50 px-1 rounded">bôi trơn bề mặt</strong>, giúp cây khắc lướt êm, <strong className="text-emerald-600 font-bold">không kéo rách hay dính composite</strong>, giúp thao tác điêu khắc hình thể múi rãnh <strong className="text-purple-600 font-bold">chính xác, mượt mà và nhàn tênh</strong>.
+        </>
+      )
     },
     {
       q: "Hạt độn S-PRG liên tục giải phóng ion thì phục hình có bị mòn nhanh, rỗng xốp hay suy giảm lực dán theo thời gian không?",
-      a: "Tuyệt đối không. Cấu trúc hạt độn S-PRG 3 lớp được bảo vệ bởi màng biến tính bền vững và phân bổ đồng đều trong mạng polymer. Beautifil II LS đạt độ bền nén 364 MPa và độ bền uốn 120 MPa, đảm bảo độ cứng chắc và kháng mòn cao. Nghiên cứu lâm sàng độc lập tại Đại học Florida công bố trên tạp chí JADA chứng minh: sau 8 năm đạt 100% tỷ lệ lưu giữ (0% ê buốt, 0% sâu răng thứ phát) và sau 13 năm đạt 96% phục hình sạch bóng sâu răng tái phát."
+      a: (
+        <>
+          Tuyệt đối không. Cấu trúc <strong className="text-amber-600 font-bold">hạt độn S-PRG 3 lớp</strong> được bảo vệ bởi màng biến tính bền vững và phân bổ đồng đều trong mạng polymer. Beautifil II LS đạt độ bền nén <strong className="text-blue-600 font-bold">364 MPa</strong> và độ bền uốn <strong className="text-blue-600 font-bold">120 MPa</strong>, đảm bảo <strong className="text-emerald-600 font-bold bg-emerald-50 px-1 rounded">độ cứng chắc và kháng mòn cao</strong>. Nghiên cứu lâm sàng độc lập tại Đại học Florida công bố trên tạp chí JADA chứng minh: sau 8 năm đạt <strong className="text-[#00ADEF] font-bold underline decoration-sky-200 underline-offset-2">100% tỷ lệ lưu giữ</strong> (0% ê buốt, 0% sâu răng thứ phát) và sau 13 năm đạt <strong className="text-purple-600 font-bold">96% phục hình sạch bóng</strong> sâu răng tái phát.
+        </>
+      )
     },
     {
       q: "Quy trình đánh bóng composite có tốn nhiều thời gian và dễ làm trầy xước bề mặt miếng trám không?",
-      a: "Hệ thống đĩa đánh bóng Super-Snap X-Treme giải quyết triệt để vấn đề này nhờ cơ chế gài Snap-on thông minh và thiết kế đĩa không chứa vòng kim loại ở giữa, loại bỏ nguy cơ làm trầy miếng trám. Với 4 dải màu phân định rõ ràng (từ mài thô đến siêu bóng) kết hợp mũi đá mài nhẵn CA, Bác sĩ chỉ mất vài giây để tái tạo bề mặt láng mịn. Để đạt độ bóng gương hoàn hảo, Bác sĩ có thể chốt bằng đĩa nỉ Super-Snap Buff Mini Disk dùng kèm kem đánh bóng kim cương DirectDia Paste."
+      a: (
+        <>
+          Hệ thống đĩa đánh bóng <strong className="text-amber-600 font-bold">Super-Snap X-Treme</strong> giải quyết triệt để vấn đề này nhờ cơ chế gài <strong className="text-[#00ADEF] font-bold bg-sky-50 px-1 rounded">Snap-on thông minh</strong> và thiết kế đĩa <strong className="text-emerald-600 font-bold">không chứa vòng kim loại ở giữa</strong>, loại bỏ nguy cơ làm trầy miếng trám. Với <strong className="text-blue-600 font-bold">4 dải màu phân định rõ ràng</strong> (từ mài thô đến siêu bóng) kết hợp mũi đá mài nhẵn CA, Bác sĩ chỉ mất vài giây để <strong className="text-purple-600 font-bold">tái tạo bề mặt láng mịn</strong>. Để đạt độ bóng gương hoàn hảo, Bác sĩ có thể chốt bằng đĩa nỉ <strong className="text-slate-800 font-bold">Super-Snap Buff Mini Disk</strong> dùng kèm kem đánh bóng kim cương <strong className="text-slate-800 font-bold">DirectDia Paste</strong>.
+        </>
+      )
     }
   ];
 
