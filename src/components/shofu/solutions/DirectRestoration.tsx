@@ -718,7 +718,7 @@ export function DirectRestoration() {
         <div className="absolute inset-0 bg-grid-pattern-light opacity-100 pointer-events-none"></div>
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-4 tracking-tight">Hệ thống Bằng chứng Khoa học</h2>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-4 tracking-tight">Bằng chứng <span className="text-[#00ADEF]">khoa học</span></h2>
             <p className="font-body text-base sm:text-lg text-slate-400 max-w-3xl mx-auto">
               <strong className="font-bold text-white">Shofu</strong> mang đến những bằng chứng thép từ các <strong className="font-bold text-[#00ADEF] bg-slate-800/80 px-1.5 rounded">nghiên cứu lâm sàng độc lập uy tín nhất thế giới</strong>, <strong className="font-bold text-white underline decoration-sky-500/50 decoration-2 underline-offset-4">bảo chứng tuyệt đối cho chất lượng phục hình</strong>.
             </p>
