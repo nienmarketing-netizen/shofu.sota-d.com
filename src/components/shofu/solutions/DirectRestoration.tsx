@@ -734,7 +734,7 @@ export function DirectRestoration() {
               
               <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center h-full">
                 <div className="flex-1 w-full h-full flex flex-col">
-                  <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-blue-500/20 text-blue-400 font-mono font-bold text-xs mb-4 border border-blue-500/30 w-max">1. Bằng chứng Lâm sàng Dài hạn Độc lập</div>
+                  <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-blue-500/20 text-blue-400 font-mono font-bold text-xs mb-4 border border-blue-500/30 w-max">1. Bằng chứng lâm sàng dài hạn độc lập</div>
                   <h3 className="font-heading font-bold text-2xl text-white mb-2">Tạp chí JADA - Đại học Florida</h3>
                   <p className="text-slate-400 font-body text-sm mb-6">Bảo chứng quan trọng nhất dập tắt nghi ngờ về độ bền và nguy cơ sâu răng thứ phát dưới lớp trám.</p>
                   
@@ -781,7 +781,7 @@ export function DirectRestoration() {
               <div className="absolute inset-0 rounded-3xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-md pointer-events-none group-hover:border-[#00ADEF]/50 group-hover:shadow-[0_0_30px_rgba(0,173,239,0.15)] transition-all duration-300 [mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" />
               
               <div className="relative z-10 flex flex-col h-full">
-                <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 font-mono font-bold text-xs mb-4 border border-purple-500/30 w-max">2. Cơ chế Phân tử & Kháng khuẩn</div>
+                <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 font-mono font-bold text-xs mb-4 border border-purple-500/30 w-max">2. Cơ chế phân tử & kháng khuẩn</div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">Tạp chí Scientific Reports (Nature Research)</h3>
                 <p className="text-slate-400 font-body text-[13px] mb-5">Bằng chứng "trị liệu sinh học chủ động" vượt trội so với composite trơ (Đại học Osaka, 2018).</p>
                 
@@ -808,7 +808,7 @@ export function DirectRestoration() {
                 <div className="absolute inset-0 rounded-3xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-md pointer-events-none group-hover:border-[#00ADEF]/50 group-hover:shadow-[0_0_30px_rgba(0,173,239,0.15)] transition-all duration-300 [mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" />
                 
                 <div className="relative z-10 flex flex-col h-full">
-                  <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-400 font-mono font-bold text-xs mb-4 border border-amber-500/30 w-max">3. Thử nghiệm Kỹ thuật Keo dán</div>
+                  <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-400 font-mono font-bold text-xs mb-4 border border-amber-500/30 w-max">3. Thử nghiệm kỹ thuật keo dán</div>
                   <h3 className="font-heading font-bold text-xl text-white mb-2">Độ Bền Dán BeautiBond Xtreme</h3>
                   <p className="text-slate-400 font-body text-[13px] mb-4">Giải quyết triệt để "điểm đau" ê buốt và thoái hóa màng keo.</p>
                   
@@ -844,7 +844,7 @@ export function DirectRestoration() {
                 <div className="absolute inset-0 rounded-3xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-md pointer-events-none group-hover:border-[#00ADEF]/50 group-hover:shadow-[0_0_30px_rgba(0,173,239,0.15)] transition-all duration-300 [mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" />
                 
                 <div className="relative z-10 flex flex-col h-full">
-                  <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-400 font-mono font-bold text-xs mb-4 border border-emerald-500/30 w-max">4. Bằng chứng Cơ học Composite</div>
+                  <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-400 font-mono font-bold text-xs mb-4 border border-emerald-500/30 w-max">4. Bằng chứng cơ học composite</div>
                   <h3 className="font-heading font-bold text-xl text-white mb-2">Beautifil II LS & Injectable X</h3>
                   <p className="text-slate-400 font-body text-[13px] mb-4">Giải quyết nỗi lo co ngót, nứt vi kẽ và bọt khí xoang II.</p>
                   
