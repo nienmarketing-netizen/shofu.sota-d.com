@@ -1041,51 +1041,64 @@ const faqs = [
             </h2>
           </div>
 
-          <div className="bg-slate-800/80 rounded-3xl p-8 md:p-10 border border-slate-700 mb-8 w-full max-w-5xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-10">
-              <div className="flex-1 space-y-8">
-                <div>
-                  <h3 className="font-heading font-bold text-2xl text-amber-400 mb-4 border-b border-slate-700 pb-4">Bộ 3 sản phẩm cốt lõi</h3>
+          <div className="space-y-6 lg:space-y-8 mb-8 w-full max-w-5xl mx-auto">
+            {/* Box 1: Core Products */}
+            <div className="bg-slate-800/80 rounded-3xl p-8 md:p-10 border border-slate-700 w-full relative overflow-hidden group hover:border-amber-500/30 transition-colors duration-500">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-amber-500/10 transition-all duration-500"></div>
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center relative z-10">
+                <div className="flex-1 w-full space-y-6">
+                  <h3 className="font-heading font-bold text-2xl text-amber-400 border-b border-slate-700 pb-4">Bộ 3 sản phẩm cốt lõi</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300">01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml)</span>
+                      <span className="text-slate-300 text-base leading-relaxed">01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300">01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g)</span>
+                      <span className="text-slate-300 text-base leading-relaxed">01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300">01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g)</span>
+                      <span className="text-slate-300 text-base leading-relaxed">01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g)</span>
                     </li>
                   </ul>
                 </div>
-                
-                <div>
-                  <h3 className="font-heading font-bold text-2xl text-white mb-4 border-b border-amber-500/30 pb-4">🎁 Bộ 3 quà tặng tài trợ 100%</h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium">Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium">Tài liệu: Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II"</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium">Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày</span>
-                    </li>
-                  </ul>
+                <div className="w-full lg:w-[45%] lg:max-w-[400px]">
+                   <ImagePlaceholder 
+                      className="min-h-[250px] w-full bg-slate-900 border-slate-700 rounded-2xl group-hover:border-amber-500/30 transition-colors duration-500" 
+                      text="Hình ảnh minh hoạ Bộ 3 sản phẩm cốt lõi (BBX, Beautifil II LS, Injectable X)" 
+                   />
                 </div>
               </div>
-              
-              <div className="w-full lg:w-[40%]">
-                 <ImagePlaceholder 
-                    className="h-full min-h-[300px] w-full bg-slate-900 border-slate-700" 
-                    text="Mockup trọn bộ Combo đối xứng: BBX, Beautifil II LS, Injectable X ở giữa. Bên trái: Tablet hiển thị Ebook E-Guide màu Navy. Bên phải: Hộp nhựa Polishing Kit CA. Dưới: Thẻ VIP Zalo Access kim loại đen chữ vàng." 
-                 />
+            </div>
+
+            {/* Box 2: Gifts */}
+            <div className="bg-slate-800/80 rounded-3xl p-8 md:p-10 border border-amber-500/30 w-full relative overflow-hidden group hover:border-amber-500/50 transition-colors duration-500">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 blur-[80px] rounded-full pointer-events-none group-hover:bg-amber-500/20 transition-all duration-500"></div>
+              <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center relative z-10">
+                <div className="flex-1 w-full space-y-6">
+                  <h3 className="font-heading font-bold text-2xl text-white border-b border-amber-500/30 pb-4">🎁 Bộ 3 quà tặng tài trợ 100%</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
+                      <span className="text-amber-100 font-medium text-base leading-relaxed">Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
+                      <span className="text-amber-100 font-medium text-base leading-relaxed">Tài liệu: Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II"</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
+                      <span className="text-amber-100 font-medium text-base leading-relaxed">Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-full lg:w-[45%] lg:max-w-[400px]">
+                   <ImagePlaceholder 
+                      className="min-h-[250px] w-full bg-slate-900 border-amber-500/20 rounded-2xl group-hover:border-amber-500/40 transition-colors duration-500" 
+                      text="Hình ảnh minh hoạ Bộ 3 quà tặng (Polishing Kit CA, E-Guide, Zalo Access)" 
+                   />
+                </div>
               </div>
             </div>
           </div>
