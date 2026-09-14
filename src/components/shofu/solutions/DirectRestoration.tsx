@@ -129,7 +129,7 @@ export function DirectRestoration() {
             </div>
             
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl text-left">
-              Trải nghiệm bước dịch chuyển đột phá từ "Phục hồi cơ học thụ động" sang <strong className="text-slate-900">"Trị liệu sinh học chủ động"</strong> với hệ sinh thái Giomer ứng dụng công nghệ hạt độn S-PRG từ <strong className="text-slate-900">Shofu Nhật Bản</strong>. Quy trình lâm sàng được tối giản hóa tối đa, giúp <strong className="text-slate-900">bảo tồn cấu trúc ngà sống</strong> và giải phóng hoàn toàn áp lực nhạy cảm kỹ thuật cho Bác sĩ.
+              Trải nghiệm bước dịch chuyển đột phá từ "Phục hồi cơ học thụ động" sang <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1.5 py-0.5 rounded">"Trị liệu sinh học chủ động"</strong> với hệ sinh thái Giomer ứng dụng công nghệ hạt độn S-PRG từ <strong className="font-bold text-slate-900">Shofu Nhật Bản</strong>. Quy trình lâm sàng được tối giản hóa tối đa, giúp <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-4">bảo tồn cấu trúc ngà sống</strong> và <strong className="font-bold text-slate-900">giải phóng hoàn toàn áp lực nhạy cảm kỹ thuật</strong> cho Bác sĩ.
             </p>
             
             <ul className="space-y-3 mb-10 text-left">
@@ -461,7 +461,7 @@ export function DirectRestoration() {
               </span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-              Thiết lập quy trình phục hồi trực tiếp vị tha trên lâm sàng, giải phóng hoàn toàn áp lực kỹ thuật cho Bác sĩ.
+              Thiết lập quy trình phục hồi trực tiếp <strong className="font-bold text-slate-900 bg-sky-100/50 px-1.5 rounded">vị tha trên lâm sàng</strong>, giải phóng hoàn toàn <strong className="font-bold text-slate-900">áp lực kỹ thuật</strong> cho Bác sĩ.
             </p>
           </div>
 
@@ -495,7 +495,7 @@ export function DirectRestoration() {
                 <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">Keo dán universal kỵ nước BeautiBond Xtreme (BBX)</h3>
                 <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">Khóa chặt ống ngà kỵ nước – Chấm dứt hiện tượng thủy phân liên kết dán</h4>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6 order-5 lg:order-none">
-                  BBX loại bỏ hoàn toàn thành phần HEMA ưa nước. Ứng dụng hệ dung môi Acetone bay hơi nhanh giúp đưa 4 monomer chức năng (đặc biệt là biến thể 10-MDP và Carboxylic) thâm nhập sâu vào các ống ngà ẩm, tạo màng dán dính kỵ nước cực kỳ bền vững.
+                  BBX <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">loại bỏ hoàn toàn thành phần HEMA ưa nước</strong>. Ứng dụng hệ dung môi Acetone bay hơi nhanh giúp đưa 4 monomer chức năng (đặc biệt là biến thể 10-MDP và Carboxylic) thâm nhập sâu vào các ống ngà ẩm, <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">tạo màng dán dính kỵ nước cực kỳ bền vững</strong>.
                 </p>
                 <div className="space-y-4 order-6 lg:order-none">
                   <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
@@ -597,7 +597,7 @@ export function DirectRestoration() {
                 <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">Composite đắp lớp Beautifil Injectable X</h3>
                 <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">Sức mạnh hạt độn Nano-Optimized Silane – Lấp đầy mọi hốc sâu vi thể</h4>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6 order-5 lg:order-none">
-                  Với đặc tính lưu biến thông minh (thixotropic), Beautifil Injectable X định hình cực tốt khi đắp lớp nhưng tự động chảy loang phẳng láng dưới áp lực. Vật liệu len lỏi hoàn hảo vào các ngóc ngách xoang II hẹp dưới nướu mà không tạo bọt khí.
+                  Với <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">đặc tính lưu biến thông minh (thixotropic)</strong>, Beautifil Injectable X định hình cực tốt khi đắp lớp nhưng tự động chảy loang phẳng láng dưới áp lực. Vật liệu <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">len lỏi hoàn hảo vào các ngóc ngách xoang II hẹp dưới nướu mà không tạo bọt khí</strong>.
                 </p>
                 <div className="space-y-4 order-6 lg:order-none">
                   <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
@@ -712,7 +712,7 @@ export function DirectRestoration() {
           <div className="text-center mb-12">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-4 tracking-tight">Chứng cứ lâm sàng & đánh giá</h2>
             <p className="font-body text-base sm:text-lg text-slate-400 max-w-2xl mx-auto">
-              Sota-D mang đến những bằng chứng thép từ các nghiên cứu lâm sàng độc lập uy tín nhất thế giới đăng trên tạp chí JADA (Journal of the American Dental Association):
+              Sota-D mang đến những bằng chứng thép từ các <strong className="font-bold text-white bg-slate-800/80 px-1.5 rounded">nghiên cứu lâm sàng độc lập uy tín nhất thế giới đăng trên tạp chí JADA</strong> (Journal of the American Dental Association):
             </p>
           </div>
           
