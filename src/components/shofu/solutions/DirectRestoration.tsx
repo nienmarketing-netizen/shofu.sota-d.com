@@ -1051,15 +1051,15 @@ const faqs = [
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300 text-base leading-relaxed">01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml)</span>
+                      <span className="text-slate-300 text-sm md:text-base leading-relaxed">01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300 text-base leading-relaxed">01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g)</span>
+                      <span className="text-slate-300 text-sm md:text-base leading-relaxed">01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300 text-base leading-relaxed">01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g)</span>
+                      <span className="text-slate-300 text-sm md:text-base leading-relaxed">01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g)</span>
                     </li>
                   </ul>
                 </div>
@@ -1081,15 +1081,15 @@ const faqs = [
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium text-base leading-relaxed">Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA</span>
+                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed">Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium text-base leading-relaxed">Tài liệu: Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II"</span>
+                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed">Tài liệu: Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II"</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium text-base leading-relaxed">Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày</span>
+                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed">Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày</span>
                     </li>
                   </ul>
                 </div>
@@ -1124,7 +1124,7 @@ const faqs = [
           </div>
 
           <div className="w-full max-w-5xl mx-auto mb-10 bg-slate-900/50 p-6 md:p-8 rounded-2xl border border-slate-800">
-            <h4 className="font-heading font-bold text-xl md:text-2xl text-white mb-6 flex items-center gap-2 border-b border-slate-700/50 pb-4"><ShieldCheck className="w-6 h-6 text-emerald-400" /> Bảo chứng đồng hành 3 lớp (Rủi ro bằng 0)</h4>
+            <h4 className="font-bold text-base text-white mb-4 flex items-center gap-2"><ShieldCheck className="w-6 h-6 text-emerald-400" /> Bảo chứng đồng hành 3 lớp (Rủi ro bằng 0)</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
