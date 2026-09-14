@@ -976,7 +976,7 @@ export function DirectRestoration() {
       <section className="py-20 lg:py-28 bg-white relative border-t border-slate-200 overflow-hidden">
         <div className="w-[90%] lg:w-[80%] mx-auto max-w-3xl">
           <div className="text-center mb-12">
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">Giải đáp <span className="text-[#00ADEF]">hoài nghi lâm sàng</span></h2>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">Giải đáp <br className="block sm:hidden" /><span className="text-[#00ADEF]">hoài nghi lâm sàng</span></h2>
           </div>
           <div className="space-y-4 order-6 lg:order-none">
             {faqs.map((faq, idx) => (
