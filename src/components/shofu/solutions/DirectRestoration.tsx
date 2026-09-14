@@ -740,10 +740,7 @@ export function DirectRestoration() {
                       <div className="text-[#00ADEF] font-mono font-bold text-sm mb-2">Theo dõi 8 năm (Công bố trên JADA 2007)</div>
                       <p className="text-xs text-slate-400 mb-3 italic">Nghiên cứu của GS. Valeria V. Gordan trên phục hình Xoang I & II ghi nhận:</p>
                       <ul className="space-y-2">
-                        <li className="flex items-start gap-2 text-sm text-slate-300">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                          <span><strong className="text-white">100%</strong> Tỷ lệ lưu giữ phục hình (Retention rate)</span>
-                        </li>
+
                         <li className="flex items-start gap-2 text-sm text-slate-300">
                           <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                           <span><strong className="text-white">0%</strong> Thất bại phục hình (Failures)</span>
@@ -764,11 +761,11 @@ export function DirectRestoration() {
                       <ul className="space-y-3">
                         <li className="flex items-start gap-2 text-sm text-slate-300">
                           <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                          <span><strong className="text-[#00ADEF] text-lg">96%</strong> Phục hình hoàn toàn không xuất hiện sâu răng thứ phát (tỷ lệ sâu răng tái phát chỉ 3%)</span>
+                          <span><strong className="text-[#00ADEF] text-lg">96%</strong> Phục hình hoàn toàn không xuất hiện sâu răng thứ phát</span>
                         </li>
                         <li className="flex items-start gap-2 text-sm text-slate-300">
                           <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                          <span>Tỷ lệ lưu giữ phục hình duy trì bền vững từ <strong className="text-white">61% – 66%</strong> qua 13 năm</span>
+                          <span><strong className="text-white">0%</strong> ê buốt/ nhạy cảm sau điều trị</span>
                         </li>
                       </ul>
                     </div>
