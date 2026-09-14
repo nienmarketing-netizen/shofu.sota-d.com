@@ -1073,7 +1073,7 @@ const faqs = [
                 </div>
                 <div className="w-full lg:w-[45%] lg:max-w-[400px] flex justify-center items-center">
                   <img 
-                    src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/giai-phap-phuc-hoi-truc-tiep-shofu-bo-3-san-pham-cot-loi.webp" 
+                    src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/giai-phap-phuc-hoi-truc-tiep-shofu-bo-3-san-pham-cot-loi.webp" 
                     alt="Bộ 3 sản phẩm cốt lõi Shofu" 
                     className="w-full max-w-[280px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"
@@ -1105,7 +1105,7 @@ const faqs = [
                 </div>
                 <div className="w-full lg:w-[45%] lg:max-w-[400px] flex justify-center items-center">
                   <img 
-                    src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/qua-tang-doc-quyen-shofu-giai-phap-phuc-hoi-truc-tiep.webp" 
+                    src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/qua-tang-doc-quyen-shofu-giai-phap-phuc-hoi-truc-tiep.webp" 
                     alt="Bộ 3 quà tặng đặc quyền Shofu" 
                     className="w-full max-w-[280px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"
