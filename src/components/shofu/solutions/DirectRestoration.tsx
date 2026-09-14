@@ -850,11 +850,11 @@ export function DirectRestoration() {
                   
                   <div className="space-y-4 -mx-6 sm:mx-0 mt-auto">
                     <div className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50">
-                      <strong className="text-emerald-400 block text-sm mb-1">Beautifil II LS (Đặc)</strong>
+                      <strong className="text-emerald-400 block text-sm mb-1">Beautifil II LS</strong>
                       <p className="text-[13px] text-slate-300 leading-relaxed">Tỷ lệ hạt độn 83 wt%, độ co rút kỷ lục <strong className="text-white">0.85% Vol</strong>, ứng suất <strong className="text-white">1.37 MPa</strong>. Lực nén 364 MPa, uốn 120 MPa chịu lực nhai lớn mà không mẻ vỡ.</p>
                     </div>
                     <div className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50">
-                      <strong className="text-emerald-400 block text-sm mb-1">Beautifil Injectable X (Lỏng)</strong>
+                      <strong className="text-emerald-400 block text-sm mb-1">Beautifil Injectable X</strong>
                       <p className="text-[13px] text-slate-300 leading-relaxed">Lưu biến thông minh (Thixotropic) bít kín hốc sâu không đọng bọt khí. Lực nén siêu cường <strong className="text-white">400 MPa</strong> cho phép đắp khối trực tiếp.</p>
                     </div>
                   </div>
