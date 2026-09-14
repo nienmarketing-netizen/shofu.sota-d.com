@@ -968,7 +968,7 @@ export function IndirectRestoration() {
               
               <div className="bg-slate-800/80 rounded-2xl p-6 md:p-8 border border-slate-700 mb-8 w-full text-left flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex-1">
-                  <h3 className="font-heading font-bold text-2xl text-amber-400 mb-4 border-b border-slate-700 pb-4">Combo dán - gắn đồng bộ</h3>
+                  <h3 className="font-heading font-bold text-xl md:text-2xl text-amber-400 mb-4 border-b border-slate-700 pb-4">Combo dán - gắn đồng bộ</h3>
                   <ul className="space-y-4">
                     <li className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
@@ -993,7 +993,7 @@ export function IndirectRestoration() {
 
               <div className="bg-gradient-to-r from-amber-500/10 to-yellow-500/10 rounded-2xl p-6 md:p-8 border border-amber-500/30 mb-10 w-full text-left flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex-1">
-                  <h3 className="font-heading font-bold text-2xl text-white mb-4 border-b border-amber-500/30 pb-4">
+                  <h3 className="font-heading font-bold text-xl md:text-2xl text-white mb-4 border-b border-amber-500/30 pb-4">
                     Bộ quà tặng đặc quyền
                   </h3>
                   <ul className="space-y-4">

@@ -1047,7 +1047,7 @@ const faqs = [
               <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-amber-500/10 transition-all duration-500"></div>
               <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center relative z-10">
                 <div className="flex-1 w-full space-y-6">
-                  <h3 className="font-heading font-bold text-2xl text-amber-400 border-b border-slate-700 pb-4">Bộ 3 sản phẩm cốt lõi</h3>
+                  <h3 className="font-heading font-bold text-xl md:text-2xl text-amber-400 border-b border-slate-700 pb-4">Bộ 3 sản phẩm cốt lõi</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
@@ -1077,7 +1077,7 @@ const faqs = [
               <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 blur-[80px] rounded-full pointer-events-none group-hover:bg-amber-500/20 transition-all duration-500"></div>
               <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center relative z-10">
                 <div className="flex-1 w-full space-y-6">
-                  <h3 className="font-heading font-bold text-2xl text-white border-b border-amber-500/30 pb-4">Bộ 3 quà tặng tài trợ 100%</h3>
+                  <h3 className="font-heading font-bold text-xl md:text-2xl text-white border-b border-amber-500/30 pb-4">Bộ 3 quà tặng tài trợ 100%</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
