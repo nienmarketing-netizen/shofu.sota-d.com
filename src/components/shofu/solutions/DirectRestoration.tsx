@@ -1073,7 +1073,7 @@ const faqs = [
             </div>
 
             {/* Box 2: Gifts */}
-            <div className="bg-slate-800/80 rounded-3xl p-8 md:p-10 border border-amber-500/30 w-full relative overflow-hidden group hover:border-amber-500/50 transition-colors duration-500">
+            <div className="bg-slate-800/30 rounded-3xl p-8 md:p-10 border border-amber-500/30 w-full relative overflow-hidden group hover:border-amber-500/50 transition-colors duration-500">
               <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 blur-[80px] rounded-full pointer-events-none group-hover:bg-amber-500/20 transition-all duration-500"></div>
               <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center relative z-10">
                 <div className="flex-1 w-full space-y-6">
@@ -1081,15 +1081,15 @@ const faqs = [
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed">Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA</span>
+                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed"><strong className="text-white font-bold">Quà vật lý:</strong> 01 Bộ mũi mài bóng Composite Polishing Kit CA</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed">Tài liệu: Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II"</span>
+                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed"><strong className="text-white font-bold">Tài liệu:</strong> Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II"</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed">Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày</span>
+                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed"><strong className="text-white font-bold">Đặc quyền:</strong> Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày</span>
                     </li>
                   </ul>
                 </div>
