@@ -546,7 +546,7 @@ export function DirectRestoration() {
                 <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">Composite đặc giảm co rút Beautifil II LS</h3>
                 <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">Điêu khắc múi rãnh vững chãi – Triệt tiêu ứng suất co ngót trùng hợp</h4>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6 order-5 lg:order-none">
-                  Beautifil II LS sở hữu tỷ lệ hạt độn cao (83 wt%) giúp giảm thiểu tối đa độ co ngót thể tích xuống mức kỷ lục <strong>0.85% Vol</strong> và ứng suất co ngót tối thiểu chỉ <strong>1.37 MPa</strong>. Bảo vệ đường hoàn tất khỏi hiện tượng nứt kẽ vi thể và đổi màu đường viền sau nhiều năm ăn nhai.
+                  Beautifil II LS sở hữu tỷ lệ hạt độn cao (83 wt%) giúp <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">giảm thiểu tối đa độ co ngót thể tích xuống mức kỷ lục</strong> <strong className="font-bold text-white bg-slate-800 px-1.5 py-0.5 rounded text-[13px]">0.85% Vol</strong> và ứng suất co ngót tối thiểu chỉ <strong className="font-bold text-white bg-slate-800 px-1.5 py-0.5 rounded text-[13px]">1.37 MPa</strong>. <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">Bảo vệ đường hoàn tất khỏi hiện tượng nứt kẽ vi thể</strong> và đổi màu đường viền sau nhiều năm ăn nhai.
                 </p>
                 <div className="space-y-4 order-6 lg:order-none">
                   <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
