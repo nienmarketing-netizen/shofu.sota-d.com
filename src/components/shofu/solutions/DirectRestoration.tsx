@@ -360,6 +360,14 @@ const faqs = [
                   <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-red-500/20 bg-slate-800/80 hover:border-red-500/40 transition-all shadow-sm">
                     <div className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">!</div>
                     <div>
+                      <h4 className="font-heading font-bold text-white text-sm sm:text-base">Màng keo dán quá dày & Hiện tượng đọng keo (Pooling)</h4>
+                      <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">Dung môi khó bay hơi hoàn toàn tạo màng keo dày và gây đọng keo ở góc đáy xoang II, làm suy yếu liên kết vi thể và cản trở sự khít sát của phục hình.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-red-500/20 bg-slate-800/80 hover:border-red-500/40 transition-all shadow-sm">
+                    <div className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">!</div>
+                    <div>
                       <h4 className="font-heading font-bold text-white text-sm sm:text-base">Vật liệu trơ, hoàn toàn thụ động</h4>
                       <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">Không phóng thích ion kháng khuẩn, không trung hòa axit, biến vi kẽ hở thành ổ vi khuẩn gây sâu tái phát.</p>
                     </div>
