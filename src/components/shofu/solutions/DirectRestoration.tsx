@@ -821,7 +821,7 @@ export function DirectRestoration() {
                   </li>
                   <li className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
-                    <span><strong className="text-[#00ADEF]">HEMA-Free kỵ nước & Acetone:</strong> Tự thẩm thấu sâu, triệt tiêu 100% ê buốt.</span>
+                    <span><strong className="text-[#00ADEF]">HEMA-Free kỵ nước & Acetone:</strong> Tự thẩm thấu sâu, triệt tiêu ê buốt.</span>
                   </li>
                 </ul>
               </div>
