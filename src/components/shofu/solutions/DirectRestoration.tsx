@@ -1123,11 +1123,22 @@ const faqs = [
             </div>
           </div>
 
-          <div className="w-full max-w-5xl mx-auto space-y-4 mb-10 text-slate-300 font-body text-sm md:text-base bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
-            <h4 className="font-bold text-white mb-2 flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-emerald-400" /> Bảo chứng đồng hành 3 lớp (Rủi ro bằng 0)</h4>
-            <p><strong>Bảo chứng 1 (Dứt ê buốt):</strong> Hỗ trợ 1:1 trong 5 ca phục hồi sống đầu tiên. Nếu bệnh nhân ê buốt, chuyên gia call gỡ lỗi. Nếu không hợp tay, thu hồi và hoàn tiền 100%.</p>
-            <p><strong>Bảo chứng 2 (Bảo hiểm thói quen):</strong> Trong 30 ngày, nếu thao tác không hợp, hỗ trợ thu hồi sản phẩm chưa dùng và quy đổi vật tư khác giá trị tương đương.</p>
-            <p><strong>Bảo chứng 3 (Bảo hành tồn kho 90 ngày):</strong> Đổi mới 1-1 ngay lập tức nếu lỗi đông cứng khi mở nắp trong vòng 90 ngày.</p>
+          <div className="w-full max-w-5xl mx-auto mb-10 bg-slate-900/50 p-6 md:p-8 rounded-2xl border border-slate-800">
+            <h4 className="font-heading font-bold text-xl md:text-2xl text-white mb-6 flex items-center gap-2 border-b border-slate-700/50 pb-4"><ShieldCheck className="w-6 h-6 text-emerald-400" /> Bảo chứng đồng hành 3 lớp (Rủi ro bằng 0)</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                <span className="text-slate-300 text-sm md:text-base leading-relaxed"><strong className="text-emerald-400 font-bold">Bảo chứng 1 (Dứt ê buốt):</strong> Hỗ trợ 1:1 trong 5 ca phục hồi sống đầu tiên. Nếu bệnh nhân ê buốt, chuyên gia call gỡ lỗi. Nếu không hợp tay, thu hồi và hoàn tiền 100%.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                <span className="text-slate-300 text-sm md:text-base leading-relaxed"><strong className="text-emerald-400 font-bold">Bảo chứng 2 (Bảo hiểm thói quen):</strong> Trong 30 ngày, nếu thao tác không hợp, hỗ trợ thu hồi sản phẩm chưa dùng và quy đổi vật tư khác giá trị tương đương.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                <span className="text-slate-300 text-sm md:text-base leading-relaxed"><strong className="text-emerald-400 font-bold">Bảo chứng 3 (Bảo hành tồn kho 90 ngày):</strong> Đổi mới 1-1 ngay lập tức nếu lỗi đông cứng khi mở nắp trong vòng 90 ngày.</span>
+              </li>
+            </ul>
           </div>
 
           <div className="flex justify-center w-full">
