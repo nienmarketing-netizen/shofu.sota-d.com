@@ -735,7 +735,7 @@ export function DirectRestoration() {
               <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center h-full">
                 <div className="flex-1 w-full h-full flex flex-col">
                   <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-blue-500/20 text-blue-400 font-mono font-bold text-xs mb-4 border border-blue-500/30 w-max">1. Bằng chứng lâm sàng dài hạn độc lập</div>
-                  <h3 className="font-heading font-bold text-2xl text-white mb-2">Tạp chí JADA - Đại học Florida</h3>
+                  <h3 className="font-heading font-bold text-xl text-white mb-2">Tạp chí JADA - Đại học Florida</h3>
                   <p className="text-slate-400 font-body text-sm mb-6">Bảo chứng quan trọng nhất dập tắt nghi ngờ về độ bền và nguy cơ sâu răng thứ phát dưới lớp trám.</p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 -mx-6 sm:mx-0 mt-auto">
