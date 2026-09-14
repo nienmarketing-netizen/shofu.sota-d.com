@@ -1,18 +1,11 @@
 const fs = require('fs');
-let content = fs.readFileSync('src/components/shofu/solutions/IndirectRestoration.tsx', 'utf8');
+let file_path = "/app/applet/src/components/shofu/solutions/DirectRestoration.tsx";
+let content = fs.readFileSync(file_path, 'utf8');
 
-// Replace the 3 paragraph classes in section 5
-// Specifically for the 3 conflict cards
-const targetClass = 'text-slate-400 text-sm md:text-base leading-relaxed text-center mt-auto';
-const replacementClass = 'text-slate-400 text-sm sm:text-base leading-relaxed text-center mt-auto';
+const t1_old = `Sota-D mang đến những bằng chứng thép từ các <strong className="font-bold text-white bg-slate-800/80 px-1.5 rounded">nghiên cứu độc lập uy tín nhất thế giới</strong>, bảo chứng tuyệt đối cho chất lượng phục hình.`;
+const t1_new = `Shofu mang đến những bằng chứng thép từ các <strong className="font-bold text-white bg-slate-800/80 px-1.5 rounded">nghiên cứu độc lập uy tín nhất thế giới</strong>, <strong className="font-bold text-[#00ADEF] underline decoration-sky-500 decoration-2 underline-offset-4">bảo chứng tuyệt đối cho chất lượng phục hình</strong>.`;
 
-// Ensure we only replace those specific lines if they match exactly
-// We can use a regex to replace exactly 3 occurrences in that specific section, or just replace all instances of this exact class string since it's likely only used here.
-const matches = content.match(new RegExp(targetClass.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'));
-if (matches && matches.length >= 3) {
-    content = content.replaceAll(targetClass, replacementClass);
-    fs.writeFileSync('src/components/shofu/solutions/IndirectRestoration.tsx', content);
-    console.log("Text sizes updated successfully.");
-} else {
-    console.log("Found " + (matches ? matches.length : 0) + " matches. Not exactly 3.");
-}
+content = content.replace(t1_old, t1_new);
+
+fs.writeFileSync(file_path, content);
+console.log("Section 5 text patched.");
