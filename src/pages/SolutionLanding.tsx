@@ -5,6 +5,7 @@ import { ShofuFooter } from '../components/shofu/ShofuFooter';
 import { ArrowLeft, CheckCircle, BookOpen, Quote, Sparkles, Gift } from 'lucide-react';
 import { IndirectRestoration } from '../components/shofu/solutions/IndirectRestoration';
 import { DirectRestoration } from '../components/shofu/solutions/DirectRestoration';
+import { PreventiveDentistry } from '../components/shofu/solutions/PreventiveDentistry';
 import { CampaignModal } from '../components/CampaignModal';
 
 const solutionData = {
@@ -85,6 +86,8 @@ export default function SolutionLanding() {
           <IndirectRestoration />
         ) : (slug === 'phuc-hoi-truc-tiep' || slug === 'phuc-hinh-truc-tiep') ? (
           <DirectRestoration />
+        ) : slug === 'nha-khoa-phong-ngua' ? (
+          <PreventiveDentistry />
         ) : (
           <>
             {/* Hero Section */}
