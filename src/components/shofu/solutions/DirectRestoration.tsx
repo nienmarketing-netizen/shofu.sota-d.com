@@ -761,16 +761,16 @@ const faqs = [
             
             {/* 1. Clinical Evidence JADA */}
 
-            <div className="col-span-1 lg:col-span-2 relative rounded-3xl p-6 sm:p-8 pb-0 sm:pb-8 transition-all flex flex-col justify-between group">
+            <div className="col-span-1 lg:col-span-2 relative rounded-3xl p-6 sm:p-8 pb-0 sm:pb-8 transition-all flex flex-col group">
               <div className="absolute inset-0 rounded-3xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-md pointer-events-none group-hover:border-[#00ADEF]/50 group-hover:shadow-[0_0_30px_rgba(0,173,239,0.15)] transition-all duration-300 [mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" />
               
-              <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center h-full">
-                <div className="flex-1 w-full h-full flex flex-col">
+              <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center">
+                <div className="flex-1 w-full flex flex-col">
                   <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-blue-500/20 text-blue-400 font-mono font-bold text-xs mb-4 border border-blue-500/30 w-max">1. Bằng chứng lâm sàng dài hạn độc lập</div>
                   <h3 className="font-heading font-bold text-xl text-white mb-2">Tạp chí JADA - Đại học Florida</h3>
                   <p className="text-slate-400 font-body text-sm mb-6">Bảo chứng quan trọng nhất dập tắt nghi ngờ về độ bền và nguy cơ sâu răng thứ phát dưới lớp trám.</p>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 -mx-6 sm:mx-0 mt-auto">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 -mx-6 sm:mx-0 lg:mt-6 mt-4">
                     <div className="bg-slate-900/50 rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-slate-700/50">
                       <div className="text-[#00ADEF] font-mono font-bold text-sm mb-2">Theo dõi 8 năm (Công bố trên JADA 2007)</div>
                       <p className="text-xs text-slate-400 mb-3 italic">Nghiên cứu của GS. Valeria V. Gordan trên phục hình Xoang I & II ghi nhận:</p>
@@ -809,15 +809,15 @@ const faqs = [
             </div>
 
             {/* 2. Molecular Mechanism */}
-            <div className="col-span-1 relative rounded-3xl p-6 sm:p-8 pb-0 sm:pb-8 transition-all flex flex-col group justify-between">
+            <div className="col-span-1 relative rounded-3xl p-6 sm:p-8 pb-0 sm:pb-8 transition-all flex flex-col group">
               <div className="absolute inset-0 rounded-3xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-md pointer-events-none group-hover:border-[#00ADEF]/50 group-hover:shadow-[0_0_30px_rgba(0,173,239,0.15)] transition-all duration-300 [mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" />
               
-              <div className="relative z-10 flex flex-col h-full">
+              <div className="relative z-10 flex flex-col">
                 <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 font-mono font-bold text-xs mb-4 border border-purple-500/30 w-max">2. Cơ chế phân tử & kháng khuẩn</div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">Tạp chí Scientific Reports (Nature Research)</h3>
                 <p className="text-slate-400 font-body text-[13px] mb-5">Bằng chứng "trị liệu sinh học chủ động" vượt trội so với composite trơ (Đại học Osaka, 2018).</p>
                 
-                <div className="space-y-4 -mx-6 sm:mx-0 mt-auto">
+                <div className="space-y-4 -mx-6 sm:mx-0 lg:mt-6 mt-4">
                   <div className="px-6 sm:px-0">
                     <p className="text-sm text-slate-300 leading-relaxed">
                       <strong className="text-white block mb-1">Cơ chế can thiệp di truyền:</strong> 
@@ -836,15 +836,15 @@ const faqs = [
             <div className="col-span-1 flex flex-col gap-6 lg:gap-8">
               
               {/* 3. BeautiBond Xtreme */}
-              <div className="relative rounded-3xl p-6 sm:p-8 pb-0 sm:pb-8 transition-all flex flex-col flex-1 group justify-between">
+              <div className="relative rounded-3xl p-6 sm:p-8 pb-0 sm:pb-8 transition-all flex flex-col flex-1 group">
                 <div className="absolute inset-0 rounded-3xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-md pointer-events-none group-hover:border-[#00ADEF]/50 group-hover:shadow-[0_0_30px_rgba(0,173,239,0.15)] transition-all duration-300 [mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" />
                 
-                <div className="relative z-10 flex flex-col h-full">
+                <div className="relative z-10 flex flex-col">
                   <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-400 font-mono font-bold text-xs mb-4 border border-amber-500/30 w-max">3. Thử nghiệm kỹ thuật keo dán</div>
                   <h3 className="font-heading font-bold text-xl text-white mb-2">Độ Bền Dán BeautiBond Xtreme</h3>
                   <p className="text-slate-400 font-body text-[13px] mb-4">Giải quyết triệt để "điểm đau" ê buốt và thoái hóa màng keo.</p>
                   
-                  <div className="-mx-6 sm:mx-0 mt-auto">
+                  <div className="-mx-6 sm:mx-0 lg:mt-6 mt-4">
                     <div className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50 space-y-3">
                       <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
@@ -872,15 +872,15 @@ const faqs = [
               </div>
 
               {/* 4. Composite Mechanics */}
-              <div className="relative rounded-3xl p-6 sm:p-8 pb-0 sm:pb-8 transition-all flex flex-col flex-1 group justify-between">
+              <div className="relative rounded-3xl p-6 sm:p-8 pb-0 sm:pb-8 transition-all flex flex-col flex-1 group">
                 <div className="absolute inset-0 rounded-3xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-md pointer-events-none group-hover:border-[#00ADEF]/50 group-hover:shadow-[0_0_30px_rgba(0,173,239,0.15)] transition-all duration-300 [mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" />
                 
-                <div className="relative z-10 flex flex-col h-full">
+                <div className="relative z-10 flex flex-col">
                   <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-400 font-mono font-bold text-xs mb-4 border border-emerald-500/30 w-max">4. Bằng chứng cơ học composite</div>
                   <h3 className="font-heading font-bold text-xl text-white mb-2">Beautifil II LS & Injectable X</h3>
                   <p className="text-slate-400 font-body text-[13px] mb-4">Giải quyết nỗi lo co ngót, nứt vi kẽ và bọt khí xoang II.</p>
                   
-                  <div className="space-y-4 -mx-6 sm:mx-0 mt-auto">
+                  <div className="space-y-4 -mx-6 sm:mx-0 lg:mt-6 mt-4">
                     <div className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50">
                       <strong className="text-emerald-400 block text-sm mb-1">Beautifil II LS</strong>
                       <p className="text-[13px] text-slate-300 leading-relaxed">Tỷ lệ hạt độn 83 wt%, độ co rút kỷ lục <strong className="text-white">0.85% Vol</strong>, ứng suất <strong className="text-white">1.37 MPa</strong>. Lực nén 364 MPa, uốn 120 MPa chịu lực nhai lớn mà không mẻ vỡ.</p>
