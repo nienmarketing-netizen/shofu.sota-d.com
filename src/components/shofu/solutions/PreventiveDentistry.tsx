@@ -50,7 +50,7 @@ const row1Feedbacks = [
   },
   {
     quote: "Từ ngày ứng dụng PRG Barrier Coat vào phòng khám, các ca mòn cổ răng và ê buốt ngà được xử lý cực kỳ nhẹ nhàng, bệnh nhân phản hồi rất tích cực vì không cần mài răng.",
-    name: "BS. Nguyễn Văn A",
+    name: "BS. Nguyễn Văn Tuấn",
     title: "Phòng khám Nha khoa Nụ Cười Mới"
   },
   {
@@ -60,7 +60,7 @@ const row1Feedbacks = [
   },
   {
     quote: "Trám hố rãnh với BeautiSealant thực sự thay đổi cách chúng tôi làm việc. Không cần Etching, không lo đọng nước bọt, bảo vệ răng sâu cho trẻ em nhanh chóng và an toàn tuyệt đối.",
-    name: "BS. Lê Thị B",
+    name: "BS. Lê Thị Bích Ngọc",
     title: "Nha khoa Trẻ em KidSmile"
   },
   {
@@ -73,7 +73,7 @@ const row1Feedbacks = [
 const row2Feedbacks = [
   {
     quote: "Giải pháp phòng ngừa của Shofu giúp tôi xây dựng niềm tin tuyệt đối với phụ huynh khi điều trị cho trẻ. Đặc biệt là trẻ sợ đau, thao tác nhanh và êm ái là ưu điểm tuyệt đối.",
-    name: "BS. Trần Trọng C",
+    name: "BS. Trần Trọng Cường",
     title: "Bác sĩ trưởng khoa Răng Hàm Mặt"
   },
   {
@@ -83,7 +83,7 @@ const row2Feedbacks = [
   },
   {
     quote: "Màng bảo vệ PRG Barrier Coat thực sự hiệu quả với những bệnh nhân niềng răng. Việc bôi xung quanh mắc cài giúp ngăn ngừa đốm trắng do mất khoáng rất rõ rệt sau 6 tháng theo dõi.",
-    name: "BS. Phạm Minh D",
+    name: "BS. Phạm Minh Đạt",
     title: "Chuyên gia Chỉnh nha quốc tế"
   },
   {
@@ -93,7 +93,7 @@ const row2Feedbacks = [
   },
   {
     quote: "Sự kết hợp giữa BeautiSealant và PRG Barrier Coat mang lại một hệ sinh thái phòng ngừa toàn diện. Dễ sử dụng, độ dán dính tuyệt vời và hoàn toàn không gây ê buốt.",
-    name: "BS. Hoàng Yến",
+    name: "BS. Phạm Hoàng Yến",
     title: "Giám đốc chuyên môn Nha khoa Thẩm mỹ"
   }
 ];
