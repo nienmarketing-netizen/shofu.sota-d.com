@@ -711,7 +711,7 @@ export function PreventiveDentistry() {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] tracking-tight">
-              Dành cho Bác sĩ cần thêm thông tin
+              Dành cho Bác sĩ cần <span className="relative inline-block"><span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-[#C43838] to-[#E54848]">thêm thông tin</span><span className="absolute bottom-0 sm:bottom-1 left-0 w-full h-2.5 sm:h-3.5 bg-red-100/80 -z-10 rounded-sm skew-x-[-10deg]"></span></span>
             </h2>
             <p className="font-body text-slate-600 mt-4 max-w-2xl mx-auto text-base sm:text-lg">Nếu Bác sĩ cần thêm thông tin y văn hoặc muốn thử nghiệm trước khi quyết định đặt hàng, hãy nhận ngay tài liệu chuyên môn và mẫu thử dưới đây:</p>
           </div>
@@ -750,7 +750,7 @@ export function PreventiveDentistry() {
       <section className="py-20 lg:py-28 bg-white bg-grid-pattern relative border-t border-slate-200 overflow-hidden">
         <div className="w-[90%] lg:w-[80%] mx-auto max-w-3xl">
           <div className="text-center mb-12">
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">Giải đáp hoài nghi lâm sàng</h2>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">Giải đáp <span className="relative inline-block"><span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-[#C43838] to-[#E54848]">hoài nghi lâm sàng</span><span className="absolute bottom-0 sm:bottom-1 left-0 w-full h-2.5 sm:h-3.5 bg-red-100/80 -z-10 rounded-sm skew-x-[-10deg]"></span></span></h2>
           </div>
           <div className="space-y-4 order-6 lg:order-none">
             {faqs.map((faq, idx) => (
