@@ -150,9 +150,12 @@ header#shofu-header {
     100% { transform: translateX(-50%); }
   }
   .animate-marquee {
-    animation: marquee 15s linear 1;
+    animation: marquee 15s linear infinite;
   }
-  .animate-marquee:hover {
+  .animate-marquee-slow {
+    animation: marquee 25s linear infinite;
+  }
+  .animate-marquee:hover, .animate-marquee-slow:hover {
     animation-play-state: paused;
   }
 }
@@ -178,4 +181,9 @@ button:disabled, button:disabled *,
 .cursor-not-allowed, .cursor-not-allowed * {
   cursor: not-allowed !important;
   pointer-events: none !important;
+}
+
+.mask-image-horizontal {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }

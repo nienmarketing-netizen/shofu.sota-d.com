@@ -42,6 +42,79 @@ const AccordionItem: React.FC<{ question: string, answer: React.ReactNode, isOpe
   );
 };
 
+const row1Feedbacks = [
+  {
+    quote: "Công nghệ véc-ni PRG Barrier Coat và BeautiSealant ứng dụng S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ hoàn toàn bước Etching nhạy cảm.",
+    name: "Dr. Shukan Kanuga",
+    title: "Hiệp hội Nha khoa Trẻ em Hoa Kỳ, California"
+  },
+  {
+    quote: "Từ ngày ứng dụng PRG Barrier Coat vào phòng khám, các ca mòn cổ răng và ê buốt ngà được xử lý cực kỳ nhẹ nhàng, bệnh nhân phản hồi rất tích cực vì không cần mài răng.",
+    name: "BS. Nguyễn Văn A",
+    title: "Phòng khám Nha khoa Nụ Cười Mới"
+  },
+  {
+    quote: "Khả năng chống ê buốt ngà của PRG Barrier Coat kéo dài tới vài tháng là chìa khóa giúp phòng khám của tôi xử lý êm đẹp các ca tụt nướu và mòn cổ răng mà không cần xâm lấn mài mô răng.",
+    name: "Prof. Tanaka",
+    title: "Đại học Y khoa Tokyo, Nhật Bản"
+  },
+  {
+    quote: "Trám hố rãnh với BeautiSealant thực sự thay đổi cách chúng tôi làm việc. Không cần Etching, không lo đọng nước bọt, bảo vệ răng sâu cho trẻ em nhanh chóng và an toàn tuyệt đối.",
+    name: "BS. Lê Thị B",
+    title: "Nha khoa Trẻ em KidSmile"
+  },
+  {
+    quote: "Hạt độn S-PRG là bước tiến vượt bậc của nha khoa phòng ngừa. Nó không chỉ trám bít mà còn chủ động giải phóng Fluoride và các ion có lợi để tái khoáng hóa men răng liên tục.",
+    name: "Dr. Howard Farran",
+    title: "Tạp chí Nha khoa Dentaltown"
+  }
+];
+
+const row2Feedbacks = [
+  {
+    quote: "Giải pháp phòng ngừa của Shofu giúp tôi xây dựng niềm tin tuyệt đối với phụ huynh khi điều trị cho trẻ. Đặc biệt là trẻ sợ đau, thao tác nhanh và êm ái là ưu điểm tuyệt đối.",
+    name: "BS. Trần Trọng C",
+    title: "Bác sĩ trưởng khoa Răng Hàm Mặt"
+  },
+  {
+    quote: "Tôi dùng Giomer cho tất cả các ca sâu răng nguy cơ cao. Khả năng nạp và nhả Fluoride như một trạm sạc bảo vệ răng khỏi axit vi khuẩn là điều mà composite thông thường không làm được.",
+    name: "Dr. Sarah Collins",
+    title: "Chuyên gia Nha khoa Tổng quát, Úc"
+  },
+  {
+    quote: "Màng bảo vệ PRG Barrier Coat thực sự hiệu quả với những bệnh nhân niềng răng. Việc bôi xung quanh mắc cài giúp ngăn ngừa đốm trắng do mất khoáng rất rõ rệt sau 6 tháng theo dõi.",
+    name: "BS. Phạm Minh D",
+    title: "Chuyên gia Chỉnh nha quốc tế"
+  },
+  {
+    quote: "Nha khoa bảo tồn sinh học với Giomer giúp chúng ta bảo vệ ngà sống một cách chủ động. Không chỉ phục hình, chúng ta đang trị liệu cho mô răng thực sự.",
+    name: "Dr. David Clark",
+    title: "Học viện Bioclear, Hoa Kỳ"
+  },
+  {
+    quote: "Sự kết hợp giữa BeautiSealant và PRG Barrier Coat mang lại một hệ sinh thái phòng ngừa toàn diện. Dễ sử dụng, độ dán dính tuyệt vời và hoàn toàn không gây ê buốt.",
+    name: "BS. Hoàng Yến",
+    title: "Giám đốc chuyên môn Nha khoa Thẩm mỹ"
+  }
+];
+
+const FeedbackCard: React.FC<{ item: any }> = ({ item }) => (
+  <div className="w-[320px] sm:w-[400px] shrink-0 bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:bg-slate-800 transition-colors">
+     <div>
+       <Quote className="w-8 h-8 text-slate-500 mb-4 opacity-50" />
+       <p className="font-body text-slate-300 text-sm sm:text-base leading-relaxed italic mb-6">
+         "{item.quote}"
+       </p>
+     </div>
+     <div className="flex items-center gap-4">
+        <div className="text-left">
+           <p className="font-bold text-white text-sm">{item.name}</p>
+           <p className="text-slate-400 text-xs mt-0.5">{item.title}</p>
+        </div>
+     </div>
+  </div>
+);
+
 export function PreventiveDentistry() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
@@ -506,31 +579,16 @@ export function PreventiveDentistry() {
           <div className="text-center mb-8">
             <h3 className="font-heading font-bold text-xl sm:text-2xl text-white">3. Đánh giá từ chuyên gia lâm sàng quốc tế & trong nước</h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 md:p-8">
-               <Quote className="w-8 h-8 text-slate-500 mb-4 opacity-50" />
-               <p className="font-body text-slate-300 text-sm sm:text-base leading-relaxed italic mb-6">
-                 "Công nghệ véc-ni PRG Barrier Coat và BeautiSealant ứng dụng S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ hoàn toàn bước Etching nhạy cảm."
-               </p>
-               <div className="flex items-center gap-4">
-                  <div className="text-left">
-                     <p className="font-bold text-white text-sm">Dr. Shukan Kanuga</p>
-                     <p className="text-slate-400 text-xs mt-0.5">Hiệp hội Nha khoa Trẻ em Hoa Kỳ, California</p>
-                  </div>
-               </div>
+          <div className="w-full relative py-4 mask-image-horizontal">
+            <div className="flex w-max animate-marquee-slow hover:[animation-play-state:paused] gap-6">
+               {[...row1Feedbacks, ...row1Feedbacks, ...row1Feedbacks, ...row1Feedbacks].map((item, idx) => (
+                 <FeedbackCard key={`row1-${idx}`} item={item} />
+               ))}
             </div>
-            
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 md:p-8">
-               <Quote className="w-8 h-8 text-slate-500 mb-4 opacity-50" />
-               <p className="font-body text-slate-300 text-sm sm:text-base leading-relaxed italic mb-6">
-                 "Khả năng chống ê buốt ngà của PRG Barrier Coat kéo dài tới vài tháng là chìa khóa giúp phòng khám của tôi xử lý êm đẹp các ca tụt nướu và mòn cổ răng mà không cần xâm lấn mài mô răng."
-               </p>
-               <div className="flex items-center gap-4">
-                  <div className="text-left">
-                     <p className="font-bold text-white text-sm">Prof. Tanaka</p>
-                     <p className="text-slate-400 text-xs mt-0.5">Đại học Y khoa Tokyo, Nhật Bản</p>
-                  </div>
-               </div>
+            <div className="flex w-max animate-marquee-slow hover:[animation-play-state:paused] gap-6 mt-6" style={{ animationDirection: 'reverse' }}>
+               {[...row2Feedbacks, ...row2Feedbacks, ...row2Feedbacks, ...row2Feedbacks].map((item, idx) => (
+                 <FeedbackCard key={`row2-${idx}`} item={item} />
+               ))}
             </div>
           </div>
           <div className="mt-12 md:mt-16 text-center">
