@@ -630,7 +630,7 @@ export function PreventiveDentistry() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
             <div className="bg-red-950/30 border border-red-900/50 rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col">
               <div className="w-full relative mb-6">
-                 <ImagePlaceholder className="w-full aspect-[4/3] rounded-xl bg-red-900/30 border border-red-800/50 shadow-inner" text="Ảnh Bộ sản phẩm cốt lõi" />
+                 <img loading="lazy" src="/image/Shofu-giai-phap-nha-khoa-phuc-hoi-san-pham-cot-loi.webp" alt="Bộ sản phẩm cốt lõi" referrerPolicy="no-referrer" className="w-full h-auto object-contain max-h-[240px] drop-shadow-2xl hover:scale-105 transition-transform duration-500 mx-auto" />
               </div>
               <div className="space-y-4 flex-1">
                  <h4 className="font-heading font-bold text-lg text-amber-300 border-b border-red-900/50 pb-2">Bộ sản phẩm cốt lõi</h4>
