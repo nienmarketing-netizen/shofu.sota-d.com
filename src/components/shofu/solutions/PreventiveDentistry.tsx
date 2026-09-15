@@ -436,98 +436,103 @@ export function PreventiveDentistry() {
           </div>
 
           <div className="space-y-16 lg:space-y-24">
-            {/* PRODUCT 1 */}
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
-               {/* Desktop Image */}
-               <div className="hidden lg:block w-full lg:w-1/2 relative">
-                  <img loading="lazy" src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" />
+                        {/* PRODUCT 1 */}
+            <div className="flex flex-col gap-8">
+               <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+                  <div className="w-full lg:w-1/2 flex flex-col gap-5 sm:gap-6">
+                     <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-red-50 text-red-600 font-bold text-xs tracking-wide w-fit">
+                       1. Véc-ni chống ê buốt
+                     </div>
+                     <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight">
+                        PRG Barrier Coat – Áo giáp bioactive mỏng 15µm
+                     </h3>
+                     {/* Mobile Image */}
+                     <div className="block lg:hidden w-full relative py-4">
+                        <img loading="lazy" src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat" referrerPolicy="no-referrer" className="w-full max-w-[300px] mx-auto h-auto object-contain drop-shadow-xl" />
+                     </div>
+                     <p className="font-body text-slate-600 text-base leading-relaxed">
+                        Vật liệu phủ bảo vệ ngà răng sinh học không chứa HEMA, không cồn, không Acetone, giải phóng ion kéo dài lên đến 6 tháng chỉ sau một lần bôi duy nhất.
+                     </p>
+                  </div>
+                  {/* Desktop Image */}
+                  <div className="hidden lg:block w-full lg:w-1/2 relative">
+                     <img loading="lazy" src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" />
+                  </div>
                </div>
-               <div className="w-full lg:w-1/2 flex flex-col gap-5 sm:gap-6">
-                  <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-red-50 text-red-600 font-bold text-xs tracking-wide w-fit">
-                    1. Véc-ni chống ê buốt
+               
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
+                     <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
+                     <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <strong className="text-slate-900 font-bold">100% HEMA-Free & Acetone-Free:</strong> An toàn tuyệt đối, kỵ nước (hydrophobic) giúp màng phủ kháng mòn tối đa trước nước bọt. Không gây viêm nướu, không kích ứng tủy.
+                     </div>
                   </div>
-                  <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight">
-                     PRG Barrier Coat – Áo giáp bioactive mỏng 15µm
-                  </h3>
-                  {/* Mobile Image */}
-                  <div className="block lg:hidden w-full relative py-4">
-                     <img loading="lazy" src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat" referrerPolicy="no-referrer" className="w-full max-w-[300px] mx-auto h-auto object-contain drop-shadow-xl" />
+                  <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
+                     <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
+                     <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <strong className="text-slate-900 font-bold">Màng phủ siêu mỏng 15 micron:</strong> Tự dán dính, không gây cộm cấn khớp cắn hay thay đổi hình thể răng.
+                     </div>
                   </div>
-                  <p className="font-body text-slate-600 text-base leading-relaxed">
-                     Vật liệu phủ bảo vệ ngà răng sinh học không chứa HEMA, không cồn, không Acetone, giải phóng ion kéo dài lên đến 6 tháng chỉ sau một lần bôi duy nhất.
-                  </p>
-                  <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 pt-2">
-                     <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
-                        <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
-                        <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                           <strong className="text-slate-900 font-bold">100% HEMA-Free & Acetone-Free:</strong> An toàn tuyệt đối, kỵ nước (hydrophobic) giúp màng phủ kháng mòn tối đa trước nước bọt. Không gây viêm nướu, không kích ứng tủy.
-                        </div>
+                  <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
+                     <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
+                     <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <strong className="text-slate-900 font-bold">Quy trình 1 bước tinh gọn:</strong> Bôi véc-ni ➔ Chiếu đèn 10 giây ➔ Lau sạch lớp ức chế oxy bằng bông ẩm. Không cần Etching, không nhạy cảm kỹ thuật.
                      </div>
-                     <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
-                        <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
-                        <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                           <strong className="text-slate-900 font-bold">Màng phủ siêu mỏng 15 micron:</strong> Tự dán dính, không gây cộm cấn khớp cắn hay thay đổi hình thể răng.
-                        </div>
-                     </div>
-                     <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
-                        <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
-                        <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                           <strong className="text-slate-900 font-bold">Quy trình 1 bước tinh gọn:</strong> Bôi véc-ni ➔ Chiếu đèn 10 giây ➔ Lau sạch lớp ức chế oxy bằng bông ẩm. Không cần Etching, không nhạy cảm kỹ thuật.
-                        </div>
-                     </div>
-                     <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
-                        <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
-                        <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                           <strong className="text-slate-900 font-bold">Chỉ định lâm sàng đa năng:</strong> Điều trị triệt tiêu ê buốt tức thì do mòn răng, mòn cổ, tụt nướu, nhạy cảm sau tẩy trắng. Bảo vệ chống sâu răng chủ động: Răng vĩnh viễn mới mọc, răng đốm trắng (nguy cơ sâu răng sớm), bề mặt chân răng bị lộ, răng quanh mắc cài chỉnh nha, kẽ răng chen chúc.
-                        </div>
+                  </div>
+                  <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
+                     <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
+                     <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <strong className="text-slate-900 font-bold">Chỉ định lâm sàng đa năng:</strong> Điều trị triệt tiêu ê buốt tức thì do mòn răng, mòn cổ, tụt nướu, nhạy cảm sau tẩy trắng. Bảo vệ chống sâu răng chủ động.
                      </div>
                   </div>
                </div>
             </div>
 
             {/* PRODUCT 2 */}
-            <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-16 items-start">
-               {/* Desktop Image */}
-               <div className="hidden lg:block w-full lg:w-1/2 relative">
-                  <img loading="lazy" src="/image/BeautiSealant-shofu.webp" alt="BeautiSealant" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" />
+            <div className="flex flex-col gap-8">
+               <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+                  <div className="w-full lg:w-1/2 flex flex-col gap-5 sm:gap-6">
+                     <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs tracking-wide w-fit">
+                       2. Trám bít hố rãnh
+                     </div>
+                     <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight">
+                        BeautiSealant – Self-etching sealant không cần Etching
+                     </h3>
+                     {/* Mobile Image */}
+                     <div className="block lg:hidden w-full relative py-4">
+                        <img loading="lazy" src="/image/BeautiSealant-shofu.webp" alt="BeautiSealant" referrerPolicy="no-referrer" className="w-full max-w-[300px] mx-auto h-auto object-contain drop-shadow-xl" />
+                     </div>
+                     <p className="font-body text-slate-600 text-base leading-relaxed">
+                        Giải pháp trám bít hố rãnh thế hệ mới giúp tối ưu hóa thời gian ghế nha (Chair-time) cho Bác sĩ Nha khoa Trẻ em và Nha khoa Tổng quát.
+                     </p>
+                  </div>
+                  {/* Desktop Image */}
+                  <div className="hidden lg:block w-full lg:w-1/2 relative">
+                     <img loading="lazy" src="/image/BeautiSealant-shofu.webp" alt="BeautiSealant" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" />
+                  </div>
                </div>
-               <div className="w-full lg:w-1/2 flex flex-col gap-5 sm:gap-6">
-                  <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs tracking-wide w-fit">
-                    2. Trám bít hố rãnh
-                  </div>
-                  <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight">
-                     BeautiSealant – Self-etching sealant không cần Etching
-                  </h3>
-                  {/* Mobile Image */}
-                  <div className="block lg:hidden w-full relative py-4">
-                     <img loading="lazy" src="/image/BeautiSealant-shofu.webp" alt="BeautiSealant" referrerPolicy="no-referrer" className="w-full max-w-[300px] mx-auto h-auto object-contain drop-shadow-xl" />
-                  </div>
-                  <p className="font-body text-slate-600 text-base leading-relaxed">
-                     Giải pháp trám bít hố rãnh thế hệ mới giúp tối ưu hóa thời gian ghế nha (Chair-time) cho Bác sĩ Nha khoa Trẻ em và Nha khoa Tổng quát.
-                  </p>
-                  <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 pt-2">
-                     <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl bg-blue-50/50 border border-blue-100 hover:bg-blue-50 hover:border-blue-200 transition-colors">
-                        <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
-                        <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                           <strong className="text-slate-900 font-bold">Zero Etching Technique:</strong> Sử dụng Self-Etch Primer dịu nhẹ chứa Monomer MDP dán dính hóa học chắc chắn mà không cần dùng Axit Phosphoric Etching rửa nước, loại bỏ 100% rủi ro nhiễm nước bọt ở trẻ nhỏ.
-                        </div>
+               
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl bg-blue-50/50 border border-blue-100 hover:bg-blue-50 hover:border-blue-200 transition-colors">
+                     <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
+                     <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <strong className="text-slate-900 font-bold">Zero Etching Technique:</strong> Sử dụng Self-Etch Primer dịu nhẹ chứa Monomer MDP dán dính hóa học chắc chắn mà không cần dùng Axit Phosphoric Etching rửa nước.
                      </div>
-                     <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl bg-blue-50/50 border border-blue-100 hover:bg-blue-50 hover:border-blue-200 transition-colors">
-                        <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
-                        <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                           <strong className="text-slate-900 font-bold">Đầu bơm Tip 27Ga siêu nhỏ:</strong> Tự san bằng và đắp lót len lỏi chính xác vào các đáy hố rãnh hẹp mà không tạo bọt khí.
-                        </div>
+                  </div>
+                  <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl bg-blue-50/50 border border-blue-100 hover:bg-blue-50 hover:border-blue-200 transition-colors">
+                     <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
+                     <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <strong className="text-slate-900 font-bold">Đầu bơm Tip 27Ga siêu nhỏ:</strong> Tự san bằng và đắp lót len lỏi chính xác vào các đáy hố rãnh hẹp mà không tạo bọt khí.
                      </div>
-                     <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl bg-blue-50/50 border border-blue-100 hover:bg-blue-50 hover:border-blue-200 transition-colors">
-                        <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
-                        <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                           <strong className="text-slate-900 font-bold">Tích hợp S-PRG Ion Shield:</strong> Bảo vệ hố rãnh khỏi mảng bám vi khuẩn, liên tục sạc Fluoride từ kem đánh răng hàng ngày.
-                        </div>
+                  </div>
+                  <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl bg-blue-50/50 border border-blue-100 hover:bg-blue-50 hover:border-blue-200 transition-colors">
+                     <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
+                     <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                        <strong className="text-slate-900 font-bold">Tích hợp S-PRG Ion Shield:</strong> Bảo vệ hố rãnh khỏi mảng bám vi khuẩn, liên tục sạc Fluoride từ kem đánh răng hàng ngày.
                      </div>
                   </div>
                </div>
             </div>
-          </div>
           <div className="mt-12 md:mt-16 text-center">
             <CtaButton onClick={() => openCampaignModal("NHẬN BÁO GIÁ VÀ TƯ VẤN SẢN PHẨM")} className="group relative inline-flex items-center justify-center gap-2 bg-[#C43838] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-mono text-xs sm:text-sm font-bold uppercase tracking-wide sm:tracking-wider hover:bg-red-600 hover:shadow-xl hover:shadow-red-600/30 transition-all duration-300 hover:-translate-y-1">
               <span>NHẬN BÁO GIÁ VÀ TƯ VẤN SẢN PHẨM</span>
