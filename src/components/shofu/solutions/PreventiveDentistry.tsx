@@ -330,6 +330,12 @@ export function PreventiveDentistry() {
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
             </CtaButton>
           </div>
+          <div className="mt-12 md:mt-16 text-center">
+            <CtaButton onClick={() => openCampaignModal("Bác sĩ còn câu hỏi? Nhận tư vấn ngay")} className="group relative inline-flex items-center justify-center gap-2 bg-[#C43838] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-mono text-xs sm:text-sm font-bold uppercase tracking-wide sm:tracking-wider hover:bg-red-600 hover:shadow-xl hover:shadow-red-600/30 transition-all duration-300 hover:-translate-y-1">
+              <span>BÁC SĨ CÒN CÂU HỎI? NHẬN TƯ VẤN NGAY</span>
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            </CtaButton>
+          </div>
         </div>
       </section>
 
@@ -744,7 +750,7 @@ export function PreventiveDentistry() {
       <section className="py-20 lg:py-28 bg-white bg-grid-pattern relative border-t border-slate-200 overflow-hidden">
         <div className="w-[90%] lg:w-[80%] mx-auto max-w-3xl">
           <div className="text-center mb-12">
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">Câu hỏi thường gặp <br className="block sm:hidden" /><span className="text-[#C43838]">(FAQs chuẩn Y khoa)</span></h2>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">Giải đáp hoài nghi lâm sàng</h2>
           </div>
           <div className="space-y-4 order-6 lg:order-none">
             {faqs.map((faq, idx) => (
@@ -756,6 +762,12 @@ export function PreventiveDentistry() {
                 onClick={() => setOpenFaqIndex(openFaqIndex === idx ? -1 : idx)}
               />
             ))}
+          </div>
+          <div className="mt-12 md:mt-16 text-center">
+            <CtaButton onClick={() => openCampaignModal("Bác sĩ còn câu hỏi? Nhận tư vấn ngay")} className="group relative inline-flex items-center justify-center gap-2 bg-[#C43838] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-mono text-xs sm:text-sm font-bold uppercase tracking-wide sm:tracking-wider hover:bg-red-600 hover:shadow-xl hover:shadow-red-600/30 transition-all duration-300 hover:-translate-y-1">
+              <span>BÁC SĨ CÒN CÂU HỎI? NHẬN TƯ VẤN NGAY</span>
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            </CtaButton>
           </div>
         </div>
       </section>
