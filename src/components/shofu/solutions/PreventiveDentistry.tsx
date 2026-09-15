@@ -629,8 +629,9 @@ export function PreventiveDentistry() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
             <div className="bg-red-950/30 border border-red-900/50 rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col">
-              <div className="w-full relative mb-6">
-                 <img loading="lazy" src="/image/Shofu-giai-phap-nha-khoa-phuc-hoi-san-pham-cot-loi.webp" alt="Bộ sản phẩm cốt lõi" referrerPolicy="no-referrer" className="w-full h-auto object-contain max-h-[240px] drop-shadow-2xl hover:scale-105 transition-transform duration-500 mx-auto" />
+              <div className="w-full relative mb-6 flex justify-center items-center">
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-red-500/25 blur-[60px] rounded-full pointer-events-none"></div>
+                 <img loading="lazy" src="/image/Shofu-giai-phap-nha-khoa-phuc-hoi-san-pham-cot-loi.webp" alt="Bộ sản phẩm cốt lõi" referrerPolicy="no-referrer" className="w-full h-auto object-contain max-h-[240px] drop-shadow-[0_20px_50px_rgba(220,38,38,0.2)] hover:drop-shadow-[0_20px_50px_rgba(220,38,38,0.4)] hover:scale-110 transition-all duration-500 mx-auto relative z-10" />
               </div>
               <div className="space-y-4 flex-1">
                  <h4 className="font-heading font-bold text-lg text-amber-300 border-b border-red-900/50 pb-2">Bộ sản phẩm cốt lõi</h4>
@@ -646,8 +647,9 @@ export function PreventiveDentistry() {
             </div>
             
             <div className="bg-red-950/30 border border-red-900/50 rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col">
-              <div className="w-full relative mb-6">
-                 <img loading="lazy" src="/image/giai-phap-nha-khoa-phuc-hoi-shofu-qua-tang-dac-quyen.webp" alt="Bộ quà tặng tài trợ" referrerPolicy="no-referrer" className="w-full h-auto object-contain max-h-[240px] drop-shadow-2xl hover:scale-105 transition-transform duration-500 mx-auto" />
+              <div className="w-full relative mb-6 flex justify-center items-center">
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-amber-500/25 blur-[60px] rounded-full pointer-events-none"></div>
+                 <img loading="lazy" src="/image/giai-phap-nha-khoa-phuc-hoi-shofu-qua-tang-dac-quyen.webp" alt="Bộ quà tặng tài trợ" referrerPolicy="no-referrer" className="w-full h-auto object-contain max-h-[240px] drop-shadow-[0_20px_50px_rgba(245,158,11,0.2)] hover:drop-shadow-[0_20px_50px_rgba(245,158,11,0.4)] hover:scale-110 transition-all duration-500 mx-auto relative z-10" />
               </div>
               <div className="space-y-4 flex-1">
                  <h4 className="font-heading font-bold text-lg text-amber-300 border-b border-red-900/50 pb-2">Bộ quà tặng tài trợ 100%</h4>
