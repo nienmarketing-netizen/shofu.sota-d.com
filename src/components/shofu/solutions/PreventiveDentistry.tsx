@@ -330,12 +330,6 @@ export function PreventiveDentistry() {
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
             </CtaButton>
           </div>
-          <div className="mt-12 md:mt-16 text-center">
-            <CtaButton onClick={() => openCampaignModal("Bác sĩ còn câu hỏi? Nhận tư vấn ngay")} className="group relative inline-flex items-center justify-center gap-2 bg-[#C43838] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-mono text-xs sm:text-sm font-bold uppercase tracking-wide sm:tracking-wider hover:bg-red-600 hover:shadow-xl hover:shadow-red-600/30 transition-all duration-300 hover:-translate-y-1">
-              <span>BÁC SĨ CÒN CÂU HỎI? NHẬN TƯ VẤN NGAY</span>
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-            </CtaButton>
-          </div>
         </div>
       </section>
 
