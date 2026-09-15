@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, CheckCircle2 } from 'lucide-react';
+import { X, CheckCircle } from 'lucide-react';
 
 interface CampaignModalProps {
   isOpen: boolean;
@@ -127,7 +127,7 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle2 className="w-8 h-8 text-green-600" />
+                <CheckCircle className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="font-heading font-bold text-2xl text-slate-900 mb-3">
                 Yêu cầu đã được ghi nhận!
