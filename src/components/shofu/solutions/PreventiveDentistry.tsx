@@ -653,7 +653,7 @@ export function PreventiveDentistry() {
               <div>
                 <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs tracking-wide mb-6">Nhận kit mẫu thử</div>
                 <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4 leading-snug">Đăng ký nhận kit mẫu thử tận phòng khám</h3>
-                <p className="text-slate-600 text-sm sm:text-base mb-8 leading-relaxed">Sota-D dành tặng 30 suất trải nghiệm mẫu thử PRG Barrier Coat (Bộ Mini) giao tận tay Bác sĩ trên toàn quốc hoàn toàn Miễn Phí.</p>
+                <p className="text-slate-600 text-sm sm:text-base mb-8 leading-relaxed">Sota-D dành tặng 30 suất trải nghiệm mẫu thử PRG Barrier Coat giao tận tay Bác sĩ trên toàn quốc hoàn toàn Miễn Phí.</p>
               </div>
               <CtaButton onClick={() => openCampaignModal("Đăng ký nhận Sample Kit PRG Barrier Coat")} className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#C43838] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-red-600 hover:shadow-xl hover:shadow-red-600/30 transition-all duration-300 hover:-translate-y-1 w-full whitespace-nowrap flex-nowrap mt-auto">
                 <span className="truncate">ĐĂNG KÝ NHẬN MẪU THỬ</span>
