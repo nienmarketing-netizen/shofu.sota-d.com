@@ -438,7 +438,7 @@ export function PreventiveDentistry() {
           <div className="space-y-16 lg:space-y-24">
                         {/* PRODUCT 1 */}
             <div className="flex flex-col gap-8">
-               <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+               <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-16 items-center">
                   <div className="w-full lg:w-1/2 flex flex-col gap-5 sm:gap-6">
                      <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-red-50 text-red-600 font-bold text-xs tracking-wide w-fit">
                        1. Véc-ni chống ê buốt
