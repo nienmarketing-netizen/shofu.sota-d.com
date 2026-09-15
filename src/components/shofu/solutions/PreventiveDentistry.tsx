@@ -112,7 +112,7 @@ export function PreventiveDentistry() {
             
             {/* Mobile Image */}
             <div className="lg:hidden my-6 sm:my-8 flex justify-start">
-              <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/Shofu-giai-phap-nha-khoa-phong-ngua.webp" alt="Hệ thống Nha khoa Phòng ngừa Shofu" referrerPolicy="no-referrer" className="w-full max-w-[340px] sm:max-w-[420px] h-auto object-contain relative z-10" />
+              <img fetchPriority="high" loading="eager" src="/image/Shofu-giai-phap-nha-khoa-phong-ngua.webp" alt="Hệ thống Nha khoa Phòng ngừa Shofu" referrerPolicy="no-referrer" className="w-full max-w-[340px] sm:max-w-[420px] h-auto object-contain relative z-10" />
             </div>
             
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl text-left">
@@ -125,7 +125,7 @@ export function PreventiveDentistry() {
           
           {/* Desktop Image */}
           <div className="hidden lg:block w-full lg:w-[35%] xl:w-[40%] relative mt-8 lg:mt-0">
-             <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/Shofu-giai-phap-nha-khoa-phong-ngua.webp" alt="Hệ thống Nha khoa Phòng ngừa Shofu" referrerPolicy="no-referrer" className="w-full h-auto object-contain relative z-10 drop-shadow-2xl lg:-ml-4 xl:-ml-8" />
+             <img fetchPriority="high" loading="eager" src="/image/Shofu-giai-phap-nha-khoa-phong-ngua.webp" alt="Hệ thống Nha khoa Phòng ngừa Shofu" referrerPolicy="no-referrer" className="w-full h-auto object-contain relative z-10 drop-shadow-2xl lg:-ml-4 xl:-ml-8" />
           </div>
         </div>
         {/* USPs Separated */}
@@ -236,8 +236,8 @@ export function PreventiveDentistry() {
           
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 w-full max-w-5xl mx-auto">
             <div className="w-full lg:w-1/2">
-              <img 
-                 src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/nha-khoa-phong-ngua-va-nhung-diem-mu.webp" 
+              <img loading="lazy" 
+                 src="/image/nha-khoa-phong-ngua-va-nhung-diem-mu.webp" 
                  alt="Nha khoa phòng ngừa và những điểm mù" 
                  referrerPolicy="no-referrer" 
                  className="w-full lg:w-[70%] lg:mx-auto h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
@@ -274,7 +274,7 @@ export function PreventiveDentistry() {
               
               {/* Mobile Image */}
               <div className="block lg:hidden w-full relative pt-2 pb-6">
-                 <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/Shofu-S-PRG-technology.webp" alt="Công nghệ S-PRG giải phóng 6 Ion" referrerPolicy="no-referrer" className="w-full max-w-[320px] mx-auto h-auto object-contain relative z-10 drop-shadow-xl" />
+                 <img loading="lazy" src="/image/Shofu-S-PRG-technology.webp" alt="Công nghệ S-PRG giải phóng 6 Ion" referrerPolicy="no-referrer" className="w-full max-w-[320px] mx-auto h-auto object-contain relative z-10 drop-shadow-xl" />
               </div>
               <h3 className="font-heading font-bold text-lg sm:text-xl text-slate-900 pt-4">Cốt lõi công nghệ hạt độn sinh học S-PRG (Giomer) khép kín 3 lớp:</h3>
               <p className="font-body text-slate-600 text-base leading-relaxed pb-4">
@@ -285,7 +285,7 @@ export function PreventiveDentistry() {
             </div>
             
             <div className="hidden lg:block w-full lg:w-[45%] relative mt-8 lg:mt-0">
-              <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/Shofu-S-PRG-technology.webp" alt="Công nghệ S-PRG giải phóng 6 Ion" referrerPolicy="no-referrer" className="w-full h-auto object-contain relative z-10 drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500" />
+              <img loading="lazy" src="/image/Shofu-S-PRG-technology.webp" alt="Công nghệ S-PRG giải phóng 6 Ion" referrerPolicy="no-referrer" className="w-full h-auto object-contain relative z-10 drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500" />
             </div>
           </div>
           {/* 4 Ions Grid */}
@@ -349,7 +349,7 @@ export function PreventiveDentistry() {
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start lg:items-center">
                {/* Desktop Image */}
                <div className="hidden lg:block w-full lg:w-1/2 relative">
-                  <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" />
+                  <img loading="lazy" src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" />
                </div>
                <div className="w-full lg:w-1/2 flex flex-col gap-5 sm:gap-6">
                   <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-red-50 text-red-600 font-bold text-xs tracking-wide w-fit">
@@ -360,7 +360,7 @@ export function PreventiveDentistry() {
                   </h3>
                   {/* Mobile Image */}
                   <div className="block lg:hidden w-full relative py-4">
-                     <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat" referrerPolicy="no-referrer" className="w-full max-w-[300px] mx-auto h-auto object-contain drop-shadow-xl" />
+                     <img loading="lazy" src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat" referrerPolicy="no-referrer" className="w-full max-w-[300px] mx-auto h-auto object-contain drop-shadow-xl" />
                   </div>
                   <p className="font-body text-slate-600 text-base leading-relaxed">
                      Vật liệu phủ bảo vệ ngà răng sinh học không chứa HEMA, không cồn, không Acetone, giải phóng ion kéo dài lên đến 6 tháng chỉ sau một lần bôi duy nhất.
@@ -398,7 +398,7 @@ export function PreventiveDentistry() {
             <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-16 items-start lg:items-center">
                {/* Desktop Image */}
                <div className="hidden lg:block w-full lg:w-1/2 relative">
-                  <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/BeautiSealant-shofu.webp" alt="BeautiSealant" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" />
+                  <img loading="lazy" src="/image/BeautiSealant-shofu.webp" alt="BeautiSealant" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" />
                </div>
                <div className="w-full lg:w-1/2 flex flex-col gap-5 sm:gap-6">
                   <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs tracking-wide w-fit">
@@ -409,7 +409,7 @@ export function PreventiveDentistry() {
                   </h3>
                   {/* Mobile Image */}
                   <div className="block lg:hidden w-full relative py-4">
-                     <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/BeautiSealant-shofu.webp" alt="BeautiSealant" referrerPolicy="no-referrer" className="w-full max-w-[300px] mx-auto h-auto object-contain drop-shadow-xl" />
+                     <img loading="lazy" src="/image/BeautiSealant-shofu.webp" alt="BeautiSealant" referrerPolicy="no-referrer" className="w-full max-w-[300px] mx-auto h-auto object-contain drop-shadow-xl" />
                   </div>
                   <p className="font-body text-slate-600 text-base leading-relaxed">
                      Giải pháp trám bít hố rãnh thế hệ mới giúp tối ưu hóa thời gian ghế nha (Chair-time) cho Bác sĩ Nha khoa Trẻ em và Nha khoa Tổng quát.

@@ -151,12 +151,6 @@ const faqs = [
                 alt="Giải pháp phục hồi trực tiếp Shofu"
                 className="w-full max-w-[340px] sm:max-w-[420px] h-auto object-contain block drop-shadow-md"
                 loading="eager"
-                onError={(e) => {
-                  const target = e.currentTarget;
-                  if (!target.src.includes('raw.githubusercontent.com')) {
-                    target.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/giai-phap-phuc-hoi-truc-tiep-shofu.webp";
-                  }
-                }}
               />
             </div>
             
@@ -210,12 +204,6 @@ const faqs = [
               alt="Giải pháp phục hồi trực tiếp Shofu"
               className="w-full max-w-[440px] h-auto object-contain block relative z-10 hover:scale-[1.02] transition-transform duration-500 drop-shadow-lg"
               loading="eager"
-              onError={(e) => {
-                const target = e.currentTarget;
-                if (!target.src.includes('raw.githubusercontent.com')) {
-                  target.src = "https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/giai-phap-phuc-hoi-truc-tiep-shofu.webp";
-                }
-              }}
             />
           </div>
         </div>
@@ -1073,7 +1061,7 @@ const faqs = [
                 </div>
                 <div className="w-full lg:w-[45%] lg:max-w-[400px] flex justify-center items-center">
                   <img 
-                    src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/giai-phap-phuc-hoi-truc-tiep-shofu-bo-3-san-pham-cot-loi.webp" 
+                    src="/image/giai-phap-phuc-hoi-truc-tiep-shofu-bo-3-san-pham-cot-loi.webp" 
                     alt="Bộ 3 sản phẩm cốt lõi Shofu" 
                     className="w-full max-w-[280px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"
@@ -1105,7 +1093,7 @@ const faqs = [
                 </div>
                 <div className="w-full lg:w-[45%] lg:max-w-[400px] flex justify-center items-center">
                   <img 
-                    src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/image/qua-tang-doc-quyen-shofu-giai-phap-phuc-hoi-truc-tiep.webp" 
+                    src="/image/qua-tang-doc-quyen-shofu-giai-phap-phuc-hoi-truc-tiep.webp" 
                     alt="Bộ 3 quà tặng đặc quyền Shofu" 
                     className="w-full max-w-[280px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"

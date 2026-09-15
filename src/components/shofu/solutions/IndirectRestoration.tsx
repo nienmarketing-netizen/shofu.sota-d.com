@@ -124,7 +124,7 @@ export function IndirectRestoration() {
     <div className="w-full flex flex-col">
       {/* SECTION 1: HERO SECTION */}
       <section className="pb-16 pt-[120px] lg:pb-24 lg:pt-[140px] bg-slate-50 bg-grid-pattern relative overflow-hidden border-b border-slate-200">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#00ADEF]/10 to-transparent rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00ADEF]/15 via-[#00ADEF]/5 to-transparent rounded-full transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
         
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-center relative z-10">
           <div className="w-full lg:w-[65%] xl:w-[60%]">
@@ -147,7 +147,7 @@ export function IndirectRestoration() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-gradient-to-tr from-[#00ADEF]/30 to-[#C43838]/30 blur-[60px] rounded-full z-0 animate-pulse"></div>
               <img 
                 referrerPolicy="no-referrer"
-                src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/beautilink-bbx.webp" 
+                src="/images/beautilink-bbx.webp" 
                 alt="Bộ đôi BBX và BeautiLink SA" 
                 className="w-[80%] max-w-[320px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
               />
@@ -199,12 +199,12 @@ export function IndirectRestoration() {
           
           <div className="hidden lg:flex w-full lg:w-[35%] xl:w-[40%] relative justify-center">
             {/* Lớp Hào quang sinh học tỏa sáng */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-[#00ADEF]/30 to-[#C43838]/30 blur-[80px] rounded-full z-0 animate-pulse"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00ADEF]/20 to-[#C43838]/20 rounded-full z-0 animate-pulse"></div>
             
             {/* Bức ảnh WebP tách nền duy nhất */}
             <img 
               referrerPolicy="no-referrer"
-              src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/beautilink-bbx.webp" 
+              src="/images/beautilink-bbx.webp" 
               alt="Bộ đôi BBX và BeautiLink SA" 
               className="w-full max-w-[550px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
             />
@@ -386,7 +386,7 @@ export function IndirectRestoration() {
             {/* Diagram Image (Order 2 on Mobile, Right Column on Desktop) */}
             <div className="order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 flex flex-col items-center w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto">
               <img 
-                src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/Shofu-double-hybrid-link-system.webp" 
+                src="/images/Shofu-double-hybrid-link-system.webp" 
                 alt="Sơ đồ cấu trúc lớp lai kép siêu mỏng 24µm" 
                 className="w-full h-auto object-contain drop-shadow-sm rounded-xl"
                 loading="lazy"
@@ -456,7 +456,7 @@ export function IndirectRestoration() {
             {/* Mobile Image (Visible only on mobile, between headline and body) */}
             <div className="w-full md:hidden my-6">
               <img 
-                src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/share-bond-strength-on-zirconia%20copy.webp" 
+                src="/images/share-bond-strength-on-zirconia%20copy.webp" 
                 alt="Lực dán trượt (MPa) trên Zirconia sau Lão hóa nhiệt" 
                 className="w-full h-auto object-contain rounded-2xl drop-shadow-sm border border-slate-200"
                 loading="lazy"
@@ -472,7 +472,7 @@ export function IndirectRestoration() {
           {/* Desktop Image (Visible only on md and up) */}
           <div className="w-full md:w-1/2 hidden md:block">
             <img 
-              src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/share-bond-strength-on-zirconia%20copy.webp" 
+              src="/images/share-bond-strength-on-zirconia%20copy.webp" 
               alt="Lực dán trượt (MPa) trên Zirconia sau Lão hóa nhiệt" 
               className="w-full h-auto object-contain rounded-2xl drop-shadow-sm border border-slate-200"
               loading="lazy"
@@ -507,7 +507,7 @@ export function IndirectRestoration() {
 
             <div className="mt-3 pt-3 border-t border-slate-100 flex justify-center -mx-4 sm:-mx-6">
               <img 
-                src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/feedback-beautilink-SA.webp?v=1788334433590" 
+                src="/images/feedback-beautilink-SA.webp?v=1788334433590" 
                 alt="Đánh giá từ Bác sĩ về BeautiLink SA" 
                 className="w-full h-auto object-contain"
                 loading="lazy"
@@ -546,7 +546,7 @@ export function IndirectRestoration() {
             {/* S-PRG Image */}
             <div className="mt-3 flex justify-center -mx-4 sm:-mx-6">
               <img 
-                src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/S-PRG-triet-tieu-e-buot.webp?v=1788334169447" 
+                src="/images/S-PRG-triet-tieu-e-buot.webp?v=1788334169447" 
                 alt="S-PRG Triệt tiêu ê buốt" 
                 className="w-full h-auto object-contain"
                 loading="lazy"
@@ -582,7 +582,7 @@ export function IndirectRestoration() {
               
               <div className="flex justify-center mt-auto">
                 <img 
-                  src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/voi-tron-automix-lang-phi-vat-lieu.webp?v=1788332053597" 
+                  src="/images/voi-tron-automix-lang-phi-vat-lieu.webp?v=1788332053597" 
                   alt="Lãng phí vật liệu khi dùng vòi trộn Automix" 
                   className="w-full h-auto object-contain"
                   loading="lazy"
@@ -605,7 +605,7 @@ export function IndirectRestoration() {
 
               <div className="flex justify-center mt-auto">
                 <img 
-                  src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/tiet-kiem-800tr-voi-beautilink-SA.webp?v=1788332482055" 
+                  src="/images/tiet-kiem-800tr-voi-beautilink-SA.webp?v=1788332482055" 
                   alt="Tiết kiệm chi phí với BeautiLink SA" 
                   className="w-full h-auto object-contain"
                   loading="lazy"
@@ -634,7 +634,7 @@ export function IndirectRestoration() {
       <section className="py-20 lg:py-28 bg-slate-900 relative border-b border-slate-800 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-grid-pattern-light opacity-100 pointer-events-none"></div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#00ADEF]/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00ADEF]/10 to-transparent rounded-full pointer-events-none"></div>
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
           
           <div className="max-w-5xl mx-auto mb-16 lg:mb-24 flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
@@ -652,7 +652,7 @@ export function IndirectRestoration() {
               <div className="relative group inline-block">
                 <img 
                   referrerPolicy="no-referrer"
-                  src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/ma-tran-chai-lo-phuc-hinh.webp" 
+                  src="/images/ma-tran-chai-lo-phuc-hinh.webp" 
                   alt="Ma trận chai lọ phục hình" 
                   className="w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[400px] h-auto object-contain drop-shadow-2xl grayscale opacity-70 group-hover:scale-105 transition-transform duration-500 rounded-2xl" 
                   loading="lazy"
@@ -684,7 +684,7 @@ export function IndirectRestoration() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
                 <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Sứ thủy tinh</h4>
                 <div className="flex justify-center mb-6">
-                  <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/su-thuy-tinh.webp" alt="Sứ thủy tinh" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
+                  <img src="/images/su-thuy-tinh.webp" alt="Sứ thủy tinh" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
                 </div>
                 <p className="text-slate-400 text-sm sm:text-base leading-relaxed text-center mt-auto">
                   Đòi hỏi soi mòn vi cơ học bằng <strong className="text-red-400">Acid HF</strong>, sau đó bắt buộc quét Silane độc lập để tạo mạng lưới liên kết siloxane.
@@ -696,7 +696,7 @@ export function IndirectRestoration() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
                 <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Zirconia & kim loại</h4>
                 <div className="flex justify-center mb-6">
-                  <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/zironia.webp" alt="Zirconia & kim loại" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
+                  <img src="/images/zironia.webp" alt="Zirconia & kim loại" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
                 </div>
                 <p className="text-slate-400 text-sm sm:text-base leading-relaxed text-center mt-auto">
                   Bề mặt trơ với <strong className="text-red-400">Acid HF</strong>. Bắt buộc phải có các Primer chứa monomer chức năng để tạo liên kết ion trực tiếp.
@@ -708,7 +708,7 @@ export function IndirectRestoration() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
                 <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Mô răng</h4>
                 <div className="flex justify-center mb-6">
-                  <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/mo-rang.webp" alt="Mô răng" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
+                  <img src="/images/mo-rang.webp" alt="Mô răng" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
                 </div>
                 <p className="text-slate-400 text-sm sm:text-base leading-relaxed text-center mt-auto">
                   Đòi hỏi hệ thống keo dán (Bond) để xâm nhập và tạo ra lớp lai (hybrid layer) vững chắc.
@@ -750,7 +750,7 @@ export function IndirectRestoration() {
                 {/* Visual Flowchart */}
                 <div className="flex flex-col items-center justify-center p-6 bg-slate-900/80 rounded-2xl border border-slate-700">
                   <div className="flex justify-center w-full">
-                    <img src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/chuoi-thao-tac-cong-kenh.webp" alt="Chuỗi thao tác cồng kềnh" className="w-full h-auto object-contain" referrerPolicy="no-referrer" />
+                    <img src="/images/chuoi-thao-tac-cong-kenh.webp" alt="Chuỗi thao tác cồng kềnh" className="w-full h-auto object-contain" referrerPolicy="no-referrer" />
                   </div>
                 </div>
               </div>
@@ -779,7 +779,7 @@ export function IndirectRestoration() {
               <div className="flex justify-center flex-1 w-full md:w-auto">
                 <img 
                   referrerPolicy="no-referrer"
-                  src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/beautilink-bbx.webp" 
+                  src="/images/beautilink-bbx.webp" 
                   alt="Bộ đôi BBX và BeautiLink SA" 
                   className="w-full max-w-[200px] sm:max-w-[250px] h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" 
                   loading="lazy"
@@ -983,7 +983,7 @@ export function IndirectRestoration() {
                 
                 <div className="w-full md:w-[40%] lg:w-[35%] flex justify-center items-center">
                   <img 
-                    src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/beautilink-bbx.webp" 
+                    src="/images/beautilink-bbx.webp" 
                     alt="Combo BeautiLink SA và BeautiBond Xtreme" 
                     className="w-full max-w-[196px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"
@@ -1014,7 +1014,7 @@ export function IndirectRestoration() {
                 
                 <div className="w-full md:w-[40%] lg:w-[35%] flex justify-center items-center">
                   <img 
-                    src="https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/public/images/qua-tang-giomer-khong-e-buot.webp" 
+                    src="/images/qua-tang-giomer-khong-e-buot.webp" 
                     alt="Bộ quà tặng đặc quyền Giomer" 
                     className="w-full max-w-[235px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"
@@ -1023,8 +1023,8 @@ export function IndirectRestoration() {
               </div>
 
               <div className="bg-slate-800/50 rounded-2xl p-6 md:p-8 border border-slate-700/50 mb-10 w-full flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 blur-[50px] rounded-full pointer-events-none"></div>
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-sky-500/10 blur-[50px] rounded-full pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/15 to-transparent rounded-full pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-500/15 to-transparent rounded-full pointer-events-none"></div>
                 
                 <div className="text-center md:text-left relative z-10">
                   <p className="text-slate-400 text-sm font-medium mb-1 uppercase tracking-wider">Tổng giá trị</p>
