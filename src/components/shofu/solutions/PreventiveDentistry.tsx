@@ -456,7 +456,7 @@ export function PreventiveDentistry() {
                   <p className="font-body text-slate-600 text-base leading-relaxed">
                      Vật liệu phủ bảo vệ ngà răng sinh học không chứa HEMA, không cồn, không Acetone, giải phóng ion kéo dài lên đến 6 tháng chỉ sau một lần bôi duy nhất.
                   </p>
-                  <div className="space-y-4 pt-2">
+                  <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 pt-2">
                      <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
                         <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
                         <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
@@ -505,7 +505,7 @@ export function PreventiveDentistry() {
                   <p className="font-body text-slate-600 text-base leading-relaxed">
                      Giải pháp trám bít hố rãnh thế hệ mới giúp tối ưu hóa thời gian ghế nha (Chair-time) cho Bác sĩ Nha khoa Trẻ em và Nha khoa Tổng quát.
                   </p>
-                  <div className="space-y-3 pt-2">
+                  <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 pt-2">
                      <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl bg-blue-50/50 border border-blue-100 hover:bg-blue-50 hover:border-blue-200 transition-colors">
                         <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
                         <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
