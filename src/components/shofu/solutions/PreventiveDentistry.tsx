@@ -638,7 +638,7 @@ export function PreventiveDentistry() {
             {/* Ebook */}
             <div className="bg-white rounded-3xl p-8 lg:p-10 border border-slate-200 shadow-xl flex flex-col justify-between hover:shadow-2xl transition-shadow">
               <div>
-                
+                <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-sky-100 text-[#00ADEF] font-bold text-xs tracking-wide mb-6">Sổ tay lâm sàng độc quyền</div>
                 <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4 leading-snug">Phác đồ triệt tiêu ê buốt & kiểm soát sâu răng nguy cơ cao theo triết lý MiCD</h3>
                 <p className="text-slate-600 text-sm sm:text-base mb-8 leading-relaxed">Nội dung: Hướng dẫn từng bước xử lý mòn cổ răng, tụt nướu, chăm sóc răng niềng quanh mắc cài và quy trình trám hố rãnh không Etching.</p>
               </div>
