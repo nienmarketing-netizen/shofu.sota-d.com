@@ -513,9 +513,6 @@ export function PreventiveDentistry() {
                  "Công nghệ véc-ni PRG Barrier Coat và BeautiSealant ứng dụng S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ hoàn toàn bước Etching nhạy cảm."
                </p>
                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center font-bold text-slate-300 text-lg">
-                    SK
-                  </div>
                   <div className="text-left">
                      <p className="font-bold text-white text-sm">Dr. Shukan Kanuga</p>
                      <p className="text-slate-400 text-xs mt-0.5">Hiệp hội Nha khoa Trẻ em Hoa Kỳ, California</p>
@@ -529,9 +526,6 @@ export function PreventiveDentistry() {
                  "Khả năng chống ê buốt ngà của PRG Barrier Coat kéo dài tới vài tháng là chìa khóa giúp phòng khám của tôi xử lý êm đẹp các ca tụt nướu và mòn cổ răng mà không cần xâm lấn mài mô răng."
                </p>
                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center font-bold text-slate-300 text-lg">
-                    PT
-                  </div>
                   <div className="text-left">
                      <p className="font-bold text-white text-sm">Prof. Tanaka</p>
                      <p className="text-slate-400 text-xs mt-0.5">Đại học Y khoa Tokyo, Nhật Bản</p>
