@@ -153,7 +153,7 @@ header#shofu-header {
     animation: marquee 15s linear infinite;
   }
   .animate-marquee-slow {
-    animation: marquee 25s linear infinite;
+    animation: marquee 42s linear infinite;
   }
   .animate-marquee:hover, .animate-marquee-slow:hover {
     animation-play-state: paused;
