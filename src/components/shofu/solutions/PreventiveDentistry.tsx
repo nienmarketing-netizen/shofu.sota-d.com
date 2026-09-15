@@ -437,7 +437,7 @@ export function PreventiveDentistry() {
 
           <div className="space-y-16 lg:space-y-24">
             {/* PRODUCT 1 */}
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start lg:items-center">
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
                {/* Desktop Image */}
                <div className="hidden lg:block w-full lg:w-1/2 relative">
                   <img loading="lazy" src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" />
@@ -486,7 +486,7 @@ export function PreventiveDentistry() {
             </div>
 
             {/* PRODUCT 2 */}
-            <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-16 items-start lg:items-center">
+            <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-16 items-start">
                {/* Desktop Image */}
                <div className="hidden lg:block w-full lg:w-1/2 relative">
                   <img loading="lazy" src="/image/BeautiSealant-shofu.webp" alt="BeautiSealant" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" />
