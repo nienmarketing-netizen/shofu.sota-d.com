@@ -208,7 +208,7 @@ export const ComprehensiveSolution = () => {
                   <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">Rủi ro đội phục hình & bong tróc veneer</h3>
                </div>
                <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
-                 <strong className="text-amber-300">Căn nguyên:</strong> Màng keo dán quá dày (&gt;10µm) gây cộm vướng khớp cắn, kết hợp keo dán thiếu Silane kháng axit khiến liên kết dán Zirconia/Sứ bị thoái hóa nhanh chóng.
+                 <strong className="text-amber-300">Căn nguyên:</strong> Màng keo dán quá dày gây cộm vướng khớp cắn, kết hợp keo dán thiếu Silane kháng axit khiến liên kết dán Zirconia/Sứ bị thoái hóa nhanh chóng.
                </p>
             </div>
             
