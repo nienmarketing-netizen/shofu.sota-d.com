@@ -65,7 +65,7 @@ export const ComprehensiveSolution = () => {
       q: "Tuýp Xi măng BeautiLink SA Handmix 15.6g quá to, liệu dùng không kịp có bị hư hỏng không?",
       a: (
         <>
-          Hoàn toàn không. BeautiLink SA sở hữu công nghệ xúc tác "Ngủ đông" (Hibernation) độc quyền, giúp duy trì độ tinh khiết hóa học và độ ổn định 100% trong 24 tháng ở nhiệt độ phòng (&lt;25°C). Chất lượng ca dán thứ 120 hoàn toàn sắc nét y hệt ca đầu tiên.
+          Hoàn toàn không. BeautiLink SA sở hữu công nghệ xúc tác "Ngủ đông" (Hibernation) độc quyền, giúp duy trì độ tinh khiết hóa học và độ ổn định trong 24 tháng ở nhiệt độ phòng (&lt;25°C). Chất lượng ca dán thứ 120 sắc nét y hệt ca đầu tiên.
         </>
       )
     },
@@ -309,7 +309,7 @@ export const ComprehensiveSolution = () => {
               Hệ sinh thái <span className="text-[#8C2828]">5 vũ khí cốt lõi</span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              Combo Giải Pháp Toàn Diện bao bọc trọn vẹn 100% nhu cầu lâm sàng hàng ngày tại phòng khám:
+              Combo Giải Pháp Toàn Diện bao bọc trọn vẹn nhu cầu lâm sàng hàng ngày tại phòng khám:
             </p>
           </div>
 
@@ -354,7 +354,7 @@ export const ComprehensiveSolution = () => {
                   <h3 className="font-heading font-bold text-2xl text-slate-900">3. Beautifil Injectable X – 2.2g</h3>
                   <ul className="space-y-3 font-body text-slate-600 mt-2">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Độ bền nén kỷ lục 400 MPa, đắp khối chịu lực ăn nhai trực tiếp xoang I, II, V.</span></li>
-                     <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tính lưu biến Thixotropic tự lấp đầy hốc xoang vi thể, tuyệt đối không đọng bọt khí.</span></li>
+                     <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tính lưu biến Thixotropic tự lấp đầy hốc xoang vi thể, không đọng bọt khí.</span></li>
                   </ul>
                </div>
             </div>
