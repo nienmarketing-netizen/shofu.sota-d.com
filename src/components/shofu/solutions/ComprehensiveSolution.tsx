@@ -659,13 +659,11 @@ export const ComprehensiveSolution = () => {
                 <strong className="text-white">Cơ chế thanh toán:</strong> Bác sĩ chỉ thanh toán đúng giá trị vật lý của bộ 5 sản phẩm cốt lõi, toàn bộ Hệ thống Tài liệu số, Dụng cụ đánh bóng và Đặc quyền Cố vấn 1:1 được <strong className="text-amber-300">TÀI TRỢ 100%</strong>.
              </p>
           </div>
-        </div>
-      </section>
-
-      {/* SECTION 7: RISK REVERSAL */}
-      <section className="py-16 bg-slate-50 bg-grid-pattern relative overflow-hidden border-b border-slate-200">
-        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto text-center">
-          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 mb-10">Cam kết bảo vệ 3 lớp từ Sota-D</h2>
+        
+          <div className="mt-16 border-t border-white/20 pt-16">
+            <div className="w-full text-center">
+              
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white mb-10">Cam kết bảo vệ 3 lớp từ Sota-D</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
                <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-4"><ShieldCheck className="w-6 h-6"/></div>
@@ -683,8 +681,12 @@ export const ComprehensiveSolution = () => {
                <p className="text-sm text-slate-600 font-body">Cam kết 1 đổi 1 ngay lập tức nếu sản phẩm có hiện tượng tách pha hay lỗi đông cứng kể từ khi mở nắp (&lt;25°C).</p>
             </div>
           </div>
+        
+            </div>
+          </div>
         </div>
       </section>
+
 
       {/* SECTION 8: FAQ */}
       <section className="py-20 bg-white bg-grid-pattern relative overflow-hidden border-b border-slate-200">
