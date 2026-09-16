@@ -314,38 +314,61 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
-              6 Trụ Cột <span className="text-[#8C2828]">Dữ Liệu Khoa Học</span>
+              4 "Điểm mù lâm sàng" & nỗi đau dai dẳng
             </h2>
-            <p className="text-slate-300 font-body max-w-2xl mx-auto text-base sm:text-lg">
-              Bằng chứng y văn & bảo chứng lâm sàng độc lập chứng minh hiệu quả tuyệt đối của hệ sinh thái Giomer 360°.
+            <div className="w-24 h-1 bg-[#8C2828] mx-auto my-6"></div>
+            <p className="font-body text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
+              Bác sĩ không thao tác sai, nhưng chính việc dùng các <strong className="text-white">Vật liệu thụ động truyền thống</strong> đã vô tình biến các ca phục hình thành <strong className="text-red-400">"quả bom nổ chậm"</strong>:
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-            <div className="flex flex-col">
-               {scientificPillars.slice(0, 3).map((pillar) => (
-                  <DarkAccordionItem
-                    key={pillar.id}
-                    icon={pillar.icon}
-                    question={pillar.title}
-                    answer={pillar.content}
-                    isOpen={openPillars.includes(pillar.id)}
-                    onClick={() => togglePillar(pillar.id)}
-                  />
-               ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-red-500/50 transition-colors duration-300">
+               <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center shrink-0">
+                     <span className="font-heading font-bold text-2xl text-red-400">1</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">Ám ảnh ê buốt & sâu răng tái phát xoang II</h3>
+               </div>
+               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
+                 <strong className="text-red-300">Căn nguyên:</strong> Keo dán chứa monomer HEMA ưa nước bị thủy phân (ngậm nước bọt/dịch ngà) làm đứt gãy lớp lai dán sau vài tháng, tạo kẽ rò vi thể khiến vi khuẩn xâm nhập.
+               </p>
             </div>
             
-            <div className="flex flex-col">
-               {scientificPillars.slice(3, 6).map((pillar) => (
-                  <DarkAccordionItem
-                    key={pillar.id}
-                    icon={pillar.icon}
-                    question={pillar.title}
-                    answer={pillar.content}
-                    isOpen={openPillars.includes(pillar.id)}
-                    onClick={() => togglePillar(pillar.id)}
-                  />
-               ))}
+            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-amber-500/50 transition-colors duration-300">
+               <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
+                     <span className="font-heading font-bold text-2xl text-amber-400">2</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">Rủi ro đội phục hình & bong tróc veneer</h3>
+               </div>
+               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
+                 <strong className="text-amber-300">Căn nguyên:</strong> Màng keo dán quá dày gây cộm vướng khớp cắn, kết hợp keo dán thiếu Silane kháng axit khiến liên kết dán Zirconia/Sứ bị thoái hóa nhanh chóng.
+               </p>
+            </div>
+            
+            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 transition-colors duration-300">
+               <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+                     <span className="font-heading font-bold text-2xl text-blue-400">3</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"Nỗi sợ 7h tối": Dọn xi măng kẽ tứa máu</h3>
+               </div>
+               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
+                 <strong className="text-blue-300">Căn nguyên:</strong> Xi măng Resin đông cứng cơ học quá nhanh hoặc bết dính, cạo mỏi tay làm rách nướu, tổn thương màng nha chu và gây ám ảnh viền dán hôi miệng.
+               </p>
+            </div>
+            
+            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition-colors duration-300">
+               <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
+                     <span className="font-heading font-bold text-2xl text-emerald-400">4</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"Thể tích chết" & chảy máu dòng tiền vật tư</h3>
+               </div>
+               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
+                 <strong className="text-emerald-300">Căn nguyên:</strong> Các vòi trộn Automix tiêu chuẩn kẹt lại từ 0.25g - 0.44g xi măng đắt tiền sau mỗi lần bơm, làm bốc hơi 30-40% lợi nhuận phòng khám mà Chủ nha khoa không hề biết.
+               </p>
             </div>
           </div>
         </div>
@@ -505,36 +528,38 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
-              Bằng chứng y văn & <span className="text-[#8C2828]">bảo chứng lâm sàng</span>
+              6 Trụ Cột <span className="text-[#8C2828]">Dữ Liệu Khoa Học</span>
             </h2>
+            <p className="text-slate-300 font-body max-w-2xl mx-auto text-base sm:text-lg">
+              Bằng chứng y văn & bảo chứng lâm sàng độc lập chứng minh hiệu quả tuyệt đối của hệ sinh thái Giomer 360°.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-8 lg:p-10 flex flex-col gap-6">
-              <div className="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center border border-blue-500/30">
-                <BookOpen className="w-6 h-6" />
-              </div>
-              <h3 className="font-heading font-bold text-lg sm:text-2xl text-white">Nghiên cứu Độc lập 13 Năm từ Đại học Florida (Tạp chí JADA - Mỹ)</h3>
-              <ul className="space-y-4">
-                <li className="flex gap-3 items-start">
-                   <div className="w-2 h-2 rounded-full bg-blue-400 mt-2 shrink-0" />
-                   <span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Mốc 8 năm:</strong> 100% tỷ lệ lưu giữ phục hình | 0% nhạy cảm ngà sau điều trị | 0% sâu răng thứ phát.</span>
-                </li>
-                <li className="flex gap-3 items-start">
-                   <div className="w-2 h-2 rounded-full bg-blue-400 mt-2 shrink-0" />
-                   <span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Mốc 13 năm:</strong> 96% phục hình hoàn toàn sạch bóng sâu răng tái phát, chứng minh khả năng bảo vệ sinh học vĩnh cửu.</span>
-                </li>
-              </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+            <div className="flex flex-col">
+               {scientificPillars.slice(0, 3).map((pillar) => (
+                  <DarkAccordionItem
+                    key={pillar.id}
+                    icon={pillar.icon}
+                    question={pillar.title}
+                    answer={pillar.content}
+                    isOpen={openPillars.includes(pillar.id)}
+                    onClick={() => togglePillar(pillar.id)}
+                  />
+               ))}
             </div>
             
-            <div className="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-8 lg:p-10 flex flex-col gap-6">
-              <div className="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center border border-emerald-500/30">
-                <Award className="w-6 h-6" />
-              </div>
-              <h3 className="font-heading font-bold text-lg sm:text-2xl text-white">Chứng nhận Độc lập từ The Dental Advisor (Mỹ)</h3>
-              <p className="text-slate-300 font-body text-sm sm:text-base leading-relaxed">
-                BeautiBond Xtreme & BeautiLink SA đạt lực dán trượt bền bỉ <strong className="text-white">&gt;40–50 MPa</strong> trên Zirconia và Sứ Lithium Disilicate ngay cả sau 5.000 chu kỳ thử nghiệm sốc nhiệt.
-              </p>
+            <div className="flex flex-col">
+               {scientificPillars.slice(3, 6).map((pillar) => (
+                  <DarkAccordionItem
+                    key={pillar.id}
+                    icon={pillar.icon}
+                    question={pillar.title}
+                    answer={pillar.content}
+                    isOpen={openPillars.includes(pillar.id)}
+                    onClick={() => togglePillar(pillar.id)}
+                  />
+               ))}
             </div>
           </div>
         </div>
