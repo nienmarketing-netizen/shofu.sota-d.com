@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Gift, BookOpen, CheckCircle, ArrowRight, ShieldCheck, Zap, Layers, Beaker, ChevronDown, Sparkles, AlertTriangle, Syringe, Shield, Star, Award, Microscope, Droplets, Target, XCircle, CheckSquare, Download, RefreshCw, HandHeart, Activity } from 'lucide-react';
+import { Gift, BookOpen, CheckCircle, ArrowRight, ShieldCheck, Zap, Layers, Beaker, ChevronDown, AlertTriangle, Syringe, Shield, Star, Award, Microscope, Droplets, Target, XCircle, CheckSquare, Download, RefreshCw, HandHeart, Activity } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { CampaignModal } from '../../CampaignModal';
 import { CtaButton } from '../../ui/CtaButton';
@@ -87,9 +87,20 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="w-full lg:w-3/5 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-red-100/80 border border-red-200 text-[#8C2828] font-mono text-xs sm:text-sm font-bold tracking-wider mb-6 sm:mb-8 shadow-sm">
-                <Sparkles className="w-4 h-4 text-amber-500" />
-                <span className="text-[10px] sm:text-xs">Chuẩn hóa lâm sàng cùng hệ sinh thái Giomer 360° – Triết lý MiCD từ Shofu (Nhật Bản)</span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-100/80 border border-red-200 text-[#8C2828] font-mono text-xs sm:text-sm font-bold tracking-wider mb-6 sm:mb-8 shadow-sm overflow-hidden w-[90vw] sm:w-fit max-w-[320px] sm:max-w-md relative">
+                <div className="shrink-0 flex items-center justify-center z-10 pl-1 pr-1 bg-red-100/80">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#8C2828]"></span>
+                  </span>
+                </div>
+                
+                <div className="flex-1 overflow-hidden relative whitespace-nowrap [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+                  <div className="flex w-max animate-marquee-slow hover:[animation-play-state:paused]">
+                    <span className="text-[10px] sm:text-xs pr-8">Chuẩn hóa lâm sàng cùng hệ sinh thái Giomer 360° – Triết lý MiCD từ Shofu (Nhật Bản)</span>
+                    <span className="text-[10px] sm:text-xs pr-8">Chuẩn hóa lâm sàng cùng hệ sinh thái Giomer 360° – Triết lý MiCD từ Shofu (Nhật Bản)</span>
+                  </div>
+                </div>
               </div>
               
               <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] text-slate-900 leading-[1.2] mb-6 tracking-tight">
