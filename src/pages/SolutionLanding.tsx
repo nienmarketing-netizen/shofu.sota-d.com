@@ -89,6 +89,8 @@ export default function SolutionLanding() {
           <DirectRestoration />
         ) : slug === 'nha-khoa-phong-ngua' ? (
           <PreventiveDentistry />
+        ) : slug === 'giai-phap-toan-dien' ? (
+          <ComprehensiveSolution />
         ) : (
           <>
             {/* Hero Section */}
