@@ -318,7 +318,7 @@ export const ComprehensiveSolution = () => {
             </h2>
             <div className="w-24 h-1 bg-[#8C2828] mx-auto my-6"></div>
             <p className="font-body text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
-              Bác sĩ không thao tác sai, nhưng chính việc dùng các <strong className="text-white">Vật liệu thụ động truyền thống</strong> đã vô tình biến các ca phục hình thành <strong className="text-red-400">"quả bom nổ chậm"</strong>:
+              Bác sĩ <strong className="text-white font-medium underline decoration-slate-500 underline-offset-4">không thao tác sai</strong>, nhưng chính việc dùng các <strong className="text-slate-900 bg-slate-300 px-2 py-0.5 rounded-sm font-bold mx-1">vật liệu thụ động truyền thống</strong> đã vô tình biến các ca phục hình thành <strong className="text-red-300 bg-red-950/50 px-2 py-0.5 rounded-md border border-red-500/30 shadow-[0_0_15px_rgba(220,38,38,0.3)] mx-1">"quả bom nổ chậm"</strong>:
             </p>
           </div>
 
