@@ -137,9 +137,9 @@ export const ComprehensiveSolution = () => {
                   <span>Sở hữu gói Master Ecosystem</span>
                   <ArrowRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </CtaButton>
-                <CtaButton onClick={() => openCampaignModal("Tải sổ tay quy trình 5 bước")} className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#8C2828] border-2 border-[#8C2828] px-6 py-4 rounded-full font-mono text-sm font-bold tracking-wide hover:bg-red-50 hover:shadow-lg transition-all duration-300">
+                <CtaButton onClick={() => openCampaignModal("Nhận E-Guide triệt tiêu ê buốt")} className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#8C2828] border-2 border-[#8C2828] px-6 py-4 rounded-full font-mono text-sm font-bold tracking-wide hover:bg-red-50 hover:shadow-lg transition-all duration-300">
                   <Download className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 transition-all" />
-                  <span>Tải sổ tay quy trình 5 bước</span>
+                  <span>Nhận E-Guide triệt tiêu ê buốt</span>
                 </CtaButton>
               </div>
             </div>
