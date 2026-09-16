@@ -81,7 +81,7 @@ const DarkAccordionItem: React.FC<{ question: string, answer: React.ReactNode, i
 export const ComprehensiveSolution = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [campaignModalTitle, setCampaignModalTitle] = useState('');
-  const [openFaqIndex, setOpenFaqIndex] = useState<number>(0);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number>(-1);
 
   const scientificPillars = [
     {
@@ -176,7 +176,7 @@ export const ComprehensiveSolution = () => {
     }
   ];
 
-  const [openPillars, setOpenPillars] = useState<number[]>([1, 4]);
+  const [openPillars, setOpenPillars] = useState<number[]>([]);
   const togglePillar = (id: number) => {
     setOpenPillars(prev => prev.includes(id) ? prev.filter(p => p !== id) : [...prev, id]);
   };
