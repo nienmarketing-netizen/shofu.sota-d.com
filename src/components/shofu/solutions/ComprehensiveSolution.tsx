@@ -89,7 +89,7 @@ export const ComprehensiveSolution = () => {
             <div className="w-full lg:w-3/5 flex flex-col items-center lg:items-start text-center lg:text-left">
               <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-red-100/80 border border-red-200 text-[#8C2828] font-mono text-xs sm:text-sm font-bold tracking-wider mb-6 sm:mb-8 shadow-sm">
                 <Sparkles className="w-4 h-4 text-amber-500" />
-                <span className="uppercase text-[10px] sm:text-xs">CHUẨN HÓA LÂM SÀNG CÙNG HỆ SINH THÁI GIOMER 360° – TRIẾT LÝ MiCD TỪ SHOFU (NHẬT BẢN)</span>
+                <span className="text-[10px] sm:text-xs">Chuẩn hóa lâm sàng cùng hệ sinh thái Giomer 360° – Triết lý MiCD từ Shofu (Nhật Bản)</span>
               </div>
               
               <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] text-slate-900 leading-[1.2] mb-6 tracking-tight">
@@ -122,13 +122,13 @@ export const ComprehensiveSolution = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 w-full justify-center lg:justify-start">
-                <CtaButton onClick={() => openCampaignModal("SỞ HỮU GÓI MASTER ECOSYSTEM - TÀI TRỢ 100% QUÀ TẶNG")} className="group relative inline-flex items-center justify-center gap-2 bg-[#8C2828] text-white px-6 py-4 rounded-full font-mono text-sm font-bold uppercase tracking-wide hover:bg-red-900 hover:shadow-xl hover:shadow-red-900/30 transition-all duration-300">
-                  <span>SỞ HỮU GÓI MASTER ECOSYSTEM</span>
+                <CtaButton onClick={() => openCampaignModal("Sở hữu gói Master Ecosystem - Tài trợ 100% quà tặng")} className="group relative inline-flex items-center justify-center gap-2 bg-[#8C2828] text-white px-6 py-4 rounded-full font-mono text-sm font-bold tracking-wide hover:bg-red-900 hover:shadow-xl hover:shadow-red-900/30 transition-all duration-300">
+                  <span>Sở hữu gói Master Ecosystem</span>
                   <ArrowRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </CtaButton>
-                <CtaButton onClick={() => openCampaignModal("TẢI SỔ TAY QUY TRÌNH 5 BƯỚC")} className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#8C2828] border-2 border-[#8C2828] px-6 py-4 rounded-full font-mono text-sm font-bold uppercase tracking-wide hover:bg-red-50 hover:shadow-lg transition-all duration-300">
+                <CtaButton onClick={() => openCampaignModal("Tải sổ tay quy trình 5 bước")} className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#8C2828] border-2 border-[#8C2828] px-6 py-4 rounded-full font-mono text-sm font-bold tracking-wide hover:bg-red-50 hover:shadow-lg transition-all duration-300">
                   <Download className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 transition-all" />
-                  <span>TẢI SỔ TAY (EBOOK MIỄN PHÍ)</span>
+                  <span>Tải sổ tay (Ebook miễn phí)</span>
                 </CtaButton>
               </div>
             </div>
@@ -172,7 +172,7 @@ export const ComprehensiveSolution = () => {
             </h2>
             <div className="w-24 h-1 bg-[#8C2828] mx-auto my-6"></div>
             <p className="font-body text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
-              Bác sĩ không thao tác sai, nhưng chính việc dùng các <strong className="text-white">VẬT LIỆU THỤ ĐỘNG truyền thống</strong> đã vô tình biến các ca phục hình thành <strong className="text-red-400">"quả bom nổ chậm"</strong>:
+              Bác sĩ không thao tác sai, nhưng chính việc dùng các <strong className="text-white">Vật liệu thụ động truyền thống</strong> đã vô tình biến các ca phục hình thành <strong className="text-red-400">"quả bom nổ chậm"</strong>:
             </p>
           </div>
 
@@ -182,7 +182,7 @@ export const ComprehensiveSolution = () => {
                   <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center shrink-0">
                      <span className="font-heading font-bold text-2xl text-red-400">1</span>
                   </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">ÁM ẢNH Ê BUỐT & SÂU RĂNG TÁI PHÁT XOANG II</h3>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">Ám ảnh ê buốt & sâu răng tái phát xoang II</h3>
                </div>
                <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
                  <strong className="text-red-300">Căn nguyên:</strong> Keo dán chứa monomer HEMA ưa nước bị thủy phân (ngậm nước bọt/dịch ngà) làm đứt gãy lớp lai dán sau vài tháng, tạo kẽ rò vi thể khiến vi khuẩn xâm nhập.
@@ -194,7 +194,7 @@ export const ComprehensiveSolution = () => {
                   <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
                      <span className="font-heading font-bold text-2xl text-amber-400">2</span>
                   </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">RỦI RO ĐỘI PHỤC HÌNH & BONG TRÓC VENEER</h3>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">Rủi ro đội phục hình & bong tróc veneer</h3>
                </div>
                <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
                  <strong className="text-amber-300">Căn nguyên:</strong> Màng keo dán quá dày (&gt;10µm) gây cộm vướng khớp cắn, kết hợp keo dán thiếu Silane kháng axit khiến liên kết dán Zirconia/Sứ bị thoái hóa nhanh chóng.
@@ -206,7 +206,7 @@ export const ComprehensiveSolution = () => {
                   <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
                      <span className="font-heading font-bold text-2xl text-blue-400">3</span>
                   </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"NỖI SỢ 7H TỐI": DỌN XI MĂNG KẼ TỨA MÁU</h3>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"Nỗi sợ 7h tối": Dọn xi măng kẽ tứa máu</h3>
                </div>
                <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
                  <strong className="text-blue-300">Căn nguyên:</strong> Xi măng Resin đông cứng cơ học quá nhanh hoặc bết dính, cạo mỏi tay làm rách nướu, tổn thương màng nha chu và gây ám ảnh viền dán hôi miệng.
@@ -218,7 +218,7 @@ export const ComprehensiveSolution = () => {
                   <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
                      <span className="font-heading font-bold text-2xl text-emerald-400">4</span>
                   </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"THỂ TÍCH CHẾT" & CHẢY MÁU DÒNG TIỀN VẬT TƯ</h3>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"Thể tích chết" & chảy máu dòng tiền vật tư</h3>
                </div>
                <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
                  <strong className="text-emerald-300">Căn nguyên:</strong> Các vòi trộn Automix tiêu chuẩn kẹt lại từ 0.25g - 0.44g xi măng đắt tiền sau mỗi lần bơm, làm bốc hơi 30-40% lợi nhuận phòng khám mà Chủ nha khoa không hề biết.
@@ -235,7 +235,7 @@ export const ComprehensiveSolution = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-600 font-mono text-xs sm:text-sm font-bold tracking-wider mb-6">
               <RefreshCw className="w-4 h-4" />
-              <span>PARADIGM SHIFT</span>
+              <span>Paradigm shift</span>
             </div>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-6 tracking-tight">
               Đừng Chỉ "Trám Bít Lỗ Hổng" – Hãy Dùng Vật Liệu Có Khả Năng <span className="text-[#8C2828]">"Chữa Lành"!</span>
@@ -310,7 +310,7 @@ export const ComprehensiveSolution = () => {
                </div>
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
                   <div className="inline-flex px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-bold w-fit">KEO DÁN THẾ HỆ 8</div>
-                  <h3 className="font-heading font-bold text-2xl text-slate-900">1. BEAUTIBOND XTREME (BBX) – 5ml</h3>
+                  <h3 className="font-heading font-bold text-2xl text-slate-900">1. BeautiBond Xtreme (BBX) – 5ml</h3>
                   <ul className="space-y-3 font-body text-slate-600 mt-2">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Màng keo kỷ lục 5µm, 100% HEMA-Free kỵ nước (dung môi Acetone bay hơi chớp nhoáng).</span></li>
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tích hợp ARS bọc giáp Silane & Monomer MDP, dán thẳng Zirconia/Sứ/Ngà chỉ với 1 chai.</span></li>
@@ -324,8 +324,8 @@ export const ComprehensiveSolution = () => {
                   <ImagePlaceholder className="w-full aspect-square rounded-2xl" text="BeautiLink SA" />
                </div>
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
-                  <div className="inline-flex px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold w-fit">XI MĂNG RESIN TỰ DÁN</div>
-                  <h3 className="font-heading font-bold text-2xl text-slate-900">2. BEAUTILINK SA – Tuýp khổng lồ 15.6g</h3>
+                  <div className="inline-flex px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold w-fit">Xi măng resin tự dán</div>
+                  <h3 className="font-heading font-bold text-2xl text-slate-900">2. BeautiLink SA – Tuýp khổng lồ 15.6g</h3>
                   <ul className="space-y-3 font-body text-slate-600 mt-2">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Thể tích khổng lồ 9ml (15.6g) thực hiện được ~120 ca gắn (chỉ ~16.600đ/ca).</span></li>
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Màng xi măng 14µm, Tack-cure 1-2 giây lột sạch xi măng dư nguyên khối (One-Sweep).</span></li>
@@ -339,8 +339,8 @@ export const ComprehensiveSolution = () => {
                   <ImagePlaceholder className="w-full aspect-square rounded-2xl" text="Beautifil Injectable X" />
                </div>
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
-                  <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold w-fit">COMPOSITE LỎNG ĐẮP KHỐI</div>
-                  <h3 className="font-heading font-bold text-2xl text-slate-900">3. BEAUTIFIL INJECTABLE X – 2.2g</h3>
+                  <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold w-fit">Composite lỏng đắp khối</div>
+                  <h3 className="font-heading font-bold text-2xl text-slate-900">3. Beautifil Injectable X – 2.2g</h3>
                   <ul className="space-y-3 font-body text-slate-600 mt-2">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Độ bền nén kỷ lục 400 MPa, đắp khối chịu lực ăn nhai trực tiếp xoang I, II, V.</span></li>
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tính lưu biến Thixotropic tự lấp đầy hốc xoang vi thể, tuyệt đối không đọng bọt khí.</span></li>
@@ -353,8 +353,8 @@ export const ComprehensiveSolution = () => {
                <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col gap-6 shadow-sm hover:shadow-md transition-shadow">
                   <ImagePlaceholder className="w-full aspect-[16/9] rounded-2xl" text="Beautifil II / LS" />
                   <div>
-                     <div className="inline-flex px-3 py-1 bg-amber-50 text-amber-600 rounded-full text-xs font-bold w-fit mb-3">COMPOSITE ĐẶC</div>
-                     <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">4. BEAUTIFIL II / BEAUTIFIL II LS</h3>
+                     <div className="inline-flex px-3 py-1 bg-amber-50 text-amber-600 rounded-full text-xs font-bold w-fit mb-3">Composite đặc</div>
+                     <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">4. Beautifil II / Beautifil II LS</h3>
                      <ul className="space-y-3 font-body text-slate-600 text-sm">
                         <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span>Độ co ngót thể tích siêu thấp, chống bám mảng sinh học nhờ hạt độn S-PRG.</span></li>
                         <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span>Hiệu ứng "Tắc kè hoa" tự động tiệp màu răng thật hoàn hảo.</span></li>
@@ -364,8 +364,8 @@ export const ComprehensiveSolution = () => {
                <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col gap-6 shadow-sm hover:shadow-md transition-shadow">
                   <ImagePlaceholder className="w-full aspect-[16/9] rounded-2xl" text="PRG Barrier Coat / BeautiSealant" />
                   <div>
-                     <div className="inline-flex px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-xs font-bold w-fit mb-3">PHÒNG NGỪA & PHONG TỎA</div>
-                     <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">5. TỰ CHỌN 1 TRONG 2 GIẢI PHÁP:</h3>
+                     <div className="inline-flex px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-xs font-bold w-fit mb-3">Phòng ngừa & phong tỏa</div>
+                     <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">5. Tự chọn 1 trong 2 giải pháp:</h3>
                      <ul className="space-y-3 font-body text-slate-600 text-sm">
                         <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span><strong className="text-slate-800">Bộ PRG Barrier Coat Mini-Kit:</strong> Véc-ni phủ 15µm trị liệu ê buốt 3-6 tháng.</span></li>
                         <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span><strong className="text-slate-800">Bộ BeautiSealant Set:</strong> Trám bít hố rãnh Self-Etch không rửa nước.</span></li>
@@ -428,7 +428,7 @@ export const ComprehensiveSolution = () => {
               <span className="text-white">Ưu đãi độc quyền trong tháng này</span>
             </div>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.3] mb-6">
-              GÓI CHUYỂN ĐỔI: MASTER ECOSYSTEM <br className="hidden md:block"/> <span className="text-amber-300">"HỆ SINH THÁI GIOMER 360°"</span>
+              Gói chuyển đổi: Master Ecosystem <br className="hidden md:block"/> <span className="text-amber-300">"Hệ sinh thái Giomer 360°"</span>
             </h2>
             <p className="text-white/80 font-body text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
               (Chương trình hỗ trợ chuẩn hóa phòng khám từ Sota-D – Giới hạn đúng 15 phòng khám đăng ký sớm nhất)
@@ -440,7 +440,7 @@ export const ComprehensiveSolution = () => {
               <div className="w-full relative mb-6">
                  <ImagePlaceholder className="w-full aspect-[4/3] rounded-xl bg-slate-100 border border-slate-200" text="Ảnh 5 SP Vật Lý" />
               </div>
-              <h4 className="font-heading font-bold text-xl text-[#8C2828] border-b border-slate-200 pb-3 mb-4">BỘ 5 SẢN PHẨM CỐT LÕI</h4>
+              <h4 className="font-heading font-bold text-xl text-[#8C2828] border-b border-slate-200 pb-3 mb-4">Bộ 5 sản phẩm cốt lõi</h4>
               <ul className="space-y-4 font-body text-sm sm:text-base flex-1 text-slate-700">
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Keo dán BeautiBond Xtreme (5ml)</span></div>
@@ -466,11 +466,11 @@ export const ComprehensiveSolution = () => {
             </div>
             
             <div className="bg-slate-900 border-2 border-amber-400/50 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-amber-400 text-slate-900 font-bold text-xs uppercase px-4 py-1.5 rounded-bl-xl z-10">Tài trợ 100%</div>
+              <div className="absolute top-0 right-0 bg-amber-400 text-slate-900 font-bold text-xs px-4 py-1.5 rounded-bl-xl z-10">Tài trợ 100%</div>
               <div className="w-full relative mb-6">
                  <ImagePlaceholder className="w-full aspect-[4/3] rounded-xl bg-slate-800 border border-slate-700" text="Ảnh Quà tặng VIP" />
               </div>
-              <h4 className="font-heading font-bold text-xl text-amber-400 border-b border-slate-700 pb-3 mb-4">QUÀ TẶNG & ĐẶC QUYỀN VIP</h4>
+              <h4 className="font-heading font-bold text-xl text-amber-400 border-b border-slate-700 pb-3 mb-4">Quà tặng & đặc quyền VIP</h4>
               <ul className="space-y-4 font-body text-sm sm:text-base flex-1 text-slate-300">
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>01 Bộ đánh bóng Super-Snap Mini</span></div>
@@ -501,7 +501,7 @@ export const ComprehensiveSolution = () => {
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-6 sm:p-10 text-center shadow-xl">
-             <div className="font-mono text-white/60 mb-2">TỔNG GIÁ TRỊ THỰC TẾ: <span className="line-through decoration-red-500/50">13.735.000 VNĐ</span></div>
+             <div className="font-mono text-white/60 mb-2">Tổng giá trị thực tế: <span className="line-through decoration-red-500/50">13.735.000 VNĐ</span></div>
              <div className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-4 drop-shadow-md">
                 5.450.000 VNĐ
              </div>
@@ -585,7 +585,7 @@ export const ComprehensiveSolution = () => {
                </div>
                
                <button type="button" onClick={() => openCampaignModal("Đăng ký thành công")} className="w-full bg-[#8C2828] text-white font-bold font-mono py-4 rounded-xl shadow-lg hover:bg-red-900 hover:shadow-xl transition-all hover:-translate-y-1 mt-4">
-                  💥 XÁC NHẬN ĐẶT MUA - NHẬN QUÀ 8.285.000Đ
+                  💥 Xác nhận đặt mua - Nhận quà 8.285.000Đ
                </button>
             </form>
             
