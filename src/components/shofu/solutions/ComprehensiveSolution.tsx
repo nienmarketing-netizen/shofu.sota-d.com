@@ -42,10 +42,145 @@ const AccordionItem: React.FC<{ question: string, answer: React.ReactNode, isOpe
   );
 };
 
+
+const DarkAccordionItem: React.FC<{ question: string, answer: React.ReactNode, isOpen: boolean, onClick: () => void, icon?: string }> = ({ question, answer, isOpen, onClick, icon }) => {
+  return (
+    <div className="border border-slate-700/80 rounded-2xl mb-4 bg-slate-800/80 overflow-hidden shadow-sm transition-all duration-300 hover:border-blue-500/30">
+      <button
+        className="w-full flex items-start justify-between p-5 sm:p-6 text-left focus:outline-none group"
+        onClick={onClick}
+      >
+        <div className="flex items-start gap-4 pr-6">
+          {icon && <span className="text-2xl leading-none mt-0.5 shrink-0">{icon}</span>}
+          <span className="font-heading font-bold text-white text-sm sm:text-base leading-snug group-hover:text-blue-400 transition-colors">
+            {question}
+          </span>
+        </div>
+        <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${isOpen ? 'bg-blue-500/20 text-blue-400' : 'bg-slate-700/50 text-slate-400 group-hover:bg-blue-500/10 group-hover:text-blue-400'}`}>
+          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+        </div>
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-4 border-t border-slate-700/50">
+              {answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 export const ComprehensiveSolution = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [campaignModalTitle, setCampaignModalTitle] = useState('');
   const [openFaqIndex, setOpenFaqIndex] = useState<number>(0);
+
+  const scientificPillars = [
+    {
+      id: 1,
+      title: 'TRỤ CỘT 1: ĐỘT PHÁ CẤP ĐỘ PHÂN TỬ – KHÁNG BỆNH SÂU RĂNG (TẠP CHÍ NATURE 2018)',
+      icon: '🧬',
+      content: (
+        <ul className="space-y-3">
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Cơ quan kiểm định:</strong> Khoa Nha Trẻ em – Đại học Osaka, Nhật Bản (Công bố trên Scientific Reports - Nature Research).</span></li>
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Cơ chế di truyền:</strong> Dịch chiết từ hạt độn S-PRG trực tiếp kìm hãm sự biểu hiện của gen pdh operon (Pyruvate Dehydrogenase) thuộc con đường chuyển hóa đường trung tâm của vi khuẩn Streptococcus mutans.</span></li>
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Outcome lâm sàng:</strong> Triệt tiêu khả năng bám dính tạo mảng sinh học (Biofilm) trên bề mặt phục hình, ngăn chặn tận gốc sự hình thành mảng bám khuẩn ngay cả trong môi trường giàu đường Sucrose.</span></li>
+        </ul>
+      )
+    },
+    {
+      id: 2,
+      title: 'TRỤ CỘT 2: BẢO CHỨNG LÂM SÀNG DÀI HẠN 13 NĂM (TẠP CHÍ JADA - ĐẠI HỌC FLORIDA, MỸ)',
+      icon: '🏛️',
+      content: (
+        <ul className="space-y-3">
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Tác giả:</strong> GS.TS Valeria V. Gordan và cộng sự (Đăng trên Journal of the American Dental Association - JADA).</span></li>
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Kết quả mốc 8 năm:</strong> Tỷ lệ lưu giữ phục hình 100%, 0% ê buốt sau điều trị, 0% sâu răng thứ phát ở viền dán.</span></li>
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Kết quả mốc 13 năm (13-Year Recall):</strong> 96% phục hình hoàn toàn sạch bóng sâu răng tái phát (chỉ 3% có dấu hiệu sâu thứ phát), khẳng định khả năng tái khoáng hóa và bảo vệ viền dán bền vững.</span></li>
+        </ul>
+      )
+    },
+    {
+      id: 3,
+      title: 'TRỤ CỘT 3: DỮ LIỆU XI MĂNG BEAUTILINK SA (THE DENTAL ADVISOR 2024 - BÁO CÁO SỐ 168)',
+      icon: '🔗',
+      content: (
+        <ul className="space-y-3">
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Lực dán áp đảo trên Zirconia:</strong> Đạt 45 – 50 MPa ngay ở thời điểm 24h.</span></li>
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Thử thách lão hóa 5.000 chu kỳ nhồi nhiệt (Thermocycling 4°C/60°C):</strong> BeautiLink SA duy trì đường cong lực dán phẳng, 0% sút mão tự phát (zero spontaneous debonds).</span></li>
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Giải mã kiểu gãy "Cohesive Failure" (Đứt gãy nội tại khối):</strong> Báo cáo ghi nhận khối xi măng bị xé rách trước khi giao diện dán bị tróc khỏi Zirconia. Điều này chứng minh lực liên kết hóa học lớn hơn cả độ bền cơ học khối resin.</span></li>
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Độ dày màng xi măng 14µm:</strong> Bít kín vi kẽ bờ hoàn tất, tự chảy loang (Thixotropic) không đọng bọt khí.</span></li>
+        </ul>
+      )
+    },
+    {
+      id: 4,
+      title: 'TRỤ CỘT 4: DỮ LIỆU KEO DÁN BEAUTIBOND XTREME (BBX)',
+      icon: '💧',
+      content: (
+        <ul className="space-y-3">
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Độ dày màng keo kỷ lục 5µm:</strong> Hơn 70% Bác sĩ khảo sát đánh giá màng keo siêu mỏng giúp phục hình khít sát tuyệt đối, không cộm khớp cắn.</span></li>
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Tỷ lệ trùng hợp 97% (Degree of Conversion):</strong> Giúp màng keo bền bỉ, không nứt vỡ hay bay hơi dịch ngà.</span></li>
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">100% HEMA-Free (Dung môi Acetone):</strong> Triệt tiêu hoàn toàn rủi ro ngấm nước bọt/dịch ngà và hiện tượng thủy phân đứt gãy lớp lai dán theo thời gian.</span></li>
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Lực dán trượt song song (Shear Bond Strength):</strong> Đạt ~33.8 – 34.2 MPa đồng đều trên cả Men răng và Ngà răng mà không cần bước Etching hay Agitation lách cách.</span></li>
+        </ul>
+      )
+    },
+    {
+      id: 5,
+      title: 'TRỤ CỘT 5: DỮ LIỆU COMPOSITE BEAUTIFIL INJECTABLE X & BEAUTIFIL II LS',
+      icon: '🦾',
+      content: (
+        <div className="space-y-4">
+          <div>
+            <strong className="text-white mb-2 block font-body">Beautifil Injectable X (Composite Lỏng Đắp Khối):</strong>
+            <ul className="space-y-2">
+                <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed">Độ bền nén kỷ lục 400 MPa & Độ bền uốn 130 MPa.</span></li>
+                <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed">Tỷ lệ hạt độn nano S-PRG cao (67 wt%) chịu lực ăn nhai trực tiếp xoang I, II, V và gờ múi.</span></li>
+                <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed">Tính lưu biến Thixotropic tự lấp đầy hốc xoang, tuyệt đối không đọng bọt khí.</span></li>
+            </ul>
+          </div>
+          <div>
+            <strong className="text-white mb-2 block font-body">Beautifil II LS (Composite Đặc Universal):</strong>
+            <ul className="space-y-2">
+                <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed">Co ngót thể tích siêu thấp 0.85% & Ứng suất co ngót kỷ lục 2.72 MPa (thấp nhất trong các dòng nano-hybrid trên thị trường).</span></li>
+                <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed">Tỷ lệ hạt độn 83 wt%, độ bền nén 370 MPa, chống mài mòn và giữ độ bóng lâu dài.</span></li>
+            </ul>
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 6,
+      title: 'TRỤ CỘT 6: THỬ THÁCH AXIT KHẮC NGHIỆT 28 NGÀY (MÔI TRƯỜNG pH 4.5)',
+      icon: '🧪',
+      content: (
+        <ul className="space-y-3">
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Mô phỏng thử thách:</strong> Mẫu ngà răng gắn xi măng ngâm trong môi trường axit pH 4.5 (4 giờ/ngày) liên tục 28 ngày (mô phỏng môi trường miệng nguy cơ sâu răng cao).</span></li>
+          <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Kết quả tái khoáng bờ hoàn tất:</strong></span></li>
+          <ul className="space-y-2 pl-4">
+            <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-rose-400/50 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed">Nhóm xi măng S-PRG (BeautiLink SA) giữ nguyên độ cứng bề mặt ngà răng, độ sâu mất khoáng tiệm cận bằng 0.</span></li>
+            <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-rose-400/50 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed">Các loại xi măng thông thường bị axit ăn mòn sâu và mất gần 50% độ cứng bề mặt ngà.</span></li>
+            <li className="flex gap-3 items-start"><div className="w-1.5 h-1.5 rounded-full bg-rose-400/50 mt-2 shrink-0" /><span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed">Xuất hiện vùng tái khoáng hóa sáng đậm đặc ngay tại đường hoàn tất ngà răng nhờ phức hợp 6 ion (Fluoride, Strontium, Sodium, Borate, Aluminum, Silicate).</span></li>
+          </ul>
+        </ul>
+      )
+    }
+  ];
+
+  const [openPillars, setOpenPillars] = useState<number[]>([1, 4]);
+  const togglePillar = (id: number) => {
+    setOpenPillars(prev => prev.includes(id) ? prev.filter(p => p !== id) : [...prev, id]);
+  };
+
 
   const openCampaignModal = (title: string) => {
     setCampaignModalTitle(title);
@@ -179,61 +314,38 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
-              4 "Điểm mù lâm sàng" & nỗi đau dai dẳng
+              6 Trụ Cột <span className="text-[#8C2828]">Dữ Liệu Khoa Học</span>
             </h2>
-            <div className="w-24 h-1 bg-[#8C2828] mx-auto my-6"></div>
-            <p className="font-body text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
-              Bác sĩ không thao tác sai, nhưng chính việc dùng các <strong className="text-white">Vật liệu thụ động truyền thống</strong> đã vô tình biến các ca phục hình thành <strong className="text-red-400">"quả bom nổ chậm"</strong>:
+            <p className="text-slate-300 font-body max-w-2xl mx-auto text-base sm:text-lg">
+              Bằng chứng y văn & bảo chứng lâm sàng độc lập chứng minh hiệu quả tuyệt đối của hệ sinh thái Giomer 360°.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-red-500/50 transition-colors duration-300">
-               <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center shrink-0">
-                     <span className="font-heading font-bold text-2xl text-red-400">1</span>
-                  </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">Ám ảnh ê buốt & sâu răng tái phát xoang II</h3>
-               </div>
-               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
-                 <strong className="text-red-300">Căn nguyên:</strong> Keo dán chứa monomer HEMA ưa nước bị thủy phân (ngậm nước bọt/dịch ngà) làm đứt gãy lớp lai dán sau vài tháng, tạo kẽ rò vi thể khiến vi khuẩn xâm nhập.
-               </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+            <div className="flex flex-col">
+               {scientificPillars.slice(0, 3).map((pillar) => (
+                  <DarkAccordionItem
+                    key={pillar.id}
+                    icon={pillar.icon}
+                    question={pillar.title}
+                    answer={pillar.content}
+                    isOpen={openPillars.includes(pillar.id)}
+                    onClick={() => togglePillar(pillar.id)}
+                  />
+               ))}
             </div>
             
-            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-amber-500/50 transition-colors duration-300">
-               <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
-                     <span className="font-heading font-bold text-2xl text-amber-400">2</span>
-                  </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">Rủi ro đội phục hình & bong tróc veneer</h3>
-               </div>
-               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
-                 <strong className="text-amber-300">Căn nguyên:</strong> Màng keo dán quá dày gây cộm vướng khớp cắn, kết hợp keo dán thiếu Silane kháng axit khiến liên kết dán Zirconia/Sứ bị thoái hóa nhanh chóng.
-               </p>
-            </div>
-            
-            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 transition-colors duration-300">
-               <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
-                     <span className="font-heading font-bold text-2xl text-blue-400">3</span>
-                  </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"Nỗi sợ 7h tối": Dọn xi măng kẽ tứa máu</h3>
-               </div>
-               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
-                 <strong className="text-blue-300">Căn nguyên:</strong> Xi măng Resin đông cứng cơ học quá nhanh hoặc bết dính, cạo mỏi tay làm rách nướu, tổn thương màng nha chu và gây ám ảnh viền dán hôi miệng.
-               </p>
-            </div>
-            
-            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition-colors duration-300">
-               <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
-                     <span className="font-heading font-bold text-2xl text-emerald-400">4</span>
-                  </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"Thể tích chết" & chảy máu dòng tiền vật tư</h3>
-               </div>
-               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
-                 <strong className="text-emerald-300">Căn nguyên:</strong> Các vòi trộn Automix tiêu chuẩn kẹt lại từ 0.25g - 0.44g xi măng đắt tiền sau mỗi lần bơm, làm bốc hơi 30-40% lợi nhuận phòng khám mà Chủ nha khoa không hề biết.
-               </p>
+            <div className="flex flex-col">
+               {scientificPillars.slice(3, 6).map((pillar) => (
+                  <DarkAccordionItem
+                    key={pillar.id}
+                    icon={pillar.icon}
+                    question={pillar.title}
+                    answer={pillar.content}
+                    isOpen={openPillars.includes(pillar.id)}
+                    onClick={() => togglePillar(pillar.id)}
+                  />
+               ))}
             </div>
           </div>
         </div>
