@@ -86,7 +86,7 @@ export const ComprehensiveSolution = () => {
   const scientificPillars = [
     {
       id: 1,
-      title: 'TRỤ CỘT 1: ĐỘT PHÁ CẤP ĐỘ PHÂN TỬ – KHÁNG BỆNH SÂU RĂNG (TẠP CHÍ NATURE 2018)',
+      title: 'Đột phá cấp độ phân tử – Kháng bệnh sâu răng (Tạp chí Nature 2018)',
       icon: '🧬',
       content: (
         <ul className="space-y-3">
@@ -98,7 +98,7 @@ export const ComprehensiveSolution = () => {
     },
     {
       id: 2,
-      title: 'TRỤ CỘT 2: BẢO CHỨNG LÂM SÀNG DÀI HẠN 13 NĂM (TẠP CHÍ JADA - ĐẠI HỌC FLORIDA, MỸ)',
+      title: 'Bảo chứng lâm sàng dài hạn 13 năm (Tạp chí JADA - Đại học Florida, Mỹ)',
       icon: '🏛️',
       content: (
         <ul className="space-y-3">
@@ -110,7 +110,7 @@ export const ComprehensiveSolution = () => {
     },
     {
       id: 3,
-      title: 'TRỤ CỘT 3: DỮ LIỆU XI MĂNG BEAUTILINK SA (THE DENTAL ADVISOR 2024 - BÁO CÁO SỐ 168)',
+      title: 'Dữ liệu xi măng BeautiLink SA (The Dental Advisor 2024 - Báo cáo số 168)',
       icon: '🔗',
       content: (
         <ul className="space-y-3">
@@ -123,7 +123,7 @@ export const ComprehensiveSolution = () => {
     },
     {
       id: 4,
-      title: 'TRỤ CỘT 4: DỮ LIỆU KEO DÁN BEAUTIBOND XTREME (BBX)',
+      title: 'Dữ liệu keo dán BeautiBond Xtreme (BBX)',
       icon: '💧',
       content: (
         <ul className="space-y-3">
@@ -136,7 +136,7 @@ export const ComprehensiveSolution = () => {
     },
     {
       id: 5,
-      title: 'TRỤ CỘT 5: DỮ LIỆU COMPOSITE BEAUTIFIL INJECTABLE X & BEAUTIFIL II LS',
+      title: 'Dữ liệu composite Beautifil Injectable X & Beautifil II LS',
       icon: '🦾',
       content: (
         <div className="space-y-4">
@@ -160,7 +160,7 @@ export const ComprehensiveSolution = () => {
     },
     {
       id: 6,
-      title: 'TRỤ CỘT 6: THỬ THÁCH AXIT KHẮC NGHIỆT 28 NGÀY (MÔI TRƯỜNG pH 4.5)',
+      title: 'Thử thách axit khắc nghiệt 28 ngày (Môi trường pH 4.5)',
       icon: '🧪',
       content: (
         <ul className="space-y-3">
