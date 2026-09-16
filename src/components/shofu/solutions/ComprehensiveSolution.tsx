@@ -255,7 +255,7 @@ export const ComprehensiveSolution = () => {
             </p>
           </div>
 
-          <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 lg:p-12 mb-12 shadow-sm">
+          <div className="mb-12">
              <div className="text-center mb-10">
                 <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 mb-4">Lá Chắn 6 Ion Sinh Học (Giomer Molecular Shield)</h3>
                 <p className="text-slate-600 font-body max-w-2xl mx-auto">
@@ -264,32 +264,32 @@ export const ComprehensiveSolution = () => {
              </div>
              
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
-                   <div className="w-16 h-16 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-b from-white to-blue-50/80 p-6 rounded-2xl border border-blue-100 shadow-sm shadow-blue-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-blue-200/50 hover:border-blue-200 transition-all duration-300">
+                   <div className="w-16 h-16 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center mb-4">
                       <span className="font-heading font-bold text-blue-600 text-lg">F⁻ & Sr²⁺</span>
                    </div>
                    <h4 className="font-bold text-slate-900 mb-2">Tái khoáng hóa</h4>
                    <p className="text-sm text-slate-600 font-body">Tạo phức hợp Fluoro-apatite bít kín vĩnh viễn các ống ngà hở.</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
-                   <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-b from-white to-emerald-50/80 p-6 rounded-2xl border border-emerald-100 shadow-sm shadow-emerald-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-emerald-200/50 hover:border-emerald-200 transition-all duration-300">
+                   <div className="w-16 h-16 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center mb-4">
                       <span className="font-heading font-bold text-emerald-600 text-lg">Na⁺ & SiO₃²⁻</span>
                    </div>
                    <h4 className="font-bold text-slate-900 mb-2">Phục hồi vi mô</h4>
                    <p className="text-sm text-slate-600 font-body">Thúc đẩy phục hồi vi mô ngà răng suy thoái một cách chủ động.</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
-                   <div className="w-16 h-16 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-b from-white to-amber-50/80 p-6 rounded-2xl border border-amber-100 shadow-sm shadow-amber-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-amber-200/50 hover:border-amber-200 transition-all duration-300">
+                   <div className="w-16 h-16 rounded-full bg-amber-100 border border-amber-200 flex items-center justify-center mb-4">
                       <span className="font-heading font-bold text-amber-600 text-lg">BO₃³⁻</span>
                    </div>
                    <h4 className="font-bold text-slate-900 mb-2">Kháng Biofilm</h4>
                    <p className="text-sm text-slate-600 font-body">Kìm hãm gen của S. mutans, triệt tiêu khả năng bám dính tạo mảng sinh học.</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
-                   <div className="w-16 h-16 rounded-full bg-purple-50 border border-purple-100 flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-b from-white to-purple-50/80 p-6 rounded-2xl border border-purple-100 shadow-sm shadow-purple-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-purple-200/50 hover:border-purple-200 transition-all duration-300">
+                   <div className="w-16 h-16 rounded-full bg-purple-100 border border-purple-200 flex items-center justify-center mb-4">
                       <span className="font-heading font-bold text-purple-600 text-lg">Al³⁺</span>
                    </div>
                    <h4 className="font-bold text-slate-900 mb-2">Trung hòa Axit</h4>
