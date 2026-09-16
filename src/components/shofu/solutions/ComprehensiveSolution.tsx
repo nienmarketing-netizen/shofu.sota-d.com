@@ -93,7 +93,7 @@ export const ComprehensiveSolution = () => {
               </div>
               
               <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] text-slate-900 leading-[1.2] mb-6 tracking-tight">
-                Dập Tắt 100% Ám Ảnh Bảo Hành Cùng <span className="text-[#8C2828]">Hệ Sinh Thái Trị Liệu Sinh Học Giomer 360°</span>
+                Dập tắt 100% ám ảnh bảo hành cùng <span className="text-[#8C2828]">hệ sinh thái trị liệu sinh học Giomer 360°</span>
               </h1>
               
               <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
@@ -168,7 +168,7 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
-              4 "Điểm Mù Lâm Sàng" & Nỗi Đau Dai Dẳng
+              4 "Điểm mù lâm sàng" & nỗi đau dai dẳng
             </h2>
             <div className="w-24 h-1 bg-[#8C2828] mx-auto my-6"></div>
             <p className="font-body text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
@@ -238,7 +238,7 @@ export const ComprehensiveSolution = () => {
               <span>Paradigm shift</span>
             </div>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-6 tracking-tight">
-              Đừng Chỉ "Trám Bít Lỗ Hổng" – Hãy Dùng Vật Liệu Có Khả Năng <span className="text-[#8C2828]">"Chữa Lành"!</span>
+              Đừng chỉ "trám bít lỗ hổng" – Hãy dùng vật liệu có khả năng <span className="text-[#8C2828]">"chữa lành"!</span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
               Nha khoa hiện đại đã bước qua thời kỳ mài trám cơ học thụ động. Triết lý MiCD (Minimally Invasive Cosmetic Dentistry) hướng tới việc bảo tồn tối đa mô răng thật kết hợp cùng công nghệ hạt độn S-PRG (Surface Pre-Reacted Glass-ionomer) độc quyền của Shofu <span className="text-xs text-slate-400 align-super">[1]</span>.
@@ -295,7 +295,7 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-6 tracking-tight">
-              Hệ Sinh Thái <span className="text-[#8C2828]">5 Vũ Khí Cốt Lõi</span>
+              Hệ sinh thái <span className="text-[#8C2828]">5 vũ khí cốt lõi</span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
               Combo Giải Pháp Toàn Diện bao bọc trọn vẹn 100% nhu cầu lâm sàng hàng ngày tại phòng khám:
@@ -383,7 +383,7 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
-              Bằng Chứng Y Văn & <span className="text-[#8C2828]">Bảo Chứng Lâm Sàng</span>
+              Bằng chứng y văn & <span className="text-[#8C2828]">bảo chứng lâm sàng</span>
             </h2>
           </div>
 
@@ -518,7 +518,7 @@ export const ComprehensiveSolution = () => {
       {/* SECTION 7: RISK REVERSAL */}
       <section className="py-16 bg-slate-50 border-b border-slate-200">
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto text-center">
-          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 mb-10">Cam Kết Bảo Vệ 3 Lớp Từ Sota-D</h2>
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 mb-10">Cam kết bảo vệ 3 lớp từ Sota-D</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
                <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-4"><ShieldCheck className="w-6 h-6"/></div>
@@ -544,7 +544,7 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[60%] mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 leading-[1.3] tracking-tight">
-              Giải Đáp Hoài Nghi Lâm Sàng
+              Giải đáp hoài nghi lâm sàng
             </h2>
           </div>
           <div className="space-y-2">
@@ -566,7 +566,7 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[50%] mx-auto relative z-10">
           <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl">
             <div className="text-center mb-10">
-              <h2 className="font-heading font-black text-2xl sm:text-3xl text-slate-900 mb-4">Đăng Ký Chuyển Đổi</h2>
+              <h2 className="font-heading font-black text-2xl sm:text-3xl text-slate-900 mb-4">Đăng ký chuyển đổi</h2>
               <p className="text-slate-600 font-body text-sm sm:text-base">Sở hữu trọn bộ Master Ecosystem Shofu Nhật Bản cùng chính sách bảo đảm rủi ro 3 lớp tuyệt đối từ Sota-D.</p>
             </div>
             
