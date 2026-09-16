@@ -240,8 +240,7 @@ export const ComprehensiveSolution = () => {
       </section>
 
       {/* SECTION 3: PARADIGM SHIFT (MiCD & S-PRG) */}
-      <section className="py-20 lg:py-28 bg-white relative overflow-hidden border-b border-slate-200">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <section className="py-20 lg:py-28 bg-white bg-grid-pattern relative overflow-hidden border-b border-slate-200">
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-600 font-mono text-xs sm:text-sm font-bold tracking-wider mb-6">
@@ -302,7 +301,7 @@ export const ComprehensiveSolution = () => {
       </section>
 
       {/* SECTION 4: MASTER ECOSYSTEM PRODUCTS */}
-      <section className="py-20 lg:py-28 bg-slate-50 relative border-b border-slate-200">
+      <section className="py-20 lg:py-28 bg-slate-50 bg-grid-pattern relative overflow-hidden border-b border-slate-200">
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-6 tracking-tight">
@@ -527,7 +526,7 @@ export const ComprehensiveSolution = () => {
       </section>
 
       {/* SECTION 7: RISK REVERSAL */}
-      <section className="py-16 bg-slate-50 border-b border-slate-200">
+      <section className="py-16 bg-slate-50 bg-grid-pattern relative overflow-hidden border-b border-slate-200">
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto text-center">
           <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 mb-10">Cam kết bảo vệ 3 lớp từ Sota-D</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
@@ -551,7 +550,7 @@ export const ComprehensiveSolution = () => {
       </section>
 
       {/* SECTION 8: FAQ */}
-      <section className="py-20 bg-white relative border-b border-slate-200">
+      <section className="py-20 bg-white bg-grid-pattern relative overflow-hidden border-b border-slate-200">
         <div className="w-[90%] lg:w-[60%] mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 leading-[1.3] tracking-tight">
