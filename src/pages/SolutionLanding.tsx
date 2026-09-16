@@ -6,6 +6,7 @@ import { ArrowLeft, CheckCircle, BookOpen, Quote, Sparkles, Gift } from 'lucide-
 import { IndirectRestoration } from '../components/shofu/solutions/IndirectRestoration';
 import { DirectRestoration } from '../components/shofu/solutions/DirectRestoration';
 import { PreventiveDentistry } from '../components/shofu/solutions/PreventiveDentistry';
+import { ComprehensiveSolution } from '../components/shofu/solutions/ComprehensiveSolution';
 import { CampaignModal } from '../components/CampaignModal';
 
 const solutionData = {

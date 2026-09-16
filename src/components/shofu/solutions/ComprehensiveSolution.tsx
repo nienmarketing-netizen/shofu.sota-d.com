@@ -1,0 +1,609 @@
+import React, { useState } from 'react';
+import { Gift, BookOpen, CheckCircle, ArrowRight, ShieldCheck, Zap, Layers, Beaker, ChevronDown, Sparkles, AlertTriangle, Syringe, Shield, Star, Award, Microscope, Droplets, Target, XCircle, CheckSquare, Download, RefreshCw, HandHeart, Activity } from 'lucide-react';
+import { AnimatePresence, motion } from 'motion/react';
+import { CampaignModal } from '../../CampaignModal';
+import { CtaButton } from '../../ui/CtaButton';
+
+const ImagePlaceholder = ({ className, text }: { className?: string; text: string }) => (
+  <div className={`flex items-center justify-center p-4 text-center ${className} bg-slate-100/80 border-dashed border-2 border-slate-300 shadow-sm`}>
+    <span className="text-slate-500 font-medium font-body text-sm sm:text-base">{text}</span>
+  </div>
+);
+
+const AccordionItem: React.FC<{ question: string, answer: React.ReactNode, isOpen: boolean, onClick: () => void }> = ({ question, answer, isOpen, onClick }) => {
+  return (
+    <div className="border border-slate-200 rounded-2xl mb-4 bg-white overflow-hidden shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] transition-all duration-300 hover:border-[#8C2828]/30">
+      <button
+        className="w-full flex items-center justify-between p-5 sm:p-6 text-left focus:outline-none group"
+        onClick={onClick}
+      >
+        <span className="font-heading font-bold text-slate-900 text-base sm:text-lg group-hover:text-[#8C2828] transition-colors pr-6">
+          {question}
+        </span>
+        <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${isOpen ? 'bg-[#8C2828] text-white' : 'bg-slate-100 text-slate-500 group-hover:bg-red-50 group-hover:text-[#8C2828]'}`}>
+          <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+        </div>
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-slate-600 font-body text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+              {answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+export const ComprehensiveSolution = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [campaignModalTitle, setCampaignModalTitle] = useState('');
+  const [openFaqIndex, setOpenFaqIndex] = useState<number>(0);
+
+  const openCampaignModal = (title: string) => {
+    setCampaignModalTitle(title);
+    setIsModalOpen(true);
+  };
+
+  const faqs = [
+    {
+      q: "Dùng trọn bộ 5 sản phẩm Shofu này có bắt buộc phải thay đổi toàn bộ quy trình ở phòng khám không?",
+      a: (
+        <>
+          Không cần. Hệ sinh thái Shofu được thiết kế theo triết lý "True Universal" (Phổ quát thật sự) [cite: 26]. Bác sĩ có thể áp dụng ngay vào quy trình sẵn có mà không cần mua thêm thiết bị hay dụng cụ đắt tiền nào khác.
+        </>
+      )
+    },
+    {
+      q: "Tuýp Xi măng BeautiLink SA Handmix 15.6g quá to, liệu dùng không kịp có bị hư hỏng không?",
+      a: (
+        <>
+          Hoàn toàn không. BeautiLink SA sở hữu công nghệ xúc tác "Ngủ đông" (Hibernation) độc quyền, giúp duy trì độ tinh khiết hóa học và độ ổn định 100% trong 24 tháng ở nhiệt độ phòng (&lt;25°C). Chất lượng ca dán thứ 120 hoàn toàn sắc nét y hệt ca đầu tiên.
+        </>
+      )
+    },
+    {
+      q: "Keo dán BeautiBond Xtreme (BBX) màng 5µm và Xi măng 14µm có đảm bảo lực dán cơ học cho mão Zirconia không?",
+      a: (
+        <>
+          Lực dán đạt mức tuyệt đối &gt;40–50 MPa. Màng keo 5µm và màng xi măng 14µm giúp tối ưu hóa khoảng trống vật liệu, giúp viền phục hình khít sát hoàn hảo, loại bỏ nguy cơ cộm khớp hay vi thấm đổi màu viền nướu.
+        </>
+      )
+    }
+  ];
+
+  return (
+    <div className="w-full flex flex-col">
+      {/* SECTION 1: HERO */}
+      <section className="relative bg-slate-50 bg-grid-pattern pt-[100px] pb-16 md:pt-[120px] md:pb-24 overflow-hidden border-b border-slate-200">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-tr from-[#8C2828]/15 via-[#8C2828]/5 to-transparent rounded-full transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="w-full lg:w-3/5 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-red-100/80 border border-red-200 text-[#8C2828] font-mono text-xs sm:text-sm font-bold tracking-wider mb-6 sm:mb-8 shadow-sm">
+                <Sparkles className="w-4 h-4 text-amber-500" />
+                <span className="uppercase text-[10px] sm:text-xs">CHUẨN HÓA LÂM SÀNG CÙNG HỆ SINH THÁI GIOMER 360° – TRIẾT LÝ MiCD TỪ SHOFU (NHẬT BẢN)</span>
+              </div>
+              
+              <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] text-slate-900 leading-[1.2] mb-6 tracking-tight">
+                Dập Tắt 100% Ám Ảnh Bảo Hành Cùng <span className="text-[#8C2828]">Hệ Sinh Thái Trị Liệu Sinh Học Giomer 360°</span>
+              </h1>
+              
+              <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
+                Bác sĩ chỉnh khớp chuẩn xác, sửa soạn bờ hoàn tất khít sát, cô lập đàng hoàng... nhưng bệnh nhân vẫn than phiền vì ê buốt sau trám xoang II, rớt mặt dán sứ Veneer, hoặc viêm nướu tứa máu do dọn xi măng kẽ. Đã đến lúc nâng cấp toàn bộ "đạn dược" lâm sàng: Thay thế các vật liệu "trơ" thụ động cũ kỹ bằng Hệ sinh thái Trị liệu Sinh học Giomer 360° – Bảo vệ mô răng thật bền vững và dập tắt 100% ám ảnh bảo hành!
+              </p>
+
+              <div className="flex flex-col gap-4 mb-10 w-full max-w-2xl">
+                <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm">
+                  <div className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">🇯🇵</div>
+                  <p className="font-body text-sm sm:text-base text-slate-700 leading-tight mt-1.5">
+                    <strong className="text-slate-900">100% Made in Japan</strong> – Thương hiệu vật liệu nha khoa đỉnh cao hơn 100 năm lịch sử.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm">
+                  <div className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0"><Microscope className="w-4 h-4" /></div>
+                  <p className="font-body text-sm sm:text-base text-slate-700 leading-tight mt-1.5">
+                    <strong className="text-slate-900">Bằng chứng Y văn JADA (Mỹ)</strong> – Nghiên cứu 13 năm chứng minh tỷ lệ 96% phục hình hoàn toàn không sâu răng tái phát <span className="text-xs text-slate-400 align-super">[1]</span>.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm">
+                  <div className="w-8 h-8 rounded-full bg-red-50 text-red-600 flex items-center justify-center shrink-0"><ShieldCheck className="w-4 h-4" /></div>
+                  <p className="font-body text-sm sm:text-base text-slate-700 leading-tight mt-1.5">
+                    <strong className="text-slate-900">Công nghệ HEMA-Free & S-PRG Bioactive</strong> – Triệt tiêu thủy phân, khóa chặt vi kẽ, giải phóng 6 ion tái khoáng hóa 24/7 <span className="text-xs text-slate-400 align-super">[1, 26]</span>.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 w-full justify-center lg:justify-start">
+                <CtaButton onClick={() => openCampaignModal("SỞ HỮU GÓI MASTER ECOSYSTEM - TÀI TRỢ 100% QUÀ TẶNG")} className="group relative inline-flex items-center justify-center gap-2 bg-[#8C2828] text-white px-6 py-4 rounded-full font-mono text-sm font-bold uppercase tracking-wide hover:bg-red-900 hover:shadow-xl hover:shadow-red-900/30 transition-all duration-300">
+                  <span>SỞ HỮU GÓI MASTER ECOSYSTEM</span>
+                  <ArrowRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                </CtaButton>
+                <CtaButton onClick={() => openCampaignModal("TẢI SỔ TAY QUY TRÌNH 5 BƯỚC")} className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#8C2828] border-2 border-[#8C2828] px-6 py-4 rounded-full font-mono text-sm font-bold uppercase tracking-wide hover:bg-red-50 hover:shadow-lg transition-all duration-300">
+                  <Download className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 transition-all" />
+                  <span>TẢI SỔ TAY (EBOOK MIỄN PHÍ)</span>
+                </CtaButton>
+              </div>
+            </div>
+            
+            <div className="w-full lg:w-2/5 relative">
+               <div className="absolute inset-0 bg-gradient-to-tr from-[#8C2828]/20 to-transparent rounded-full blur-3xl"></div>
+               <ImagePlaceholder className="w-full aspect-[4/5] rounded-2xl relative z-10 bg-white" text="Ảnh Master Ecosystem (Bộ 5 Sản phẩm cốt lõi)" />
+               
+               {/* Floating elements */}
+               <div className="absolute -left-6 top-1/4 bg-white p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-slow hidden sm:flex">
+                 <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+                    <ShieldCheck className="w-5 h-5" />
+                 </div>
+                 <div>
+                    <div className="font-bold text-slate-900 text-sm">Bioactive</div>
+                    <div className="text-xs text-slate-500">Trị liệu sinh học</div>
+                 </div>
+               </div>
+               
+               <div className="absolute -right-6 bottom-1/4 bg-white p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-delayed hidden sm:flex">
+                 <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5" />
+                 </div>
+                 <div>
+                    <div className="font-bold text-slate-900 text-sm">HEMA-Free</div>
+                    <div className="text-xs text-slate-500">Kháng nước 100%</div>
+                 </div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2: 4 PAIN POINTS - DARK THEME */}
+      <section className="py-20 lg:py-28 bg-slate-900 relative border-y border-slate-800 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern-light opacity-100 pointer-events-none"></div>
+        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
+              4 "Điểm Mù Lâm Sàng" & Nỗi Đau Dai Dẳng
+            </h2>
+            <div className="w-24 h-1 bg-[#8C2828] mx-auto my-6"></div>
+            <p className="font-body text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
+              Bác sĩ không thao tác sai, nhưng chính việc dùng các <strong className="text-white">VẬT LIỆU THỤ ĐỘNG truyền thống</strong> đã vô tình biến các ca phục hình thành <strong className="text-red-400">"quả bom nổ chậm"</strong>:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-red-500/50 transition-colors duration-300">
+               <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center shrink-0">
+                     <span className="font-heading font-bold text-2xl text-red-400">1</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">ÁM ẢNH Ê BUỐT & SÂU RĂNG TÁI PHÁT XOANG II</h3>
+               </div>
+               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
+                 <strong className="text-red-300">Căn nguyên:</strong> Keo dán chứa monomer HEMA ưa nước bị thủy phân (ngậm nước bọt/dịch ngà) làm đứt gãy lớp lai dán sau vài tháng, tạo kẽ rò vi thể khiến vi khuẩn xâm nhập.
+               </p>
+            </div>
+            
+            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-amber-500/50 transition-colors duration-300">
+               <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
+                     <span className="font-heading font-bold text-2xl text-amber-400">2</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">RỦI RO ĐỘI PHỤC HÌNH & BONG TRÓC VENEER</h3>
+               </div>
+               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
+                 <strong className="text-amber-300">Căn nguyên:</strong> Màng keo dán quá dày (&gt;10µm) gây cộm vướng khớp cắn, kết hợp keo dán thiếu Silane kháng axit khiến liên kết dán Zirconia/Sứ bị thoái hóa nhanh chóng.
+               </p>
+            </div>
+            
+            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 transition-colors duration-300">
+               <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+                     <span className="font-heading font-bold text-2xl text-blue-400">3</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"NỖI SỢ 7H TỐI": DỌN XI MĂNG KẼ TỨA MÁU</h3>
+               </div>
+               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
+                 <strong className="text-blue-300">Căn nguyên:</strong> Xi măng Resin đông cứng cơ học quá nhanh hoặc bết dính, cạo mỏi tay làm rách nướu, tổn thương màng nha chu và gây ám ảnh viền dán hôi miệng.
+               </p>
+            </div>
+            
+            <div className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition-colors duration-300">
+               <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
+                     <span className="font-heading font-bold text-2xl text-emerald-400">4</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"THỂ TÍCH CHẾT" & CHẢY MÁU DÒNG TIỀN VẬT TƯ</h3>
+               </div>
+               <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
+                 <strong className="text-emerald-300">Căn nguyên:</strong> Các vòi trộn Automix tiêu chuẩn kẹt lại từ 0.25g - 0.44g xi măng đắt tiền sau mỗi lần bơm, làm bốc hơi 30-40% lợi nhuận phòng khám mà Chủ nha khoa không hề biết.
+               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: PARADIGM SHIFT (MiCD & S-PRG) */}
+      <section className="py-20 lg:py-28 bg-white relative overflow-hidden border-b border-slate-200">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-600 font-mono text-xs sm:text-sm font-bold tracking-wider mb-6">
+              <RefreshCw className="w-4 h-4" />
+              <span>PARADIGM SHIFT</span>
+            </div>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-6 tracking-tight">
+              Đừng Chỉ "Trám Bít Lỗ Hổng" – Hãy Dùng Vật Liệu Có Khả Năng <span className="text-[#8C2828]">"Chữa Lành"!</span>
+            </h2>
+            <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
+              Nha khoa hiện đại đã bước qua thời kỳ mài trám cơ học thụ động. Triết lý MiCD (Minimally Invasive Cosmetic Dentistry) hướng tới việc bảo tồn tối đa mô răng thật kết hợp cùng công nghệ hạt độn S-PRG (Surface Pre-Reacted Glass-ionomer) độc quyền của Shofu <span className="text-xs text-slate-400 align-super">[1]</span>.
+            </p>
+          </div>
+
+          <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 lg:p-12 mb-12 shadow-sm">
+             <div className="text-center mb-10">
+                <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 mb-4">Lá Chắn 6 Ion Sinh Học (Giomer Molecular Shield)</h3>
+                <p className="text-slate-600 font-body max-w-2xl mx-auto">
+                   Hạt độn S-PRG hoạt động như một "Bình ắc quy sinh học" liên tục phóng thích & tự sạc lại 6 loại ion y tế <span className="text-xs text-slate-400 align-super">[1]</span>:
+                </p>
+             </div>
+             
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
+                   <div className="w-16 h-16 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center mb-4">
+                      <span className="font-heading font-bold text-blue-600 text-lg">F⁻ & Sr²⁺</span>
+                   </div>
+                   <h4 className="font-bold text-slate-900 mb-2">Tái khoáng hóa</h4>
+                   <p className="text-sm text-slate-600 font-body">Tạo phức hợp Fluoro-apatite bít kín vĩnh viễn các ống ngà hở.</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
+                   <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-4">
+                      <span className="font-heading font-bold text-emerald-600 text-lg">Na⁺ & SiO₃²⁻</span>
+                   </div>
+                   <h4 className="font-bold text-slate-900 mb-2">Phục hồi vi mô</h4>
+                   <p className="text-sm text-slate-600 font-body">Thúc đẩy phục hồi vi mô ngà răng suy thoái một cách chủ động.</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
+                   <div className="w-16 h-16 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center mb-4">
+                      <span className="font-heading font-bold text-amber-600 text-lg">BO₃³⁻</span>
+                   </div>
+                   <h4 className="font-bold text-slate-900 mb-2">Kháng Biofilm</h4>
+                   <p className="text-sm text-slate-600 font-body">Kìm hãm gen của S. mutans, triệt tiêu khả năng bám dính tạo mảng sinh học.</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
+                   <div className="w-16 h-16 rounded-full bg-purple-50 border border-purple-100 flex items-center justify-center mb-4">
+                      <span className="font-heading font-bold text-purple-600 text-lg">Al³⁺</span>
+                   </div>
+                   <h4 className="font-bold text-slate-900 mb-2">Trung hòa Axit</h4>
+                   <p className="text-sm text-slate-600 font-body">Trung hòa axit chủ động, kiềm hóa môi trường khi pH tụt dưới 5.5.</p>
+                </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: MASTER ECOSYSTEM PRODUCTS */}
+      <section className="py-20 lg:py-28 bg-slate-50 relative border-b border-slate-200">
+        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-6 tracking-tight">
+              Hệ Sinh Thái <span className="text-[#8C2828]">5 Vũ Khí Cốt Lõi</span>
+            </h2>
+            <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
+              Combo Giải Pháp Toàn Diện bao bọc trọn vẹn 100% nhu cầu lâm sàng hàng ngày tại phòng khám:
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {/* Prod 1 */}
+            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row gap-8 items-center shadow-sm hover:shadow-md transition-shadow">
+               <div className="w-full lg:w-1/3">
+                  <ImagePlaceholder className="w-full aspect-square rounded-2xl" text="BeautiBond Xtreme" />
+               </div>
+               <div className="w-full lg:w-2/3 flex flex-col gap-4">
+                  <div className="inline-flex px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-bold w-fit">KEO DÁN THẾ HỆ 8</div>
+                  <h3 className="font-heading font-bold text-2xl text-slate-900">1. BEAUTIBOND XTREME (BBX) – 5ml</h3>
+                  <ul className="space-y-3 font-body text-slate-600 mt-2">
+                     <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Màng keo kỷ lục 5µm, 100% HEMA-Free kỵ nước (dung môi Acetone bay hơi chớp nhoáng).</span></li>
+                     <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tích hợp ARS bọc giáp Silane & Monomer MDP, dán thẳng Zirconia/Sứ/Ngà chỉ với 1 chai.</span></li>
+                  </ul>
+               </div>
+            </div>
+            
+            {/* Prod 2 */}
+            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row-reverse gap-8 items-center shadow-sm hover:shadow-md transition-shadow">
+               <div className="w-full lg:w-1/3">
+                  <ImagePlaceholder className="w-full aspect-square rounded-2xl" text="BeautiLink SA" />
+               </div>
+               <div className="w-full lg:w-2/3 flex flex-col gap-4">
+                  <div className="inline-flex px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold w-fit">XI MĂNG RESIN TỰ DÁN</div>
+                  <h3 className="font-heading font-bold text-2xl text-slate-900">2. BEAUTILINK SA – Tuýp khổng lồ 15.6g</h3>
+                  <ul className="space-y-3 font-body text-slate-600 mt-2">
+                     <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Thể tích khổng lồ 9ml (15.6g) thực hiện được ~120 ca gắn (chỉ ~16.600đ/ca).</span></li>
+                     <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Màng xi măng 14µm, Tack-cure 1-2 giây lột sạch xi măng dư nguyên khối (One-Sweep).</span></li>
+                  </ul>
+               </div>
+            </div>
+
+            {/* Prod 3 */}
+            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row gap-8 items-center shadow-sm hover:shadow-md transition-shadow">
+               <div className="w-full lg:w-1/3">
+                  <ImagePlaceholder className="w-full aspect-square rounded-2xl" text="Beautifil Injectable X" />
+               </div>
+               <div className="w-full lg:w-2/3 flex flex-col gap-4">
+                  <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold w-fit">COMPOSITE LỎNG ĐẮP KHỐI</div>
+                  <h3 className="font-heading font-bold text-2xl text-slate-900">3. BEAUTIFIL INJECTABLE X – 2.2g</h3>
+                  <ul className="space-y-3 font-body text-slate-600 mt-2">
+                     <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Độ bền nén kỷ lục 400 MPa, đắp khối chịu lực ăn nhai trực tiếp xoang I, II, V.</span></li>
+                     <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tính lưu biến Thixotropic tự lấp đầy hốc xoang vi thể, tuyệt đối không đọng bọt khí.</span></li>
+                  </ul>
+               </div>
+            </div>
+            
+            {/* Prod 4 & 5 Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+               <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col gap-6 shadow-sm hover:shadow-md transition-shadow">
+                  <ImagePlaceholder className="w-full aspect-[16/9] rounded-2xl" text="Beautifil II / LS" />
+                  <div>
+                     <div className="inline-flex px-3 py-1 bg-amber-50 text-amber-600 rounded-full text-xs font-bold w-fit mb-3">COMPOSITE ĐẶC</div>
+                     <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">4. BEAUTIFIL II / BEAUTIFIL II LS</h3>
+                     <ul className="space-y-3 font-body text-slate-600 text-sm">
+                        <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span>Độ co ngót thể tích siêu thấp, chống bám mảng sinh học nhờ hạt độn S-PRG.</span></li>
+                        <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span>Hiệu ứng "Tắc kè hoa" tự động tiệp màu răng thật hoàn hảo.</span></li>
+                     </ul>
+                  </div>
+               </div>
+               <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col gap-6 shadow-sm hover:shadow-md transition-shadow">
+                  <ImagePlaceholder className="w-full aspect-[16/9] rounded-2xl" text="PRG Barrier Coat / BeautiSealant" />
+                  <div>
+                     <div className="inline-flex px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-xs font-bold w-fit mb-3">PHÒNG NGỪA & PHONG TỎA</div>
+                     <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">5. TỰ CHỌN 1 TRONG 2 GIẢI PHÁP:</h3>
+                     <ul className="space-y-3 font-body text-slate-600 text-sm">
+                        <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span><strong className="text-slate-800">Bộ PRG Barrier Coat Mini-Kit:</strong> Véc-ni phủ 15µm trị liệu ê buốt 3-6 tháng.</span></li>
+                        <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span><strong className="text-slate-800">Bộ BeautiSealant Set:</strong> Trám bít hố rãnh Self-Etch không rửa nước.</span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: SCIENTIFIC PROOF */}
+      <section className="py-20 lg:py-28 bg-slate-900 relative border-y border-slate-800 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern-light opacity-100 pointer-events-none"></div>
+        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
+              Bằng Chứng Y Văn & <span className="text-[#8C2828]">Bảo Chứng Lâm Sàng</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-8 lg:p-10 flex flex-col gap-6">
+              <div className="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center border border-blue-500/30">
+                <BookOpen className="w-6 h-6" />
+              </div>
+              <h3 className="font-heading font-bold text-lg sm:text-2xl text-white">Nghiên cứu Độc lập 13 Năm từ Đại học Florida (Tạp chí JADA - Mỹ)</h3>
+              <ul className="space-y-4">
+                <li className="flex gap-3 items-start">
+                   <div className="w-2 h-2 rounded-full bg-blue-400 mt-2 shrink-0" />
+                   <span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Mốc 8 năm:</strong> 100% tỷ lệ lưu giữ phục hình | 0% nhạy cảm ngà sau điều trị | 0% sâu răng thứ phát.</span>
+                </li>
+                <li className="flex gap-3 items-start">
+                   <div className="w-2 h-2 rounded-full bg-blue-400 mt-2 shrink-0" />
+                   <span className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"><strong className="text-white">Mốc 13 năm:</strong> 96% phục hình hoàn toàn sạch bóng sâu răng tái phát, chứng minh khả năng bảo vệ sinh học vĩnh cửu.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-8 lg:p-10 flex flex-col gap-6">
+              <div className="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center border border-emerald-500/30">
+                <Award className="w-6 h-6" />
+              </div>
+              <h3 className="font-heading font-bold text-lg sm:text-2xl text-white">Chứng nhận Độc lập từ The Dental Advisor (Mỹ)</h3>
+              <p className="text-slate-300 font-body text-sm sm:text-base leading-relaxed">
+                BeautiBond Xtreme & BeautiLink SA đạt lực dán trượt bền bỉ <strong className="text-white">&gt;40–50 MPa</strong> trên Zirconia và Sứ Lithium Disilicate ngay cả sau 5.000 chu kỳ thử nghiệm sốc nhiệt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6: CORE OFFER */}
+      <section className="py-20 lg:py-28 bg-[#8C2828] bg-grid-pattern-light relative overflow-hidden" id="offer">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-white/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
+          <div className="text-center text-white mb-16">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/20 border border-white/20 font-mono text-xs sm:text-sm font-bold tracking-wider mb-6">
+              <Gift className="w-4 h-4 text-amber-300" />
+              <span className="text-white">Ưu đãi độc quyền trong tháng này</span>
+            </div>
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.3] mb-6">
+              GÓI CHUYỂN ĐỔI: MASTER ECOSYSTEM <br className="hidden md:block"/> <span className="text-amber-300">"HỆ SINH THÁI GIOMER 360°"</span>
+            </h2>
+            <p className="text-white/80 font-body text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+              (Chương trình hỗ trợ chuẩn hóa phòng khám từ Sota-D – Giới hạn đúng 15 phòng khám đăng ký sớm nhất)
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col">
+              <div className="w-full relative mb-6">
+                 <ImagePlaceholder className="w-full aspect-[4/3] rounded-xl bg-slate-100 border border-slate-200" text="Ảnh 5 SP Vật Lý" />
+              </div>
+              <h4 className="font-heading font-bold text-xl text-[#8C2828] border-b border-slate-200 pb-3 mb-4">BỘ 5 SẢN PHẨM CỐT LÕI</h4>
+              <ul className="space-y-4 font-body text-sm sm:text-base flex-1 text-slate-700">
+                 <li className="flex justify-between items-start gap-4">
+                    <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Keo dán BeautiBond Xtreme (5ml)</span></div>
+                    <span className="font-mono text-slate-400 line-through shrink-0 whitespace-nowrap">1.420.000đ</span>
+                 </li>
+                 <li className="flex justify-between items-start gap-4">
+                    <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Xi măng BeautiLink SA (15.6g)</span></div>
+                    <span className="font-mono text-slate-400 line-through shrink-0 whitespace-nowrap">1.995.000đ</span>
+                 </li>
+                 <li className="flex justify-between items-start gap-4">
+                    <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Composite BeautiFil Injectable X</span></div>
+                    <span className="font-mono text-slate-400 line-through shrink-0 whitespace-nowrap">595.000đ</span>
+                 </li>
+                 <li className="flex justify-between items-start gap-4">
+                    <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Composite BeautiFil II / LS</span></div>
+                    <span className="font-mono text-slate-400 line-through shrink-0 whitespace-nowrap">495.000đ</span>
+                 </li>
+                 <li className="flex justify-between items-start gap-4">
+                    <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Bộ PRG Barrier Coat / BeautiSealant</span></div>
+                    <span className="font-mono text-slate-400 line-through shrink-0 whitespace-nowrap">945.000đ</span>
+                 </li>
+              </ul>
+            </div>
+            
+            <div className="bg-slate-900 border-2 border-amber-400/50 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-amber-400 text-slate-900 font-bold text-xs uppercase px-4 py-1.5 rounded-bl-xl z-10">Tài trợ 100%</div>
+              <div className="w-full relative mb-6">
+                 <ImagePlaceholder className="w-full aspect-[4/3] rounded-xl bg-slate-800 border border-slate-700" text="Ảnh Quà tặng VIP" />
+              </div>
+              <h4 className="font-heading font-bold text-xl text-amber-400 border-b border-slate-700 pb-3 mb-4">QUÀ TẶNG & ĐẶC QUYỀN VIP</h4>
+              <ul className="space-y-4 font-body text-sm sm:text-base flex-1 text-slate-300">
+                 <li className="flex justify-between items-start gap-4">
+                    <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>01 Bộ đánh bóng Super-Snap Mini</span></div>
+                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 450K</span>
+                 </li>
+                 <li className="flex justify-between items-start gap-4">
+                    <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>01 Bộ mũi mài Composite Polishing CA</span></div>
+                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 740K</span>
+                 </li>
+                 <li className="flex justify-between items-start gap-4">
+                    <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>01 Lọ BBX Trial (2ml)</span></div>
+                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 600K</span>
+                 </li>
+                 <li className="flex justify-between items-start gap-4">
+                    <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>Bộ 3 Sổ tay E-Guidebook MiCD</span></div>
+                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 1.5M</span>
+                 </li>
+                 <li className="flex justify-between items-start gap-4">
+                    <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>Video Masterclass Dọn xi măng 2s</span></div>
+                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 2.0M</span>
+                 </li>
+                 <li className="flex justify-between items-start gap-4">
+                    <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>Vé VIP Group Cố vấn 1:1 (90 ngày)</span></div>
+                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 2.5M</span>
+                 </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-6 sm:p-10 text-center shadow-xl">
+             <div className="font-mono text-white/60 mb-2">TỔNG GIÁ TRỊ THỰC TẾ: <span className="line-through decoration-red-500/50">13.735.000 VNĐ</span></div>
+             <div className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-4 drop-shadow-md">
+                5.450.000 VNĐ
+             </div>
+             <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 font-bold rounded-full text-sm sm:text-base mb-6">
+                Tiết kiệm &gt;60%
+             </div>
+             <p className="font-body text-white/80 text-sm sm:text-base max-w-3xl mx-auto">
+                <strong className="text-white">Cơ chế thanh toán:</strong> Bác sĩ chỉ thanh toán đúng giá trị vật lý của bộ 5 sản phẩm cốt lõi, toàn bộ Hệ thống Tài liệu số, Dụng cụ đánh bóng và Đặc quyền Cố vấn 1:1 được <strong className="text-amber-300">TÀI TRỢ 100%</strong>.
+             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 7: RISK REVERSAL */}
+      <section className="py-16 bg-slate-50 border-b border-slate-200">
+        <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto text-center">
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 mb-10">Cam Kết Bảo Vệ 3 Lớp Từ Sota-D</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
+               <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-4"><ShieldCheck className="w-6 h-6"/></div>
+               <h4 className="font-bold text-slate-900 mb-3">Dùng thử an tâm (30 ngày)</h4>
+               <p className="text-sm text-slate-600 font-body">Nếu gặp khó khăn kỹ thuật, Chuyên gia sẽ Call 1:1 gỡ rối. Nếu không hợp tay, thu hồi và hoàn tiền 100% phần chưa dùng.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
+               <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-4"><RefreshCw className="w-6 h-6"/></div>
+               <h4 className="font-bold text-slate-900 mb-3">Bảo hiểm thói quen</h4>
+               <p className="text-sm text-slate-600 font-body">Trong vòng 30 ngày, nếu không quen Handmix hoặc muốn đổi tông màu, hỗ trợ quy đổi 100% giá trị tương đương.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
+               <div className="w-12 h-12 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mb-4"><CheckSquare className="w-6 h-6"/></div>
+               <h4 className="font-bold text-slate-900 mb-3">Minh bạch chất lượng (90 ngày)</h4>
+               <p className="text-sm text-slate-600 font-body">Cam kết 1 đổi 1 ngay lập tức nếu sản phẩm có hiện tượng tách pha hay lỗi đông cứng kể từ khi mở nắp (&lt;25°C).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 8: FAQ */}
+      <section className="py-20 bg-white relative border-b border-slate-200">
+        <div className="w-[90%] lg:w-[60%] mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 leading-[1.3] tracking-tight">
+              Giải Đáp Hoài Nghi Lâm Sàng
+            </h2>
+          </div>
+          <div className="space-y-2">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                question={faq.q}
+                answer={faq.a}
+                isOpen={openFaqIndex === index}
+                onClick={() => setOpenFaqIndex(openFaqIndex === index ? -1 : index)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 9: FORM / CTA */}
+      <section className="py-20 lg:py-28 bg-slate-900 bg-grid-pattern-light relative">
+        <div className="w-[90%] lg:w-[50%] mx-auto relative z-10">
+          <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl">
+            <div className="text-center mb-10">
+              <h2 className="font-heading font-black text-2xl sm:text-3xl text-slate-900 mb-4">Đăng Ký Chuyển Đổi</h2>
+              <p className="text-slate-600 font-body text-sm sm:text-base">Sở hữu trọn bộ Master Ecosystem Shofu Nhật Bản cùng chính sách bảo đảm rủi ro 3 lớp tuyệt đối từ Sota-D.</p>
+            </div>
+            
+            <form className="space-y-6">
+               <div>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">Họ và tên Bác sĩ *</label>
+                  <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#8C2828]/50 focus:border-[#8C2828] transition-all bg-slate-50" placeholder="Nhập họ và tên..." />
+               </div>
+               <div>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">Số điện thoại Zalo *</label>
+                  <input type="tel" className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#8C2828]/50 focus:border-[#8C2828] transition-all bg-slate-50" placeholder="Nhập số điện thoại..." />
+               </div>
+               <div>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">Tên Phòng khám & Địa chỉ *</label>
+                  <textarea rows={3} className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#8C2828]/50 focus:border-[#8C2828] transition-all bg-slate-50" placeholder="Nhập địa chỉ nhận hàng..."></textarea>
+               </div>
+               
+               <button type="button" onClick={() => openCampaignModal("Đăng ký thành công")} className="w-full bg-[#8C2828] text-white font-bold font-mono py-4 rounded-xl shadow-lg hover:bg-red-900 hover:shadow-xl transition-all hover:-translate-y-1 mt-4">
+                  💥 XÁC NHẬN ĐẶT MUA - NHẬN QUÀ 8.285.000Đ
+               </button>
+            </form>
+            
+            <div className="mt-8 pt-6 border-t border-slate-100 flex items-start gap-3">
+               <Shield className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+               <p className="text-xs sm:text-sm text-slate-500 font-body leading-relaxed">
+                  <strong className="text-slate-700">Thông tin được bảo mật 100%.</strong> Kiểm tra hàng đầy đủ tem nhãn Shofu chính hãng trước khi thanh toán. Hỗ trợ tư vấn kỹ thuật 1:1 từ Chuyên gia.
+               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CampaignModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={campaignModalTitle}
+      />
+    </div>
+  );
+};
