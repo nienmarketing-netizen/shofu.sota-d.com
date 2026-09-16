@@ -293,7 +293,7 @@ export const ComprehensiveSolution = () => {
              <div className="text-center">
                 <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 mb-4">Lá Chắn 6 Ion Sinh Học (Giomer Molecular Shield)</h3>
                 <p className="text-slate-600 font-body max-w-2xl mx-auto">
-                   Hạt độn S-PRG hoạt động như một "Bình ắc quy sinh học" liên tục phóng thích & tự sạc lại 6 loại ion y tế:
+                   Hạt độn S-PRG hoạt động như một "Bình ắc quy sinh học" liên tục phóng thích & tự sạc lại 6 loại ion y tế.
                 </p>
              </div>
           </div>
