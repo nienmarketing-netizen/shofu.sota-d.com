@@ -110,7 +110,7 @@ export const ComprehensiveSolution = () => {
     },
     {
       id: 3,
-      title: 'Dữ liệu xi măng BeautiLink SA (The Dental Advisor 2024 - Báo cáo số 168)',
+      title: 'Lực dán áp đảo 45-50 MPa trên Zirconia (The Dental Advisor 2024 - Báo cáo số 168)',
       icon: '🔗',
       content: (
         <ul className="space-y-3">
@@ -123,7 +123,7 @@ export const ComprehensiveSolution = () => {
     },
     {
       id: 4,
-      title: 'Dữ liệu keo dán BeautiBond Xtreme (BBX)',
+      title: 'Kỷ lục màng keo siêu mỏng 5µm & Lực dán 34 MPa (Đại học SUNY Buffalo)',
       icon: '💧',
       content: (
         <ul className="space-y-3">
@@ -136,7 +136,7 @@ export const ComprehensiveSolution = () => {
     },
     {
       id: 5,
-      title: 'Dữ liệu composite Beautifil Injectable X & Beautifil II LS',
+      title: 'Kỷ lục độ bền nén 400 MPa & Co ngót thể tích siêu thấp 0.85%',
       icon: '🦾',
       content: (
         <div className="space-y-4">
