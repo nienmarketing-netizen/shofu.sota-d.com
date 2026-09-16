@@ -121,13 +121,13 @@ export const ComprehensiveSolution = () => {
                 <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm">
                   <div className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0"><Microscope className="w-4 h-4" /></div>
                   <p className="font-body text-sm sm:text-base text-slate-700 leading-tight mt-1.5">
-                    <strong className="text-slate-900">Bằng chứng Y văn JADA (Mỹ)</strong> – Nghiên cứu 13 năm chứng minh tỷ lệ 96% phục hình hoàn toàn không sâu răng tái phát <span className="text-xs text-slate-400 align-super">[1]</span>.
+                    <strong className="text-slate-900">Bằng chứng Y văn JADA (Mỹ)</strong> – Nghiên cứu 13 năm chứng minh tỷ lệ 96% phục hình hoàn toàn không sâu răng tái phát.
                   </p>
                 </div>
                 <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm">
                   <div className="w-8 h-8 rounded-full bg-red-50 text-red-600 flex items-center justify-center shrink-0"><ShieldCheck className="w-4 h-4" /></div>
                   <p className="font-body text-sm sm:text-base text-slate-700 leading-tight mt-1.5">
-                    <strong className="text-slate-900">Công nghệ HEMA-Free & S-PRG Bioactive</strong> – Triệt tiêu thủy phân, khóa chặt vi kẽ, giải phóng 6 ion tái khoáng hóa 24/7 <span className="text-xs text-slate-400 align-super">[1, 26]</span>.
+                    <strong className="text-slate-900">Công nghệ HEMA-Free & S-PRG Bioactive</strong> – Triệt tiêu thủy phân, khóa chặt vi kẽ, giải phóng 6 ion tái khoáng hóa 24/7.
                   </p>
                 </div>
               </div>
@@ -252,7 +252,7 @@ export const ComprehensiveSolution = () => {
               Đừng chỉ "trám bít lỗ hổng" – Hãy dùng vật liệu có khả năng <span className="text-[#8C2828]">"chữa lành"!</span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              Nha khoa hiện đại đã bước qua thời kỳ <span className="line-through decoration-slate-400 text-slate-400">mài trám cơ học thụ động</span>. Triết lý <strong className="text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded-md">MiCD (Minimally Invasive Cosmetic Dentistry)</strong> hướng tới việc <strong className="text-emerald-600">bảo tồn tối đa mô răng thật</strong> kết hợp cùng <strong className="text-[#8C2828] bg-red-50 px-1.5 py-0.5 rounded-md border border-red-100">công nghệ hạt độn S-PRG (Surface Pre-Reacted Glass-ionomer)</strong> độc quyền của Shofu <span className="text-xs text-slate-400 align-super">[1]</span>.
+              Nha khoa hiện đại đã bước qua thời kỳ <span className="line-through decoration-slate-400 text-slate-400">mài trám cơ học thụ động</span>. Triết lý <strong className="text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded-md">MiCD (Minimally Invasive Cosmetic Dentistry)</strong> hướng tới việc <strong className="text-emerald-600">bảo tồn tối đa mô răng thật</strong> kết hợp cùng <strong className="text-[#8C2828] bg-red-50 px-1.5 py-0.5 rounded-md border border-red-100">công nghệ hạt độn S-PRG (Surface Pre-Reacted Glass-ionomer)</strong> độc quyền của Shofu.
             </p>
           </div>
 
@@ -260,7 +260,7 @@ export const ComprehensiveSolution = () => {
              <div className="text-center mb-10">
                 <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 mb-4">Lá Chắn 6 Ion Sinh Học (Giomer Molecular Shield)</h3>
                 <p className="text-slate-600 font-body max-w-2xl mx-auto">
-                   Hạt độn S-PRG hoạt động như một "Bình ắc quy sinh học" liên tục phóng thích & tự sạc lại 6 loại ion y tế <span className="text-xs text-slate-400 align-super">[1]</span>:
+                   Hạt độn S-PRG hoạt động như một "Bình ắc quy sinh học" liên tục phóng thích & tự sạc lại 6 loại ion y tế:
                 </p>
              </div>
              
