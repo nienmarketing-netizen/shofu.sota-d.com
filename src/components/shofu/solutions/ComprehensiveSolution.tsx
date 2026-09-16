@@ -104,11 +104,11 @@ export const ComprehensiveSolution = () => {
               </div>
               
               <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] text-slate-900 leading-[1.2] mb-6 tracking-tight">
-                Dập tắt 100% ám ảnh bảo hành cùng <span className="text-[#8C2828]">hệ sinh thái trị liệu sinh học Giomer 360°</span>
+                Dập tắt ám ảnh bảo hành cùng <span className="text-[#8C2828]">hệ sinh thái trị liệu sinh học Giomer 360°</span>
               </h1>
               
               <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
-                Bác sĩ chỉnh khớp chuẩn xác, sửa soạn bờ hoàn tất khít sát, cô lập đàng hoàng... nhưng bệnh nhân vẫn than phiền vì ê buốt sau trám xoang II, rớt mặt dán sứ Veneer, hoặc viêm nướu tứa máu do dọn xi măng kẽ. Đã đến lúc nâng cấp toàn bộ "đạn dược" lâm sàng: Thay thế các vật liệu "trơ" thụ động cũ kỹ bằng Hệ sinh thái Trị liệu Sinh học Giomer 360° – Bảo vệ mô răng thật bền vững và dập tắt 100% ám ảnh bảo hành!
+                Bác sĩ chỉnh khớp chuẩn xác, sửa soạn bờ hoàn tất khít sát, cô lập đàng hoàng... nhưng bệnh nhân vẫn than phiền vì ê buốt sau trám xoang II, rớt mặt dán sứ Veneer, hoặc viêm nướu tứa máu do dọn xi măng kẽ. Đã đến lúc nâng cấp toàn bộ "đạn dược" lâm sàng: Thay thế các vật liệu "trơ" thụ động cũ kỹ bằng Hệ sinh thái Trị liệu Sinh học Giomer 360° – Bảo vệ mô răng thật bền vững và dập tắt ám ảnh bảo hành!
               </p>
 
               <div className="flex flex-col gap-4 mb-10 w-full max-w-2xl">
