@@ -314,7 +314,7 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
-              4 "Điểm mù lâm sàng" & nỗi đau dai dẳng
+              4 <span className="text-slate-900 bg-amber-400 px-2 py-1 rounded-md rotate-1 inline-block transform shadow-lg mx-1">"điểm mù lâm sàng"</span> & <span className="text-red-400 font-black relative inline-block"><span className="relative z-10">nỗi đau dai dẳng</span><div className="absolute bottom-2 left-0 w-full h-1.5 bg-red-600/50 -z-10 rounded-sm"></div></span>
             </h2>
             <div className="w-24 h-1 bg-[#8C2828] mx-auto my-6"></div>
             <p className="font-body text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
