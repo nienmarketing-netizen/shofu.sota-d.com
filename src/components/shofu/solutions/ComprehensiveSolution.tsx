@@ -108,7 +108,7 @@ export const ComprehensiveSolution = () => {
               </h1>
               
               <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
-                Bác sĩ chỉnh khớp chuẩn xác, sửa soạn bờ hoàn tất khít sát, cô lập đàng hoàng... nhưng bệnh nhân vẫn than phiền vì ê buốt sau trám xoang II, rớt mặt dán sứ Veneer, hoặc viêm nướu tứa máu do dọn xi măng kẽ. Đã đến lúc nâng cấp toàn bộ "đạn dược" lâm sàng: Thay thế các vật liệu "trơ" thụ động cũ kỹ bằng Hệ sinh thái Trị liệu Sinh học Giomer 360° – Bảo vệ mô răng thật bền vững và dập tắt ám ảnh bảo hành!
+                Bác sĩ chỉnh khớp chuẩn xác, sửa soạn bờ hoàn tất khít sát, cô lập đàng hoàng... nhưng bệnh nhân vẫn than phiền vì <strong className="text-slate-900 bg-red-50 px-1 rounded">ê buốt sau trám xoang II</strong>, <strong className="text-slate-900 bg-red-50 px-1 rounded">rớt mặt dán sứ Veneer</strong>, hoặc <strong className="text-slate-900 bg-red-50 px-1 rounded">viêm nướu tứa máu do dọn xi măng kẽ</strong>. Đã đến lúc nâng cấp toàn bộ "đạn dược" lâm sàng: Thay thế các vật liệu "trơ" thụ động cũ kỹ bằng <strong className="text-[#8C2828] font-bold">Hệ sinh thái Trị liệu Sinh học Giomer 360°</strong> – <span className="text-emerald-600 font-medium bg-emerald-50 px-1 rounded">Bảo vệ mô răng thật bền vững</span> và <span className="text-slate-900 font-bold underline decoration-[#8C2828] decoration-2 underline-offset-4">dập tắt ám ảnh bảo hành!</span>
               </p>
 
               <div className="flex flex-col gap-4 mb-10 w-full max-w-2xl">
@@ -252,7 +252,7 @@ export const ComprehensiveSolution = () => {
               Đừng chỉ "trám bít lỗ hổng" – Hãy dùng vật liệu có khả năng <span className="text-[#8C2828]">"chữa lành"!</span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              Nha khoa hiện đại đã bước qua thời kỳ mài trám cơ học thụ động. Triết lý MiCD (Minimally Invasive Cosmetic Dentistry) hướng tới việc bảo tồn tối đa mô răng thật kết hợp cùng công nghệ hạt độn S-PRG (Surface Pre-Reacted Glass-ionomer) độc quyền của Shofu <span className="text-xs text-slate-400 align-super">[1]</span>.
+              Nha khoa hiện đại đã bước qua thời kỳ <span className="line-through decoration-slate-400 text-slate-400">mài trám cơ học thụ động</span>. Triết lý <strong className="text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded-md">MiCD (Minimally Invasive Cosmetic Dentistry)</strong> hướng tới việc <strong className="text-emerald-600">bảo tồn tối đa mô răng thật</strong> kết hợp cùng <strong className="text-[#8C2828] bg-red-50 px-1.5 py-0.5 rounded-md border border-red-100">công nghệ hạt độn S-PRG (Surface Pre-Reacted Glass-ionomer)</strong> độc quyền của Shofu <span className="text-xs text-slate-400 align-super">[1]</span>.
             </p>
           </div>
 
