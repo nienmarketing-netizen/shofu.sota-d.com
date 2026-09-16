@@ -242,7 +242,50 @@ export const ComprehensiveSolution = () => {
       {/* SECTION 3: PARADIGM SHIFT (MiCD & S-PRG) */}
       <section className="py-20 lg:py-28 bg-white bg-grid-pattern relative overflow-hidden border-b border-slate-200">
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
-          <div className="text-center mb-16">
+          <div className="mb-12">
+             <div className="text-center mb-10">
+                <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 mb-4">Lá Chắn 6 Ion Sinh Học (Giomer Molecular Shield)</h3>
+                <p className="text-slate-600 font-body max-w-2xl mx-auto">
+                   Hạt độn S-PRG hoạt động như một "Bình ắc quy sinh học" liên tục phóng thích & tự sạc lại 6 loại ion y tế:
+                </p>
+             </div>
+                
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-gradient-to-b from-white to-blue-50/80 p-6 rounded-2xl border border-blue-100 shadow-sm shadow-blue-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-blue-200/50 hover:border-blue-200 transition-all duration-300">
+                   <div className="w-16 h-16 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center mb-4">
+                      <span className="font-heading font-bold text-blue-600 text-lg">F⁻ & Sr²⁺</span>
+                   </div>
+                   <h4 className="font-bold text-slate-900 mb-2">Tái khoáng hóa</h4>
+                   <p className="text-sm text-slate-600 font-body">Tạo phức hợp Fluoro-apatite bít kín vĩnh viễn các ống ngà hở.</p>
+                </div>
+                   
+                <div className="bg-gradient-to-b from-white to-emerald-50/80 p-6 rounded-2xl border border-emerald-100 shadow-sm shadow-emerald-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-emerald-200/50 hover:border-emerald-200 transition-all duration-300">
+                   <div className="w-16 h-16 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center mb-4">
+                      <span className="font-heading font-bold text-emerald-600 text-lg">Na⁺ & SiO₃²⁻</span>
+                   </div>
+                   <h4 className="font-bold text-slate-900 mb-2">Phục hồi vi mô</h4>
+                   <p className="text-sm text-slate-600 font-body">Thúc đẩy phục hồi vi mô ngà răng suy thoái một cách chủ động.</p>
+                </div>
+                   
+                <div className="bg-gradient-to-b from-white to-amber-50/80 p-6 rounded-2xl border border-amber-100 shadow-sm shadow-amber-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-amber-200/50 hover:border-amber-200 transition-all duration-300">
+                   <div className="w-16 h-16 rounded-full bg-amber-100 border border-amber-200 flex items-center justify-center mb-4">
+                      <span className="font-heading font-bold text-amber-600 text-lg">BO₃³⁻</span>
+                   </div>
+                   <h4 className="font-bold text-slate-900 mb-2">Kháng Biofilm</h4>
+                   <p className="text-sm text-slate-600 font-body">Kìm hãm gen của S. mutans, triệt tiêu khả năng bám dính tạo mảng sinh học.</p>
+                </div>
+                   
+                <div className="bg-gradient-to-b from-white to-purple-50/80 p-6 rounded-2xl border border-purple-100 shadow-sm shadow-purple-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-purple-200/50 hover:border-purple-200 transition-all duration-300">
+                   <div className="w-16 h-16 rounded-full bg-purple-100 border border-purple-200 flex items-center justify-center mb-4">
+                      <span className="font-heading font-bold text-purple-600 text-lg">Al³⁺</span>
+                   </div>
+                   <h4 className="font-bold text-slate-900 mb-2">Trung hòa Axit</h4>
+                   <p className="text-sm text-slate-600 font-body">Trung hòa axit chủ động, kiềm hóa môi trường khi pH tụt dưới 5.5.</p>
+                </div>
+             </div>
+          </div>
+
+          <div className="text-center mb-16 mt-16">
             <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-600 font-mono text-xs sm:text-sm font-bold tracking-wider mb-6">
               <RefreshCw className="w-4 h-4" />
               <span>Paradigm shift</span>
@@ -253,49 +296,6 @@ export const ComprehensiveSolution = () => {
             <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
               Nha khoa hiện đại đã bước qua thời kỳ <span className="line-through decoration-slate-400 text-slate-400">mài trám cơ học thụ động</span>. Triết lý <strong className="text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded-md">MiCD (Minimally Invasive Cosmetic Dentistry)</strong> hướng tới việc <strong className="text-emerald-600">bảo tồn tối đa mô răng thật</strong> kết hợp cùng <strong className="text-[#8C2828] bg-red-50 px-1.5 py-0.5 rounded-md border border-red-100">công nghệ hạt độn S-PRG (Surface Pre-Reacted Glass-ionomer)</strong> độc quyền của Shofu.
             </p>
-          </div>
-
-          <div className="mb-12">
-             <div className="text-center mb-10">
-                <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 mb-4">Lá Chắn 6 Ion Sinh Học (Giomer Molecular Shield)</h3>
-                <p className="text-slate-600 font-body max-w-2xl mx-auto">
-                   Hạt độn S-PRG hoạt động như một "Bình ắc quy sinh học" liên tục phóng thích & tự sạc lại 6 loại ion y tế:
-                </p>
-             </div>
-             
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-gradient-to-b from-white to-blue-50/80 p-6 rounded-2xl border border-blue-100 shadow-sm shadow-blue-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-blue-200/50 hover:border-blue-200 transition-all duration-300">
-                   <div className="w-16 h-16 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center mb-4">
-                      <span className="font-heading font-bold text-blue-600 text-lg">F⁻ & Sr²⁺</span>
-                   </div>
-                   <h4 className="font-bold text-slate-900 mb-2">Tái khoáng hóa</h4>
-                   <p className="text-sm text-slate-600 font-body">Tạo phức hợp Fluoro-apatite bít kín vĩnh viễn các ống ngà hở.</p>
-                </div>
-                
-                <div className="bg-gradient-to-b from-white to-emerald-50/80 p-6 rounded-2xl border border-emerald-100 shadow-sm shadow-emerald-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-emerald-200/50 hover:border-emerald-200 transition-all duration-300">
-                   <div className="w-16 h-16 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center mb-4">
-                      <span className="font-heading font-bold text-emerald-600 text-lg">Na⁺ & SiO₃²⁻</span>
-                   </div>
-                   <h4 className="font-bold text-slate-900 mb-2">Phục hồi vi mô</h4>
-                   <p className="text-sm text-slate-600 font-body">Thúc đẩy phục hồi vi mô ngà răng suy thoái một cách chủ động.</p>
-                </div>
-                
-                <div className="bg-gradient-to-b from-white to-amber-50/80 p-6 rounded-2xl border border-amber-100 shadow-sm shadow-amber-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-amber-200/50 hover:border-amber-200 transition-all duration-300">
-                   <div className="w-16 h-16 rounded-full bg-amber-100 border border-amber-200 flex items-center justify-center mb-4">
-                      <span className="font-heading font-bold text-amber-600 text-lg">BO₃³⁻</span>
-                   </div>
-                   <h4 className="font-bold text-slate-900 mb-2">Kháng Biofilm</h4>
-                   <p className="text-sm text-slate-600 font-body">Kìm hãm gen của S. mutans, triệt tiêu khả năng bám dính tạo mảng sinh học.</p>
-                </div>
-                
-                <div className="bg-gradient-to-b from-white to-purple-50/80 p-6 rounded-2xl border border-purple-100 shadow-sm shadow-purple-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-purple-200/50 hover:border-purple-200 transition-all duration-300">
-                   <div className="w-16 h-16 rounded-full bg-purple-100 border border-purple-200 flex items-center justify-center mb-4">
-                      <span className="font-heading font-bold text-purple-600 text-lg">Al³⁺</span>
-                   </div>
-                   <h4 className="font-bold text-slate-900 mb-2">Trung hòa Axit</h4>
-                   <p className="text-sm text-slate-600 font-body">Trung hòa axit chủ động, kiềm hóa môi trường khi pH tụt dưới 5.5.</p>
-                </div>
-             </div>
           </div>
         </div>
       </section>
