@@ -160,7 +160,7 @@ export const ComprehensiveSolution = () => {
     },
     {
       id: 6,
-      title: 'Thử thách axit khắc nghiệt 28 ngày (Môi trường pH 4.5)',
+      title: 'Thử thách axit 28 ngày - Đại học Y Nha khoa Tokyo, Nhật Bản - Clinical Oral Investigations (2021/2022)',
       icon: '🧪',
       content: (
         <ul className="space-y-3">
