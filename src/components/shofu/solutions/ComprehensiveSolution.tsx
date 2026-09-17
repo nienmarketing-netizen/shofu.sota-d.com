@@ -532,7 +532,7 @@ export const ComprehensiveSolution = () => {
               Hệ sinh thái <span className="text-[#8C2828]">5 vũ khí cốt lõi</span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              Combo Giải Pháp Toàn Diện bao bọc trọn vẹn nhu cầu lâm sàng hàng ngày tại phòng khám:
+              <strong className="text-[#8C2828] bg-red-50 px-2 py-1 rounded-md border border-red-100 shadow-sm mx-1">Combo Giải Pháp Toàn Diện</strong> bao bọc <strong className="text-slate-900 font-bold underline decoration-amber-400 decoration-2 underline-offset-4">trọn vẹn nhu cầu lâm sàng</strong> hàng ngày tại phòng khám:
             </p>
           </div>
 
