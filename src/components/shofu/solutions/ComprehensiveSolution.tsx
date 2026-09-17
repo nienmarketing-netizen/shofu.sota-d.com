@@ -548,11 +548,11 @@ export const ComprehensiveSolution = () => {
 
           <div className="space-y-8">
             {/* Prod 1 */}
-            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row gap-8 items-center shadow-sm hover:shadow-md transition-shadow">
-               <div className="w-full lg:w-1/3">
-                  <img src="/image/BeautiBond-Xtreme-One-Hand.webp" alt="BeautiBond Xtreme" className="w-full aspect-square object-contain p-4 rounded-2xl bg-slate-50 border border-slate-100" referrerPolicy="no-referrer" />
+            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row gap-8 items-stretch shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+               <div className="w-full lg:w-1/3 min-h-[250px] sm:min-h-[300px] shrink-0 relative">
+                  <img src="/image/BeautiBond-Xtreme-One-Hand.webp" alt="BeautiBond Xtreme" className="absolute -left-6 sm:-left-8 -bottom-6 sm:-bottom-8 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] h-[calc(100%+1.5rem)] sm:h-[calc(100%+2rem)] object-contain object-left-bottom drop-shadow-2xl scale-[1.15] origin-bottom-left" referrerPolicy="no-referrer" />
                </div>
-               <div className="w-full lg:w-2/3 flex flex-col gap-4">
+               <div className="w-full lg:w-2/3 flex flex-col justify-center gap-4 relative z-10">
                   <div className="inline-flex px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-bold w-fit">KEO DÁN THẾ HỆ 8</div>
                   <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900">1. BeautiBond Xtreme (BBX) – 5ml</h3>
                   <ul className="space-y-3 font-body text-slate-600 text-sm mt-2">
@@ -578,11 +578,11 @@ export const ComprehensiveSolution = () => {
             </div>
 
             {/* Prod 3 */}
-            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row gap-8 items-center shadow-sm hover:shadow-md transition-shadow">
-               <div className="w-full lg:w-1/3">
-                  <img src="/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x.webp" alt="Beautifil Injectable X" className="w-full aspect-square object-contain p-4 rounded-2xl bg-slate-50 border border-slate-100" referrerPolicy="no-referrer" />
+            <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row-reverse gap-8 items-stretch shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+               <div className="w-full lg:w-1/3 min-h-[250px] sm:min-h-[300px] shrink-0 relative">
+                  <img src="/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x.webp" alt="Beautifil Injectable X" className="absolute -right-6 sm:-right-8 -bottom-6 sm:-bottom-8 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] h-[calc(100%+1.5rem)] sm:h-[calc(100%+2rem)] object-contain object-right-bottom drop-shadow-2xl scale-[1.15] origin-bottom-right" referrerPolicy="no-referrer" />
                </div>
-               <div className="w-full lg:w-2/3 flex flex-col gap-4">
+               <div className="w-full lg:w-2/3 flex flex-col justify-center gap-4 relative z-10">
                   <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold w-fit">Composite đắp khối</div>
                   <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900">3. Beautifil Injectable X – 2.2g</h3>
                   <ul className="space-y-3 font-body text-slate-600 text-sm mt-2">
