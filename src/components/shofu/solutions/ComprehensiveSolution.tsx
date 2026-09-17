@@ -759,7 +759,7 @@ export const ComprehensiveSolution = () => {
                     
                  </li>
                  <li className="flex justify-between items-start gap-4">
-                    <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>Video Masterclass Dọn xi măng 2s</span></div>
+                    <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>Bộ video Masterclass full protocol phục hồi trực tiếp</span></div>
                     
                  </li>
                  <li className="flex justify-between items-start gap-4">
