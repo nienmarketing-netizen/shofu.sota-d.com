@@ -624,7 +624,7 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight">
-              <span className="text-[#8C2828]">Dữ liệu khoa học</span>
+              <span className="text-white">Dữ liệu khoa học</span>
             </h2>
             <p className="text-slate-300 font-body max-w-2xl mx-auto text-base sm:text-lg">
               Bằng chứng y văn & bảo chứng lâm sàng độc lập chứng minh hiệu quả tuyệt đối của hệ sinh thái Giomer 360°.
