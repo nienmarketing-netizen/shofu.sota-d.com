@@ -770,66 +770,65 @@ export const ComprehensiveSolution = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col">
-              <div className="w-full relative mb-6">
-                 <ImagePlaceholder className="w-full aspect-[4/3] rounded-xl bg-slate-100 border border-slate-200" text="Ảnh 5 SP Vật Lý" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mb-12">
+            {/* Box 1: Core Products */}
+            <div className="bg-white/95 backdrop-blur-md rounded-[2rem] p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/20 flex flex-col transition-transform hover:-translate-y-1 duration-500">
+              <div className="w-full relative mb-8">
+                 <ImagePlaceholder className="w-full aspect-[4/3] rounded-2xl bg-slate-50 border border-slate-100/50 shadow-inner" text="Ảnh 5 SP Vật Lý" />
               </div>
-              <h4 className="font-heading font-bold text-xl text-[#8C2828] border-b border-slate-200 pb-3 mb-4">Bộ 5 sản phẩm cốt lõi</h4>
-              <ul className="space-y-4 font-body text-sm sm:text-base flex-1 text-slate-700">
-                 <li className="flex justify-between items-start gap-4">
+              <h4 className="font-heading font-bold text-2xl text-[#8C2828] mb-6 flex items-center gap-3">
+                <span className="w-8 h-[2px] bg-[#8C2828]/20 rounded-full"></span>
+                Bộ 5 sản phẩm cốt lõi
+                <span className="w-8 h-[2px] bg-[#8C2828]/20 rounded-full"></span>
+              </h4>
+              <ul className="space-y-5 font-body text-base flex-1 text-slate-700">
+                 <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Keo dán BeautiBond Xtreme (5ml)</span></div>
-                    
                  </li>
-                 <li className="flex justify-between items-start gap-4">
+                 <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Xi măng BeautiLink SA (15.6g)</span></div>
-                    
                  </li>
-                 <li className="flex justify-between items-start gap-4">
+                 <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Composite BeautiFil Injectable X</span></div>
-                    
                  </li>
-                 <li className="flex justify-between items-start gap-4">
+                 <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Composite BeautiFil II / LS</span></div>
-                    
                  </li>
-                 <li className="flex justify-between items-start gap-4">
+                 <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Bộ PRG Barrier Coat / BeautiSealant</span></div>
-                    
                  </li>
               </ul>
             </div>
             
-            <div className="bg-slate-900 border-2 border-amber-400/50 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-amber-400 text-slate-900 font-bold text-xs px-4 py-1.5 rounded-bl-xl z-10">Tài trợ 100%</div>
-              <div className="w-full relative mb-6">
-                 <ImagePlaceholder className="w-full aspect-[4/3] rounded-xl bg-slate-800 border border-slate-700" text="Ảnh Quà tặng VIP" />
+            {/* Box 2: VIP Gifts */}
+            <div className="bg-[#6A1A1A]/90 backdrop-blur-xl border border-amber-400/30 rounded-[2rem] p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.2)] flex flex-col relative overflow-hidden transition-transform hover:-translate-y-1 duration-500">
+              <div className="absolute top-8 right-8 bg-gradient-to-r from-amber-400 to-amber-300 text-amber-950 font-bold text-xs px-4 py-2 rounded-full shadow-sm z-10 tracking-wide uppercase">Tài trợ 100%</div>
+              <div className="w-full relative mb-8">
+                 <ImagePlaceholder className="w-full aspect-[4/3] rounded-2xl bg-black/20 border border-white/5 shadow-inner" text="Ảnh Quà tặng VIP" />
               </div>
-              <h4 className="font-heading font-bold text-xl text-amber-400 border-b border-slate-700 pb-3 mb-4">Quà tặng & đặc quyền VIP</h4>
-              <ul className="space-y-4 font-body text-sm sm:text-base flex-1 text-slate-300">
-                 <li className="flex justify-between items-start gap-4">
+              <h4 className="font-heading font-bold text-2xl text-amber-400 mb-6 flex items-center gap-3">
+                <span className="w-8 h-[2px] bg-amber-400/20 rounded-full"></span>
+                Quà tặng & đặc quyền VIP
+                <span className="w-8 h-[2px] bg-amber-400/20 rounded-full"></span>
+              </h4>
+              <ul className="space-y-5 font-body text-base flex-1 text-amber-50/90">
+                 <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>01 Bộ đánh bóng Super-Snap Mini</span></div>
-                    
                  </li>
-                 <li className="flex justify-between items-start gap-4">
+                 <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>01 Bộ mũi mài Composite Polishing CA</span></div>
-                    
                  </li>
-                 <li className="flex justify-between items-start gap-4">
+                 <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>01 Lọ BBX Trial (2ml)</span></div>
-                    
                  </li>
-                 <li className="flex justify-between items-start gap-4">
+                 <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>Bộ 3 Sổ tay E-Guidebook MiCD</span></div>
-                    
                  </li>
-                 <li className="flex justify-between items-start gap-4">
+                 <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>Bộ video Masterclass phục hồi trực tiếp</span></div>
-                    
                  </li>
-                 <li className="flex justify-between items-start gap-4">
+                 <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>Vé VIP Group Cố vấn 1:1 (90 ngày)</span></div>
-                    
                  </li>
               </ul>
             </div>
@@ -867,21 +866,21 @@ export const ComprehensiveSolution = () => {
             <span className="block sm:inline">Cam kết <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200 drop-shadow-sm">bảo vệ 3 lớp</span></span>{' '}
             <span className="block sm:inline">từ <span className="text-amber-400 drop-shadow-sm">Sota-D</span></span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
-               <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-4"><ShieldCheck className="w-6 h-6"/></div>
-               <h4 className="font-bold text-slate-900 mb-3">Dùng thử an tâm (30 ngày)</h4>
-               <p className="text-sm text-slate-600 font-body">Nếu gặp khó khăn kỹ thuật, Chuyên gia sẽ Call 1:1 gỡ rối. Nếu không hợp tay, thu hồi và hoàn tiền 100% phần chưa dùng.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 text-left">
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 lg:p-10 rounded-[2rem] flex flex-col items-center text-center hover:bg-white/10 transition-all duration-500">
+               <div className="w-14 h-14 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-2xl flex items-center justify-center mb-6"><ShieldCheck className="w-7 h-7"/></div>
+               <h4 className="font-heading font-bold text-lg sm:text-xl text-white mb-3">Dùng thử an tâm (30 ngày)</h4>
+               <p className="text-sm sm:text-base text-white/70 font-body leading-relaxed">Nếu gặp khó khăn kỹ thuật, Chuyên gia sẽ Call 1:1 gỡ rối. Nếu không hợp tay, thu hồi và hoàn tiền 100% phần chưa dùng.</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
-               <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-4"><RefreshCw className="w-6 h-6"/></div>
-               <h4 className="font-bold text-slate-900 mb-3">Bảo hiểm thói quen</h4>
-               <p className="text-sm text-slate-600 font-body">Trong vòng 30 ngày, nếu không quen Handmix hoặc muốn đổi tông màu, hỗ trợ quy đổi 100% giá trị tương đương.</p>
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 lg:p-10 rounded-[2rem] flex flex-col items-center text-center hover:bg-white/10 transition-all duration-500">
+               <div className="w-14 h-14 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-2xl flex items-center justify-center mb-6"><RefreshCw className="w-7 h-7"/></div>
+               <h4 className="font-heading font-bold text-lg sm:text-xl text-white mb-3">Bảo hiểm thói quen</h4>
+               <p className="text-sm sm:text-base text-white/70 font-body leading-relaxed">Trong vòng 30 ngày, nếu không quen Handmix hoặc muốn đổi tông màu, hỗ trợ quy đổi 100% giá trị tương đương.</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
-               <div className="w-12 h-12 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mb-4"><CheckSquare className="w-6 h-6"/></div>
-               <h4 className="font-bold text-slate-900 mb-3">Minh bạch chất lượng (90 ngày)</h4>
-               <p className="text-sm text-slate-600 font-body">Cam kết 1 đổi 1 ngay lập tức nếu sản phẩm có hiện tượng tách pha hay lỗi đông cứng kể từ khi mở nắp (&lt;25°C).</p>
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 lg:p-10 rounded-[2rem] flex flex-col items-center text-center hover:bg-white/10 transition-all duration-500">
+               <div className="w-14 h-14 bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-2xl flex items-center justify-center mb-6"><CheckSquare className="w-7 h-7"/></div>
+               <h4 className="font-heading font-bold text-lg sm:text-xl text-white mb-3">Minh bạch chất lượng (90 ngày)</h4>
+               <p className="text-sm sm:text-base text-white/70 font-body leading-relaxed">Cam kết 1 đổi 1 ngay lập tức nếu sản phẩm có hiện tượng tách pha hay lỗi đông cứng kể từ khi mở nắp (&lt;25°C).</p>
             </div>
           </div>
         
