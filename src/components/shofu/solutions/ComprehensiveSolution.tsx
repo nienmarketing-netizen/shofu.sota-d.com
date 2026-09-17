@@ -555,7 +555,7 @@ export const ComprehensiveSolution = () => {
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
                   <div className="inline-flex px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-bold w-fit">KEO DÁN THẾ HỆ 8</div>
                   <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900">1. BeautiBond Xtreme (BBX) – 5ml</h3>
-                  <ul className="space-y-3 font-body text-slate-600 mt-2">
+                  <ul className="space-y-3 font-body text-slate-600 text-sm mt-2">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Màng keo kỷ lục 5µm, 100% HEMA-Free kỵ nước (dung môi Acetone bay hơi chớp nhoáng).</span></li>
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tích hợp ARS bọc giáp Silane & Monomer MDP, dán thẳng Zirconia/Sứ/Ngà chỉ với 1 chai.</span></li>
                   </ul>
@@ -570,7 +570,7 @@ export const ComprehensiveSolution = () => {
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
                   <div className="inline-flex px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold w-fit">Xi măng resin tự dán</div>
                   <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900">2. BeautiLink SA – Tuýp khổng lồ 15.6g</h3>
-                  <ul className="space-y-3 font-body text-slate-600 mt-2">
+                  <ul className="space-y-3 font-body text-slate-600 text-sm mt-2">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Thể tích khổng lồ 9ml (15.6g) thực hiện được ~120 ca gắn (chỉ ~16.600đ/ca).</span></li>
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Màng xi măng 14µm, Tack-cure 1-2 giây lột sạch xi măng dư nguyên khối (One-Sweep).</span></li>
                   </ul>
@@ -585,7 +585,7 @@ export const ComprehensiveSolution = () => {
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
                   <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold w-fit">Composite lỏng đắp khối</div>
                   <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900">3. Beautifil Injectable X – 2.2g</h3>
-                  <ul className="space-y-3 font-body text-slate-600 mt-2">
+                  <ul className="space-y-3 font-body text-slate-600 text-sm mt-2">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Độ bền nén kỷ lục 400 MPa, đắp khối chịu lực ăn nhai trực tiếp xoang I, II, V.</span></li>
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tính lưu biến Thixotropic tự lấp đầy hốc xoang vi thể, không đọng bọt khí.</span></li>
                   </ul>
