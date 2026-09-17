@@ -952,13 +952,6 @@ export const ComprehensiveSolution = () => {
                   💥 Xác nhận đặt mua - Nhận quà 8.285.000Đ
                </button>
             </form>
-            
-            <div className="mt-8 pt-6 border-t border-slate-100 flex items-start gap-3">
-               <Shield className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
-               <p className="text-xs sm:text-sm text-slate-500 font-body leading-relaxed">
-                  <strong className="text-slate-700">Thông tin được bảo mật 100%.</strong> Kiểm tra hàng đầy đủ tem nhãn Shofu chính hãng trước khi thanh toán. Hỗ trợ tư vấn kỹ thuật 1:1 từ Chuyên gia.
-               </p>
-            </div>
           </div>
         </div>
       </section>
