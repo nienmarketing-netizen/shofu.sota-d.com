@@ -595,14 +595,14 @@ export const ComprehensiveSolution = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-8">
             {/* Prod 1 */}
             <div className="lg:col-span-2 bg-white rounded-3xl border border-slate-100 p-6 sm:p-8 flex flex-col h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-               <div className="flex items-center justify-between mb-6">
+               <div className="flex items-center justify-between mb-4">
                   <div className="inline-flex px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-bold">Keo dán thế hệ 8</div>
                   <span className="text-4xl font-heading font-black text-slate-100">01</span>
                </div>
+               <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">BeautiBond Xtreme (BBX) – 5ml</h3>
                <div className="w-full aspect-[4/3] relative mb-6 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden group">
                   <img src="/image/BeautiBond-Xtreme-One-Hand.webp" alt="BeautiBond Xtreme" className="absolute -left-6 sm:-left-8 -bottom-6 sm:-bottom-8 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] h-[calc(100%+1.5rem)] sm:h-[calc(100%+2rem)] object-contain object-left-bottom drop-shadow-2xl scale-[0.83] sm:scale-[0.92] origin-bottom-left [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] group-hover:scale-[0.96] transition-transform duration-500" referrerPolicy="no-referrer" />
                </div>
-               <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">BeautiBond Xtreme (BBX) – 5ml</h3>
                <ul className="space-y-3 font-body text-slate-600 text-sm flex-1">
                   <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Màng keo kỷ lục 5µm, 100% HEMA-Free kỵ nước (dung môi Acetone bay hơi chớp nhoáng).</span></li>
                   <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tích hợp ARS bọc giáp Silane & Monomer MDP, dán thẳng Zirconia/Sứ/Ngà chỉ với 1 chai.</span></li>
@@ -611,14 +611,14 @@ export const ComprehensiveSolution = () => {
 
             {/* Prod 2 */}
             <div className="lg:col-span-2 bg-white rounded-3xl border border-slate-100 p-6 sm:p-8 flex flex-col h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-               <div className="flex items-center justify-between mb-6">
+               <div className="flex items-center justify-between mb-4">
                   <div className="inline-flex px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold">Xi măng resin tự dán</div>
                   <span className="text-4xl font-heading font-black text-slate-100">02</span>
                </div>
+               <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">BeautiLink SA – Tuýp khổng lồ 15.6g</h3>
                <div className="w-full aspect-[4/3] relative mb-6 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden group">
                   <img src="/image/Shofu-Cement-Beautilink-SA.webp" alt="BeautiLink SA" className="w-full h-full object-contain p-4 sm:p-6 drop-shadow-xl group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
                </div>
-               <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">BeautiLink SA – Tuýp khổng lồ 15.6g</h3>
                <ul className="space-y-3 font-body text-slate-600 text-sm flex-1">
                   <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Thể tích khổng lồ 9ml (15.6g) thực hiện được ~120 ca gắn (chỉ ~16.600đ/ca).</span></li>
                   <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Màng xi măng 14µm, Tack-cure 1-2 giây lột sạch xi măng dư nguyên khối (One-Sweep).</span></li>
@@ -627,14 +627,14 @@ export const ComprehensiveSolution = () => {
 
             {/* Prod 3 */}
             <div className="lg:col-span-2 bg-white rounded-3xl border border-slate-100 p-6 sm:p-8 flex flex-col h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-               <div className="flex items-center justify-between mb-6">
+               <div className="flex items-center justify-between mb-4">
                   <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold">Composite đắp khối</div>
                   <span className="text-4xl font-heading font-black text-slate-100">03</span>
                </div>
+               <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Beautifil Injectable X – 2.2g</h3>
                <div className="w-full aspect-[4/3] relative mb-6 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden group">
                   <img src="/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x.webp" alt="Beautifil Injectable X" className="absolute -right-6 sm:-right-8 -bottom-6 sm:-bottom-8 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] h-[calc(100%+1.5rem)] sm:h-[calc(100%+2rem)] object-contain object-right-bottom drop-shadow-2xl scale-[0.83] sm:scale-[0.92] origin-bottom-right [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] group-hover:scale-[0.96] transition-transform duration-500" referrerPolicy="no-referrer" />
                </div>
-               <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Beautifil Injectable X – 2.2g</h3>
                <ul className="space-y-3 font-body text-slate-600 text-sm flex-1">
                   <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Độ bền nén kỷ lục 400 MPa, đắp khối chịu lực ăn nhai trực tiếp xoang I, II, V.</span></li>
                   <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tính lưu biến Thixotropic tự lấp đầy hốc xoang vi thể, không đọng bọt khí.</span></li>
@@ -643,14 +643,14 @@ export const ComprehensiveSolution = () => {
 
             {/* Prod 4 */}
             <div className="lg:col-span-3 bg-white rounded-3xl border border-slate-100 p-6 sm:p-8 flex flex-col h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-               <div className="flex items-center justify-between mb-6">
+               <div className="flex items-center justify-between mb-4">
                   <div className="inline-flex px-3 py-1 bg-amber-50 text-amber-600 rounded-full text-xs font-bold">Composite đắp lớp</div>
                   <span className="text-4xl font-heading font-black text-slate-100">04</span>
                </div>
+               <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Beautifil II / Beautifil II LS</h3>
                <div className="w-full h-[200px] sm:h-[240px] relative mb-6 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden group">
                   <img src="/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp" alt="Beautifil II / LS" className="w-full h-full object-contain p-4 sm:p-6 drop-shadow-xl group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
                </div>
-               <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Beautifil II / Beautifil II LS</h3>
                <ul className="space-y-3 font-body text-slate-600 text-sm flex-1">
                   <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Độ co ngót thể tích siêu thấp, chống bám mảng sinh học nhờ hạt độn S-PRG.</span></li>
                   <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Hiệu ứng "Tắc kè hoa" tự động tiệp màu răng thật hoàn hảo.</span></li>
@@ -659,14 +659,14 @@ export const ComprehensiveSolution = () => {
 
             {/* Prod 5 */}
             <div className="lg:col-span-3 bg-white rounded-3xl border border-slate-100 p-6 sm:p-8 flex flex-col h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-               <div className="flex items-center justify-between mb-6">
+               <div className="flex items-center justify-between mb-4">
                   <div className="inline-flex px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-xs font-bold">Phòng ngừa & phong tỏa</div>
                   <span className="text-4xl font-heading font-black text-slate-100">05</span>
                </div>
+               <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Tự chọn 1 trong 2 giải pháp:</h3>
                <div className="w-full h-[200px] sm:h-[240px] relative mb-6 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden group">
                   <img src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat / BeautiSealant" className="w-full h-full object-contain p-4 sm:p-6 drop-shadow-xl group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
                </div>
-               <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Tự chọn 1 trong 2 giải pháp:</h3>
                <ul className="space-y-3 font-body text-slate-600 text-sm flex-1">
                   <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span><strong className="text-slate-800">Bộ PRG Barrier Coat Mini-Kit:</strong> Véc-ni phủ 15µm trị liệu ê buốt 3-6 tháng.</span></li>
                   <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span><strong className="text-slate-800">Bộ BeautiSealant Set:</strong> Trám bít hố rãnh Self-Etch không rửa nước.</span></li>
