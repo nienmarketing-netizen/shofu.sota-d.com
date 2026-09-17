@@ -782,7 +782,7 @@ export const ComprehensiveSolution = () => {
               <h4 className="font-heading font-extrabold text-2xl text-slate-800 mb-8 flex items-center justify-center gap-4">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8C2828] to-red-600">Bộ 5 sản phẩm cốt lõi</span>
               </h4>
-              <ul className="space-y-5 font-body text-base flex-1 text-slate-700">
+              <ul className="space-y-5 font-body text-sm md:text-base flex-1 text-slate-700">
                  <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Keo dán BeautiBond Xtreme (5ml)</span></div>
                  </li>
@@ -810,7 +810,7 @@ export const ComprehensiveSolution = () => {
               <h4 className="font-heading font-bold text-2xl text-amber-400 mb-6 flex items-center gap-3">
                 Quà tặng & đặc quyền VIP
               </h4>
-              <ul className="space-y-5 font-body text-base flex-1 text-amber-50/90">
+              <ul className="space-y-5 font-body text-sm md:text-base flex-1 text-amber-50/90">
                  <li className="flex justify-start items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>01 Bộ đánh bóng Super-Snap Mini</span></div>
                  </li>
