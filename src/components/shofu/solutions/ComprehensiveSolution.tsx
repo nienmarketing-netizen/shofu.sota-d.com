@@ -714,23 +714,23 @@ export const ComprehensiveSolution = () => {
               <ul className="space-y-4 font-body text-sm sm:text-base flex-1 text-slate-700">
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Keo dán BeautiBond Xtreme (5ml)</span></div>
-                    <span className="font-mono text-slate-400 line-through shrink-0 whitespace-nowrap">1.420.000đ</span>
+                    
                  </li>
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Xi măng BeautiLink SA (15.6g)</span></div>
-                    <span className="font-mono text-slate-400 line-through shrink-0 whitespace-nowrap">1.995.000đ</span>
+                    
                  </li>
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Composite BeautiFil Injectable X</span></div>
-                    <span className="font-mono text-slate-400 line-through shrink-0 whitespace-nowrap">595.000đ</span>
+                    
                  </li>
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Composite BeautiFil II / LS</span></div>
-                    <span className="font-mono text-slate-400 line-through shrink-0 whitespace-nowrap">495.000đ</span>
+                    
                  </li>
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Bộ PRG Barrier Coat / BeautiSealant</span></div>
-                    <span className="font-mono text-slate-400 line-through shrink-0 whitespace-nowrap">945.000đ</span>
+                    
                  </li>
               </ul>
             </div>
@@ -744,27 +744,27 @@ export const ComprehensiveSolution = () => {
               <ul className="space-y-4 font-body text-sm sm:text-base flex-1 text-slate-300">
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>01 Bộ đánh bóng Super-Snap Mini</span></div>
-                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 450K</span>
+                    
                  </li>
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>01 Bộ mũi mài Composite Polishing CA</span></div>
-                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 740K</span>
+                    
                  </li>
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>01 Lọ BBX Trial (2ml)</span></div>
-                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 600K</span>
+                    
                  </li>
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>Bộ 3 Sổ tay E-Guidebook MiCD</span></div>
-                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 1.5M</span>
+                    
                  </li>
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>Video Masterclass Dọn xi măng 2s</span></div>
-                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 2.0M</span>
+                    
                  </li>
                  <li className="flex justify-between items-start gap-4">
                     <div className="flex gap-3 items-start"><Gift className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" /><span>Vé VIP Group Cố vấn 1:1 (90 ngày)</span></div>
-                    <span className="font-mono text-slate-500 shrink-0 whitespace-nowrap">Trị giá 2.5M</span>
+                    
                  </li>
               </ul>
             </div>
