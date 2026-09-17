@@ -600,7 +600,7 @@ export const ComprehensiveSolution = () => {
                   <span className="text-4xl font-heading font-black text-slate-100">01</span>
                </div>
                <div className="w-full aspect-[4/3] relative mb-6 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden group">
-                  <img src="/image/BeautiBond-Xtreme-One-Hand.webp" alt="BeautiBond Xtreme" className="w-full h-full object-contain p-4 sm:p-6 mix-blend-multiply group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
+                  <img src="/image/BeautiBond-Xtreme-One-Hand.webp" alt="BeautiBond Xtreme" className="absolute -left-6 sm:-left-8 -bottom-6 sm:-bottom-8 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] h-[calc(100%+1.5rem)] sm:h-[calc(100%+2rem)] object-contain object-left-bottom drop-shadow-2xl scale-[1.04] sm:scale-[1.15] origin-bottom-left [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] group-hover:scale-[1.2] transition-transform duration-500" referrerPolicy="no-referrer" />
                </div>
                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">BeautiBond Xtreme (BBX) – 5ml</h3>
                <ul className="space-y-3 font-body text-slate-600 text-sm flex-1">
@@ -616,7 +616,7 @@ export const ComprehensiveSolution = () => {
                   <span className="text-4xl font-heading font-black text-slate-100">02</span>
                </div>
                <div className="w-full aspect-[4/3] relative mb-6 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden group">
-                  <img src="/image/Shofu-Cement-Beautilink-SA.webp" alt="BeautiLink SA" className="w-full h-full object-contain p-4 sm:p-6 mix-blend-multiply group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
+                  <img src="/image/Shofu-Cement-Beautilink-SA.webp" alt="BeautiLink SA" className="w-full h-full object-contain p-4 sm:p-6 drop-shadow-xl group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
                </div>
                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">BeautiLink SA – Tuýp khổng lồ 15.6g</h3>
                <ul className="space-y-3 font-body text-slate-600 text-sm flex-1">
@@ -632,7 +632,7 @@ export const ComprehensiveSolution = () => {
                   <span className="text-4xl font-heading font-black text-slate-100">03</span>
                </div>
                <div className="w-full aspect-[4/3] relative mb-6 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden group">
-                  <img src="/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x.webp" alt="Beautifil Injectable X" className="w-full h-full object-contain p-4 sm:p-6 mix-blend-multiply group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
+                  <img src="/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x.webp" alt="Beautifil Injectable X" className="absolute -right-6 sm:-right-8 -bottom-6 sm:-bottom-8 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] h-[calc(100%+1.5rem)] sm:h-[calc(100%+2rem)] object-contain object-right-bottom drop-shadow-2xl scale-[1.04] sm:scale-[1.15] origin-bottom-right [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] group-hover:scale-[1.2] transition-transform duration-500" referrerPolicy="no-referrer" />
                </div>
                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Beautifil Injectable X – 2.2g</h3>
                <ul className="space-y-3 font-body text-slate-600 text-sm flex-1">
@@ -648,7 +648,7 @@ export const ComprehensiveSolution = () => {
                   <span className="text-4xl font-heading font-black text-slate-100">04</span>
                </div>
                <div className="w-full h-[200px] sm:h-[240px] relative mb-6 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden group">
-                  <img src="/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp" alt="Beautifil II / LS" className="w-full h-full object-contain p-4 sm:p-6 mix-blend-multiply group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
+                  <img src="/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp" alt="Beautifil II / LS" className="w-full h-full object-contain p-4 sm:p-6 drop-shadow-xl group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
                </div>
                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Beautifil II / Beautifil II LS</h3>
                <ul className="space-y-3 font-body text-slate-600 text-sm flex-1">
@@ -664,7 +664,7 @@ export const ComprehensiveSolution = () => {
                   <span className="text-4xl font-heading font-black text-slate-100">05</span>
                </div>
                <div className="w-full h-[200px] sm:h-[240px] relative mb-6 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden group">
-                  <img src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat / BeautiSealant" className="w-full h-full object-contain p-4 sm:p-6 mix-blend-multiply group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
+                  <img src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat / BeautiSealant" className="w-full h-full object-contain p-4 sm:p-6 drop-shadow-xl group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
                </div>
                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Tự chọn 1 trong 2 giải pháp:</h3>
                <ul className="space-y-3 font-body text-slate-600 text-sm flex-1">
