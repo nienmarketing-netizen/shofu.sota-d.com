@@ -539,7 +539,7 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-6 tracking-tight">
-              Hệ sinh thái <span className="text-[#8C2828]">5 vũ khí cốt lõi</span>
+              <span className="block sm:inline">Hệ sinh thái</span> <span className="block sm:inline text-[#8C2828]">5 vũ khí cốt lõi</span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
               <strong className="text-[#8C2828] bg-red-50 px-2 py-1 rounded-md border border-red-100 shadow-sm mx-1">Combo Giải Pháp Toàn Diện</strong> bao bọc <strong className="text-slate-900 font-bold underline decoration-amber-400 decoration-2 underline-offset-4">trọn vẹn nhu cầu lâm sàng</strong> hàng ngày tại phòng khám:
