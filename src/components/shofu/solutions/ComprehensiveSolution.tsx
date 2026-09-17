@@ -514,9 +514,12 @@ export const ComprehensiveSolution = () => {
              </div>
 
              <div className="text-center">
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4">Lá chắn 6 ion sinh học (Giomer molecular shield)</h3>
-                <p className="text-slate-600 font-body max-w-2xl mx-auto">
-                   Hạt độn S-PRG hoạt động như một "Bình ắc quy sinh học" liên tục phóng thích & tự sạc lại 6 loại ion y tế.
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+                   <span>Lá chắn 6 ion sinh học</span>
+                   <span className="inline-block font-mono text-sm sm:text-base text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full shadow-sm tracking-wide">Giomer Molecular Shield</span>
+                </h3>
+                <p className="text-slate-600 font-body max-w-2xl mx-auto leading-relaxed text-base sm:text-lg">
+                   Hạt độn S-PRG hoạt động như một <strong className="text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100 shadow-sm mx-0.5">"Bình ắc quy sinh học"</strong> liên tục <strong className="text-emerald-600 font-bold underline decoration-emerald-300 decoration-2 underline-offset-4 mx-0.5">phóng thích & tự sạc lại</strong> <strong className="text-[#8C2828] bg-red-50 px-2 py-0.5 rounded-md border border-red-100 shadow-sm mx-0.5 whitespace-nowrap">6 loại ion y tế</strong>.
                 </p>
              </div>
           </div>
