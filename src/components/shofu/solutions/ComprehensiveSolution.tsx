@@ -553,7 +553,7 @@ export const ComprehensiveSolution = () => {
                   <img src="/image/BeautiBond-Xtreme-One-Hand.webp" alt="BeautiBond Xtreme" className="absolute -left-6 sm:-left-8 -bottom-6 sm:-bottom-8 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] h-[calc(100%+1.5rem)] sm:h-[calc(100%+2rem)] object-contain object-left-bottom drop-shadow-2xl max-sm:scale-[1.04] sm:scale-[1.15] origin-bottom-left max-sm:[mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] max-sm:[-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]" referrerPolicy="no-referrer" />
                </div>
                <div className="order-1 lg:order-2 max-lg:contents w-full lg:w-2/3 flex flex-col justify-center gap-4 relative z-10">
-                  <div className="order-1 inline-flex px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-bold w-fit">KEO DÁN THẾ HỆ 8</div>
+                  <div className="order-1 inline-flex px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-bold w-fit">Keo dán thế hệ 8</div>
                   <h3 className="order-2 font-heading font-bold text-xl sm:text-2xl text-slate-900">1. BeautiBond Xtreme (BBX) – 5ml</h3>
                   <ul className="order-4 space-y-3 font-body text-slate-600 text-sm mt-2 lg:mt-0">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Màng keo kỷ lục 5µm, 100% HEMA-Free kỵ nước (dung môi Acetone bay hơi chớp nhoáng).</span></li>
