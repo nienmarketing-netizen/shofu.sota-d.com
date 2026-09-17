@@ -565,7 +565,7 @@ export const ComprehensiveSolution = () => {
             {/* Prod 2 */}
             <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row-reverse gap-8 items-center shadow-sm hover:shadow-md transition-shadow">
                <div className="w-full lg:w-1/3">
-                  <img src="/image/Shofu-Cement-Beautilink-SA.webp" alt="BeautiLink SA" className="w-full aspect-square object-contain p-4 rounded-2xl bg-slate-50 border border-slate-100" referrerPolicy="no-referrer" />
+                  <img src="/image/Shofu-Cement-Beautilink-SA.webp" alt="BeautiLink SA" className="w-full aspect-square object-contain" referrerPolicy="no-referrer" />
                </div>
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
                   <div className="inline-flex px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold w-fit">Xi măng resin tự dán</div>
@@ -595,7 +595,7 @@ export const ComprehensiveSolution = () => {
             {/* Prod 4 & 5 Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col gap-6 shadow-sm hover:shadow-md transition-shadow">
-                  <img src="/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp" alt="Beautifil II / LS" className="w-full aspect-[16/9] object-contain p-4 rounded-2xl bg-slate-50 border border-slate-100" referrerPolicy="no-referrer" />
+                  <img src="/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp" alt="Beautifil II / LS" className="w-full aspect-[16/9] object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300" referrerPolicy="no-referrer" />
                   <div>
                      <div className="inline-flex px-3 py-1 bg-amber-50 text-amber-600 rounded-full text-xs font-bold w-fit mb-3">Composite đắp lớp</div>
                      <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4">4. Beautifil II / Beautifil II LS</h3>
@@ -606,7 +606,7 @@ export const ComprehensiveSolution = () => {
                   </div>
                </div>
                <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col gap-6 shadow-sm hover:shadow-md transition-shadow">
-                  <img src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat / BeautiSealant" className="w-full aspect-[16/9] object-contain p-4 rounded-2xl bg-slate-50 border border-slate-100" referrerPolicy="no-referrer" />
+                  <img src="/image/PRG-Barrier-Coat-Shofu.webp" alt="PRG Barrier Coat / BeautiSealant" className="w-full aspect-[16/9] object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300" referrerPolicy="no-referrer" />
                   <div>
                      <div className="inline-flex px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-xs font-bold w-fit mb-3">Phòng ngừa & phong tỏa</div>
                      <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4">5. Tự chọn 1 trong 2 giải pháp:</h3>
