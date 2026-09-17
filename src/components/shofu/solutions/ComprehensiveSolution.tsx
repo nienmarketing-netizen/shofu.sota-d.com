@@ -808,7 +808,10 @@ export const ComprehensiveSolution = () => {
           <div className="mt-16 border-t border-white/20 pt-16">
             <div className="w-full text-center">
               
-          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white mb-10">Cam kết bảo vệ 3 lớp từ Sota-D</h2>
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white mb-10 leading-snug sm:leading-tight">
+            <span className="block sm:inline">Cam kết <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-200 drop-shadow-sm">bảo vệ 3 lớp</span></span>{' '}
+            <span className="block sm:inline">từ <span className="text-amber-400 drop-shadow-sm">Sota-D</span></span>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
                <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-4"><ShieldCheck className="w-6 h-6"/></div>
