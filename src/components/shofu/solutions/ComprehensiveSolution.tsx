@@ -772,7 +772,7 @@ export const ComprehensiveSolution = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mb-12">
             {/* Box 1: Core Products */}
-            <div className="bg-gradient-to-b from-white to-slate-50/90 backdrop-blur-xl rounded-[2rem] p-8 lg:p-10 shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-white/60 flex flex-col relative overflow-hidden transition-all hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-1 duration-500">
+            <div className="bg-white/95 backdrop-blur-xl rounded-[2rem] p-8 lg:p-10 shadow-[0_20px_40px_rgb(0,0,0,0.08)] border border-white/60 flex flex-col relative overflow-hidden transition-all hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-1 duration-500">
               {/* Subtle top inner glow */}
               <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-80"></div>
               
@@ -784,26 +784,21 @@ export const ComprehensiveSolution = () => {
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8C2828] to-red-600">Bộ 5 sản phẩm cốt lõi</span>
                 <span className="w-12 h-px bg-gradient-to-l from-transparent to-[#8C2828]/30"></span>
               </h4>
-              <ul className="space-y-4 font-body text-base flex-1 text-slate-700">
-                 <li className="flex justify-start items-center gap-4 bg-white/60 rounded-xl p-3 border border-slate-100/50 shadow-sm transition-colors hover:bg-white">
-                    <div className="w-8 h-8 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0"><CheckCircle className="w-4 h-4 text-emerald-600" /></div>
-                    <span className="font-medium">01 Keo dán BeautiBond Xtreme (5ml)</span>
+              <ul className="space-y-5 font-body text-base flex-1 text-slate-700">
+                 <li className="flex justify-start items-start gap-4">
+                    <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Keo dán BeautiBond Xtreme (5ml)</span></div>
                  </li>
-                 <li className="flex justify-start items-center gap-4 bg-white/60 rounded-xl p-3 border border-slate-100/50 shadow-sm transition-colors hover:bg-white">
-                    <div className="w-8 h-8 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0"><CheckCircle className="w-4 h-4 text-emerald-600" /></div>
-                    <span className="font-medium">01 Xi măng BeautiLink SA (15.6g)</span>
+                 <li className="flex justify-start items-start gap-4">
+                    <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Xi măng BeautiLink SA (15.6g)</span></div>
                  </li>
-                 <li className="flex justify-start items-center gap-4 bg-white/60 rounded-xl p-3 border border-slate-100/50 shadow-sm transition-colors hover:bg-white">
-                    <div className="w-8 h-8 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0"><CheckCircle className="w-4 h-4 text-emerald-600" /></div>
-                    <span className="font-medium">01 Composite BeautiFil Injectable X</span>
+                 <li className="flex justify-start items-start gap-4">
+                    <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Composite BeautiFil Injectable X</span></div>
                  </li>
-                 <li className="flex justify-start items-center gap-4 bg-white/60 rounded-xl p-3 border border-slate-100/50 shadow-sm transition-colors hover:bg-white">
-                    <div className="w-8 h-8 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0"><CheckCircle className="w-4 h-4 text-emerald-600" /></div>
-                    <span className="font-medium">01 Composite BeautiFil II / LS</span>
+                 <li className="flex justify-start items-start gap-4">
+                    <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Composite BeautiFil II / LS</span></div>
                  </li>
-                 <li className="flex justify-start items-center gap-4 bg-white/60 rounded-xl p-3 border border-slate-100/50 shadow-sm transition-colors hover:bg-white">
-                    <div className="w-8 h-8 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0"><CheckCircle className="w-4 h-4 text-emerald-600" /></div>
-                    <span className="font-medium">01 Bộ PRG Barrier Coat / BeautiSealant</span>
+                 <li className="flex justify-start items-start gap-4">
+                    <div className="flex gap-3 items-start"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>01 Bộ PRG Barrier Coat / BeautiSealant</span></div>
                  </li>
               </ul>
             </div>
