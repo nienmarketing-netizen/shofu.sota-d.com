@@ -565,7 +565,7 @@ export const ComprehensiveSolution = () => {
             {/* Prod 2 */}
             <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row-reverse gap-8 items-center shadow-sm hover:shadow-md transition-shadow">
                <div className="w-full lg:w-1/3">
-                  <img src="/images/beautilink-bbx.png" alt="BeautiLink SA" className="w-full aspect-square object-contain p-4 rounded-2xl bg-slate-50 border border-slate-100" referrerPolicy="no-referrer" />
+                  <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png" alt="BeautiLink SA" className="w-full aspect-square object-contain p-4 rounded-2xl bg-slate-50 border border-slate-100" referrerPolicy="no-referrer" />
                </div>
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
                   <div className="inline-flex px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold w-fit">Xi măng resin tự dán</div>
