@@ -549,7 +549,7 @@ export const ComprehensiveSolution = () => {
           <div className="space-y-8">
             {/* Prod 1 */}
             <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row gap-4 lg:gap-8 items-stretch shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
-               <div className="order-3 lg:order-1 w-full lg:w-1/3 min-h-[250px] sm:min-h-[300px] shrink-0 relative">
+               <div className="order-3 lg:order-1 w-full lg:w-1/3 min-h-[160px] sm:min-h-[300px] shrink-0 relative">
                   <img src="/image/BeautiBond-Xtreme-One-Hand.webp" alt="BeautiBond Xtreme" className="absolute -left-6 sm:-left-8 -bottom-6 sm:-bottom-8 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] h-[calc(100%+1.5rem)] sm:h-[calc(100%+2rem)] object-contain object-left-bottom drop-shadow-2xl max-sm:scale-[1.04] sm:scale-[1.15] origin-bottom-left max-sm:[mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] max-sm:[-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]" referrerPolicy="no-referrer" />
                </div>
                <div className="order-1 lg:order-2 max-lg:contents w-full lg:w-2/3 flex flex-col justify-center gap-4 relative z-10">
@@ -565,7 +565,7 @@ export const ComprehensiveSolution = () => {
             {/* Prod 2 */}
             <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row-reverse gap-4 lg:gap-8 items-stretch lg:items-center shadow-sm hover:shadow-md transition-shadow">
                <div className="order-3 lg:order-1 w-full lg:w-1/3">
-                  <img src="/image/Shofu-Cement-Beautilink-SA.webp" alt="BeautiLink SA" className="w-full aspect-square object-contain" referrerPolicy="no-referrer" />
+                  <img src="/image/Shofu-Cement-Beautilink-SA.webp" alt="BeautiLink SA" className="w-full max-sm:h-[200px] sm:aspect-square object-contain" referrerPolicy="no-referrer" />
                </div>
                <div className="order-1 lg:order-2 max-lg:contents w-full lg:w-2/3 flex flex-col gap-4">
                   <div className="order-1 inline-flex px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold w-fit">Xi măng resin tự dán</div>
@@ -579,7 +579,7 @@ export const ComprehensiveSolution = () => {
 
             {/* Prod 3 */}
             <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row-reverse gap-4 lg:gap-8 items-stretch shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
-               <div className="order-3 lg:order-1 w-full lg:w-1/3 min-h-[250px] sm:min-h-[300px] shrink-0 relative">
+               <div className="order-3 lg:order-1 w-full lg:w-1/3 min-h-[160px] sm:min-h-[300px] shrink-0 relative">
                   <img src="/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x.webp" alt="Beautifil Injectable X" className="absolute -right-6 sm:-right-8 -bottom-6 sm:-bottom-8 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] h-[calc(100%+1.5rem)] sm:h-[calc(100%+2rem)] object-contain object-right-bottom drop-shadow-2xl max-sm:scale-[1.04] sm:scale-[1.15] origin-bottom-right max-sm:[mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] max-sm:[-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]" referrerPolicy="no-referrer" />
                </div>
                <div className="order-1 lg:order-2 max-lg:contents w-full lg:w-2/3 flex flex-col justify-center gap-4 relative z-10">
