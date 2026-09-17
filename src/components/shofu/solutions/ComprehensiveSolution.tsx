@@ -780,9 +780,7 @@ export const ComprehensiveSolution = () => {
                  <ImagePlaceholder className="w-full aspect-[4/3] rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)]" text="Ảnh 5 SP Vật Lý" />
               </div>
               <h4 className="font-heading font-extrabold text-2xl text-slate-800 mb-8 flex items-center justify-center gap-4">
-                <span className="w-12 h-px bg-gradient-to-r from-transparent to-[#8C2828]/30"></span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8C2828] to-red-600">Bộ 5 sản phẩm cốt lõi</span>
-                <span className="w-12 h-px bg-gradient-to-l from-transparent to-[#8C2828]/30"></span>
               </h4>
               <ul className="space-y-5 font-body text-base flex-1 text-slate-700">
                  <li className="flex justify-start items-start gap-4">
@@ -810,9 +808,7 @@ export const ComprehensiveSolution = () => {
                  <ImagePlaceholder className="w-full aspect-[4/3] rounded-2xl bg-black/20 border border-white/5 shadow-inner" text="Ảnh Quà tặng VIP" />
               </div>
               <h4 className="font-heading font-bold text-2xl text-amber-400 mb-6 flex items-center gap-3">
-                <span className="w-8 h-[2px] bg-amber-400/20 rounded-full"></span>
                 Quà tặng & đặc quyền VIP
-                <span className="w-8 h-[2px] bg-amber-400/20 rounded-full"></span>
               </h4>
               <ul className="space-y-5 font-body text-base flex-1 text-amber-50/90">
                  <li className="flex justify-start items-start gap-4">
