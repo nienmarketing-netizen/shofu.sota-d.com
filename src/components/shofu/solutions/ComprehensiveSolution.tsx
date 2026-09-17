@@ -580,7 +580,7 @@ export const ComprehensiveSolution = () => {
             {/* Prod 3 */}
             <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row-reverse gap-8 items-stretch shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
                <div className="w-full lg:w-1/3 min-h-[250px] sm:min-h-[300px] shrink-0 relative">
-                  <img src="/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x.webp" alt="Beautifil Injectable X" className="absolute -right-6 sm:-right-8 -bottom-6 sm:-bottom-8 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] h-[calc(100%+1.5rem)] sm:h-[calc(100%+2rem)] object-contain object-right-bottom drop-shadow-2xl scale-[1.15] origin-bottom-right" referrerPolicy="no-referrer" />
+                  <img src="/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x.webp" alt="Beautifil Injectable X" className="absolute -right-6 sm:-right-8 -bottom-6 sm:-bottom-8 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] h-[calc(100%+1.5rem)] sm:h-[calc(100%+2rem)] object-contain object-right-bottom drop-shadow-2xl max-sm:scale-[0.8] sm:scale-[1.15] origin-bottom-right max-sm:[mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)] max-sm:[-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]" referrerPolicy="no-referrer" />
                </div>
                <div className="w-full lg:w-2/3 flex flex-col justify-center gap-4 relative z-10">
                   <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold w-fit">Composite đắp khối</div>
