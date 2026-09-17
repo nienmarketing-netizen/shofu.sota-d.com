@@ -315,6 +315,12 @@ export const ComprehensiveSolution = () => {
               <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] text-slate-900 leading-[1.2] mb-6 tracking-tight">
                 Dập tắt ám ảnh bảo hành cùng <span className="text-[#8C2828]">hệ sinh thái trị liệu sinh học Giomer 360°</span>
               </h1>
+
+              {/* Mobile Image (hidden on lg) */}
+              <div className="w-full relative lg:hidden mb-6">
+                 <div className="absolute inset-0 bg-gradient-to-tr from-[#8C2828]/20 to-transparent rounded-full blur-3xl"></div>
+                 <ImagePlaceholder className="w-full aspect-[4/5] sm:aspect-video rounded-2xl relative z-10 bg-white shadow-sm" text="Ảnh Master Ecosystem (Bộ 5 Sản phẩm cốt lõi)" />
+              </div>
               
               <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
                 Bác sĩ chỉnh khớp chuẩn xác, sửa soạn bờ hoàn tất khít sát, cô lập đàng hoàng... nhưng bệnh nhân vẫn than phiền vì <strong className="text-slate-900 bg-red-50 px-1 rounded">ê buốt sau trám xoang II</strong>, <strong className="text-slate-900 bg-red-50 px-1 rounded">rớt mặt dán sứ Veneer</strong>, hoặc <strong className="text-slate-900 bg-red-50 px-1 rounded">viêm nướu tứa máu do dọn xi măng kẽ</strong>. Đã đến lúc nâng cấp toàn bộ "đạn dược" lâm sàng: Thay thế các vật liệu "trơ" thụ động cũ kỹ bằng <strong className="text-[#8C2828] font-bold">Hệ sinh thái Trị liệu Sinh học Giomer 360°</strong> – <span className="text-emerald-600 font-medium bg-emerald-50 px-1 rounded">Bảo vệ mô răng thật bền vững</span> và <span className="text-slate-900 font-bold underline decoration-[#8C2828] decoration-2 underline-offset-4">dập tắt ám ảnh bảo hành!</span>
@@ -353,7 +359,7 @@ export const ComprehensiveSolution = () => {
               </div>
             </div>
             
-            <div className="w-full lg:w-2/5 relative">
+            <div className="w-full lg:w-2/5 relative hidden lg:block">
                <div className="absolute inset-0 bg-gradient-to-tr from-[#8C2828]/20 to-transparent rounded-full blur-3xl"></div>
                <ImagePlaceholder className="w-full aspect-[4/5] rounded-2xl relative z-10 bg-white" text="Ảnh Master Ecosystem (Bộ 5 Sản phẩm cốt lõi)" />
                
