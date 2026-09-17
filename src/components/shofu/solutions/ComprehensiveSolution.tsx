@@ -934,21 +934,28 @@ export const ComprehensiveSolution = () => {
               <h2 className="font-heading font-black text-2xl sm:text-3xl text-white md:text-slate-900 mb-4">Đăng ký Gói chuyển đổi: Master Ecosystem - Hệ sinh thái Giomer 360°</h2>
             </div>
             
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const data = Object.fromEntries(formData.entries());
+              // In a real app, this data would be sent via POST to an API
+              // For now, we'll just open the modal to simulate success without putting data in URL
+              openCampaignModal("Đăng ký thành công");
+            }}>
                <div>
                   <label className="block text-sm font-bold text-slate-200 md:text-slate-700 mb-2">Họ và tên Bác sĩ *</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-xl border border-white/20 md:border-slate-300 focus:outline-none focus:ring-2 focus:ring-white/50 md:focus:ring-[#8C2828]/50 focus:border-white md:focus:border-[#8C2828] transition-all bg-white/5 md:bg-slate-50 text-white md:text-slate-900 placeholder:text-slate-400" placeholder="Nhập họ và tên..." />
+                  <input type="text" name="fullName" required className="w-full px-4 py-3 rounded-xl border border-white/20 md:border-slate-300 focus:outline-none focus:ring-2 focus:ring-white/50 md:focus:ring-[#8C2828]/50 focus:border-white md:focus:border-[#8C2828] transition-all bg-white/5 md:bg-slate-50 text-white md:text-slate-900 placeholder:text-slate-400" placeholder="Nhập họ và tên..." />
                </div>
                <div>
                   <label className="block text-sm font-bold text-slate-200 md:text-slate-700 mb-2">Số điện thoại Zalo *</label>
-                  <input type="tel" className="w-full px-4 py-3 rounded-xl border border-white/20 md:border-slate-300 focus:outline-none focus:ring-2 focus:ring-white/50 md:focus:ring-[#8C2828]/50 focus:border-white md:focus:border-[#8C2828] transition-all bg-white/5 md:bg-slate-50 text-white md:text-slate-900 placeholder:text-slate-400" placeholder="Nhập số điện thoại..." />
+                  <input type="tel" name="phone" required className="w-full px-4 py-3 rounded-xl border border-white/20 md:border-slate-300 focus:outline-none focus:ring-2 focus:ring-white/50 md:focus:ring-[#8C2828]/50 focus:border-white md:focus:border-[#8C2828] transition-all bg-white/5 md:bg-slate-50 text-white md:text-slate-900 placeholder:text-slate-400" placeholder="Nhập số điện thoại..." />
                </div>
                <div>
                   <label className="block text-sm font-bold text-slate-200 md:text-slate-700 mb-2">Tên Phòng khám & Địa chỉ *</label>
-                  <textarea rows={3} className="w-full px-4 py-3 rounded-xl border border-white/20 md:border-slate-300 focus:outline-none focus:ring-2 focus:ring-white/50 md:focus:ring-[#8C2828]/50 focus:border-white md:focus:border-[#8C2828] transition-all bg-white/5 md:bg-slate-50 text-white md:text-slate-900 placeholder:text-slate-400" placeholder="Nhập địa chỉ nhận hàng..."></textarea>
+                  <textarea name="address" rows={3} required className="w-full px-4 py-3 rounded-xl border border-white/20 md:border-slate-300 focus:outline-none focus:ring-2 focus:ring-white/50 md:focus:ring-[#8C2828]/50 focus:border-white md:focus:border-[#8C2828] transition-all bg-white/5 md:bg-slate-50 text-white md:text-slate-900 placeholder:text-slate-400" placeholder="Nhập địa chỉ nhận hàng..."></textarea>
                </div>
                
-               <button type="button" onClick={() => openCampaignModal("Đăng ký thành công")} className="w-full bg-gradient-to-r from-red-600 to-red-700 md:from-[#8C2828] md:to-[#8C2828] md:bg-[#8C2828] text-white font-bold font-mono py-3 md:py-4 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 mt-4 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2">
+               <button type="submit" className="w-full bg-gradient-to-r from-red-600 to-red-700 md:from-[#8C2828] md:to-[#8C2828] md:bg-[#8C2828] text-white font-bold font-mono py-3 md:py-4 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 mt-4 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2">
                   <span className="text-base md:text-lg">Xác nhận đặt mua</span>
                   <span className="hidden md:inline">-</span>
                   <span className="text-[11px] md:text-lg font-normal md:font-bold opacity-90 md:opacity-100">(nhận quà 8.285.000đ)</span>
