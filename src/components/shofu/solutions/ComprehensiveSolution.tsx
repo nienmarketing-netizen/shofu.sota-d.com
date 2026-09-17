@@ -447,7 +447,7 @@ export const ComprehensiveSolution = () => {
           </div>
         
           <div className="mt-12 text-center">
-            <CtaButton onClick={() => openCampaignModal("Nhận giải pháp khắc phục điểm mù lâm sàng")} className="group relative inline-flex items-center justify-center gap-2 bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-mono text-sm sm:text-base font-bold tracking-wide hover:bg-amber-300 hover:shadow-xl hover:shadow-amber-400/20 transition-all duration-300">
+            <CtaButton onClick={() => openCampaignModal("Nhận giải pháp khắc phục điểm mù lâm sàng")} className="group relative inline-flex items-center justify-center gap-2 bg-amber-400 text-slate-900 px-4 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-xs sm:text-base whitespace-nowrap font-bold tracking-wide hover:bg-amber-300 hover:shadow-xl hover:shadow-amber-400/20 transition-all duration-300">
               <span>Khắc phục điểm mù lâm sàng ngay</span>
               <ArrowRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
             </CtaButton>
@@ -516,7 +516,7 @@ export const ComprehensiveSolution = () => {
           </div>
         
           <div className="mt-12 text-center">
-            <CtaButton onClick={() => openCampaignModal("Nâng cấp vật liệu sinh học S-PRG")} className="group relative inline-flex items-center justify-center gap-2 bg-[#8C2828] text-white px-8 py-4 rounded-full font-mono text-sm sm:text-base font-bold tracking-wide hover:bg-red-900 hover:shadow-xl hover:shadow-red-900/30 transition-all duration-300">
+            <CtaButton onClick={() => openCampaignModal("Nâng cấp vật liệu sinh học S-PRG")} className="group relative inline-flex items-center justify-center gap-2 bg-[#8C2828] text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-xs sm:text-base whitespace-nowrap font-bold tracking-wide hover:bg-red-900 hover:shadow-xl hover:shadow-red-900/30 transition-all duration-300">
               <span>Nâng cấp vật liệu sinh học S-PRG</span>
               <ArrowRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
             </CtaButton>
@@ -610,7 +610,7 @@ export const ComprehensiveSolution = () => {
           </div>
         
           <div className="mt-12 text-center">
-            <CtaButton onClick={() => openCampaignModal("Nhận báo giá hệ sinh thái Giomer 360")} className="group relative inline-flex items-center justify-center gap-2 bg-[#8C2828] text-white px-8 py-4 rounded-full font-mono text-sm sm:text-base font-bold tracking-wide hover:bg-red-900 hover:shadow-xl hover:shadow-red-900/30 transition-all duration-300">
+            <CtaButton onClick={() => openCampaignModal("Nhận báo giá hệ sinh thái Giomer 360")} className="group relative inline-flex items-center justify-center gap-2 bg-[#8C2828] text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-xs sm:text-base whitespace-nowrap font-bold tracking-wide hover:bg-red-900 hover:shadow-xl hover:shadow-red-900/30 transition-all duration-300">
               <span>Khám phá trọn bộ Hệ sinh thái Giomer</span>
               <ArrowRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
             </CtaButton>
@@ -680,7 +680,7 @@ export const ComprehensiveSolution = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <CtaButton onClick={() => openCampaignModal("Gia nhập cộng đồng MiCD")} className="group relative inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-8 py-4 rounded-full font-mono text-sm sm:text-base font-bold tracking-wide hover:bg-blue-400 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300">
+            <CtaButton onClick={() => openCampaignModal("Gia nhập cộng đồng MiCD")} className="group relative inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-xs sm:text-base whitespace-nowrap font-bold tracking-wide hover:bg-blue-400 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300">
               <HandHeart className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 transition-all" />
               <span>Gia nhập cộng đồng MiCD</span>
             </CtaButton>
@@ -809,7 +809,7 @@ export const ComprehensiveSolution = () => {
           </div>
         
           <div className="mt-12 text-center">
-            <CtaButton onClick={() => openCampaignModal("Đăng ký nhận Ưu đãi Master Ecosystem")} className="group relative inline-flex items-center justify-center gap-2 bg-amber-400 text-slate-900 px-8 py-4 rounded-full font-mono text-sm sm:text-base font-bold tracking-wide hover:bg-amber-300 hover:shadow-xl hover:shadow-amber-400/30 transition-all duration-300 mt-8">
+            <CtaButton onClick={() => openCampaignModal("Đăng ký nhận Ưu đãi Master Ecosystem")} className="group relative inline-flex items-center justify-center gap-2 bg-amber-400 text-slate-900 px-4 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-xs sm:text-base whitespace-nowrap font-bold tracking-wide hover:bg-amber-300 hover:shadow-xl hover:shadow-amber-400/30 transition-all duration-300 mt-8">
               <Gift className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:-rotate-12 transition-all" />
               <span>Đăng ký giữ chỗ Ưu đãi ngay</span>
             </CtaButton>
@@ -839,7 +839,7 @@ export const ComprehensiveSolution = () => {
           </div>
         
           <div className="mt-12 text-center">
-            <CtaButton onClick={() => openCampaignModal("Nhận tư vấn chuyên sâu 1:1")} className="group relative inline-flex items-center justify-center gap-2 bg-[#8C2828] text-white px-8 py-4 rounded-full font-mono text-sm sm:text-base font-bold tracking-wide hover:bg-red-900 hover:shadow-xl hover:shadow-red-900/30 transition-all duration-300">
+            <CtaButton onClick={() => openCampaignModal("Nhận tư vấn chuyên sâu 1:1")} className="group relative inline-flex items-center justify-center gap-2 bg-[#8C2828] text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-xs sm:text-base whitespace-nowrap font-bold tracking-wide hover:bg-red-900 hover:shadow-xl hover:shadow-red-900/30 transition-all duration-300">
               <span>Bạn còn câu hỏi? Nhận tư vấn 1:1</span>
               <ArrowRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
             </CtaButton>
