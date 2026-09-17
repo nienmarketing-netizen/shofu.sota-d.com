@@ -931,7 +931,7 @@ export const ComprehensiveSolution = () => {
         <div className="w-[90%] lg:w-[50%] mx-auto relative z-10">
           <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl">
             <div className="text-center mb-10">
-              <h2 className="font-heading font-black text-2xl sm:text-3xl text-slate-900 mb-4">Đăng ký chuyển đổi</h2>
+              <h2 className="font-heading font-black text-2xl sm:text-3xl text-slate-900 mb-4">Đăng ký Gói chuyển đổi: Master Ecosystem - Hệ sinh thái Giomer 360°</h2>
               <p className="text-slate-600 font-body text-sm sm:text-base">Sở hữu trọn bộ Master Ecosystem Shofu Nhật Bản cùng chính sách bảo đảm rủi ro 3 lớp tuyệt đối từ Sota-D.</p>
             </div>
             
