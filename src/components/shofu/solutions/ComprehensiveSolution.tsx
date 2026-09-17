@@ -266,7 +266,7 @@ export const ComprehensiveSolution = () => {
       q: "Dùng trọn bộ 5 sản phẩm Shofu này có bắt buộc phải thay đổi toàn bộ quy trình ở phòng khám không?",
       a: (
         <>
-          Không cần. Hệ sinh thái Shofu được thiết kế theo triết lý "True Universal" (Phổ quát thật sự) [cite: 26]. Bác sĩ có thể áp dụng ngay vào quy trình sẵn có mà không cần mua thêm thiết bị hay dụng cụ đắt tiền nào khác.
+          Không cần. Hệ sinh thái Shofu được thiết kế theo triết lý "True Universal" (Phổ quát thật sự). Bác sĩ có thể áp dụng ngay vào quy trình sẵn có mà không cần mua thêm thiết bị hay dụng cụ đắt tiền nào khác.
         </>
       )
     },
@@ -284,6 +284,52 @@ export const ComprehensiveSolution = () => {
         <>
           Lực dán đạt mức tuyệt đối &gt;40–50 MPa. Màng keo 5µm và màng xi măng 14µm giúp tối ưu hóa khoảng trống vật liệu, giúp viền phục hình khít sát hoàn hảo, loại bỏ nguy cơ cộm khớp hay vi thấm đổi màu viền nướu.
         </>
+      )
+    },
+    {
+      q: "Composite lỏng đắp khối Beautifil Injectable X và Composite đặc Beautifil II LS của Shofu có gì khác biệt so với các dòng Composite thông thường?",
+      a: (
+        <div className="space-y-3">
+          <p><strong>Beautifil Injectable X (Composite lỏng đắp khối chịu lực):</strong> Sở hữu tính lưu biến Thixotropic thông minh — tự lấp đầy mọi ngóc ngách hốc xoang vi thể mà tuyệt đối không đọng bọt khí. Nhờ công nghệ nano S-PRG nồng độ cao (67 wt%), sản phẩm đạt độ bền nén kỷ lục 400 MPa và độ bền uốn 130 MPa, cho phép đắp khối chịu lực ăn nhai trực tiếp ở cả xoang I, II, V và tái tạo gờ múi mà không lo nứt vỡ.</p>
+          <p><strong>Beautifil II LS (Composite đặc Universal co ngót siêu thấp):</strong> Giải quyết triệt để nỗi đau vi kẽ xoang II nhờ độ co ngót thể tích chạm đáy chỉ 0.85% và ứng suất co ngót kỷ lục 2.72 MPa (thấp nhất trong các dòng nano-hybrid). Kết hợp hiệu ứng "Tắc kè hoa" (Chameleon Effect) tự động tiệp màu răng thật, miếng trám giữ được độ bóng lâu dài và kháng bám mảng sinh học vi khuẩn.</p>
+        </div>
+      )
+    },
+    {
+      q: "Đối với bệnh nhân nhi hiếu động hoặc các ca mòn cổ răng ê buốt tàn nhẫn, tuyến phòng ngừa (PRG Barrier Coat & BeautiSealant) xử lý như thế nào?",
+      a: (
+        <div className="space-y-3">
+          <p><strong>BeautiSealant (Trám bít hố rãnh Self-Etch):</strong> Loại bỏ hoàn toàn quy trình Etching bằng Axit Phosphoric lách cách và bước rửa nước thổi khô. Dùng Self-Etch Primer dịu nhẹ (chứa MDP Monomer) chuẩn bị bề mặt chỉ trong 5 giây, triệt tiêu 100% rủi ro ngấm nước bọt làm bong tróc màng Sealant ở trẻ nhỏ.</p>
+          <p><strong>PRG Barrier Coat (Véc-ni Bioactive chống ê buốt):</strong> Bôi một lớp màng siêu mỏng chỉ 15 micron (công thức 100% HEMA-Free, Acetone-Free) lên các vùng ngà hở, cổ răng mòn hay đốm trắng. Chiếu đèn 10 giây giúp giảm mẫn cảm ngà lập tức và duy trì hiệu quả bảo vệ kéo dài từ 3 đến 6 tháng chỉ sau một lần bôi duy nhất.</p>
+        </div>
+      )
+    },
+    {
+      q: "Tại sao nhiều ca phục hình được thực hiện rất kỹ nhưng sau vài tháng hay vài năm bệnh nhân vẫn than phiền vì ê buốt muộn hoặc vi thấm đổi màu viền nướu?",
+      a: (
+        <div className="space-y-3">
+          <p>Căn nguyên hàng đầu nằm ở thành phần HEMA trong các loại keo dán truyền thống. HEMA là chất ưa nước, hoạt động như một "miếng bọt biển" ngậm dịch ngà và nước bọt. Theo thời gian dưới tác động nhiệt độ khoang miệng, HEMA bị thủy phân phân hủy lớp lai dán, tạo ra các kẽ rò vi thể khiến vi khuẩn xâm nhập gây ê buốt muộn và bong sút phục hình.</p>
+          <p>BeautiBond Xtreme (BBX) loại bỏ hoàn toàn HEMA (dùng dung môi Acetone bay hơi chớp nhoáng), tạo nên một lớp lai kỵ nước vĩnh cửu. Màng keo kỷ lục chỉ 5µm cùng 4 Monomer chức năng khóa chặt 100% ống ngà, triệt tiêu vi thấm và triệt tiêu vĩnh viễn nguy cơ ê buốt hậu phẫu.</p>
+        </div>
+      )
+    },
+    {
+      q: "Hạt độn sinh học S-PRG giải phóng 6 loại ion có bị \"cạn kiệt\" theo thời gian không? Khả năng chống sâu răng tái phát được chứng minh ra sao?",
+      a: (
+        <div className="space-y-3">
+          <p>Hoàn toàn không bị cạn kiệt. Cấu trúc mạng lưới 3 lớp của hạt độn S-PRG hoạt động như một "bình ắc quy sinh học 24/7". Khi bệnh nhân chải răng hàng ngày với kem đánh răng chứa Fluoride, hạt S-PRG sẽ tự động nạp lại ion (Release & Recharge) để duy trì vòng tuần hoàn bảo vệ liên tục.</p>
+          <p><strong>Tác động 6 Ion (Fluoride, Strontium, Sodium, Borate, Aluminum, Silicate):</strong> Tái khoáng hóa ngà răng, chủ động trung hòa axit khi pH khoang miệng giảm xuống dưới 5.5 và đứt gãy con đường chuyển hóa năng lượng của vi khuẩn S. mutans, ngăn chặn sự hình thành mảng sinh học (Biofilm).</p>
+          <p><strong>Bằng chứng y văn JADA (Đại học Florida - Mỹ):</strong> Nghiên cứu theo dõi lâm sàng dài hạn suốt 13 năm ghi nhận 96% phục hình hoàn toàn sạch bóng sâu răng thứ phát, chứng minh năng lực bảo vệ cùi răng vĩnh cửu.</p>
+        </div>
+      )
+    },
+    {
+      q: "Việc dọn xi măng kẽ răng dư và bài toán chi phí vật tư được hệ sinh thái Shofu tối ưu như thế nào?",
+      a: (
+        <div className="space-y-3">
+          <p><strong>Giải quyết "Nỗi sợ dọn xi măng 7h tối":</strong> Xi măng BeautiLink SA sở hữu tính năng quang trùng hợp sơ bộ (Tack-cure) 1–2 giây. Xi măng dư lập tức chuyển sang dạng gel dẻo như cao su, Bác sĩ chỉ cần dùng thám châm bóc sạch nguyên mảng (Kỹ thuật One-Sweep) trong đúng 2 giây mà không cần cạo vất vả hay làm tứa máu nướu bệnh nhân.</p>
+          <p><strong>Tối ưu ROI phòng khám (Chi phí chỉ ~16.600đ/ca):</strong> Các vòi Automix thông thường làm kẹt lại từ 0.25g đến 0.44g xi măng ("thể tích chết") sau mỗi lần gắn. BeautiLink SA Handmix với tuýp khổng lồ 15.6g (9ml) triệt tiêu 95% lãng phí vòi vặn, thực hiện trọn vẹn lên tới 120 ca gắn mão. Sản phẩm ứng dụng Hệ xúc tác "Ngủ đông" (Hibernation System), cam kết giữ nguyên độ tinh khiết hóa học và lực dán 50 MPa trong 24 tháng ở nhiệt độ phòng (&lt;25°C).</p>
+        </div>
       )
     }
   ];
