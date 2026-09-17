@@ -19,12 +19,12 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-[90%] lg:w-[80%] mx-auto relative z-10 mb-10 md:mb-16"
+        className="w-[90%] lg:w-[80%] mx-auto relative z-10 mb-10 md:mb-16 mix-blend-multiply opacity-90"
       >
         <img referrerPolicy="no-referrer"
           src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/background-hero-section-full-solution-shofu.webp"
           alt="Shofu Full Solution"
-          className="w-full h-auto object-cover block drop-shadow-2xl"
+          className="w-full h-auto object-cover block mix-blend-multiply"
           loading="eager"
           // @ts-ignore
           fetchPriority="high"
@@ -72,8 +72,7 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto"
             >
-              <span className="block">Hệ sinh thái vật liệu nha khoa tiên tiến tích hợp công nghệ hạt độn sinh học <strong className="text-[#00ADEF]">S-PRG độc quyền</strong>.</span>
-              <span className="block mt-1 sm:mt-2"><strong className="text-slate-900">Tối ưu quy trình lâm sàng</strong>, mang lại hiệu quả <strong className="text-slate-900">phục hình bền vững</strong> và <strong className="text-emerald-600">bảo vệ mô răng chủ động</strong>.</span>
+              Hệ sinh thái vật liệu nha khoa tiên tiến tích hợp công nghệ hạt độn sinh học <strong className="text-[#00ADEF]">S-PRG độc quyền</strong>. <strong className="text-slate-900">Tối ưu quy trình lâm sàng</strong>, mang lại hiệu quả <strong className="text-slate-900">phục hình bền vững</strong> và <strong className="text-emerald-600">bảo vệ mô răng chủ động</strong>.
             </motion.p>
 
             <motion.div 
