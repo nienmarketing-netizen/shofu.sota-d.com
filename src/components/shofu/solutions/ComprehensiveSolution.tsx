@@ -469,9 +469,9 @@ export const ComprehensiveSolution = () => {
               <RefreshCw className="w-4 h-4" />
               <span>Bước ngoặt tư duy</span>
             </div>
-            <h2 className="font-heading font-extrabold text-[1.65rem] min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.3] mb-6 tracking-tight text-slate-900">
-              <span className="block md:mb-2 text-slate-700 whitespace-nowrap">Đừng chỉ <span className="text-slate-400 font-bold decoration-slate-300 decoration-2 underline-offset-4 line-through">"trám bít lỗ hổng"</span></span>
-              <span className="block mt-2 sm:mt-0">Hãy dùng vật liệu có khả năng <span className="text-[#8C2828] relative inline-block whitespace-nowrap"><span className="relative z-10">"chữa lành"!</span><div className="absolute bottom-1 left-0 w-full h-3 sm:h-4 bg-amber-200/80 -z-10 -rotate-2 rounded-sm transform scale-105 origin-left"></div></span></span>
+            <h2 className="font-heading font-extrabold text-[1.35rem] min-[375px]:text-[1.6rem] sm:text-4xl lg:text-[2.75rem] leading-[1.3] mb-6 tracking-tight text-slate-900">
+              <span className="block md:mb-2 text-slate-700">Đừng chỉ <span className="text-slate-400 font-bold decoration-slate-300 decoration-2 underline-offset-4 line-through">"trám bít lỗ hổng"</span></span>
+              <span className="block mt-1 sm:mt-0">Hãy dùng vật liệu có khả năng <span className="text-[#8C2828] relative inline-block"><span className="relative z-10">"chữa lành"!</span><div className="absolute bottom-1 left-0 w-full h-3 sm:h-4 bg-amber-200/80 -z-10 -rotate-2 rounded-sm transform scale-105 origin-left"></div></span></span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
               Nha khoa hiện đại đã bước qua thời kỳ <span className="line-through decoration-slate-400 text-slate-400">mài trám cơ học thụ động</span>. Triết lý <strong className="text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded-md">MiCD (Minimally Invasive Cosmetic Dentistry)</strong> hướng tới việc <strong className="text-emerald-600">bảo tồn tối đa mô răng thật</strong> kết hợp cùng <strong className="text-[#8C2828] bg-red-50 px-1.5 py-0.5 rounded-md border border-red-100">công nghệ hạt độn S-PRG (Surface Pre-Reacted Glass-ionomer)</strong> độc quyền của Shofu.
