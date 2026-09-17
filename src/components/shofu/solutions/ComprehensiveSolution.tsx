@@ -866,7 +866,7 @@ export const ComprehensiveSolution = () => {
         
           <div className="mt-12 text-center">
             <CtaButton onClick={() => openCampaignModal("Nhận tư vấn chuyên sâu 1:1")} className="group relative inline-flex items-center justify-center gap-2 bg-[#8C2828] text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-xs sm:text-base whitespace-nowrap font-bold tracking-wide hover:bg-red-900 hover:shadow-xl hover:shadow-red-900/30 transition-all duration-300">
-              <span>Bạn còn câu hỏi? Nhận tư vấn 1:1</span>
+              <span>Bác sĩ còn câu hỏi? Nhận tư vấn ngay</span>
               <ArrowRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
             </CtaButton>
           </div>
