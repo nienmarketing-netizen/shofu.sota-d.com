@@ -402,7 +402,7 @@ export const ComprehensiveSolution = () => {
                   <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center shrink-0">
                      <span className="font-heading font-bold text-2xl text-red-400">1</span>
                   </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">Ám ảnh ê buốt & sâu răng tái phát xoang II</h3>
+                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-white leading-tight">Ám ảnh ê buốt & sâu răng tái phát xoang II</h3>
                </div>
                <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
                  <strong className="text-red-300">Căn nguyên:</strong> Keo dán chứa monomer HEMA ưa nước bị thủy phân (ngậm nước bọt/dịch ngà) làm đứt gãy lớp lai dán sau vài tháng, tạo kẽ rò vi thể khiến vi khuẩn xâm nhập.
@@ -414,7 +414,7 @@ export const ComprehensiveSolution = () => {
                   <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
                      <span className="font-heading font-bold text-2xl text-amber-400">2</span>
                   </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">Rủi ro đội phục hình & bong tróc veneer</h3>
+                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-white leading-tight">Rủi ro đội phục hình & bong tróc veneer</h3>
                </div>
                <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
                  <strong className="text-amber-300">Căn nguyên:</strong> Màng keo dán quá dày gây cộm vướng khớp cắn, kết hợp keo dán thiếu Silane kháng axit khiến liên kết dán Zirconia/Sứ bị thoái hóa nhanh chóng.
@@ -426,7 +426,7 @@ export const ComprehensiveSolution = () => {
                   <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
                      <span className="font-heading font-bold text-2xl text-blue-400">3</span>
                   </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"Nỗi sợ 7h tối": Dọn xi măng kẽ tứa máu</h3>
+                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-white leading-tight">"Nỗi sợ 7h tối": Dọn xi măng kẽ tứa máu</h3>
                </div>
                <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
                  <strong className="text-blue-300">Căn nguyên:</strong> Xi măng Resin đông cứng cơ học quá nhanh hoặc bết dính, cạo mỏi tay làm rách nướu, tổn thương màng nha chu và gây ám ảnh viền dán hôi miệng.
@@ -438,7 +438,7 @@ export const ComprehensiveSolution = () => {
                   <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
                      <span className="font-heading font-bold text-2xl text-emerald-400">4</span>
                   </div>
-                  <h3 className="font-heading font-bold text-lg sm:text-xl text-white leading-tight">"Thể tích chết" & chảy máu dòng tiền vật tư</h3>
+                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-white leading-tight">"Thể tích chết" & chảy máu dòng tiền vật tư</h3>
                </div>
                <p className="font-body text-slate-400 text-sm sm:text-base leading-relaxed">
                  <strong className="text-emerald-300">Căn nguyên:</strong> Các vòi trộn Automix tiêu chuẩn kẹt lại từ 0.25g - 0.44g xi măng đắt tiền sau mỗi lần bơm, làm bốc hơi 30-40% lợi nhuận phòng khám mà Chủ nha khoa không hề biết.
@@ -544,7 +544,7 @@ export const ComprehensiveSolution = () => {
                </div>
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
                   <div className="inline-flex px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-bold w-fit">KEO DÁN THẾ HỆ 8</div>
-                  <h3 className="font-heading font-bold text-2xl text-slate-900">1. BeautiBond Xtreme (BBX) – 5ml</h3>
+                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900">1. BeautiBond Xtreme (BBX) – 5ml</h3>
                   <ul className="space-y-3 font-body text-slate-600 mt-2">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Màng keo kỷ lục 5µm, 100% HEMA-Free kỵ nước (dung môi Acetone bay hơi chớp nhoáng).</span></li>
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tích hợp ARS bọc giáp Silane & Monomer MDP, dán thẳng Zirconia/Sứ/Ngà chỉ với 1 chai.</span></li>
@@ -559,7 +559,7 @@ export const ComprehensiveSolution = () => {
                </div>
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
                   <div className="inline-flex px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold w-fit">Xi măng resin tự dán</div>
-                  <h3 className="font-heading font-bold text-2xl text-slate-900">2. BeautiLink SA – Tuýp khổng lồ 15.6g</h3>
+                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900">2. BeautiLink SA – Tuýp khổng lồ 15.6g</h3>
                   <ul className="space-y-3 font-body text-slate-600 mt-2">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Thể tích khổng lồ 9ml (15.6g) thực hiện được ~120 ca gắn (chỉ ~16.600đ/ca).</span></li>
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Màng xi măng 14µm, Tack-cure 1-2 giây lột sạch xi măng dư nguyên khối (One-Sweep).</span></li>
@@ -574,7 +574,7 @@ export const ComprehensiveSolution = () => {
                </div>
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
                   <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold w-fit">Composite lỏng đắp khối</div>
-                  <h3 className="font-heading font-bold text-2xl text-slate-900">3. Beautifil Injectable X – 2.2g</h3>
+                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900">3. Beautifil Injectable X – 2.2g</h3>
                   <ul className="space-y-3 font-body text-slate-600 mt-2">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Độ bền nén kỷ lục 400 MPa, đắp khối chịu lực ăn nhai trực tiếp xoang I, II, V.</span></li>
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Tính lưu biến Thixotropic tự lấp đầy hốc xoang vi thể, không đọng bọt khí.</span></li>
@@ -588,7 +588,7 @@ export const ComprehensiveSolution = () => {
                   <ImagePlaceholder className="w-full aspect-[16/9] rounded-2xl" text="Beautifil II / LS" />
                   <div>
                      <div className="inline-flex px-3 py-1 bg-amber-50 text-amber-600 rounded-full text-xs font-bold w-fit mb-3">Composite đặc</div>
-                     <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">4. Beautifil II / Beautifil II LS</h3>
+                     <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4">4. Beautifil II / Beautifil II LS</h3>
                      <ul className="space-y-3 font-body text-slate-600 text-sm">
                         <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span>Độ co ngót thể tích siêu thấp, chống bám mảng sinh học nhờ hạt độn S-PRG.</span></li>
                         <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span>Hiệu ứng "Tắc kè hoa" tự động tiệp màu răng thật hoàn hảo.</span></li>
@@ -599,7 +599,7 @@ export const ComprehensiveSolution = () => {
                   <ImagePlaceholder className="w-full aspect-[16/9] rounded-2xl" text="PRG Barrier Coat / BeautiSealant" />
                   <div>
                      <div className="inline-flex px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-xs font-bold w-fit mb-3">Phòng ngừa & phong tỏa</div>
-                     <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">5. Tự chọn 1 trong 2 giải pháp:</h3>
+                     <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4">5. Tự chọn 1 trong 2 giải pháp:</h3>
                      <ul className="space-y-3 font-body text-slate-600 text-sm">
                         <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span><strong className="text-slate-800">Bộ PRG Barrier Coat Mini-Kit:</strong> Véc-ni phủ 15µm trị liệu ê buốt 3-6 tháng.</span></li>
                         <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span><strong className="text-slate-800">Bộ BeautiSealant Set:</strong> Trám bít hố rãnh Self-Etch không rửa nước.</span></li>
