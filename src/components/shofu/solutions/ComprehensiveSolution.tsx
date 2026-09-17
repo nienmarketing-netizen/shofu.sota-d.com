@@ -321,19 +321,19 @@ export const ComprehensiveSolution = () => {
               </p>
 
               <div className="flex flex-col gap-4 mb-10 w-full max-w-2xl">
-                <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm">
+                <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm text-left">
                   <div className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">🇯🇵</div>
                   <p className="font-body text-sm sm:text-base text-slate-700 leading-tight mt-1.5">
                     <strong className="text-slate-900">100% Made in Japan</strong> – Thương hiệu vật liệu nha khoa đỉnh cao hơn 100 năm lịch sử.
                   </p>
                 </div>
-                <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm">
+                <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm text-left">
                   <div className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0"><Microscope className="w-4 h-4" /></div>
                   <p className="font-body text-sm sm:text-base text-slate-700 leading-tight mt-1.5">
                     <strong className="text-slate-900">Bằng chứng Y văn JADA (Mỹ)</strong> – Nghiên cứu 13 năm chứng minh tỷ lệ 96% phục hình hoàn toàn không sâu răng tái phát.
                   </p>
                 </div>
-                <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm">
+                <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm text-left">
                   <div className="w-8 h-8 rounded-full bg-red-50 text-red-600 flex items-center justify-center shrink-0"><ShieldCheck className="w-4 h-4" /></div>
                   <p className="font-body text-sm sm:text-base text-slate-700 leading-tight mt-1.5">
                     <strong className="text-slate-900">Công nghệ HEMA-Free & S-PRG Bioactive</strong> – Triệt tiêu thủy phân, khóa chặt vi kẽ, giải phóng 6 ion tái khoáng hóa 24/7.
