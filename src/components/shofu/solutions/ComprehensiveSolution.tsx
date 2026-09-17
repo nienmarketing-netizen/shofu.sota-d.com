@@ -948,8 +948,10 @@ export const ComprehensiveSolution = () => {
                   <textarea rows={3} className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#8C2828]/50 focus:border-[#8C2828] transition-all bg-slate-50" placeholder="Nhập địa chỉ nhận hàng..."></textarea>
                </div>
                
-               <button type="button" onClick={() => openCampaignModal("Đăng ký thành công")} className="w-full bg-[#8C2828] text-white font-bold font-mono py-4 rounded-xl shadow-lg hover:bg-red-900 hover:shadow-xl transition-all hover:-translate-y-1 mt-4">
-                  Xác nhận đặt mua - Nhận quà 8.285.000Đ
+               <button type="button" onClick={() => openCampaignModal("Đăng ký thành công")} className="w-full bg-[#8C2828] text-white font-bold font-mono py-3 md:py-4 rounded-xl shadow-lg hover:bg-red-900 hover:shadow-xl transition-all hover:-translate-y-1 mt-4 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2">
+                  <span className="text-base md:text-lg">Xác nhận đặt mua</span>
+                  <span className="hidden md:inline">-</span>
+                  <span className="text-[11px] md:text-lg font-normal md:font-bold opacity-90 md:opacity-100">(nhận quà 8.285.000đ)</span>
                </button>
             </form>
           </div>
