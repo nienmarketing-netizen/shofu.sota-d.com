@@ -780,16 +780,33 @@ export const ComprehensiveSolution = () => {
             </div>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-6 sm:p-10 text-center shadow-xl">
-             <div className="font-mono text-white/60 mb-2">Tổng giá trị thực tế: <span className="line-through decoration-red-500/50">13.735.000 VNĐ</span></div>
-             <div className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-4 drop-shadow-md">
-                5.450.000 VNĐ
-             </div>
-             <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 text-emerald-300 font-bold rounded-full text-sm sm:text-base mb-6">
-                Tiết kiệm &gt;60%
-             </div>
-             <p className="font-body text-white/80 text-sm sm:text-base max-w-3xl mx-auto">
-                <strong className="text-white">Cơ chế thanh toán:</strong> Bác sĩ chỉ thanh toán đúng giá trị vật lý của bộ 5 sản phẩm cốt lõi, toàn bộ Hệ thống Tài liệu số, Dụng cụ đánh bóng và Đặc quyền Cố vấn 1:1 được <strong className="text-amber-300">TÀI TRỢ 100%</strong>.
+          <div className="w-full mx-auto bg-black/20 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10 mb-8 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden shadow-xl">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/20 blur-[50px] rounded-full pointer-events-none"></div>
+            
+            <div className="text-center md:text-left relative z-10">
+              <p className="text-white/60 text-sm font-medium mb-1 uppercase tracking-wider">Tổng giá trị</p>
+              <div className="flex items-baseline justify-center md:justify-start gap-2">
+                <p className="text-white/60 text-2xl md:text-3xl font-bold line-through decoration-red-500/50 decoration-2">13.735.000đ</p>
+              </div>
+            </div>
+            
+            <div className="hidden md:block w-px h-16 bg-white/20 relative z-10 flex-shrink-0"></div>
+            <div className="block md:hidden w-full h-px bg-white/20 relative z-10"></div>
+            
+            <div className="text-center md:text-right relative z-10 flex-1">
+              <div className="flex flex-col md:items-end">
+                  <p className="text-amber-400 text-sm font-medium mb-2 uppercase tracking-wider flex flex-col sm:flex-row items-center justify-center md:justify-end gap-2">
+                      <span>Mức đầu tư trải nghiệm</span>
+                      <span className="inline-flex items-center px-2 py-0.5 bg-emerald-500/20 text-emerald-300 font-bold rounded text-[10px] sm:text-xs tracking-normal">Tiết kiệm &gt;60%</span>
+                  </p>
+                  <p className="font-heading font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200 drop-shadow-sm">5.450.000đ</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full mx-auto bg-black/10 backdrop-blur-sm p-6 rounded-2xl border border-white/10 shadow-lg">
+             <p className="font-body text-white/90 text-sm sm:text-base max-w-3xl mx-auto text-center leading-relaxed">
+                <strong className="text-white">Cơ chế thanh toán:</strong> Bác sĩ chỉ thanh toán đúng giá trị vật lý của bộ 5 sản phẩm cốt lõi, toàn bộ Hệ thống Tài liệu số, Dụng cụ đánh bóng và Đặc quyền Cố vấn 1:1 được <strong className="text-amber-300 font-bold">TÀI TRỢ 100%</strong>.
              </p>
           </div>
         
