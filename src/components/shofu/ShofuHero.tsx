@@ -72,7 +72,8 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto"
             >
-              Hệ sinh thái vật liệu nha khoa tiên tiến tích hợp công nghệ hạt độn sinh học <strong className="text-[#00ADEF]">S-PRG độc quyền</strong>. <strong className="text-slate-900">Tối ưu quy trình lâm sàng</strong>, mang lại hiệu quả <strong className="text-slate-900">phục hình bền vững</strong> và <strong className="text-emerald-600">bảo vệ mô răng chủ động</strong>.
+              <span className="block">Hệ sinh thái vật liệu nha khoa tiên tiến tích hợp công nghệ hạt độn sinh học <strong className="text-[#00ADEF]">S-PRG độc quyền</strong>.</span>
+              <span className="block mt-1 sm:mt-2"><strong className="text-slate-900">Tối ưu quy trình lâm sàng</strong>, mang lại hiệu quả <strong className="text-slate-900">phục hình bền vững</strong> và <strong className="text-emerald-600">bảo vệ mô răng chủ động</strong>.</span>
             </motion.p>
 
             <motion.div 
