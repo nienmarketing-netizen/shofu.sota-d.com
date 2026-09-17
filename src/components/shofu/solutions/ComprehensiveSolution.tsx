@@ -949,7 +949,7 @@ export const ComprehensiveSolution = () => {
                </div>
                
                <button type="button" onClick={() => openCampaignModal("Đăng ký thành công")} className="w-full bg-[#8C2828] text-white font-bold font-mono py-4 rounded-xl shadow-lg hover:bg-red-900 hover:shadow-xl transition-all hover:-translate-y-1 mt-4">
-                  💥 Xác nhận đặt mua - Nhận quà 8.285.000Đ
+                  Xác nhận đặt mua - Nhận quà 8.285.000Đ
                </button>
             </form>
           </div>
