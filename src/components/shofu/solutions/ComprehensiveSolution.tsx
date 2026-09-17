@@ -583,7 +583,7 @@ export const ComprehensiveSolution = () => {
                   <ImagePlaceholder className="w-full aspect-square rounded-2xl" text="Beautifil Injectable X" />
                </div>
                <div className="w-full lg:w-2/3 flex flex-col gap-4">
-                  <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold w-fit">Composite lỏng đắp khối</div>
+                  <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold w-fit">Composite đắp khối</div>
                   <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900">3. Beautifil Injectable X – 2.2g</h3>
                   <ul className="space-y-3 font-body text-slate-600 text-sm mt-2">
                      <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Độ bền nén kỷ lục 400 MPa, đắp khối chịu lực ăn nhai trực tiếp xoang I, II, V.</span></li>
@@ -597,7 +597,7 @@ export const ComprehensiveSolution = () => {
                <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 flex flex-col gap-6 shadow-sm hover:shadow-md transition-shadow">
                   <ImagePlaceholder className="w-full aspect-[16/9] rounded-2xl" text="Beautifil II / LS" />
                   <div>
-                     <div className="inline-flex px-3 py-1 bg-amber-50 text-amber-600 rounded-full text-xs font-bold w-fit mb-3">Composite đặc</div>
+                     <div className="inline-flex px-3 py-1 bg-amber-50 text-amber-600 rounded-full text-xs font-bold w-fit mb-3">Composite đắp lớp</div>
                      <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4">4. Beautifil II / Beautifil II LS</h3>
                      <ul className="space-y-3 font-body text-slate-600 text-sm">
                         <li className="flex items-start gap-3"><CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /><span>Độ co ngót thể tích siêu thấp, chống bám mảng sinh học nhờ hạt độn S-PRG.</span></li>
