@@ -680,9 +680,9 @@ export const ComprehensiveSolution = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <CtaButton onClick={() => openCampaignModal("Nhận trọn bộ tài liệu y văn (PDF)")} className="group relative inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-8 py-4 rounded-full font-mono text-sm sm:text-base font-bold tracking-wide hover:bg-blue-400 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300">
-              <Download className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 transition-all" />
-              <span>Tải trọn bộ tài liệu Y văn (PDF)</span>
+            <CtaButton onClick={() => openCampaignModal("Gia nhập cộng đồng MiCD")} className="group relative inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-8 py-4 rounded-full font-mono text-sm sm:text-base font-bold tracking-wide hover:bg-blue-400 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300">
+              <HandHeart className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 transition-all" />
+              <span>Gia nhập cộng đồng MiCD</span>
             </CtaButton>
           </div>
         </div>
