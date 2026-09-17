@@ -847,8 +847,9 @@ export const ComprehensiveSolution = () => {
       <section className="py-20 bg-white bg-grid-pattern relative overflow-hidden border-b border-slate-200">
         <div className="w-[90%] lg:w-[60%] mx-auto relative z-10">
           <div className="text-center mb-12">
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 leading-[1.3] tracking-tight">
-              Giải đáp hoài nghi lâm sàng
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 leading-snug sm:leading-[1.3] tracking-tight">
+              <span className="block sm:inline">Giải đáp</span>{' '}
+              <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 drop-shadow-sm">hoài nghi lâm sàng</span>
             </h2>
           </div>
           <div className="space-y-2">
