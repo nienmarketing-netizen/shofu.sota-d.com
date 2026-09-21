@@ -365,7 +365,14 @@ export const ComprehensiveSolution = () => {
               {/* Mobile Image (hidden on lg) */}
               <div className="w-full relative lg:hidden mb-6">
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#8C2828]/20 to-transparent rounded-full blur-3xl"></div>
-                 <ImagePlaceholder className="w-full aspect-[4/5] sm:aspect-video rounded-2xl relative z-10 bg-white shadow-sm" text="Ảnh Master Ecosystem (Bộ 5 Sản phẩm cốt lõi)" />
+                 <div className="w-full rounded-2xl relative z-10 bg-white/70 backdrop-blur-sm p-3 border border-slate-200/80 shadow-md overflow-hidden flex items-center justify-center">
+                   <img
+                     src="/image/shofu-giai-phap-toan-dien-5-san-pham.webp"
+                     alt="Hệ sinh thái Master Ecosystem - Bộ 5 sản phẩm cốt lõi Shofu"
+                     referrerPolicy="no-referrer"
+                     className="w-full h-auto max-h-[300px] object-contain drop-shadow-xl"
+                   />
+                 </div>
               </div>
               
               <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
@@ -408,7 +415,14 @@ export const ComprehensiveSolution = () => {
             
             <div className="w-full lg:w-2/5 relative hidden lg:block">
                <div className="absolute inset-0 bg-gradient-to-tr from-[#8C2828]/20 to-transparent rounded-full blur-3xl"></div>
-               <ImagePlaceholder className="w-full aspect-[4/5] rounded-2xl relative z-10 bg-white" text="Ảnh Master Ecosystem (Bộ 5 Sản phẩm cốt lõi)" />
+               <div className="w-full rounded-2xl relative z-10 bg-white/70 backdrop-blur-sm p-4 border border-slate-200/80 shadow-xl overflow-hidden flex items-center justify-center">
+                 <img
+                   src="/image/shofu-giai-phap-toan-dien-5-san-pham.webp"
+                   alt="Hệ sinh thái Master Ecosystem - Bộ 5 sản phẩm cốt lõi Shofu"
+                   referrerPolicy="no-referrer"
+                   className="w-full h-auto max-h-[420px] object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                 />
+               </div>
                
                {/* Floating elements */}
                <div className="absolute -left-6 top-1/4 bg-white p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-slow hidden sm:flex">
@@ -776,8 +790,14 @@ export const ComprehensiveSolution = () => {
               {/* Subtle top inner glow */}
               <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-80"></div>
               
-              <div className="w-full relative mb-8">
-                 <ImagePlaceholder className="w-full aspect-[4/3] rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)]" text="Ảnh 5 SP Vật Lý" />
+              <div className="w-full relative mb-8 overflow-hidden rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex items-center justify-center p-3 sm:p-4">
+                 <img
+                   loading="lazy"
+                   src="/image/shofu-giai-phap-toan-dien-5-san-pham.webp"
+                   alt="Bộ 5 sản phẩm cốt lõi giải pháp toàn diện Shofu"
+                   referrerPolicy="no-referrer"
+                   className="w-full h-auto object-contain max-h-[260px] drop-shadow-xl hover:scale-105 transition-transform duration-500 mx-auto"
+                 />
               </div>
               <h4 className="font-heading font-extrabold text-2xl text-slate-800 mb-8 flex items-center justify-center gap-4">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8C2828] to-red-600">Bộ 5 sản phẩm cốt lõi</span>
@@ -804,8 +824,14 @@ export const ComprehensiveSolution = () => {
             {/* Box 2: VIP Gifts */}
             <div className="bg-[#6A1A1A]/90 backdrop-blur-xl border border-amber-400/30 rounded-[2rem] p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.2)] flex flex-col relative overflow-hidden transition-transform hover:-translate-y-1 duration-500">
               <div className="absolute top-8 right-8 bg-gradient-to-r from-amber-400 to-amber-300 text-amber-950 font-bold text-xs px-4 py-2 rounded-full shadow-sm z-10 tracking-wide uppercase">Tài trợ 100%</div>
-              <div className="w-full relative mb-8">
-                 <ImagePlaceholder className="w-full aspect-[4/3] rounded-2xl bg-black/20 border border-white/5 shadow-inner" text="Ảnh Quà tặng VIP" />
+              <div className="w-full relative mb-8 overflow-hidden rounded-2xl bg-black/30 border border-white/10 shadow-inner flex items-center justify-center p-3 sm:p-4">
+                 <img
+                   loading="lazy"
+                   src="/image/shofu-giai-phap-toan-dien-bo-qua-tang.webp"
+                   alt="Bộ quà tặng và đặc quyền VIP giải pháp toàn diện Shofu"
+                   referrerPolicy="no-referrer"
+                   className="w-full h-auto object-contain max-h-[260px] drop-shadow-xl hover:scale-105 transition-transform duration-500 mx-auto"
+                 />
               </div>
               <h4 className="font-heading font-bold text-2xl text-amber-400 mb-6 flex items-center gap-3">
                 Quà tặng & đặc quyền VIP

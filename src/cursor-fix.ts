@@ -10,8 +10,8 @@ if (typeof document !== 'undefined') {
     document.head.appendChild(style);
 
     document.addEventListener('mouseover', function(e) {
-        let target = e.target;
-        while(target && target !== document.body && target !== document) {
+        let target = e.target as HTMLElement | null;
+        while(target && target !== document.body && target !== (document as unknown as HTMLElement)) {
           if (
             target.tagName === 'BUTTON' || 
             target.tagName === 'A' || 
@@ -20,11 +20,11 @@ if (typeof document !== 'undefined') {
           ) {
             target.style.setProperty('cursor', 'pointer', 'important');
             Array.from(target.querySelectorAll('*')).forEach(child => {
-               child.style.setProperty('cursor', 'pointer', 'important');
+               (child as HTMLElement).style.setProperty('cursor', 'pointer', 'important');
             });
             break;
           }
-          target = target.parentNode;
+          target = target.parentElement;
         }
     });
 }
