@@ -790,7 +790,7 @@ export const ComprehensiveSolution = () => {
               {/* Subtle top inner glow */}
               <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-80"></div>
               
-              <div className="w-full relative mb-8 overflow-hidden rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] flex items-center justify-center p-3 sm:p-4">
+              <div className="w-full relative mb-8 flex items-center justify-center">
                  <img
                    loading="lazy"
                    src="/image/shofu-giai-phap-toan-dien-5-san-pham.webp"
@@ -824,7 +824,7 @@ export const ComprehensiveSolution = () => {
             {/* Box 2: VIP Gifts */}
             <div className="bg-[#6A1A1A]/90 backdrop-blur-xl border border-amber-400/30 rounded-[2rem] p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.2)] flex flex-col relative overflow-hidden transition-transform hover:-translate-y-1 duration-500">
               <div className="absolute top-8 right-8 bg-gradient-to-r from-amber-400 to-amber-300 text-amber-950 font-bold text-xs px-4 py-2 rounded-full shadow-sm z-10 tracking-wide uppercase">Tài trợ 100%</div>
-              <div className="w-full relative mb-8 overflow-hidden rounded-2xl bg-black/30 border border-white/10 shadow-inner flex items-center justify-center p-3 sm:p-4">
+              <div className="w-full relative mb-8 flex items-center justify-center">
                  <img
                    loading="lazy"
                    src="/image/shofu-giai-phap-toan-dien-bo-qua-tang.webp"
