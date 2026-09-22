@@ -417,10 +417,10 @@ export const ComprehensiveSolution = () => {
                <div className="absolute inset-0 bg-gradient-to-tr from-[#8C2828]/20 to-transparent rounded-full blur-3xl"></div>
                <div className="w-full rounded-2xl relative z-10 bg-white/70 backdrop-blur-sm p-4 border border-slate-200/80 shadow-xl overflow-hidden flex items-center justify-center">
                  <img
-                   src="/image/shofu-giai-phap-toan-dien-5-san-pham.webp"
+                   src="/image/shofu-giai-phap-toan-dien-5-san-pham-pc.webp"
                    alt="Hệ sinh thái Master Ecosystem - Bộ 5 sản phẩm cốt lõi Shofu"
                    referrerPolicy="no-referrer"
-                   className="w-full h-auto max-h-[420px] object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                   className="w-full h-auto max-h-[520px] object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                  />
                </div>
                
