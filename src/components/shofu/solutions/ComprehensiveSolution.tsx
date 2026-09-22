@@ -363,15 +363,37 @@ export const ComprehensiveSolution = () => {
               </h1>
 
               {/* Mobile Image (hidden on lg) */}
-              <div className="w-full relative lg:hidden mb-6">
-                 <div className="absolute inset-0 bg-gradient-to-tr from-[#8C2828]/20 to-transparent rounded-full blur-3xl"></div>
-                 <div className="w-full rounded-2xl relative z-10 bg-white/70 backdrop-blur-sm p-3 border border-slate-200/80 shadow-md overflow-hidden flex items-center justify-center">
+              <div className="w-full relative lg:hidden mb-8 mt-2">
+                 <div className="absolute inset-0 bg-gradient-to-tr from-[#8C2828]/20 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+                 <div className="w-full relative z-10 flex items-center justify-center px-4">
                    <img
                      src="/image/shofu-giai-phap-toan-dien-5-san-pham.webp"
                      alt="Hệ sinh thái Master Ecosystem - Bộ 5 sản phẩm cốt lõi Shofu"
                      referrerPolicy="no-referrer"
-                     className="w-full h-auto max-h-[300px] object-contain drop-shadow-xl"
+                     className="w-full h-auto max-h-[320px] object-contain drop-shadow-xl"
                    />
+                 </div>
+
+                 {/* Mobile Floating elements: Bioactive (Góc trên trái) */}
+                 <div className="absolute left-1 top-2 bg-white/95 backdrop-blur-sm p-2 sm:p-2.5 rounded-xl shadow-lg border border-slate-100 z-20 flex items-center gap-2 animate-float-sway">
+                   <div className="w-7 h-7 sm:w-8 sm:h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center shrink-0">
+                      <ShieldCheck className="w-4 h-4" />
+                   </div>
+                   <div>
+                      <div className="font-bold text-slate-900 text-xs sm:text-sm whitespace-nowrap">Bioactive</div>
+                      <div className="text-[10px] sm:text-xs text-slate-500 whitespace-nowrap">Trị liệu sinh học</div>
+                   </div>
+                 </div>
+
+                 {/* Mobile Floating elements: HEMA-Free (Góc dưới phải) */}
+                 <div className="absolute right-1 bottom-2 bg-white/95 backdrop-blur-sm p-2 sm:p-2.5 rounded-xl shadow-lg border border-slate-100 z-20 flex items-center gap-2 animate-float-sway-delayed">
+                   <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0">
+                      <CheckCircle className="w-4 h-4" />
+                   </div>
+                   <div>
+                      <div className="font-bold text-slate-900 text-xs sm:text-sm whitespace-nowrap">HEMA-Free</div>
+                      <div className="text-[10px] sm:text-xs text-slate-500 whitespace-nowrap">Kháng nước 100%</div>
+                   </div>
                  </div>
               </div>
               
@@ -427,7 +449,7 @@ export const ComprehensiveSolution = () => {
                </div>
                
                {/* Floating elements: Góc trên sát bên trái */}
-               <div className="absolute -left-3 top-[54px] bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-slow">
+               <div className="absolute -left-3 top-[54px] bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-sway">
                  <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center shrink-0">
                     <ShieldCheck className="w-5 h-5" />
                  </div>
@@ -438,7 +460,7 @@ export const ComprehensiveSolution = () => {
                </div>
                
                {/* Floating elements: Góc dưới sát bên phải */}
-               <div className="absolute -right-3 bottom-6 bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-delayed">
+               <div className="absolute -right-3 bottom-6 bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-sway-delayed">
                  <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0">
                     <CheckCircle className="w-5 h-5" />
                  </div>
