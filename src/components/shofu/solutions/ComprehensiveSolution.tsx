@@ -340,7 +340,7 @@ export const ComprehensiveSolution = () => {
       <section className="relative bg-slate-50 bg-grid-pattern pt-[100px] pb-16 md:pt-[120px] md:pb-24 overflow-hidden border-b border-slate-200">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-tr from-[#8C2828]/15 via-[#8C2828]/5 to-transparent rounded-full transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
-          <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
             <div className="w-full lg:w-3/5 flex flex-col items-center lg:items-start text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-100/80 border border-red-200 text-[#8C2828] font-mono text-xs sm:text-sm font-bold tracking-wider mb-6 sm:mb-8 shadow-sm overflow-hidden w-[90vw] sm:w-fit max-w-[320px] sm:max-w-md relative">
                 <div className="shrink-0 flex items-center justify-center z-10 pl-1 pr-1 bg-red-100/80">
@@ -413,35 +413,38 @@ export const ComprehensiveSolution = () => {
               </div>
             </div>
             
-            <div className="w-full lg:w-2/5 relative hidden lg:block">
-               <div className="absolute inset-0 bg-gradient-to-tr from-[#8C2828]/20 to-transparent rounded-full blur-3xl"></div>
-               <div className="w-full rounded-2xl relative z-10 bg-white/70 backdrop-blur-sm p-4 border border-slate-200/80 shadow-xl overflow-hidden flex items-center justify-center">
+            <div className="w-full lg:w-2/5 relative hidden lg:block lg:pt-[54px]">
+               <div className="absolute inset-0 bg-gradient-to-tr from-[#8C2828]/20 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+               
+               {/* Container hình ảnh: loại bỏ background, border, shadow */}
+               <div className="w-full relative z-10 flex items-center justify-center">
                  <img
                    src="/image/shofu-giai-phap-toan-dien-5-san-pham-pc.webp"
                    alt="Hệ sinh thái Master Ecosystem - Bộ 5 sản phẩm cốt lõi Shofu"
                    referrerPolicy="no-referrer"
-                   className="w-full h-auto max-h-[520px] object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                   className="w-full h-auto max-h-[580px] object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                  />
                </div>
                
-               {/* Floating elements */}
-               <div className="absolute -left-6 top-1/4 bg-white p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-slow hidden sm:flex">
-                 <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+               {/* Floating elements: Góc trên sát bên trái */}
+               <div className="absolute -left-3 top-[54px] bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-slow">
+                 <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center shrink-0">
                     <ShieldCheck className="w-5 h-5" />
                  </div>
                  <div>
-                    <div className="font-bold text-slate-900 text-sm">Bioactive</div>
-                    <div className="text-xs text-slate-500">Trị liệu sinh học</div>
+                    <div className="font-bold text-slate-900 text-sm whitespace-nowrap">Bioactive</div>
+                    <div className="text-xs text-slate-500 whitespace-nowrap">Trị liệu sinh học</div>
                  </div>
                </div>
                
-               <div className="absolute -right-6 bottom-1/4 bg-white p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-delayed hidden sm:flex">
-                 <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+               {/* Floating elements: Góc dưới sát bên phải */}
+               <div className="absolute -right-3 bottom-6 bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-delayed">
+                 <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0">
                     <CheckCircle className="w-5 h-5" />
                  </div>
                  <div>
-                    <div className="font-bold text-slate-900 text-sm">HEMA-Free</div>
-                    <div className="text-xs text-slate-500">Kháng nước 100%</div>
+                    <div className="font-bold text-slate-900 text-sm whitespace-nowrap">HEMA-Free</div>
+                    <div className="text-xs text-slate-500 whitespace-nowrap">Kháng nước 100%</div>
                  </div>
                </div>
             </div>
