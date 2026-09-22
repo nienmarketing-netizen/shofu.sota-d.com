@@ -55,43 +55,46 @@ main, section, header, footer {
     animation: slow-scale-pulse 2.5s ease-in-out infinite;
   }
 
-  @keyframes float-sway {
-    0%, 100% {
-      transform: translateY(0px) rotate(0deg);
-    }
-    25% {
-      transform: translateY(-6px) rotate(1.2deg);
-    }
-    50% {
-      transform: translateY(-10px) rotate(-0.8deg);
-    }
-    75% {
-      transform: translateY(-4px) rotate(0.8deg);
-    }
-  }
+}
 
-  @keyframes float-sway-delayed {
-    0%, 100% {
-      transform: translateY(0px) rotate(0deg);
-    }
-    25% {
-      transform: translateY(-5px) rotate(-1.2deg);
-    }
-    50% {
-      transform: translateY(-9px) rotate(1deg);
-    }
-    75% {
-      transform: translateY(-3px) rotate(-0.6deg);
-    }
+@keyframes float-sway {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
   }
+  25% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
 
-  .animate-float-sway {
-    animation: float-sway 4s ease-in-out infinite;
+@keyframes float-sway-delayed {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
   }
+  25% {
+    transform: translateY(-6px) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-13px) rotate(1.2deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-0.8deg);
+  }
+}
 
-  .animate-float-sway-delayed {
-    animation: float-sway-delayed 4.5s ease-in-out infinite 1s;
-  }
+.animate-float-sway {
+  animation: float-sway 3.5s ease-in-out infinite !important;
+  will-change: transform;
+}
+
+.animate-float-sway-delayed {
+  animation: float-sway-delayed 4s ease-in-out infinite 0.8s !important;
+  will-change: transform;
 }
 
 /* Sota-D (#C43838) & SHOFU (#00ADEF) Brand Guideline Theme */

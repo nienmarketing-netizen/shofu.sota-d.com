@@ -363,36 +363,36 @@ export const ComprehensiveSolution = () => {
               </h1>
 
               {/* Mobile Image (hidden on lg) */}
-              <div className="w-full relative lg:hidden mb-8 mt-2">
+              <div className="w-full relative lg:hidden mb-12 mt-4 px-6">
                  <div className="absolute inset-0 bg-gradient-to-tr from-[#8C2828]/20 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-                 <div className="w-full relative z-10 flex items-center justify-center px-4">
+                 <div className="w-full relative z-10 flex items-center justify-center">
                    <img
                      src="/image/shofu-giai-phap-toan-dien-5-san-pham.webp"
                      alt="Hệ sinh thái Master Ecosystem - Bộ 5 sản phẩm cốt lõi Shofu"
                      referrerPolicy="no-referrer"
-                     className="w-full h-auto max-h-[320px] object-contain drop-shadow-xl"
+                     className="w-full h-auto max-h-[300px] object-contain drop-shadow-xl"
                    />
                  </div>
 
-                 {/* Mobile Floating elements: Bioactive (Góc trên trái) */}
-                 <div className="absolute left-1 top-2 bg-white/95 backdrop-blur-sm p-2 sm:p-2.5 rounded-xl shadow-lg border border-slate-100 z-20 flex items-center gap-2 animate-float-sway">
-                   <div className="w-7 h-7 sm:w-8 sm:h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center shrink-0">
+                 {/* Mobile Floating elements: Bioactive (Góc trên ngoài mép trái) */}
+                 <div className="absolute -left-2 -top-5 bg-white/95 backdrop-blur-md p-2 rounded-xl shadow-xl border border-slate-200/80 z-20 flex items-center gap-2 animate-float-sway">
+                   <div className="w-7 h-7 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center shrink-0 shadow-sm">
                       <ShieldCheck className="w-4 h-4" />
                    </div>
                    <div>
-                      <div className="font-bold text-slate-900 text-xs sm:text-sm whitespace-nowrap">Bioactive</div>
-                      <div className="text-[10px] sm:text-xs text-slate-500 whitespace-nowrap">Trị liệu sinh học</div>
+                      <div className="font-bold text-slate-900 text-xs whitespace-nowrap">Bioactive</div>
+                      <div className="text-[10px] text-slate-500 whitespace-nowrap">Trị liệu sinh học</div>
                    </div>
                  </div>
 
-                 {/* Mobile Floating elements: HEMA-Free (Góc dưới phải) */}
-                 <div className="absolute right-1 bottom-2 bg-white/95 backdrop-blur-sm p-2 sm:p-2.5 rounded-xl shadow-lg border border-slate-100 z-20 flex items-center gap-2 animate-float-sway-delayed">
-                   <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0">
+                 {/* Mobile Floating elements: HEMA-Free (Góc dưới ngoài mép phải) */}
+                 <div className="absolute -right-2 -bottom-5 bg-white/95 backdrop-blur-md p-2 rounded-xl shadow-xl border border-slate-200/80 z-20 flex items-center gap-2 animate-float-sway-delayed">
+                   <div className="w-7 h-7 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0 shadow-sm">
                       <CheckCircle className="w-4 h-4" />
                    </div>
                    <div>
-                      <div className="font-bold text-slate-900 text-xs sm:text-sm whitespace-nowrap">HEMA-Free</div>
-                      <div className="text-[10px] sm:text-xs text-slate-500 whitespace-nowrap">Kháng nước 100%</div>
+                      <div className="font-bold text-slate-900 text-xs whitespace-nowrap">HEMA-Free</div>
+                      <div className="text-[10px] text-slate-500 whitespace-nowrap">Kháng nước 100%</div>
                    </div>
                  </div>
               </div>
@@ -448,9 +448,9 @@ export const ComprehensiveSolution = () => {
                  />
                </div>
                
-               {/* Floating elements: Góc trên sát bên trái */}
-               <div className="absolute -left-3 top-[54px] bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-sway">
-                 <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center shrink-0">
+               {/* Floating elements: Góc trên ngoài mép trái */}
+               <div className="absolute -left-10 xl:-left-16 top-4 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-2xl border border-slate-200/90 z-20 flex items-center gap-3 animate-float-sway">
+                 <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center shrink-0 shadow-sm">
                     <ShieldCheck className="w-5 h-5" />
                  </div>
                  <div>
@@ -459,9 +459,9 @@ export const ComprehensiveSolution = () => {
                  </div>
                </div>
                
-               {/* Floating elements: Góc dưới sát bên phải */}
-               <div className="absolute -right-3 bottom-6 bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-float-sway-delayed">
-                 <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0">
+               {/* Floating elements: Góc dưới ngoài mép phải */}
+               <div className="absolute -right-8 xl:-right-14 bottom-2 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-2xl border border-slate-200/90 z-20 flex items-center gap-3 animate-float-sway-delayed">
+                 <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0 shadow-sm">
                     <CheckCircle className="w-5 h-5" />
                  </div>
                  <div>
