@@ -232,7 +232,7 @@ export function IndirectRestoration() {
             </div>
             <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Sút phục hình & Ê buốt muộn</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Keo dán chứa HEMA hoạt động như "bọt biển" <strong className="text-slate-300">ngậm dịch ngà</strong>. Theo thời gian, HEMA bị <strong className="text-red-400">thủy phân phân hủy lớp lai</strong>, gây <strong className="text-red-400">bong sút, rò rỉ vi kẽ</strong> và <strong className="text-amber-400">ê buốt muộn tàn nhẫn</strong> cho bệnh nhân.
+              Keo dán chứa HEMA hoạt động như "bọt biển" <strong className="text-red-400">ngậm dịch ngà</strong>. Theo thời gian, HEMA bị <strong className="text-red-400">thủy phân phân hủy lớp lai</strong>, gây <strong className="text-red-400">bong sút, rò rỉ vi kẽ</strong> và <strong className="text-red-400">ê buốt muộn tàn nhẫn</strong> cho bệnh nhân.
             </p>
           </div>
 
@@ -242,7 +242,7 @@ export function IndirectRestoration() {
             </div>
             <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Kênh cộm khớp & Hở đường viền</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Lớp màng (film thickness) của xi măng/keo cũ <strong className="text-red-400">quá dày (30-50µm)</strong> làm "đội" các phục hình Veneer, Tabletop siêu mỏng, <strong className="text-amber-400">gây cộm khớp</strong>, buộc phải mài chỉnh hoặc chịu rủi ro <strong className="text-red-400">nứt vỡ sứ giòn</strong>.
+              Lớp màng (film thickness) của xi măng/keo cũ <strong className="text-red-400">quá dày (30-50µm)</strong> làm "đội" các phục hình Veneer, Tabletop siêu mỏng, <strong className="text-red-400">gây cộm khớp</strong>, buộc phải mài chỉnh hoặc chịu rủi ro <strong className="text-red-400">nứt vỡ sứ giòn</strong>.
             </p>
           </div>
 
@@ -252,7 +252,7 @@ export function IndirectRestoration() {
             </div>
             <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">"Đốt tiền" do Thể tích chết Automix</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Vòi trộn Automix <strong className="text-red-400">lãng phí 0.25g - 0.44g xi măng</strong> kẹt lại mỗi lần bơm. Mỗi ca gắn <strong className="text-amber-400">vứt đi hàng chục ngàn đồng</strong>. Cộng thêm hàng tá chai Primer sứ lỉnh kỉnh dễ bay hơi làm <strong className="text-red-400">phồng rộp chi phí</strong>.
+              Vòi trộn Automix <strong className="text-red-400">lãng phí 0.25g - 0.44g xi măng</strong> kẹt lại mỗi lần bơm. Mỗi ca gắn <strong className="text-red-400">vứt đi hàng chục ngàn đồng</strong>. Cộng thêm hàng tá chai Primer sứ lỉnh kỉnh dễ bay hơi làm <strong className="text-red-400">phồng rộp chi phí</strong>.
             </p>
           </div>
         </div>
