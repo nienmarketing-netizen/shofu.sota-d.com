@@ -470,7 +470,7 @@ export function PreventiveDentistry() {
                   <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
                      <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
                      <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                        <strong className="text-slate-900 font-bold">Quy trình 1 bước tinh gọn:</strong> Bôi véc-ni ➔ Chiếu đèn 10 giây ➔ Lau sạch lớp ức chế oxy bằng bông ẩm. Không cần Etching, không nhạy cảm kỹ thuật.
+                        <strong className="text-slate-900 font-bold">Quy trình tinh gọn:</strong> Bôi màng phủ sinh học ➔ Chiếu đèn 10 giây ➔ Lau sạch lớp ức chế oxy bằng bông ẩm. Không cần Etching, không nhạy cảm kỹ thuật.
                      </div>
                   </div>
                   <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
