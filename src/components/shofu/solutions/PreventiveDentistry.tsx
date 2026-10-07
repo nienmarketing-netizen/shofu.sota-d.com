@@ -146,7 +146,7 @@ export function PreventiveDentistry() {
       q: "Sản phẩm có chứa HEMA hay gây kích ứng mô nướu trẻ em không?",
       a: (
         <>
-          Toàn bộ dòng sản phẩm phòng ngừa của Shofu (PRG Barrier Coat & BeautiSealant) đều 100% HEMA-Free, Acetone-Free, Alcohol-Free, vô cùng êm dịu, không gây bỏng rát mô nướu và an toàn tuyệt đối cho trẻ nhỏ cũng như bệnh nhân lớn tuổi.
+          Toàn bộ dòng sản phẩm phòng ngừa của Shofu (PRG Barrier Coat & BeautiSealant) đều là HEMA-Free, Acetone-Free, Alcohol-Free, vô cùng êm dịu, không gây bỏng rát mô nướu và an toàn tuyệt đối cho trẻ nhỏ cũng như bệnh nhân lớn tuổi.
         </>
       )
     },
