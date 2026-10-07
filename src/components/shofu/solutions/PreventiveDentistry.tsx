@@ -44,7 +44,7 @@ const AccordionItem: React.FC<{ question: string, answer: React.ReactNode, isOpe
 
 const row1Feedbacks = [
   {
-    quote: "Công nghệ véc-ni PRG Barrier Coat và BeautiSealant ứng dụng S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ hoàn toàn bước Etching nhạy cảm.",
+    quote: "Công nghệ tái-nạp PRG Barrier Coat và BeautiSealant ứng dụng S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ hoàn toàn bước Etching nhạy cảm.",
     name: "Dr. Shukan Kanuga",
     title: "Hiệp hội Nha khoa Trẻ em Hoa Kỳ, California"
   },
@@ -77,7 +77,7 @@ const row2Feedbacks = [
     title: "Bác sĩ trưởng khoa Răng Hàm Mặt"
   },
   {
-    quote: "Tôi dùng Giomer cho tất cả các ca sâu răng nguy cơ cao. Khả năng nạp và nhả Fluoride như một trạm sạc bảo vệ răng khỏi axit vi khuẩn là điều mà composite thông thường không làm được.",
+    quote: "Tôi dùng Giomer cho tất cả các ca sâu răng nguy cơ cao. Khả năng tái - nạp Fluoride như một trạm sạc bảo vệ răng khỏi axit vi khuẩn là điều mà composite thông thường không làm được.",
     name: "Dr. Sarah Collins",
     title: "Chuyên gia Nha khoa Tổng quát, Úc"
   },
