@@ -1088,7 +1088,7 @@ export function IndirectRestoration() {
           question="Keo dán màng 5µm và xi măng 14µm thì có ảnh hưởng lực dán cơ học của phục hình gián tiếp không?"
           answer={
             <>
-              <strong>Giải đáp lâm sàng: Ngược lại, đây là độ dày lý tưởng nhất cho phục hình gián tiếp.</strong> Tổng độ dày lớp lai kép 24µm (BBX 5µm + BeautiLink SA 14µm) giúp viền dán khít sát tuyệt đối, loại bỏ nguy cơ cộm khớp hay vi kẽ đường hoàn tất. Thử nghiệm độc lập của The Dental Advisor ghi nhận lực dán trượt trên Zirconia đạt mức ~50 MPa và giữ vững ổn định sau 5.000 chu kỳ sốc nhiệt.
+              <strong>Giải đáp lâm sàng: Ngược lại, đây là độ dày lý tưởng nhất cho phục hình gián tiếp.</strong> Tổng độ dày màng dán dính (total film thickness) (BBX 5µm + BeautiLink SA 14µm) giúp viền dán khít sát tuyệt đối, loại bỏ nguy cơ cộm khớp hay vi kẽ đường hoàn tất. Thử nghiệm độc lập của The Dental Advisor ghi nhận lực dán trượt trên Zirconia đạt mức ~50 MPa và giữ vững ổn định sau 5.000 chu kỳ sốc nhiệt.
             </>
           }
         />
