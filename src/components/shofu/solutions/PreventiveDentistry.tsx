@@ -189,7 +189,7 @@ export function PreventiveDentistry() {
             </div>
             
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl text-left">
-              Đừng chỉ chờ răng hỏng để "trám bít cơ học". Làm chủ giải pháp Nha khoa Phòng ngừa Chủ động cùng bộ đôi công nghệ <strong className="font-bold text-[#C43838] bg-red-50 px-1.5 py-0.5 rounded">PRG Barrier Coat</strong> & <strong className="font-bold text-[#C43838] bg-red-50 px-1.5 py-0.5 rounded">BeautiSealant</strong>: Triệt tiêu 100% ê buốt ngà tức thì (kéo dài đến 6 tháng), trám bít hố rãnh không cần Etching, và liên tục sạc-nhả 6 loại ion sinh học bảo vệ răng khỏi sâu thứ phát.
+              <strong className="font-bold text-[#C43838] bg-red-50 px-1.5 py-0.5 rounded">PRG Barrier Coat</strong> tạo lớp phủ giúp che kín ống ngà lộ và giảm ê buốt, với thời gian bảo vệ lên đến 6 tháng. <strong className="font-bold text-[#C43838] bg-red-50 px-1.5 py-0.5 rounded">BeautiSealant</strong> trám bít hố rãnh bằng primer tự xoi mòn, không cần bước xoi mòn bằng axit phosphoric. Công nghệ <strong className="font-semibold text-slate-800">S‑PRG</strong> hỗ trợ phóng thích ion, góp phần bảo vệ bề mặt răng.
             </p>
 
 
