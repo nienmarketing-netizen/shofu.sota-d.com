@@ -44,7 +44,7 @@ const AccordionItem: React.FC<{ question: string, answer: React.ReactNode, isOpe
 
 const row1Feedbacks = [
   {
-    quote: "Công nghệ tái-nạp PRG Barrier Coat và BeautiSealant ứng dụng S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ hoàn toàn bước Etching nhạy cảm.",
+    quote: "Công nghệ màng phủ sinh học PRG Barrier Coat và BeautiSealant ứng dụng S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ hoàn toàn bước Etching nhạy cảm.",
     name: "Dr. Shukan Kanuga",
     title: "Hiệp hội Nha khoa Trẻ em Hoa Kỳ, California"
   },
