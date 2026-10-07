@@ -976,7 +976,7 @@ export function IndirectRestoration() {
                     </li>
                     <li className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
-                      <span className="text-slate-300 text-sm sm:text-base leading-relaxed">01 Ống Xi măng BeautiLink SA Handmix (15.6g) khổng lồ</span>
+                      <span className="text-slate-300 text-sm sm:text-base leading-relaxed">01 Ống Xi măng BeautiLink SA Handmix (15.6g)</span>
                     </li>
                   </ul>
                 </div>
@@ -1117,14 +1117,6 @@ export function IndirectRestoration() {
           answer={
             <>
               <strong>Giải đáp lâm sàng: Đảm bảo độ ổn định màu sắc vượt trội.</strong> BeautiLink SA được kỹ sư vật liệu Shofu tối ưu hóa hệ thống xúc tác trùng hợp, giúp giữ màu sắc ổn định (Stable shades) trọn đời phục hình. Sản phẩm cung cấp 3 tông màu lâm sàng thực tế (Clear, Ivory, Opaque) với khả năng che màu ngà chẻ/cùi kim loại tối màu hoàn hảo (đặc biệt là màu Opaque) mà không bị viền đen hay ố vàng theo thời gian.
-            </>
-          }
-        />
-        <FaqItem 
-          question="Nếu lỡ tay chiếu đèn quá 1–2 giây khi Tack-cure, xi măng dư có bị đông cứng ngắc gây kẹt kẽ răng không?"
-          answer={
-            <>
-              <strong>Giải đáp lâm sàng: Bác sĩ hoàn toàn có thể yên tâm điều khiển.</strong> Hệ xúc tác của BeautiLink SA được thiết kế để tạo ra khoảng cửa sổ thao tác linh hoạt. Chiếu đèn chớp 1–2 giây sẽ đưa xi măng dư trào ra về trạng thái gel dẻo như cao su. Bác sĩ có 2 phút thời gian làm việc (Working Time) thong thả từ lúc trộn, và ngay cả khi lỡ chiếu lâu hơn 1-2 giây, xi măng vẫn giữ độ đàn hồi dẻo dai đủ để thám trâm lột sạch nguyên khối mà không dính chặt vào nướu hay làm trầy xước viền sứ.
             </>
           }
         />
