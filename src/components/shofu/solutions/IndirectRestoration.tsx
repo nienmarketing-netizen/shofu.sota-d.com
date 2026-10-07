@@ -301,8 +301,8 @@ export function IndirectRestoration() {
                     <Microscope className="w-6 h-6 text-[#00ADEF]" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Màng keo kỷ lục chỉ 5µm</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Khoá chặt vi kẽ, không lo cộm khớp, ngăn ngừa ố màu đường viền.</p>
+                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Độ dày màng siêu mỏng (chỉ 5µm)</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Khoá chặt vi kẽ ống ngà, không lo cộm khớp, ngăn ngừa đổi màu đường viền phục hình.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -311,7 +311,7 @@ export function IndirectRestoration() {
                   </div>
                   <div>
                     <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Công nghệ HEMA-Free kỵ nước</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Tuyệt đối không hút nước, chống thủy phân và ngăn ngừa nhạy cảm ngà vĩnh viễn.</p>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Kháng hút nước, chống thủy phân và ngăn ngừa nhạy cảm ngà sau khi gắn.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -319,8 +319,8 @@ export function IndirectRestoration() {
                     <ShieldCheck className="w-6 h-6 text-[#00ADEF]" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Quadra-Functional & ARS</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Bọc giáp Silane kháng axit giúp dán bền bỉ lên men, ngà, Zirconia, sứ Lithium Disilicate không cần Primer rời.</p>
+                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Tích hợp Monomer đa chức năng & Silane kháng acid (ARS)</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Tăng cường lực liên kết hóa học trực tiếp lên Men, Ngà, Zirconia và Sứ thủy tinh mà không cần bước quét primer rời.</p>
                   </div>
                 </li>
               </ul>
@@ -346,7 +346,7 @@ export function IndirectRestoration() {
                   </div>
                   <div>
                     <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Màng phim siêu mỏng 14µm</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Chảy loang thixotropic tuyệt hảo tạo đường hoàn tất vô hình.</p>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Chảy loang thixotropic tối ưu tạo đường hoàn tất vô hình.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -355,7 +355,7 @@ export function IndirectRestoration() {
                   </div>
                   <div>
                     <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Dọn dư "One-Sweep" 1-2 giây</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Hóa dẻo dạng gel dai cao su, lột sạch nguyên khối chỉ bằng một đường gạt.</p>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Hóa dẻo dạng gel đàn hồi, lấy sạch xi măng dư nguyên khối chỉ bằng một đường gạt.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -364,7 +364,7 @@ export function IndirectRestoration() {
                   </div>
                   <div>
                     <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Hạt độn hoạt tính sinh học S-PRG</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Liên tục phóng thích 6 ion đệm giúp trung hòa axit, kháng mảng bám, ngăn ngừa sâu răng dưới viền dán.</p>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Liên tục giải phóng và tái nạp 6 loại ion sinh học, hỗ trợ trung hòa acid và kháng mảng bám vi khuẩn, ngăn ngừa sâu răng tại vị trí đường hoàn tất.</p>
                   </div>
                 </li>
               </ul>
@@ -397,12 +397,12 @@ export function IndirectRestoration() {
             {/* USPs and Text (Order 3 on Mobile, Bottom Left on Desktop) */}
             <div className="order-3 lg:col-start-1 lg:row-start-2 lg:self-start space-y-6">
               <p className="text-slate-600 text-base leading-relaxed">
-                Sự kết hợp hoàn hảo giữa <strong className="text-slate-900">màng keo kỷ lục 5µm</strong> của BeautiBond Xtreme và lớp <strong className="text-slate-900">xi măng siêu mỏng 14µm</strong> của BeautiLink SA tạo nên một <strong className="text-[#00ADEF]">khoảng ghép vô hình chỉ 24µm</strong>, thiết lập <strong className="text-amber-600">tiêu chuẩn mới</strong> trong phục hình gián tiếp.
+                Sự kết hợp hoàn hảo giữa <strong className="text-slate-900">độ dày màng siêu mỏng (chỉ 5µm)</strong> của BeautiBond Xtreme và lớp <strong className="text-slate-900">xi măng siêu mỏng 14µm</strong> của BeautiLink SA tạo nên một <strong className="text-[#00ADEF]">khoảng ghép vô hình chỉ 24µm</strong>, thiết lập <strong className="text-amber-600">tiêu chuẩn mới</strong> trong phục hình gián tiếp.
               </p>
               <ul className="space-y-4 pt-2">
                 <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
                   <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
-                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Thẩm mỹ hoàn hảo:</strong> Không ố vàng đường viền theo thời gian nhờ công nghệ HEMA-Free kỵ nước.</p>
+                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Thẩm mỹ hoàn hảo:</strong> Không đổi màu đường viền phục hình theo thời gian nhờ công nghệ HEMA-Free kỵ nước.</p>
                 </li>
                 <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
                   <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
@@ -410,7 +410,7 @@ export function IndirectRestoration() {
                 </li>
                 <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
                   <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
-                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Bảo vệ sinh học:</strong> Hạt độn S-PRG ngăn chặn vi khuẩn xâm nhập vi kẽ, bảo vệ cùi răng vĩnh viễn.</p>
+                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Bảo vệ sinh học:</strong> Hạt độn S-PRG ngăn chặn vi khuẩn xâm nhập vi kẽ ống ngà, bảo vệ cùi răng sau khi gắn.</p>
                 </li>
               </ul>
             </div>
