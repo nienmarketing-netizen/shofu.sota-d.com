@@ -379,7 +379,7 @@ export function IndirectRestoration() {
             {/* Headline (Order 1 on Mobile, Top Left on Desktop) */}
             <div className="order-1 lg:col-start-1 lg:row-start-1 lg:self-end">
               <h4 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight">
-                Cấu trúc lớp lai kép <span className="text-[#00ADEF]">siêu mỏng</span> khít sát <span className="text-amber-500">tuyệt đối</span>
+                Cấu trúc liên kết đa tầng <span className="text-[#00ADEF]">siêu mỏng</span> khít sát <span className="text-amber-500">tuyệt đối</span>
               </h4>
             </div>
 
@@ -387,7 +387,7 @@ export function IndirectRestoration() {
             <div className="order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 flex flex-col items-center w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto">
               <img 
                 src="/images/Shofu-double-hybrid-link-system.webp" 
-                alt="Sơ đồ cấu trúc lớp lai kép siêu mỏng 24µm" 
+                alt="Sơ đồ cấu trúc liên kết đa tầng siêu mỏng 24µm" 
                 className="w-full h-auto object-contain drop-shadow-sm rounded-xl"
                 loading="lazy"
                 referrerPolicy="no-referrer"
@@ -402,7 +402,7 @@ export function IndirectRestoration() {
               <ul className="space-y-4 pt-2">
                 <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
                   <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
-                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Thẩm mỹ hoàn hảo:</strong> Không đổi màu đường viền phục hình theo thời gian nhờ công nghệ HEMA-Free kỵ nước.</p>
+                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Thẩm mỹ hoàn hảo:</strong> Không đổi màu phục hình theo thời gian nhờ công nghệ HEMA-Free kỵ nước.</p>
                 </li>
                 <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
                   <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
