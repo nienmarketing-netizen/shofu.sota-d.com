@@ -232,7 +232,7 @@ export function IndirectRestoration() {
             </div>
             <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Sút phục hình & Ê buốt muộn</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Keo dán chứa HEMA hoạt động như "bọt biển" <strong className="text-red-400">ngậm dịch ngà</strong>. Theo thời gian, HEMA bị <strong className="text-red-400">thủy phân phân hủy lớp lai</strong>, gây <strong className="text-red-400">bong sút, rò rỉ vi kẽ</strong> và <strong className="text-red-400">ê buốt muộn tàn nhẫn</strong> cho bệnh nhân.
+              Keo dán chứa HEMA hoạt động như "bọt biển" <strong className="text-red-400">ngậm dịch ngà</strong>. Theo thời gian, HEMA bị <strong className="text-red-400">thủy phân phân hủy lớp lai</strong>, gây <strong className="text-red-400">bong sút, rò rỉ vi kẽ</strong> và <strong className="text-red-400">ê buốt muộn khó chịu</strong> cho bệnh nhân.
             </p>
           </div>
 
