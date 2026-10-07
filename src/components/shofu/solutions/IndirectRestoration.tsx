@@ -132,14 +132,14 @@ export function IndirectRestoration() {
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00ADEF] animate-pulse shrink-0 relative z-10 shadow-[0_0_4px_rgba(0,173,239,0.8)]"></div>
               <div className="flex overflow-hidden relative w-full [mask-image:linear-gradient(to_right,transparent,black_10px,black_90%,transparent)] sm:[mask-image:none]">
                 <div className="font-mono text-[10.5px] min-[375px]:text-[11.5px] sm:text-xs font-bold text-[#00ADEF] tracking-tight sm:tracking-wide whitespace-nowrap flex animate-marquee sm:!animate-none sm:!transform-none w-max">
-                  <span className="pr-8 sm:pr-0">Xu thế nha khoa can thiệp tối thiểu & phục hồi Bioplastic</span>
-                  <span className="pr-8 sm:hidden">Xu thế nha khoa can thiệp tối thiểu & phục hồi Bioplastic</span>
+                  <span className="pr-8 sm:pr-0">Xu thế nha khoa can thiệp tối thiểu & Vật liệu sinh học (Bioactive)</span>
+                  <span className="pr-8 sm:hidden">Xu thế nha khoa can thiệp tối thiểu & Vật liệu sinh học (Bioactive)</span>
                 </div>
               </div>
             </div>
             <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12">
-              Chấm dứt ám ảnh <br className="md:hidden" />
-              <span className="text-[#00ADEF]">sút mão</span>, <span className="text-[#00ADEF]">ê buốt sau gắn</span> <br className="md:hidden" />
+              Giải pháp kiểm soát nguy cơ <br className="md:hidden" />
+              <span className="text-[#00ADEF]">sút phục hình</span>, <span className="text-[#00ADEF]">ê buốt sau gắn</span> <br className="md:hidden" />
               và <span className="text-[#00ADEF]">lãng phí vật tư</span>!
             </h1>
             {/* MOBILE ONLY IMAGE */}
@@ -153,7 +153,7 @@ export function IndirectRestoration() {
               />
             </div>
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Tối ưu hóa <strong className="text-slate-900">Khoảng xi măng ghép (Cement Space) chỉ 24µm</strong> nhờ sự kết hợp giữa màng keo 5µm (<strong className="text-slate-900">BeautiBond Xtreme</strong>) và lớp xi măng mỏng 14µm (<strong className="text-slate-900">BeautiLink SA</strong>). Tạo liên kết hóa học bền vững với lực dán trượt <strong className="text-[#00ADEF] font-bold">~50 MPa</strong> trên Zirconia và ổn định cấu trúc sau 5.000 chu kỳ nhồi nhiệt (<strong className="text-slate-900">Dental Advisor 2024</strong>).
+              Tối ưu hóa <strong className="text-slate-900">độ dày màng liên kết (Cement Space) chỉ 24µm</strong> nhờ sự kết hợp giữa màng keo 5µm (<strong className="text-slate-900">BeautiBond Xtreme</strong>) và lớp xi măng mỏng 14µm (<strong className="text-slate-900">BeautiLink SA</strong>). Tạo liên kết hóa học bền vững với lực dán trượt <strong className="text-[#00ADEF] font-bold">~50 MPa</strong> trên Zirconia và ổn định cấu trúc sau 5.000 chu kỳ nhồi nhiệt (<strong className="text-slate-900">Dental Advisor 2024</strong>).
             </p>
             
             <ul className="space-y-3 mb-10">
@@ -172,7 +172,7 @@ export function IndirectRestoration() {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">Quy trình "True Universal" 1 bước</h4>
-                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Gắn chặt Zirconia, sứ Lithium Disilicate mà không cần Primer rời lách cách.</p>
+                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Gắn chặt Zirconia, sứ Lithium Disilicate, loại bỏ các bước primer trung gian.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
@@ -180,8 +180,8 @@ export function IndirectRestoration() {
                   <Coins className="w-4 h-4 text-amber-500" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">Hiệu năng kinh tế đỉnh cao</h4>
-                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Ống Handmix khổng lồ 15.6g thực hiện tới 120 ca lâm sàng.</p>
+                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">Tiết kiệm chi phí điều trị</h4>
+                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Ống Handmix dung tích tối ưu 15.6g thực hiện tới 120 ca lâm sàng.</p>
                 </div>
               </li>
             </ul>
