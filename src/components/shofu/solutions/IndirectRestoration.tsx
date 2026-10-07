@@ -487,12 +487,12 @@ export function IndirectRestoration() {
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-6">
               <span className="font-heading font-black text-xl">2</span>
             </div>
-            <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">"Sát thủ" dọn xi măng dư "One-Sweep"</h3>
+            <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Kiểm soát dọn xi măng dư "One-Sweep"</h3>
             
             <YoutubeAutoplay videoId="K85voUZxMV8" />
 
             <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
-              Giải phóng <strong className="text-amber-600 font-bold">30% thời gian</strong> trên ghế nha. Không còn cạo vụn xi măng cứng ngắc làm tứa máu nướu. Chiếu đèn <strong className="text-slate-800 font-bold">1-2 giây</strong> (Tack-cure), xi măng <strong className="text-[#00ADEF] font-bold">hóa gel dai dẻo</strong>. Dùng thám châm <strong className="text-slate-900 font-bold">bóc nguyên khối</strong> trong một đường gạt.
+              Tiết kiệm đến <strong className="font-bold text-slate-800">30% thời gian</strong> trên ghế nha. Không còn nỗi lo cạo vụn xi măng quá đông cứng gây tổn thương và chảy máu viền nướu. Chỉ với <strong className="font-bold text-slate-800">1–2 giây chiếu đèn (Tack-cure)</strong>, xi măng đạt pha gel lý tưởng, cho phép dùng thám châm <strong className="font-bold text-slate-800">gạt sạch nguyên khối</strong> chỉ trong một thao tác duy nhất.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
