@@ -435,7 +435,7 @@ export function PreventiveDentistry() {
                <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-16 items-center">
                   <div className="w-full lg:w-1/2 flex flex-col gap-5 sm:gap-6">
                      <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-red-50 text-red-600 font-bold text-xs tracking-wide w-fit">
-                       1. Véc-ni chống ê buốt
+                       1. Màng phủ sinh học chống ê buốt
                      </div>
                      <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight">
                         PRG Barrier Coat – Áo giáp bioactive mỏng 15µm
@@ -458,7 +458,7 @@ export function PreventiveDentistry() {
                   <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
                      <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
                      <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                        <strong className="text-slate-900 font-bold">100% HEMA-Free & Acetone-Free:</strong> An toàn tuyệt đối, kỵ nước (hydrophobic) giúp màng phủ kháng mòn tối đa trước nước bọt. Không gây viêm nướu, không kích ứng tủy.
+                        <strong className="text-slate-900 font-bold">HEMA-Free & Acetone-Free:</strong> An toàn tuyệt đối, kỵ nước (hydrophobic) giúp màng phủ kháng mòn tối đa trước nước bọt. Không gây viêm nướu, không kích ứng tủy.
                      </div>
                   </div>
                   <div className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
