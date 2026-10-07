@@ -153,7 +153,7 @@ export function IndirectRestoration() {
               />
             </div>
             <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Tối ưu hóa <strong className="text-slate-900">độ dày màng liên kết (Cement Space) chỉ 24µm</strong> nhờ sự kết hợp giữa màng keo 5µm (<strong className="text-slate-900">BeautiBond Xtreme</strong>) và lớp xi măng mỏng 14µm (<strong className="text-slate-900">BeautiLink SA</strong>). Tạo liên kết hóa học bền vững với lực dán trượt <strong className="text-[#00ADEF] font-bold">~50 MPa</strong> trên Zirconia và ổn định cấu trúc sau 5.000 chu kỳ nhồi nhiệt (<strong className="text-slate-900">Dental Advisor 2024</strong>).
+              Tối ưu hóa <strong className="text-slate-900">độ dày màng liên kết (Cement Space)</strong> nhờ sự kết hợp giữa màng keo 5µm (<strong className="text-slate-900">BeautiBond Xtreme</strong>) và lớp xi măng mỏng 14µm (<strong className="text-slate-900">BeautiLink SA</strong>). Tạo liên kết hóa học bền vững với lực dán trượt <strong className="text-[#00ADEF] font-bold">~50 MPa</strong> trên Zirconia và ổn định cấu trúc sau 5.000 chu kỳ nhồi nhiệt (<strong className="text-slate-900">Dental Advisor 2024</strong>).
             </p>
             
             <ul className="space-y-3 mb-10">
