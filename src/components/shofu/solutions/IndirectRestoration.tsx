@@ -522,12 +522,12 @@ export function IndirectRestoration() {
             </div>
             <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Lá chắn Sinh học S-PRG</h3>
             <p className="text-slate-600 text-sm leading-relaxed mb-6">
-              S-PRG là <strong className="text-emerald-600 font-bold">"bình ắc quy sinh học"</strong>. <strong className="text-[#00ADEF] font-bold text-base">6 Ion</strong> (F-, Sr2+, BO33-, Al3+, SiO32-, Na+) <strong className="text-slate-800 font-bold">liên tục khuếch tán</strong> qua màng dán để <strong className="text-slate-800 font-bold">bít kín ống ngà hở</strong>, <strong className="text-slate-800 font-bold">trung hòa axit</strong> và tạo lớp màng <strong className="text-slate-800 font-bold">kháng biofilm ngăn mảng bám</strong>.
+              S-PRG là <strong className="text-emerald-600 font-bold">"bình ắc quy sinh học"</strong>. <strong className="text-[#00ADEF] font-bold text-base">6 Ion</strong> (F-, Sr2+, BO33-, Al3+, SiO32-, Na+) <strong className="text-slate-800 font-bold">liên tục khuếch tán</strong> qua màng dán để <strong className="text-slate-800 font-bold">bít kín ống ngà hở</strong>, <strong className="text-slate-800 font-bold">trung hòa axit</strong> và tạo lớp màng <strong className="text-slate-800 font-bold">ức chế hình thành Biofilm</strong>.
             </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
                 <Shield className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
-                <span className="font-bold text-slate-800 text-sm">Bảo vệ mô ngà sống & Đường hoàn tất an toàn trọn đời phục hình.</span>
+                <span className="font-bold text-slate-800 text-sm">Bảo vệ mô ngà sống & Đường hoàn tất, duy trì độ ổn định sinh học dài hạn.</span>
               </div>
               <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
                 <Zap className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
@@ -535,11 +535,11 @@ export function IndirectRestoration() {
               </div>
               <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
                 <ShieldCheck className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-                <span className="text-slate-700 text-sm"><strong className="text-slate-900 font-bold">Màng chắn kháng mảng bám</strong> – Nướu săn chắc, viền dán không hôi miệng.</span>
+                <span className="text-slate-700 text-sm"><strong className="text-slate-900 font-bold">Ức chế hình thành Biofilm</strong> – Nướu săn chắc, kiểm soát mảng bám, hạn chế viêm nướu viền.</span>
               </div>
               <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
                 <TestTube className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />
-                <span className="text-slate-700 text-sm"><strong className="text-slate-900 font-bold">Tự động trung hòa Axit</strong> – Triệt tiêu môi trường ăn mòn bờ viền.</span>
+                <span className="text-slate-700 text-sm"><strong className="text-slate-900 font-bold">Tự động trung hòa Axit</strong> – Trung hòa acid, đệm pH tại vùng tiếp xúc.</span>
               </div>
             </div>
 
