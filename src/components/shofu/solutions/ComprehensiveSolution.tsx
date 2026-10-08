@@ -398,7 +398,7 @@ export const ComprehensiveSolution = () => {
               </div>
               
               <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
-                <span className="block mb-4">Bác sĩ chỉnh khớp chuẩn xác, sửa soạn bờ hoàn tất khít sát, cô lập đàng hoàng... nhưng bệnh nhân vẫn than phiền vì <strong className="text-slate-900 bg-red-50 px-1 rounded">ê buốt sau trám xoang II</strong>, <strong className="text-slate-900 bg-red-50 px-1 rounded">rớt mặt dán sứ Veneer</strong>, hoặc <strong className="text-slate-900 bg-red-50 px-1 rounded">viêm nướu tứa máu do dọn xi măng kẽ</strong>. </span>
+                <span className="block mb-4">Bác sĩ chỉnh khớp chuẩn xác, sửa soạn bờ hoàn tất khít sát, cô lập đàng hoàng... nhưng bệnh nhân vẫn than phiền vì <strong className="text-slate-900 bg-red-50 px-1 rounded">ê buốt sau trám xoang II</strong>, <strong className="text-slate-900 bg-red-50 px-1 rounded">rớt mặt dán sứ Veneer</strong>, hoặc <strong className="text-slate-900 bg-red-50 px-1 rounded">gây tổn thương mô nướu do dọn xi măng kẽ</strong>. </span>
                 <span className="block">Đã đến lúc nâng cấp toàn bộ "đạn dược" lâm sàng: Thay thế các vật liệu "trơ" thụ động cũ kỹ bằng <strong className="text-[#8C2828] font-bold">Hệ sinh thái Trị liệu Sinh học Giomer 360°</strong> – <span className="text-emerald-600 font-medium bg-emerald-50 px-1 rounded">Bảo vệ mô răng thật bền vững</span> và <span className="text-slate-900 font-bold underline decoration-[#8C2828] decoration-2 underline-offset-4">dập tắt ám ảnh bảo hành!</span></span>
               </p>
 
@@ -406,13 +406,13 @@ export const ComprehensiveSolution = () => {
                 <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm text-left">
                   <div className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">🇯🇵</div>
                   <p className="font-body text-sm sm:text-base text-slate-700 leading-tight mt-1.5">
-                    <strong className="text-slate-900">100% Made in Japan</strong> – Thương hiệu vật liệu nha khoa đỉnh cao hơn 100 năm lịch sử.
+                    <strong className="text-slate-900">100% Made in Japan</strong> - Di sản Nha khoa từ Nhật Bản với hơn 100 năm lịch sử.
                   </p>
                 </div>
                 <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm text-left">
                   <div className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0"><Microscope className="w-4 h-4" /></div>
                   <p className="font-body text-sm sm:text-base text-slate-700 leading-tight mt-1.5">
-                    <strong className="text-slate-900">Bằng chứng Y văn JADA (Mỹ)</strong> – Nghiên cứu 13 năm chứng minh tỷ lệ 96% phục hình hoàn toàn không sâu răng tái phát.
+                    <strong className="text-slate-900">Bằng chứng Y văn JADA (Mỹ)</strong> – Nghiên cứu lâm sàng theo dõi các phục hình trong 13 năm và ghi nhận kết quả về độ bền cũng như tình trạng sâu răng thứ phát.
                   </p>
                 </div>
                 <div className="flex items-start gap-3 bg-white/60 p-3 rounded-xl border border-slate-200/60 shadow-sm text-left">
@@ -571,7 +571,7 @@ export const ComprehensiveSolution = () => {
                       <span className="font-heading font-bold text-blue-600 text-lg">F⁻ & Sr²⁺</span>
                    </div>
                    <h4 className="font-bold text-slate-900 mb-2">Tái khoáng hóa</h4>
-                   <p className="text-sm text-slate-600 font-body">Tạo phức hợp Fluoro-apatite bít kín vĩnh viễn các ống ngà hở.</p>
+                   <p className="text-sm text-slate-600 font-body">Hỗ trợ hình thành khoáng chất chứa fluor ở vùng ống ngà, góp phần làm giảm độ mở của ống ngà.</p>
                 </div>
                       
                 <div className="bg-gradient-to-b from-white to-emerald-50/80 p-6 rounded-2xl border border-emerald-100 shadow-sm shadow-emerald-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-emerald-200/50 hover:border-emerald-200 transition-all duration-300">
@@ -587,7 +587,7 @@ export const ComprehensiveSolution = () => {
                       <span className="font-heading font-bold text-amber-600 text-lg">BO₃³⁻</span>
                    </div>
                    <h4 className="font-bold text-slate-900 mb-2">Kháng Biofilm</h4>
-                   <p className="text-sm text-slate-600 font-body">Kìm hãm gen của S. mutans, triệt tiêu khả năng bám dính tạo mảng sinh học.</p>
+                   <p className="text-sm text-slate-600 font-body">Có thể làm giảm khả năng bám dính của S. mutans, góp phần hạn chế hình thành màng sinh học.</p>
                 </div>
                       
                 <div className="bg-gradient-to-b from-white to-purple-50/80 p-6 rounded-2xl border border-purple-100 shadow-sm shadow-purple-100/50 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:shadow-purple-200/50 hover:border-purple-200 transition-all duration-300">
