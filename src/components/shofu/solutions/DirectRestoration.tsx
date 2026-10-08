@@ -147,7 +147,7 @@ const faqs = [
             <div className="lg:hidden my-6 sm:my-8 flex justify-start">
               <img 
                 referrerPolicy="no-referrer"
-                src="/images/giai-phap-phuc-hoi-truc-tiep-shofu.webp"
+                src="/image/phuc-hoi-truc-tiep.webp"
                 alt="Giải pháp phục hồi trực tiếp Shofu"
                 className="w-full max-w-[340px] sm:max-w-[420px] h-auto object-contain block drop-shadow-md"
                 loading="eager"
@@ -200,7 +200,7 @@ const faqs = [
           <div className="hidden lg:flex w-full lg:w-[35%] xl:w-[40%] relative justify-center items-start lg:pt-[54px]">
             <img 
               referrerPolicy="no-referrer"
-              src="/images/giai-phap-phuc-hoi-truc-tiep-shofu.webp"
+              src="/image/phuc-hoi-truc-tiep.webp"
               alt="Giải pháp phục hồi trực tiếp Shofu"
               className="w-full max-w-[440px] h-auto object-contain block relative z-10 hover:scale-[1.02] transition-transform duration-500 drop-shadow-lg"
               loading="eager"
