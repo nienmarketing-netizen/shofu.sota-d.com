@@ -672,7 +672,7 @@ export const ComprehensiveSolution = () => {
                </div>
                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Beautifil Injectable X – 2.2g</h3>
                <div className="w-full aspect-[4/3] relative mb-6 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden group">
-                  <img src="/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x.webp" alt="Beautifil Injectable X" className="w-full h-full object-contain p-4 sm:p-6 drop-shadow-xl group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
+                  <img src="/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x-new.webp" alt="Beautifil Injectable X" className="w-full h-full object-contain p-4 sm:p-6 drop-shadow-xl group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
                </div>
                <ul className="space-y-3 font-body text-slate-600 text-sm flex-1">
                   <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" /><span>Độ bền nén kỷ lục 400 MPa, đắp khối chịu lực ăn nhai trực tiếp xoang I, II, V.</span></li>
