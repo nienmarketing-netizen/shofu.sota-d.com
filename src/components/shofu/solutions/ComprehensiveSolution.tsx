@@ -667,7 +667,7 @@ export const ComprehensiveSolution = () => {
             {/* Prod 3 */}
             <div className="lg:col-span-2 bg-white rounded-3xl border border-slate-100 p-6 sm:p-8 flex flex-col h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                <div className="flex items-center justify-between mb-4">
-                  <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold">Composite đắp khối</div>
+                  <div className="inline-flex px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-bold">Composite dạng bơm</div>
                   <span className="text-4xl font-heading font-black text-slate-100">03</span>
                </div>
                <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Beautifil Injectable X – 2.2g</h3>
