@@ -286,7 +286,7 @@ const faqs = [
                   <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-slate-700/60 bg-slate-800/80 hover:bg-slate-800 hover:border-slate-600 transition-all">
                     <div className="w-6 h-6 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</div>
                     <div>
-                      <h4 className="font-heading font-bold text-white text-sm sm:text-base">Ứng suất co ngót giật cùi răng (C-Factor cao)</h4>
+                      <h4 className="font-heading font-bold text-white text-sm sm:text-base">Ứng suất co ngót cao tác động lên thành xoang (C–Factor lớn)</h4>
                       <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">Composite co ngót kéo rách đáy xoang, gây vi kẽ hở và cơn đau buốt tức thì khi ăn nhai.</p>
                     </div>
                   </div>
@@ -449,11 +449,11 @@ const faqs = [
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#00ADEF] mt-2 shrink-0"></span>
-                      <span>Composite Beautifil II LS <strong className="text-white">co ngót kỷ lục 0.85% Vol</strong>, khít sát tuyệt đối.</span>
+                      <span>Composite Beautifil II LS <strong className="text-white">có độ co ngót thể tích cực thấp (chỉ 0.85% Vol)</strong>, tối ưu độ khít sát vi thể.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#00ADEF] mt-2 shrink-0"></span>
-                      <span>Hạt độn S-PRG <strong className="text-white">phóng thích 6 loại ion sinh học</strong> kháng khuẩn, chống axit 24/7.</span>
+                      <span>Hạt độn S-PRG <strong className="text-white">phóng thích 6 loại ion sinh học</strong> kháng khuẩn, duy trì khả năng trung hòa axit liên tục.</span>
                     </li>
                   </ul>
                 </div>
@@ -489,7 +489,7 @@ const faqs = [
               </span>
             </h2>
             <p className="font-body text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-              Thiết lập quy trình phục hồi trực tiếp <strong className="font-bold text-slate-900 bg-sky-100/50 px-1.5 rounded">vị tha trên lâm sàng</strong>, giải phóng hoàn toàn <strong className="font-bold text-slate-900">áp lực kỹ thuật</strong> cho Bác sĩ.
+              Thiết lập quy trình phục hồi trực tiếp <strong className="font-bold text-slate-900 bg-sky-100/50 px-1.5 rounded">giảm thiểu độ nhạy cảm kỹ thuật khi thao tác</strong>, giải phóng hoàn toàn <strong className="font-bold text-slate-900">áp lực kỹ thuật</strong> cho Bác sĩ.
             </p>
           </div>
 
@@ -531,8 +531,8 @@ const faqs = [
                       <Zap className="w-5 h-5 text-[#00ADEF]" />
                     </div>
                     <div>
-                      <h5 className="font-bold text-slate-900 font-heading">Màng dán siêu mỏng vô song ~5µm (Filler-Free)</h5>
-                      <p className="text-sm text-slate-600 font-body">Lan chảy loang mỏng hoàn hảo dưới lực thổi khí nhẹ, ngăn chặn tuyệt đối tình trạng đọng keo ở góc chuyển tiếp, giúp phục hình khít sát tuyệt đối.</p>
+                      <h5 className="font-bold text-slate-900 font-heading">Độ dày màng dán cực mỏng chỉ ~5μm (Không có chất độn)</h5>
+                      <p className="text-sm text-slate-600 font-body">Dễ dàng dàn mỏng đồng đều dưới lực thổi nhẹ, kiểm soát triệt để hiện tượng đọng keo ở góc tiếp chuyển và tối ưu độ khít sát.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
@@ -571,10 +571,10 @@ const faqs = [
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4 order-1 lg:order-none mt-2 lg:mt-0">
                   Bước 2
                 </div>
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">Composite đặc giảm co rút Beautifil II LS</h3>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">Composite phục hồi co ngót thấp Beautifil II LS</h3>
                 <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">Điêu khắc múi rãnh vững chãi – Triệt tiêu ứng suất co ngót trùng hợp</h4>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6 order-5 lg:order-none">
-                  Beautifil II LS sở hữu tỷ lệ hạt độn cao (83 wt%) giúp <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">giảm thiểu tối đa độ co ngót thể tích xuống mức kỷ lục</strong> <strong className="font-bold text-white bg-slate-800 px-1.5 py-0.5 rounded text-[13px]">0.85% Vol</strong> và ứng suất co ngót tối thiểu chỉ <strong className="font-bold text-white bg-slate-800 px-1.5 py-0.5 rounded text-[13px]">1.37 MPa</strong>. <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">Bảo vệ đường hoàn tất khỏi hiện tượng nứt kẽ vi thể</strong> và đổi màu đường viền sau nhiều năm ăn nhai.
+                  Beautifil II LS sở hữu <strong className="font-bold text-slate-900">hàm lượng hạt độn cao 83 wt%</strong>, kết hợp công nghệ resin đặc biệt, giúp <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">kiểm soát độ co ngót trùng hợp ở mức thấp chỉ 0,85% thể tích</strong> và ứng suất co ngót tối thiểu chỉ <strong className="font-bold text-white bg-slate-800 px-1.5 py-0.5 rounded text-[13px]">1.37 MPa</strong>. <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">Bảo vệ đường hoàn tất khỏi hiện tượng nứt kẽ vi thể</strong> và đổi màu đường viền sau nhiều năm ăn nhai.
                 </p>
                 <div className="space-y-4 order-6 lg:order-none">
                   <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
@@ -582,8 +582,8 @@ const faqs = [
                       <Shield className="w-5 h-5 text-[#00ADEF]" />
                     </div>
                     <div>
-                      <h5 className="font-bold text-slate-900 font-heading">Độ bền nén 364 MPa & độ bền uốn 120 MPa</h5>
-                      <p className="text-sm text-slate-600 font-body">Chịu lực uốn và lực nhai cực đại ở vùng răng sau, chống mẻ vỡ vượt trội.</p>
+                      <h5 className="font-bold text-slate-900 font-heading">Chịu lực uốn 117 MPa & lực nhai 364 MPa</h5>
+                      <p className="text-sm text-slate-600 font-body">Chịu lực cực đại ở vùng răng sau, chống mẻ vỡ vượt trội.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
@@ -622,10 +622,10 @@ const faqs = [
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4 order-1 lg:order-none mt-2 lg:mt-0">
                   Bước 3
                 </div>
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">Composite đắp lớp Beautifil Injectable X</h3>
-                <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">Sức mạnh hạt độn Nano-Optimized Silane – Lấp đầy mọi hốc sâu vi thể</h4>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">Composite phục hồi chịu lực Beautifil Injectable X</h3>
+                <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">Sức mạnh hạt độn Nano-Optimized Silane – Thích ứng thành xoang</h4>
                 <p className="font-body text-sm text-slate-600 leading-relaxed mb-6 order-5 lg:order-none">
-                  Với <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">đặc tính lưu biến thông minh (thixotropic)</strong>, Beautifil Injectable X định hình cực tốt khi đắp lớp nhưng tự động chảy loang phẳng láng dưới áp lực. Vật liệu <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">len lỏi hoàn hảo vào các ngóc ngách xoang II hẹp dưới nướu mà không tạo bọt khí</strong>.
+                  Với <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">đặc tính lưu biến thông minh (thixotropic)</strong>, Beautifil Injectable X định hình cực tốt khi đắp lớp nhưng tự động chảy loang phẳng láng dưới áp lực. Vật liệu <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">thích ứng chính xác với mọi ngóc ngách vi thể của xoang II dưới nướu mà không tạo bọt khí</strong>.
                 </p>
                 <div className="space-y-4 order-6 lg:order-none">
                   <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
@@ -633,8 +633,8 @@ const faqs = [
                       <Target className="w-5 h-5 text-[#00ADEF]" />
                     </div>
                     <div>
-                      <h5 className="font-bold text-slate-900 font-heading">Độ bền nén cơ học siêu cường 400 MPa</h5>
-                      <p className="text-sm text-slate-600 font-body">Thừa hưởng độ bền nén vượt trội tương đương composite đặc, ứng dụng đắp khối mặt nhai chịu lực trực tiếp.</p>
+                      <h5 className="font-bold text-slate-900 font-heading">Độ bền nén cao lên đến 400 MPa</h5>
+                      <p className="text-sm text-slate-600 font-body">Độ bền cơ học tương đương hoặc vượt trội so với composite đặc truyền thống, đáp ứng hoàn hảo cho phục hồi chịu lực trực tiếp ở vùng mặt nhai và bờ bên.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
@@ -642,8 +642,8 @@ const faqs = [
                       <Target className="w-5 h-5 text-[#00ADEF]" />
                     </div>
                     <div>
-                      <h5 className="font-bold text-slate-900 font-heading">Kiểm soát bám dính dụng cụ xuất sắc</h5>
-                      <p className="text-sm text-slate-600 font-body">Khắc phục triệt để rào cản dính cây phục hồi. Thao tác nhàn tênh khi kết hợp các mẹo lâm sàng (như vo tròn composite, sử dụng đầu thám trâm nhọn, lau sạch dụng cụ định kỳ hoặc dùng dung dịch hỗ trợ tạo hình Modeling Liquid).</p>
+                      <h5 className="font-bold text-slate-900 font-heading">Kiểm soát bám dính đầu tip và dụng cụ tối ưu</h5>
+                      <p className="text-sm text-slate-600 font-body">Không kéo sợi, không dính dụng cụ điêu khắc. Dễ dàng bơm trực tiếp và kiểm soát đường viền phục hình một cách mượt mà, chính xác mà không cần dung dịch bôi trơn hỗ trợ.</p>
                     </div>
                   </div>
                 </div>
@@ -674,7 +674,7 @@ const faqs = [
                 Công nghệ hạt độn sinh học S-PRG – <span className="text-[#00ADEF] block sm:inline mt-1 sm:mt-0">"Bình ắc quy" ion bảo vệ chủ động</span>
               </h2>
               <p className="font-body text-base sm:text-lg text-slate-600 leading-relaxed mb-8 lg:mb-0 order-3 lg:order-none w-full text-center lg:text-left">
-                Điểm cốt lõi làm nên <strong className="text-slate-900 font-bold">sức mạnh trị liệu vượt trội</strong> của hệ sinh thái Giomer là <strong className="text-[#00ADEF] font-bold">hạt độn sinh học S-PRG độc quyền</strong> của Shofu. <strong className="text-slate-900 font-bold">Cấu trúc hạt độn 3 lớp</strong> gồm lõi thủy tinh đa chức năng đã phản ứng trước, hoạt động như một "bình ắc quy sinh học" liên tục <strong className="text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">giải phóng và tự sạc lại 6 loại ion sinh học</strong> giúp <span className="text-slate-900 font-bold border-b-2 border-sky-300">tái khoáng hóa ngà răng</span> và <span className="text-slate-900 font-bold border-b-2 border-red-300">chống mảng bám vĩnh cửu</span>.
+                Điểm cốt lõi làm nên <strong className="text-slate-900 font-bold">sức mạnh trị liệu vượt trội</strong> của hệ sinh thái Giomer là <strong className="text-[#00ADEF] font-bold">hạt độn sinh học S-PRG độc quyền</strong> của Shofu. <strong className="text-slate-900 font-bold">Cấu trúc hạt độn 3 lớp</strong> gồm lõi thủy tinh fluoro aluminosilicate đã phản ứng trước, hoạt động như một "bình ắc quy sinh học" liên tục <strong className="text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">giải phóng và tái nạp 6 loại ion sinh học</strong>, thúc đẩy quá trình <span className="text-slate-900 font-bold border-b-2 border-sky-300">tái khoáng hóa mô răng</span>, trung hòa axit và <span className="text-slate-900 font-bold border-b-2 border-red-300">ức chế bám dính mảng bám sinh học lâu dài</span>.
               </p>
             </div>
             
@@ -814,7 +814,7 @@ const faqs = [
                   </div>
                   <div className="text-sm text-slate-300 leading-relaxed bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
                     <strong className="text-[#00ADEF] block mb-1">Ý nghĩa lâm sàng:</strong> 
-                    Cắt đứt nguồn năng lượng sống của vi khuẩn, triệt tiêu khả năng bám dính tạo mảng sinh học (biofilm) ngay cả khi có mặt đường sucrose, <strong className="text-white underline decoration-sky-500 decoration-2 underline-offset-2">giúp bảo vệ bờ viền phục hình 24/7</strong>.
+                    Cắt đứt nguồn năng lượng sống của vi khuẩn, ngăn ngừa khả năng bám dính tạo mảng sinh học (biofilm) ngay cả khi có mặt đường sucrose, <strong className="text-white underline decoration-sky-500 decoration-2 underline-offset-2">giúp bảo vệ bờ viền phục hình liên tục</strong>.
                   </div>
                 </div>
               </div>
@@ -848,11 +848,11 @@ const faqs = [
                       </div>
                       <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
-                        <span><strong className="text-white">Màng dán siêu mỏng ~5µm:</strong> Lan chảy hoàn hảo, triệt tiêu vi kẽ hở.</span>
+                        <span><strong className="text-white">Màng dán siêu mỏng ~5µm:</strong> Lan chảy hoàn hảo, ngăn ngừa vi kẽ hở.</span>
                       </div>
                       <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
-                        <span><strong className="text-[#00ADEF]">HEMA-Free kỵ nước & Acetone:</strong> Tự thẩm thấu sâu, triệt tiêu ê buốt.</span>
+                        <span><strong className="text-[#00ADEF]">HEMA-Free kỵ nước & Acetone:</strong> Tự thẩm thấu sâu, ngăn ngừa ê buốt.</span>
                       </div>
                     </div>
                   </div>
@@ -871,11 +871,11 @@ const faqs = [
                   <div className="space-y-4 -mx-6 sm:mx-0 lg:mt-6 mt-4">
                     <div className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50">
                       <strong className="text-emerald-400 block text-sm mb-1">Beautifil II LS</strong>
-                      <p className="text-[13px] text-slate-300 leading-relaxed">Tỷ lệ hạt độn 83 wt%, độ co rút kỷ lục <strong className="text-white">0.85% Vol</strong>, ứng suất <strong className="text-white">1.37 MPa</strong>. Lực nén 364 MPa, uốn 120 MPa chịu lực nhai lớn mà không mẻ vỡ.</p>
+                      <p className="text-[13px] text-slate-300 leading-relaxed">Tỷ lệ hạt độn 83 wt%, độ co ngót thể tích cực thấp chỉ <strong className="text-white">0.85% Vol</strong>, ứng suất <strong className="text-white">1.37 MPa</strong>. Độ bền nén 364 MPa, độ bền uốn 117 MPa chịu lực nhai lớn mà không mẻ vỡ.</p>
                     </div>
                     <div className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50">
                       <strong className="text-emerald-400 block text-sm mb-1">Beautifil Injectable X</strong>
-                      <p className="text-[13px] text-slate-300 leading-relaxed">Lưu biến thông minh (Thixotropic) bít kín hốc sâu không đọng bọt khí. Lực nén siêu cường <strong className="text-white">400 MPa</strong> cho phép đắp khối trực tiếp.</p>
+                      <p className="text-[13px] text-slate-300 leading-relaxed">Lưu biến thông minh (Thixotropic) thích ứng tối ưu với đáy xoang và các ngóc ngách hẹp mà không đọng bọt khí. Độ bền nén vượt trội lên đến <strong className="text-white">400 MPa</strong> cho phép phục hồi/tạo hình mặt nhai chịu lực trực tiếp.</p>
                     </div>
                   </div>
                 </div>
