@@ -147,7 +147,7 @@ export function IndirectRestoration() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-gradient-to-tr from-[#00ADEF]/30 to-[#C43838]/30 blur-[60px] rounded-full z-0 animate-pulse"></div>
               <img 
                 referrerPolicy="no-referrer"
-                src="/images/beautilink-bbx.webp" 
+                src="/image/beautilink-bbx-new.webp" 
                 alt="Bộ đôi BBX và BeautiLink SA" 
                 className="w-[80%] max-w-[320px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
               />
@@ -204,7 +204,7 @@ export function IndirectRestoration() {
             {/* Bức ảnh WebP tách nền duy nhất */}
             <img 
               referrerPolicy="no-referrer"
-              src="/images/beautilink-bbx.webp" 
+              src="/image/beautilink-bbx-new.webp" 
               alt="Bộ đôi BBX và BeautiLink SA" 
               className="w-full max-w-[550px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
             />
@@ -779,7 +779,7 @@ export function IndirectRestoration() {
               <div className="flex justify-center flex-1 w-full md:w-auto">
                 <img 
                   referrerPolicy="no-referrer"
-                  src="/images/beautilink-bbx.webp" 
+                  src="/image/beautilink-bbx-new.webp" 
                   alt="Bộ đôi BBX và BeautiLink SA" 
                   className="w-full max-w-[200px] sm:max-w-[250px] h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" 
                   loading="lazy"
@@ -983,7 +983,7 @@ export function IndirectRestoration() {
                 
                 <div className="w-full md:w-[40%] lg:w-[35%] flex justify-center items-center">
                   <img 
-                    src="/images/beautilink-bbx.webp" 
+                    src="/image/beautilink-bbx-new.webp" 
                     alt="Combo BeautiLink SA và BeautiBond Xtreme" 
                     className="w-full max-w-[196px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"
