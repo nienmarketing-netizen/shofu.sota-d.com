@@ -138,7 +138,7 @@ export function ShofuSolutions() {
               </div>
               <div className="font-mono text-[10px] text-[#00ADEF] font-semibold uppercase tracking-widest mb-2">COMPOSITE CAO CẤP</div>
               <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Beautifil Injectable X</h4>
-              <div className="font-mono text-xs text-slate-500 mb-4">Độ bóng & Độ bền vượt trội</div>
+              <div className="font-mono text-xs text-slate-500 mb-4">Bơm vật liệu và tạo hình cùng một lúc</div>
 
             </motion.div>
 
@@ -149,7 +149,7 @@ export function ShofuSolutions() {
               </div>
               <div className="font-mono text-[10px] text-[#00ADEF] font-semibold uppercase tracking-widest mb-2">KEO DÁN ĐA NĂNG HEMA-FREE</div>
               <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">BeautiBond Xtreme</h4>
-              <div className="font-mono text-xs text-slate-500 mb-4">Lực dán chắc chắn mọi bề mặt</div>
+              <div className="font-mono text-xs text-slate-500 mb-4">Đa dạng chỉ định, tối ưu quy trình</div>
 
             </motion.div>
 
@@ -160,7 +160,7 @@ export function ShofuSolutions() {
               </div>
               <div className="font-mono text-[10px] text-[#C43838] font-semibold uppercase tracking-widest mb-2">XI MĂNG RESIN TỰ DÁN</div>
               <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Beautilink SA</h4>
-              <div className="font-mono text-xs text-slate-500 mb-4">Liên kết hóa học đa bề mặt & Kiểm soát dư dạng Gel-State</div>
+              <div className="font-mono text-xs text-slate-500 mb-4">Một cement - Đa dạng khả năng dán dính</div>
 
             </motion.div>
 

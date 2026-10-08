@@ -169,7 +169,7 @@ export function ShofuAbout() {
                 <div className="w-px h-16 bg-slate-700 hidden md:block"></div>
                 <div className="w-full h-px bg-slate-700 block md:hidden"></div>
                 <div className="flex-1">
-                  <h5 className="font-heading font-bold text-xl text-white mb-3">Sạc & Nhả (Recharge & Release)</h5>
+                  <h5 className="font-heading font-bold text-xl text-white mb-3">Tái - nạp (Recharge & Release)</h5>
                   <p className="font-body text-sm text-slate-300 leading-relaxed">Hấp thụ F- từ các nguồn ngoại sinh (kem đánh răng) để duy trì đặc tính trị liệu suốt đời phục hình. Lớp bảo hiểm vững chắc cho bệnh nhân.</p>
                 </div>
               </div>
