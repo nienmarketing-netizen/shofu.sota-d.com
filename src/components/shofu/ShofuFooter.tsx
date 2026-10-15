@@ -98,8 +98,10 @@ export function ShofuFooter() {
             <a href="#" className="hover:text-[#00ADEF] transition-colors">Chính sách đổi trả</a>
           </div>
 
-          <div className="font-body text-xs text-slate-500 whitespace-nowrap">
+          <div className="font-body text-xs text-slate-500 whitespace-nowrap flex items-center gap-2">
             <p>© 2026 Sota-D. All rights reserved.</p>
+            <span>•</span>
+            <a href="/admin" className="text-slate-500 hover:text-[#00ADEF] transition-colors">CMS Portal</a>
           </div>
         </div>
       </div>
