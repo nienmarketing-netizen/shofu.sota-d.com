@@ -69,14 +69,39 @@ export function DirectRestoration() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number>(-1);
 
   useEffect(() => {
-    fetch('/api/cms/load?page=direct-restoration')
-      .then(res => res.json())
-      .then(res => {
-        if (res.success && res.data) {
-          setContent(res.data);
+    const loadDynamicContent = async () => {
+      let loaded = false;
+      try {
+        const res = await fetch(`/api/cms/load?page=direct-restoration&_t=${Date.now()}`);
+        if (res.ok) {
+          const text = await res.text();
+          if (text && text.trim().startsWith('{')) {
+            const json = JSON.parse(text);
+            if (json.success && json.data) {
+              setContent(json.data);
+              loaded = true;
+            }
+          }
         }
-      })
-      .catch(() => {});
+      } catch (e) {}
+
+      // Fallback trực tiếp tới GitHub raw content nếu API chưa deploy hoặc gặp lỗi
+      if (!loaded) {
+        try {
+          const ghRes = await fetch(`https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/src/data/direct-restoration.json?_t=${Date.now()}`, {
+            cache: 'no-store'
+          });
+          if (ghRes.ok) {
+            const data = await ghRes.json();
+            if (data && data.hero) {
+              setContent(data);
+            }
+          }
+        } catch (ghErr) {}
+      }
+    };
+
+    loadDynamicContent();
   }, []);
 
   const openCampaignModal = (title: string) => {

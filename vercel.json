@@ -1,6 +1,22 @@
 {
   "rewrites": [
     {
+      "source": "/api/cms/load",
+      "destination": "/api/cms/load.js"
+    },
+    {
+      "source": "/api/cms/save",
+      "destination": "/api/cms/save.js"
+    },
+    {
+      "source": "/api/cms/upload-image",
+      "destination": "/api/cms/upload-image.js"
+    },
+    {
+      "source": "/api/meta-capi",
+      "destination": "/api/meta-capi.js"
+    },
+    {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },
