@@ -70,6 +70,12 @@ interface FaqItem {
   a: string;
 }
 
+interface EvidenceItem {
+  id: string;
+  title: string;
+  description: string;
+}
+
 export default function DirectRestorationEditor() {
   // Authentication Gate
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
@@ -446,13 +452,72 @@ export default function DirectRestorationEditor() {
     }
   ]);
 
-  // --- SECTION 4: ƯU ĐÃI & CORE OFFER ---
+  // --- SECTION 4: BẰNG CHỨNG KHOA HỌC ---
+  const [evidenceBadge, setEvidenceBadge] = useState('Bằng chứng khoa học');
+  const [evidenceHeadline, setEvidenceHeadline] = useState(
+    'Bằng chứng <span class="text-[#00ADEF]">khoa học</span>'
+  );
+  const [evidenceDesc, setEvidenceDesc] = useState(
+    '<strong class="font-bold text-white">Shofu</strong> mang đến những bằng chứng thép từ các <strong class="font-bold text-[#00ADEF] bg-slate-800/80 px-1.5 rounded">nghiên cứu lâm sàng độc lập uy tín nhất thế giới</strong>, <strong class="font-bold text-white underline decoration-sky-500/50 decoration-2 underline-offset-4">bảo chứng tuyệt đối cho chất lượng phục hình</strong>.'
+  );
+  const [evidenceCtaText, setEvidenceCtaText] = useState('TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP');
+
+  // Box 3: Thử nghiệm kỹ thuật keo dán
+  const [adhesiveBadge, setAdhesiveBadge] = useState('3. Thử nghiệm kỹ thuật keo dán');
+  const [adhesiveTitle, setAdhesiveTitle] = useState('Độ Bền Dán BeautiBond Xtreme');
+  const [adhesiveSubtitle, setAdhesiveSubtitle] = useState('Giải quyết triệt để "điểm đau" ê buốt và thoái hóa màng keo.');
+  const [adhesiveItems, setAdhesiveItems] = useState<EvidenceItem[]>([
+    {
+      id: 'adh-1',
+      title: 'Độ chuyển đổi Monomer đạt 92% – 97%:',
+      description: 'Trùng hợp gần tuyệt đối kháng thủy phân dài lâu.'
+    },
+    {
+      id: 'adh-2',
+      title: 'Lực dán trượt 30 – 35 MPa:',
+      description: 'Giữ vững ngay cả sau nhồi nhiệt 5.000 chu kỳ.'
+    },
+    {
+      id: 'adh-3',
+      title: 'Ổn định trên ngà bất thường:',
+      description: 'Hiệu quả dán cao nhất trên cả ngà lành và ngà suy thoái.'
+    },
+    {
+      id: 'adh-4',
+      title: 'Màng dán siêu mỏng ~5µm:',
+      description: 'Lan chảy hoàn hảo, ngăn ngừa vi kẽ hở.'
+    },
+    {
+      id: 'adh-5',
+      title: 'HEMA-Free kỵ nước & Acetone:',
+      description: 'Tự thẩm thấu sâu, ngăn ngừa ê buốt.'
+    }
+  ]);
+
+  // Box 4: Bằng chứng cơ học composite
+  const [compositeBadge, setCompositeBadge] = useState('4. Bằng chứng cơ học composite');
+  const [compositeTitle, setCompositeTitle] = useState('Beautifil II LS & Injectable X');
+  const [compositeSubtitle, setCompositeSubtitle] = useState('Giải quyết nỗi lo co ngót, nứt vi kẽ và bọt khí xoang II.');
+  const [compositeItems, setCompositeItems] = useState<EvidenceItem[]>([
+    {
+      id: 'comp-1',
+      title: 'Beautifil II LS',
+      description: 'Tỷ lệ hạt độn 83 wt%, độ co ngót thể tích cực thấp chỉ <strong class="text-white">0.85% Vol</strong>, ứng suất <strong class="text-white">1.37 MPa</strong>. Độ bền nén 364 MPa, độ bền uốn 117 MPa chịu lực nhai lớn mà không mẻ vỡ.'
+    },
+    {
+      id: 'comp-2',
+      title: 'Beautifil Injectable X',
+      description: 'Lưu biến thông minh (Thixotropic) thích ứng tối ưu với đáy xoang và các ngóc ngách hẹp mà không đọng bọt khí. Độ bền nén vượt trội lên đến <strong class="text-white">400 MPa</strong> cho phép phục hồi/tạo hình mặt nhai chịu lực trực tiếp.'
+    }
+  ]);
+
+  // --- SECTION 5: ƯU ĐÃI & CORE OFFER ---
   const [offerBadge, setOfferBadge] = useState('Đặc quyền đồng hành không thể từ chối');
   const [offerHeadline, setOfferHeadline] = useState('Gói giải pháp đồng bộ combo "Phục hồi sinh học MiCD - Chặn đứng ê buốt"');
   const [coreProductImage, setCoreProductImage] = useState('/image/phuc-hoi-truc-tiep.webp');
   const [giftImage, setGiftImage] = useState('/image/qua-tang-doc-quyen-shofu-giai-phap-phuc-hoi-truc-tiep.webp');
 
-  // --- SECTION 5: FAQS ---
+  // --- SECTION 6: FAQS ---
   const [faqsList, setFaqsList] = useState<FaqItem[]>([
     {
       id: 'faq-1',
@@ -582,6 +647,30 @@ export default function DirectRestorationEditor() {
         };
       });
       setSteps(mergedSteps);
+    }
+    if (d.scientificEvidence) {
+      if (d.scientificEvidence.badge) setEvidenceBadge(d.scientificEvidence.badge);
+      if (d.scientificEvidence.headline) setEvidenceHeadline(d.scientificEvidence.headline);
+      if (d.scientificEvidence.description) setEvidenceDesc(d.scientificEvidence.description);
+      if (d.scientificEvidence.ctaText) setEvidenceCtaText(d.scientificEvidence.ctaText);
+
+      if (d.scientificEvidence.adhesiveTest) {
+        if (d.scientificEvidence.adhesiveTest.badge) setAdhesiveBadge(d.scientificEvidence.adhesiveTest.badge);
+        if (d.scientificEvidence.adhesiveTest.title) setAdhesiveTitle(d.scientificEvidence.adhesiveTest.title);
+        if (d.scientificEvidence.adhesiveTest.subtitle) setAdhesiveSubtitle(d.scientificEvidence.adhesiveTest.subtitle);
+        if (Array.isArray(d.scientificEvidence.adhesiveTest.items) && d.scientificEvidence.adhesiveTest.items.length > 0) {
+          setAdhesiveItems(d.scientificEvidence.adhesiveTest.items);
+        }
+      }
+
+      if (d.scientificEvidence.compositeMechanics) {
+        if (d.scientificEvidence.compositeMechanics.badge) setCompositeBadge(d.scientificEvidence.compositeMechanics.badge);
+        if (d.scientificEvidence.compositeMechanics.title) setCompositeTitle(d.scientificEvidence.compositeMechanics.title);
+        if (d.scientificEvidence.compositeMechanics.subtitle) setCompositeSubtitle(d.scientificEvidence.compositeMechanics.subtitle);
+        if (Array.isArray(d.scientificEvidence.compositeMechanics.items) && d.scientificEvidence.compositeMechanics.items.length > 0) {
+          setCompositeItems(d.scientificEvidence.compositeMechanics.items);
+        }
+      }
     }
     if (d.offer) {
       if (d.offer.badge) setOfferBadge(d.offer.badge);
@@ -907,6 +996,49 @@ export default function DirectRestorationEditor() {
     });
   };
 
+  // --- SECTION 4: BẰNG CHỨNG KHOA HỌC HANDLERS ---
+  const handleAddAdhesiveItem = () => {
+    setAdhesiveItems([
+      ...adhesiveItems,
+      {
+        id: `adh-${Date.now()}`,
+        title: 'Chỉ số thử nghiệm mới:',
+        description: 'Mô tả chi tiết về kết quả thử nghiệm kỹ thuật và độ bền dán.'
+      }
+    ]);
+  };
+
+  const handleDeleteAdhesiveItem = (id: string) => {
+    setAdhesiveItems(adhesiveItems.filter((it) => it.id !== id));
+  };
+
+  const handleUpdateAdhesiveItem = (id: string, field: 'title' | 'description', val: string) => {
+    setAdhesiveItems(
+      adhesiveItems.map((it) => (it.id === id ? { ...it, [field]: val } : it))
+    );
+  };
+
+  const handleAddCompositeItem = () => {
+    setCompositeItems([
+      ...compositeItems,
+      {
+        id: `comp-${Date.now()}`,
+        title: 'Tên dòng sản phẩm composite',
+        description: 'Mô tả thông số cơ học, lực uốn nén và ý nghĩa lâm sàng.'
+      }
+    ]);
+  };
+
+  const handleDeleteCompositeItem = (id: string) => {
+    setCompositeItems(compositeItems.filter((it) => it.id !== id));
+  };
+
+  const handleUpdateCompositeItem = (id: string, field: 'title' | 'description', val: string) => {
+    setCompositeItems(
+      compositeItems.map((it) => (it.id === id ? { ...it, [field]: val } : it))
+    );
+  };
+
   // Real Save & Commit to GitHub handler with Dual-Layer Resilience
   const handleSave = async () => {
     if (saveStatus === 'saving') return;
@@ -966,6 +1098,24 @@ export default function DirectRestorationEditor() {
         ctaText: stepsCtaText
       },
       steps: steps,
+      scientificEvidence: {
+        badge: evidenceBadge,
+        headline: evidenceHeadline,
+        description: evidenceDesc,
+        ctaText: evidenceCtaText,
+        adhesiveTest: {
+          badge: adhesiveBadge,
+          title: adhesiveTitle,
+          subtitle: adhesiveSubtitle,
+          items: adhesiveItems
+        },
+        compositeMechanics: {
+          badge: compositeBadge,
+          title: compositeTitle,
+          subtitle: compositeSubtitle,
+          items: compositeItems
+        }
+      },
       offer: {
         badge: offerBadge,
         headline: offerHeadline,
@@ -1329,6 +1479,21 @@ export default function DirectRestorationEditor() {
             </button>
 
             <button
+              onClick={() => setActiveTab('evidence')}
+              className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs font-bold transition-all text-left ${
+                activeTab === 'evidence' 
+                  ? 'bg-red-50 text-[#8C2828] border border-red-200 shadow-sm' 
+                  : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+              }`}
+            >
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-purple-500"></span>
+                <span>Section 4: Bằng chứng khoa học</span>
+              </span>
+              <ChevronRight className="w-3.5 h-3.5 opacity-60" />
+            </button>
+
+            <button
               onClick={() => setActiveTab('offer')}
               className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs font-bold transition-all text-left ${
                 activeTab === 'offer' 
@@ -1338,7 +1503,7 @@ export default function DirectRestorationEditor() {
             >
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-                <span>Section 4: Combo & Quà tặng</span>
+                <span>Section 5: Combo & Quà tặng</span>
               </span>
               <ChevronRight className="w-3.5 h-3.5 opacity-60" />
             </button>
@@ -1353,7 +1518,7 @@ export default function DirectRestorationEditor() {
             >
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                <span>Section 5: FAQ Giải đáp</span>
+                <span>Section 6: FAQ Giải đáp</span>
               </span>
               <ChevronRight className="w-3.5 h-3.5 opacity-60" />
             </button>
@@ -2914,12 +3079,387 @@ export default function DirectRestorationEditor() {
             </div>
           )}
 
-          {/* TAB 4: COMBO & QUÀ TẶNG */}
+          {/* TAB 4: BẰNG CHỨNG KHOA HỌC */}
+          {activeTab === 'evidence' && (
+            <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-9 shadow-sm space-y-8 animate-fadeIn">
+              {/* Header Title */}
+              <div className="border-b border-slate-100 pb-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 text-purple-700 font-mono text-xs font-bold mb-2">
+                  Section 4
+                </div>
+                <h2 className="font-heading font-extrabold text-2xl text-slate-900">
+                  Bằng chứng khoa học (Scientific Evidence)
+                </h2>
+                <p className="text-xs text-slate-500 mt-1">
+                  Quản lý nội dung công bố khoa học, thử nghiệm kỹ thuật keo dán và bằng chứng cơ học composite
+                </p>
+              </div>
+
+              {/* 1. Header & Giới thiệu Section */}
+              <div className="space-y-4">
+                <div className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">
+                  1. Tiêu đề & Giới thiệu Section Bằng chứng khoa học
+                </div>
+
+                <div className="space-y-2">
+                  <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
+                    Badge nhỏ (Nhãn trên cùng)
+                  </label>
+                  <input
+                    type="text"
+                    value={evidenceBadge}
+                    onChange={(e) => setEvidenceBadge(e.target.value)}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 font-medium"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
+                      Tiêu đề chính (Headline)
+                    </label>
+                    <div className="flex items-center gap-1.5">
+                      <button
+                        type="button"
+                        onClick={() => applyFormat('strong', setEvidenceHeadline)}
+                        className="px-2 py-1 text-[11px] font-mono bg-slate-100 hover:bg-slate-200 rounded font-bold"
+                      >
+                        [B]
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => applyFormat('cyan', setEvidenceHeadline)}
+                        className="px-2 py-1 text-[11px] font-mono bg-sky-50 text-sky-700 hover:bg-sky-100 rounded font-bold"
+                      >
+                        [Xanh]
+                      </button>
+                    </div>
+                  </div>
+                  <input
+                    type="text"
+                    value={evidenceHeadline}
+                    onChange={(e) => setEvidenceHeadline(e.target.value)}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 font-bold"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
+                      Mô tả tổng quan Section
+                    </label>
+                    <div className="flex items-center gap-1.5">
+                      <button
+                        type="button"
+                        onClick={() => applyFormat('strong', setEvidenceDesc)}
+                        className="px-2 py-1 text-[11px] font-mono bg-slate-100 hover:bg-slate-200 rounded font-bold"
+                      >
+                        [B]
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => applyFormat('cyan', setEvidenceDesc)}
+                        className="px-2 py-1 text-[11px] font-mono bg-sky-50 text-sky-700 hover:bg-sky-100 rounded font-bold"
+                      >
+                        [Xanh]
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => applyFormat('u', setEvidenceDesc)}
+                        className="px-2 py-1 text-[11px] font-mono bg-slate-100 hover:bg-slate-200 rounded font-bold underline"
+                      >
+                        [Gạch chân]
+                      </button>
+                    </div>
+                  </div>
+                  <textarea
+                    rows={3}
+                    value={evidenceDesc}
+                    onChange={(e) => setEvidenceDesc(e.target.value)}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-700 font-body leading-relaxed"
+                  />
+                </div>
+              </div>
+
+              {/* 2. Box 3: Thử nghiệm kỹ thuật keo dán */}
+              <div className="space-y-5 pt-6 border-t border-slate-100">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-xs font-mono font-bold uppercase mb-1">
+                      Box 3
+                    </div>
+                    <div className="text-sm font-heading font-bold text-slate-900">
+                      3. Thử nghiệm kỹ thuật keo dán (BeautiBond Xtreme)
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-mono font-bold text-slate-600 uppercase">
+                      Badge Box 3
+                    </label>
+                    <input
+                      type="text"
+                      value={adhesiveBadge}
+                      onChange={(e) => setAdhesiveBadge(e.target.value)}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs font-mono font-bold text-amber-800"
+                    />
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-mono font-bold text-slate-600 uppercase">
+                      Tiêu đề Box 3
+                    </label>
+                    <input
+                      type="text"
+                      value={adhesiveTitle}
+                      onChange={(e) => setAdhesiveTitle(e.target.value)}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs font-bold text-slate-900"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="block text-xs font-mono font-bold text-slate-600 uppercase">
+                    Phụ đề / Thông điệp chính Box 3
+                  </label>
+                  <input
+                    type="text"
+                    value={adhesiveSubtitle}
+                    onChange={(e) => setAdhesiveSubtitle(e.target.value)}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700"
+                  />
+                </div>
+
+                {/* Sub-boxes: Danh sách các chỉ số thử nghiệm kỹ thuật */}
+                <div className="space-y-3 pt-2">
+                  <div className="flex items-center justify-between">
+                    <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
+                      Danh sách Box chỉ số & kết quả thử nghiệm ({adhesiveItems.length} box)
+                    </label>
+                    <button
+                      type="button"
+                      onClick={handleAddAdhesiveItem}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-mono text-[11px] font-bold shadow-xs transition-colors cursor-pointer"
+                    >
+                      <Plus className="w-3.5 h-3.5" />
+                      <span>Thêm Box chỉ số</span>
+                    </button>
+                  </div>
+
+                  <div className="space-y-3">
+                    {adhesiveItems.map((item, idx) => (
+                      <div
+                        key={item.id}
+                        className="p-4 rounded-2xl bg-amber-50/40 border border-amber-200/80 space-y-3 relative group"
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <span className="w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center font-mono font-bold text-xs">
+                              {idx + 1}
+                            </span>
+                            <span className="text-xs font-mono font-bold text-amber-900 uppercase">
+                              Box chỉ số {idx + 1}
+                            </span>
+                          </div>
+
+                          {adhesiveItems.length > 1 && (
+                            <button
+                              type="button"
+                              onClick={() => handleDeleteAdhesiveItem(item.id)}
+                              className="text-red-500 hover:text-red-700 hover:bg-red-50 p-1.5 rounded-lg transition-colors cursor-pointer"
+                              title="Xóa box này"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          )}
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-start">
+                          <div className="sm:col-span-5 space-y-1">
+                            <label className="block text-[11px] font-mono text-slate-500 font-bold uppercase">
+                              Tiêu đề chỉ số (VD: Lực dán trượt 30 – 35 MPa:)
+                            </label>
+                            <input
+                              type="text"
+                              value={item.title}
+                              onChange={(e) => handleUpdateAdhesiveItem(item.id, 'title', e.target.value)}
+                              className="w-full bg-white border border-amber-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-900"
+                            />
+                          </div>
+                          <div className="sm:col-span-7 space-y-1">
+                            <label className="block text-[11px] font-mono text-slate-500 font-bold uppercase">
+                              Mô tả chi tiết / Kết quả thử nghiệm
+                            </label>
+                            <textarea
+                              rows={2}
+                              value={item.description}
+                              onChange={(e) => handleUpdateAdhesiveItem(item.id, 'description', e.target.value)}
+                              className="w-full bg-white border border-amber-200 rounded-xl px-3 py-2 text-xs text-slate-700 leading-relaxed font-body"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* 3. Box 4: Bằng chứng cơ học composite */}
+              <div className="space-y-5 pt-6 border-t border-slate-100">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-mono font-bold uppercase mb-1">
+                      Box 4
+                    </div>
+                    <div className="text-sm font-heading font-bold text-slate-900">
+                      4. Bằng chứng cơ học composite (Beautifil II LS & Injectable X)
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-mono font-bold text-slate-600 uppercase">
+                      Badge Box 4
+                    </label>
+                    <input
+                      type="text"
+                      value={compositeBadge}
+                      onChange={(e) => setCompositeBadge(e.target.value)}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs font-mono font-bold text-emerald-800"
+                    />
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-mono font-bold text-slate-600 uppercase">
+                      Tiêu đề Box 4
+                    </label>
+                    <input
+                      type="text"
+                      value={compositeTitle}
+                      onChange={(e) => setCompositeTitle(e.target.value)}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs font-bold text-slate-900"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="block text-xs font-mono font-bold text-slate-600 uppercase">
+                    Phụ đề / Thông điệp chính Box 4
+                  </label>
+                  <input
+                    type="text"
+                    value={compositeSubtitle}
+                    onChange={(e) => setCompositeSubtitle(e.target.value)}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700"
+                  />
+                </div>
+
+                {/* Sub-boxes: Danh sách các Box sản phẩm & cơ học */}
+                <div className="space-y-3 pt-2">
+                  <div className="flex items-center justify-between">
+                    <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
+                      Danh sách Box dòng sản phẩm & chứng minh cơ học ({compositeItems.length} box)
+                    </label>
+                    <button
+                      type="button"
+                      onClick={handleAddCompositeItem}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-mono text-[11px] font-bold shadow-xs transition-colors cursor-pointer"
+                    >
+                      <Plus className="w-3.5 h-3.5" />
+                      <span>Thêm Box sản phẩm</span>
+                    </button>
+                  </div>
+
+                  <div className="space-y-4">
+                    {compositeItems.map((item, idx) => (
+                      <div
+                        key={item.id}
+                        className="p-5 rounded-2xl bg-emerald-50/30 border border-emerald-200 space-y-3.5 relative group"
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <span className="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center font-mono font-bold text-xs">
+                              {idx + 1}
+                            </span>
+                            <span className="text-xs font-mono font-bold text-emerald-900 uppercase">
+                              Box sản phẩm {idx + 1}
+                            </span>
+                          </div>
+
+                          {compositeItems.length > 1 && (
+                            <button
+                              type="button"
+                              onClick={() => handleDeleteCompositeItem(item.id)}
+                              className="text-red-500 hover:text-red-700 hover:bg-red-50 p-1.5 rounded-lg transition-colors cursor-pointer"
+                              title="Xóa box sản phẩm này"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          )}
+                        </div>
+
+                        <div className="space-y-1.5">
+                          <label className="block text-[11px] font-mono text-slate-600 font-bold uppercase">
+                            Tên dòng sản phẩm / Tiêu đề Box
+                          </label>
+                          <input
+                            type="text"
+                            value={item.title}
+                            onChange={(e) => handleUpdateCompositeItem(item.id, 'title', e.target.value)}
+                            className="w-full bg-white border border-emerald-200 rounded-xl px-3.5 py-2 text-xs font-bold text-emerald-900"
+                          />
+                        </div>
+
+                        <div className="space-y-1.5">
+                          <div className="flex items-center justify-between">
+                            <label className="block text-[11px] font-mono text-slate-600 font-bold uppercase">
+                              Nội dung thông số cơ học & mô tả chi tiết
+                            </label>
+                            <span className="text-[10px] text-slate-400 font-mono">Hỗ trợ HTML: &lt;strong&gt;, &lt;span&gt;</span>
+                          </div>
+                          <textarea
+                            rows={3}
+                            value={item.description}
+                            onChange={(e) => handleUpdateCompositeItem(item.id, 'description', e.target.value)}
+                            className="w-full bg-white border border-emerald-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-700 leading-relaxed font-body"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* 4. Section 4 CTA Button */}
+              <div className="space-y-2 pt-4 border-t border-slate-100">
+                <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
+                  4. Text nút CTA Button Section 4
+                </label>
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                  <input
+                    type="text"
+                    value={evidenceCtaText}
+                    onChange={(e) => setEvidenceCtaText(e.target.value)}
+                    className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 font-mono font-bold"
+                  />
+                  <div className="px-6 py-3.5 rounded-full bg-[#00ADEF] text-white text-xs font-mono font-bold flex items-center justify-center gap-2 shadow-sm whitespace-nowrap">
+                    <span>{evidenceCtaText}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-white/80" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* TAB 5: COMBO & QUÀ TẶNG */}
           {activeTab === 'offer' && (
             <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-9 shadow-sm space-y-6 animate-fadeIn">
               <div className="border-b border-slate-100 pb-5">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 text-amber-700 font-mono text-xs font-bold mb-2">
-                  Section 4
+                  Section 5
                 </div>
                 <h2 className="font-heading font-extrabold text-2xl text-slate-900">
                   Đặc quyền đồng hành & Combo ưu đãi
@@ -3024,13 +3564,13 @@ export default function DirectRestorationEditor() {
             </div>
           )}
 
-          {/* TAB 5: FAQ GIẢI ĐÁP */}
+          {/* TAB 6: FAQ GIẢI ĐÁP */}
           {activeTab === 'faq' && (
             <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-9 shadow-sm space-y-6 animate-fadeIn">
               <div className="flex items-center justify-between border-b border-slate-100 pb-5">
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-mono text-xs font-bold mb-2">
-                    Section 5
+                    Section 6
                   </div>
                   <h2 className="font-heading font-extrabold text-2xl text-slate-900">
                     Câu hỏi thường gặp (FAQ)
