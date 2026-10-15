@@ -802,10 +802,14 @@ const faqs = [
         <div className="absolute inset-0 bg-grid-pattern-light opacity-100 pointer-events-none"></div>
         <div className="w-[90%] lg:w-[85%] xl:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-4 tracking-tight">Bằng chứng <span className="text-[#00ADEF]">khoa học</span></h2>
-            <p className="font-body text-base sm:text-lg text-slate-400 max-w-3xl mx-auto">
-              <strong className="font-bold text-white">Shofu</strong> mang đến những bằng chứng thép từ các <strong className="font-bold text-[#00ADEF] bg-slate-800/80 px-1.5 rounded">nghiên cứu lâm sàng độc lập uy tín nhất thế giới</strong>, <strong className="font-bold text-white underline decoration-sky-500/50 decoration-2 underline-offset-4">bảo chứng tuyệt đối cho chất lượng phục hình</strong>.
-            </p>
+            <h2 
+              className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-4 tracking-tight"
+              dangerouslySetInnerHTML={{ __html: content.scientificEvidence?.headline || 'Bằng chứng <span class="text-[#00ADEF]">khoa học</span>' }}
+            />
+            <p 
+              className="font-body text-base sm:text-lg text-slate-400 max-w-3xl mx-auto"
+              dangerouslySetInnerHTML={{ __html: content.scientificEvidence?.description || '<strong class="font-bold text-white">Shofu</strong> mang đến những bằng chứng thép từ các <strong class="font-bold text-[#00ADEF] bg-slate-800/80 px-1.5 rounded">nghiên cứu lâm sàng độc lập uy tín nhất thế giới</strong>, <strong class="font-bold text-white underline decoration-sky-500/50 decoration-2 underline-offset-4">bảo chứng tuyệt đối cho chất lượng phục hình</strong>.' }}
+            />
           </div>
           
           {/* Bento Grid Layout */}
@@ -892,32 +896,52 @@ const faqs = [
                 <div className="absolute inset-0 rounded-3xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-md pointer-events-none group-hover:border-[#00ADEF]/50 group-hover:shadow-[0_0_30px_rgba(0,173,239,0.15)] transition-all duration-300 [mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" />
                 
                 <div className="relative z-10 flex flex-col">
-                  <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-400 font-mono font-bold text-xs mb-4 border border-amber-500/30 w-max">3. Thử nghiệm kỹ thuật keo dán</div>
-                  <h3 className="font-heading font-bold text-xl text-white mb-2">Độ Bền Dán BeautiBond Xtreme</h3>
-                  <p className="text-slate-400 font-body text-[13px] mb-4">Giải quyết triệt để "điểm đau" ê buốt và thoái hóa màng keo.</p>
+                  <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-400 font-mono font-bold text-xs mb-4 border border-amber-500/30 w-max">
+                    {content.scientificEvidence?.adhesiveTest?.badge || "3. Thử nghiệm kỹ thuật keo dán"}
+                  </div>
+                  <h3 className="font-heading font-bold text-xl text-white mb-2">
+                    {content.scientificEvidence?.adhesiveTest?.title || "Độ Bền Dán BeautiBond Xtreme"}
+                  </h3>
+                  <p className="text-slate-400 font-body text-[13px] mb-4">
+                    {content.scientificEvidence?.adhesiveTest?.subtitle || "Giải quyết triệt để \"điểm đau\" ê buốt và thoái hóa màng keo."}
+                  </p>
                   
                   <div className="-mx-6 sm:mx-0 lg:mt-6 mt-4">
                     <div className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50 space-y-3">
-                      <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
-                        <span><strong className="text-white">Độ chuyển đổi Monomer đạt 92% – 97%:</strong> Trùng hợp gần tuyệt đối kháng thủy phân dài lâu.</span>
-                      </div>
-                      <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
-                        <span><strong className="text-white">Lực dán trượt 30 – 35 MPa:</strong> Giữ vững ngay cả sau nhồi nhiệt 5.000 chu kỳ.</span>
-                      </div>
-                      <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
-                        <span><strong className="text-white">Ổn định trên ngà bất thường:</strong> Hiệu quả dán cao nhất trên cả ngà lành và ngà suy thoái.</span>
-                      </div>
-                      <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
-                        <span><strong className="text-white">Màng dán siêu mỏng ~5µm:</strong> Lan chảy hoàn hảo, ngăn ngừa vi kẽ hở.</span>
-                      </div>
-                      <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
-                        <span><strong className="text-[#00ADEF]">HEMA-Free kỵ nước & Acetone:</strong> Tự thẩm thấu sâu, ngăn ngừa ê buốt.</span>
-                      </div>
+                      {Array.isArray(content.scientificEvidence?.adhesiveTest?.items) && content.scientificEvidence.adhesiveTest.items.length > 0 ? (
+                        content.scientificEvidence.adhesiveTest.items.map((item: any, idx: number) => (
+                          <div key={item.id || idx} className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
+                            <span>
+                              {item.title && <strong className="text-white mr-1" dangerouslySetInnerHTML={{ __html: item.title }} />}
+                              <span dangerouslySetInnerHTML={{ __html: item.description }} />
+                            </span>
+                          </div>
+                        ))
+                      ) : (
+                        <>
+                          <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
+                            <span><strong className="text-white">Độ chuyển đổi Monomer đạt 92% – 97%:</strong> Trùng hợp gần tuyệt đối kháng thủy phân dài lâu.</span>
+                          </div>
+                          <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
+                            <span><strong className="text-white">Lực dán trượt 30 – 35 MPa:</strong> Giữ vững ngay cả sau nhồi nhiệt 5.000 chu kỳ.</span>
+                          </div>
+                          <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
+                            <span><strong className="text-white">Ổn định trên ngà bất thường:</strong> Hiệu quả dán cao nhất trên cả ngà lành và ngà suy thoái.</span>
+                          </div>
+                          <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
+                            <span><strong className="text-white">Màng dán siêu mỏng ~5µm:</strong> Lan chảy hoàn hảo, ngăn ngừa vi kẽ hở.</span>
+                          </div>
+                          <div className="text-[13px] text-slate-300 leading-relaxed flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-1.5"></span>
+                            <span><strong className="text-[#00ADEF]">HEMA-Free kỵ nước & Acetone:</strong> Tự thẩm thấu sâu, ngăn ngừa ê buốt.</span>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -928,19 +952,36 @@ const faqs = [
                 <div className="absolute inset-0 rounded-3xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-md pointer-events-none group-hover:border-[#00ADEF]/50 group-hover:shadow-[0_0_30px_rgba(0,173,239,0.15)] transition-all duration-300 [mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] [-webkit-mask-image:linear-gradient(to_bottom,black_0px,black_185px,transparent_240px)] sm:[mask-image:none] sm:[-webkit-mask-image:none]" />
                 
                 <div className="relative z-10 flex flex-col">
-                  <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-400 font-mono font-bold text-xs mb-4 border border-emerald-500/30 w-max">4. Bằng chứng cơ học composite</div>
-                  <h3 className="font-heading font-bold text-xl text-white mb-2">Beautifil II LS & Injectable X</h3>
-                  <p className="text-slate-400 font-body text-[13px] mb-4">Giải quyết nỗi lo co ngót, nứt vi kẽ và bọt khí xoang II.</p>
+                  <div className="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-400 font-mono font-bold text-xs mb-4 border border-emerald-500/30 w-max">
+                    {content.scientificEvidence?.compositeMechanics?.badge || "4. Bằng chứng cơ học composite"}
+                  </div>
+                  <h3 className="font-heading font-bold text-xl text-white mb-2">
+                    {content.scientificEvidence?.compositeMechanics?.title || "Beautifil II LS & Injectable X"}
+                  </h3>
+                  <p className="text-slate-400 font-body text-[13px] mb-4">
+                    {content.scientificEvidence?.compositeMechanics?.subtitle || "Giải quyết nỗi lo co ngót, nứt vi kẽ và bọt khí xoang II."}
+                  </p>
                   
                   <div className="space-y-4 -mx-6 sm:mx-0 lg:mt-6 mt-4">
-                    <div className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50">
-                      <strong className="text-emerald-400 block text-sm mb-1">Beautifil II LS</strong>
-                      <p className="text-[13px] text-slate-300 leading-relaxed">Tỷ lệ hạt độn 83 wt%, độ co ngót thể tích cực thấp chỉ <strong className="text-white">0.85% Vol</strong>, ứng suất <strong className="text-white">1.37 MPa</strong>. Độ bền nén 364 MPa, độ bền uốn 117 MPa chịu lực nhai lớn mà không mẻ vỡ.</p>
-                    </div>
-                    <div className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50">
-                      <strong className="text-emerald-400 block text-sm mb-1">Beautifil Injectable X</strong>
-                      <p className="text-[13px] text-slate-300 leading-relaxed">Lưu biến thông minh (Thixotropic) thích ứng tối ưu với đáy xoang và các ngóc ngách hẹp mà không đọng bọt khí. Độ bền nén vượt trội lên đến <strong className="text-white">400 MPa</strong> cho phép phục hồi/tạo hình mặt nhai chịu lực trực tiếp.</p>
-                    </div>
+                    {Array.isArray(content.scientificEvidence?.compositeMechanics?.items) && content.scientificEvidence.compositeMechanics.items.length > 0 ? (
+                      content.scientificEvidence.compositeMechanics.items.map((item: any, idx: number) => (
+                        <div key={item.id || idx} className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50">
+                          <strong className="text-emerald-400 block text-sm mb-1" dangerouslySetInnerHTML={{ __html: item.title }} />
+                          <p className="text-[13px] text-slate-300 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.description }} />
+                        </div>
+                      ))
+                    ) : (
+                      <>
+                        <div className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50">
+                          <strong className="text-emerald-400 block text-sm mb-1">Beautifil II LS</strong>
+                          <p className="text-[13px] text-slate-300 leading-relaxed">Tỷ lệ hạt độn 83 wt%, độ co ngót thể tích cực thấp chỉ <strong className="text-white">0.85% Vol</strong>, ứng suất <strong className="text-white">1.37 MPa</strong>. Độ bền nén 364 MPa, độ bền uốn 117 MPa chịu lực nhai lớn mà không mẻ vỡ.</p>
+                        </div>
+                        <div className="bg-slate-900/50 rounded-xl p-4 sm:p-5 border border-slate-700/50">
+                          <strong className="text-emerald-400 block text-sm mb-1">Beautifil Injectable X</strong>
+                          <p className="text-[13px] text-slate-300 leading-relaxed">Lưu biến thông minh (Thixotropic) thích ứng tối ưu với đáy xoang và các ngóc ngách hẹp mà không đọng bọt khí. Độ bền nén vượt trội lên đến <strong className="text-white">400 MPa</strong> cho phép phục hồi/tạo hình mặt nhai chịu lực trực tiếp.</p>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -953,7 +994,7 @@ const faqs = [
                onClick={() => openCampaignModal("Tải bộ Bằng chứng Khoa học từ ĐH Florida & Osaka")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
-              <span className="truncate">TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP</span>
+              <span className="truncate">{content.scientificEvidence?.ctaText || "TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP"}</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </CtaButton>
           </div>
