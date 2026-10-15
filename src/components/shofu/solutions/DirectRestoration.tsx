@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Gift, 
   CheckCircle2, 
   ArrowRight, 
@@ -23,6 +23,7 @@ import { Gift,
 import { AnimatePresence, motion } from 'motion/react';
 import { CampaignModal } from '../../CampaignModal';
 import { CtaButton } from '../../ui/CtaButton';
+import defaultContent from '../../../data/direct-restoration.json';
 
 const ImagePlaceholder = ({ text, className = "" }: { text: string, className?: string }) => (
   <div className={`flex items-center justify-center p-8 text-center bg-slate-50 border-2 border-dashed border-slate-300 rounded-2xl ${className}`}>
@@ -62,9 +63,21 @@ const AccordionItem: React.FC<{ question: string, answer: React.ReactNode, isOpe
 };
 
 export function DirectRestoration() {
+  const [content, setContent] = useState(defaultContent);
   const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
   const [campaignModalTitle, setCampaignModalTitle] = useState('');
   const [openFaqIndex, setOpenFaqIndex] = useState<number>(-1);
+
+  useEffect(() => {
+    fetch('/api/cms/load?page=direct-restoration')
+      .then(res => res.json())
+      .then(res => {
+        if (res.success && res.data) {
+          setContent(res.data);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   const openCampaignModal = (title: string) => {
     setCampaignModalTitle(title);
@@ -133,66 +146,52 @@ const faqs = [
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00ADEF] animate-pulse shrink-0 relative z-10 shadow-[0_0_4px_rgba(0,173,239,0.8)]"></div>
               <div className="flex overflow-hidden relative w-full [mask-image:linear-gradient(to_right,transparent,black_10px,black_90%,transparent)] sm:[mask-image:none]">
                 <div className="font-mono text-[10.5px] min-[375px]:text-[11.5px] sm:text-xs font-bold text-[#00ADEF] tracking-tight sm:tracking-wide whitespace-nowrap flex animate-marquee sm:!animate-none sm:!transform-none w-max">
-                  <span className="pr-8 sm:pr-0">Giải pháp phục hồi trực tiếp MiCD</span>
-                  <span className="pr-8 sm:hidden">Giải pháp phục hồi trực tiếp MiCD</span>
+                  <span className="pr-8 sm:pr-0">{content.hero?.badge || "Giải pháp phục hồi trực tiếp MiCD"}</span>
+                  <span className="pr-8 sm:hidden">{content.hero?.badge || "Giải pháp phục hồi trực tiếp MiCD"}</span>
                 </div>
               </div>
             </div>
             
-            <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12 text-left">
-              Chấm dứt ám ảnh ê buốt & sâu răng thứ phát trong <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">phục hồi xoang II răng sau</span>
-            </h1>
+            <h1 
+              className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12 text-left"
+              dangerouslySetInnerHTML={{ __html: content.hero?.headline || "" }}
+            />
 
             {/* Mobile Image: Hiển thị ngay dưới headline ở mobile, ẩn ở desktop */}
             <div className="lg:hidden my-6 sm:my-8 flex justify-start">
               <img 
                 referrerPolicy="no-referrer"
-                src="/image/phuc-hoi-truc-tiep.webp"
+                src={content.hero?.image || "/image/phuc-hoi-truc-tiep.webp"}
                 alt="Giải pháp phục hồi trực tiếp Shofu"
                 className="w-full max-w-[340px] sm:max-w-[420px] h-auto object-contain block drop-shadow-md"
                 loading="eager"
               />
             </div>
             
-            <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl text-left">
-              Trải nghiệm bước dịch chuyển đột phá từ "Phục hồi cơ học thụ động" sang <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1.5 py-0.5 rounded">"Trị liệu sinh học chủ động"</strong> với hệ sinh thái Giomer ứng dụng công nghệ hạt độn S-PRG từ <strong className="font-bold text-slate-900">Shofu Nhật Bản</strong>. Quy trình lâm sàng được tối giản hóa tối đa, giúp <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-4">bảo tồn cấu trúc ngà sống</strong> và <strong className="font-bold text-slate-900">giải phóng hoàn toàn áp lực nhạy cảm kỹ thuật</strong> cho Bác sĩ.
-            </p>
+            <p 
+              className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl text-left"
+              dangerouslySetInnerHTML={{ __html: content.hero?.body || "" }}
+            />
             
             <ul className="space-y-3 mb-10 text-left">
-              <li className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                <div className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-0.5">
-                  <ShieldCheck className="w-4 h-4 text-[#C43838]" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug text-left">Triệt tiêu nguy cơ ê buốt</h4>
-                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left">Nhờ màng dán kỵ nước HEMA-Free của keo dán thế hệ 8 BeautiBond Xtreme.</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center shrink-0 mt-0.5">
-                  <Layers className="w-4 h-4 text-[#00ADEF]" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug text-left">Chống vi thấm và hở kẽ đường viền</h4>
-                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left">Nhờ dòng composite đặc Beautifil II LS sở hữu độ co rút thể tích cực thấp kỷ lục chỉ 0.85% Vol.</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                <div className="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center shrink-0 mt-0.5">
-                  <Sparkles className="w-4 h-4 text-amber-500" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug text-left">Màng khiên bảo vệ sinh học 24/7</h4>
-                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left">Chống sâu răng tái phát nhờ cơ chế phóng thích và tự sạc lại 6 loại ion của hạt độn S-PRG.</p>
-                </div>
-              </li>
+              {(content.hero?.usps || []).map((usp: any, idx: number) => (
+                <li key={usp.id || idx} className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${idx === 0 ? 'bg-red-50 text-[#C43838]' : idx === 1 ? 'bg-blue-50 text-[#00ADEF]' : 'bg-amber-50 text-amber-500'}`}>
+                    {usp.iconName === 'Layers' ? <Layers className="w-4 h-4" /> : usp.iconName === 'Sparkles' ? <Sparkles className="w-4 h-4" /> : <ShieldCheck className="w-4 h-4" />}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug text-left">{usp.title}</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed text-left">{usp.description}</p>
+                  </div>
+                </li>
+              ))}
             </ul>
 
             <CtaButton ctaName="MoKhoaCombo_MiCD" 
                onClick={() => openCampaignModal("Mở khóa combo phục hồi MiCD & nhận bộ kít mài bóng")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
-              <span className="truncate">MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG</span>
+              <span className="truncate">{content.hero?.ctaText || "MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG"}</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </CtaButton>
           </div>
@@ -200,7 +199,7 @@ const faqs = [
           <div className="hidden lg:flex w-full lg:w-[35%] xl:w-[40%] relative justify-center items-start lg:pt-[54px]">
             <img 
               referrerPolicy="no-referrer"
-              src="/image/phuc-hoi-truc-tiep.webp"
+              src={content.hero?.image || "/image/phuc-hoi-truc-tiep.webp"}
               alt="Giải pháp phục hồi trực tiếp Shofu"
               className="w-full max-w-[440px] h-auto object-contain block relative z-10 hover:scale-[1.02] transition-transform duration-500 drop-shadow-lg"
               loading="eager"
