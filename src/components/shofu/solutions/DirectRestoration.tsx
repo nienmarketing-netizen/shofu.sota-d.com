@@ -201,8 +201,20 @@ const faqs = [
             <ul className="space-y-3 mb-10 text-left">
               {(content.hero?.usps || []).map((usp: any, idx: number) => (
                 <li key={usp.id || idx} className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${idx === 0 ? 'bg-red-50 text-[#C43838]' : idx === 1 ? 'bg-blue-50 text-[#00ADEF]' : 'bg-amber-50 text-amber-500'}`}>
-                    {usp.iconName === 'Layers' ? <Layers className="w-4 h-4" /> : usp.iconName === 'Sparkles' ? <Sparkles className="w-4 h-4" /> : <ShieldCheck className="w-4 h-4" />}
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5 overflow-hidden ${idx === 0 ? 'bg-red-50 text-[#C43838]' : idx === 1 ? 'bg-blue-50 text-[#00ADEF]' : 'bg-amber-50 text-amber-500'}`}>
+                    {usp.iconName?.includes('.svg') || usp.iconName?.startsWith('/') || usp.iconName?.startsWith('http') ? (
+                      <img src={usp.iconName} alt="" className="w-4 h-4 object-contain" />
+                    ) : usp.iconName === 'Layers' ? (
+                      <Layers className="w-4 h-4" />
+                    ) : usp.iconName === 'Sparkles' ? (
+                      <Sparkles className="w-4 h-4" />
+                    ) : usp.iconName === 'Zap' ? (
+                      <Zap className="w-4 h-4" />
+                    ) : usp.iconName === 'Award' ? (
+                      <Award className="w-4 h-4" />
+                    ) : (
+                      <ShieldCheck className="w-4 h-4" />
+                    )}
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug text-left">{usp.title}</h4>
