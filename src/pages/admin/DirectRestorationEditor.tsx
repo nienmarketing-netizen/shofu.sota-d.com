@@ -367,13 +367,15 @@ export default function DirectRestorationEditor() {
   };
 
   // Fetch latest content with multi-layer fallback
-  const fetchPageData = async () => {
+  const fetchPageData = async (isManual = false) => {
     setIsLoadingInitialData(true);
     let loaded = false;
 
     // 1. Thử gọi API endpoint (/api/cms/load)
     try {
-      const res = await fetch(`/api/cms/load?page=direct-restoration&_t=${Date.now()}`);
+      const res = await fetch(`/api/cms/load?page=direct-restoration&_t=${Date.now()}`, {
+        cache: 'no-store'
+      });
       if (res.ok) {
         const text = await res.text();
         if (text && text.trim().startsWith('{')) {
@@ -432,6 +434,18 @@ export default function DirectRestorationEditor() {
     }
 
     setIsLoadingInitialData(false);
+
+    if (isManual) {
+      if (loaded) {
+        setSaveStatus('saved');
+        setSaveMessage('Đã tải và đồng bộ dữ liệu mới nhất từ GitHub repo thành công!');
+        setTimeout(() => setSaveStatus('idle'), 4000);
+      } else {
+        setSaveStatus('error');
+        setSaveMessage('Không thể tải dữ liệu mới nhất. Vui lòng kiểm tra kết nối mạng.');
+        setTimeout(() => setSaveStatus('idle'), 4000);
+      }
+    }
   };
 
   useEffect(() => {
@@ -740,10 +754,10 @@ export default function DirectRestorationEditor() {
 
           <div className="flex items-center gap-2.5 sm:gap-3">
             <button
-              onClick={fetchPageData}
+              onClick={() => fetchPageData(true)}
               disabled={isLoadingInitialData || saveStatus === 'saving'}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200 shadow-sm transition-colors disabled:opacity-50"
-              title="Tải lại nội dung mới nhất từ máy chủ"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200 shadow-sm transition-colors disabled:opacity-50 cursor-pointer"
+              title="Tải và đồng bộ dữ liệu mới nhất từ GitHub repository"
             >
               <RefreshCw className={`w-3.5 h-3.5 text-slate-600 ${isLoadingInitialData ? 'animate-spin' : ''}`} />
               <span className="hidden md:inline">Tải lại dữ liệu</span>
