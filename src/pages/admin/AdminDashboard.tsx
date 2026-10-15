@@ -134,7 +134,7 @@ export default function AdminDashboard() {
         localStorage.setItem('shofu_cms_user_email', userEmail || 'content.shofu@sota-d.com');
       }
     } else {
-      setLoginError('Mật khẩu không đúng. Gợi ý: mật khẩu mặc định là shofu2026');
+      setLoginError('Mật khẩu không đúng. Vui lòng kiểm tra lại.');
     }
   };
 
@@ -207,7 +207,7 @@ export default function AdminDashboard() {
                     type={showPassword ? 'text' : 'password'}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Nhập mật khẩu (Mặc định: shofu2026)"
+                    placeholder="Nhập mật khẩu"
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-4 pr-11 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#8C2828] focus:ring-2 focus:ring-[#8C2828]/10 transition-all shadow-inner"
                   />
                   <button
@@ -230,7 +230,6 @@ export default function AdminDashboard() {
                   />
                   <span>Ghi nhớ đăng nhập</span>
                 </label>
-                <span className="text-slate-500 font-mono text-[11px] bg-slate-100 px-2 py-0.5 rounded border border-slate-200">Pass: shofu2026</span>
               </div>
 
               <button
