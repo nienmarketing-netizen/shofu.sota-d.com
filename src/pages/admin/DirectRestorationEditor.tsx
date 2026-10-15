@@ -39,6 +39,7 @@ import {
   StepItem, 
   FaqItem, 
   EvidenceItem, 
+  TestimonialItem,
   applyFormat 
 } from './direct-restoration/types';
 import { Section1HeroEditor } from './direct-restoration/Section1HeroEditor';
@@ -47,6 +48,7 @@ import { Section3StepsEditor } from './direct-restoration/Section3StepsEditor';
 import { Section4EvidenceEditor } from './direct-restoration/Section4EvidenceEditor';
 import { Section5OfferEditor } from './direct-restoration/Section5OfferEditor';
 import { Section6FaqEditor } from './direct-restoration/Section6FaqEditor';
+import { Section7TestimonialsEditor } from './direct-restoration/Section7TestimonialsEditor';
 
 export default function DirectRestorationEditor() {
   // Authentication Gate
@@ -57,7 +59,7 @@ export default function DirectRestorationEditor() {
   const [authError, setAuthError] = useState('');
 
   // Navigation active tab
-  const [activeTab, setActiveTab] = useState<'hero' | 'pain-points' | 'steps' | 'evidence' | 'offer' | 'faq'>('hero');
+  const [activeTab, setActiveTab] = useState<'hero' | 'pain-points' | 'steps' | 'evidence' | 'offer' | 'faq' | 'testimonials'>('hero');
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [saveMessage, setSaveMessage] = useState<string>('');
   const [commitSha, setCommitSha] = useState<string>('');
@@ -508,6 +510,73 @@ export default function DirectRestorationEditor() {
     }
   ]);
 
+  // --- SECTION 7: NHA SĨ & CHUYÊN GIA ĐÃ CHỌN ---
+  const [testimonialsHeadline, setTestimonialsHeadline] = useState(
+    '<span class="text-[#00ADEF]">Hàng ngàn nha sĩ và chuyên gia</span> đã chọn'
+  );
+  const [testimonialsList, setTestimonialsList] = useState<TestimonialItem[]>([
+    {
+      id: 'test-1',
+      name: 'Dr. Hoàng Minh Tú',
+      role: 'Chuyên gia Thẩm mỹ, Hà Nội',
+      text: '"Hệ thống đánh bóng Super-Snap và OneGloss giúp tôi tiết kiệm 50% thời gian hoàn thiện miếng trám. Bề mặt composite sáng bóng như răng thật chỉ sau vài thao tác."'
+    },
+    {
+      id: 'test-2',
+      name: 'Prof. Tanaka',
+      role: 'Đại học Y khoa Tokyo, Nhật Bản',
+      text: '"Hạt độn S-PRG trong Giomer thay đổi hoàn toàn tư duy trám răng. Không chỉ lấp đầy xoang sâu, miếng trám giờ đây còn chủ động phóng thích Fluoride bảo vệ mô răng xung quanh."'
+    },
+    {
+      id: 'test-3',
+      name: 'Dr. Trần Văn An',
+      role: 'Chuyên gia Phục hình Thẩm mỹ, TP.HCM',
+      text: '"Khả năng tái tạo quang học của Beautifil II rất ấn tượng. Hiệu ứng tắc kè hoa giúp miếng trám chìm hoàn toàn vào mô răng thật, không để lại đường viền lộ liễu."'
+    },
+    {
+      id: 'test-4',
+      name: 'Dr. Nguyễn Hải Đăng',
+      role: 'Bác sĩ trưởng, Nha khoa Thẩm mỹ',
+      text: '"Lớp lai (hybrid layer) tạo bởi BeautiBond cực kỳ đồng nhất và kháng thủy phân tốt. Tình trạng ê buốt sau trám của bệnh nhân gần như bằng 0."'
+    },
+    {
+      id: 'test-5',
+      name: 'Dr. Jennifer Bell',
+      role: 'Viện Thẩm mỹ Nha khoa Quốc tế, NC',
+      text: '"Độ cứng và khả năng chịu lực của dòng Beautifil Flow Plus khiến tôi kinh ngạc. Trám bít hố rãnh hay tạo thành bờ đều vô cùng đáp ứng và không bị chảy xệ."'
+    },
+    {
+      id: 'test-6',
+      name: 'Dr. Anna Lee',
+      role: 'Bác sĩ trưởng, Nha khoa Kỹ thuật cao, Sydney',
+      text: '"Độ co ngót thể tích siêu thấp của Beautifil II LS (chỉ 0.85%) giải quyết triệt để vấn đề vi thấm và sút vỡ viền miếng trám cho các ca xoang II lớn."'
+    },
+    {
+      id: 'test-7',
+      name: 'Dr. Phạm Hoàng Tuấn',
+      role: 'Bác sĩ trưởng, Cần Thơ',
+      text: '"Khả năng trung hòa axit và chống bám đọng mảng bám của composite Shofu giúp viền nướu quanh miếng trám xoang V luôn hồng hào và khỏe mạnh sau nhiều năm."'
+    },
+    {
+      id: 'test-8',
+      name: 'Dr. Lê Huỳnh Anh',
+      role: 'Nha khoa Thẩm mỹ, Đà Nẵng',
+      text: '"Chỉ với 1 mũi OneGloss duy nhất, tôi có thể thay đổi áp lực tay để vừa tạo hình vừa đánh bóng miếng trám. Quá tinh gọn và hiệu quả cho phòng khám bận rộn."'
+    },
+    {
+      id: 'test-9',
+      name: 'Dr. Maria Garcia',
+      role: 'Nha khoa Cao cấp, Brazil',
+      text: '"Độ nhớt của Beautifil Flow rất vừa phải, dễ dàng len lỏi vào các vùng ngách phức tạp mà không để lại bọt khí. Cản quang tốt giúp dễ kiểm soát trên phim X-quang."'
+    },
+    {
+      id: 'test-10',
+      name: 'Dr. Michael Smith',
+      role: 'Chuyên gia Phục hình, New York',
+      text: '"Công nghệ monomer kép kỵ nước của Shofu mang lại lực dán ổn định trên cả men và ngà mà không cần các bước primer phức tạp. Nhanh chóng và vô cùng an tâm."'
+    }
+  ]);
+
   // Helper to apply loaded JSON data to state
   const applyJsonData = (d: any) => {
     if (!d) return;
@@ -652,6 +721,12 @@ export default function DirectRestorationEditor() {
     }
     if (Array.isArray(d.faqs) && d.faqs.length > 0) {
       setFaqsList(d.faqs);
+    }
+    if (d.testimonials) {
+      if (d.testimonials.headline) setTestimonialsHeadline(d.testimonials.headline);
+      if (Array.isArray(d.testimonials.items) && d.testimonials.items.length > 0) {
+        setTestimonialsList(d.testimonials.items);
+      }
     }
   };
 
@@ -811,6 +886,29 @@ export default function DirectRestorationEditor() {
   // Delete FAQ
   const handleDeleteFaq = (id: string) => {
     setFaqsList(faqsList.filter((item) => item.id !== id));
+  };
+
+  // --- SECTION 7: TESTIMONIALS & FEEDBACKS HANDLERS ---
+  const handleAddTestimonial = () => {
+    setTestimonialsList([
+      ...testimonialsList,
+      {
+        id: `test-${Date.now()}`,
+        name: 'Dr. Tên Bác sĩ mới',
+        role: 'Chức danh, TP/Bệnh viện',
+        text: '"Nhập nội dung feedback đánh giá của bác sĩ tại đây..."'
+      }
+    ]);
+  };
+
+  const handleDeleteTestimonial = (id: string) => {
+    setTestimonialsList(testimonialsList.filter((item) => item.id !== id));
+  };
+
+  const handleUpdateTestimonial = (id: string, field: 'name' | 'role' | 'text', val: string) => {
+    setTestimonialsList(
+      testimonialsList.map((item) => (item.id === id ? { ...item, [field]: val } : item))
+    );
   };
 
   // --- SECTION 2 HANDLERS ---
@@ -1104,7 +1202,11 @@ export default function DirectRestorationEditor() {
           'Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày'
         ]
       },
-      faqs: faqsList
+      faqs: faqsList,
+      testimonials: {
+        headline: testimonialsHeadline,
+        items: testimonialsList
+      }
     };
 
     let savedSuccess = false;
@@ -1494,6 +1596,21 @@ export default function DirectRestorationEditor() {
               </span>
               <ChevronRight className="w-3.5 h-3.5 opacity-60" />
             </button>
+
+            <button
+              onClick={() => setActiveTab('testimonials')}
+              className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-xs font-bold transition-all text-left ${
+                activeTab === 'testimonials' 
+                  ? 'bg-red-50 text-[#8C2828] border border-red-200 shadow-sm' 
+                  : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+              }`}
+            >
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-sky-500"></span>
+                <span>Section 7: Nha sĩ & Chuyên gia</span>
+              </span>
+              <ChevronRight className="w-3.5 h-3.5 opacity-60" />
+            </button>
           </nav>
 
           <div className="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-400 p-2 leading-relaxed">
@@ -1671,6 +1788,19 @@ export default function DirectRestorationEditor() {
               setFaqsList={setFaqsList}
               handleAddFaq={handleAddFaq}
               handleDeleteFaq={handleDeleteFaq}
+            />
+          )}
+
+          {/* TAB 7: NHA SĨ & CHUYÊN GIA ĐÃ CHỌN */}
+          {activeTab === 'testimonials' && (
+            <Section7TestimonialsEditor
+              testimonialsHeadline={testimonialsHeadline}
+              setTestimonialsHeadline={setTestimonialsHeadline}
+              testimonialsList={testimonialsList}
+              setTestimonialsList={setTestimonialsList}
+              handleAddTestimonial={handleAddTestimonial}
+              handleDeleteTestimonial={handleDeleteTestimonial}
+              handleUpdateTestimonial={handleUpdateTestimonial}
             />
           )}
 

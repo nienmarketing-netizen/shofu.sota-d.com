@@ -301,5 +301,70 @@
       "q": "Quy trình đánh bóng composite có tốn nhiều thời gian và dễ làm trầy xước bề mặt miếng trám không?",
       "a": "Hệ thống đĩa đánh bóng Super-Snap X-Treme giải quyết triệt để vấn đề này nhờ cơ chế gài Snap-on thông minh và thiết kế đĩa không chứa vòng kim loại ở giữa, loại bỏ nguy cơ làm trầy miếng trám. Với 4 dải màu phân định rõ ràng (từ mài thô đến siêu bóng) kết hợp mũi đá mài nhẵn CA, Bác sĩ chỉ mất vài giây để tái tạo bề mặt láng mịn."
     }
-  ]
+  ],
+  "testimonials": {
+    "headline": "<span class=\"text-[#00ADEF]\">Hàng ngàn nha sĩ và chuyên gia</span> đã chọn",
+    "items": [
+      {
+        "id": "test-1",
+        "name": "Dr. Hoàng Minh Tú",
+        "role": "Chuyên gia Thẩm mỹ, Hà Nội",
+        "text": "\"Hệ thống đánh bóng Super-Snap và OneGloss giúp tôi tiết kiệm 50% thời gian hoàn thiện miếng trám. Bề mặt composite sáng bóng như răng thật chỉ sau vài thao tác.\""
+      },
+      {
+        "id": "test-2",
+        "name": "Prof. Tanaka",
+        "role": "Đại học Y khoa Tokyo, Nhật Bản",
+        "text": "\"Hạt độn S-PRG trong Giomer thay đổi hoàn toàn tư duy trám răng. Không chỉ lấp đầy xoang sâu, miếng trám giờ đây còn chủ động phóng thích Fluoride bảo vệ mô răng xung quanh.\""
+      },
+      {
+        "id": "test-3",
+        "name": "Dr. Trần Văn An",
+        "role": "Chuyên gia Phục hình Thẩm mỹ, TP.HCM",
+        "text": "\"Khả năng tái tạo quang học của Beautifil II rất ấn tượng. Hiệu ứng tắc kè hoa giúp miếng trám chìm hoàn toàn vào mô răng thật, không để lại đường viền lộ liễu.\""
+      },
+      {
+        "id": "test-4",
+        "name": "Dr. Nguyễn Hải Đăng",
+        "role": "Bác sĩ trưởng, Nha khoa Thẩm mỹ",
+        "text": "\"Lớp lai (hybrid layer) tạo bởi BeautiBond cực kỳ đồng nhất và kháng thủy phân tốt. Tình trạng ê buốt sau trám của bệnh nhân gần như bằng 0.\""
+      },
+      {
+        "id": "test-5",
+        "name": "Dr. Jennifer Bell",
+        "role": "Viện Thẩm mỹ Nha khoa Quốc tế, NC",
+        "text": "\"Độ cứng và khả năng chịu lực của dòng Beautifil Flow Plus khiến tôi kinh ngạc. Trám bít hố rãnh hay tạo thành bờ đều vô cùng đáp ứng và không bị chảy xệ.\""
+      },
+      {
+        "id": "test-6",
+        "name": "Dr. Anna Lee",
+        "role": "Bác sĩ trưởng, Nha khoa Kỹ thuật cao, Sydney",
+        "text": "\"Độ co ngót thể tích siêu thấp của Beautifil II LS (chỉ 0.85%) giải quyết triệt để vấn đề vi thấm và sút vỡ viền miếng trám cho các ca xoang II lớn.\""
+      },
+      {
+        "id": "test-7",
+        "name": "Dr. Phạm Hoàng Tuấn",
+        "role": "Bác sĩ trưởng, Cần Thơ",
+        "text": "\"Khả năng trung hòa axit và chống bám đọng mảng bám của composite Shofu giúp viền nướu quanh miếng trám xoang V luôn hồng hào và khỏe mạnh sau nhiều năm.\""
+      },
+      {
+        "id": "test-8",
+        "name": "Dr. Lê Huỳnh Anh",
+        "role": "Nha khoa Thẩm mỹ, Đà Nẵng",
+        "text": "\"Chỉ với 1 mũi OneGloss duy nhất, tôi có thể thay đổi áp lực tay để vừa tạo hình vừa đánh bóng miếng trám. Quá tinh gọn và hiệu quả cho phòng khám bận rộn.\""
+      },
+      {
+        "id": "test-9",
+        "name": "Dr. Maria Garcia",
+        "role": "Nha khoa Cao cấp, Brazil",
+        "text": "\"Độ nhớt của Beautifil Flow rất vừa phải, dễ dàng len lỏi vào các vùng ngách phức tạp mà không để lại bọt khí. Cản quang tốt giúp dễ kiểm soát trên phim X-quang.\""
+      },
+      {
+        "id": "test-10",
+        "name": "Dr. Michael Smith",
+        "role": "Chuyên gia Phục hình, New York",
+        "text": "\"Công nghệ monomer kép kỵ nước của Shofu mang lại lực dán ổn định trên cả men và ngà mà không cần các bước primer phức tạp. Nhanh chóng và vô cùng an tâm.\""
+      }
+    ]
+  }
 }

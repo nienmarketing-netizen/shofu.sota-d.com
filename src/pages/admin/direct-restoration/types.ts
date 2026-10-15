@@ -43,6 +43,13 @@ export interface EvidenceItem {
   description: string;
 }
 
+export interface TestimonialItem {
+  id: string;
+  name: string;
+  role: string;
+  text: string;
+}
+
 // Helper for applying HTML formatting to active input
 export const applyFormat = (
   tag: 'strong' | 'cyan' | 'red' | 'u',

@@ -1024,7 +1024,12 @@ const faqs = [
         `}} />
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10 mb-12">
           <div className="text-center">
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4"><span className="text-[#00ADEF]">Hàng ngàn nha sĩ và chuyên gia</span> đã chọn</h2>
+            <h2 
+              className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4"
+              dangerouslySetInnerHTML={{ 
+                __html: (content as any).testimonials?.headline || '<span class="text-[#00ADEF]">Hàng ngàn nha sĩ và chuyên gia</span> đã chọn' 
+              }}
+            />
           </div>
         </div>
 
@@ -1037,15 +1042,18 @@ const faqs = [
             <div className="flex overflow-hidden group w-full">
               <div className="flex animate-marquee-left w-max hover:animation-play-state-paused">
                 {(() => {
-                  const t1 = [
+                  const defaultT1 = [
                     { text: "\"Hệ thống đánh bóng Super-Snap và OneGloss giúp tôi tiết kiệm 50% thời gian hoàn thiện miếng trám. Bề mặt composite sáng bóng như răng thật chỉ sau vài thao tác.\"", name: "Dr. Hoàng Minh Tú", role: "Chuyên gia Thẩm mỹ, Hà Nội" },
                     { text: "\"Hạt độn S-PRG trong Giomer thay đổi hoàn toàn tư duy trám răng. Không chỉ lấp đầy xoang sâu, miếng trám giờ đây còn chủ động phóng thích Fluoride bảo vệ mô răng xung quanh.\"", name: "Prof. Tanaka", role: "Đại học Y khoa Tokyo, Nhật Bản" },
                     { text: "\"Khả năng tái tạo quang học của Beautifil II rất ấn tượng. Hiệu ứng tắc kè hoa giúp miếng trám chìm hoàn toàn vào mô răng thật, không để lại đường viền lộ liễu.\"", name: "Dr. Trần Văn An", role: "Chuyên gia Phục hình Thẩm mỹ, TP.HCM" },
                     { text: "\"Lớp lai (hybrid layer) tạo bởi BeautiBond cực kỳ đồng nhất và kháng thủy phân tốt. Tình trạng ê buốt sau trám của bệnh nhân gần như bằng 0.\"", name: "Dr. Nguyễn Hải Đăng", role: "Bác sĩ trưởng, Nha khoa Thẩm mỹ" },
                     { text: "\"Độ cứng và khả năng chịu lực của dòng Beautifil Flow Plus khiến tôi kinh ngạc. Trám bít hố rãnh hay tạo thành bờ đều vô cùng đáp ứng và không bị chảy xệ.\"", name: "Dr. Jennifer Bell", role: "Viện Thẩm mỹ Nha khoa Quốc tế, NC" }
                   ];
+                  const allItems = (content as any).testimonials?.items || defaultT1;
+                  const half = Math.ceil(allItems.length / 2);
+                  const t1 = allItems.slice(0, half > 0 ? half : 1);
                   const dup = [...t1, ...t1];
-                  return dup.map((item, idx) => (
+                  return dup.map((item: any, idx: number) => (
                     <div key={`row-1-${idx}`} className="bg-white rounded-2xl p-5 lg:p-6 shadow-sm flex flex-col w-[280px] sm:w-[320px] lg:w-[350px] shrink-0 mx-2 sm:mx-3 border border-slate-100 whitespace-normal">
                       <p className="font-body text-[13.5px] sm:text-[14px] text-slate-600 italic mb-5 lg:mb-6 leading-relaxed flex-1">{item.text}</p>
                       <div className="border-t border-slate-100 pt-4 lg:pt-5 mt-auto">
@@ -1062,15 +1070,18 @@ const faqs = [
             <div className="flex overflow-hidden group w-full">
               <div className="flex animate-marquee-right w-max hover:animation-play-state-paused">
                 {(() => {
-                  const t2 = [
+                  const defaultT2 = [
                     { text: "\"Độ co ngót thể tích siêu thấp của Beautifil II LS (chỉ 0.85%) giải quyết triệt để vấn đề vi thấm và sút vỡ viền miếng trám cho các ca xoang II lớn.\"", name: "Dr. Anna Lee", role: "Bác sĩ trưởng, Nha khoa Kỹ thuật cao, Sydney" },
                     { text: "\"Khả năng trung hòa axit và chống bám đọng mảng bám của composite Shofu giúp viền nướu quanh miếng trám xoang V luôn hồng hào và khỏe mạnh sau nhiều năm.\"", name: "Dr. Phạm Hoàng Tuấn", role: "Bác sĩ trưởng, Cần Thơ" },
                     { text: "\"Chỉ với 1 mũi OneGloss duy nhất, tôi có thể thay đổi áp lực tay để vừa tạo hình vừa đánh bóng miếng trám. Quá tinh gọn và hiệu quả cho phòng khám bận rộn.\"", name: "Dr. Lê Huỳnh Anh", role: "Nha khoa Thẩm mỹ, Đà Nẵng" },
                     { text: "\"Độ nhớt của Beautifil Flow rất vừa phải, dễ dàng len lỏi vào các vùng ngách phức tạp mà không để lại bọt khí. Cản quang tốt giúp dễ kiểm soát trên phim X-quang.\"", name: "Dr. Maria Garcia", role: "Nha khoa Cao cấp, Brazil" },
                     { text: "\"Công nghệ monomer kép kỵ nước của Shofu mang lại lực dán ổn định trên cả men và ngà mà không cần các bước primer phức tạp. Nhanh chóng và vô cùng an tâm.\"", name: "Dr. Michael Smith", role: "Chuyên gia Phục hình, New York" }
                   ];
+                  const allItems = (content as any).testimonials?.items || defaultT2;
+                  const half = Math.ceil(allItems.length / 2);
+                  const t2 = allItems.length > 1 ? allItems.slice(half) : allItems;
                   const dup = [...t2, ...t2];
-                  return dup.map((item, idx) => (
+                  return dup.map((item: any, idx: number) => (
                     <div key={`row-2-${idx}`} className="bg-white rounded-2xl p-5 lg:p-6 shadow-sm flex flex-col w-[280px] sm:w-[320px] lg:w-[350px] shrink-0 mx-2 sm:mx-3 border border-slate-100 whitespace-normal">
                       <p className="font-body text-[13.5px] sm:text-[14px] text-slate-600 italic mb-5 lg:mb-6 leading-relaxed flex-1">{item.text}</p>
                       <div className="border-t border-slate-100 pt-4 lg:pt-5 mt-auto">
