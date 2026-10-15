@@ -27,7 +27,9 @@ import {
   ShieldAlert,
   Quote,
   XCircle,
-  ArrowRight
+  ArrowRight,
+  Shield,
+  Target
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -44,6 +46,12 @@ interface UspItem {
   description: string;
 }
 
+interface StepFeature {
+  iconName?: string;
+  title: string;
+  description: string;
+}
+
 interface StepItem {
   stepNumber: string;
   badge: string;
@@ -52,7 +60,8 @@ interface StepItem {
   description: string;
   image: string;
   suggestedSize: string;
-  specs: string[];
+  specs?: string[];
+  features?: StepFeature[];
 }
 
 interface FaqItem {
@@ -365,36 +374,75 @@ export default function DirectRestorationEditor() {
   const [painCtaText, setPainCtaText] = useState('TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP');
 
   // --- SECTION 3: 3 BƯỚC TỐI GIẢN ---
+  const [stepsBadge, setStepsBadge] = useState('Quy trình lâm sàng chuẩn hóa');
+  const [stepsHeadline, setStepsHeadline] = useState(
+    'Hệ sinh thái Giomer: <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">Quy trình phục hồi trực tiếp với 3 bước tối giản</span>'
+  );
+  const [stepsDesc, setStepsDesc] = useState(
+    'Thiết lập quy trình phục hồi trực tiếp <strong class="font-bold text-slate-900 bg-sky-100/50 px-1.5 rounded">giảm thiểu độ nhạy cảm kỹ thuật khi thao tác</strong>, giải phóng hoàn toàn <strong class="font-bold text-slate-900">áp lực kỹ thuật</strong> cho Bác sĩ.'
+  );
+  const [stepsCtaText, setStepsCtaText] = useState('TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP');
+
   const [steps, setSteps] = useState<StepItem[]>([
     {
       stepNumber: '1',
       badge: 'Bước 1',
-      title: 'Dán dính sinh học HEMA-Free BeautiBond Xtreme',
-      subtitle: 'Màng liên kết siêu mỏng 5µm – Chống thủy phân vĩnh viễn',
-      description: 'Chỉ 1 giọt duy nhất, quét và thổi khô không cần chờ đợi. Màng dán kỵ nước ngăn chặn nước xâm lấn qua ống ngà, triệt tiêu 100% nguy cơ ê buốt sau trám.',
+      title: 'Keo dán universal kỵ nước BeautiBond Xtreme (BBX)',
+      subtitle: 'Khóa chặt ống ngà kỵ nước – Chấm dứt hiện tượng thủy phân liên kết dán',
+      description: 'BBX <strong class="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">loại bỏ hoàn toàn thành phần HEMA ưa nước</strong>. Ứng dụng hệ dung môi Acetone bay hơi nhanh giúp đưa 4 monomer chức năng (đặc biệt là biến thể 10-MDP và Carboxylic) thâm nhập sâu vào các ống ngà ẩm, <strong class="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">tạo màng dán dính kỵ nước cực kỳ bền vững</strong>.',
       image: '/image/BeautiBond-Xtreme-One-Hand.webp',
-      suggestedSize: '1000 × 750 px (Tỷ lệ 4:3 hoặc vuông)',
-      specs: ['Thời gian thao tác: 5 giây quét + 5 giây thổi', 'Lực dán men & ngà: ~30-35 MPa', 'Độ dày màng dán: ~5µm']
+      suggestedSize: '1000 × 750 px (Tỷ lệ 4:3 hoặc vuông, dung lượng < 300KB)',
+      specs: ['Thời gian thao tác: 5 giây quét + 5 giây thổi', 'Lực dán men & ngà: ~30-35 MPa', 'Độ dày màng dán: ~5µm'],
+      features: [
+        {
+          title: 'Độ dày màng dán cực mỏng chỉ ~5μm (Không có chất độn)',
+          description: 'Dễ dàng dàn mỏng đồng đều dưới lực thổi nhẹ, kiểm soát triệt để hiện tượng đọng keo ở góc tiếp chuyển và tối ưu độ khít sát.'
+        },
+        {
+          title: 'Quy trình "True Universal" tự soi mòn (Self-Etch)',
+          description: 'Chỉ 1 lớp duy nhất dán trực tiếp lên mọi bề mặt và mọi vật liệu phục hình mà không cần mua thêm primer rời. Quy trình chớp nhoáng: Thoa keo ➔ Thổi khô ➔ Chiếu đèn 5 giây.'
+        }
+      ]
     },
     {
       stepNumber: '2',
       badge: 'Bước 2',
-      title: 'Composite đặc giảm co ngót Beautifil II LS',
-      subtitle: 'Độ co rút kỷ lục 0.85% Vol – Khít sát tuyệt đối sàn xoang',
-      description: 'Ứng dụng monomer đặc biệt kiểm soát lực giật sàn ngà C-Factor. Giữ cho đường viền phục hình bền chặt, loại bỏ hoàn toàn hiện tượng nhạy cảm khi nhai.',
+      title: 'Composite phục hồi co ngót thấp Beautifil II LS',
+      subtitle: 'Điêu khắc múi rãnh vững chãi – Triệt tiêu ứng suất co ngót trùng hợp',
+      description: 'Beautifil II LS sở hữu <strong class="font-bold text-slate-900">hàm lượng hạt độn cao 83 wt%</strong>, kết hợp công nghệ resin đặc biệt, giúp <strong class="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">kiểm soát độ co ngót trùng hợp ở mức thấp chỉ 0,85% thể tích</strong> và ứng suất co ngót tối thiểu chỉ <strong class="font-bold text-white bg-slate-800 px-1.5 py-0.5 rounded text-[13px]\">1.37 MPa</strong>. <strong class="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">Bảo vệ đường hoàn tất khỏi hiện tượng nứt kẽ vi thể</strong> và đổi màu đường viền sau nhiều năm ăn nhai.',
       image: '/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp',
-      suggestedSize: '1000 × 750 px (Tỷ lệ 4:3 hoặc vuông)',
-      specs: ['Độ co rút thể tích: 0.85% Vol', 'Ứng suất co ngót: 1.37 MPa', 'Tỷ lệ hạt độn: 83 wt%']
+      suggestedSize: '1000 × 750 px (Tỷ lệ 4:3 hoặc vuông, dung lượng < 300KB)',
+      specs: ['Độ co rút thể tích: 0.85% Vol', 'Ứng suất co ngót: 1.37 MPa', 'Tỷ lệ hạt độn: 83 wt%'],
+      features: [
+        {
+          title: 'Chịu lực uốn 117 MPa & lực nhai 364 MPa',
+          description: 'Chịu lực cực đại ở vùng răng sau, chống mẻ vỡ vượt trội.'
+        },
+        {
+          title: 'Hiệu ứng quang học "Tắc kè hoa" sinh động',
+          description: 'Tự động hòa quyện sắc độ với men ngà xung quanh, dễ dàng đánh bóng đạt độ bóng sáng tự nhiên chỉ trong vài giây.'
+        }
+      ]
     },
     {
       stepNumber: '3',
       badge: 'Bước 3',
       title: 'Composite phục hồi chịu lực Beautifil Injectable X',
       subtitle: 'Sức mạnh hạt độn Nano-Optimized Silane – Thích ứng thành xoang',
-      description: 'Đặc tính lưu biến Thixotropic tự động chảy loang phẳng láng dưới áp lực bơm để len lỏi bít kín mọi hốc sâu vi thể mà không đọng bọt khí.',
+      description: 'Với <strong class="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">đặc tính lưu biến thông minh (thixotropic)</strong>, Beautifil Injectable X định hình cực tốt khi đắp lớp nhưng tự động chảy loang phẳng láng dưới áp lực. Vật liệu <strong class="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">thích ứng chính xác với mọi ngóc ngách vi thể của xoang II dưới nướu mà không tạo bọt khí</strong>.',
       image: '/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x-new.webp',
-      suggestedSize: '1000 × 750 px (Tỷ lệ 4:3 hoặc vuông)',
-      specs: ['Độ bền nén: 400 MPa', 'Đặc tính: Thixotropic tự san phẳng', 'Chỉ định: Xoang I, II, V chịu lực trực tiếp']
+      suggestedSize: '1000 × 750 px (Tỷ lệ 4:3 hoặc vuông, dung lượng < 300KB)',
+      specs: ['Độ bền nén: 400 MPa', 'Đặc tính: Thixotropic tự san phẳng', 'Chỉ định: Xoang I, II, V chịu lực trực tiếp'],
+      features: [
+        {
+          title: 'Độ bền nén cao lên đến 400 MPa',
+          description: 'Độ bền cơ học tương đương hoặc vượt trội so với composite đặc truyền thống, đáp ứng hoàn hảo cho phục hồi chịu lực trực tiếp ở vùng mặt nhai và bờ bên.'
+        },
+        {
+          title: 'Kiểm soát bám dính đầu tip và dụng cụ tối ưu',
+          description: 'Không kéo sợi, không dính dụng cụ điêu khắc. Dễ dàng bơm trực tiếp và kiểm soát đường viền phục hình một cách mượt mà, chính xác mà không cần dung dịch bôi trơn hỗ trợ.'
+        }
+      ]
     }
   ]);
 
@@ -477,8 +525,63 @@ export default function DirectRestorationEditor() {
       }
       if (d.painPoints.ctaText) setPainCtaText(d.painPoints.ctaText);
     }
+    if (d.stepsSection) {
+      if (d.stepsSection.badge) setStepsBadge(d.stepsSection.badge);
+      if (d.stepsSection.headline) setStepsHeadline(d.stepsSection.headline);
+      if (d.stepsSection.description) setStepsDesc(d.stepsSection.description);
+      if (d.stepsSection.ctaText) setStepsCtaText(d.stepsSection.ctaText);
+    }
     if (Array.isArray(d.steps) && d.steps.length > 0) {
-      setSteps(d.steps);
+      const mergedSteps = d.steps.map((st: any, idx: number) => {
+        let feats = st.features;
+        if (!Array.isArray(feats) || feats.length === 0) {
+          if (idx === 0) {
+            feats = [
+              {
+                iconName: 'Zap',
+                title: 'Độ dày màng dán cực mỏng chỉ ~5μm (Không có chất độn)',
+                description: 'Dễ dàng dàn mỏng đồng đều dưới lực thổi nhẹ, kiểm soát triệt để hiện tượng đọng keo ở góc tiếp chuyển và tối ưu độ khít sát.'
+              },
+              {
+                iconName: 'ShieldCheck',
+                title: 'Quy trình "True Universal" tự soi mòn (Self-Etch)',
+                description: 'Chỉ 1 lớp duy nhất dán trực tiếp lên mọi bề mặt và mọi vật liệu phục hình mà không cần mua thêm primer rời. Quy trình chớp nhoáng: Thoa keo ➔ Thổi khô ➔ Chiếu đèn 5 giây.'
+              }
+            ];
+          } else if (idx === 1) {
+            feats = [
+              {
+                iconName: 'Shield',
+                title: 'Chịu lực uốn 117 MPa & lực nhai 364 MPa',
+                description: 'Chịu lực cực đại ở vùng răng sau, chống mẻ vỡ vượt trội.'
+              },
+              {
+                iconName: 'Sparkles',
+                title: 'Hiệu ứng quang học "Tắc kè hoa" sinh động',
+                description: 'Tự động hòa quyện sắc độ với men ngà xung quanh, dễ dàng đánh bóng đạt độ bóng sáng tự nhiên chỉ trong vài giây.'
+              }
+            ];
+          } else {
+            feats = [
+              {
+                iconName: 'Target',
+                title: 'Độ bền nén cao lên đến 400 MPa',
+                description: 'Độ bền cơ học tương đương hoặc vượt trội so với composite đặc truyền thống, đáp ứng hoàn hảo cho phục hồi chịu lực trực tiếp ở vùng mặt nhai và bờ bên.'
+              },
+              {
+                iconName: 'Layers',
+                title: 'Kiểm soát bám dính đầu tip và dụng cụ tối ưu',
+                description: 'Không kéo sợi, không dính dụng cụ điêu khắc. Dễ dàng bơm trực tiếp và kiểm soát đường viền phục hình một cách mượt mà, chính xác mà không cần dung dịch bôi trơn hỗ trợ.'
+              }
+            ];
+          }
+        }
+        return {
+          ...st,
+          features: feats
+        };
+      });
+      setSteps(mergedSteps);
     }
     if (d.offer) {
       if (d.offer.badge) setOfferBadge(d.offer.badge);
@@ -720,6 +823,90 @@ export default function DirectRestorationEditor() {
     setPainNewSchoolPoints(updated);
   };
 
+  // --- SECTION 3: 3 BƯỚC PHỤC HỒI HANDLERS ---
+  const handleUpdateStep = (index: number, field: keyof StepItem, val: any) => {
+    setSteps((prev) => {
+      const next = [...prev];
+      next[index] = { ...next[index], [field]: val };
+      return next;
+    });
+  };
+
+  const handleAddStepFeature = (stepIndex: number) => {
+    setSteps((prev) => {
+      const next = [...prev];
+      const curFeatures = next[stepIndex].features || [];
+      const defaultIcon = stepIndex === 0 ? 'Zap' : stepIndex === 1 ? 'Shield' : 'Target';
+      next[stepIndex] = {
+        ...next[stepIndex],
+        features: [
+          ...curFeatures,
+          {
+            iconName: defaultIcon,
+            title: 'Đặc tính kỹ thuật mới',
+            description: 'Mô tả chi tiết ưu điểm lâm sàng và công nghệ nổi bật.'
+          }
+        ]
+      };
+      return next;
+    });
+  };
+
+  const handleDeleteStepFeature = (stepIndex: number, featureIndex: number) => {
+    setSteps((prev) => {
+      const next = [...prev];
+      const curFeatures = next[stepIndex].features || [];
+      next[stepIndex] = {
+        ...next[stepIndex],
+        features: curFeatures.filter((_, idx) => idx !== featureIndex)
+      };
+      return next;
+    });
+  };
+
+  const handleUpdateStepFeature = (
+    stepIndex: number,
+    featureIndex: number,
+    field: 'title' | 'description' | 'iconName',
+    val: string
+  ) => {
+    setSteps((prev) => {
+      const next = [...prev];
+      const curFeatures = [...(next[stepIndex].features || [])];
+      curFeatures[featureIndex] = { ...curFeatures[featureIndex], [field]: val };
+      next[stepIndex] = { ...next[stepIndex], features: curFeatures };
+      return next;
+    });
+  };
+
+  const handleUploadStepFeatureSvg = (file: File, stepIndex: number, featureIndex: number) => {
+    handleUploadImageFile(file, `step-${stepIndex}-feat-${featureIndex}`, (url) => {
+      handleUpdateStepFeature(stepIndex, featureIndex, 'iconName', url);
+    });
+  };
+
+  const applyStepDescFormat = (stepIdx: number, tag: 'strong' | 'cyan' | 'red' | 'u') => {
+    const selection = window.getSelection()?.toString();
+    if (!selection) {
+      alert('Vui lòng bôi đen đoạn chữ cần định dạng trước khi bấm nút.');
+      return;
+    }
+    let wrapped = '';
+    if (tag === 'strong') wrapped = `<strong>${selection}</strong>`;
+    if (tag === 'cyan') wrapped = `<span class="text-[#00ADEF] font-bold">${selection}</span>`;
+    if (tag === 'red') wrapped = `<span class="text-[#8C2828] font-bold">${selection}</span>`;
+    if (tag === 'u') wrapped = `<u class="decoration-[#00ADEF]">${selection}</u>`;
+
+    setSteps((prev) => {
+      const next = [...prev];
+      next[stepIdx] = {
+        ...next[stepIdx],
+        description: next[stepIdx].description.replace(selection, wrapped)
+      };
+      return next;
+    });
+  };
+
   // Real Save & Commit to GitHub handler with Dual-Layer Resilience
   const handleSave = async () => {
     if (saveStatus === 'saving') return;
@@ -771,6 +958,12 @@ export default function DirectRestorationEditor() {
           }
         },
         ctaText: painCtaText
+      },
+      stepsSection: {
+        badge: stepsBadge,
+        headline: stepsHeadline,
+        description: stepsDesc,
+        ctaText: stepsCtaText
       },
       steps: steps,
       offer: {
@@ -2180,105 +2373,543 @@ export default function DirectRestorationEditor() {
                   Hệ sinh thái Giomer: 3 Bước phục hồi tối giản
                 </h2>
                 <p className="text-slate-500 text-xs sm:text-sm mt-1">
-                  Quản lý nội dung và hình ảnh của từng bước lâm sàng (BeautiBond Xtreme, Beautifil II LS, Beautifil Injectable X).
+                  Quản lý huy hiệu, tiêu đề chính, mô tả, nội dung chi tiết từng bước lâm sàng (ảnh minh họa, kích thước gợi ý, đặc tính kỹ thuật) và nút CTA.
                 </p>
               </div>
 
-              <div className="space-y-8">
-                {steps.map((st, i) => (
-                  <div key={i} className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
-                    <div className="flex items-center justify-between border-b border-slate-200/70 pb-3">
-                      <span className="font-heading font-bold text-base text-slate-900 flex items-center gap-2">
-                        <span className="w-7 h-7 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-mono text-xs font-bold">
-                          {st.stepNumber}
-                        </span>
-                        <span>{st.title}</span>
-                      </span>
-                    </div>
+              {/* 1. Badge Text */}
+              <div className="space-y-2">
+                <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
+                  1. Huy hiệu Badge Section 3
+                </label>
+                <input
+                  type="text"
+                  value={stepsBadge}
+                  onChange={(e) => setStepsBadge(e.target.value)}
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:bg-white focus:border-[#00ADEF] focus:ring-2 focus:ring-[#00ADEF]/10 transition-all font-medium"
+                />
+              </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-[11px] font-mono text-slate-500 font-bold uppercase mb-1">
+              {/* 2. Headline with Formatting Helper & Live Preview */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
+                    2. Headline (Tiêu đề chính)
+                  </label>
+                  <div className="flex items-center gap-1.5 text-xs bg-slate-50 p-1 rounded-lg border border-slate-200">
+                    <span className="text-[11px] text-slate-500 px-1 font-mono">Định dạng nhanh:</span>
+                    <button
+                      type="button"
+                      onClick={() => applyFormat('strong', setStepsHeadline)}
+                      title="In đậm chữ đang bôi đen"
+                      className="px-2 py-0.5 rounded bg-white hover:bg-slate-200 text-slate-800 font-bold border border-slate-200 text-xs"
+                    >
+                      B
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => applyFormat('cyan', setStepsHeadline)}
+                      title="Tô màu xanh Shofu"
+                      className="px-2 py-0.5 rounded bg-sky-50 hover:bg-sky-100 text-[#00ADEF] font-bold border border-sky-200 text-xs"
+                    >
+                      Xanh
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => applyFormat('red', setStepsHeadline)}
+                      title="Tô màu đỏ Shofu"
+                      className="px-2 py-0.5 rounded bg-red-50 hover:bg-red-100 text-[#8C2828] font-bold border border-red-200 text-xs"
+                    >
+                      Đỏ
+                    </button>
+                  </div>
+                </div>
+
+                <textarea
+                  rows={3}
+                  value={stepsHeadline}
+                  onChange={(e) => setStepsHeadline(e.target.value)}
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-900 focus:bg-white focus:border-[#00ADEF] focus:ring-2 focus:ring-[#00ADEF]/10 transition-all font-heading font-bold"
+                />
+
+                {/* Live Preview of Headline */}
+                <div className="p-4 rounded-xl bg-slate-50/80 border border-slate-200/80">
+                  <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block mb-1">
+                    Xem trước Headline:
+                  </span>
+                  <div
+                    className="font-heading font-extrabold text-xl text-slate-900 leading-snug"
+                    dangerouslySetInnerHTML={{ __html: stepsHeadline }}
+                  />
+                </div>
+              </div>
+
+              {/* 3. Description with Formatting Helper & Live Preview */}
+              <div className="space-y-2 pt-2 border-t border-slate-100">
+                <div className="flex items-center justify-between">
+                  <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
+                    3. Đoạn mô tả dẫn nhập Section 3
+                  </label>
+                  <div className="flex items-center gap-1.5 text-xs bg-slate-50 p-1 rounded-lg border border-slate-200">
+                    <span className="text-[11px] text-slate-500 px-1 font-mono">Định dạng nhanh:</span>
+                    <button
+                      type="button"
+                      onClick={() => applyFormat('strong', setStepsDesc)}
+                      title="In đậm chữ đang bôi đen"
+                      className="px-2 py-0.5 rounded bg-white hover:bg-slate-200 text-slate-800 font-bold border border-slate-200 text-xs"
+                    >
+                      B
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => applyFormat('cyan', setStepsDesc)}
+                      title="Tô màu xanh Shofu"
+                      className="px-2 py-0.5 rounded bg-sky-50 hover:bg-sky-100 text-[#00ADEF] font-bold border border-sky-200 text-xs"
+                    >
+                      Xanh
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => applyFormat('u', setStepsDesc)}
+                      title="Gạch chân chữ đang bôi đen"
+                      className="px-2 py-0.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold border border-slate-200 text-xs"
+                    >
+                      U
+                    </button>
+                  </div>
+                </div>
+
+                <textarea
+                  rows={3}
+                  value={stepsDesc}
+                  onChange={(e) => setStepsDesc(e.target.value)}
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-900 focus:bg-white focus:border-[#00ADEF] focus:ring-2 focus:ring-[#00ADEF]/10 transition-all"
+                />
+
+                {/* Live Preview of Description */}
+                <div className="p-4 rounded-xl bg-slate-50/80 border border-slate-200/80">
+                  <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block mb-1">
+                    Xem trước Mô tả:
+                  </span>
+                  <div
+                    className="text-sm text-slate-700 leading-relaxed font-body"
+                    dangerouslySetInnerHTML={{ __html: stepsDesc }}
+                  />
+                </div>
+              </div>
+
+              {/* 4. Chi tiết từng bước trong 3 Bước phục hồi */}
+              <div className="space-y-6 pt-4 border-t border-slate-100">
+                <div className="flex items-center justify-between">
+                  <label className="block text-xs font-mono font-bold text-slate-800 uppercase tracking-wider">
+                    4. Danh sách các bước lâm sàng ({steps.length} bước)
+                  </label>
+                  <span className="text-[11px] font-mono text-slate-400">
+                    Quy trình 3 bước chuẩn hóa của hệ sinh thái Giomer
+                  </span>
+                </div>
+
+                <div className="space-y-8">
+                  {steps.map((st, i) => (
+                    <div
+                      key={i}
+                      className="p-6 sm:p-7 rounded-2xl bg-slate-50 border border-slate-200 space-y-6 relative"
+                    >
+                      {/* Step Header Badge & Title */}
+                      <div className="flex items-center justify-between border-b border-slate-200/70 pb-3">
+                        <div className="flex items-center gap-3">
+                          <span className="w-8 h-8 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-heading font-extrabold text-sm shadow-sm">
+                            {st.stepNumber || i + 1}
+                          </span>
+                          <div>
+                            <span className="text-xs font-mono font-bold text-slate-500 uppercase">
+                              {st.badge || `Bước ${i + 1}`}
+                            </span>
+                            <h3 className="font-heading font-bold text-base text-slate-900">
+                              {st.title}
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Inputs: Badge & Main Title */}
+                      <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
+                        <div className="sm:col-span-3 space-y-1">
+                          <label className="block text-[11px] font-mono text-slate-600 font-bold uppercase">
+                            Huy hiệu bước
+                          </label>
+                          <input
+                            type="text"
+                            value={st.badge}
+                            onChange={(e) => handleUpdateStep(i, 'badge', e.target.value)}
+                            className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs font-mono font-bold text-sky-800"
+                            placeholder={`Bước ${i + 1}`}
+                          />
+                        </div>
+                        <div className="sm:col-span-9 space-y-1">
+                          <label className="block text-[11px] font-mono text-slate-600 font-bold uppercase">
+                            Tiêu đề sản phẩm & Bước
+                          </label>
+                          <input
+                            type="text"
+                            value={st.title}
+                            onChange={(e) => handleUpdateStep(i, 'title', e.target.value)}
+                            className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-900"
+                            placeholder="Tên sản phẩm & kỹ thuật bước này..."
+                          />
+                        </div>
+                      </div>
+
+                      {/* Subtitle */}
+                      <div className="space-y-1">
+                        <label className="block text-[11px] font-mono text-slate-600 font-bold uppercase">
                           Tiêu đề phụ (Subtitle)
                         </label>
                         <input
                           type="text"
                           value={st.subtitle}
-                          onChange={(e) => {
-                            const newSteps = [...steps];
-                            newSteps[i].subtitle = e.target.value;
-                            setSteps(newSteps);
-                          }}
+                          onChange={(e) => handleUpdateStep(i, 'subtitle', e.target.value)}
                           className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-[#00ADEF]"
+                          placeholder="Tiêu đề phụ diễn giải cơ chế..."
                         />
                       </div>
 
-                      <div>
-                        <div className="flex items-center justify-between mb-1">
-                          <label className="block text-[11px] font-mono text-slate-500 font-bold uppercase">
-                            Hình ảnh minh họa
+                      {/* Detailed Description with Formatting Bar & Live Preview */}
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <label className="block text-[11px] font-mono text-slate-600 font-bold uppercase">
+                            Mô tả chi tiết bước lâm sàng
                           </label>
-                          <label className="text-[10px] font-mono text-[#00ADEF] hover:underline cursor-pointer flex items-center gap-1 font-bold">
-                            {uploadingTarget === `step-${i}` ? (
-                              <>
-                                <RefreshCw className="w-2.5 h-2.5 animate-spin" />
-                                <span>Đang tải lên...</span>
-                              </>
-                            ) : (
-                              <>
-                                <Upload className="w-2.5 h-2.5" />
-                                <span>Tải ảnh từ máy</span>
-                              </>
-                            )}
-                            <input
-                              type="file"
-                              accept="image/*"
-                              disabled={uploadingTarget === `step-${i}`}
-                              className="hidden"
-                              onChange={(e) => {
-                                const file = e.target.files?.[0];
-                                if (file) {
-                                  handleUploadImageFile(file, `step-${i}`, (url) => {
-                                    const newSteps = [...steps];
-                                    newSteps[i].image = url;
-                                    setSteps(newSteps);
-                                  });
-                                }
-                              }}
-                            />
-                          </label>
+                          <div className="flex items-center gap-1.5 text-xs bg-white p-1 rounded-lg border border-slate-200">
+                            <span className="text-[10px] text-slate-500 px-1 font-mono">Định dạng nhanh:</span>
+                            <button
+                              type="button"
+                              onClick={() => applyStepDescFormat(i, 'strong')}
+                              title="In đậm chữ đang bôi đen"
+                              className="px-1.5 py-0.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold border border-slate-200 text-xs"
+                            >
+                              B
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => applyStepDescFormat(i, 'cyan')}
+                              title="Tô màu xanh Shofu"
+                              className="px-1.5 py-0.5 rounded bg-sky-50 hover:bg-sky-100 text-[#00ADEF] font-bold border border-sky-200 text-xs"
+                            >
+                              Xanh
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => applyStepDescFormat(i, 'red')}
+                              title="Tô màu đỏ Shofu"
+                              className="px-1.5 py-0.5 rounded bg-red-50 hover:bg-red-100 text-[#8C2828] font-bold border border-red-200 text-xs"
+                            >
+                              Đỏ
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => applyStepDescFormat(i, 'u')}
+                              title="Gạch chân chữ đang bôi đen"
+                              className="px-1.5 py-0.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold border border-slate-200 text-xs"
+                            >
+                              U
+                            </button>
+                          </div>
                         </div>
-                        <input
-                          type="text"
-                          value={st.image}
-                          onChange={(e) => {
-                            const newSteps = [...steps];
-                            newSteps[i].image = e.target.value;
-                            setSteps(newSteps);
-                          }}
-                          className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs font-mono text-slate-700"
+
+                        <textarea
+                          rows={3}
+                          value={st.description}
+                          onChange={(e) => handleUpdateStep(i, 'description', e.target.value)}
+                          className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-700 leading-relaxed font-body"
+                          placeholder="Mô tả kỹ thuật, thành phần và lợi ích lâm sàng..."
                         />
-                        <span className="text-[10px] text-slate-400 font-mono block mt-1">Gợi ý: {st.suggestedSize}</span>
+
+                        {/* Live Preview of Description */}
+                        <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-xs">
+                          <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block mb-1">
+                            Xem trước mô tả:
+                          </span>
+                          <div
+                            className="text-xs text-slate-700 leading-relaxed font-body"
+                            dangerouslySetInnerHTML={{ __html: st.description }}
+                          />
+                        </div>
+                      </div>
+
+                      {/* Product Image & Upload */}
+                      <div className="space-y-3 pt-3 border-t border-slate-200/70">
+                        <label className="block text-[11px] font-mono text-slate-700 font-bold uppercase tracking-wider">
+                          Hình ảnh minh họa sản phẩm bước {i + 1}
+                        </label>
+
+                        {st.suggestedSize && (
+                          <div className="p-3.5 rounded-xl bg-amber-50/70 border border-amber-200/80 text-amber-900 text-xs flex items-start gap-2.5">
+                            <Info className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                            <div>
+                              <strong className="font-bold">Kích thước gợi ý:</strong> {st.suggestedSize}
+                            </div>
+                          </div>
+                        )}
+
+                        <div className="flex flex-col sm:flex-row gap-5 items-center p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
+                          <div className="w-36 h-28 rounded-xl bg-slate-50 border border-slate-200 p-2 flex items-center justify-center overflow-hidden shrink-0 shadow-xs">
+                            <img
+                              src={st.image}
+                              alt={`Bước ${i + 1} preview`}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+
+                          <div className="flex-1 space-y-2.5 w-full">
+                            <div>
+                              <span className="text-[11px] text-slate-500 font-medium block mb-1">
+                                Đường dẫn file ảnh hiện tại:
+                              </span>
+                              <input
+                                type="text"
+                                value={st.image}
+                                onChange={(e) => handleUpdateStep(i, 'image', e.target.value)}
+                                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-mono text-slate-800 focus:outline-none focus:border-[#00ADEF]"
+                              />
+                            </div>
+
+                            <div className="flex flex-wrap items-center gap-3">
+                              <label
+                                className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#00ADEF] hover:bg-[#0095ce] text-white text-xs font-mono font-bold cursor-pointer transition-colors shadow-sm ${
+                                  uploadingTarget === `step-${i}` ? 'opacity-60 cursor-not-allowed' : ''
+                                }`}
+                              >
+                                {uploadingTarget === `step-${i}` ? (
+                                  <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                                ) : (
+                                  <Upload className="w-3.5 h-3.5" />
+                                )}
+                                <span>
+                                  {uploadingTarget === `step-${i}`
+                                    ? 'ĐANG TẢI LÊN GITHUB...'
+                                    : 'Tải ảnh từ máy tính'}
+                                </span>
+                                <input
+                                  type="file"
+                                  accept="image/*"
+                                  disabled={uploadingTarget === `step-${i}`}
+                                  className="hidden"
+                                  onChange={(e) => {
+                                    const file = e.target.files?.[0];
+                                    if (file) {
+                                      handleUploadImageFile(file, `step-${i}`, (url) =>
+                                        handleUpdateStep(i, 'image', url)
+                                      );
+                                    }
+                                  }}
+                                />
+                              </label>
+                              <span className="text-[11px] text-slate-400 font-mono">
+                                Tự động commit vào public/image/ trên GitHub
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Features: Các đặc tính kỹ thuật / ưu điểm lâm sàng dạng Box giống Section 1 Box USPs */}
+                      <div className="space-y-4 pt-3 border-t border-slate-200/70">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <label className="block text-xs font-mono font-bold text-slate-800 uppercase tracking-wider">
+                              Danh sách Box Đặc tính kỹ thuật & Ưu điểm ({st.features?.length || 0} box)
+                            </label>
+                            <span className="text-xs text-slate-500">
+                              Mỗi box gồm: Icon SVG, Tiêu đề đặc tính và Đoạn mô tả chi tiết
+                            </span>
+                          </div>
+
+                          <button
+                            type="button"
+                            onClick={() => handleAddStepFeature(i)}
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold transition-colors shadow-sm"
+                          >
+                            <Plus className="w-3.5 h-3.5" />
+                            <span>Thêm Box Đặc tính</span>
+                          </button>
+                        </div>
+
+                        <div className="space-y-4">
+                          {st.features?.map((feat, fIdx) => (
+                            <div
+                              key={fIdx}
+                              className="p-5 rounded-2xl bg-white border border-slate-200 space-y-3 relative group shadow-xs"
+                            >
+                              <div className="flex items-center justify-between gap-4 border-b border-slate-100 pb-3">
+                                <div className="flex items-center gap-2">
+                                  <span className="w-6 h-6 rounded-full bg-[#00ADEF] text-white flex items-center justify-center font-mono font-bold text-xs">
+                                    {fIdx + 1}
+                                  </span>
+                                  <span className="text-xs font-mono font-bold text-slate-700 uppercase">
+                                    Box Đặc tính {fIdx + 1}
+                                  </span>
+                                </div>
+
+                                {(st.features?.length || 0) > 1 && (
+                                  <button
+                                    type="button"
+                                    onClick={() => handleDeleteStepFeature(i, fIdx)}
+                                    className="text-red-500 hover:text-red-700 hover:bg-red-50 p-1.5 rounded-lg transition-colors"
+                                    title="Xóa box đặc tính này"
+                                  >
+                                    <Trash2 className="w-4 h-4" />
+                                  </button>
+                                )}
+                              </div>
+
+                              <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
+                                {/* Icon SVG */}
+                                <div className="sm:col-span-5 space-y-1.5">
+                                  <label className="block text-[11px] font-mono text-slate-500 font-bold uppercase">
+                                    Icon SVG
+                                  </label>
+
+                                  <div className="flex items-center gap-2">
+                                    {/* Preview box */}
+                                    <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center shrink-0 shadow-xs text-[#00ADEF] overflow-hidden">
+                                      {feat.iconName?.includes('.svg') || feat.iconName?.startsWith('/') || feat.iconName?.startsWith('http') ? (
+                                        <img src={feat.iconName} alt="Icon" className="w-5 h-5 object-contain" />
+                                      ) : feat.iconName === 'Shield' ? (
+                                        <Shield className="w-5 h-5" />
+                                      ) : feat.iconName === 'Target' ? (
+                                        <Target className="w-5 h-5" />
+                                      ) : feat.iconName === 'Layers' ? (
+                                        <Layers className="w-5 h-5" />
+                                      ) : feat.iconName === 'Sparkles' ? (
+                                        <Sparkles className="w-5 h-5" />
+                                      ) : feat.iconName === 'Award' ? (
+                                        <Award className="w-5 h-5" />
+                                      ) : feat.iconName === 'ShieldCheck' ? (
+                                        <ShieldCheck className="w-5 h-5" />
+                                      ) : (
+                                        <Zap className="w-5 h-5" />
+                                      )}
+                                    </div>
+
+                                    {/* Select default icon or show custom */}
+                                    <div className="flex-1 min-w-0">
+                                      <select
+                                        value={feat.iconName?.includes('.svg') || feat.iconName?.startsWith('/') ? 'CUSTOM_SVG' : (feat.iconName || (i === 0 ? 'Zap' : i === 1 ? 'Shield' : 'Target'))}
+                                        onChange={(e) => {
+                                          if (e.target.value !== 'CUSTOM_SVG') {
+                                            handleUpdateStepFeature(i, fIdx, 'iconName', e.target.value);
+                                          }
+                                        }}
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-2.5 py-2 text-xs text-slate-800 font-medium truncate"
+                                      >
+                                        <option value="Zap">Zap (Tia chớp)</option>
+                                        <option value="Shield">Shield (Khiên bảo vệ)</option>
+                                        <option value="Target">Target (Hồng tâm / Độ chính xác)</option>
+                                        <option value="ShieldCheck">ShieldCheck (Khiên chứng nhận)</option>
+                                        <option value="Layers">Layers (Nhiều lớp)</option>
+                                        <option value="Sparkles">Sparkles (Lấp lánh / Thẩm mỹ)</option>
+                                        <option value="Award">Award (Giải thưởng / Chứng nhận)</option>
+                                        {(feat.iconName?.includes('.svg') || feat.iconName?.startsWith('/')) && (
+                                          <option value="CUSTOM_SVG">SVG đã tải lên (Tùy chỉnh)</option>
+                                        )}
+                                      </select>
+                                    </div>
+                                  </div>
+
+                                  {/* Upload SVG button */}
+                                  <div className="flex items-center justify-between gap-2 pt-0.5">
+                                    <label className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-mono font-semibold cursor-pointer border border-slate-200 transition-colors ${uploadingTarget === `step-${i}-feat-${fIdx}` ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                                      {uploadingTarget === `step-${i}-feat-${fIdx}` ? (
+                                        <RefreshCw className="w-3 h-3 animate-spin text-sky-600" />
+                                      ) : (
+                                        <Upload className="w-3 h-3 text-slate-600" />
+                                      )}
+                                      <span>{uploadingTarget === `step-${i}-feat-${fIdx}` ? 'Đang tải...' : 'Tải lên SVG'}</span>
+                                      <input
+                                        type="file"
+                                        accept=".svg,image/svg+xml"
+                                        disabled={uploadingTarget === `step-${i}-feat-${fIdx}`}
+                                        className="hidden"
+                                        onChange={(e) => {
+                                          const file = e.target.files?.[0];
+                                          if (file) {
+                                            handleUploadStepFeatureSvg(file, i, fIdx);
+                                          }
+                                        }}
+                                      />
+                                    </label>
+
+                                    {(feat.iconName?.includes('.svg') || feat.iconName?.startsWith('/')) && (
+                                      <button
+                                        type="button"
+                                        onClick={() => handleUpdateStepFeature(i, fIdx, 'iconName', i === 0 ? 'Zap' : i === 1 ? 'Shield' : 'Target')}
+                                        className="text-[10px] text-slate-400 hover:text-slate-600 underline cursor-pointer"
+                                      >
+                                        Về mặc định
+                                      </button>
+                                    )}
+                                  </div>
+                                </div>
+
+                                {/* Title */}
+                                <div className="sm:col-span-7 space-y-1">
+                                  <label className="block text-[11px] font-mono text-slate-500 font-bold uppercase">
+                                    Tiêu đề đặc tính
+                                  </label>
+                                  <input
+                                    type="text"
+                                    value={feat.title}
+                                    onChange={(e) =>
+                                      handleUpdateStepFeature(i, fIdx, 'title', e.target.value)
+                                    }
+                                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-900"
+                                    placeholder="Tiêu đề đặc tính kỹ thuật..."
+                                  />
+                                </div>
+                              </div>
+
+                              {/* Description */}
+                              <div className="space-y-1">
+                                <label className="block text-[11px] font-mono text-slate-500 font-bold uppercase">
+                                  Đoạn mô tả chi tiết
+                                </label>
+                                <textarea
+                                  rows={2}
+                                  value={feat.description}
+                                  onChange={(e) =>
+                                    handleUpdateStepFeature(i, fIdx, 'description', e.target.value)
+                                  }
+                                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-700 leading-relaxed font-body"
+                                  placeholder="Diễn giải chi tiết ưu điểm lâm sàng..."
+                                />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
+                  ))}
+                </div>
+              </div>
 
-                    <div>
-                      <label className="block text-[11px] font-mono text-slate-500 font-bold uppercase mb-1">
-                        Mô tả chi tiết bước này
-                      </label>
-                      <textarea
-                        rows={2}
-                        value={st.description}
-                        onChange={(e) => {
-                          const newSteps = [...steps];
-                          newSteps[i].description = e.target.value;
-                          setSteps(newSteps);
-                        }}
-                        className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-600"
-                      />
-                    </div>
+              {/* 5. Section 3 CTA Button */}
+              <div className="space-y-2 pt-4 border-t border-slate-100">
+                <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
+                  5. Text nút CTA Button Section 3
+                </label>
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                  <input
+                    type="text"
+                    value={stepsCtaText}
+                    onChange={(e) => setStepsCtaText(e.target.value)}
+                    className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 font-mono font-bold"
+                  />
+                  <div className="px-6 py-3.5 rounded-full bg-slate-900 text-white text-xs font-mono font-bold flex items-center justify-center gap-2 shadow-sm whitespace-nowrap">
+                    <span>{stepsCtaText}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-white/80" />
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           )}

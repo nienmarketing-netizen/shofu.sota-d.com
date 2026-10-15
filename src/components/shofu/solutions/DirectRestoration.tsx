@@ -34,6 +34,20 @@ const ImagePlaceholder = ({ text, className = "" }: { text: string, className?: 
   </div>
 );
 
+const renderStepFeatureIcon = (iconName?: string, defaultIcon = 'Zap') => {
+  const icon = iconName || defaultIcon;
+  if (icon.includes('.svg') || icon.startsWith('/') || icon.startsWith('http')) {
+    return <img src={icon} alt="Icon" className="w-5 h-5 object-contain" />;
+  }
+  if (icon === 'Shield') return <Shield className="w-5 h-5 text-[#00ADEF]" />;
+  if (icon === 'Target') return <Target className="w-5 h-5 text-[#00ADEF]" />;
+  if (icon === 'Layers') return <Layers className="w-5 h-5 text-[#00ADEF]" />;
+  if (icon === 'Sparkles') return <Sparkles className="w-5 h-5 text-[#00ADEF]" />;
+  if (icon === 'Award') return <Award className="w-5 h-5 text-[#00ADEF]" />;
+  if (icon === 'ShieldCheck') return <ShieldCheck className="w-5 h-5 text-[#00ADEF]" />;
+  return <Zap className="w-5 h-5 text-[#00ADEF]" />;
+};
+
 const AccordionItem: React.FC<{ question: string, answer: React.ReactNode, isOpen: boolean, onClick: () => void }> = ({ question, answer, isOpen, onClick }) => {
   return (
     <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white mb-4 transition-all duration-300">
@@ -490,15 +504,21 @@ const faqs = [
         
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="font-heading font-extrabold text-2xl min-[400px]:text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">
-              <span className="block sm:inline">Hệ sinh thái Giomer<span className="hidden sm:inline">: </span></span>
-              <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">
-                Quy trình phục hồi trực tiếp với 3 bước tối giản
-              </span>
-            </h2>
-            <p className="font-body text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-              Thiết lập quy trình phục hồi trực tiếp <strong className="font-bold text-slate-900 bg-sky-100/50 px-1.5 rounded">giảm thiểu độ nhạy cảm kỹ thuật khi thao tác</strong>, giải phóng hoàn toàn <strong className="font-bold text-slate-900">áp lực kỹ thuật</strong> cho Bác sĩ.
-            </p>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-[#007AA8] font-mono text-xs font-bold mb-4 tracking-wide uppercase">
+              {content.stepsSection?.badge || 'Quy trình lâm sàng chuẩn hóa'}
+            </div>
+            <h2 
+              className="font-heading font-extrabold text-2xl min-[400px]:text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight"
+              dangerouslySetInnerHTML={{
+                __html: content.stepsSection?.headline || 'Hệ sinh thái Giomer: <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]">Quy trình phục hồi trực tiếp với 3 bước tối giản</span>'
+              }}
+            />
+            <p 
+              className="font-body text-base sm:text-lg text-slate-600 max-w-2xl mx-auto"
+              dangerouslySetInnerHTML={{
+                __html: content.stepsSection?.description || 'Thiết lập quy trình phục hồi trực tiếp <strong class="font-bold text-slate-900 bg-sky-100/50 px-1.5 rounded">giảm thiểu độ nhạy cảm kỹ thuật khi thao tác</strong>, giải phóng hoàn toàn <strong class="font-bold text-slate-900">áp lực kỹ thuật</strong> cho Bác sĩ.'
+              }}
+            />
           </div>
 
           <div className="relative space-y-16 sm:space-y-20 lg:space-y-28 z-0 -mx-4 sm:-mx-6 lg:mx-0">
@@ -541,24 +561,29 @@ const faqs = [
                   }}
                 />
                 <div className="space-y-4 order-6 lg:order-none">
-                  <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
-                    <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
-                      <Zap className="w-5 h-5 text-[#00ADEF]" />
+                  {(content.steps?.[0]?.features && content.steps[0].features.length > 0
+                    ? content.steps[0].features
+                    : [
+                        {
+                          title: "Độ dày màng dán cực mỏng chỉ ~5μm (Không có chất độn)",
+                          description: "Dễ dàng dàn mỏng đồng đều dưới lực thổi nhẹ, kiểm soát triệt để hiện tượng đọng keo ở góc tiếp chuyển và tối ưu độ khít sát."
+                        },
+                        {
+                          title: 'Quy trình "True Universal" tự soi mòn (Self-Etch)',
+                          description: 'Chỉ 1 lớp duy nhất dán trực tiếp lên mọi bề mặt và mọi vật liệu phục hình mà không cần mua thêm primer rời. Quy trình chớp nhoáng: Thoa keo ➔ Thổi khô ➔ Chiếu đèn 5 giây.'
+                        }
+                      ]
+                  ).map((f: any, fIdx: number) => (
+                    <div key={fIdx} className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
+                      <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
+                        {renderStepFeatureIcon(f.iconName, 'Zap')}
+                      </div>
+                      <div>
+                        <h5 className="font-bold text-slate-900 font-heading">{f.title}</h5>
+                        <p className="text-sm text-slate-600 font-body">{f.description}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h5 className="font-bold text-slate-900 font-heading">Độ dày màng dán cực mỏng chỉ ~5μm (Không có chất độn)</h5>
-                      <p className="text-sm text-slate-600 font-body">Dễ dàng dàn mỏng đồng đều dưới lực thổi nhẹ, kiểm soát triệt để hiện tượng đọng keo ở góc tiếp chuyển và tối ưu độ khít sát.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
-                    <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
-                      <Zap className="w-5 h-5 text-[#00ADEF]" />
-                    </div>
-                    <div>
-                      <h5 className="font-bold text-slate-900 font-heading">Quy trình "True Universal" tự soi mòn (Self-Etch)</h5>
-                      <p className="text-sm text-slate-600 font-body">Chỉ 1 lớp duy nhất dán trực tiếp lên mọi bề mặt và mọi vật liệu phục hình mà không cần mua thêm primer rời. Quy trình chớp nhoáng: Thoa keo ➔ Thổi khô ➔ Chiếu đèn 5 giây.</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -599,24 +624,29 @@ const faqs = [
                   }}
                 />
                 <div className="space-y-4 order-6 lg:order-none">
-                  <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
-                    <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
-                      <Shield className="w-5 h-5 text-[#00ADEF]" />
+                  {(content.steps?.[1]?.features && content.steps[1].features.length > 0
+                    ? content.steps[1].features
+                    : [
+                        {
+                          title: "Chịu lực uốn 117 MPa & lực nhai 364 MPa",
+                          description: "Chịu lực cực đại ở vùng răng sau, chống mẻ vỡ vượt trội."
+                        },
+                        {
+                          title: 'Hiệu ứng quang học "Tắc kè hoa" sinh động',
+                          description: "Tự động hòa quyện sắc độ với men ngà xung quanh, dễ dàng đánh bóng đạt độ bóng sáng tự nhiên chỉ trong vài giây."
+                        }
+                      ]
+                  ).map((f: any, fIdx: number) => (
+                    <div key={fIdx} className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
+                      <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
+                        {renderStepFeatureIcon(f.iconName, 'Shield')}
+                      </div>
+                      <div>
+                        <h5 className="font-bold text-slate-900 font-heading">{f.title}</h5>
+                        <p className="text-sm text-slate-600 font-body">{f.description}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h5 className="font-bold text-slate-900 font-heading">Chịu lực uốn 117 MPa & lực nhai 364 MPa</h5>
-                      <p className="text-sm text-slate-600 font-body">Chịu lực cực đại ở vùng răng sau, chống mẻ vỡ vượt trội.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
-                    <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
-                      <Shield className="w-5 h-5 text-[#00ADEF]" />
-                    </div>
-                    <div>
-                      <h5 className="font-bold text-slate-900 font-heading">Hiệu ứng quang học "Tắc kè hoa" sinh động</h5>
-                      <p className="text-sm text-slate-600 font-body">Tự động hòa quyện sắc độ với men ngà xung quanh, dễ dàng đánh bóng đạt độ bóng sáng tự nhiên chỉ trong vài giây.</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -657,24 +687,29 @@ const faqs = [
                   }}
                 />
                 <div className="space-y-4 order-6 lg:order-none">
-                  <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
-                    <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
-                      <Target className="w-5 h-5 text-[#00ADEF]" />
+                  {(content.steps?.[2]?.features && content.steps[2].features.length > 0
+                    ? content.steps[2].features
+                    : [
+                        {
+                          title: "Độ bền nén cao lên đến 400 MPa",
+                          description: "Độ bền cơ học tương đương hoặc vượt trội so với composite đặc truyền thống, đáp ứng hoàn hảo cho phục hồi chịu lực trực tiếp ở vùng mặt nhai và bờ bên."
+                        },
+                        {
+                          title: "Kiểm soát bám dính đầu tip và dụng cụ tối ưu",
+                          description: "Không kéo sợi, không dính dụng cụ điêu khắc. Dễ dàng bơm trực tiếp và kiểm soát đường viền phục hình một cách mượt mà, chính xác mà không cần dung dịch bôi trơn hỗ trợ."
+                        }
+                      ]
+                  ).map((f: any, fIdx: number) => (
+                    <div key={fIdx} className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
+                      <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
+                        {renderStepFeatureIcon(f.iconName, 'Target')}
+                      </div>
+                      <div>
+                        <h5 className="font-bold text-slate-900 font-heading">{f.title}</h5>
+                        <p className="text-sm text-slate-600 font-body">{f.description}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h5 className="font-bold text-slate-900 font-heading">Độ bền nén cao lên đến 400 MPa</h5>
-                      <p className="text-sm text-slate-600 font-body">Độ bền cơ học tương đương hoặc vượt trội so với composite đặc truyền thống, đáp ứng hoàn hảo cho phục hồi chịu lực trực tiếp ở vùng mặt nhai và bờ bên.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
-                    <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
-                      <Target className="w-5 h-5 text-[#00ADEF]" />
-                    </div>
-                    <div>
-                      <h5 className="font-bold text-slate-900 font-heading">Kiểm soát bám dính đầu tip và dụng cụ tối ưu</h5>
-                      <p className="text-sm text-slate-600 font-body">Không kéo sợi, không dính dụng cụ điêu khắc. Dễ dàng bơm trực tiếp và kiểm soát đường viền phục hình một cách mượt mà, chính xác mà không cần dung dịch bôi trơn hỗ trợ.</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -685,7 +720,7 @@ const faqs = [
                onClick={() => openCampaignModal("Nhận phác đồ 'Kiểm soát co ngót xoang II' cho phòng khám")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-slate-900 text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-slate-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
-              <span className="truncate">TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP</span>
+              <span className="truncate">{content.stepsSection?.ctaText || "TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP"}</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </CtaButton>
           </div>
