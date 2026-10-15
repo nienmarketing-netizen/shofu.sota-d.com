@@ -199,6 +199,61 @@
       ]
     }
   ],
+  "scientificEvidence": {
+    "badge": "Bằng chứng khoa học",
+    "headline": "Bằng chứng <span class=\"text-[#00ADEF]\">khoa học</span>",
+    "description": "<strong class=\"font-bold text-white\">Shofu</strong> mang đến những bằng chứng thép từ các <strong class=\"font-bold text-[#00ADEF] bg-slate-800/80 px-1.5 rounded\">nghiên cứu lâm sàng độc lập uy tín nhất thế giới</strong>, <strong class=\"font-bold text-white underline decoration-sky-500/50 decoration-2 underline-offset-4\">bảo chứng tuyệt đối cho chất lượng phục hình</strong>.",
+    "ctaText": "TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP",
+    "adhesiveTest": {
+      "badge": "3. Thử nghiệm kỹ thuật keo dán",
+      "title": "Độ Bền Dán BeautiBond Xtreme",
+      "subtitle": "Giải quyết triệt để \"điểm đau\" ê buốt và thoái hóa màng keo.",
+      "items": [
+        {
+          "id": "adh-1",
+          "title": "Độ chuyển đổi Monomer đạt 92% – 97%:",
+          "description": "Trùng hợp gần tuyệt đối kháng thủy phân dài lâu."
+        },
+        {
+          "id": "adh-2",
+          "title": "Lực dán trượt 30 – 35 MPa:",
+          "description": "Giữ vững ngay cả sau nhồi nhiệt 5.000 chu kỳ."
+        },
+        {
+          "id": "adh-3",
+          "title": "Ổn định trên ngà bất thường:",
+          "description": "Hiệu quả dán cao nhất trên cả ngà lành và ngà suy thoái."
+        },
+        {
+          "id": "adh-4",
+          "title": "Màng dán siêu mỏng ~5µm:",
+          "description": "Lan chảy hoàn hảo, ngăn ngừa vi kẽ hở."
+        },
+        {
+          "id": "adh-5",
+          "title": "HEMA-Free kỵ nước & Acetone:",
+          "description": "Tự thẩm thấu sâu, ngăn ngừa ê buốt."
+        }
+      ]
+    },
+    "compositeMechanics": {
+      "badge": "4. Bằng chứng cơ học composite",
+      "title": "Beautifil II LS & Injectable X",
+      "subtitle": "Giải quyết nỗi lo co ngót, nứt vi kẽ và bọt khí xoang II.",
+      "items": [
+        {
+          "id": "comp-1",
+          "title": "Beautifil II LS",
+          "description": "Tỷ lệ hạt độn 83 wt%, độ co ngót thể tích cực thấp chỉ <strong class=\"text-white\">0.85% Vol</strong>, ứng suất <strong class=\"text-white\">1.37 MPa</strong>. Độ bền nén 364 MPa, độ bền uốn 117 MPa chịu lực nhai lớn mà không mẻ vỡ."
+        },
+        {
+          "id": "comp-2",
+          "title": "Beautifil Injectable X",
+          "description": "Lưu biến thông minh (Thixotropic) thích ứng tối ưu với đáy xoang và các ngóc ngách hẹp mà không đọng bọt khí. Độ bền nén vượt trội lên đến <strong class=\"text-white\">400 MPa</strong> cho phép phục hồi/tạo hình mặt nhai chịu lực trực tiếp."
+        }
+      ]
+    }
+  },
   "offer": {
     "badge": "Đặc quyền đồng hành không thể từ chối",
     "headline": "Gói giải pháp đồng bộ <br class=\"hidden sm:block\" /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200\">combo \"Phục hồi sinh học MiCD - Chặn đứng ê buốt\"</span>",
