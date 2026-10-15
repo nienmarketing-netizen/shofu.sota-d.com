@@ -1130,7 +1130,7 @@ export default function DirectRestorationEditor() {
                 type="password"
                 value={authPassword}
                 onChange={(e) => setAuthPassword(e.target.value)}
-                placeholder="Nhập mật khẩu (shofu2026)..."
+                placeholder="Nhập mật khẩu..."
                 className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#8C2828] focus:bg-white transition-colors"
                 autoFocus
               />
