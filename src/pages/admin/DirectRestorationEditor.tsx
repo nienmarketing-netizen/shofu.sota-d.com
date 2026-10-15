@@ -224,6 +224,45 @@ export default function DirectRestorationEditor() {
     reader.readAsDataURL(file);
   };
 
+  // Chuẩn hóa kích thước SVG chuẩn 24x24 & viewBox trước khi upload
+  const normalizeSvgFile = async (file: File): Promise<File> => {
+    try {
+      const text = await file.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'image/svg+xml');
+      const svgEl = doc.querySelector('svg');
+      if (!svgEl) return file;
+
+      // Chuẩn hóa viewBox nếu file gốc thiếu
+      if (!svgEl.getAttribute('viewBox')) {
+        const width = parseFloat(svgEl.getAttribute('width') || '24') || 24;
+        const height = parseFloat(svgEl.getAttribute('height') || '24') || 24;
+        svgEl.setAttribute('viewBox', `0 0 ${width} ${height}`);
+      }
+
+      // Đặt kích thước chuẩn 24x24 để vừa vặn hoàn hảo trong icon container (16px - 24px)
+      svgEl.setAttribute('width', '24');
+      svgEl.setAttribute('height', '24');
+
+      const serializer = new XMLSerializer();
+      const normalizedString = serializer.serializeToString(svgEl);
+      return new File([normalizedString], file.name.endsWith('.svg') ? file.name : `${file.name}.svg`, {
+        type: 'image/svg+xml'
+      });
+    } catch (err) {
+      console.warn('SVG normalize fallback:', err);
+      return file;
+    }
+  };
+
+  const handleUploadUspSvg = async (file: File, uspId: string) => {
+    if (!file) return;
+    const normalizedFile = await normalizeSvgFile(file);
+    handleUploadImageFile(normalizedFile, `usp-icon-${uspId}`, (url) => {
+      handleUpdateUsp(uspId, 'iconName', url);
+    });
+  };
+
   // --- SECTION 1: HERO STATE ---
   const [heroBadge, setHeroBadge] = useState('Giải pháp phục hồi trực tiếp MiCD');
   const [heroHeadline, setHeroHeadline] = useState(
@@ -1162,29 +1201,93 @@ export default function DirectRestorationEditor() {
                         )}
                       </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-                        {/* 4.1 Icon Selector */}
-                        <div className="sm:col-span-1 space-y-1">
+                      <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
+                        {/* Icon SVG */}
+                        <div className="sm:col-span-5 space-y-1.5">
                           <label className="block text-[11px] font-mono text-slate-500 font-bold uppercase">
-                            4.1 Icon SVG
+                            Icon SVG
                           </label>
-                          <select
-                            value={usp.iconName}
-                            onChange={(e) => handleUpdateUsp(usp.id, 'iconName', e.target.value)}
-                            className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-800 font-medium"
-                          >
-                            <option value="ShieldCheck">ShieldCheck (Khiên)</option>
-                            <option value="Layers">Layers (Lớp)</option>
-                            <option value="Sparkles">Sparkles (Lấp lánh)</option>
-                            <option value="Zap">Zap (Tia chớp)</option>
-                            <option value="Award">Award (Chứng nhận)</option>
-                          </select>
+
+                          <div className="flex items-center gap-2">
+                            {/* Preview box */}
+                            <div className="w-9 h-9 rounded-xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-xs text-sky-600 overflow-hidden">
+                              {usp.iconName?.includes('.svg') || usp.iconName?.startsWith('/') || usp.iconName?.startsWith('http') ? (
+                                <img src={usp.iconName} alt="Icon" className="w-5 h-5 object-contain" />
+                              ) : usp.iconName === 'Layers' ? (
+                                <Layers className="w-5 h-5" />
+                              ) : usp.iconName === 'Sparkles' ? (
+                                <Sparkles className="w-5 h-5" />
+                              ) : usp.iconName === 'Zap' ? (
+                                <Zap className="w-5 h-5" />
+                              ) : usp.iconName === 'Award' ? (
+                                <Award className="w-5 h-5" />
+                              ) : (
+                                <ShieldCheck className="w-5 h-5" />
+                              )}
+                            </div>
+
+                            {/* Select default icon or show custom */}
+                            <div className="flex-1 min-w-0">
+                              <select
+                                value={usp.iconName?.includes('.svg') || usp.iconName?.startsWith('/') ? 'CUSTOM_SVG' : usp.iconName}
+                                onChange={(e) => {
+                                  if (e.target.value !== 'CUSTOM_SVG') {
+                                    handleUpdateUsp(usp.id, 'iconName', e.target.value);
+                                  }
+                                }}
+                                className="w-full bg-white border border-slate-200 rounded-xl px-2.5 py-2 text-xs text-slate-800 font-medium truncate"
+                              >
+                                <option value="ShieldCheck">ShieldCheck (Khiên)</option>
+                                <option value="Layers">Layers (Lớp)</option>
+                                <option value="Sparkles">Sparkles (Lấp lánh)</option>
+                                <option value="Zap">Zap (Tia chớp)</option>
+                                <option value="Award">Award (Chứng nhận)</option>
+                                {(usp.iconName?.includes('.svg') || usp.iconName?.startsWith('/')) && (
+                                  <option value="CUSTOM_SVG">SVG đã tải lên (Tùy chỉnh)</option>
+                                )}
+                              </select>
+                            </div>
+                          </div>
+
+                          {/* Upload SVG button */}
+                          <div className="flex items-center justify-between gap-2 pt-0.5">
+                            <label className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-mono font-semibold cursor-pointer border border-slate-200 transition-colors ${uploadingTarget === `usp-icon-${usp.id}` ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                              {uploadingTarget === `usp-icon-${usp.id}` ? (
+                                <RefreshCw className="w-3 h-3 animate-spin text-sky-600" />
+                              ) : (
+                                <Upload className="w-3 h-3 text-slate-600" />
+                              )}
+                              <span>{uploadingTarget === `usp-icon-${usp.id}` ? 'Đang tải...' : 'Tải lên SVG'}</span>
+                              <input
+                                type="file"
+                                accept=".svg,image/svg+xml"
+                                disabled={uploadingTarget === `usp-icon-${usp.id}`}
+                                className="hidden"
+                                onChange={(e) => {
+                                  const file = e.target.files?.[0];
+                                  if (file) {
+                                    handleUploadUspSvg(file, usp.id);
+                                  }
+                                }}
+                              />
+                            </label>
+
+                            {(usp.iconName?.includes('.svg') || usp.iconName?.startsWith('/')) && (
+                              <button
+                                type="button"
+                                onClick={() => handleUpdateUsp(usp.id, 'iconName', 'ShieldCheck')}
+                                className="text-[10px] text-slate-400 hover:text-slate-600 underline cursor-pointer"
+                              >
+                                Về mặc định
+                              </button>
+                            )}
+                          </div>
                         </div>
 
-                        {/* 4.2 Title */}
-                        <div className="sm:col-span-3 space-y-1">
+                        {/* Title */}
+                        <div className="sm:col-span-7 space-y-1">
                           <label className="block text-[11px] font-mono text-slate-500 font-bold uppercase">
-                            4.2 Tiêu đề USP
+                            Tiêu đề USP
                           </label>
                           <input
                             type="text"
@@ -1195,10 +1298,10 @@ export default function DirectRestorationEditor() {
                         </div>
                       </div>
 
-                      {/* 4.3 Description */}
+                      {/* Description */}
                       <div className="space-y-1">
                         <label className="block text-[11px] font-mono text-slate-500 font-bold uppercase">
-                          4.3 Đoạn mô tả chi tiết
+                          Đoạn mô tả chi tiết
                         </label>
                         <textarea
                           rows={2}
