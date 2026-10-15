@@ -488,8 +488,31 @@ export default function DirectRestorationEditor() {
   // --- SECTION 5: ƯU ĐÃI & CORE OFFER ---
   const [offerBadge, setOfferBadge] = useState('Đặc quyền đồng hành không thể từ chối');
   const [offerHeadline, setOfferHeadline] = useState('Gói giải pháp đồng bộ combo "Phục hồi sinh học MiCD - Chặn đứng ê buốt"');
+  const [offerCtaText, setOfferCtaText] = useState('ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY');
+  const [offerCoreTitle, setOfferCoreTitle] = useState('Bộ 3 sản phẩm cốt lõi');
   const [coreProductImage, setCoreProductImage] = useState('/image/phuc-hoi-truc-tiep.webp');
+  const [offerCoreProductsList, setOfferCoreProductsList] = useState<string[]>([
+    '01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml)',
+    '01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g)',
+    '01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g)'
+  ]);
+  const [offerGiftsTitle, setOfferGiftsTitle] = useState('Bộ 3 quà tặng tài trợ 100%');
   const [giftImage, setGiftImage] = useState('/image/qua-tang-doc-quyen-shofu-giai-phap-phuc-hoi-truc-tiep.webp');
+  const [offerGiftsList, setOfferGiftsList] = useState<string[]>([
+    'Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA',
+    'Tài liệu: Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II"',
+    'Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày'
+  ]);
+  const [offerOriginalPriceLabel, setOfferOriginalPriceLabel] = useState('Tổng giá trị');
+  const [offerOriginalPrice, setOfferOriginalPrice] = useState('7.250.000đ');
+  const [offerPriceLabel, setOfferPriceLabel] = useState('Mức đầu tư trải nghiệm');
+  const [offerPrice, setOfferPrice] = useState('3.250.000đ');
+  const [offerGuaranteeTitle, setOfferGuaranteeTitle] = useState('Bảo chứng đồng hành 3 lớp (Rủi ro bằng 0)');
+  const [offerGuaranteesList, setOfferGuaranteesList] = useState<string[]>([
+    'Bảo chứng 1 (Dứt ê buốt): Hỗ trợ 1:1 trong 5 ca phục hồi sống đầu tiên. Nếu bệnh nhân ê buốt, chuyên gia call gỡ lỗi. Nếu không hợp tay, thu hồi và hoàn tiền 100%.',
+    'Bảo chứng 2 (Bảo hiểm thói quen): Trong 30 ngày, nếu thao tác không hợp, hỗ trợ thu hồi sản phẩm chưa dùng và quy đổi vật tư khác giá trị tương đương.',
+    'Bảo chứng 3 (Bảo hành tồn kho 90 ngày): Đổi mới 1-1 ngay lập tức nếu lỗi đông cứng khi mở nắp trong vòng 90 ngày.'
+  ]);
 
   // --- SECTION 6: FAQS ---
   const [faqsList, setFaqsList] = useState<FaqItem[]>([
@@ -716,8 +739,25 @@ export default function DirectRestorationEditor() {
     if (d.offer) {
       if (d.offer.badge) setOfferBadge(d.offer.badge);
       if (d.offer.headline) setOfferHeadline(d.offer.headline);
+      if (d.offer.coreTitle) setOfferCoreTitle(d.offer.coreTitle);
       if (d.offer.coreProductsImage) setCoreProductImage(d.offer.coreProductsImage);
+      if (Array.isArray(d.offer.coreProductsList) && d.offer.coreProductsList.length > 0) {
+        setOfferCoreProductsList(d.offer.coreProductsList);
+      }
+      if (d.offer.giftsTitle) setOfferGiftsTitle(d.offer.giftsTitle);
       if (d.offer.giftImage) setGiftImage(d.offer.giftImage);
+      if (Array.isArray(d.offer.giftsList) && d.offer.giftsList.length > 0) {
+        setOfferGiftsList(d.offer.giftsList);
+      }
+      if (d.offer.originalPriceLabel) setOfferOriginalPriceLabel(d.offer.originalPriceLabel);
+      if (d.offer.originalPrice) setOfferOriginalPrice(d.offer.originalPrice);
+      if (d.offer.offerPriceLabel) setOfferPriceLabel(d.offer.offerPriceLabel);
+      if (d.offer.offerPrice) setOfferPrice(d.offer.offerPrice);
+      if (d.offer.guaranteeTitle) setOfferGuaranteeTitle(d.offer.guaranteeTitle);
+      if (Array.isArray(d.offer.guarantees) && d.offer.guarantees.length > 0) {
+        setOfferGuaranteesList(d.offer.guarantees);
+      }
+      if (d.offer.ctaText) setOfferCtaText(d.offer.ctaText);
     }
     if (Array.isArray(d.faqs) && d.faqs.length > 0) {
       setFaqsList(d.faqs);
@@ -909,6 +949,43 @@ export default function DirectRestorationEditor() {
     setTestimonialsList(
       testimonialsList.map((item) => (item.id === id ? { ...item, [field]: val } : item))
     );
+  };
+
+  // --- SECTION 5 HANDLERS ---
+  const handleAddCoreProduct = () => {
+    setOfferCoreProductsList([...offerCoreProductsList, 'Sản phẩm mới kèm dung tích...']);
+  };
+  const handleDeleteCoreProduct = (index: number) => {
+    setOfferCoreProductsList(offerCoreProductsList.filter((_, i) => i !== index));
+  };
+  const handleUpdateCoreProduct = (index: number, val: string) => {
+    const updated = [...offerCoreProductsList];
+    updated[index] = val;
+    setOfferCoreProductsList(updated);
+  };
+
+  const handleAddGift = () => {
+    setOfferGiftsList([...offerGiftsList, 'Quà tặng: Mô tả phần quà tặng mới...']);
+  };
+  const handleDeleteGift = (index: number) => {
+    setOfferGiftsList(offerGiftsList.filter((_, i) => i !== index));
+  };
+  const handleUpdateGift = (index: number, val: string) => {
+    const updated = [...offerGiftsList];
+    updated[index] = val;
+    setOfferGiftsList(updated);
+  };
+
+  const handleAddGuarantee = () => {
+    setOfferGuaranteesList([...offerGuaranteesList, 'Bảo chứng mới: Chi tiết cam kết bảo chứng lâm sàng...']);
+  };
+  const handleDeleteGuarantee = (index: number) => {
+    setOfferGuaranteesList(offerGuaranteesList.filter((_, i) => i !== index));
+  };
+  const handleUpdateGuarantee = (index: number, val: string) => {
+    const updated = [...offerGuaranteesList];
+    updated[index] = val;
+    setOfferGuaranteesList(updated);
   };
 
   // --- SECTION 2 HANDLERS ---
@@ -1189,18 +1266,19 @@ export default function DirectRestorationEditor() {
       offer: {
         badge: offerBadge,
         headline: offerHeadline,
+        coreTitle: offerCoreTitle,
         coreProductsImage: coreProductImage,
+        coreProductsList: offerCoreProductsList,
+        giftsTitle: offerGiftsTitle,
         giftImage: giftImage,
-        coreProductsList: [
-          '01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml)',
-          '01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g)',
-          '01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g)'
-        ],
-        giftsList: [
-          'Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA',
-          'Tài liệu: Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II"',
-          'Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày'
-        ]
+        giftsList: offerGiftsList,
+        originalPriceLabel: offerOriginalPriceLabel,
+        originalPrice: offerOriginalPrice,
+        offerPriceLabel: offerPriceLabel,
+        offerPrice: offerPrice,
+        guaranteeTitle: offerGuaranteeTitle,
+        guarantees: offerGuaranteesList,
+        ctaText: offerCtaText
       },
       faqs: faqsList,
       testimonials: {
@@ -1772,10 +1850,38 @@ export default function DirectRestorationEditor() {
               setOfferBadge={setOfferBadge}
               offerHeadline={offerHeadline}
               setOfferHeadline={setOfferHeadline}
+              offerCtaText={offerCtaText}
+              setOfferCtaText={setOfferCtaText}
+              coreTitle={offerCoreTitle}
+              setCoreTitle={setOfferCoreTitle}
               coreProductImage={coreProductImage}
               setCoreProductImage={setCoreProductImage}
+              coreProductsList={offerCoreProductsList}
+              handleAddCoreProduct={handleAddCoreProduct}
+              handleDeleteCoreProduct={handleDeleteCoreProduct}
+              handleUpdateCoreProduct={handleUpdateCoreProduct}
+              giftsTitle={offerGiftsTitle}
+              setGiftsTitle={setOfferGiftsTitle}
               giftImage={giftImage}
               setGiftImage={setGiftImage}
+              giftsList={offerGiftsList}
+              handleAddGift={handleAddGift}
+              handleDeleteGift={handleDeleteGift}
+              handleUpdateGift={handleUpdateGift}
+              originalPriceLabel={offerOriginalPriceLabel}
+              setOriginalPriceLabel={setOfferOriginalPriceLabel}
+              originalPrice={offerOriginalPrice}
+              setOriginalPrice={setOfferOriginalPrice}
+              offerPriceLabel={offerPriceLabel}
+              setOfferPriceLabel={setOfferPriceLabel}
+              offerPrice={offerPrice}
+              setOfferPrice={setOfferPrice}
+              guaranteeTitle={offerGuaranteeTitle}
+              setGuaranteeTitle={setOfferGuaranteeTitle}
+              guaranteesList={offerGuaranteesList}
+              handleAddGuarantee={handleAddGuarantee}
+              handleDeleteGuarantee={handleDeleteGuarantee}
+              handleUpdateGuarantee={handleUpdateGuarantee}
               uploadingTarget={uploadingTarget}
               handleUploadImageFile={handleUploadImageFile}
             />

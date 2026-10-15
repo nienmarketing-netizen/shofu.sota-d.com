@@ -1161,20 +1161,20 @@ const faqs = [
               <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-amber-500/10 transition-all duration-500"></div>
               <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center relative z-10">
                 <div className="flex-1 w-full space-y-6">
-                  <h3 className="font-heading font-bold text-xl md:text-2xl text-amber-400 border-b border-slate-700 pb-4">Bộ 3 sản phẩm cốt lõi</h3>
+                  <h3 className="font-heading font-bold text-xl md:text-2xl text-amber-400 border-b border-slate-700 pb-4">
+                    {content.offer?.coreTitle || "Bộ 3 sản phẩm cốt lõi"}
+                  </h3>
                   <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300 text-sm md:text-base leading-relaxed">01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml)</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300 text-sm md:text-base leading-relaxed">01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g)</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                      <span className="text-slate-300 text-sm md:text-base leading-relaxed">01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g)</span>
-                    </li>
+                    {(content.offer?.coreProductsList || [
+                      "01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml)",
+                      "01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g)",
+                      "01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g)"
+                    ]).map((prod: string, pIdx: number) => (
+                      <li key={pIdx} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                        <span className="text-slate-300 text-sm md:text-base leading-relaxed">{prod}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="w-full lg:w-[45%] lg:max-w-[400px] flex justify-center items-center">
@@ -1193,20 +1193,36 @@ const faqs = [
               <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 blur-[80px] rounded-full pointer-events-none group-hover:bg-amber-500/20 transition-all duration-500"></div>
               <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center relative z-10">
                 <div className="flex-1 w-full space-y-6">
-                  <h3 className="font-heading font-bold text-xl md:text-2xl text-white border-b border-amber-500/30 pb-4">Bộ 3 quà tặng tài trợ 100%</h3>
+                  <h3 className="font-heading font-bold text-xl md:text-2xl text-white border-b border-amber-500/30 pb-4">
+                    {content.offer?.giftsTitle || "Bộ 3 quà tặng tài trợ 100%"}
+                  </h3>
                   <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed"><strong className="text-white font-bold">Quà vật lý:</strong> 01 Bộ mũi mài bóng Composite Polishing Kit CA</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed"><strong className="text-white font-bold">Tài liệu:</strong> Phác đồ E-Guide "Làm chủ lớp lai & Kỹ thuật phục hồi xoang II"</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><Award className="w-4 h-4 text-amber-400" /></div>
-                      <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed"><strong className="text-white font-bold">Đặc quyền:</strong> Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày</span>
-                    </li>
+                    {(content.offer?.giftsList || [
+                      "Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA",
+                      "Tài liệu: Phác đồ E-Guide \"Làm chủ lớp lai & Kỹ thuật phục hồi xoang II\"",
+                      "Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày"
+                    ]).map((gift: string, gIdx: number) => {
+                      const colonIdx = gift.indexOf(':');
+                      const hasPrefix = colonIdx > -1 && colonIdx < 30;
+                      const prefix = hasPrefix ? gift.substring(0, colonIdx + 1) : '';
+                      const rest = hasPrefix ? gift.substring(colonIdx + 1) : gift;
+                      return (
+                        <li key={gIdx} className="flex items-start gap-3">
+                          <div className="bg-amber-500/20 p-1.5 rounded-lg shrink-0 mt-0.5">
+                            <Award className="w-4 h-4 text-amber-400" />
+                          </div>
+                          <span className="text-amber-100 font-medium text-sm md:text-base leading-relaxed">
+                            {hasPrefix ? (
+                              <>
+                                <strong className="text-white font-bold">{prefix}</strong>{rest}
+                              </>
+                            ) : (
+                              gift
+                            )}
+                          </span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
                 <div className="w-full lg:w-[45%] lg:max-w-[400px] flex justify-center items-center">
@@ -1225,9 +1241,13 @@ const faqs = [
             <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 blur-[50px] rounded-full pointer-events-none"></div>
             
             <div className="text-center md:text-left relative z-10">
-              <p className="text-slate-400 text-sm font-medium mb-1 uppercase tracking-wider">Tổng giá trị</p>
+              <p className="text-slate-400 text-sm font-medium mb-1 uppercase tracking-wider">
+                {content.offer?.originalPriceLabel || "Tổng giá trị"}
+              </p>
               <div className="flex items-baseline justify-center md:justify-start gap-2">
-                <p className="text-slate-400 text-2xl md:text-3xl font-bold line-through decoration-red-500/50 decoration-2">7.250.000đ</p>
+                <p className="text-slate-400 text-2xl md:text-3xl font-bold line-through decoration-red-500/50 decoration-2">
+                  {content.offer?.originalPrice || "7.250.000đ"}
+                </p>
               </div>
             </div>
             
@@ -1235,26 +1255,45 @@ const faqs = [
             <div className="block md:hidden w-full h-px bg-slate-700 relative z-10"></div>
             
             <div className="text-center md:text-right relative z-10">
-              <p className="text-amber-400 text-sm font-medium mb-1 uppercase tracking-wider">Mức đầu tư trải nghiệm</p>
-              <p className="font-heading font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">3.250.000đ</p>
+              <p className="text-amber-400 text-sm font-medium mb-1 uppercase tracking-wider">
+                {content.offer?.offerPriceLabel || "Mức đầu tư trải nghiệm"}
+              </p>
+              <p className="font-heading font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">
+                {content.offer?.offerPrice || "3.250.000đ"}
+              </p>
             </div>
           </div>
 
           <div className="w-full max-w-5xl mx-auto mb-10 bg-slate-900/50 p-6 md:p-8 rounded-2xl border border-slate-800">
-            <h4 className="font-bold text-base text-white mb-4 flex items-center gap-2"><ShieldCheck className="w-6 h-6 text-emerald-400" /> Bảo chứng đồng hành 3 lớp (Rủi ro bằng 0)</h4>
+            <h4 className="font-bold text-base text-white mb-4 flex items-center gap-2">
+              <ShieldCheck className="w-6 h-6 text-emerald-400" />
+              <span>{content.offer?.guaranteeTitle || "Bảo chứng đồng hành 3 lớp (Rủi ro bằng 0)"}</span>
+            </h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                <span className="text-slate-300 text-sm md:text-base leading-relaxed"><strong className="text-emerald-400 font-bold">Bảo chứng 1 (Dứt ê buốt):</strong> Hỗ trợ 1:1 trong 5 ca phục hồi sống đầu tiên. Nếu bệnh nhân ê buốt, chuyên gia call gỡ lỗi. Nếu không hợp tay, thu hồi và hoàn tiền 100%.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                <span className="text-slate-300 text-sm md:text-base leading-relaxed"><strong className="text-emerald-400 font-bold">Bảo chứng 2 (Bảo hiểm thói quen):</strong> Trong 30 ngày, nếu thao tác không hợp, hỗ trợ thu hồi sản phẩm chưa dùng và quy đổi vật tư khác giá trị tương đương.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                <span className="text-slate-300 text-sm md:text-base leading-relaxed"><strong className="text-emerald-400 font-bold">Bảo chứng 3 (Bảo hành tồn kho 90 ngày):</strong> Đổi mới 1-1 ngay lập tức nếu lỗi đông cứng khi mở nắp trong vòng 90 ngày.</span>
-              </li>
+              {(content.offer?.guarantees || [
+                "Bảo chứng 1 (Dứt ê buốt): Hỗ trợ 1:1 trong 5 ca phục hồi sống đầu tiên. Nếu bệnh nhân ê buốt, chuyên gia call gỡ lỗi. Nếu không hợp tay, thu hồi và hoàn tiền 100%.",
+                "Bảo chứng 2 (Bảo hiểm thói quen): Trong 30 ngày, nếu thao tác không hợp, hỗ trợ thu hồi sản phẩm chưa dùng và quy đổi vật tư khác giá trị tương đương.",
+                "Bảo chứng 3 (Bảo hành tồn kho 90 ngày): Đổi mới 1-1 ngay lập tức nếu lỗi đông cứng khi mở nắp trong vòng 90 ngày."
+              ]).map((guar: string, guarIdx: number) => {
+                const colonIdx = guar.indexOf(':');
+                const hasPrefix = colonIdx > -1 && colonIdx < 35;
+                const prefix = hasPrefix ? guar.substring(0, colonIdx + 1) : '';
+                const rest = hasPrefix ? guar.substring(colonIdx + 1) : guar;
+                return (
+                  <li key={guarIdx} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                    <span className="text-slate-300 text-sm md:text-base leading-relaxed">
+                      {hasPrefix ? (
+                        <>
+                          <strong className="text-emerald-400 font-bold">{prefix}</strong>{rest}
+                        </>
+                      ) : (
+                        guar
+                      )}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -1263,7 +1302,7 @@ const faqs = [
                onClick={() => openCampaignModal("Mở khóa combo phục hồi MiCD & nhận bộ kít mài bóng")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
-              <span className="truncate">ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY</span>
+              <span className="truncate">{content.offer?.ctaText || "ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY"}</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </CtaButton>
           </div>
