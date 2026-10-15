@@ -113,33 +113,63 @@
     },
     "ctaText": "TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP"
   },
+  "stepsSection": {
+    "badge": "Quy trình lâm sàng chuẩn hóa",
+    "headline": "Hệ sinh thái Giomer: <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]\">Quy trình phục hồi trực tiếp với 3 bước tối giản</span>",
+    "description": "Thiết lập quy trình phục hồi trực tiếp <strong class=\"font-bold text-slate-900 bg-sky-100/50 px-1.5 rounded\">giảm thiểu độ nhạy cảm kỹ thuật khi thao tác</strong>, giải phóng hoàn toàn <strong class=\"font-bold text-slate-900\">áp lực kỹ thuật</strong> cho Bác sĩ.",
+    "ctaText": "TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP"
+  },
   "steps": [
     {
       "stepNumber": "1",
       "badge": "Bước 1",
-      "title": "Dán dính sinh học HEMA-Free BeautiBond Xtreme",
-      "subtitle": "Màng liên kết siêu mỏng 5µm – Chống thủy phân vĩnh viễn",
-      "description": "Chỉ 1 giọt duy nhất, quét và thổi khô không cần chờ đợi. Màng dán kỵ nước ngăn chặn nước xâm lấn qua ống ngà, triệt tiêu 100% nguy cơ ê buốt sau trám.",
+      "title": "Keo dán universal kỵ nước BeautiBond Xtreme (BBX)",
+      "subtitle": "Khóa chặt ống ngà kỵ nước – Chấm dứt hiện tượng thủy phân liên kết dán",
+      "description": "BBX <strong class=\"font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2\">loại bỏ hoàn toàn thành phần HEMA ưa nước</strong>. Ứng dụng hệ dung môi Acetone bay hơi nhanh giúp đưa 4 monomer chức năng (đặc biệt là biến thể 10-MDP và Carboxylic) thâm nhập sâu vào các ống ngà ẩm, <strong class=\"font-bold text-[#00ADEF] bg-sky-50 px-1 rounded\">tạo màng dán dính kỵ nước cực kỳ bền vững</strong>.",
       "image": "/image/BeautiBond-Xtreme-One-Hand.webp",
-      "suggestedSize": "1000 × 750 px (Tỷ lệ 4:3 hoặc vuông)",
+      "suggestedSize": "1000 × 750 px (Tỷ lệ 4:3 hoặc vuông, dung lượng < 300KB)",
       "specs": [
         "Thời gian thao tác: 5 giây quét + 5 giây thổi",
         "Lực dán men & ngà: ~30-35 MPa",
         "Độ dày màng dán: ~5µm"
+      ],
+      "features": [
+        {
+          "iconName": "Zap",
+          "title": "Độ dày màng dán cực mỏng chỉ ~5μm (Không có chất độn)",
+          "description": "Dễ dàng dàn mỏng đồng đều dưới lực thổi nhẹ, kiểm soát triệt để hiện tượng đọng keo ở góc tiếp chuyển và tối ưu độ khít sát."
+        },
+        {
+          "iconName": "ShieldCheck",
+          "title": "Quy trình \"True Universal\" tự soi mòn (Self-Etch)",
+          "description": "Chỉ 1 lớp duy nhất dán trực tiếp lên mọi bề mặt và mọi vật liệu phục hình mà không cần mua thêm primer rời. Quy trình chớp nhoáng: Thoa keo ➔ Thổi khô ➔ Chiếu đèn 5 giây."
+        }
       ]
     },
     {
       "stepNumber": "2",
       "badge": "Bước 2",
-      "title": "Composite đặc giảm co ngót Beautifil II LS",
-      "subtitle": "Độ co rút kỷ lục 0.85% Vol – Khít sát tuyệt đối sàn xoang",
-      "description": "Ứng dụng monomer đặc biệt kiểm soát lực giật sàn ngà C-Factor. Giữ cho đường viền phục hình bền chặt, loại bỏ hoàn toàn hiện tượng nhạy cảm khi nhai.",
+      "title": "Composite phục hồi co ngót thấp Beautifil II LS",
+      "subtitle": "Điêu khắc múi rãnh vững chãi – Triệt tiêu ứng suất co ngót trùng hợp",
+      "description": "Beautifil II LS sở hữu <strong class=\"font-bold text-slate-900\">hàm lượng hạt độn cao 83 wt%</strong>, kết hợp công nghệ resin đặc biệt, giúp <strong class=\"font-bold text-[#00ADEF] bg-sky-50 px-1 rounded\">kiểm soát độ co ngót trùng hợp ở mức thấp chỉ 0,85% thể tích</strong> và ứng suất co ngót tối thiểu chỉ <strong class=\"font-bold text-white bg-slate-800 px-1.5 py-0.5 rounded text-[13px]\">1.37 MPa</strong>. <strong class=\"font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2\">Bảo vệ đường hoàn tất khỏi hiện tượng nứt kẽ vi thể</strong> và đổi màu đường viền sau nhiều năm ăn nhai.",
       "image": "/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp",
-      "suggestedSize": "1000 × 750 px (Tỷ lệ 4:3 hoặc vuông)",
+      "suggestedSize": "1000 × 750 px (Tỷ lệ 4:3 hoặc vuông, dung lượng < 300KB)",
       "specs": [
         "Độ co rút thể tích: 0.85% Vol",
         "Ứng suất co ngót: 1.37 MPa",
         "Tỷ lệ hạt độn: 83 wt%"
+      ],
+      "features": [
+        {
+          "iconName": "Shield",
+          "title": "Chịu lực uốn 117 MPa & lực nhai 364 MPa",
+          "description": "Chịu lực cực đại ở vùng răng sau, chống mẻ vỡ vượt trội."
+        },
+        {
+          "iconName": "Sparkles",
+          "title": "Hiệu ứng quang học \"Tắc kè hoa\" sinh động",
+          "description": "Tự động hòa quyện sắc độ với men ngà xung quanh, dễ dàng đánh bóng đạt độ bóng sáng tự nhiên chỉ trong vài giây."
+        }
       ]
     },
     {
@@ -147,13 +177,25 @@
       "badge": "Bước 3",
       "title": "Composite phục hồi chịu lực Beautifil Injectable X",
       "subtitle": "Sức mạnh hạt độn Nano-Optimized Silane – Thích ứng thành xoang",
-      "description": "Đặc tính lưu biến Thixotropic tự động chảy loang phẳng láng dưới áp lực bơm để len lỏi bít kín mọi hốc sâu vi thể mà không đọng bọt khí.",
+      "description": "Với <strong class=\"font-bold text-[#00ADEF] bg-sky-50 px-1 rounded\">đặc tính lưu biến thông minh (thixotropic)</strong>, Beautifil Injectable X định hình cực tốt khi đắp lớp nhưng tự động chảy loang phẳng láng dưới áp lực. Vật liệu <strong class=\"font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2\">thích ứng chính xác với mọi ngóc ngách vi thể của xoang II dưới nướu mà không tạo bọt khí</strong>.",
       "image": "/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x-new.webp",
-      "suggestedSize": "1000 × 750 px (Tỷ lệ 4:3 hoặc vuông)",
+      "suggestedSize": "1000 × 750 px (Tỷ lệ 4:3 hoặc vuông, dung lượng < 300KB)",
       "specs": [
         "Độ bền nén: 400 MPa",
         "Đặc tính: Thixotropic tự san phẳng",
         "Chỉ định: Xoang I, II, V chịu lực trực tiếp"
+      ],
+      "features": [
+        {
+          "iconName": "Target",
+          "title": "Độ bền nén cao lên đến 400 MPa",
+          "description": "Độ bền cơ học tương đương hoặc vượt trội so với composite đặc truyền thống, đáp ứng hoàn hảo cho phục hồi chịu lực trực tiếp ở vùng mặt nhai và bờ bên."
+        },
+        {
+          "iconName": "Layers",
+          "title": "Kiểm soát bám dính đầu tip và dụng cụ tối ưu",
+          "description": "Không kéo sợi, không dính dụng cụ điêu khắc. Dễ dàng bơm trực tiếp và kiểm soát đường viền phục hình một cách mượt mà, chính xác mà không cần dung dịch bôi trơn hỗ trợ."
+        }
       ]
     }
   ],
