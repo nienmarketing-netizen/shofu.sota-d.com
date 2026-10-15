@@ -200,8 +200,8 @@
     }
   ],
   "scientificEvidence": {
-    "badge": "Bằng chứng khoa học (test thử xem)",
-    "headline": "Bằng chứng <span class=\"text-[#00ADEF]\">khoa học</span> ABC",
+    "badge": "Bằng chứng khoa học",
+    "headline": "Bằng chứng <span class=\"text-[#00ADEF]\">khoa học</span>",
     "description": "<strong class=\"font-bold text-white\">Shofu</strong> mang đến những bằng chứng thép từ các <strong class=\"font-bold text-[#00ADEF] bg-slate-800/80 px-1.5 rounded\">nghiên cứu lâm sàng độc lập uy tín nhất thế giới</strong>, <strong class=\"font-bold text-white underline decoration-sky-500/50 decoration-2 underline-offset-4\">bảo chứng tuyệt đối cho chất lượng phục hình</strong>.",
     "ctaText": "TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP",
     "adhesiveTest": {
