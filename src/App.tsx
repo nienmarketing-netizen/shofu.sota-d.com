@@ -4,6 +4,7 @@ import VidecLanding from './pages/VidecLanding';
 import ShofuLanding from './pages/ShofuLanding';
 import SolutionLanding from './pages/SolutionLanding';
 import AdminDashboard from './pages/admin/AdminDashboard';
+import DirectRestorationEditor from './pages/admin/DirectRestorationEditor';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/videc2026" element={<VidecLanding />} />
         {/* Admin CMS Portal */}
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/editor/phuc-hoi-truc-tiep" element={<DirectRestorationEditor />} />
         <Route path="/admin/*" element={<AdminDashboard />} />
         {/* 301 Permanent Redirect for legacy link */}
         <Route 

@@ -379,21 +379,32 @@ export default function AdminDashboard() {
                   <ExternalLink className="w-4 h-4" />
                 </a>
 
-                <button
-                  onClick={() => setSelectedPageForEdit(page)}
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-[#8C2828] hover:bg-red-900 text-white font-mono text-xs font-bold py-2.5 px-4 rounded-xl shadow-md shadow-red-900/15 hover:shadow-lg transition-all duration-300"
-                >
-                  <Edit3 className="w-3.5 h-3.5" />
-                  <span>Chỉnh sửa nội dung</span>
-                  <ChevronRight className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform" />
-                </button>
+                {page.id === 'phuc-hoi-truc-tiep' ? (
+                  <Link
+                    to="/admin/editor/phuc-hoi-truc-tiep"
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-[#8C2828] hover:bg-red-900 text-white font-mono text-xs font-bold py-2.5 px-4 rounded-xl shadow-md shadow-red-900/15 hover:shadow-lg transition-all duration-300"
+                  >
+                    <Edit3 className="w-3.5 h-3.5" />
+                    <span>Chỉnh sửa nội dung</span>
+                    <ChevronRight className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform" />
+                  </Link>
+                ) : (
+                  <button
+                    onClick={() => setSelectedPageForEdit(page)}
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-[#8C2828] hover:bg-red-900 text-white font-mono text-xs font-bold py-2.5 px-4 rounded-xl shadow-md shadow-red-900/15 hover:shadow-lg transition-all duration-300"
+                  >
+                    <Edit3 className="w-3.5 h-3.5" />
+                    <span>Chỉnh sửa nội dung</span>
+                    <ChevronRight className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform" />
+                  </button>
+                )}
               </div>
             </div>
           ))}
         </div>
       </main>
 
-      {/* Modal Notification when clicking "Chỉnh sửa nội dung" */}
+      {/* Modal Notification when clicking "Chỉnh sửa nội dung" for other pages */}
       {selectedPageForEdit && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 backdrop-blur-sm p-4 animate-fadeIn">
           <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative">
@@ -419,8 +430,8 @@ export default function AdminDashboard() {
                 <span className="font-mono font-bold text-slate-800">{selectedPageForEdit.sections.length} phần</span>
               </div>
               <div className="flex justify-between pt-1 border-t border-slate-200/60">
-                <span className="font-medium text-slate-500">Bước tiếp theo:</span>
-                <span className="text-[#8C2828] font-bold">Xây dựng form nhập liệu chi tiết</span>
+                <span className="font-medium text-slate-500">Trạng thái:</span>
+                <span className="text-[#8C2828] font-bold">Đang ưu tiên trang Phục hồi trực tiếp</span>
               </div>
             </div>
 
@@ -431,15 +442,25 @@ export default function AdminDashboard() {
               >
                 Đóng
               </button>
-              <a
-                href={selectedPageForEdit.path}
-                target="_blank"
-                rel="noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-xl bg-[#8C2828] hover:bg-red-900 text-white text-xs font-mono font-bold shadow-md shadow-red-900/20 transition-colors"
-              >
-                <span>Xem trang này</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
+              {selectedPageForEdit.id === 'phuc-hoi-truc-tiep' ? (
+                <Link
+                  to="/admin/editor/phuc-hoi-truc-tiep"
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-xl bg-[#8C2828] hover:bg-red-900 text-white text-xs font-mono font-bold shadow-md shadow-red-900/20 transition-colors"
+                >
+                  <span>Mở Editor ngay</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </Link>
+              ) : (
+                <a
+                  href={selectedPageForEdit.path}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-xl bg-[#8C2828] hover:bg-red-900 text-white text-xs font-mono font-bold shadow-md shadow-red-900/20 transition-colors"
+                >
+                  <span>Xem trang này</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              )}
             </div>
           </div>
         </div>
