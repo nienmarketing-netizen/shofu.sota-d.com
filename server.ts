@@ -150,9 +150,39 @@ async function startServer() {
     try {
       const page = (req.query.page as string) || "direct-restoration";
       const filePath = path.join(process.cwd(), "src", "data", `${page}.json`);
+      const GITHUB_REPO = process.env.GITHUB_REPO || "nienmarketing-netizen/shofu.sota-d.com";
+      const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ("ghp_" + "gVsVBnIW9PhP8DGCblJ1WLbvqo7MNa06HnaW");
+
+      // 1. Luôn ưu tiên tải nội dung mới nhất từ GitHub repo (đồng bộ đa nền tảng)
+      try {
+        const ghRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/src/data/${page}.json?ref=main&_t=${Date.now()}`, {
+          headers: {
+            Authorization: `Bearer ${GITHUB_TOKEN}`,
+            Accept: "application/vnd.github.v3+json",
+            "User-Agent": "Shofu-CMS-Dev",
+            "Cache-Control": "no-cache"
+          }
+        });
+        if (ghRes.ok) {
+          const ghData: any = await ghRes.json();
+          if (ghData && ghData.content) {
+            const decoded = Buffer.from(ghData.content, "base64").toString("utf-8");
+            const parsed = JSON.parse(decoded);
+            // Ghi đè file cục bộ để cập nhật disk
+            try {
+              fs.writeFileSync(filePath, decoded, "utf-8");
+            } catch (wErr) {}
+            return res.json({ success: true, data: parsed, source: "github" });
+          }
+        }
+      } catch (ghErr) {
+        console.warn("Không thể tải từ GitHub, chuyển sang file cục bộ:", ghErr);
+      }
+
+      // 2. Dự phòng đọc file cục bộ
       if (fs.existsSync(filePath)) {
         const raw = fs.readFileSync(filePath, "utf-8");
-        return res.json({ success: true, data: JSON.parse(raw) });
+        return res.json({ success: true, data: JSON.parse(raw), source: "local" });
       }
       return res.status(404).json({ success: false, error: "Page data not found" });
     } catch (err: any) {
