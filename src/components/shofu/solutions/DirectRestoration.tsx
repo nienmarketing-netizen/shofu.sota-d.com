@@ -288,49 +288,32 @@ const faqs = [
                     <AlertTriangle className="w-6 h-6 text-slate-300" />
                   </div>
                   <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-700/50 text-slate-300 border border-slate-600/50 font-mono text-xs font-bold uppercase tracking-wider">
-                    Thực tế lâm sàng
+                    {content.painPoints?.card1?.badge || "Thực tế lâm sàng"}
                   </span>
                 </div>
 
                 <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-2">
-                  Áp lực thao tác trên ghế điều trị
+                  {content.painPoints?.card1?.title || "Áp lực thao tác trên ghế điều trị"}
                 </h3>
                 <p className="font-body text-sm sm:text-[15px] text-slate-400 mb-6 leading-relaxed">
-                  Những rào cản kỹ thuật khiến ca phục hồi xoang II trở thành phép thử căng thẳng cho nhiều Bác sĩ:
+                  {content.painPoints?.card1?.subtitle || "Những rào cản kỹ thuật khiến ca phục hồi xoang II trở thành phép thử căng thẳng cho nhiều Bác sĩ:"}
                 </p>
 
                 <div className="space-y-3 -mx-6 sm:mx-0">
-                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-slate-700/60 bg-slate-800/80 hover:bg-slate-800 hover:border-slate-600 transition-all">
-                    <div className="w-6 h-6 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</div>
-                    <div>
-                      <h4 className="font-heading font-bold text-white text-sm sm:text-base">Khó cô lập bờ nướu sâu</h4>
-                      <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">Dịch khe nướu, máu và hơi thở rỉ liên tục làm phá vỡ bề mặt dán dính nhạy cảm.</p>
+                  {(content.painPoints?.card1?.items || [
+                    { id: '1', title: 'Khó cô lập bờ nướu sâu', description: 'Dịch khe nướu, máu và hơi thở rỉ liên tục làm phá vỡ bề mặt dán dính nhạy cảm.' },
+                    { id: '2', title: 'Nhạy cảm kỹ thuật thổi khô', description: 'Quá khô làm sập khung collagen ngà; thổi chưa đủ ẩm làm loãng nồng độ keo dán.' },
+                    { id: '3', title: 'Khó tạo tiếp xúc bên khít sát', description: 'Đáy xoang sâu khiến việc đặt đai trám khó khít sát, dễ gây nhồi nhét thức ăn dai dẳng.' },
+                    { id: '4', title: 'Ứng suất co ngót cao tác động lên thành xoang (C–Factor lớn)', description: 'Composite co ngót kéo rách đáy xoang, gây vi kẽ hở và cơn đau buốt tức thì khi ăn nhai.' }
+                  ]).map((item: any, idx: number) => (
+                    <div key={item.id || idx} className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-slate-700/60 bg-slate-800/80 hover:bg-slate-800 hover:border-slate-600 transition-all">
+                      <div className="w-6 h-6 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">{idx + 1}</div>
+                      <div>
+                        <h4 className="font-heading font-bold text-white text-sm sm:text-base">{item.title}</h4>
+                        <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">{item.description}</p>
+                      </div>
                     </div>
-                  </div>
-
-                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-slate-700/60 bg-slate-800/80 hover:bg-slate-800 hover:border-slate-600 transition-all">
-                    <div className="w-6 h-6 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</div>
-                    <div>
-                      <h4 className="font-heading font-bold text-white text-sm sm:text-base">Nhạy cảm kỹ thuật thổi khô</h4>
-                      <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">Quá khô làm sập khung collagen ngà; thổi chưa đủ ẩm làm loãng nồng độ keo dán.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-slate-700/60 bg-slate-800/80 hover:bg-slate-800 hover:border-slate-600 transition-all">
-                    <div className="w-6 h-6 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</div>
-                    <div>
-                      <h4 className="font-heading font-bold text-white text-sm sm:text-base">Khó tạo tiếp xúc bên khít sát</h4>
-                      <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">Đáy xoang sâu khiến việc đặt đai trám khó khít sát, dễ gây nhồi nhét thức ăn dai dẳng.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-slate-700/60 bg-slate-800/80 hover:bg-slate-800 hover:border-slate-600 transition-all">
-                    <div className="w-6 h-6 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</div>
-                    <div>
-                      <h4 className="font-heading font-bold text-white text-sm sm:text-base">Ứng suất co ngót cao tác động lên thành xoang (C–Factor lớn)</h4>
-                      <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">Composite co ngót kéo rách đáy xoang, gây vi kẽ hở và cơn đau buốt tức thì khi ăn nhai.</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
 
@@ -338,7 +321,7 @@ const faqs = [
                 <div className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3">
                   <Quote className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
                   <p className="font-body text-slate-300 text-sm sm:text-[15px] italic leading-relaxed">
-                    "Nhiều Bác sĩ luôn thấp thỏm mỗi khi bệnh nhân quay lại tái khám với lời than phiền: Răng trám xong về ăn nhai cứ bị buốt nhói."
+                    "{content.painPoints?.card1?.quote || 'Nhiều Bác sĩ luôn thấp thỏm mỗi khi bệnh nhân quay lại tái khám với lời than phiền: Răng trám xong về ăn nhai cứ bị buốt nhói.'}"
                   </p>
                 </div>
               </div>
@@ -358,49 +341,32 @@ const faqs = [
                     <ShieldAlert className="w-6 h-6 text-red-400" />
                   </div>
                   <span className="inline-flex items-center px-3 py-1 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 font-mono text-xs font-bold uppercase tracking-wider">
-                    Căn nguyên khoa học
+                    {content.painPoints?.card2?.badge || "Căn nguyên khoa học"}
                   </span>
                 </div>
 
                 <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-2">
-                  Giới hạn cố hữu của vật liệu cũ
+                  {content.painPoints?.card2?.title || "Giới hạn cố hữu của vật liệu cũ"}
                 </h3>
                 <p className="font-body text-sm sm:text-[15px] text-slate-400 mb-6 leading-relaxed">
-                  Cơ chế hóa học và cấu trúc vật liệu cơ học thụ động chính là thủ phạm âm thầm gây hỏng phục hồi:
+                  {content.painPoints?.card2?.subtitle || "Cơ chế hóa học và cấu trúc vật liệu cơ học thụ động chính là thủ phạm âm thầm gây hỏng phục hồi:"}
                 </p>
 
                 <div className="space-y-3 -mx-6 sm:mx-0">
-                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-red-500/20 bg-slate-800/80 hover:border-red-500/40 transition-all shadow-sm">
-                    <div className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">!</div>
-                    <div>
-                      <h4 className="font-heading font-bold text-white text-sm sm:text-base">Monomer HEMA ưa nước (Hydrophilic)</h4>
-                      <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">Hút ẩm từ ống ngà như một miếng bọt biển, kích hoạt men MMPs tự phân hủy lớp lai dán sau 6-12 tháng.</p>
+                  {(content.painPoints?.card2?.items || [
+                    { id: '1', title: 'Monomer HEMA ưa nước (Hydrophilic)', description: 'Hút ẩm từ ống ngà như một miếng bọt biển, kích hoạt men MMPs tự phân hủy lớp lai dán sau 6-12 tháng.' },
+                    { id: '2', title: 'Độ co ngót thể tích cao (2.5% - 4% Vol)', description: 'Ứng suất co ngót lớn kéo tách rời màng dán, tạo đường vi nứt kẽ vi thể sâu dưới bờ nướu.' },
+                    { id: '3', title: 'Màng keo dán quá dày & Hiện tượng đọng keo (Pooling)', description: 'Dung môi khó bay hơi hoàn toàn tạo màng keo dày và gây đọng keo ở góc đáy xoang II, làm suy yếu liên kết vi thể và cản trở sự khít sát của phục hình.' },
+                    { id: '4', title: 'Vật liệu trơ, hoàn toàn thụ động', description: 'Không phóng thích ion kháng khuẩn, không trung hòa axit, biến vi kẽ hở thành ổ vi khuẩn gây sâu tái phát.' }
+                  ]).map((item: any, idx: number) => (
+                    <div key={item.id || idx} className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-red-500/20 bg-slate-800/80 hover:border-red-500/40 transition-all shadow-sm">
+                      <div className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">!</div>
+                      <div>
+                        <h4 className="font-heading font-bold text-white text-sm sm:text-base">{item.title}</h4>
+                        <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">{item.description}</p>
+                      </div>
                     </div>
-                  </div>
-
-                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-red-500/20 bg-slate-800/80 hover:border-red-500/40 transition-all shadow-sm">
-                    <div className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">!</div>
-                    <div>
-                      <h4 className="font-heading font-bold text-white text-sm sm:text-base">Độ co ngót thể tích cao (2.5% - 4% Vol)</h4>
-                      <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">Ứng suất co ngót lớn kéo tách rời màng dán, tạo đường vi nứt kẽ vi thể sâu dưới bờ nướu.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-red-500/20 bg-slate-800/80 hover:border-red-500/40 transition-all shadow-sm">
-                    <div className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">!</div>
-                    <div>
-                      <h4 className="font-heading font-bold text-white text-sm sm:text-base">Màng keo dán quá dày & Hiện tượng đọng keo (Pooling)</h4>
-                      <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">Dung môi khó bay hơi hoàn toàn tạo màng keo dày và gây đọng keo ở góc đáy xoang II, làm suy yếu liên kết vi thể và cản trở sự khít sát của phục hình.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl border border-red-500/20 bg-slate-800/80 hover:border-red-500/40 transition-all shadow-sm">
-                    <div className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">!</div>
-                    <div>
-                      <h4 className="font-heading font-bold text-white text-sm sm:text-base">Vật liệu trơ, hoàn toàn thụ động</h4>
-                      <p className="font-body text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5">Không phóng thích ion kháng khuẩn, không trung hòa axit, biến vi kẽ hở thành ổ vi khuẩn gây sâu tái phát.</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
 
@@ -410,9 +376,12 @@ const faqs = [
                     <ShieldAlert className="w-5 h-5 shrink-0 text-red-400" />
                     <span>Kết luận thực tế</span>
                   </div>
-                  <p className="font-body text-slate-300 text-sm sm:text-[15px] leading-relaxed">
-                    Bác sĩ không thao tác sai mà chính <strong className="text-red-400">bản chất vật liệu thế hệ cũ</strong> đã âm thầm phá vỡ công sức tỉ mỉ của Bác sĩ.
-                  </p>
+                  <p 
+                    className="font-body text-slate-300 text-sm sm:text-[15px] leading-relaxed"
+                    dangerouslySetInnerHTML={{
+                      __html: content.painPoints?.card2?.conclusion || 'Bác sĩ không thao tác sai mà chính <strong class="text-red-400">bản chất vật liệu thế hệ cũ</strong> đã âm thầm phá vỡ công sức tỉ mỉ của Bác sĩ.'
+                    }}
+                  />
                 </div>
               </div>
             </div>
@@ -421,7 +390,7 @@ const faqs = [
           {/* Microscopic Split-Screen SEM Graphic with Seamless Edge Fades */}
           <div className="w-screen relative left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:w-full sm:max-w-5xl sm:mx-auto overflow-hidden mb-12 lg:mb-16">
             <img 
-              src="/image/tri-lieu-sinh-hoc-micd.webp" 
+              src={content.painPoints?.semImage || "/image/tri-lieu-sinh-hoc-micd.webp"} 
               alt="Cơ chế phục hồi trị liệu sinh học MiCD Shofu" 
               className="w-full h-auto object-cover block [mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_78%,transparent_100%)]"
               loading="lazy"
@@ -442,9 +411,11 @@ const faqs = [
             />
 
             <div className="relative z-10 text-center max-w-2xl mx-auto mb-8">
-              <span className="text-[#00ADEF] font-mono text-xs font-bold uppercase tracking-wider">Đối chiếu cơ chế</span>
+              <span className="text-[#00ADEF] font-mono text-xs font-bold uppercase tracking-wider">
+                {content.painPoints?.matrix?.badge || "Đối chiếu cơ chế"}
+              </span>
               <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mt-1">
-                Sự khác biệt giữa 2 trường phái phục hồi
+                {content.painPoints?.matrix?.title || "Sự khác biệt giữa 2 trường phái phục hồi"}
               </h3>
             </div>
 
@@ -454,25 +425,23 @@ const faqs = [
                 <div>
                   <div className="flex items-center gap-2 text-red-400 font-bold font-heading text-base mb-4">
                     <XCircle className="w-5 h-5 shrink-0 text-red-400" />
-                    <span>Vật liệu cũ (Cơ học thụ động)</span>
+                    <span>{content.painPoints?.matrix?.oldSchool?.title || "Vật liệu cũ (Cơ học thụ động)"}</span>
                   </div>
                   <ul className="space-y-3 text-sm text-slate-300 font-body">
-                    <li className="flex items-start gap-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0"></span>
-                      <span>Chứa HEMA ưa nước gây ngấm ẩm và thủy phân lớp lai sau thời gian ngắn.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0"></span>
-                      <span>Co ngót thể tích cao (2.5% - 4.0%) kéo tách rời đường viền đáy xoang II.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0"></span>
-                      <span>Vật liệu trơ sinh học: không bảo vệ men ngà, không kháng khuẩn.</span>
-                    </li>
+                    {(content.painPoints?.matrix?.oldSchool?.points || [
+                      "Chứa HEMA ưa nước gây ngấm ẩm và thủy phân lớp lai sau thời gian ngắn.",
+                      "Co ngót thể tích cao (2.5% - 4.0%) kéo tách rời đường viền đáy xoang II.",
+                      "Vật liệu trơ sinh học: không bảo vệ men ngà, không kháng khuẩn."
+                    ]).map((pt: string, idx: number) => (
+                      <li key={idx} className="flex items-start gap-2.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0"></span>
+                        <span dangerouslySetInnerHTML={{ __html: pt }} />
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="mt-4 pt-3 border-t border-red-500/20 text-xs font-semibold text-red-400">
-                  Hậu quả: Nguy cơ cao ê buốt sau trám & sâu răng thứ phát.
+                  {content.painPoints?.matrix?.oldSchool?.footer || "Hậu quả: Nguy cơ cao ê buốt sau trám & sâu răng thứ phát."}
                 </div>
               </div>
 
@@ -481,25 +450,23 @@ const faqs = [
                 <div>
                   <div className="flex items-center gap-2 text-[#00ADEF] font-bold font-heading text-base mb-4">
                     <CheckCircle2 className="w-5 h-5 shrink-0 text-[#00ADEF]" />
-                    <span>Hệ sinh thái Giomer Shofu (Trị liệu sinh học)</span>
+                    <span>{content.painPoints?.matrix?.newSchool?.title || "Hệ sinh thái Giomer Shofu (Trị liệu sinh học)"}</span>
                   </div>
                   <ul className="space-y-3 text-sm text-slate-300 font-body">
-                    <li className="flex items-start gap-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#00ADEF] mt-2 shrink-0"></span>
-                      <span>Keo BeautiBond Xtreme <strong className="text-white">HEMA-Free kỵ nước</strong>, khóa chặt ống ngà vĩnh viễn.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#00ADEF] mt-2 shrink-0"></span>
-                      <span>Composite Beautifil II LS <strong className="text-white">có độ co ngót thể tích cực thấp (chỉ 0.85% Vol)</strong>, tối ưu độ khít sát vi thể.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#00ADEF] mt-2 shrink-0"></span>
-                      <span>Hạt độn S-PRG <strong className="text-white">phóng thích 6 loại ion sinh học</strong> kháng khuẩn, duy trì khả năng trung hòa axit liên tục.</span>
-                    </li>
+                    {(content.painPoints?.matrix?.newSchool?.points || [
+                      'Keo BeautiBond Xtreme <strong class="text-white">HEMA-Free kỵ nước</strong>, khóa chặt ống ngà vĩnh viễn.',
+                      'Composite Beautifil II LS <strong class="text-white">có độ co ngót thể tích cực thấp (chỉ 0.85% Vol)</strong>, tối ưu độ khít sát vi thể.',
+                      'Hạt độn S-PRG <strong class="text-white">phóng thích 6 loại ion sinh học</strong> kháng khuẩn, duy trì khả năng trung hòa axit liên tục.'
+                    ]).map((pt: string, idx: number) => (
+                      <li key={idx} className="flex items-start gap-2.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#00ADEF] mt-2 shrink-0"></span>
+                        <span dangerouslySetInnerHTML={{ __html: pt }} />
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="mt-4 pt-3 border-t border-[#00ADEF]/20 text-xs font-semibold text-[#00ADEF]">
-                  Thành quả: Triệt tiêu ê buốt, bảo tồn cấu trúc ngà sống dài lâu.
+                  {content.painPoints?.matrix?.newSchool?.footer || "Thành quả: Triệt tiêu ê buốt, bảo tồn cấu trúc ngà sống dài lâu."}
                 </div>
               </div>
             </div>
@@ -511,7 +478,7 @@ const faqs = [
                onClick={() => openCampaignModal("Sở hữu trọn bộ giải pháp phục hồi sinh học & Đặc quyền đào tạo 1:1")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
-              <span className="truncate">TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP</span>
+              <span className="truncate">{content.painPoints?.ctaText || "TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP"}</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </CtaButton>
           </div>
