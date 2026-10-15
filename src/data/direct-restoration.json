@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "badge": "Giải pháp phục hồi trực tiếp MiCD",
+    "headline": "Chấm dứt ám ảnh ê buốt & sâu răng thứ phát trong <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-[#007AA8]\">phục hồi xoang II răng sau</span>",
+    "body": "Trải nghiệm bước dịch chuyển đột phá từ \"Phục hồi cơ học thụ động\" sang <strong class=\"font-bold text-[#00ADEF] bg-sky-50 px-1.5 py-0.5 rounded\">\"Trị liệu sinh học chủ động\"</strong> với hệ sinh thái Giomer ứng dụng công nghệ hạt độn S-PRG từ <strong class=\"font-bold text-slate-900\">Shofu Nhật Bản</strong>. Quy trình lâm sàng được tối giản hóa tối đa, giúp <strong class=\"font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-4\">bảo tồn cấu trúc ngà sống</strong> và <strong class=\"font-bold text-slate-900\">giải phóng hoàn toàn áp lực nhạy cảm kỹ thuật</strong> cho Bác sĩ.",
+    "image": "/image/phuc-hoi-truc-tiep.webp",
+    "imageSizeNote": "1171 × 1343 px (PNG / WebP tách nền hoặc nền sáng, dung lượng < 300KB)",
+    "usps": [
+      {
+        "id": "usp-1",
+        "iconName": "ShieldCheck",
+        "title": "Triệt tiêu nguy cơ ê buốt",
+        "description": "Nhờ màng dán kỵ nước HEMA-Free của keo dán thế hệ 8 BeautiBond Xtreme."
+      },
+      {
+        "id": "usp-2",
+        "iconName": "Layers",
+        "title": "Chống vi thấm và hở kẽ đường viền",
+        "description": "Nhờ dòng composite đặc Beautifil II LS sở hữu độ co rút thể tích cực thấp kỷ lục chỉ 0.85% Vol."
+      },
+      {
+        "id": "usp-3",
+        "iconName": "Sparkles",
+        "title": "Màng khiên bảo vệ sinh học 24/7",
+        "description": "Chống sâu răng tái phát nhờ cơ chế phóng thích và tự sạc lại 6 loại ion của hạt độn S-PRG."
+      }
+    ],
+    "ctaText": "MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG"
+  },
+  "painPoints": {
+    "badge": "Góc khuất lâm sàng",
+    "headline": "Phục hồi răng xoang II sâu dưới nướu luôn là <br class=\"hidden md:block\" /><span class=\"text-slate-400\">cơn ác mộng</span> <span class=\"text-red-500\">âm thầm</span>",
+    "description": "Nhiều Bác sĩ thường tự dằn vặt và đổ lỗi cho kỹ năng thao tác thổi khô sai kỹ thuật hay đặt đai trám chưa khít. Nhưng sự thật chứng minh: gốc rễ thất bại nằm ở bản chất hạn chế của vật liệu thế hệ cũ."
+  },
+  "steps": [
+    {
+      "stepNumber": "1",
+      "badge": "Bước 1",
+      "title": "Dán dính sinh học HEMA-Free BeautiBond Xtreme",
+      "subtitle": "Màng liên kết siêu mỏng 5µm – Chống thủy phân vĩnh viễn",
+      "description": "Chỉ 1 giọt duy nhất, quét và thổi khô không cần chờ đợi. Màng dán kỵ nước ngăn chặn nước xâm lấn qua ống ngà, triệt tiêu 100% nguy cơ ê buốt sau trám.",
+      "image": "/image/BeautiBond-Xtreme-One-Hand.webp",
+      "suggestedSize": "1000 × 750 px (Tỷ lệ 4:3 hoặc vuông)",
+      "specs": [
+        "Thời gian thao tác: 5 giây quét + 5 giây thổi",
+        "Lực dán men & ngà: ~30-35 MPa",
+        "Độ dày màng dán: ~5µm"
+      ]
+    },
+    {
+      "stepNumber": "2",
+      "badge": "Bước 2",
+      "title": "Composite đặc giảm co ngót Beautifil II LS",
+      "subtitle": "Độ co rút kỷ lục 0.85% Vol – Khít sát tuyệt đối sàn xoang",
+      "description": "Ứng dụng monomer đặc biệt kiểm soát lực giật sàn ngà C-Factor. Giữ cho đường viền phục hình bền chặt, loại bỏ hoàn toàn hiện tượng nhạy cảm khi nhai.",
+      "image": "/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp",
+      "suggestedSize": "1000 × 750 px (Tỷ lệ 4:3 hoặc vuông)",
+      "specs": [
+        "Độ co rút thể tích: 0.85% Vol",
+        "Ứng suất co ngót: 1.37 MPa",
+        "Tỷ lệ hạt độn: 83 wt%"
+      ]
+    },
+    {
+      "stepNumber": "3",
+      "badge": "Bước 3",
+      "title": "Composite phục hồi chịu lực Beautifil Injectable X",
+      "subtitle": "Sức mạnh hạt độn Nano-Optimized Silane – Thích ứng thành xoang",
+      "description": "Đặc tính lưu biến Thixotropic tự động chảy loang phẳng láng dưới áp lực bơm để len lỏi bít kín mọi hốc sâu vi thể mà không đọng bọt khí.",
+      "image": "/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x-new.webp",
+      "suggestedSize": "1000 × 750 px (Tỷ lệ 4:3 hoặc vuông)",
+      "specs": [
+        "Độ bền nén: 400 MPa",
+        "Đặc tính: Thixotropic tự san phẳng",
+        "Chỉ định: Xoang I, II, V chịu lực trực tiếp"
+      ]
+    }
+  ],
+  "offer": {
+    "badge": "Đặc quyền đồng hành không thể từ chối",
+    "headline": "Gói giải pháp đồng bộ <br class=\"hidden sm:block\" /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200\">combo \"Phục hồi sinh học MiCD - Chặn đứng ê buốt\"</span>",
+    "coreProductsImage": "/image/phuc-hoi-truc-tiep.webp",
+    "giftImage": "/image/qua-tang-doc-quyen-shofu-giai-phap-phuc-hoi-truc-tiep.webp",
+    "coreProductsList": [
+      "01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml)",
+      "01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g)",
+      "01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g)"
+    ],
+    "giftsList": [
+      "Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA",
+      "Tài liệu: Phác đồ E-Guide \"Làm chủ lớp lai & Kỹ thuật phục hồi xoang II\"",
+      "Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày"
+    ]
+  },
+  "faqs": [
+    {
+      "id": "faq-1",
+      "q": "Phục hồi composite xoang II sâu có nhất thiết phải cô lập đê cao su tuyệt đối để tránh ê buốt sau điều trị không?",
+      "a": "Đê cao su luôn là tiêu chuẩn vàng trong nha khoa. Tuy nhiên, căn nguyên thực sự của ê buốt sau trám không chỉ xuất phát từ độ ẩm lâm sàng mà từ hiện tượng thủy phân màng dán do thành phần HEMA ngấm nước. Keo dán BeautiBond Xtreme (BBX) loại bỏ hoàn toàn HEMA (HEMA-Free kỵ nước), ứng dụng hệ dung môi Acetone bay hơi chớp nhoáng giúp đưa monomer thâm nhập sâu và bít kín các ống ngà ẩm. Màng keo siêu mỏng ~5µm cùng lực dán Self-Etch bền bỉ ~30–35 MPa giúp khóa chặt vi kẽ và triệt tiêu nguy cơ ê buốt sau phục hồi."
+    },
+    {
+      "id": "faq-2",
+      "q": "Làm thế nào để kiểm soát lực co ngót trùng hợp và hiện tượng hở bờ viền ở sàn ngà xoang II có C-Factor cao?",
+      "a": "Sự nứt kẽ vi thể và cơn đau nhói khi ăn nhai chủ yếu do ứng suất co ngót kéo tách màng dán khỏi sàn ngà. Composite đặc Beautifil II LS sở hữu tỷ lệ hạt độn cao (83 wt%) giúp hạ độ co rút thể tích xuống mức kỷ lục 0.85% Vol và ứng suất co ngót tối thiểu chỉ 1.37 MPa. Đặc tính này giúp triệt tiêu lực kéo giật sàn ngà, ngăn chặn vi thấm và giữ cho đường hoàn tất khít sát tuyệt đối sau nhiều năm ăn nhai."
+    },
+    {
+      "id": "faq-3",
+      "q": "Composite đắp lót xoang II có đảm bảo độ bền chịu lực và không tạo bọt khí ở các hốc sâu vi thể?",
+      "a": "Hoàn toàn đảm bảo với Beautifil Injectable X. Sản phẩm ứng dụng công nghệ Nano-Optimized Silane với đặc tính lưu biến thông minh (Thixotropic): tự động chảy loang phẳng láng dưới áp lực bơm để len lỏi bít kín mọi hốc sâu vi thể mà không đọng bọt khí, nhưng lập tức đứng yên định hình khi ngừng bơm. Đặc biệt, độ bền nén cơ học đạt 400 MPa (tương đương composite đặc), cho phép đắp khối chịu lực trực tiếp ở vùng răng sau."
+    },
+    {
+      "id": "faq-4",
+      "q": "Làm thế nào để khắc phục triệt để tình trạng composite dính cây phục hình khi điêu khắc múi rãnh?",
+      "a": "Dòng composite Beautifil II LS sở hữu độ dẻo đàn hồi tối ưu và cấu trúc hạt độn Silane hóa bề mặt đặc biệt, tạo độ đặc chắc nhưng không bám dính cây trám, giúp Bác sĩ điêu khắc gờ viền múi rãnh giải phẫu một cách sắc nét và nhẹ nhàng nhất."
+    },
+    {
+      "id": "faq-5",
+      "q": "Hạt độn S-PRG trong Giomer có bị mài mòn hay suy giảm khả năng phóng thích Fluoride theo thời gian không?",
+      "a": "Tuyệt đối không. Cấu trúc hạt độn S-PRG 3 lớp được bảo vệ bởi màng biến tính bền vững và phân bổ đồng đều trong mạng polymer. Beautifil II LS đạt độ bền nén 364 MPa và độ bền uốn 120 MPa, đảm bảo độ cứng chắc và kháng mòn cao. Nghiên cứu lâm sàng độc lập tại Đại học Florida công bố trên tạp chí JADA chứng minh: sau 8 năm đạt 100% tỷ lệ lưu giữ (0% ê buốt, 0% sâu răng thứ phát) và sau 13 năm đạt 96% phục hình sạch bóng sâu răng tái phát."
+    },
+    {
+      "id": "faq-6",
+      "q": "Quy trình đánh bóng composite có tốn nhiều thời gian và dễ làm trầy xước bề mặt miếng trám không?",
+      "a": "Hệ thống đĩa đánh bóng Super-Snap X-Treme giải quyết triệt để vấn đề này nhờ cơ chế gài Snap-on thông minh và thiết kế đĩa không chứa vòng kim loại ở giữa, loại bỏ nguy cơ làm trầy miếng trám. Với 4 dải màu phân định rõ ràng (từ mài thô đến siêu bóng) kết hợp mũi đá mài nhẵn CA, Bác sĩ chỉ mất vài giây để tái tạo bề mặt láng mịn."
+    }
+  ]
+}
