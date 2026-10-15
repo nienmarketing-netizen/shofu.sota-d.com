@@ -216,19 +216,24 @@ const faqs = [
           <div className="text-center mb-12 md:mb-16">
             <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 font-mono text-xs sm:text-sm font-bold tracking-wider mb-6 shadow-sm">
               <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse shrink-0"></div>
-              <span className="normal-case">Góc khuất lâm sàng</span>
+              <span className="normal-case">{content.painPoints?.badge || "Góc khuất lâm sàng"}</span>
             </div>
             
-            <h2 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-4 tracking-tight max-w-4xl mx-auto">
-              Phục hồi răng xoang II sâu dưới nướu luôn là <br className="hidden md:block" />
-              <span className="text-slate-400">cơn ác mộng</span> <span className="text-red-500">âm thầm</span>
-            </h2>
+            <h2 
+              className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-4 tracking-tight max-w-4xl mx-auto"
+              dangerouslySetInnerHTML={{ 
+                __html: content.painPoints?.headline || 'Phục hồi răng xoang II sâu dưới nướu luôn là <br class="hidden md:block" /><span class="text-slate-400">cơn ác mộng</span> <span class="text-red-500">âm thầm</span>' 
+              }}
+            />
 
             <div className="w-24 h-1 bg-red-500 mx-auto my-6"></div>
 
-            <p className="font-body text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
-              Nhiều Bác sĩ thường <strong className="text-slate-100 font-semibold">tự dằn vặt và đổ lỗi</strong> cho kỹ năng thao tác <span className="text-amber-300 font-medium">thổi khô sai kỹ thuật</span> hay <span className="text-amber-300 font-medium">đặt đai trám chưa khít</span>. Nhưng <strong className="text-white font-semibold">sự thật chứng minh</strong>: <span className="text-red-400 font-bold">gốc rễ thất bại</span> nằm ở <span className="inline-block px-2.5 py-0.5 rounded-lg bg-red-500/15 border border-red-500/30 text-red-200 font-bold shadow-sm">bản chất hạn chế của vật liệu thế hệ cũ</span>.
-            </p>
+            <p 
+              className="font-body text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto"
+              dangerouslySetInnerHTML={{
+                __html: content.painPoints?.description || 'Nhiều Bác sĩ thường <strong class="text-slate-100 font-semibold">tự dằn vặt và đổ lỗi</strong> cho kỹ năng thao tác <span class="text-amber-300 font-medium">thổi khô sai kỹ thuật</span> hay <span class="text-amber-300 font-medium">đặt đai trám chưa khít</span>. Nhưng <strong className="text-white font-semibold">sự thật chứng minh</strong>: <span className="text-red-400 font-bold">gốc rễ thất bại</span> nằm ở <span className="inline-block px-2.5 py-0.5 rounded-lg bg-red-500/15 border border-red-500/30 text-red-200 font-bold shadow-sm">bản chất hạn chế của vật liệu thế hệ cũ</span>.'
+              }}
+            />
           </div>
 
           {/* 2 Main Comparison Cards */}
@@ -508,7 +513,7 @@ const faqs = [
               <div className="w-full lg:w-1/2 flex items-center justify-start lg:justify-end order-4 lg:order-none my-6 lg:my-0 w-full">
                 <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] -ml-8 sm:-ml-10 lg:ml-0 -z-10 lg:z-auto">
                   <img 
-                    src="/image/BeautiBond-Xtreme-One-Hand.webp" 
+                    src={content.steps?.[0]?.image || "/image/BeautiBond-Xtreme-One-Hand.webp"} 
                     alt="Keo dán universal kỵ nước BeautiBond Xtreme nắp bật một tay" 
                     className="w-full h-auto object-contain block [mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%),linear-gradient(to_right,transparent_0%,black_15%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%),linear-gradient(to_right,transparent_0%,black_15%)] [mask-composite:intersect] [-webkit-mask-composite:source-in] lg:[mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] lg:[-webkit-mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] lg:[mask-composite:add] lg:[-webkit-mask-composite:source-over]"
                     loading="lazy"
@@ -517,13 +522,20 @@ const faqs = [
               </div>
               <div className="w-full lg:w-1/2 lg:pl-4 contents lg:block">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4 order-1 lg:order-none mt-2 lg:mt-0">
-                  Bước 1
+                  {content.steps?.[0]?.badge || "Bước 1"}
                 </div>
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">Keo dán universal kỵ nước BeautiBond Xtreme (BBX)</h3>
-                <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">Khóa chặt ống ngà kỵ nước – Chấm dứt hiện tượng thủy phân liên kết dán</h4>
-                <p className="font-body text-sm text-slate-600 leading-relaxed mb-6 order-5 lg:order-none">
-                  BBX <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">loại bỏ hoàn toàn thành phần HEMA ưa nước</strong>. Ứng dụng hệ dung môi Acetone bay hơi nhanh giúp đưa 4 monomer chức năng (đặc biệt là biến thể 10-MDP và Carboxylic) thâm nhập sâu vào các ống ngà ẩm, <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">tạo màng dán dính kỵ nước cực kỳ bền vững</strong>.
-                </p>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">
+                  {content.steps?.[0]?.title || "Keo dán universal kỵ nước BeautiBond Xtreme (BBX)"}
+                </h3>
+                <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">
+                  {content.steps?.[0]?.subtitle || "Khóa chặt ống ngà kỵ nước – Chấm dứt hiện tượng thủy phân liên kết dán"}
+                </h4>
+                <p 
+                  className="font-body text-sm text-slate-600 leading-relaxed mb-6 order-5 lg:order-none"
+                  dangerouslySetInnerHTML={{
+                    __html: content.steps?.[0]?.description || 'BBX <strong class="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">loại bỏ hoàn toàn thành phần HEMA ưa nước</strong>. Ứng dụng hệ dung môi Acetone bay hơi nhanh giúp đưa 4 monomer chức năng (đặc biệt là biến thể 10-MDP và Carboxylic) thâm nhập sâu vào các ống ngà ẩm, <strong class="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">tạo màng dán dính kỵ nước cực kỳ bền vững</strong>.'
+                  }}
+                />
                 <div className="space-y-4 order-6 lg:order-none">
                   <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
                     <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
@@ -559,7 +571,7 @@ const faqs = [
               <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start order-4 lg:order-none my-6 lg:my-0 w-full">
                 <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] -ml-8 sm:-ml-10 lg:ml-0 -z-10 lg:z-auto">
                   <img 
-                    src="/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp" 
+                    src={content.steps?.[1]?.image || "/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp"} 
                     alt="Phục hồi trực tiếp Shofu Beautifil II LS" 
                     className="w-full h-auto object-contain block [mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%),linear-gradient(to_right,transparent_0%,black_15%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_75%,rgba(0,0,0,0.5)_85%,transparent_96%),linear-gradient(to_right,transparent_0%,black_15%)] [mask-composite:intersect] [-webkit-mask-composite:source-in] lg:[mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] lg:[-webkit-mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] lg:[mask-composite:add] lg:[-webkit-mask-composite:source-over]"
                     loading="lazy"
@@ -568,13 +580,20 @@ const faqs = [
               </div>
               <div className="w-full lg:w-1/2 lg:pr-4 contents lg:block">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4 order-1 lg:order-none mt-2 lg:mt-0">
-                  Bước 2
+                  {content.steps?.[1]?.badge || "Bước 2"}
                 </div>
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">Composite phục hồi co ngót thấp Beautifil II LS</h3>
-                <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">Điêu khắc múi rãnh vững chãi – Triệt tiêu ứng suất co ngót trùng hợp</h4>
-                <p className="font-body text-sm text-slate-600 leading-relaxed mb-6 order-5 lg:order-none">
-                  Beautifil II LS sở hữu <strong className="font-bold text-slate-900">hàm lượng hạt độn cao 83 wt%</strong>, kết hợp công nghệ resin đặc biệt, giúp <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">kiểm soát độ co ngót trùng hợp ở mức thấp chỉ 0,85% thể tích</strong> và ứng suất co ngót tối thiểu chỉ <strong className="font-bold text-white bg-slate-800 px-1.5 py-0.5 rounded text-[13px]">1.37 MPa</strong>. <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">Bảo vệ đường hoàn tất khỏi hiện tượng nứt kẽ vi thể</strong> và đổi màu đường viền sau nhiều năm ăn nhai.
-                </p>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">
+                  {content.steps?.[1]?.title || "Composite phục hồi co ngót thấp Beautifil II LS"}
+                </h3>
+                <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">
+                  {content.steps?.[1]?.subtitle || "Điêu khắc múi rãnh vững chãi – Triệt tiêu ứng suất co ngót trùng hợp"}
+                </h4>
+                <p 
+                  className="font-body text-sm text-slate-600 leading-relaxed mb-6 order-5 lg:order-none"
+                  dangerouslySetInnerHTML={{
+                    __html: content.steps?.[1]?.description || 'Beautifil II LS sở hữu <strong class="font-bold text-slate-900">hàm lượng hạt độn cao 83 wt%</strong>, kết hợp công nghệ resin đặc biệt, giúp <strong class="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">kiểm soát độ co ngót trùng hợp ở mức thấp chỉ 0,85% thể tích</strong> và ứng suất co ngót tối thiểu chỉ <strong class="font-bold text-white bg-slate-800 px-1.5 py-0.5 rounded text-[13px]">1.37 MPa</strong>. <strong class="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">Bảo vệ đường hoàn tất khỏi hiện tượng nứt kẽ vi thể</strong> và đổi màu đường viền sau nhiều năm ăn nhai.'
+                  }}
+                />
                 <div className="space-y-4 order-6 lg:order-none">
                   <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
                     <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
@@ -610,7 +629,7 @@ const faqs = [
               <div className="w-full lg:w-1/2 flex items-center justify-end order-4 lg:order-none my-6 lg:my-0 w-full">
                 <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[460px] ml-auto -mr-4 sm:-mr-6 lg:mr-0 -z-10 lg:z-auto">
                   <img 
-                    src="/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x-new.webp" 
+                    src={content.steps?.[2]?.image || "/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x-new.webp"} 
                     alt="Phục hồi trực tiếp Shofu Beautifil Injectable X" 
                     className="w-full h-auto object-contain block [mask-image:linear-gradient(to_bottom,black_0%,black_85%,rgba(0,0,0,0.5)_92%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_85%,rgba(0,0,0,0.5)_92%,transparent_98%)] lg:[mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)] lg:[-webkit-mask-image:radial-gradient(ellipse_80%_74%_at_62%_38%,black_45%,rgba(0,0,0,0.85)_58%,rgba(0,0,0,0.4)_68%,transparent_78%)]"
                     loading="lazy"
@@ -619,13 +638,20 @@ const faqs = [
               </div>
               <div className="w-full lg:w-1/2 lg:pl-4 contents lg:block">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold mb-4 order-1 lg:order-none mt-2 lg:mt-0">
-                  Bước 3
+                  {content.steps?.[2]?.badge || "Bước 3"}
                 </div>
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">Composite phục hồi chịu lực Beautifil Injectable X</h3>
-                <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">Sức mạnh hạt độn Nano-Optimized Silane – Thích ứng thành xoang</h4>
-                <p className="font-body text-sm text-slate-600 leading-relaxed mb-6 order-5 lg:order-none">
-                  Với <strong className="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">đặc tính lưu biến thông minh (thixotropic)</strong>, Beautifil Injectable X định hình cực tốt khi đắp lớp nhưng tự động chảy loang phẳng láng dưới áp lực. Vật liệu <strong className="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">thích ứng chính xác với mọi ngóc ngách vi thể của xoang II dưới nướu mà không tạo bọt khí</strong>.
-                </p>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-3 order-2 lg:order-none">
+                  {content.steps?.[2]?.title || "Composite phục hồi chịu lực Beautifil Injectable X"}
+                </h3>
+                <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2 order-3 lg:order-none">
+                  {content.steps?.[2]?.subtitle || "Sức mạnh hạt độn Nano-Optimized Silane – Thích ứng thành xoang"}
+                </h4>
+                <p 
+                  className="font-body text-sm text-slate-600 leading-relaxed mb-6 order-5 lg:order-none"
+                  dangerouslySetInnerHTML={{
+                    __html: content.steps?.[2]?.description || 'Với <strong class="font-bold text-[#00ADEF] bg-sky-50 px-1 rounded">đặc tính lưu biến thông minh (thixotropic)</strong>, Beautifil Injectable X định hình cực tốt khi đắp lớp nhưng tự động chảy loang phẳng láng dưới áp lực. Vật liệu <strong class="font-bold text-slate-900 underline decoration-sky-300 decoration-2 underline-offset-2">thích ứng chính xác với mọi ngóc ngách vi thể của xoang II dưới nướu mà không tạo bọt khí</strong>.'
+                  }}
+                />
                 <div className="space-y-4 order-6 lg:order-none">
                   <div className="flex items-start gap-3 bg-white border border-slate-200 rounded-xl p-4 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:border-sky-200 hover:shadow-md transition-all">
                     <div className="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center shrink-0">
@@ -998,13 +1024,13 @@ const faqs = [
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">Giải đáp <br className="block sm:hidden" /><span className="text-[#00ADEF]">hoài nghi lâm sàng</span></h2>
           </div>
           <div className="space-y-4 order-6 lg:order-none">
-            {faqs.map((faq, idx) => (
+            {((content.faqs && content.faqs.length > 0) ? content.faqs : faqs).map((faq: any, idx: number) => (
               <AccordionItem 
-                key={idx}
+                key={faq.id || idx}
                 question={faq.q}
-                answer={faq.a}
+                answer={typeof faq.a === 'string' ? <span dangerouslySetInnerHTML={{ __html: faq.a }} /> : faq.a}
                 isOpen={openFaqIndex === idx}
-                 onClick={() => setOpenFaqIndex(openFaqIndex === idx ? -1 : idx)}
+                onClick={() => setOpenFaqIndex(openFaqIndex === idx ? -1 : idx)}
               />
             ))}
           </div>
@@ -1028,12 +1054,14 @@ const faqs = [
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
           <div className="text-center relative">
             <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-amber-500/20 border border-amber-500/30 mb-6 font-mono text-[10px] sm:text-xs font-bold text-amber-400 tracking-wide">
-              Đặc quyền đồng hành không thể từ chối
+              {content.offer?.badge || "Đặc quyền đồng hành không thể từ chối"}
             </span>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-10 tracking-tight">
-              Gói giải pháp đồng bộ <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">combo "Phục hồi sinh học MiCD - Chặn đứng ê buốt"</span>
-            </h2>
+            <h2 
+              className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-10 tracking-tight"
+              dangerouslySetInnerHTML={{
+                __html: content.offer?.headline || 'Gói giải pháp đồng bộ <br class="hidden sm:block" /><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">combo "Phục hồi sinh học MiCD - Chặn đứng ê buốt"</span>'
+              }}
+            />
           </div>
 
           <div className="space-y-6 lg:space-y-8 mb-8 w-full max-w-5xl mx-auto">
@@ -1060,7 +1088,7 @@ const faqs = [
                 </div>
                 <div className="w-full lg:w-[45%] lg:max-w-[400px] flex justify-center items-center">
                   <img 
-                    src="/image/phuc-hoi-truc-tiep.webp" 
+                    src={content.offer?.coreProductsImage || "/image/phuc-hoi-truc-tiep.webp"} 
                     alt="Bộ 3 sản phẩm cốt lõi Shofu" 
                     className="w-full max-w-[280px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"
@@ -1092,7 +1120,7 @@ const faqs = [
                 </div>
                 <div className="w-full lg:w-[45%] lg:max-w-[400px] flex justify-center items-center">
                   <img 
-                    src="/image/qua-tang-doc-quyen-shofu-giai-phap-phuc-hoi-truc-tiep.webp" 
+                    src={content.offer?.giftImage || "/image/qua-tang-doc-quyen-shofu-giai-phap-phuc-hoi-truc-tiep.webp"} 
                     alt="Bộ 3 quà tặng đặc quyền Shofu" 
                     className="w-full max-w-[280px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"

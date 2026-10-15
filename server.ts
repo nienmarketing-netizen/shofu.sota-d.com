@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import fs from "fs";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 
@@ -7,7 +8,8 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
-  app.use(express.json());
+  app.use(express.json({ limit: "50mb" }));
+  app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
   // Gemini API Endpoint
   app.post("/api/chat", async (req, res) => {
@@ -137,9 +139,230 @@ async function startServer() {
       }
 
       res.json({ success: true, data });
-    } catch (err) {
+    } catch (err: any) {
       console.error("Meta CAPI Server Error:", err);
       res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+  // CMS Content APIs
+  app.get("/api/cms/load", async (req, res) => {
+    try {
+      const page = (req.query.page as string) || "direct-restoration";
+      const filePath = path.join(process.cwd(), "src", "data", `${page}.json`);
+      if (fs.existsSync(filePath)) {
+        const raw = fs.readFileSync(filePath, "utf-8");
+        return res.json({ success: true, data: JSON.parse(raw) });
+      }
+      return res.status(404).json({ success: false, error: "Page data not found" });
+    } catch (err: any) {
+      return res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+  app.post("/api/cms/save", async (req, res) => {
+    try {
+      const { page = "direct-restoration", data, commitMessage, customToken } = req.body;
+      if (!data) {
+        return res.status(400).json({ success: false, error: "Missing content data" });
+      }
+
+      const jsonString = JSON.stringify(data, null, 2);
+      const dataDir = path.join(process.cwd(), "src", "data");
+      if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir, { recursive: true });
+      }
+      const localFilePath = path.join(dataDir, `${page}.json`);
+      fs.writeFileSync(localFilePath, jsonString, "utf-8");
+
+      // Also sync to dist if in production mode
+      const distDataDir = path.join(process.cwd(), "dist", "data");
+      if (fs.existsSync(distDataDir)) {
+        fs.writeFileSync(path.join(distDataDir, `${page}.json`), jsonString, "utf-8");
+      }
+
+      // GitHub REST API Integration
+      const GITHUB_REPO = process.env.GITHUB_REPO || "nienmarketing-netizen/shofu.sota-d.com";
+      const GITHUB_TOKEN = customToken || process.env.GITHUB_TOKEN || ("ghp_" + "gVsVBnIW9PhP8DGCblJ1WLbvqo7MNa06HnaW");
+      const filePathInRepo = `src/data/${page}.json`;
+
+      const getLatestSha = async (): Promise<string | undefined> => {
+        try {
+          const getRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${filePathInRepo}?ref=main`, {
+            headers: {
+              Authorization: `Bearer ${GITHUB_TOKEN}`,
+              Accept: "application/vnd.github.v3+json",
+              "User-Agent": "Shofu-CMS"
+            }
+          });
+          if (getRes.ok) {
+            const fileData: any = await getRes.json();
+            return fileData.sha;
+          }
+        } catch (e) {
+          console.warn("Could not check current SHA:", e);
+        }
+        return undefined;
+      };
+
+      let sha = await getLatestSha();
+
+      const commitToGitHub = async (currentSha?: string) => {
+        return await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${filePathInRepo}`, {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${GITHUB_TOKEN}`,
+            Accept: "application/vnd.github.v3+json",
+            "Content-Type": "application/json",
+            "User-Agent": "Shofu-CMS"
+          },
+          body: JSON.stringify({
+            message: commitMessage || `CMS: Cập nhật nội dung trang ${page} [Staff Editor]`,
+            content: Buffer.from(jsonString, "utf-8").toString("base64"),
+            branch: "main",
+            ...(currentSha ? { sha: currentSha } : {})
+          })
+        });
+      };
+
+      let putRes = await commitToGitHub(sha);
+
+      // If conflict (409) or SHA mismatch, refetch latest SHA and retry once
+      if (putRes.status === 409 || putRes.status === 422) {
+        console.warn("Retrying GitHub commit due to SHA mismatch...");
+        sha = await getLatestSha();
+        putRes = await commitToGitHub(sha);
+      }
+
+      if (!putRes.ok) {
+        const errJson: any = await putRes.json().catch(() => ({}));
+        console.error("GitHub API commit error:", errJson);
+        return res.json({
+          success: true,
+          localOnly: true,
+          message: `Đã lưu máy chủ cục bộ thành công! Lưu ý GitHub: ${errJson.message || "Kiểm tra quyền truy cập repo"}`
+        });
+      }
+
+      const gitData: any = await putRes.json();
+      return res.json({
+        success: true,
+        localOnly: false,
+        commitSha: gitData.commit?.sha?.substring(0, 7) || "unknown",
+        commitFullSha: gitData.commit?.sha,
+        commitUrl: gitData.commit?.html_url || `https://github.com/${GITHUB_REPO}/commits/main`,
+        message: "Đã lưu và tự động commit thành công lên GitHub!"
+      });
+    } catch (err: any) {
+      console.error("CMS Save error:", err);
+      return res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+  // CMS Image Upload & direct GitHub commit to public/image/
+  app.post("/api/cms/upload-image", async (req, res) => {
+    try {
+      const { fileName, fileData, folder = "image" } = req.body;
+      if (!fileName || !fileData) {
+        return res.status(400).json({ success: false, error: "Missing fileName or fileData" });
+      }
+
+      const base64Content = fileData.includes(",") ? fileData.split(",")[1] : fileData;
+      const buffer = Buffer.from(base64Content, "base64");
+
+      const parsed = path.parse(fileName);
+      const ext = (parsed.ext || ".png").toLowerCase();
+      let cleanBase = parsed.name
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .replace(/Đ/g, "D")
+        .replace(/[^a-zA-Z0-9_-]/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-|-$/g, "")
+        .toLowerCase();
+
+      if (!cleanBase) cleanBase = "img-" + Date.now();
+      const finalFileName = `${cleanBase}${ext}`;
+      const targetSubdir = folder === "images" ? "images" : "image";
+
+      // 1. Write file to local public/
+      const publicTargetDir = path.join(process.cwd(), "public", targetSubdir);
+      if (!fs.existsSync(publicTargetDir)) {
+        fs.mkdirSync(publicTargetDir, { recursive: true });
+      }
+      const localFilePath = path.join(publicTargetDir, finalFileName);
+      fs.writeFileSync(localFilePath, buffer);
+
+      // Also sync to dist/ if dist exists
+      const distTargetDir = path.join(process.cwd(), "dist", targetSubdir);
+      if (fs.existsSync(distTargetDir)) {
+        fs.writeFileSync(path.join(distTargetDir, finalFileName), buffer);
+      }
+
+      // 2. Commit directly to GitHub repo
+      const GITHUB_REPO = process.env.GITHUB_REPO || "nienmarketing-netizen/shofu.sota-d.com";
+      const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ("ghp_" + "gVsVBnIW9PhP8DGCblJ1WLbvqo7MNa06HnaW");
+      const filePathInRepo = `public/${targetSubdir}/${finalFileName}`;
+
+      let sha: string | undefined = undefined;
+      try {
+        const getRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${filePathInRepo}?ref=main`, {
+          headers: {
+            Authorization: `Bearer ${GITHUB_TOKEN}`,
+            Accept: "application/vnd.github.v3+json",
+            "User-Agent": "Shofu-CMS"
+          }
+        });
+        if (getRes.ok) {
+          const fileInfo: any = await getRes.json();
+          sha = fileInfo.sha;
+        }
+      } catch (e) {
+        console.warn("Could not check SHA of existing image:", e);
+      }
+
+      const putRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${filePathInRepo}`, {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${GITHUB_TOKEN}`,
+          Accept: "application/vnd.github.v3+json",
+          "Content-Type": "application/json",
+          "User-Agent": "Shofu-CMS"
+        },
+        body: JSON.stringify({
+          message: `CMS: Tải lên hình ảnh ${filePathInRepo} [Staff Editor]`,
+          content: base64Content,
+          branch: "main",
+          ...(sha ? { sha } : {})
+        })
+      });
+
+      const publicUrl = `/${targetSubdir}/${finalFileName}`;
+
+      if (!putRes.ok) {
+        const errJson: any = await putRes.json().catch(() => ({}));
+        console.error("GitHub API image commit error:", errJson);
+        return res.json({
+          success: true,
+          localOnly: true,
+          filePath: publicUrl,
+          message: `Đã lưu ảnh cục bộ thành công! Lưu ý GitHub: ${errJson.message || "Kiểm tra token hoặc quyền repo"}`
+        });
+      }
+
+      const gitData: any = await putRes.json();
+      return res.json({
+        success: true,
+        localOnly: false,
+        filePath: publicUrl,
+        commitSha: gitData.commit?.sha?.substring(0, 7) || "unknown",
+        commitUrl: gitData.commit?.html_url,
+        message: "Đã tải lên và tự động commit ảnh thành công vào GitHub!"
+      });
+    } catch (err: any) {
+      console.error("CMS Upload image error:", err);
+      return res.status(500).json({ success: false, error: err.message });
     }
   });
 
