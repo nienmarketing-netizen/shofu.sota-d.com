@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bold, Plus, Trash2, Upload, Video, BarChart3, ShieldCheck, DollarSign } from 'lucide-react';
+import { Bold, Plus, Trash2, Upload, Video, BarChart3, ShieldCheck, DollarSign, Eye } from 'lucide-react';
 import { applyFormat } from './types';
 
 interface Section4EvidenceEditorProps {
@@ -119,6 +119,16 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
               onChange={(e) => setHeadline(e.target.value)}
               className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-500 text-sm font-medium outline-none font-mono"
             />
+            {/* Live Preview of Headline */}
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 mt-2">
+              <span className="text-[10.5px] font-mono text-slate-500 font-bold uppercase tracking-wider block mb-1">
+                Xem trước Tiêu đề Bằng chứng:
+              </span>
+              <div 
+                className="font-heading font-extrabold text-lg sm:text-xl text-slate-900 leading-snug"
+                dangerouslySetInnerHTML={{ __html: headline || '<span class="text-slate-400 italic text-sm">Chưa nhập tiêu đề...</span>' }}
+              />
+            </div>
           </div>
 
           <div>
@@ -396,6 +406,84 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
                 onChange={(e) => setUsp4({ ...usp4, solutionImage: e.target.value })}
                 className="w-full px-3 py-1.5 rounded-lg border border-blue-200 text-xs font-mono outline-none"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 5. XEM TRƯỚC THÀNH PHẦN BẰNG CHỨNG KHOA HỌC (LIVE COMPONENT PREVIEW) */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+        <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold">
+              <Eye className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="font-heading font-bold text-base text-slate-900">
+                Xem trước giao diện Bằng chứng khoa học (Live Component Preview)
+              </h3>
+              <p className="text-slate-500 text-xs">
+                Mô phỏng 4 trụ cột bằng chứng lâm sàng: 50 MPa, Video/SEM, S-PRG Bioactive và Tối ưu chi phí.
+              </p>
+            </div>
+          </div>
+          <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold border border-purple-200">
+            <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+            Trực quan tức thì
+          </span>
+        </div>
+
+        {/* Mock Evidence Container */}
+        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8 space-y-6">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            {badge && (
+              <span className="inline-block px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-mono text-xs font-bold uppercase tracking-wider">
+                {badge}
+              </span>
+            )}
+            <div
+              className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 leading-snug"
+              dangerouslySetInnerHTML={{ __html: headline || '' }}
+            />
+            {description && <p className="text-slate-600 text-xs sm:text-sm">{description}</p>}
+          </div>
+
+          {/* 4 Pillars Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Pillar 1 */}
+            <div className="rounded-xl border border-slate-200 bg-white p-4 space-y-2">
+              <div className="font-bold text-xs text-purple-700 flex items-center gap-1.5">
+                <BarChart3 className="w-4 h-4" />
+                <span>Trụ cột 1: {usp1.title}</span>
+              </div>
+              <p className="text-slate-600 text-xs leading-relaxed">{usp1.description}</p>
+            </div>
+
+            {/* Pillar 2 */}
+            <div className="rounded-xl border border-slate-200 bg-white p-4 space-y-2">
+              <div className="font-bold text-xs text-red-600 flex items-center gap-1.5">
+                <Video className="w-4 h-4" />
+                <span>Trụ cột 2: {usp2.title}</span>
+              </div>
+              <p className="text-slate-600 text-xs leading-relaxed">{usp2.description}</p>
+            </div>
+
+            {/* Pillar 3 */}
+            <div className="rounded-xl border border-slate-200 bg-white p-4 space-y-2">
+              <div className="font-bold text-xs text-emerald-600 flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4" />
+                <span>Trụ cột 3: {usp3.title}</span>
+              </div>
+              <p className="text-slate-600 text-xs leading-relaxed">{usp3.description}</p>
+            </div>
+
+            {/* Pillar 4 */}
+            <div className="rounded-xl border border-slate-200 bg-white p-4 space-y-2">
+              <div className="font-bold text-xs text-[#00ADEF] flex items-center gap-1.5">
+                <DollarSign className="w-4 h-4" />
+                <span>Trụ cột 4: {usp4.title}</span>
+              </div>
+              <p className="text-slate-600 text-xs leading-relaxed">{usp4.solutionDescription}</p>
             </div>
           </div>
         </div>

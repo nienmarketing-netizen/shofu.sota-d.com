@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bold, Plus, Trash2, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { Bold, Plus, Trash2, HelpCircle, ChevronDown, ChevronUp, Eye } from 'lucide-react';
 import { FaqItem, applyFormat } from './types';
 
 interface Section6FaqEditorProps {
@@ -154,6 +154,64 @@ export const Section6FaqEditor: React.FC<Section6FaqEditorProps> = ({
               </div>
             );
           })}
+        </div>
+      </div>
+
+      {/* 2. XEM TRƯỚC THÀNH PHẦN FAQ ACCORDION (LIVE COMPONENT PREVIEW) */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+        <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-sky-50 text-[#00ADEF] flex items-center justify-center font-bold">
+              <Eye className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="font-heading font-bold text-base text-slate-900">
+                Xem trước giao diện FAQ (Live Component Preview)
+              </h3>
+              <p className="text-slate-500 text-xs">
+                Mô phỏng tương tác đóng/mở câu hỏi và câu trả lời giải đáp lâm sàng.
+              </p>
+            </div>
+          </div>
+          <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Tương tác trực tiếp
+          </span>
+        </div>
+
+        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 space-y-3">
+          <div className="text-center pb-2">
+            <span className="inline-block px-3 py-1 rounded-full bg-blue-50 text-[#00ADEF] border border-blue-200 font-mono text-xs font-bold uppercase tracking-wider mb-2">
+              FAQ Lâm sàng
+            </span>
+            <h4 className="font-heading font-extrabold text-xl text-slate-900">Câu hỏi thường gặp của Bác sĩ</h4>
+          </div>
+
+          <div className="space-y-2.5 max-w-3xl mx-auto">
+            {faqs.map((f, i) => {
+              const isOpen = expandedId === f.id;
+              return (
+                <div key={f.id || i} className="rounded-xl border border-slate-200 bg-white shadow-xs overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => setExpandedId(isOpen ? null : f.id)}
+                    className="w-full p-4 text-left flex items-center justify-between gap-3 hover:bg-slate-50 transition-colors"
+                  >
+                    <span className="font-bold text-xs sm:text-sm text-slate-900 flex items-center gap-2">
+                      <span className="text-[#00ADEF] font-mono">Q{i + 1}.</span>
+                      <span>{f.q}</span>
+                    </span>
+                    {isOpen ? <ChevronUp className="w-4 h-4 text-slate-400 shrink-0" /> : <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />}
+                  </button>
+                  {isOpen && (
+                    <div className="p-4 pt-0 text-xs sm:text-sm text-slate-600 border-t border-slate-100 bg-slate-50/50 leading-relaxed font-body">
+                      <div dangerouslySetInnerHTML={{ __html: f.a }} />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

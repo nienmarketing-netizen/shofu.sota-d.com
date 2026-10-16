@@ -40,6 +40,7 @@ import { Section4EvidenceEditor } from './indirect-restoration/Section4EvidenceE
 import { Section5OfferEditor } from './indirect-restoration/Section5OfferEditor';
 import { Section6FaqEditor } from './indirect-restoration/Section6FaqEditor';
 import { Section7TestimonialsEditor } from './indirect-restoration/Section7TestimonialsEditor';
+import { IndirectRestoration } from '../../components/shofu/solutions/IndirectRestoration';
 
 export default function IndirectRestorationEditor() {
   // Authentication Gate
@@ -50,7 +51,7 @@ export default function IndirectRestorationEditor() {
   const [authError, setAuthError] = useState('');
 
   // Active Tab navigation
-  const [activeTab, setActiveTab] = useState<'hero' | 'pain-points' | 'gold-standard' | 'evidence' | 'offer' | 'faq' | 'testimonials'>('hero');
+  const [activeTab, setActiveTab] = useState<'hero' | 'pain-points' | 'gold-standard' | 'evidence' | 'offer' | 'faq' | 'testimonials' | 'preview'>('hero');
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [saveMessage, setSaveMessage] = useState<string>('');
   const [commitSha, setCommitSha] = useState<string>('');
@@ -212,24 +213,27 @@ export default function IndirectRestorationEditor() {
   };
 
   // Load content with multi-layer fallback
-  const fetchPageData = async () => {
+  const fetchPageData = async (isManual = false) => {
     setIsLoadingInitialData(true);
     let loaded = false;
 
-    // 1. Thử đọc từ localStorage trước (để khôi phục nhanh nhất phiên làm việc)
-    try {
-      const localCached = localStorage.getItem('shofu_indirect_restoration_data');
-      if (localCached) {
-        const parsed = JSON.parse(localCached);
-        if (isValidPayload(parsed)) {
-          applyJsonData(parsed);
-          loaded = true;
-        } else {
-          // Xoá cache rỗng hoặc hỏng
-          localStorage.removeItem('shofu_indirect_restoration_data');
+    // Nếu người dùng bấm "Tải lại dữ liệu" thủ công, bỏ qua cache local để nạp dữ liệu mới nhất từ server/GitHub
+    if (!isManual) {
+      // 1. Thử đọc từ localStorage trước (để khôi phục nhanh nhất phiên làm việc)
+      try {
+        const localCached = localStorage.getItem('shofu_indirect_restoration_data');
+        if (localCached) {
+          const parsed = JSON.parse(localCached);
+          if (isValidPayload(parsed)) {
+            applyJsonData(parsed);
+            loaded = true;
+          } else {
+            // Xoá cache rỗng hoặc hỏng
+            localStorage.removeItem('shofu_indirect_restoration_data');
+          }
         }
-      }
-    } catch (e) {}
+      } catch (e) {}
+    }
 
     // 2. Thử gọi backend API /api/cms/load?page=indirect-restoration
     if (!loaded) {
@@ -267,9 +271,22 @@ export default function IndirectRestorationEditor() {
     // 4. Tuyệt đối đảm bảo không bao giờ trống dữ liệu: fallback về DEFAULT_INDIRECT_DATA
     if (!loaded) {
       applyJsonData(DEFAULT_INDIRECT_DATA);
+      loaded = true;
     }
 
     setIsLoadingInitialData(false);
+
+    if (isManual) {
+      if (loaded) {
+        setSaveStatus('saved');
+        setSaveMessage('Đã tải và đồng bộ dữ liệu mới nhất từ GitHub repo thành công!');
+        setTimeout(() => setSaveStatus('idle'), 4000);
+      } else {
+        setSaveStatus('error');
+        setSaveMessage('Không thể tải dữ liệu mới nhất. Vui lòng kiểm tra kết nối mạng.');
+        setTimeout(() => setSaveStatus('idle'), 4000);
+      }
+    }
   };
 
   useEffect(() => {
@@ -566,7 +583,8 @@ export default function IndirectRestorationEditor() {
     { id: 'evidence', label: '4. Bằng chứng khoa học (50 MPa & S-PRG)', icon: ShieldCheck },
     { id: 'offer', label: '5. Gói ưu đãi & Quà tặng', icon: Gift },
     { id: 'faq', label: '6. Câu hỏi thường gặp FAQ', icon: HelpCircle },
-    { id: 'testimonials', label: '7. Đánh giá Bác sĩ lâm sàng', icon: Quote }
+    { id: 'testimonials', label: '7. Đánh giá Bác sĩ lâm sàng', icon: Quote },
+    { id: 'preview', label: '8. Xem trước toàn trang (Live Preview)', icon: Eye }
   ];
 
   return (
@@ -600,12 +618,26 @@ export default function IndirectRestorationEditor() {
 
           <div className="flex items-center gap-2 sm:gap-3">
             <button
-              type="button"
-              onClick={handleResetToDefault}
-              className="px-3 py-2 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-600 text-xs font-bold transition-colors hidden md:inline-flex items-center gap-1.5"
+              onClick={() => fetchPageData(true)}
+              disabled={isLoadingInitialData || saveStatus === 'saving'}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200 shadow-sm transition-colors disabled:opacity-50 cursor-pointer"
+              title="Tải và đồng bộ dữ liệu mới nhất từ GitHub repository"
             >
-              <RefreshCw className="w-3.5 h-3.5" />
-              <span>Khôi phục mặc định</span>
+              <RefreshCw className={`w-3.5 h-3.5 text-slate-600 ${isLoadingInitialData ? 'animate-spin' : ''}`} />
+              <span className="hidden md:inline">Tải lại dữ liệu</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab(activeTab === 'preview' ? 'hero' : 'preview')}
+              className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold border shadow-sm transition-colors cursor-pointer ${
+                activeTab === 'preview'
+                  ? 'bg-emerald-600 text-white border-emerald-500 shadow-emerald-500/20'
+                  : 'bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200'
+              }`}
+              title="Xem trước giao diện thực tế toàn trang"
+            >
+              <Eye className={`w-3.5 h-3.5 ${activeTab === 'preview' ? 'text-white' : 'text-[#00ADEF]'}`} />
+              <span className="hidden sm:inline">{activeTab === 'preview' ? 'Quay lại Sửa' : 'Xem trước'}</span>
             </button>
 
             <a
@@ -614,8 +646,8 @@ export default function IndirectRestorationEditor() {
               rel="noreferrer"
               className="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-colors inline-flex items-center gap-1.5"
             >
-              <Eye className="w-3.5 h-3.5" />
-              <span>Xem trang</span>
+              <Globe className="w-3.5 h-3.5 text-slate-500" />
+              <span className="hidden sm:inline">Mở tab mới</span>
             </a>
 
             <button
@@ -822,6 +854,46 @@ export default function IndirectRestorationEditor() {
                   row2={testimonialsRow2}
                   setRow2={setTestimonialsRow2}
                 />
+              )}
+
+              {activeTab === 'preview' && (
+                <div className="space-y-4 animate-fadeIn">
+                  <div className="bg-slate-900 text-white p-4 sm:p-5 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-lg border border-slate-800">
+                    <div className="flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold">
+                        <Eye className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <div className="font-heading font-bold text-sm sm:text-base flex items-center gap-2">
+                          <span>Xem trước trực quan toàn trang</span>
+                          <span className="text-[10px] bg-emerald-500 text-white px-2 py-0.5 rounded-full font-mono font-semibold">Live Mode</span>
+                        </div>
+                        <p className="text-slate-400 text-xs mt-0.5">
+                          Tất cả các thay đổi vừa chỉnh sửa đang được kết xuất trực tiếp theo đúng mã giao diện của trang Landing Page.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => setActiveTab('hero')}
+                        className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-colors border border-slate-700 cursor-pointer"
+                      >
+                        Quay lại Chỉnh sửa
+                      </button>
+                      <button
+                        onClick={handleSave}
+                        disabled={saveStatus === 'saving'}
+                        className="px-4 py-2 rounded-xl bg-[#00ADEF] hover:bg-sky-500 text-white text-xs font-bold transition-all shadow-md cursor-pointer disabled:opacity-50"
+                      >
+                        Lưu thay đổi này
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xl">
+                    <IndirectRestoration overrideContent={buildPayload()} />
+                  </div>
+                </div>
               )}
             </>
           )}

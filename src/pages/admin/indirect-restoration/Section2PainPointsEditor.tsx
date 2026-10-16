@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bold, Plus, Trash2, AlertTriangle, Layers, Unlink, Banknote } from 'lucide-react';
+import { Bold, Plus, Trash2, AlertTriangle, Layers, Unlink, Banknote, Eye, ArrowRight } from 'lucide-react';
 import { PainPointItem, applyFormat } from './types';
 
 interface Section2PainPointsEditorProps {
@@ -112,6 +112,23 @@ export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> =
               className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-red-500 text-sm font-medium outline-none font-mono"
               placeholder="Nhập tiêu đề HTML..."
             />
+
+            {/* Live Preview on Dark Background */}
+            <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-white mt-2">
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="text-[10.5px] font-mono text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                  Xem trước trên nền tối thực tế:
+                </span>
+                <span className="text-[10px] text-red-300 bg-red-950/80 px-2 py-0.5 rounded font-bold border border-red-800">
+                  Landing Page Dark Mode
+                </span>
+              </div>
+              <div 
+                className="font-heading font-extrabold text-lg sm:text-xl text-white leading-snug"
+                dangerouslySetInnerHTML={{ __html: headline || '<span class="text-slate-500 italic text-sm">Chưa có tiêu đề...</span>' }}
+              />
+            </div>
           </div>
 
           {/* Description */}
@@ -126,6 +143,12 @@ export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> =
               className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-red-500 text-sm outline-none"
               placeholder="Mô tả bối cảnh..."
             />
+            {description && (
+              <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 mt-2 text-xs text-slate-600 leading-relaxed font-body">
+                <span className="text-[10.5px] font-mono text-slate-400 block mb-1 uppercase font-bold">Xem trước mô tả:</span>
+                <div dangerouslySetInnerHTML={{ __html: description }} />
+              </div>
+            )}
           </div>
 
           {/* CTA Text */}
@@ -234,6 +257,75 @@ export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> =
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* 3. XEM TRƯỚC THÀNH PHẦN NỖI ĐAU LÂM SÀNG (DARK THEME) */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+        <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-red-50 text-red-600 flex items-center justify-center font-bold">
+              <Eye className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="font-heading font-bold text-base text-slate-900">
+                Xem trước giao diện Nỗi đau lâm sàng (Live Component Preview)
+              </h3>
+              <p className="text-slate-500 text-xs">
+                Mô phỏng nền tối và các thẻ cảnh báo rủi ro sút phục hình, kênh cộm, chi phí.
+              </p>
+            </div>
+          </div>
+          <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-bold border border-red-200">
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            Dark theme landing page
+          </span>
+        </div>
+
+        {/* Mock Dark Pain Points Section */}
+        <div className="rounded-2xl bg-slate-950 border border-slate-800 p-6 sm:p-8 text-white space-y-6 shadow-2xl">
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            {badge && (
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-mono text-xs font-bold uppercase tracking-wider">
+                <AlertTriangle className="w-3.5 h-3.5" />
+                <span>{badge}</span>
+              </div>
+            )}
+            <div
+              className="font-heading font-extrabold text-xl sm:text-2xl text-white leading-snug"
+              dangerouslySetInnerHTML={{ __html: headline || '' }}
+            />
+            {description && (
+              <div
+                className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
+            )}
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            {items.map((it, idx) => (
+              <div key={it.id || idx} className="rounded-xl bg-slate-900/90 border border-slate-800 p-4 space-y-2 hover:border-red-900/50 transition-all">
+                <div className="w-8 h-8 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center font-bold">
+                  {it.iconName === 'Banknote' ? <Banknote className="w-4 h-4" /> : it.iconName === 'Unlink' ? <Unlink className="w-4 h-4" /> : <AlertTriangle className="w-4 h-4" />}
+                </div>
+                <h4 className="font-heading font-bold text-sm text-white">{it.title}</h4>
+                <div
+                  className="text-slate-400 text-xs leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: it.description }}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center pt-2">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-red-600 hover:bg-red-700 text-white font-mono text-xs font-bold uppercase tracking-wider shadow-lg shadow-red-900/40">
+              <span>{ctaText || 'TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO'}</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

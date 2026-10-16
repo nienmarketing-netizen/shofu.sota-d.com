@@ -108,12 +108,16 @@ const YoutubeAutoplay = ({ videoId }: { videoId: string }) => {
   );
 };
 
-export function IndirectRestoration() {
-  const [content, setContent] = useState(defaultData);
+export function IndirectRestoration({ overrideContent }: { overrideContent?: any } = {}) {
+  const [content, setContent] = useState(overrideContent || defaultData);
   const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
   const [campaignModalTitle, setCampaignModalTitle] = useState('');
 
   useEffect(() => {
+    if (overrideContent) {
+      setContent(overrideContent);
+      return;
+    }
     const loadDynamicContent = async () => {
       let loaded = false;
       // 1. Kiểm tra localStorage (phục hồi tức thì dữ liệu vừa chỉnh sửa)

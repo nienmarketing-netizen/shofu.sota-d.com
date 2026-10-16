@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bold, Plus, Trash2, Upload, Microscope, Umbrella, ShieldCheck, Clock, Shield } from 'lucide-react';
+import { Bold, Plus, Trash2, Upload, Microscope, Umbrella, ShieldCheck, Clock, Shield, Eye, CheckCircle2, ArrowRight } from 'lucide-react';
 import { ProductItem, DiagramConfig, applyFormat } from './types';
 
 interface Section3StepsEditorProps {
@@ -178,6 +178,16 @@ export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
               onChange={(e) => setHeadline(e.target.value)}
               className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 text-sm font-medium outline-none font-mono"
             />
+            {/* Live Preview of Headline */}
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 mt-2">
+              <span className="text-[10.5px] font-mono text-slate-500 font-bold uppercase tracking-wider block mb-1">
+                Xem trước Tiêu đề:
+              </span>
+              <div 
+                className="font-heading font-extrabold text-lg sm:text-xl text-slate-900 leading-snug"
+                dangerouslySetInnerHTML={{ __html: headline || '<span class="text-slate-400 italic text-sm">Chưa nhập tiêu đề...</span>' }}
+              />
+            </div>
           </div>
 
           <div>
@@ -190,6 +200,12 @@ export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
               onChange={(e) => setDescription(e.target.value)}
               className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 text-sm outline-none"
             />
+            {description && (
+              <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 mt-2 text-xs text-slate-600">
+                <span className="text-[10.5px] font-mono text-slate-400 block mb-1 uppercase font-bold">Xem trước mô tả:</span>
+                <div>{description}</div>
+              </div>
+            )}
           </div>
 
           <div>
@@ -522,6 +538,116 @@ export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
                     <Trash2 className="w-3.5 h-3.5" />
                   </button>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 4. XEM TRƯỚC THÀNH PHẦN TIÊU CHUẨN VÀNG (LIVE COMPONENT PREVIEW) */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+        <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold">
+              <Eye className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="font-heading font-bold text-base text-slate-900">
+                Xem trước giao diện Tiêu chuẩn vàng (Live Component Preview)
+              </h3>
+              <p className="text-slate-500 text-xs">
+                Mô phỏng hai thẻ sản phẩm BBX & BeautiLink SA và sơ đồ khoảng ghép 24µm.
+              </p>
+            </div>
+          </div>
+          <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-bold border border-amber-200">
+            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            Trực quan tức thì
+          </span>
+        </div>
+
+        {/* Mock Gold Standard Container */}
+        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8 space-y-6">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            {badge && (
+              <span className="inline-block px-3 py-1 rounded-full bg-amber-50 text-amber-600 border border-amber-200 font-mono text-xs font-bold uppercase tracking-wider">
+                {badge}
+              </span>
+            )}
+            <div
+              className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 leading-snug"
+              dangerouslySetInnerHTML={{ __html: headline || '' }}
+            />
+            {description && <p className="text-slate-600 text-xs sm:text-sm">{description}</p>}
+          </div>
+
+          {/* 2 Products Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Step 1: BBX */}
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 space-y-4 shadow-sm">
+              <div className="flex items-center justify-between">
+                <span className="px-2.5 py-1 rounded-lg bg-red-50 text-red-600 font-mono text-[11px] font-bold">
+                  {product1.step || 'BƯỚC 1'}
+                </span>
+                <span className="text-xs font-bold text-slate-500">{product1.role}</span>
+              </div>
+              <h4 className="font-heading font-bold text-base text-slate-900">{product1.name}</h4>
+              <div className="h-40 rounded-xl bg-slate-50 flex items-center justify-center p-3 border border-slate-100 overflow-hidden">
+                {product1.image ? (
+                  <img src={product1.image} alt={product1.name} className="w-full h-full object-contain" />
+                ) : (
+                  <span className="text-xs text-slate-400">Chưa có ảnh</span>
+                )}
+              </div>
+              <ul className="space-y-1.5 pt-1">
+                {product1.features?.slice(0, 3).map((f, i) => (
+                  <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-red-500 shrink-0 mt-0.5" />
+                    <span><strong className="text-slate-900 font-semibold">{f.title}:</strong> {f.description}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Step 2: BeautiLink SA */}
+            <div className="rounded-2xl border border-blue-200 bg-white p-5 space-y-4 shadow-sm">
+              <div className="flex items-center justify-between">
+                <span className="px-2.5 py-1 rounded-lg bg-blue-50 text-[#00ADEF] font-mono text-[11px] font-bold">
+                  {product2.step || 'BƯỚC 2'}
+                </span>
+                <span className="text-xs font-bold text-slate-500">{product2.role}</span>
+              </div>
+              <h4 className="font-heading font-bold text-base text-slate-900">{product2.name}</h4>
+              <div className="h-40 rounded-xl bg-slate-50 flex items-center justify-center p-3 border border-slate-100 overflow-hidden">
+                {product2.image ? (
+                  <img src={product2.image} alt={product2.name} className="w-full h-full object-contain" />
+                ) : (
+                  <span className="text-xs text-slate-400">Chưa có ảnh</span>
+                )}
+              </div>
+              <ul className="space-y-1.5 pt-1">
+                {product2.features?.slice(0, 3).map((f, i) => (
+                  <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00ADEF] shrink-0 mt-0.5" />
+                    <span><strong className="text-slate-900 font-semibold">{f.title}:</strong> {f.description}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Diagram Preview */}
+          <div className="rounded-xl border border-slate-200 bg-white p-4 text-xs space-y-2">
+            <div className="font-bold text-slate-800 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#00ADEF]"></span>
+              <span>Sơ đồ khoảng ghép: {diagram.title}</span>
+            </div>
+            <p className="text-slate-500 text-[11px]">{diagram.description}</p>
+            <div className="flex flex-wrap gap-2 pt-1">
+              {diagram.points?.map((pt, idx) => (
+                <span key={idx} className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-[11px] font-medium border border-slate-200">
+                  ✓ {pt}
+                </span>
               ))}
             </div>
           </div>

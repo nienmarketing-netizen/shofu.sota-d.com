@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bold, Sparkles, Plus, Trash2, Upload, ShieldCheck, Zap, Coins } from 'lucide-react';
+import { Bold, Sparkles, Plus, Trash2, Upload, ShieldCheck, Zap, Coins, Eye, Gift, ArrowRight } from 'lucide-react';
 import { UspItem, applyFormat } from './types';
 
 interface Section1HeroEditorProps {
@@ -132,9 +132,26 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
               className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#00ADEF] focus:ring-2 focus:ring-[#00ADEF]/20 text-sm font-medium outline-none transition-all font-mono"
               placeholder="Nhập tiêu đề HTML..."
             />
-            <p className="text-[11px] text-slate-400 mt-1">
+            <p className="text-[11px] text-slate-400 mt-1 mb-2">
               Hỗ trợ tag HTML: &lt;span class="text-[#00ADEF]"&gt;chữ nổi bật&lt;/span&gt;, &lt;br /&gt;
             </p>
+
+            {/* Live Preview of Headline */}
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="text-[10.5px] font-mono text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-[#00ADEF] animate-pulse"></span>
+                  Xem trước Tiêu đề thực tế:
+                </span>
+                <span className="text-[10px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-bold border border-emerald-200">
+                  Hiển thị ngay
+                </span>
+              </div>
+              <div 
+                className="font-heading font-extrabold text-lg sm:text-xl text-slate-900 leading-snug"
+                dangerouslySetInnerHTML={{ __html: headline || '<span class="text-slate-400 italic font-normal text-sm">Chưa nhập tiêu đề...</span>' }}
+              />
+            </div>
           </div>
 
           {/* Body */}
@@ -167,6 +184,17 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
               className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#00ADEF] focus:ring-2 focus:ring-[#00ADEF]/20 text-sm font-medium outline-none transition-all font-mono"
               placeholder="Nhập nội dung mô tả..."
             />
+
+            {/* Live Preview of Body */}
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 mt-2">
+              <span className="text-[10.5px] font-mono text-slate-500 font-bold uppercase tracking-wider block mb-1.5">
+                Xem trước Đoạn văn mô tả:
+              </span>
+              <div 
+                className="text-xs sm:text-sm text-slate-600 leading-relaxed font-body"
+                dangerouslySetInnerHTML={{ __html: body || '<span class="text-slate-400 italic text-xs">Chưa nhập đoạn văn mô tả...</span>' }}
+              />
+            </div>
           </div>
 
           {/* Hero Image */}
@@ -316,6 +344,97 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
               </button>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* 3. TOÀN BỘ XEM TRƯỚC THÀNH PHẦN HERO SECTION */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+        <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-sky-50 text-[#00ADEF] flex items-center justify-center font-bold">
+              <Eye className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="font-heading font-bold text-base text-slate-900">
+                Xem trước giao diện Hero Section (Live Component Preview)
+              </h3>
+              <p className="text-slate-500 text-xs">
+                Mô phỏng chính xác giao diện Hero như khách hàng thấy trên trang landing page.
+              </p>
+            </div>
+          </div>
+          <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Trực quan tức thì
+          </span>
+        </div>
+
+        {/* Mock Hero Container */}
+        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8 relative overflow-hidden shadow-inner">
+          <div className="flex flex-col lg:flex-row gap-8 items-center">
+            {/* Left Col */}
+            <div className="flex-1 space-y-4">
+              {/* Badge */}
+              {badge && (
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00ADEF]/10 border border-[#00ADEF]/20 font-mono text-xs font-bold text-[#00ADEF]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00ADEF] animate-pulse"></span>
+                  <span>{badge}</span>
+                </div>
+              )}
+
+              {/* Headline */}
+              <div
+                className="font-heading font-extrabold text-xl sm:text-2xl lg:text-3xl text-slate-900 leading-snug tracking-tight"
+                dangerouslySetInnerHTML={{ __html: headline || '' }}
+              />
+
+              {/* Lead Body */}
+              <div
+                className="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-xl"
+                dangerouslySetInnerHTML={{ __html: body || '' }}
+              />
+
+              {/* USPs */}
+              {usps && usps.length > 0 && (
+                <ul className="space-y-2 pt-2">
+                  {usps.map((u, i) => (
+                    <li key={u.id || i} className="flex items-start gap-2.5 p-2.5 rounded-xl border border-slate-200/80 bg-white/70 shadow-xs">
+                      <div className={`w-6 h-6 rounded-full ${i === 0 ? 'bg-red-50 text-red-500' : i === 1 ? 'bg-blue-50 text-[#00ADEF]' : 'bg-amber-50 text-amber-500'} flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold`}>
+                        {i === 0 ? <ShieldCheck className="w-3.5 h-3.5" /> : i === 1 ? <Zap className="w-3.5 h-3.5" /> : <Coins className="w-3.5 h-3.5" />}
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900 text-xs">{u.title}</div>
+                        <div className="text-slate-500 text-[11px] leading-tight">{u.description}</div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {/* CTA Button */}
+              <div className="pt-2">
+                <div className="inline-flex items-center gap-2 bg-[#00ADEF] text-white px-5 py-3 rounded-full font-mono text-xs font-bold uppercase tracking-wider shadow-md hover:bg-sky-500">
+                  <Gift className="w-4 h-4 shrink-0" />
+                  <span>{ctaText || 'NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI'}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </div>
+                {footerNote && (
+                  <p className="text-[11px] text-slate-400 mt-2 font-medium">{footerNote}</p>
+                )}
+              </div>
+            </div>
+
+            {/* Right Col: Hero Image */}
+            <div className="w-full lg:w-72 shrink-0 flex items-center justify-center relative">
+              <div className="w-56 h-56 rounded-2xl bg-white border border-slate-200 p-3 shadow-md flex items-center justify-center overflow-hidden">
+                {image ? (
+                  <img src={image} alt="Hero" className="w-full h-full object-contain" />
+                ) : (
+                  <span className="text-xs text-slate-400">Chưa có ảnh</span>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
