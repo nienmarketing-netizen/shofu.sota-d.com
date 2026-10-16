@@ -1,0 +1,354 @@
+{
+  "hero": {
+    "badge": "Xu thế nha khoa can thiệp tối thiểu & Vật liệu sinh học (Bioactive)",
+    "headline": "Giải pháp kiểm soát nguy cơ <br class=\"md:hidden\" /><span class=\"text-[#00ADEF]\">sút phục hình</span>, <span class=\"text-[#00ADEF]\">ê buốt sau gắn</span> <br class=\"md:hidden\" />và <span class=\"text-[#00ADEF]\">lãng phí vật tư</span>!",
+    "body": "Tối ưu hóa <strong class=\"text-slate-900\">độ dày màng liên kết (Cement Space)</strong> nhờ sự kết hợp giữa màng keo 5µm (<strong class=\"text-slate-900\">BeautiBond Xtreme</strong>) và lớp xi măng mỏng 14µm (<strong class=\"text-slate-900\">BeautiLink SA</strong>). Tạo liên kết hóa học bền vững với lực dán trượt <strong class=\"text-[#00ADEF] font-bold\">~50 MPa</strong> trên Zirconia và ổn định cấu trúc sau 5.000 chu kỳ nhồi nhiệt (<strong class=\"text-slate-900\">Dental Advisor 2024</strong>).",
+    "image": "/image/beautilink-bbx-new.webp",
+    "imageSizeNote": "Khuyến nghị: 1100 × 900 px (PNG / WebP tách nền, dung lượng < 300KB)",
+    "usps": [
+      {
+        "id": "usp-1",
+        "iconName": "ShieldCheck",
+        "title": "Triệt tiêu ê buốt tức thì và muộn",
+        "description": "Bảo vệ tủy răng sống bằng màng ngăn kỵ nước không chứa HEMA."
+      },
+      {
+        "id": "usp-2",
+        "iconName": "Zap",
+        "title": "Quy trình \"True Universal\" 1 bước",
+        "description": "Gắn chặt Zirconia, sứ Lithium Disilicate, loại bỏ các bước primer trung gian."
+      },
+      {
+        "id": "usp-3",
+        "iconName": "Coins",
+        "title": "Tiết kiệm chi phí điều trị",
+        "description": "Ống Handmix dung tích tối ưu 15.6g thực hiện tới 120 ca lâm sàng."
+      }
+    ],
+    "ctaText": "NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI",
+    "footerNote": "Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor"
+  },
+  "painPoints": {
+    "badge": "Thực trạng lâm sàng",
+    "headline": "Có phải bác sĩ đang <br class=\"md:hidden\" /><span class=\"text-slate-400\">âm thầm chịu đựng</span> <br class=\"md:hidden\" /><span class=\"text-red-500\">những rủi ro</span> này mỗi ngày?",
+    "description": "Những rào cản và nguy cơ thường trực trong phục hình gián tiếp làm hao mòn lợi nhuận và giảm uy tín phòng khám.",
+    "items": [
+      {
+        "id": "pain-1",
+        "iconName": "Unlink",
+        "title": "Sút phục hình & Ê buốt muộn",
+        "description": "Keo dán chứa HEMA hoạt động như \"bọt biển\" <strong class=\"text-red-400\">ngậm dịch ngà</strong>. Theo thời gian, HEMA bị <strong class=\"text-red-400\">thủy phân phân hủy lớp lai</strong>, gây <strong class=\"text-red-400\">bong sút, rò rỉ vi kẽ</strong> và <strong class=\"text-red-400\">tình trạng nhạy cảm ngà khó chịu</strong> cho bệnh nhân."
+      },
+      {
+        "id": "pain-2",
+        "iconName": "Layers",
+        "title": "Kênh cộm khớp & Hở đường viền",
+        "description": "Lớp màng (film thickness) của xi măng/keo cũ <strong class=\"text-red-400\">quá dày (30-50µm)</strong> cản trở phục hình Veneer, Tabletop siêu mỏng xuống sát khít hoàn toàn, <strong class=\"text-red-400\">gây cộm khớp</strong>, buộc phải mài chỉnh hoặc đối mặt nguy cơ <strong class=\"text-red-400\">nứt vỡ các phục hình sứ thành mỏng</strong>."
+      },
+      {
+        "id": "pain-3",
+        "iconName": "Banknote",
+        "title": "Hao hụt vật liệu do Thể tích chết Automix",
+        "description": "Vòi trộn Automix <strong class=\"text-red-400\">lãng phí 0.25g - 0.44g xi măng</strong> kẹt lại mỗi lần bơm, gây hao hụt chi phí vật liệu trong mỗi ca gắn. Cộng thêm hàng tá chai Primer sứ lỉnh kỉnh dễ bay hơi làm <strong class=\"text-red-400\">gia tăng chi phí điều trị trên mỗi ca</strong>."
+      }
+    ],
+    "ctaText": "TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO"
+  },
+  "goldStandard": {
+    "badge": "Tiêu chuẩn vàng mới",
+    "headline": "<span class=\"text-amber-500\">Tiêu chuẩn vàng</span> mới:<br /><span class=\"inline-block lg:whitespace-nowrap\">Bộ đôi liên kết sinh học <span class=\"text-[#00ADEF]\">không thể phá hủy</span></span>",
+    "description": "Sự kết hợp hoàn hảo tạo nên khoảng ghép vô hình 24µm vững chắc.",
+    "product1": {
+      "title": "Keo dán BeautiBond Xtreme",
+      "subtitle": "Universal Thế hệ thứ 8",
+      "image": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png",
+      "features": [
+        {
+          "iconName": "Microscope",
+          "title": "Độ dày màng siêu mỏng (chỉ 5µm)",
+          "description": "Khoá chặt vi kẽ ống ngà, không lo cộm khớp, ngăn ngừa đổi màu đường viền phục hình."
+        },
+        {
+          "iconName": "Umbrella",
+          "title": "Công nghệ HEMA-Free kỵ nước",
+          "description": "Kháng hút nước, chống thủy phân và ngăn ngừa nhạy cảm ngà sau khi gắn."
+        },
+        {
+          "iconName": "ShieldCheck",
+          "title": "Tích hợp Monomer đa chức năng & Silane kháng acid (ARS)",
+          "description": "Tăng cường lực liên kết hóa học trực tiếp lên Men, Ngà, Zirconia và Sứ thủy tinh mà không cần bước quét primer rời."
+        }
+      ]
+    },
+    "product2": {
+      "title": "Xi măng BeautiLink SA",
+      "subtitle": "Tự dán lưỡng trùng hợp tích hợp hạt độn Giomer S-PRG",
+      "image": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png",
+      "features": [
+        {
+          "iconName": "Microscope",
+          "title": "Màng phim siêu mỏng 14µm",
+          "description": "Chảy loang thixotropic tối ưu tạo đường hoàn tất vô hình."
+        },
+        {
+          "iconName": "Clock",
+          "title": "Dọn dư \"One-Sweep\" 1-2 giây",
+          "description": "Hóa dẻo dạng gel đàn hồi, lấy sạch xi măng dư nguyên khối chỉ bằng một đường gạt."
+        },
+        {
+          "iconName": "Shield",
+          "title": "Hạt độn hoạt tính sinh học S-PRG",
+          "description": "Liên tục giải phóng và tái nạp 6 loại ion sinh học, hỗ trợ trung hòa acid và kháng mảng bám vi khuẩn, ngăn ngừa sâu răng tại vị trí đường hoàn tất."
+        }
+      ]
+    },
+    "diagram": {
+      "title": "Cấu trúc liên kết đa tầng <span class=\"text-[#00ADEF]\">siêu mỏng</span> khít sát <span class=\"text-amber-500\">tuyệt đối</span>",
+      "image": "/images/Shofu-double-hybrid-link-system.webp",
+      "description": "Sự kết hợp hoàn hảo giữa <strong class=\"text-slate-900\">độ dày màng siêu mỏng (chỉ 5µm)</strong> của BeautiBond Xtreme và lớp <strong class=\"text-slate-900\">xi măng siêu mỏng 14µm</strong> của BeautiLink SA tạo nên một <strong class=\"text-[#00ADEF]\">khoảng ghép vô hình chỉ 24µm</strong>, thiết lập <strong class=\"text-amber-600\">tiêu chuẩn mới</strong> trong phục hình gián tiếp.",
+      "points": [
+        "<strong>Thẩm mỹ hoàn hảo:</strong> Không đổi màu phục hình theo thời gian nhờ công nghệ HEMA-Free kỵ nước.",
+        "<strong>Khớp cắn chuẩn xác:</strong> Triệt tiêu hoàn toàn rủi ro cộm cấn, kênh phục hình sau khi gắn.",
+        "<strong>Bảo vệ sinh học:</strong> Hạt độn S-PRG ngăn chặn vi khuẩn xâm nhập vi kẽ ống ngà, bảo vệ cùi răng sau khi gắn."
+      ]
+    },
+    "ctaText": "Yêu cầu tư vấn"
+  },
+  "evidence": {
+    "badge": "Bảo chứng y văn & Hiệu suất",
+    "headline": "Sức mạnh <br class=\"sm:hidden\" /><span class=\"text-[#00ADEF]\">thuyết phục</span> <span class=\"text-amber-500\">tuyệt đối</span>",
+    "description": "<strong class=\"text-slate-900\">Bảo chứng y văn vững chắc</strong> và hiệu suất thực tế được <strong class=\"text-emerald-600\">kiểm chứng bởi Bác sĩ trên hơn 100 quốc gia</strong> và vùng lãnh thổ.",
+    "usp1": {
+      "title": "Lực dán siêu cường không suy giảm qua 5,000 chu kỳ sốc nhiệt khắt khe",
+      "image": "/images/share-bond-strength-on-zirconia copy.webp",
+      "description": "Báo cáo của The Dental Advisor (Số 168 - Tháng 8/2024) ghi nhận BeautiLink SA đạt lực dán trượt khổng lồ <strong class=\"text-[#00ADEF] font-bold text-lg\">~50 MPa</strong> và <strong class=\"text-slate-900 font-bold bg-amber-100 px-1 rounded\">không suy giảm</strong> sau <strong class=\"text-slate-900 font-bold\">5.000 chu kỳ sốc nhiệt</strong> (Thermocycling)."
+    },
+    "usp2": {
+      "title": "Kiểm soát dọn xi măng dư \"One-Sweep\"",
+      "youtubeId": "K85voUZxMV8",
+      "description": "Tiết kiệm đến <strong class=\"font-bold text-slate-800\">30% thời gian</strong> trên ghế nha. Không còn nỗi lo cạo vụn xi măng quá đông cứng gây tổn thương và chảy máu viền nướu. Chỉ với <strong class=\"font-bold text-slate-800\">1–2 giây chiếu đèn (Tack-cure)</strong>, xi măng đạt pha gel lý tưởng, cho phép dùng thám châm <strong class=\"font-bold text-slate-800\">gạt sạch nguyên khối</strong> chỉ trong một thao tác duy nhất.",
+      "feedbackImage": "/images/feedback-beautilink-SA.webp?v=1788334433590"
+    },
+    "usp3": {
+      "title": "Lá chắn Sinh học S-PRG",
+      "description": "S-PRG là <strong class=\"text-emerald-600 font-bold\">\"bình ắc quy sinh học\"</strong>. <strong class=\"text-[#00ADEF] font-bold text-base\">6 Ion</strong> (F-, Sr2+, BO33-, Al3+, SiO32-, Na+) <strong class=\"text-slate-800 font-bold\">liên tục khuếch tán</strong> qua màng dán để <strong class=\"text-slate-800 font-bold\">bít kín ống ngà hở</strong>, <strong class=\"text-slate-800 font-bold\">trung hòa axit</strong> và tạo lớp màng <strong class=\"text-slate-800 font-bold\">ức chế hình thành Biofilm</strong>.",
+      "image": "/images/S-PRG-triet-tieu-e-buot.webp?v=1788334169447",
+      "points": [
+        "Bảo vệ mô ngà sống & Đường hoàn tất, duy trì độ ổn định sinh học dài hạn.",
+        "<strong>\"Trạm sạc\" Ion sinh học 24/7</strong> – Chủ động tái khoáng và nuôi dưỡng răng thật.",
+        "<strong>Ức chế hình thành Biofilm</strong> – Nướu săn chắc, kiểm soát mảng bám, hạn chế viêm nướu viền.",
+        "<strong>Tự động trung hòa Axit</strong> – Trung hòa acid, đệm pH tại vùng tiếp xúc."
+      ]
+    },
+    "usp4": {
+      "title": "Tối ưu ROI – \"Tuyên chiến\" với lãng phí",
+      "problemTitle": "Sự thật \"đắt đỏ\" của vòi trộn Automix",
+      "problemDescription": "Lượng xi măng kẹt lại trong vòi trộn (0.25g - 0.44g) <strong class=\"text-red-500 font-bold\">lớn hơn hoặc bằng</strong> chính lượng xi măng được dùng cho răng của bệnh nhân.",
+      "problemImage": "/images/voi-tron-automix-lang-phi-vat-lieu.webp?v=1788332053597",
+      "solutionTitle": "Tối ưu lợi nhuận với BeautiLink SA",
+      "solutionDescription": "<strong class=\"text-slate-900\">Chuẩn hóa quy trình</strong>, <strong class=\"text-[#00ADEF]\">làm chủ lượng vật tư</strong> sử dụng, <strong class=\"text-slate-900\">cắt giảm chi phí</strong> dán gắn về mức tối thiểu và giữ lại <strong class=\"text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded font-bold\">nguồn lợi nhuận khổng lồ</strong> cho phòng khám.",
+      "solutionImage": "/images/tiet-kiem-800tr-voi-beautilink-SA.webp?v=1788332482055"
+    },
+    "ctaText": "Tư vấn giải pháp tối ưu chi phí"
+  },
+  "workflow": {
+    "badge": "Triệt tiêu sai số lâm sàng & tài chính",
+    "headline": "Đập tan \"ma trận\" <br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-400\">chai lọ phục hình</span>",
+    "image": "/images/ma-tran-chai-lo-phuc-hinh.webp",
+    "interfacesTitle": "Nguồn gốc \"ma trận\": <span class=\"text-[#00ADEF]\">Sự xung đột hóa học</span>",
+    "interfacesSubtitle": "Để thấu hiểu \"ma trận chai lọ\", cần nhìn vào <strong class=\"text-white\">bản chất hóa học riêng biệt</strong> của từng <strong class=\"text-amber-400\">giao diện bám dính</strong>.",
+    "interfaces": [
+      {
+        "title": "Sứ thủy tinh",
+        "image": "/images/su-thuy-tinh.webp",
+        "description": "Đòi hỏi soi mòn vi cơ học bằng <strong class=\"text-red-400\">Acid HF</strong>, sau đó bắt buộc quét Silane độc lập để tạo mạng lưới liên kết siloxane."
+      },
+      {
+        "title": "Zirconia & kim loại",
+        "image": "/images/zironia.webp",
+        "description": "Bề mặt trơ với <strong class=\"text-red-400\">Acid HF</strong>. Bắt buộc phải có các Primer chứa monomer chức năng để tạo liên kết ion trực tiếp."
+      },
+      {
+        "title": "Mô răng",
+        "image": "/images/mo-rang.webp",
+        "description": "Đòi hỏi hệ thống keo dán (Bond) để xâm nhập và tạo ra lớp lai (hybrid layer) vững chắc."
+      }
+    ],
+    "protocolTitle": "Phác đồ <span class=\"text-[#00ADEF]\">3 bước đơn giản</span>",
+    "protocolSubtitle": "Bác sĩ nay chỉ cần thực hiện <strong class=\"text-white\">3 bước thao tác đơn giản</strong> với bộ đôi <span class=\"text-[#00ADEF] font-bold\">BeautiBond Xtreme</span> và <span class=\"text-[#C43838] font-bold\">BeautiLink SA</span>:",
+    "protocolImage": "/image/beautilink-bbx-new.webp",
+    "steps": [
+      {
+        "stepNumber": "01",
+        "title": "Bước 1 – Quét keo:",
+        "description": "Nhỏ <strong class=\"text-white\">một giọt duy nhất</strong> BeautiBond Xtreme và quét đều lên cả bề mặt cùi răng và lòng phục hình."
+      },
+      {
+        "stepNumber": "02",
+        "title": "Bước 2 – Thổi hơi:",
+        "description": "Thổi hơi để dàn mỏng màng keo xuống ngưỡng <strong class=\"text-white\">5µm</strong>. Sự bốc hơi dung môi làm tăng vọt nồng độ monomer acid, từ đó mở khóa màng bảo vệ của phân tử ARS."
+      },
+      {
+        "stepNumber": "03",
+        "title": "Bước 3 – Chiếu đèn & bơm xi măng:",
+        "description": "Quang trùng hợp trong <strong class=\"text-white\">5 đến 10 giây</strong>, sau đó bơm trực tiếp xi măng BeautiLink SA vào lòng phục hình."
+      }
+    ],
+    "ctaText": "Trải nghiệm phác đồ 3 bước"
+  },
+  "offer": {
+    "badge": "Đặc quyền đồng hành không thể từ chối",
+    "headline": "Gói giải pháp đồng bộ <br class=\"hidden sm:block\" /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200\">\"Giomer không ê buốt\"</span> – An tâm lâm sàng",
+    "comboTitle": "Combo dán - gắn đồng bộ",
+    "comboImage": "/image/beautilink-bbx-new.webp",
+    "comboItems": [
+      "01 Lọ Keo dán Universal BeautiBond Xtreme (5ml)",
+      "01 Ống Xi măng BeautiLink SA Handmix (15.6g)"
+    ],
+    "giftsTitle": "Bộ quà tặng đặc quyền",
+    "giftImage": "/images/qua-tang-giomer-khong-e-buot.webp",
+    "gifts": [
+      "<strong class=\"text-white\">Quà tặng vật lý:</strong> 01 Lọ BBX Trial (2ml) để trải nghiệm thực tế ngay tại phòng khám trước khi khui lọ chính.",
+      "<strong class=\"text-white\">Tài liệu số chuyên sâu:</strong> Sổ tay E-Guide \"Khoảng Xi Măng Ghép Lâm Sàng & Quy Trình Xử Lý Bề Mặt Sứ\".",
+      "<strong class=\"text-white\">Đặc quyền đào tạo:</strong> Vé tham gia Group Học Thuật Kín gỡ rối ca lâm sàng trực tiếp qua Zalo 1:1."
+    ],
+    "originalPrice": "8.155.000đ",
+    "offerPrice": "3.415.000đ",
+    "ctaText": "ĐĂNG KÝ COMBO \"GIOMER KHÔNG Ê BUỐT\"",
+    "guarantee": "Hoàn tiền 100% nếu Bác sĩ không hài lòng."
+  },
+  "testimonials": {
+    "headline": "<span class=\"text-[#00ADEF]\">Hàng ngàn nha sĩ và chuyên gia</span> đã chọn",
+    "ctaText": "Gia nhập cộng đồng MiCD",
+    "row1": [
+      {
+        "id": "t1-1",
+        "name": "Dr. Shukan Kanuga",
+        "role": "Hiệp hội Nha khoa Trẻ em Hoa Kỳ, CA",
+        "text": "\"Dòng sản phẩm tự dán ứng dụng công nghệ S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ các bước nhạy cảm kỹ thuật.\""
+      },
+      {
+        "id": "t1-2",
+        "name": "Dr. Nguyễn Hải Đăng",
+        "role": "Chuyên gia Phục hình, Hà Nội",
+        "text": "\"Khả năng che màu cùi răng của BeautiLink SA Opaque thực sự ấn tượng. Viền phục hình luôn tự nhiên và không bao giờ bị ánh xám sau nhiều năm.\""
+      },
+      {
+        "id": "t1-3",
+        "name": "Dr. Jennifer Bell",
+        "role": "Viện Thẩm mỹ Nha khoa Quốc tế, NC",
+        "text": "\"Hệ thống Giomer đáp ứng trọn vẹn xu hướng vật liệu sinh học tự trị liệu nhờ cơ chế trung hòa axit, giải phóng và tái sạc ion liên tục.\""
+      },
+      {
+        "id": "t1-4",
+        "name": "Prof. Keiichi Hosaka",
+        "role": "ĐH Tokushima, Nhật Bản",
+        "text": "\"Lớp keo dán siêu mỏng dưới 5 micron tối ưu hóa khoảng ghép khít sát tuyệt đối, đồng thời là cầu nối lý tưởng giúp ion sinh học khuếch tán để bảo vệ mô răng.\""
+      },
+      {
+        "id": "t1-5",
+        "name": "Dr. Lê Huỳnh Anh",
+        "role": "Nha khoa Thẩm mỹ, Đà Nẵng",
+        "text": "\"Điều làm tôi an tâm nhất khi dùng keo dán BBX là không còn lo bệnh nhân phàn nàn ê buốt sau gắn Veneer. Thao tác lại vô cùng tinh gọn.\""
+      },
+      {
+        "id": "t1-6",
+        "name": "Dr. Michael Smith",
+        "role": "Chuyên gia Phục hình, New York",
+        "text": "\"Gắn phục hình chưa bao giờ dễ dàng và an tâm đến thế. Bệnh nhân của tôi hoàn toàn không phàn nàn về bất kỳ cơn ê buốt nào sau điều trị. Điều này thực sự nâng tầm trải nghiệm phòng khám.\""
+      },
+      {
+        "id": "t1-7",
+        "name": "Dr. Trần Văn An",
+        "role": "Chuyên gia Phục hình thẩm mỹ, TP.HCM",
+        "text": "\"Từ khi chuyển sang hệ thống Shofu, tỷ lệ sút phục hình tại phòng khám giảm gần như bằng không. Sự ổn định và bền vững khác biệt hoàn toàn so với trước đây.\""
+      }
+    ],
+    "row2": [
+      {
+        "id": "t2-1",
+        "name": "Dr. Anna Lee",
+        "role": "Bác sĩ trưởng, Tuổi trẻ Nha khoa, Sydney",
+        "text": "\"BeautiLink SA giúp tiết kiệm một lượng thời gian khổng lồ. Quy trình đơn giản hơn, dọn dẹp xi măng thừa cực kỳ dễ dàng và độ lưu giữ vô cùng vượt trội.\""
+      },
+      {
+        "id": "t2-2",
+        "name": "Dr. Phạm Hoàng Tuấn",
+        "role": "Bác sĩ trưởng, Cần Thơ",
+        "text": "\"Từ ngày dùng xi măng của Shofu, tốc độ dọn dẹp xi măng thừa giảm xuống chỉ còn vài giây. Rất sạch sẽ và không gây kích ứng nướu.\""
+      },
+      {
+        "id": "t2-3",
+        "name": "Dr. Elena Rodriguez",
+        "role": "Viện thẩm mỹ Madrid, Tây Ban Nha",
+        "text": "\"Điều tôi thích nhất ở keo dán BeautiBond Xtreme là tính kỵ nước tuyệt đối. Nó tạo ra lớp màng bảo vệ hoàn hảo, ngăn chặn sự thoái hóa lớp lai theo thời gian.\""
+      },
+      {
+        "id": "t2-4",
+        "name": "Prof. Tanaka",
+        "role": "Đại học Y khoa Tokyo, Nhật Bản",
+        "text": "\"Công nghệ hạt độn sinh học S-PRG thực sự thay đổi luật chơi trong việc ngăn ngừa sâu răng thứ phát dưới lớp phục hình, giúp viền luôn khỏe mạnh.\""
+      },
+      {
+        "id": "t2-5",
+        "name": "Dr. Vũ Thanh Trà",
+        "role": "Chuyên gia RHM, Hải Phòng",
+        "text": "\"Tỷ lệ lưu giữ của BeautiLink SA với các ca cùi ngắn rất tuyệt vời. Kết hợp cùng BBX tạo nên một màng bảo vệ viền khít sát đến hoàn hảo.\""
+      },
+      {
+        "id": "t2-6",
+        "name": "Dr. William Chen",
+        "role": "Quản lý chuỗi nha khoa, Singapore",
+        "text": "\"Việc loại bỏ các chai lọ primer lỉnh kỉnh giúp tôi kiểm soát vật tư phòng khám tốt hơn hẳn. Ít sai sót lâm sàng hơn, hiệu quả kinh tế cao hơn rõ rệt.\""
+      },
+      {
+        "id": "t2-7",
+        "name": "Dr. Maria Garcia",
+        "role": "Nha khoa Cao cấp, Brazil",
+        "text": "\"Màng keo dán siêu mỏng giúp việc gắn các mặt dán veneer trở nên chính xác tuyệt đối mà không sợ cộm khớp hay làm đổi màu phục hình sứ.\""
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "id": "faq-1",
+      "q": "Xi măng trộn tay (Handmix) liệu có đều và đồng nhất bằng vòi Automix tự động không?",
+      "a": "<strong>Giải đáp lâm sàng: Hoàn toàn đều và đồng nhất.</strong> Tỷ lệ 1:1 của hai dải xi măng BeautiLink SA được thiết kế với màu sắc tương phản rõ rệt. Khi trộn tay trên giấy trong 10 giây, sự chuyển màu đồng nhất 100% sẽ là tín hiệu trực quan báo hiệu xi măng đã đạt độ hòa quyện hoàn hảo. Định dạng Handmix tuýp khổng lồ 15.6g (9ml) đáp ứng tới 120 ca gắn, giúp triệt tiêu hoàn toàn lượng xi măng lãng phí bị đông cứng trong đầu vòi Automix."
+    },
+    {
+      "id": "faq-2",
+      "q": "Keo dán BeautiBond Xtreme kỵ nước và HEMA-free thì có khó thâm nhập vào ống ngà ẩm không?",
+      "a": "<strong>Giải đáp lâm sàng: Hoàn toàn không.</strong> BBX ứng dụng hệ dung môi Acetone thẩm thấu nhanh, đóng vai trò là \"chất dẫn\" đưa các monomer kỵ nước thâm nhập sâu vào các ống ngà ẩm. Ngay sau khi thổi khô 3 giây để bay hơi dung môi, BBX tạo thành lớp màng dán dính kỵ nước mỏng 5µm bít kín ống ngà, ngăn chặn sự thâm nhập của dịch ngà và triệt tiêu hoàn toàn ê buốt."
+    },
+    {
+      "id": "faq-3",
+      "q": "Keo dán màng 5µm và xi măng 14µm thì có ảnh hưởng lực dán cơ học của phục hình gián tiếp không?",
+      "a": "<strong>Giải đáp lâm sàng: Ngược lại, đây là độ dày lý tưởng nhất cho phục hình gián tiếp.</strong> Tổng độ dày màng dán dính (total film thickness) (BBX 5µm + BeautiLink SA 14µm) giúp viền dán khít sát tuyệt đối, loại bỏ nguy cơ cộm khớp hay vi kẽ đường hoàn tất. Thử nghiệm độc lập của The Dental Advisor ghi nhận lực dán trượt trên Zirconia đạt mức ~50 MPa và giữ vững ổn định sau 5.000 chu kỳ sốc nhiệt."
+    },
+    {
+      "id": "faq-4",
+      "q": "Xi măng có trùng hợp (Self-cure) hoàn toàn dưới các mão Zirconia đục hoặc mão kim loại vùng tối không?",
+      "a": "<strong>Giải đáp lâm sàng: Hoàn toàn đảm bảo.</strong> BeautiLink SA là xi măng resin tự dán Dual-cure (Trùng hợp kép) sở hữu hệ thống chất xúc tác phản ứng cao. Trong các vùng tối ánh sáng đèn không thể xuyên qua (như dưới mão Zirconia dày, mão kim loại, chốt tủy), phản ứng tự trùng hợp hóa học (Self-cure) tự động kích hoạt hoàn toàn ở 3 phút trong nhiệt độ miệng (37°C), đảm bảo lực dán trượt và độ bền uốn (flexural strength) tối đa mà không phụ thuộc vào đèn quang trùng hợp."
+    },
+    {
+      "id": "faq-5",
+      "q": "Gắn mão Zirconia hay sứ Lithium Disilicate (E.max) với BeautiLink SA có bắt buộc phải bôi Silane hoặc Primer Zirconia rời không?",
+      "a": "<strong>Giải đáp lâm sàng: Không cần thiết đối với các phục hình có độ lưu giữ cơ học tiêu chuẩn.</strong><br /><br />Trong thành phần BeautiLink SA đã tích hợp sẵn Phosphonic Acid Monomer (tự liên kết hóa trị trực tiếp với oxit kim loại trên Zirconia/Kim loại) và Silane Coupling Agent thế hệ mới (tự liên kết với sứ thủy tinh/Lithium Disilicate).<br /><br />Đối với các phục hình lưu kém (Veneer, Tabletop, Onlay mỏng), Bác sĩ chỉ cần quét thêm 1 lớp keo dán Universal BeautiBond Xtreme vào lòng phục hình và cùi răng để nhân đôi lực dán mà không cần mua thêm bất kỳ chai Silane hay Primer Zirconia rời nào khác."
+    },
+    {
+      "id": "faq-6",
+      "q": "Xi măng Dual-cure có bị đổi màu hay ố vàng đường viền dán sau một thời gian sử dụng không?",
+      "a": "<strong>Giải đáp lâm sàng: Đảm bảo độ ổn định màu sắc vượt trội.</strong> BeautiLink SA được kỹ sư vật liệu Shofu tối ưu hóa hệ thống xúc tác trùng hợp, giúp giữ màu sắc ổn định (Stable shades) trọn đời phục hình. Sản phẩm cung cấp 3 tông màu lâm sàng thực tế (Clear, Ivory, Opaque) với khả năng che màu ngà chẻ/cùi kim loại tối màu hoàn hảo (đặc biệt là màu Opaque) mà không bị viền đen hay ố vàng theo thời gian."
+    },
+    {
+      "id": "faq-7",
+      "q": "Sau khi gắn phục hình trên cùi răng sống, bệnh nhân có bị nhạy cảm ngà hay ê buốt hậu phẫu không?",
+      "a": "<strong>Giải đáp lâm sàng: Tỷ lệ ê buốt hậu phẫu tiệm cận mức 0%.</strong> Sự kết hợp giữa màng keo dán kỵ nước BBX không chứa HEMA bít kín ống ngà và hạt độn sinh học S-PRG trong BeautiLink SA liên tục giải phóng 6 ion đệm (đặc biệt là Fluoride & Strontium). Các ion này hỗ trợ tái khoáng hóa ngà răng và bịt kín mọi kẽ hở vi thể, mang lại sự dễ chịu tuyệt đối cho bệnh nhân ngay sau khi hết thuốc tê."
+    },
+    {
+      "id": "faq-8",
+      "q": "Bộ đôi sản phẩm có bắt buộc phải bảo quản trong tủ lạnh không? Hạn sử dụng bao lâu trong điều kiện khí hậu Việt Nam?",
+      "a": "<strong>Giải đáp lâm sàng: Không bắt buộc để tủ lạnh nếu nhiệt độ phòng dưới 25°C.</strong><br /><br />BeautiLink SA có hạn sử dụng 24 tháng trong túi foil bạc niêm phong nguyên bản (dùng trong vòng 6 tháng sau khi mở túi).<br /><br />Sản phẩm ứng dụng công nghệ xúc tác \"ngủ đông\" (steric hindrance) kháng nhiệt ẩm vượt trội. Ở các vùng khí hậu nhiệt đới nóng ẩm có nhiệt độ phòng thường xuyên > 25°C, Bác sĩ chỉ cần cất tuýp xi măng vào ngăn mát tủ lạnh và lấy ra trước khi sử dụng để tuýp về nhiệt độ phòng là có thể thao tác hoàn hảo."
+    }
+  ]
+}
