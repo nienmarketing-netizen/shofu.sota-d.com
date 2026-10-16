@@ -2,11 +2,12 @@ import { CtaButton } from "../../ui/CtaButton";
 import { CampaignModal } from '../../CampaignModal';
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import defaultData from '../../../data/indirect-restoration.json';
 import { 
   ShieldCheck, Zap, Coins, AlertTriangle, HeartPulse, Banknote, TrendingUp, 
   Droplet, Droplets, Microscope, ArrowRight, Gift, ChevronDown, CheckCircle2,
   Clock, Shield, BarChart3, TestTube, Quote, Image as ImageIcon,
-  Unlink, Layers, Umbrella
+  Unlink, Layers, Umbrella, Sparkles
 } from 'lucide-react';
 
 const FaqItem = ({ question, answer }: { question: string, answer: React.ReactNode }) => {
@@ -108,8 +109,58 @@ const YoutubeAutoplay = ({ videoId }: { videoId: string }) => {
 };
 
 export function IndirectRestoration() {
-    const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
+  const [content, setContent] = useState(defaultData);
+  const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
   const [campaignModalTitle, setCampaignModalTitle] = useState('');
+
+  useEffect(() => {
+    const loadDynamicContent = async () => {
+      let loaded = false;
+      // 1. Kiểm tra localStorage (phục hồi tức thì dữ liệu vừa chỉnh sửa)
+      try {
+        const local = localStorage.getItem('shofu_indirect_restoration_data');
+        if (local) {
+          const parsed = JSON.parse(local);
+          if (parsed && parsed.hero && typeof parsed.hero.headline === 'string' && parsed.hero.headline.trim()) {
+            setContent(parsed);
+            loaded = true;
+          } else {
+            localStorage.removeItem('shofu_indirect_restoration_data');
+          }
+        }
+      } catch (e) {}
+
+      // 2. Tải qua API CMS
+      try {
+        const res = await fetch(`/api/cms/load?page=indirect-restoration&_t=${Date.now()}`);
+        if (res.ok) {
+          const json = await res.json();
+          if (json.success && json.data) {
+            setContent(json.data);
+            loaded = true;
+          }
+        }
+      } catch (e) {}
+
+      // 3. Fallback đọc từ GitHub Raw
+      if (!loaded) {
+        try {
+          const ghRes = await fetch(
+            `https://raw.githubusercontent.com/nienmarketing-netizen/shofu.sota-d.com/main/src/data/indirect-restoration.json?_t=${Date.now()}`,
+            { cache: 'no-store' }
+          );
+          if (ghRes.ok) {
+            const data = await ghRes.json();
+            if (data && data.hero) {
+              setContent(data);
+            }
+          }
+        } catch (ghErr) {}
+      }
+    };
+
+    loadDynamicContent();
+  }, []);
 
   const openCampaignModal = (title: string) => {
     setCampaignModalTitle(title);
@@ -132,69 +183,53 @@ export function IndirectRestoration() {
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00ADEF] animate-pulse shrink-0 relative z-10 shadow-[0_0_4px_rgba(0,173,239,0.8)]"></div>
               <div className="flex overflow-hidden relative w-full [mask-image:linear-gradient(to_right,transparent,black_10px,black_90%,transparent)] sm:[mask-image:none]">
                 <div className="font-mono text-[10.5px] min-[375px]:text-[11.5px] sm:text-xs font-bold text-[#00ADEF] tracking-tight sm:tracking-wide whitespace-nowrap flex animate-marquee sm:!animate-none sm:!transform-none w-max">
-                  <span className="pr-8 sm:pr-0">Xu thế nha khoa can thiệp tối thiểu & Vật liệu sinh học (Bioactive)</span>
-                  <span className="pr-8 sm:hidden">Xu thế nha khoa can thiệp tối thiểu & Vật liệu sinh học (Bioactive)</span>
+                  <span className="pr-8 sm:pr-0">{content.hero?.badge || "Xu thế nha khoa can thiệp tối thiểu & Vật liệu sinh học (Bioactive)"}</span>
+                  <span className="pr-8 sm:hidden">{content.hero?.badge || "Xu thế nha khoa can thiệp tối thiểu & Vật liệu sinh học (Bioactive)"}</span>
                 </div>
               </div>
             </div>
-            <h1 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12">
-              Giải pháp kiểm soát nguy cơ <br className="md:hidden" />
-              <span className="text-[#00ADEF]">sút phục hình</span>, <span className="text-[#00ADEF]">ê buốt sau gắn</span> <br className="md:hidden" />
-              và <span className="text-[#00ADEF]">lãng phí vật tư</span>!
-            </h1>
+            <h1 
+              dangerouslySetInnerHTML={{ __html: content.hero?.headline || '' }}
+              className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-slate-900 leading-[1.3] mb-6 tracking-tight lg:pr-4 xl:pr-0 lg:-mr-8 xl:-mr-12"
+            />
             {/* MOBILE ONLY IMAGE */}
             <div className="w-full relative flex justify-center lg:hidden mb-10 mt-6">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-gradient-to-tr from-[#00ADEF]/30 to-[#C43838]/30 blur-[60px] rounded-full z-0 animate-pulse"></div>
               <img 
                 referrerPolicy="no-referrer"
-                src="/image/beautilink-bbx-new.webp" 
+                src={content.hero?.image || "/image/beautilink-bbx-new.webp"} 
                 alt="Bộ đôi BBX và BeautiLink SA" 
                 className="w-[80%] max-w-[320px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
               />
             </div>
-            <p className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Tối ưu hóa <strong className="text-slate-900">độ dày màng liên kết (Cement Space)</strong> nhờ sự kết hợp giữa màng keo 5µm (<strong className="text-slate-900">BeautiBond Xtreme</strong>) và lớp xi măng mỏng 14µm (<strong className="text-slate-900">BeautiLink SA</strong>). Tạo liên kết hóa học bền vững với lực dán trượt <strong className="text-[#00ADEF] font-bold">~50 MPa</strong> trên Zirconia và ổn định cấu trúc sau 5.000 chu kỳ nhồi nhiệt (<strong className="text-slate-900">Dental Advisor 2024</strong>).
-            </p>
+            <p 
+              dangerouslySetInnerHTML={{ __html: content.hero?.body || '' }}
+              className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+            />
             
             <ul className="space-y-3 mb-10">
-              <li className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                <div className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-0.5">
-                  <ShieldCheck className="w-4 h-4 text-[#C43838]" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">Triệt tiêu ê buốt tức thì và muộn</h4>
-                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Bảo vệ tủy răng sống bằng màng ngăn kỵ nước không chứa HEMA.</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center shrink-0 mt-0.5">
-                  <Zap className="w-4 h-4 text-[#00ADEF]" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">Quy trình "True Universal" 1 bước</h4>
-                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Gắn chặt Zirconia, sứ Lithium Disilicate, loại bỏ các bước primer trung gian.</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
-                <div className="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center shrink-0 mt-0.5">
-                  <Coins className="w-4 h-4 text-amber-500" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">Tiết kiệm chi phí điều trị</h4>
-                  <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Ống Handmix dung tích tối ưu 15.6g thực hiện tới 120 ca lâm sàng.</p>
-                </div>
-              </li>
+              {(content.hero?.usps || []).map((usp, idx) => (
+                <li key={usp.id || idx} className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border border-slate-200/80 bg-white/50 backdrop-blur-sm shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)]">
+                  <div className={`w-8 h-8 rounded-full ${idx === 0 ? 'bg-red-50' : idx === 1 ? 'bg-blue-50' : 'bg-amber-50'} flex items-center justify-center shrink-0 mt-0.5`}>
+                    {idx === 0 ? <ShieldCheck className="w-4 h-4 text-[#C43838]" /> : idx === 1 ? <Zap className="w-4 h-4 text-[#00ADEF]" /> : <Coins className="w-4 h-4 text-amber-500" />}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-sm sm:text-[15px] mb-1 leading-snug">{usp.title}</h4>
+                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">{usp.description}</p>
+                  </div>
+                </li>
+              ))}
             </ul>
 
             <button 
-               onClick={() => openCampaignModal("Nhận mẫu thử BBX 2ml & Ưu đãi")}
+              onClick={() => openCampaignModal(content.hero?.ctaText || "Nhận mẫu thử BBX 2ml & Ưu đãi")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
-              <span className="truncate">NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI</span>
+              <span className="truncate">{content.hero?.ctaText || "NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI"}</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </button>
-            <p className="font-body text-xs sm:text-sm font-medium opacity-90 text-slate-500 mt-4 text-center sm:text-left">Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor</p>
+            <p className="font-body text-xs sm:text-sm font-medium opacity-90 text-slate-500 mt-4 text-center sm:text-left">{content.hero?.footerNote || "Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor"}</p>
           </div>
           
           <div className="hidden lg:flex w-full lg:w-[35%] xl:w-[40%] relative justify-center">
@@ -204,7 +239,7 @@ export function IndirectRestoration() {
             {/* Bức ảnh WebP tách nền duy nhất */}
             <img 
               referrerPolicy="no-referrer"
-              src="/image/beautilink-bbx-new.webp" 
+              src={content.hero?.image || "/image/beautilink-bbx-new.webp"} 
               alt="Bộ đôi BBX và BeautiLink SA" 
               className="w-full max-w-[550px] h-auto object-contain relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl" 
             />
@@ -217,53 +252,35 @@ export function IndirectRestoration() {
         <div className="absolute inset-0 bg-grid-pattern-light opacity-100"></div>
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="font-heading font-extrabold text-xl min-[375px]:text-2xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-white leading-[1.3] mb-6 tracking-tight">
-            Có phải bác sĩ đang <br className="md:hidden" />
-            <span className="text-slate-400">âm thầm chịu đựng</span> <br className="md:hidden" />
-            <span className="text-red-500">những rủi ro</span> này mỗi ngày?
-          </h2>
+          <h2 
+            dangerouslySetInnerHTML={{ __html: content.painPoints?.headline || '' }}
+            className="font-heading font-extrabold text-xl min-[375px]:text-2xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl text-white leading-[1.3] mb-6 tracking-tight"
+          />
           <div className="w-24 h-1 bg-red-500 mx-auto"></div>
         </div>
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-1 sm:px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
-            <div className="w-11 h-11 md:w-16 md:h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
-              <Unlink className="w-6 h-6 md:w-8 md:h-8 text-red-400" />
+          {(content.painPoints?.items || []).map((item, idx) => (
+            <div key={item.id || idx} className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-1 sm:px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
+              <div className="w-11 h-11 md:w-16 md:h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
+                {idx === 0 ? <Unlink className="w-6 h-6 md:w-8 md:h-8 text-red-400" /> : idx === 1 ? <Layers className="w-6 h-6 md:w-8 md:h-8 text-red-400" /> : <Banknote className="w-6 h-6 md:w-8 md:h-8 text-red-400" />}
+              </div>
+              <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">{item.title}</h3>
+              <p 
+                dangerouslySetInnerHTML={{ __html: item.description }}
+                className="text-slate-400 text-sm leading-relaxed"
+              />
             </div>
-            <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Sút phục hình & Ê buốt muộn</h3>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Keo dán chứa HEMA hoạt động như "bọt biển" <strong className="text-red-400">ngậm dịch ngà</strong>. Theo thời gian, HEMA bị <strong className="text-red-400">thủy phân phân hủy lớp lai</strong>, gây <strong className="text-red-400">bong sút, rò rỉ vi kẽ</strong> và <strong className="text-red-400">tình trạng nhạy cảm ngà khó chịu</strong> cho bệnh nhân.
-            </p>
-          </div>
-
-          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-1 sm:px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
-            <div className="w-11 h-11 md:w-16 md:h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
-              <Layers className="w-6 h-6 md:w-8 md:h-8 text-red-400" />
-            </div>
-            <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Kênh cộm khớp & Hở đường viền</h3>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Lớp màng (film thickness) của xi măng/keo cũ <strong className="text-red-400">quá dày (30-50µm)</strong> cản trở phục hình Veneer, Tabletop siêu mỏng xuống sát khít hoàn toàn, <strong className="text-red-400">gây cộm khớp</strong>, buộc phải mài chỉnh hoặc đối mặt nguy cơ <strong className="text-red-400">nứt vỡ các phục hình sứ thành mỏng</strong>.
-            </p>
-          </div>
-
-          <div className="bg-slate-800/50 backdrop-blur-md border border-red-500/30 rounded-3xl px-1 sm:px-3 py-6 sm:p-8 hover:border-red-500/60 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-300 flex flex-col items-center text-center">
-            <div className="w-11 h-11 md:w-16 md:h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6 border border-red-500/30">
-              <Banknote className="w-6 h-6 md:w-8 md:h-8 text-red-400" />
-            </div>
-            <h3 className="font-heading font-bold text-[14.5px] min-[375px]:text-[16px] min-[400px]:text-[17px] sm:text-xl text-white mb-4 whitespace-nowrap sm:whitespace-normal tracking-tight sm:tracking-normal">Hao hụt vật liệu do Thể tích chết Automix</h3>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Vòi trộn Automix <strong className="text-red-400">lãng phí 0.25g - 0.44g xi măng</strong> kẹt lại mỗi lần bơm, gây hao hụt chi phí vật liệu trong mỗi ca gắn. Cộng thêm hàng tá chai Primer sứ lỉnh kỉnh dễ bay hơi làm <strong className="text-red-400">gia tăng chi phí điều trị trên mỗi ca</strong>.
-            </p>
-          </div>
+          ))}
         </div>
 
         <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-             onClick={() => openCampaignModal("Tư vấn giải pháp triệt tiêu rủi ro")}
+             onClick={() => openCampaignModal(content.painPoints?.ctaText || "TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
-            <span className="truncate">TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO</span>
+            <span className="truncate">{content.painPoints?.ctaText || "TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO"}</span>
             <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
           </button>
         </div>
@@ -869,7 +886,10 @@ export function IndirectRestoration() {
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
         <Quote className="absolute -top-10 -left-10 w-40 h-40 text-slate-200 opacity-50" />
           <div className="text-center max-w-4xl mx-auto mb-16 relative z-10">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4"><span className="text-[#00ADEF]">Hàng ngàn nha sĩ và chuyên gia</span> đã chọn</h2>
+          <h2 
+            dangerouslySetInnerHTML={{ __html: content.testimonials?.headline || '' }}
+            className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4" 
+          />
         </div>
         </div> {/* Close w-[90%] container here so marquee can be full width */}
         
@@ -882,15 +902,7 @@ export function IndirectRestoration() {
             <div className="flex overflow-hidden group w-full">
               <div className="flex animate-marquee-left w-max hover:animation-play-state-paused">
                 {(() => {
-                  const t1 = [
-                    { text: "\"Dòng sản phẩm tự dán ứng dụng công nghệ S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ các bước nhạy cảm kỹ thuật.\"", name: "Dr. Shukan Kanuga", role: "Hiệp hội Nha khoa Trẻ em Hoa Kỳ, CA" },
-                    { text: "\"Khả năng che màu cùi răng của BeautiLink SA Opaque thực sự ấn tượng. Viền phục hình luôn tự nhiên và không bao giờ bị ánh xám sau nhiều năm.\"", name: "Dr. Nguyễn Hải Đăng", role: "Chuyên gia Phục hình, Hà Nội" },
-                    { text: "\"Hệ thống Giomer đáp ứng trọn vẹn xu hướng vật liệu sinh học tự trị liệu nhờ cơ chế trung hòa axit, giải phóng và tái sạc ion liên tục.\"", name: "Dr. Jennifer Bell", role: "Viện Thẩm mỹ Nha khoa Quốc tế, NC" },
-                    { text: "\"Lớp keo dán siêu mỏng dưới 5 micron tối ưu hóa khoảng ghép khít sát tuyệt đối, đồng thời là cầu nối lý tưởng giúp ion sinh học khuếch tán để bảo vệ mô răng.\"", name: "Prof. Keiichi Hosaka", role: "ĐH Tokushima, Nhật Bản" },
-                    { text: "\"Điều làm tôi an tâm nhất khi dùng keo dán BBX là không còn lo bệnh nhân phàn nàn ê buốt sau gắn Veneer. Thao tác lại vô cùng tinh gọn.\"", name: "Dr. Lê Huỳnh Anh", role: "Nha khoa Thẩm mỹ, Đà Nẵng" },
-                    { text: "\"Gắn phục hình chưa bao giờ dễ dàng và an tâm đến thế. Bệnh nhân của tôi hoàn toàn không phàn nàn về bất kỳ cơn ê buốt nào sau điều trị. Điều này thực sự nâng tầm trải nghiệm phòng khám.\"", name: "Dr. Michael Smith", role: "Chuyên gia Phục hình, New York" },
-                    { text: "\"Từ khi chuyển sang hệ thống Shofu, tỷ lệ sút phục hình tại phòng khám giảm gần như bằng không. Sự ổn định và bền vững khác biệt hoàn toàn so với trước đây.\"", name: "Dr. Trần Văn An", role: "Chuyên gia Phục hình thẩm mỹ, TP.HCM" }
-                  ];
+                  const t1 = content.testimonials?.row1 || [];
                   const dup = [...t1, ...t1];
                   return dup.map((item, idx) => (
                     <div key={`row-1-${idx}`} className="bg-white rounded-2xl p-5 lg:p-6 shadow-sm flex flex-col w-[280px] sm:w-[320px] lg:w-[350px] shrink-0 mx-2 sm:mx-3 border border-slate-100 whitespace-normal">
@@ -909,15 +921,7 @@ export function IndirectRestoration() {
             <div className="flex overflow-hidden group w-full">
               <div className="flex animate-marquee-right w-max hover:animation-play-state-paused">
                 {(() => {
-                  const t2 = [
-                    { text: "\"BeautiLink SA giúp tiết kiệm một lượng thời gian khổng lồ. Quy trình đơn giản hơn, dọn dẹp xi măng thừa cực kỳ dễ dàng và độ lưu giữ vô cùng vượt trội.\"", name: "Dr. Anna Lee", role: "Bác sĩ trưởng, Tuổi trẻ Nha khoa, Sydney" },
-                    { text: "\"Từ ngày dùng xi măng của Shofu, tốc độ dọn dẹp xi măng thừa giảm xuống chỉ còn vài giây. Rất sạch sẽ và không gây kích ứng nướu.\"", name: "Dr. Phạm Hoàng Tuấn", role: "Bác sĩ trưởng, Cần Thơ" },
-                    { text: "\"Điều tôi thích nhất ở keo dán BeautiBond Xtreme là tính kỵ nước tuyệt đối. Nó tạo ra lớp màng bảo vệ hoàn hảo, ngăn chặn sự thoái hóa lớp lai theo thời gian.\"", name: "Dr. Elena Rodriguez", role: "Viện thẩm mỹ Madrid, Tây Ban Nha" },
-                    { text: "\"Công nghệ hạt độn sinh học S-PRG thực sự thay đổi luật chơi trong việc ngăn ngừa sâu răng thứ phát dưới lớp phục hình, giúp viền luôn khỏe mạnh.\"", name: "Prof. Tanaka", role: "Đại học Y khoa Tokyo, Nhật Bản" },
-                    { text: "\"Tỷ lệ lưu giữ của BeautiLink SA với các ca cùi ngắn rất tuyệt vời. Kết hợp cùng BBX tạo nên một màng bảo vệ viền khít sát đến hoàn hảo.\"", name: "Dr. Vũ Thanh Trà", role: "Chuyên gia RHM, Hải Phòng" },
-                    { text: "\"Việc loại bỏ các chai lọ primer lỉnh kỉnh giúp tôi kiểm soát vật tư phòng khám tốt hơn hẳn. Ít sai sót lâm sàng hơn, hiệu quả kinh tế cao hơn rõ rệt.\"", name: "Dr. William Chen", role: "Quản lý chuỗi nha khoa, Singapore" },
-                    { text: "\"Màng keo dán siêu mỏng giúp việc gắn các mặt dán veneer trở nên chính xác tuyệt đối mà không sợ cộm khớp hay làm đổi màu phục hình sứ.\"", name: "Dr. Maria Garcia", role: "Nha khoa Cao cấp, Brazil" }
-                  ];
+                  const t2 = content.testimonials?.row2 || [];
                   const dup = [...t2, ...t2];
                   return dup.map((item, idx) => (
                     <div key={`row-2-${idx}`} className="bg-white rounded-2xl p-5 lg:p-6 shadow-sm flex flex-col w-[280px] sm:w-[320px] lg:w-[350px] shrink-0 mx-2 sm:mx-3 border border-slate-100 whitespace-normal">
@@ -938,15 +942,14 @@ export function IndirectRestoration() {
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
 <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-             onClick={() => openCampaignModal("Gia nhập cộng đồng MiCD")}
+             onClick={() => openCampaignModal(content.testimonials?.ctaText || "Gia nhập cộng đồng MiCD")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
-            <span className="truncate">Gia nhập cộng đồng MiCD</span>
+            <span className="truncate">{content.testimonials?.ctaText || "Gia nhập cộng đồng MiCD"}</span>
             <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
           </button>
         </div>
-
         </div>
       </section>
 
@@ -960,30 +963,29 @@ export function IndirectRestoration() {
           <div className="relative z-10 w-full flex flex-col items-center">
             
               <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-amber-500/20 border border-amber-500/30 mb-6 max-w-full overflow-hidden font-mono text-[9px] min-[375px]:text-[10px] sm:text-xs font-bold text-amber-400 tracking-tight sm:tracking-wide">
-                Đặc quyền đồng hành không thể từ chối
+                {content.offer?.badge || "Đặc quyền đồng hành không thể từ chối"}
               </span>
-              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-10 tracking-tight">
-                Gói giải pháp đồng bộ <br className="hidden sm:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">"Giomer không ê buốt"</span> – An tâm lâm sàng
-              </h2>
+              <h2 
+                dangerouslySetInnerHTML={{ __html: content.offer?.headline || '' }}
+                className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-10 tracking-tight"
+              />
               
               <div className="bg-slate-800/80 rounded-2xl p-6 md:p-8 border border-slate-700 mb-8 w-full text-left flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex-1">
-                  <h3 className="font-heading font-bold text-xl md:text-2xl text-amber-400 mb-4 border-b border-slate-700 pb-4">Combo dán - gắn đồng bộ</h3>
+                  <h3 className="font-heading font-bold text-xl md:text-2xl text-amber-400 mb-4 border-b border-slate-700 pb-4">{content.offer?.comboTitle || "Combo dán - gắn đồng bộ"}</h3>
                   <ul className="space-y-4">
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
-                      <span className="text-slate-300 text-sm sm:text-base leading-relaxed">01 Lọ Keo dán Universal BeautiBond Xtreme (5ml)</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
-                      <span className="text-slate-300 text-sm sm:text-base leading-relaxed">01 Ống Xi măng BeautiLink SA Handmix (15.6g)</span>
-                    </li>
+                    {(content.offer?.comboItems || []).map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                        <span className="text-slate-300 text-sm sm:text-base leading-relaxed">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 
                 <div className="w-full md:w-[40%] lg:w-[35%] flex justify-center items-center">
                   <img 
-                    src="/image/beautilink-bbx-new.webp" 
+                    src={content.offer?.comboImage || "/image/beautilink-bbx-new.webp"} 
                     alt="Combo BeautiLink SA và BeautiBond Xtreme" 
                     className="w-full max-w-[196px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"
@@ -994,27 +996,24 @@ export function IndirectRestoration() {
               <div className="bg-gradient-to-r from-amber-500/10 to-yellow-500/10 rounded-2xl p-6 md:p-8 border border-amber-500/30 mb-10 w-full text-left flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex-1">
                   <h3 className="font-heading font-bold text-xl md:text-2xl text-white mb-4 border-b border-amber-500/30 pb-4">
-                    Bộ quà tặng đặc quyền
+                    {content.offer?.giftsTitle || "Bộ quà tặng đặc quyền"}
                   </h3>
                   <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <div className="mt-1"><Gift className="w-4 h-4 text-amber-400" /></div>
-                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed"><strong className="text-white">Quà tặng vật lý:</strong> 01 Lọ BBX Trial (2ml) để trải nghiệm thực tế ngay tại phòng khám trước khi khui lọ chính.</p>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="mt-1"><Gift className="w-4 h-4 text-amber-400" /></div>
-                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed"><strong className="text-white">Tài liệu số chuyên sâu:</strong> Sổ tay E-Guide "Khoảng Xi Măng Ghép Lâm Sàng & Quy Trình Xử Lý Bề Mặt Sứ".</p>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="mt-1"><Gift className="w-4 h-4 text-amber-400" /></div>
-                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed"><strong className="text-white">Đặc quyền đào tạo:</strong> Vé tham gia Group Học Thuật Kín gỡ rối ca lâm sàng trực tiếp qua Zalo 1:1.</p>
-                    </li>
+                    {(content.offer?.gifts || []).map((gift, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <div className="mt-1"><Gift className="w-4 h-4 text-amber-400" /></div>
+                        <p 
+                          dangerouslySetInnerHTML={{ __html: gift }}
+                          className="text-slate-300 text-sm sm:text-base leading-relaxed" 
+                        />
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 
                 <div className="w-full md:w-[40%] lg:w-[35%] flex justify-center items-center">
                   <img 
-                    src="/images/qua-tang-giomer-khong-e-buot.webp" 
+                    src={content.offer?.giftImage || "/images/qua-tang-giomer-khong-e-buot.webp"} 
                     alt="Bộ quà tặng đặc quyền Giomer" 
                     className="w-full max-w-[235px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                     referrerPolicy="no-referrer"
@@ -1029,9 +1028,8 @@ export function IndirectRestoration() {
                 <div className="text-center md:text-left relative z-10">
                   <p className="text-slate-400 text-sm font-medium mb-1 uppercase tracking-wider">Tổng giá trị</p>
                   <div className="flex items-baseline justify-center md:justify-start gap-2">
-                    <p className="text-slate-400 text-2xl md:text-3xl font-bold line-through decoration-red-500/50 decoration-2">8.155.000đ</p>
+                    <p className="text-slate-400 text-2xl md:text-3xl font-bold line-through decoration-red-500/50 decoration-2">{content.offer?.originalPrice || "8.155.000đ"}</p>
                   </div>
-                  
                 </div>
                 
                 <div className="hidden md:block w-px h-16 bg-slate-700 relative z-10"></div>
@@ -1039,22 +1037,22 @@ export function IndirectRestoration() {
                 
                 <div className="text-center md:text-right relative z-10">
                   <p className="text-amber-400 text-sm font-medium mb-1 uppercase tracking-wider">Mức đầu tư ưu đãi</p>
-                  <p className="font-heading font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">3.415.000đ</p>
+                  <p className="font-heading font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">{content.offer?.offerPrice || "3.415.000đ"}</p>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full">
                 <button 
-                   onClick={() => openCampaignModal("Đăng ký combo 'Giomer không ê buốt'")}
+                   onClick={() => openCampaignModal(content.offer?.ctaText || "Đăng ký combo 'Giomer không ê buốt'")}
                   className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-white hover:text-slate-900 hover:shadow-xl hover:shadow-white/20 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
                 >
-                  <span className="truncate">ĐĂNG KÝ COMBO "GIOMER KHÔNG Ê BUỐT"</span>
+                  <span className="truncate">{content.offer?.ctaText || "ĐĂNG KÝ COMBO \"GIOMER KHÔNG Ê BUỐT\""}</span>
                   <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </button>
               </div>
               
               <p className="mt-6 text-sm text-slate-400 flex items-center justify-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" /> Hoàn tiền 100% nếu Bác sĩ không hài lòng.
+                <ShieldCheck className="w-4 h-4 text-emerald-400" /> {content.offer?.guarantee || "Hoàn tiền 100% nếu Bác sĩ không hài lòng."}
               </p>
             </div>
           </div>
@@ -1068,78 +1066,13 @@ export function IndirectRestoration() {
           <div className="max-w-3xl mx-auto">
         <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] text-center mb-10 tracking-tight">Giải đáp <br className="block sm:hidden" /><span className="text-[#00ADEF]">hoài nghi lâm sàng</span></h2>
         
-        <FaqItem 
-          question="Xi măng trộn tay (Handmix) liệu có đều và đồng nhất bằng vòi Automix tự động không?"
-          answer={
-            <>
-              <strong>Giải đáp lâm sàng: Hoàn toàn đều và đồng nhất.</strong> Tỷ lệ 1:1 của hai dải xi măng BeautiLink SA được thiết kế với màu sắc tương phản rõ rệt. Khi trộn tay trên giấy trong 10 giây, sự chuyển màu đồng nhất 100% sẽ là tín hiệu trực quan báo hiệu xi măng đã đạt độ hòa quyện hoàn hảo. Định dạng Handmix tuýp khổng lồ 15.6g (9ml) đáp ứng tới 120 ca gắn, giúp triệt tiêu hoàn toàn lượng xi măng lãng phí bị đông cứng trong đầu vòi Automix.
-            </>
-          }
-        />
-        <FaqItem 
-          question="Keo dán BeautiBond Xtreme kỵ nước và HEMA-free thì có khó thâm nhập vào ống ngà ẩm không?"
-          answer={
-            <>
-              <strong>Giải đáp lâm sàng: Hoàn toàn không.</strong> BBX ứng dụng hệ dung môi Acetone thẩm thấu nhanh, đóng vai trò là "chất dẫn" đưa các monomer kỵ nước thâm nhập sâu vào các ống ngà ẩm. Ngay sau khi thổi khô 3 giây để bay hơi dung môi, BBX tạo thành lớp màng dán dính kỵ nước mỏng 5µm bít kín ống ngà, ngăn chặn sự thâm nhập của dịch ngà và triệt tiêu hoàn toàn ê buốt.
-            </>
-          }
-        />
-        <FaqItem 
-          question="Keo dán màng 5µm và xi măng 14µm thì có ảnh hưởng lực dán cơ học của phục hình gián tiếp không?"
-          answer={
-            <>
-              <strong>Giải đáp lâm sàng: Ngược lại, đây là độ dày lý tưởng nhất cho phục hình gián tiếp.</strong> Tổng độ dày màng dán dính (total film thickness) (BBX 5µm + BeautiLink SA 14µm) giúp viền dán khít sát tuyệt đối, loại bỏ nguy cơ cộm khớp hay vi kẽ đường hoàn tất. Thử nghiệm độc lập của The Dental Advisor ghi nhận lực dán trượt trên Zirconia đạt mức ~50 MPa và giữ vững ổn định sau 5.000 chu kỳ sốc nhiệt.
-            </>
-          }
-        />
-        <FaqItem 
-          question="Xi măng có trùng hợp (Self-cure) hoàn toàn dưới các mão Zirconia đục hoặc mão kim loại vùng tối không?"
-          answer={
-            <>
-              <strong>Giải đáp lâm sàng: Hoàn toàn đảm bảo.</strong> BeautiLink SA là xi măng resin tự dán Dual-cure (Trùng hợp kép) sở hữu hệ thống chất xúc tác phản ứng cao. Trong các vùng tối ánh sáng đèn không thể xuyên qua (như dưới mão Zirconia dày, mão kim loại, chốt tủy), phản ứng tự trùng hợp hóa học (Self-cure) tự động kích hoạt hoàn toàn ở 3 phút trong nhiệt độ miệng (37°C), đảm bảo lực dán trượt và độ bền uốn (flexural strength) tối đa mà không phụ thuộc vào đèn quang trùng hợp.
-            </>
-          }
-        />
-        <FaqItem 
-          question="Gắn mão Zirconia hay sứ Lithium Disilicate (E.max) với BeautiLink SA có bắt buộc phải bôi Silane hoặc Primer Zirconia rời không?"
-          answer={
-            <>
-              <strong>Giải đáp lâm sàng: Không cần thiết đối với các phục hình có độ lưu giữ cơ học tiêu chuẩn.</strong>
-              <br /><br />
-              Trong thành phần BeautiLink SA đã tích hợp sẵn Phosphonic Acid Monomer (tự liên kết hóa trị trực tiếp với oxit kim loại trên Zirconia/Kim loại) và Silane Coupling Agent thế hệ mới (tự liên kết với sứ thủy tinh/Lithium Disilicate).
-              <br /><br />
-              Đối với các phục hình lưu kém (Veneer, Tabletop, Onlay mỏng), Bác sĩ chỉ cần quét thêm 1 lớp keo dán Universal BeautiBond Xtreme vào lòng phục hình và cùi răng để nhân đôi lực dán mà không cần mua thêm bất kỳ chai Silane hay Primer Zirconia rời nào khác.
-            </>
-          }
-        />
-        <FaqItem 
-          question="Xi măng Dual-cure có bị đổi màu hay ố vàng đường viền dán sau một thời gian sử dụng không?"
-          answer={
-            <>
-              <strong>Giải đáp lâm sàng: Đảm bảo độ ổn định màu sắc vượt trội.</strong> BeautiLink SA được kỹ sư vật liệu Shofu tối ưu hóa hệ thống xúc tác trùng hợp, giúp giữ màu sắc ổn định (Stable shades) trọn đời phục hình. Sản phẩm cung cấp 3 tông màu lâm sàng thực tế (Clear, Ivory, Opaque) với khả năng che màu ngà chẻ/cùi kim loại tối màu hoàn hảo (đặc biệt là màu Opaque) mà không bị viền đen hay ố vàng theo thời gian.
-            </>
-          }
-        />
-        <FaqItem 
-          question="Sau khi gắn phục hình trên cùi răng sống, bệnh nhân có bị nhạy cảm ngà hay ê buốt hậu phẫu không?"
-          answer={
-            <>
-              <strong>Giải đáp lâm sàng: Tỷ lệ ê buốt hậu phẫu tiệm cận mức 0%.</strong> Sự kết hợp giữa màng keo dán kỵ nước BBX không chứa HEMA bít kín ống ngà và hạt độn sinh học S-PRG trong BeautiLink SA liên tục giải phóng 6 ion đệm (đặc biệt là Fluoride & Strontium). Các ion này hỗ trợ tái khoáng hóa ngà răng và bịt kín mọi kẽ hở vi thể, mang lại sự dễ chịu tuyệt đối cho bệnh nhân ngay sau khi hết thuốc tê.
-            </>
-          }
-        />
-        <FaqItem 
-          question="Bộ đôi sản phẩm có bắt buộc phải bảo quản trong tủ lạnh không? Hạn sử dụng bao lâu trong điều kiện khí hậu Việt Nam?"
-          answer={
-            <>
-              <strong>Giải đáp lâm sàng: Không bắt buộc để tủ lạnh nếu nhiệt độ phòng dưới 25°C.</strong>
-              <br /><br />
-              BeautiLink SA có hạn sử dụng 24 tháng trong túi foil bạc niêm phong nguyên bản (dùng trong vòng 6 tháng sau khi mở túi).
-              <br /><br />
-              Sản phẩm ứng dụng công nghệ xúc tác "ngủ đông" (steric hindrance) kháng nhiệt ẩm vượt trội. Ở các vùng khí hậu nhiệt đới nóng ẩm có nhiệt độ phòng thường xuyên {'>'} 25°C, Bác sĩ chỉ cần cất tuýp xi măng vào ngăn mát tủ lạnh và lấy ra trước khi sử dụng để tuýp về nhiệt độ phòng là có thể thao tác hoàn hảo.
-            </>
-          }
-        />
+        {(content.faqs || []).map((faq) => (
+          <FaqItem 
+            key={faq.id}
+            question={faq.q}
+            answer={<span dangerouslySetInnerHTML={{ __html: faq.a }} />}
+          />
+        ))}
           
           <div className="mt-12 md:mt-16 text-center relative z-10">
             <button 

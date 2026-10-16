@@ -16,7 +16,30 @@ html, body {
 
 body {
   position: relative;
-  
+}
+
+/* Ensure CMS editor inputs and textareas always have dark text regardless of OS dark mode */
+.admin-cms input,
+.admin-cms textarea,
+.admin-cms select,
+input[type="text"],
+input[type="url"],
+input[type="number"],
+input[type="email"],
+textarea {
+  color: #0f172a !important;
+  background-color: #ffffff;
+}
+
+.admin-cms input::placeholder,
+.admin-cms textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.admin-cms input::selection,
+.admin-cms textarea::selection {
+  background-color: #00ADEF !important;
+  color: #ffffff !important;
 }
 
 #root {
