@@ -831,7 +831,7 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
                   <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 2: Thổi cát</h4>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Thổi cát làm sạch và xử lý bề mặt lòng phục hình để tối ưu hóa khả năng liên kết dán.
+                    Thổi hơi để dàn mỏng màng keo xuống ngưỡng <strong className="text-white">5µm</strong>. Sự bốc hơi dung môi làm tăng vọt nồng độ monomer acid, từ đó mở khóa màng bảo vệ của phân tử ARS.
                   </p>
                 </div>
               </div>
