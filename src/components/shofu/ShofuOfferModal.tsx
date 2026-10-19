@@ -177,7 +177,9 @@ export function ShofuOfferModal() {
       'Tên Bác sĩ': formData.name,
       'Số điện thoại (Zalo)': formData.phone,
       'Phòng khám / Nơi công tác': formData.clinic,
-      'Ghi chú thêm': '',
+      'Sản phẩm quan tâm': modalMode === 'combo' ? offerDetails[activeOfferId].name : (activeProductIds.length > 0 ? activeProductIds.map(id => productDetails[id].name).join(", ") : "Không chọn ưu đãi cụ thể"),
+      'Trạng thái Lead': 'Mới',
+      'Ghi chú thêm': formData.wantsCustomOffer ? 'Cần tư vấn thiết kế ưu đãi tùy chỉnh' : '',
       wantsCustomOffer: formData.wantsCustomOffer ? 'Yes' : 'No',
       selectedPromos: modalMode === 'combo' ? offerDetails[activeOfferId].name : (activeProductIds.length > 0 ? activeProductIds.map(id => productDetails[id].name).join(", ") : "Không chọn ưu đãi cụ thể")
     };

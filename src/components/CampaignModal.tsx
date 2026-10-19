@@ -55,7 +55,7 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
         'Add': formData.address,
         'add': formData.address,
         'address': formData.address,
-        'Sản phẩm quan tâm': '',
+        'Sản phẩm quan tâm': title || 'Chung',
         'Trạng thái Lead': 'Mới',
         'Ghi chú thêm': formData.notes
       };
