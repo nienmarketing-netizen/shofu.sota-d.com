@@ -162,7 +162,7 @@ export const Section5OfferEditor: React.FC<Section5OfferEditorProps> = ({
                 value={originalPrice}
                 onChange={(e) => setOriginalPrice(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-base font-bold text-slate-500 outline-none"
-                placeholder="8.155.000đ"
+                placeholder="3.250.000đ"
               />
             </div>
             <div>
@@ -174,7 +174,7 @@ export const Section5OfferEditor: React.FC<Section5OfferEditorProps> = ({
                 value={offerPrice}
                 onChange={(e) => setOfferPrice(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-amber-300 bg-white text-base font-black text-amber-600 outline-none"
-                placeholder="3.415.000đ"
+                placeholder="1.497.000vnđ"
               />
             </div>
           </div>

@@ -113,8 +113,8 @@ export default function IndirectRestorationEditor() {
   const [offerGiftsTitle, setOfferGiftsTitle] = useState<string>(() => initialData.offer.giftsTitle || '');
   const [offerGiftImage, setOfferGiftImage] = useState<string>(() => initialData.offer.giftImage || '/images/qua-tang-giomer-khong-e-buot.webp');
   const [offerGifts, setOfferGifts] = useState<string[]>(() => initialData.offer.gifts || []);
-  const [offerOriginalPrice, setOfferOriginalPrice] = useState<string>(() => initialData.offer.originalPrice || '8.155.000đ');
-  const [offerPrice, setOfferPrice] = useState<string>(() => initialData.offer.offerPrice || '3.415.000đ');
+  const [offerOriginalPrice, setOfferOriginalPrice] = useState<string>(() => initialData.offer.originalPrice || '3.250.000đ');
+  const [offerPrice, setOfferPrice] = useState<string>(() => initialData.offer.offerPrice || '1.497.000vnđ');
   const [offerCtaText, setOfferCtaText] = useState<string>(() => initialData.offer.ctaText || 'ĐĂNG KÝ COMBO "GIOMER KHÔNG Ê BUỐT"');
   const [offerGuarantee, setOfferGuarantee] = useState<string>(() => initialData.offer.guarantee || 'Hoàn tiền 100% nếu Bác sĩ không hài lòng.');
 

@@ -65,12 +65,12 @@ export function ShofuOfferModal() {
         { name: '01 Tuýp Xi măng BeautiLink SA Handmix 15.6g (120 ca)', value: '', image: 'https://placehold.co/150x150/00ADEF/ffffff?text=BeautiLink+SA' }
       ],
       bonuses: [
-        { name: 'Bộ Đánh Bóng Composite Polishing Kit CA', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Polishing+Kit' },
-        { name: 'Cố vấn Lâm sàng 1:1 cùng ThS.BS Trần Quang Khánh', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Co+Van+1:1' },
-        { name: 'Sổ tay E-Guide & Bộ Video Masterclass Thực chiến', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Masterclass' }
+        { name: 'Cơ hội trải nghiệm thực tế ngay tại phòng khám trước khi khui lọ chính', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Trai+Nghiem' },
+        { name: 'Vé tham gia Group Học Thuật Kín gỡ rối ca lâm sàng trực tiếp qua Zalo 1:1', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=Zalo+1:1' },
+        { name: 'Sổ tay E-Guide Hướng dẫn sử dụng BỘ ĐÔI TINH GỌN – GẮN KẾT BỀN VỮNG', value: '', image: 'https://placehold.co/150x150/F59E0B/ffffff?text=E-Guide' }
       ],
-      totalValue: '8.155.000đ',
-      price: '3.415.000đ',
+      totalValue: '3.250.000đ',
+      price: '1.497.000vnđ',
       
       guarantee: 'Hoàn tiền 100% nếu Bác sĩ không hài lòng'
     },
