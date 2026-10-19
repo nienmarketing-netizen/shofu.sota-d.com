@@ -61,7 +61,7 @@ export function ShofuOfferModal() {
         'Bảo chứng lâm sàng 8 năm & 13 năm từ ĐH Florida.'
       ],
       products: [
-        { name: '01 Lọ Keo dán Universal BeautiBond Xtreme (5ml)', value: '', image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-4-tang-1-Beautifil-II-LS.webp' },
+        { name: '01 Lọ Keo dán Universal BeautiBond Xtreme (2ml)', value: '', image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-4-tang-1-Beautifil-II-LS.webp' },
         { name: '01 Tuýp Xi măng BeautiLink SA Handmix 15.6g (120 ca)', value: '', image: 'https://placehold.co/150x150/00ADEF/ffffff?text=BeautiLink+SA' }
       ],
       bonuses: [
