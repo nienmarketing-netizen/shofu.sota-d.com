@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plus, Trash2, ArrowRight } from 'lucide-react';
+import { Plus, Trash2, ArrowRight, Eye } from 'lucide-react';
 import { EvidenceItem, applyFormat } from './types';
 
 interface Section4EvidenceEditorProps {
@@ -161,6 +161,27 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
             onChange={(e) => setEvidenceDesc(e.target.value)}
             className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-700 font-body leading-relaxed"
           />
+
+          {/* Live Preview trực quan mô tả Section 4 */}
+          <div className="mt-3 rounded-2xl bg-slate-900 border border-slate-800 p-4 shadow-sm space-y-2">
+            <div className="flex items-center justify-between border-b border-slate-800/80 pb-2">
+              <div className="flex items-center gap-2">
+                <Eye className="w-3.5 h-3.5 text-[#00ADEF]" />
+                <span className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider">
+                  Xem trước trực quan (Live Preview)
+                </span>
+              </div>
+              <span className="text-[10px] font-mono text-slate-500 bg-slate-800 px-2 py-0.5 rounded-full">
+                Khung nền thực tế Section 4
+              </span>
+            </div>
+            <div 
+              className="text-sm font-body text-slate-300 leading-relaxed [&_strong]:text-white [&_strong]:font-bold"
+              dangerouslySetInnerHTML={{
+                __html: evidenceDesc || '<span class="text-slate-500 italic text-xs">Chưa có nội dung mô tả... Vui lòng nhập nội dung ở trên để xem trước.</span>'
+              }}
+            />
+          </div>
         </div>
       </div>
 

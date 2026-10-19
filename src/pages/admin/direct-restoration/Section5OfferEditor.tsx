@@ -1,5 +1,5 @@
 import React from 'react';
-import { Upload, RefreshCw, Plus, Trash2, ShieldCheck, Gift, Package, DollarSign, Sparkles } from 'lucide-react';
+import { Upload, RefreshCw, Plus, Trash2, ShieldCheck, Gift, Package, DollarSign, Sparkles, CheckCircle2 } from 'lucide-react';
 
 interface Section5OfferEditorProps {
   // General offer
@@ -491,32 +491,121 @@ export const Section5OfferEditor: React.FC<Section5OfferEditorProps> = ({
           />
         </div>
 
-        <div className="space-y-3">
-          <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
-            Các lớp bảo chứng lâm sàng
-          </label>
-          {guaranteesList.map((guarantee, idx) => (
-            <div key={idx} className="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
-              <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-1">
-                {idx + 1}
-              </span>
-              <textarea
-                rows={2}
-                value={guarantee}
-                onChange={(e) => handleUpdateGuarantee(idx, e.target.value)}
-                placeholder="Ví dụ: Bảo chứng 1 (Dứt ê buốt): Hỗ trợ 1:1 trong 5 ca phục hồi sống đầu tiên..."
-                className="flex-1 bg-transparent border-none text-sm text-slate-800 font-medium focus:ring-0 outline-none resize-y p-0"
-              />
-              <button
-                type="button"
-                onClick={() => handleDeleteGuarantee(idx)}
-                className="text-slate-400 hover:text-red-500 p-1.5 transition-colors shrink-0 mt-0.5"
-                title="Xóa bảo chứng này"
-              >
-                <Trash2 className="w-4 h-4" />
-              </button>
-            </div>
-          ))}
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
+              Các lớp bảo chứng lâm sàng ({guaranteesList.length} lớp)
+            </label>
+            <span className="text-[11px] font-mono text-emerald-700 bg-emerald-100/70 px-2 py-0.5 rounded-full font-bold">
+              Tiêu đề tự động in đậm & hiển thị màu xanh
+            </span>
+          </div>
+
+          {guaranteesList.map((guarantee, idx) => {
+            const colonIdx = guarantee.indexOf(':');
+            const hasColon = colonIdx > -1;
+            const titlePart = hasColon ? guarantee.substring(0, colonIdx) : guarantee;
+            const descPart = hasColon ? guarantee.substring(colonIdx + 1).replace(/^\s+/, '') : '';
+
+            const handleTitleChange = (newTitle: string) => {
+              const clean = newTitle.replace(/:+$/, '');
+              const full = descPart ? `${clean}: ${descPart}` : (clean ? `${clean}:` : '');
+              handleUpdateGuarantee(idx, full);
+            };
+
+            const handleDescChange = (newDesc: string) => {
+              const cleanTitle = titlePart.replace(/:+$/, '');
+              const full = cleanTitle ? `${cleanTitle}: ${newDesc}` : newDesc;
+              handleUpdateGuarantee(idx, full);
+            };
+
+            return (
+              <div key={idx} className="bg-white p-4 sm:p-5 rounded-2xl border border-emerald-200/90 shadow-xs space-y-3.5 relative group">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                  <div className="flex items-center gap-2">
+                    <span className="w-6 h-6 rounded-full bg-emerald-600 text-white font-mono text-xs font-bold flex items-center justify-center shrink-0">
+                      {idx + 1}
+                    </span>
+                    <span className="text-xs font-mono font-bold text-emerald-900 uppercase">
+                      Lớp bảo chứng {idx + 1}
+                    </span>
+                  </div>
+
+                  {guaranteesList.length > 1 && (
+                    <button
+                      type="button"
+                      onClick={() => handleDeleteGuarantee(idx)}
+                      className="text-slate-400 hover:text-red-500 hover:bg-red-50 p-1.5 rounded-lg transition-colors cursor-pointer"
+                      title="Xóa bảo chứng này"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  )}
+                </div>
+
+                <div className="grid grid-cols-1 gap-3">
+                  {/* Field 1: Tiêu đề (In đậm & Màu xanh) */}
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <label className="block text-xs font-mono font-bold text-emerald-800 uppercase tracking-wide">
+                        Tiêu đề (In đậm & Hiển thị màu xanh)
+                      </label>
+                      <span className="text-[10px] font-mono text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 font-bold">
+                        Màu xanh & In đậm
+                      </span>
+                    </div>
+                    <div className="relative">
+                      <input
+                        type="text"
+                        value={titlePart}
+                        onChange={(e) => handleTitleChange(e.target.value)}
+                        placeholder="Ví dụ: Bảo chứng 1 (Dứt ê buốt)"
+                        className="w-full bg-emerald-50/40 border border-emerald-300 rounded-xl px-3.5 py-2.5 text-sm font-bold text-emerald-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none pr-8"
+                      />
+                      <span className="absolute right-3.5 top-1/2 -translate-y-1/2 font-bold text-emerald-600 text-sm select-none">
+                        :
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Field 2: Mô tả cam kết */}
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wide">
+                      Mô tả chi tiết cam kết
+                    </label>
+                    <textarea
+                      rows={2}
+                      value={descPart}
+                      onChange={(e) => handleDescChange(e.target.value)}
+                      placeholder="Ví dụ: Hỗ trợ 1:1 trong 5 ca phục hồi sống đầu tiên. Nếu bệnh nhân ê buốt, chuyên gia call gỡ lỗi..."
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-700 font-body leading-relaxed focus:border-emerald-500 focus:bg-white focus:ring-1 focus:ring-emerald-500 outline-none"
+                    />
+                  </div>
+                </div>
+
+                {/* Live Preview trực quan cho mỗi lớp bảo chứng */}
+                <div className="pt-1">
+                  <div className="bg-slate-900 rounded-xl p-3 sm:p-3.5 border border-slate-800 space-y-1.5">
+                    <div className="flex items-center justify-between text-[10px] font-mono text-slate-400 border-b border-slate-800/80 pb-1.5">
+                      <span>Hiển thị thực tế trên web:</span>
+                      <span className="text-emerald-400 font-bold">Live Preview</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0 mt-0.5" />
+                      <div className="text-xs sm:text-sm text-slate-300 leading-relaxed font-body">
+                        <strong className="text-emerald-400 font-bold mr-1.5">
+                          {titlePart ? `${titlePart.replace(/:+$/, '')}:` : 'Tiêu đề bảo chứng:'}
+                        </strong>
+                        <span>
+                          {descPart || <span className="text-slate-500 italic">Nhập mô tả ở trên...</span>}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

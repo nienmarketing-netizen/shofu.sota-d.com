@@ -1276,7 +1276,7 @@ const faqs = [
                 "Bảo chứng 3 (Bảo hành tồn kho 90 ngày): Đổi mới 1-1 ngay lập tức nếu lỗi đông cứng khi mở nắp trong vòng 90 ngày."
               ]).map((guar: string, guarIdx: number) => {
                 const colonIdx = guar.indexOf(':');
-                const hasPrefix = colonIdx > -1 && colonIdx < 35;
+                const hasPrefix = colonIdx > -1 && colonIdx < 80;
                 const prefix = hasPrefix ? guar.substring(0, colonIdx + 1) : '';
                 const rest = hasPrefix ? guar.substring(colonIdx + 1) : guar;
                 return (
