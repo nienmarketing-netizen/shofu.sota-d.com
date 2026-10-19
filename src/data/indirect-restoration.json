@@ -180,18 +180,18 @@
     "steps": [
       {
         "stepNumber": "01",
-        "title": "Bước 1 – Quét keo:",
-        "description": "Nhỏ <strong class=\"text-white\">một giọt duy nhất</strong> BeautiBond Xtreme và quét đều lên cả bề mặt cùi răng và lòng phục hình."
+        "title": "Bước 1: Thoa BeautiBond Xtreme",
+        "description": "Chuẩn bị bề mặt cùi răng sạch và xử lý với BeautiBond Xtreme để sẵn sàng cho bước gắn."
       },
       {
         "stepNumber": "02",
-        "title": "Bước 2 – Thổi hơi:",
-        "description": "Thổi hơi để dàn mỏng màng keo xuống ngưỡng <strong class=\"text-white\">5µm</strong>. Sự bốc hơi dung môi làm tăng vọt nồng độ monomer acid, từ đó mở khóa màng bảo vệ của phân tử ARS."
+        "title": "Bước 2: Thổi cát",
+        "description": "Thổi cát làm sạch và xử lý bề mặt lòng phục hình để tối ưu hóa khả năng liên kết dán."
       },
       {
         "stepNumber": "03",
-        "title": "Bước 3 – Chiếu đèn & bơm xi măng:",
-        "description": "Quang trùng hợp trong <strong class=\"text-white\">5 đến 10 giây</strong>, sau đó bơm trực tiếp xi măng BeautiLink SA vào lòng phục hình."
+        "title": "Bước 3: Trộn Cement và gắn phục hình",
+        "description": "Đặt Cement vào lòng phục hình rồi đặt lên cùi răng và ấn lực vừa đủ. Sau đó quang trùng hợp 10-20 giây và đánh bóng."
       }
     ],
     "ctaText": "Trải nghiệm phác đồ 3 bước"

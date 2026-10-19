@@ -816,9 +816,9 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
                   01
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
-                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 1 – Quét keo:</h4>
+                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 1: Thoa BeautiBond Xtreme</h4>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Nhỏ <strong className="text-white">một giọt duy nhất</strong> BeautiBond Xtreme và quét đều lên cả bề mặt cùi răng và lòng phục hình.
+                    Chuẩn bị bề mặt cùi răng sạch và xử lý với BeautiBond Xtreme để sẵn sàng cho bước gắn.
                   </p>
                 </div>
               </div>
@@ -829,9 +829,9 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
                   02
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
-                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 2 – Thổi hơi:</h4>
+                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 2: Thổi cát</h4>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Thổi hơi để dàn mỏng màng keo xuống ngưỡng <strong className="text-white">5µm</strong>. Sự bốc hơi dung môi làm tăng vọt nồng độ monomer acid, từ đó mở khóa màng bảo vệ của phân tử ARS.
+                    Thổi cát làm sạch và xử lý bề mặt lòng phục hình để tối ưu hóa khả năng liên kết dán.
                   </p>
                 </div>
               </div>
@@ -842,9 +842,9 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
                   03
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
-                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 3 – Chiếu đèn & bơm xi măng:</h4>
+                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 3: Trộn Cement và gắn phục hình</h4>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Quang trùng hợp trong <strong className="text-white">5 đến 10 giây</strong>, sau đó bơm trực tiếp xi măng BeautiLink SA vào lòng phục hình.
+                    Đặt Cement vào lòng phục hình rồi đặt lên cùi răng và ấn lực vừa đủ. Sau đó quang trùng hợp 10-20 giây và đánh bóng.
                   </p>
                 </div>
               </div>
