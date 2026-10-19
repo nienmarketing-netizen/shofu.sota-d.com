@@ -12,6 +12,20 @@ export function ShofuLeadMagnet() {
     setIsSubmitting(true);
     
     const payload = {
+      'Nguồn Lead': 'Landing Page Shofu (Lead Magnet)',
+      'URL/Creative': typeof window !== 'undefined' ? window.location.href : '',
+      'Loại Yêu Cầu': 'Tài liệu độc quyền & Báo giá',
+      'Tên Bác sĩ': formData.name,
+      'Số điện thoại (Zalo)': formData.phone,
+      'Phòng khám / Nơi công tác': formData.email ? `Email: ${formData.email}` : '',
+      'Địa chỉ phòng khám': '',
+      'Địa chỉ': '',
+      'Add': '',
+      'add': '',
+      'address': '',
+      'Sản phẩm quan tâm': 'Tài liệu độc quyền & Báo giá Shofu',
+      'Trạng thái Lead': 'Mới',
+      'Ghi chú thêm': formData.email ? `Email: ${formData.email}` : '',
       name: formData.name,
       phone: formData.phone,
       clinic: formData.email ? `Email: ${formData.email}` : '',

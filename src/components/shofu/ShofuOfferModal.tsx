@@ -7,7 +7,7 @@ export function ShofuOfferModal() {
   const [modalMode, setModalMode] = useState<'combo' | 'product'>('combo');
   const [activeOfferId, setActiveOfferId] = useState<1 | 2>(1);
   const [activeProductIds, setActiveProductIds] = useState<Array<1 | 2 | 3 | 4>>([]);
-  const [formData, setFormData] = useState({ name: '', phone: '', clinic: '', address: '', wantsCustomOffer: false });
+  const [formData, setFormData] = useState({ name: '', phone: '', clinic: '', address: '', notes: '', wantsCustomOffer: false });
   const [formError, setFormError] = useState('');
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export function ShofuOfferModal() {
     setIsOpen(false);
     setTimeout(() => {
       setIsSuccess(false);
-      setFormData({ name: '', phone: '', clinic: '', address: '', wantsCustomOffer: false });
+      setFormData({ name: '', phone: '', clinic: '', address: '', notes: '', wantsCustomOffer: false });
       setFormError('');
       document.body.style.overflow = 'auto';
     }, 300);
@@ -165,23 +165,31 @@ export function ShofuOfferModal() {
     setFormError('');
     setIsSubmitting(true);
     const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 11);
+    const selectedPromoText = modalMode === 'combo' 
+      ? offerDetails[activeOfferId].name 
+      : (activeProductIds.length > 0 ? activeProductIds.map(id => productDetails[id].name).join(", ") : "Xem ưu đãi & đặt hàng");
+
     const payload = {
+      'Nguồn Lead': 'Landing Page Shofu (Xem ưu đãi và đặt hàng)',
+      'URL/Creative': typeof window !== 'undefined' ? window.location.href : '',
+      'Loại Yêu Cầu': modalMode === 'combo' ? offerDetails[activeOfferId].name : 'Đặt hàng ưu đãi',
+      'Tên Bác sĩ': formData.name,
+      'Số điện thoại (Zalo)': formData.phone,
+      'Phòng khám / Nơi công tác': formData.clinic,
+      'Địa chỉ phòng khám': formData.address,
+      'Địa chỉ': formData.address,
+      'Add': formData.address,
+      'add': formData.address,
+      'address': formData.address,
+      'Sản phẩm quan tâm': selectedPromoText,
+      'Trạng thái Lead': 'Mới',
+      'Ghi chú thêm': [formData.notes, formData.wantsCustomOffer ? 'Cần tư vấn thiết kế ưu đãi tùy chỉnh' : ''].filter(Boolean).join(' - '),
       name: formData.name,
       phone: formData.phone,
       clinic: formData.clinic,
       address: formData.address,
-      'Địa chỉ': formData.address,
-      'Địa chỉ phòng khám': formData.address,
-      'Add': formData.address,
-      'add': formData.address,
-      'Tên Bác sĩ': formData.name,
-      'Số điện thoại (Zalo)': formData.phone,
-      'Phòng khám / Nơi công tác': formData.clinic,
-      'Sản phẩm quan tâm': modalMode === 'combo' ? offerDetails[activeOfferId].name : (activeProductIds.length > 0 ? activeProductIds.map(id => productDetails[id].name).join(", ") : "Không chọn ưu đãi cụ thể"),
-      'Trạng thái Lead': 'Mới',
-      'Ghi chú thêm': formData.wantsCustomOffer ? 'Cần tư vấn thiết kế ưu đãi tùy chỉnh' : '',
       wantsCustomOffer: formData.wantsCustomOffer ? 'Yes' : 'No',
-      selectedPromos: modalMode === 'combo' ? offerDetails[activeOfferId].name : (activeProductIds.length > 0 ? activeProductIds.map(id => productDetails[id].name).join(", ") : "Không chọn ưu đãi cụ thể")
+      selectedPromos: selectedPromoText
     };
 
     const webhookUrl = "https://script.google.com/macros/s/AKfycbxc-EtHL1Un2AgalFAz8RvxlHX0TtE4q6OK2h0CiSNWBo7tvP1sDhBiJv7vvrRkJ3-zgQ/exec";
@@ -542,6 +550,17 @@ export function ShofuOfferModal() {
                         onChange={(e) => setFormData({...formData, address: e.target.value})}
                         className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-slate-900/10 focus:border-slate-900 outline-none transition-all text-sm"
                         placeholder="Số nhà, tên đường, quận/huyện, tỉnh/TP"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-bold text-slate-700 mb-2">Ghi chú thêm</label>
+                      <textarea 
+                        rows={2}
+                        value={formData.notes}
+                        onChange={(e) => setFormData({...formData, notes: e.target.value})}
+                        className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-slate-900/10 focus:border-slate-900 outline-none transition-all text-sm resize-none"
+                        placeholder="Nội dung cần tư vấn hoặc ghi chú thêm cho Sota-D..."
                       />
                     </div>
 
