@@ -12,6 +12,7 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
     name: '',
     phone: '',
     clinic: '',
+    address: '',
     products: [] as string[]
   });
   const [error, setError] = useState('');
@@ -23,7 +24,7 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
       const timer = setTimeout(() => {
         setIsSuccess(false);
         setIsSubmitting(false);
-        setFormData({ name: '', phone: '', clinic: '', products: [] });
+        setFormData({ name: '', phone: '', clinic: '', address: '', products: [] });
         setError('');
       }, 300);
       return () => clearTimeout(timer);
@@ -58,6 +59,11 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
         'Tên Bác sĩ': formData.name,
         'Số điện thoại (Zalo)': formData.phone,
         'Phòng khám / Nơi công tác': formData.clinic,
+        'Địa chỉ phòng khám': formData.address,
+        'Địa chỉ': formData.address,
+        'Add': formData.address,
+        'add': formData.address,
+        'address': formData.address,
         'Sản phẩm quan tâm': formData.products.join(', '),
         'Trạng thái Lead': 'Mới',
         'Ghi chú thêm': ''
@@ -159,6 +165,9 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
                 {formData.clinic && (
                   <p><span className="text-slate-500 inline-block w-24">Phòng khám:</span> <strong className="text-slate-900">{formData.clinic}</strong></p>
                 )}
+                {formData.address && (
+                  <p><span className="text-slate-500 inline-block w-24">Địa chỉ:</span> <strong className="text-slate-900">{formData.address}</strong></p>
+                )}
                 {formData.products.length > 0 && (
                   <p><span className="text-slate-500 inline-block w-24">Sản phẩm:</span> <strong className="text-slate-900">{formData.products.join(', ')}</strong></p>
                 )}
@@ -235,6 +244,19 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
                   onChange={e => setFormData(prev => ({ ...prev, clinic: e.target.value }))}
                   className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] outline-none transition-all font-body text-sm"
                   placeholder="Tên phòng khám hoặc bệnh viện"
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="address" className="block font-body text-sm font-semibold text-slate-700 mb-1.5">Địa chỉ phòng khám</label>
+                <input 
+                  type="text" 
+                  id="address"
+                  value={formData.address}
+                  onChange={e => setFormData(prev => ({ ...prev, address: e.target.value }))}
+                  className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] outline-none transition-all font-body text-sm"
+                  placeholder="Số nhà, tên đường, quận/huyện, tỉnh/TP"
                   disabled={isSubmitting}
                 />
               </div>

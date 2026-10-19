@@ -257,18 +257,31 @@
   "offer": {
     "badge": "Đặc quyền đồng hành không thể từ chối",
     "headline": "Gói giải pháp đồng bộ <br class=\"hidden sm:block\" /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200\">combo \"Phục hồi sinh học MiCD - Chặn đứng ê buốt\"</span>",
+    "coreTitle": "Bộ 3 sản phẩm cốt lõi",
     "coreProductsImage": "/image/phuc-hoi-truc-tiep.webp",
-    "giftImage": "/image/qua-tang-doc-quyen-shofu-giai-phap-phuc-hoi-truc-tiep.webp",
     "coreProductsList": [
       "01 Bộ keo dán Universal thế hệ 8 BeautiBond Xtreme (5ml)",
       "01 Tuýp composite đặc giảm co rút Beautifil II (4.5g) hoặc Beautifil II LS (4g)",
       "01 Tuýp composite siêu lực nén Beautifil Injectable X (2.2g)"
     ],
+    "giftsTitle": "Bộ 3 quà tặng tài trợ 100%",
+    "giftImage": "/image/qua-tang-doc-quyen-shofu-giai-phap-phuc-hoi-truc-tiep.webp",
     "giftsList": [
       "Quà vật lý: 01 Bộ mũi mài bóng Composite Polishing Kit CA",
       "Tài liệu: Phác đồ E-Guide \"Làm chủ lớp lai & Kỹ thuật phục hồi xoang II\"",
       "Đặc quyền: Vé gia nhập Group gỡ rối lâm sàng Zalo 1:1 trong 30 ngày"
-    ]
+    ],
+    "originalPriceLabel": "Tổng giá trị",
+    "originalPrice": "7.250.000đ",
+    "offerPriceLabel": "Mức đầu tư trải nghiệm",
+    "offerPrice": "3.250.000đ",
+    "guaranteeTitle": "Bảo chứng đồng hành 3 lớp (Rủi ro bằng 0)",
+    "guarantees": [
+      "Bảo chứng 1 (Dứt ê buốt): Hỗ trợ 1:1 trong 5 ca phục hồi sống đầu tiên. Nếu bệnh nhân ê buốt, chuyên gia call gỡ lỗi. Nếu không hợp tay, thu hồi và hoàn tiền 100%.",
+      "Bảo chứng 2 (Bảo hiểm thói quen): Trong 30 ngày, nếu thao tác không hợp, hỗ trợ thu hồi sản phẩm chưa dùng và quy đổi vật tư khác giá trị tương đương.",
+      "Bảo chứng 3 (Bảo hành tồn kho 90 ngày): Đổi mới 1-1 ngay lập tức nếu lỗi đông cứng khi mở nắp trong vòng 90 ngày."
+    ],
+    "ctaText": "ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY"
   },
   "faqs": [
     {

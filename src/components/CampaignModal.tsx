@@ -12,6 +12,7 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
     name: '',
     phone: '',
     clinic: '',
+    address: '',
     notes: ''
   });
   const [error, setError] = useState('');
@@ -23,7 +24,7 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
       const timer = setTimeout(() => {
         setIsSuccess(false);
         setIsSubmitting(false);
-        setFormData({ name: '', phone: '', clinic: '', notes: '' });
+        setFormData({ name: '', phone: '', clinic: '', address: '', notes: '' });
         setError('');
       }, 300);
       return () => clearTimeout(timer);
@@ -49,6 +50,11 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
         'Tên Bác sĩ': formData.name,
         'Số điện thoại (Zalo)': formData.phone,
         'Phòng khám / Nơi công tác': formData.clinic,
+        'Địa chỉ phòng khám': formData.address,
+        'Địa chỉ': formData.address,
+        'Add': formData.address,
+        'add': formData.address,
+        'address': formData.address,
         'Sản phẩm quan tâm': '',
         'Trạng thái Lead': 'Mới',
         'Ghi chú thêm': formData.notes
@@ -148,6 +154,9 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
                 {formData.clinic && (
                   <p><span className="text-slate-500 inline-block w-24">Phòng khám:</span> <strong className="text-slate-900">{formData.clinic}</strong></p>
                 )}
+                {formData.address && (
+                  <p><span className="text-slate-500 inline-block w-24">Địa chỉ:</span> <strong className="text-slate-900">{formData.address}</strong></p>
+                )}
                 {formData.notes && (
                   <p><span className="text-slate-500 inline-block w-24">Ghi chú:</span> <strong className="text-slate-900">{formData.notes}</strong></p>
                 )}
@@ -229,12 +238,25 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
               </div>
 
               <div>
+                <label htmlFor="address" className="block font-body text-sm font-semibold text-slate-700 mb-1.5">Địa chỉ phòng khám</label>
+                <input 
+                  type="text" 
+                  id="address"
+                  value={formData.address}
+                  onChange={e => setFormData(prev => ({ ...prev, address: e.target.value }))}
+                  className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] outline-none transition-all font-body text-sm"
+                  placeholder="Số nhà, tên đường, quận/huyện, tỉnh/TP"
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <div>
                 <label htmlFor="notes" className="block font-body text-sm font-semibold text-slate-700 mb-1.5">Ghi chú thêm</label>
                 <textarea 
                   id="notes"
                   value={formData.notes}
                   onChange={e => setFormData(prev => ({ ...prev, notes: e.target.value }))}
-                  className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] outline-none transition-all font-body text-sm min-h-[100px] resize-y"
+                  className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] outline-none transition-all font-body text-sm min-h-[90px] resize-y"
                   placeholder="Yêu cầu cụ thể của Bác sĩ..."
                   disabled={isSubmitting}
                 />

@@ -7,7 +7,7 @@ export function ShofuOfferModal() {
   const [modalMode, setModalMode] = useState<'combo' | 'product'>('combo');
   const [activeOfferId, setActiveOfferId] = useState<1 | 2>(1);
   const [activeProductIds, setActiveProductIds] = useState<Array<1 | 2 | 3 | 4>>([]);
-  const [formData, setFormData] = useState({ name: '', phone: '', clinic: '', wantsCustomOffer: false });
+  const [formData, setFormData] = useState({ name: '', phone: '', clinic: '', address: '', wantsCustomOffer: false });
   const [formError, setFormError] = useState('');
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export function ShofuOfferModal() {
     setIsOpen(false);
     setTimeout(() => {
       setIsSuccess(false);
-      setFormData({ name: '', phone: '', clinic: '', wantsCustomOffer: false });
+      setFormData({ name: '', phone: '', clinic: '', address: '', wantsCustomOffer: false });
       setFormError('');
       document.body.style.overflow = 'auto';
     }, 300);
@@ -169,6 +169,15 @@ export function ShofuOfferModal() {
       name: formData.name,
       phone: formData.phone,
       clinic: formData.clinic,
+      address: formData.address,
+      'Địa chỉ': formData.address,
+      'Địa chỉ phòng khám': formData.address,
+      'Add': formData.address,
+      'add': formData.address,
+      'Tên Bác sĩ': formData.name,
+      'Số điện thoại (Zalo)': formData.phone,
+      'Phòng khám / Nơi công tác': formData.clinic,
+      'Ghi chú thêm': '',
       wantsCustomOffer: formData.wantsCustomOffer ? 'Yes' : 'No',
       selectedPromos: modalMode === 'combo' ? offerDetails[activeOfferId].name : (activeProductIds.length > 0 ? activeProductIds.map(id => productDetails[id].name).join(", ") : "Không chọn ưu đãi cụ thể")
     };
@@ -448,6 +457,12 @@ export function ShofuOfferModal() {
                           <span className="font-bold text-slate-900 text-sm flex-1">{formData.clinic}</span>
                         </div>
                       )}
+                      {formData.address && (
+                        <div className="flex">
+                          <span className="w-28 text-slate-500 text-sm">Địa chỉ:</span>
+                          <span className="font-bold text-slate-900 text-sm flex-1">{formData.address}</span>
+                        </div>
+                      )}
                       <div className="flex">
                         <span className="w-28 text-slate-500 text-sm">Chương trình:</span>
                         <span className="font-bold text-slate-900 text-sm flex-1">
@@ -507,13 +522,24 @@ export function ShofuOfferModal() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-2">Tên phòng khám (Tùy chọn)</label>
+                      <label className="block text-sm font-bold text-slate-700 mb-2">Phòng khám / Nơi công tác</label>
                       <input 
                         type="text" 
                         value={formData.clinic}
                         onChange={(e) => setFormData({...formData, clinic: e.target.value})}
                         className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-slate-900/10 focus:border-slate-900 outline-none transition-all text-sm"
                         placeholder="VD: Nha khoa Nụ Cười"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-bold text-slate-700 mb-2">Địa chỉ phòng khám</label>
+                      <input 
+                        type="text" 
+                        value={formData.address}
+                        onChange={(e) => setFormData({...formData, address: e.target.value})}
+                        className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-slate-900/10 focus:border-slate-900 outline-none transition-all text-sm"
+                        placeholder="Số nhà, tên đường, quận/huyện, tỉnh/TP"
                       />
                     </div>
 
