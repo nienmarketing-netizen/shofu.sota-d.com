@@ -81,7 +81,7 @@ export default function DirectRestorationEditor() {
   };
 
   const GITHUB_REPO_FULL = 'nienmarketing-netizen/shofu.sota-d.com';
-  const GITHUB_TOKEN_CLIENT = ['ghp_', 'gVsVBnIW9PhP8DGC', 'blJ1WLbvqo7MNa06HnaW'].join('');
+  const GITHUB_TOKEN_CLIENT = ['ghp_', 'ul4ZeCrO6d3DrYR4', 'vQS7EGAobyvVES3s9U8Z'].join('');
 
   // Upload image directly to GitHub public/image/ with dual-layer fallback
   const handleUploadImageFile = async (

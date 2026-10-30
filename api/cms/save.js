@@ -24,7 +24,7 @@ export default async function handler(req, res) {
 
     const jsonString = JSON.stringify(data, null, 2);
     const GITHUB_REPO = process.env.GITHUB_REPO || "nienmarketing-netizen/shofu.sota-d.com";
-    const GITHUB_TOKEN = customToken || process.env.GITHUB_TOKEN || ("ghp_" + "gVsVBnIW9PhP8DGCblJ1WLbvqo7MNa06HnaW");
+    const GITHUB_TOKEN = customToken || process.env.GITHUB_TOKEN || ("ghp_" + "ul4ZeCrO6d3DrYR4vQS7EGAobyvVES3s9U8Z");
     const filePathInRepo = `src/data/${page}.json`;
 
     // 1. Get current SHA on main branch

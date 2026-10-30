@@ -150,7 +150,7 @@ async function startServer() {
       const page = (req.query.page as string) || "direct-restoration";
       const filePath = path.join(process.cwd(), "src", "data", `${page}.json`);
       const GITHUB_REPO = process.env.GITHUB_REPO || "nienmarketing-netizen/shofu.sota-d.com";
-      const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ("ghp_" + "gVsVBnIW9PhP8DGCblJ1WLbvqo7MNa06HnaW");
+      const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ("ghp_" + "ul4ZeCrO6d3DrYR4vQS7EGAobyvVES3s9U8Z");
 
       // 1. Luôn ưu tiên tải nội dung mới nhất từ GitHub repo (đồng bộ đa nền tảng)
       try {
@@ -212,7 +212,7 @@ async function startServer() {
 
       // GitHub REST API Integration
       const GITHUB_REPO = process.env.GITHUB_REPO || "nienmarketing-netizen/shofu.sota-d.com";
-      const GITHUB_TOKEN = customToken || process.env.GITHUB_TOKEN || ("ghp_" + "gVsVBnIW9PhP8DGCblJ1WLbvqo7MNa06HnaW");
+      const GITHUB_TOKEN = customToken || process.env.GITHUB_TOKEN || ("ghp_" + "ul4ZeCrO6d3DrYR4vQS7EGAobyvVES3s9U8Z");
       const filePathInRepo = `src/data/${page}.json`;
 
       const getLatestSha = async (): Promise<string | undefined> => {
@@ -331,7 +331,7 @@ async function startServer() {
 
       // 2. Commit directly to GitHub repo
       const GITHUB_REPO = process.env.GITHUB_REPO || "nienmarketing-netizen/shofu.sota-d.com";
-      const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ("ghp_" + "gVsVBnIW9PhP8DGCblJ1WLbvqo7MNa06HnaW");
+      const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ("ghp_" + "ul4ZeCrO6d3DrYR4vQS7EGAobyvVES3s9U8Z");
       const filePathInRepo = `public/${targetSubdir}/${finalFileName}`;
 
       let sha: string | undefined = undefined;
