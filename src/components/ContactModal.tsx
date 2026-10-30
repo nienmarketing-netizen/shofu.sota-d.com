@@ -69,7 +69,7 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
         'Ghi chú thêm': ''
       };
 
-      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxc-EtHL1Un2AgalFAz8RvxlHX0TtE4q6OK2h0CiSNWBo7tvP1sDhBiJv7vvrRkJ3-zgQ/exec';
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbznlzlBDxDLpbQJKvMN95LdTTsOG3QAkTqkxPbvSQGBL1iDM8nXKA2_NUgboHqdcMcn8A/exec';
 
       const formDataEncoded = new URLSearchParams();
       Object.entries(payload).forEach(([key, value]) => {
