@@ -57,7 +57,7 @@
   "goldStandard": {
     "badge": "Tiêu chuẩn vàng mới",
     "headline": "<span class=\"text-amber-500\">Tiêu chuẩn vàng</span> mới:<br /><span class=\"inline-block lg:whitespace-nowrap\">Bộ đôi liên kết sinh học <span class=\"text-[#00ADEF]\">không thể phá hủy</span></span>",
-    "description": "Sự kết hợp hoàn hảo tạo nên khoảng ghép vô hình 24µm vững chắc.",
+    "description": "Bộ đôi dán dính đa năng thế hệ mới. Chủ động kết dính – Chủ động bảo vệ mô răng.",
     "product1": {
       "title": "Keo dán BeautiBond Xtreme",
       "subtitle": "Universal Thế hệ thứ 8",
@@ -65,40 +65,40 @@
       "features": [
         {
           "iconName": "Microscope",
-          "title": "Độ dày màng siêu mỏng (chỉ 5µm)",
-          "description": "Khoá chặt vi kẽ ống ngà, không lo cộm khớp, ngăn ngừa đổi màu đường viền phục hình."
+          "title": "Tích hợp  Công nghệ Monomer 4 chức năng với phosphate ester monomer và công nghệ ARS mới",
+          "description": "Tăng cường liên kết hóa học trên nhiều bề mặt, ứng dụng linh hoạt cho phục hồi trực tiếp và gián tiếp, không cần primer rời. "
         },
         {
           "iconName": "Umbrella",
-          "title": "Công nghệ HEMA-Free kỵ nước",
-          "description": "Kháng hút nước, chống thủy phân và ngăn ngừa nhạy cảm ngà sau khi gắn."
+          "title": "Công nghệ HEMA-Free",
+          "description": "Hạn chế hấp thụ nước, giảm nguy cơ thủy phân và thoái hóa giao diện dán theo thời gian."
         },
         {
           "iconName": "ShieldCheck",
-          "title": "Tích hợp Monomer đa chức năng & Silane kháng acid (ARS)",
+          "title": "Độ dày màng siêu mỏng chỉ 5µm",
           "description": "Tăng cường lực liên kết hóa học trực tiếp lên Men, Ngà, Zirconia và Sứ thủy tinh mà không cần bước quét primer rời."
         }
       ]
     },
     "product2": {
       "title": "Xi măng BeautiLink SA",
-      "subtitle": "Tự dán lưỡng trùng hợp tích hợp hạt độn Giomer S-PRG",
+      "subtitle": "Một cement đa dạng khả năng dán dính với công nghệ S-PRG",
       "image": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png",
       "features": [
         {
           "iconName": "Microscope",
-          "title": "Màng phim siêu mỏng 14µm",
-          "description": "Chảy loang thixotropic tối ưu tạo đường hoàn tất vô hình."
+          "title": "Hạt độn hoạt tính sinh học S-PRG",
+          "description": "Liên tục giải phóng và tái nạp 6 loại ion sinh học, hỗ trợ trung hòa acid và kháng mảng bám vi khuẩn, ngăn ngừa sâu răng tại vị trí đường hoàn tất"
         },
         {
           "iconName": "Clock",
-          "title": "Dọn dư \"One-Sweep\" 1-2 giây",
-          "description": "Hóa dẻo dạng gel đàn hồi, lấy sạch xi măng dư nguyên khối chỉ bằng một đường gạt."
+          "title": "Tối ưu hóa tồn kho",
+          "description": "Liên kết bền vững trên đa dạng vật liệu từ Zirconia đến sứ thẩm mỹ ,giúp phòng khám tinh gọn danh mục vật tư và tối ưu chi phí lưu kho hiệu quả. "
         },
         {
           "iconName": "Shield",
-          "title": "Hạt độn hoạt tính sinh học S-PRG",
-          "description": "Liên tục giải phóng và tái nạp 6 loại ion sinh học, hỗ trợ trung hòa acid và kháng mảng bám vi khuẩn, ngăn ngừa sâu răng tại vị trí đường hoàn tất."
+          "title": "Dọn dư \"One-Sweep\" dễ dàng",
+          "description": "Tính lưu biến Thixotropic giúp xi măng chảy loang, thích ứng sát khít đường hoàn tất; đồng thời tạo trạng thái gel đàn hồi, cho phép lấy sạch xi măng dư nguyên khối chỉ bằng một đường gạt. "
         }
       ]
     },
