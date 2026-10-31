@@ -1,28 +1,28 @@
 {
   "hero": {
     "badge": "Xu thế nha khoa can thiệp tối thiểu & Vật liệu sinh học (Bioactive)",
-    "headline": "Giải pháp kiểm soát nguy cơ <br class=\"md:hidden\" /><span class=\"text-[#00ADEF]\">sút phục hình</span>, <span class=\"text-[#00ADEF]\">ê buốt sau gắn</span> <br class=\"md:hidden\" />và <span class=\"text-[#00ADEF]\">lãng phí vật tư</span>!",
-    "body": "Tối ưu hóa <strong class=\"text-slate-900\">độ dày màng liên kết (Cement Space)</strong> nhờ sự kết hợp giữa màng keo 5µm (<strong class=\"text-slate-900\">BeautiBond Xtreme</strong>) và lớp xi măng mỏng 14µm (<strong class=\"text-slate-900\">BeautiLink SA</strong>). Tạo liên kết hóa học bền vững với lực dán trượt <strong class=\"text-[#00ADEF] font-bold\">~50 MPa</strong> trên Zirconia và ổn định cấu trúc sau 5.000 chu kỳ nhồi nhiệt (<strong class=\"text-slate-900\">Dental Advisor 2024</strong>).",
+    "headline": "Giải pháp kiểm soát nguy cơ <br class=\"md:hidden\" /><span class=\"text-[#00ADEF]\">bong sút phục hình</span>, <span class=\"text-[#00ADEF]\">ê buốt sau gắn</span> <br class=\"md:hidden\" />và <span class=\"text-[#00ADEF]\">lãng phí vật tư</span>!",
+    "body": "Công nghệ S-PRG <strong class=\"text-slate-900\">giải phóng và tái nạp 6 loại ion</strong> hỗ trợ trung hòa axit và kiểm soát ê buốt sau gắn. Độ bền dán <strong class=\"text-[#00ADEF] font-bold\">~50 MPa</strong> với vật liệu Zirconia và duy trì ổn định sau 5.000 chu kỳ nhiệt theo đánh giá <strong class=\"text-slate-900\">Dental Advisor 2024</strong>.",
     "image": "/image/beautilink-bbx-new.webp",
     "imageSizeNote": "Khuyến nghị: 1100 × 900 px (PNG / WebP tách nền, dung lượng < 300KB)",
     "usps": [
       {
         "id": "usp-1",
         "iconName": "ShieldCheck",
-        "title": "Triệt tiêu ê buốt tức thì và muộn",
-        "description": "Bảo vệ tủy răng sống bằng màng ngăn kỵ nước không chứa HEMA."
+        "title": "Hỗ trợ kiểm soát ê buốt tức thì và muộn ",
+        "description": "S-PRG giải phóng và tái nạp 6 ion, hỗ trợ trung hòa axit, tái khoáng hóa và giảm ê buốt. Kết hợp HEMA-Free tạo lớp dán kỵ nước, hạn chế thoái hóa giao diện dán."
       },
       {
         "id": "usp-2",
         "iconName": "Zap",
         "title": "Quy trình \"True Universal\" 1 bước",
-        "description": "Gắn chặt Zirconia, sứ Lithium Disilicate, loại bỏ các bước primer trung gian."
+        "description": "Liên kết chặt với Zirconia, sứ Lithium Disilicate, loại bỏ các bước primer trung gian."
       },
       {
         "id": "usp-3",
         "iconName": "Coins",
         "title": "Tiết kiệm chi phí điều trị",
-        "description": "Ống Handmix dung tích tối ưu 15.6g thực hiện tới 120 ca lâm sàng."
+        "description": "Ống Handmix dung tích tối ưu 15.6g thực hiện tới 120 đơn vị phục hình"
       }
     ],
     "ctaText": "NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI",
