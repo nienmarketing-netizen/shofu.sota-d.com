@@ -33,8 +33,8 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.phone.trim()) {
-      setError('Bác sĩ vui lòng điền thông tin liên hệ');
+    if (!formData.name.trim() || !formData.phone.trim() || !formData.clinic.trim() || !formData.address.trim()) {
+      setError('Bác sĩ vui lòng điền đầy đủ các thông tin bắt buộc (*)');
       return;
     }
     setError('');
@@ -225,12 +225,18 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
               </div>
 
               <div>
-                <label htmlFor="clinic" className="block font-body text-sm font-semibold text-slate-700 mb-1.5">Phòng khám / Nơi công tác</label>
+                <label htmlFor="clinic" className="block font-body text-sm font-semibold text-slate-700 mb-1.5">
+                  Phòng khám / Nơi công tác <span className="text-[#C43838]">*</span>
+                </label>
                 <input 
                   type="text" 
                   id="clinic"
+                  required
                   value={formData.clinic}
-                  onChange={e => setFormData(prev => ({ ...prev, clinic: e.target.value }))}
+                  onChange={e => {
+                    setFormData(prev => ({ ...prev, clinic: e.target.value }));
+                    if (error) setError('');
+                  }}
                   className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] outline-none transition-all font-body text-sm"
                   placeholder="Tên phòng khám hoặc bệnh viện"
                   disabled={isSubmitting}
@@ -238,12 +244,18 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
               </div>
 
               <div>
-                <label htmlFor="address" className="block font-body text-sm font-semibold text-slate-700 mb-1.5">Địa chỉ phòng khám</label>
+                <label htmlFor="address" className="block font-body text-sm font-semibold text-slate-700 mb-1.5">
+                  Địa chỉ phòng khám <span className="text-[#C43838]">*</span>
+                </label>
                 <input 
                   type="text" 
                   id="address"
+                  required
                   value={formData.address}
-                  onChange={e => setFormData(prev => ({ ...prev, address: e.target.value }))}
+                  onChange={e => {
+                    setFormData(prev => ({ ...prev, address: e.target.value }));
+                    if (error) setError('');
+                  }}
                   className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] outline-none transition-all font-body text-sm"
                   placeholder="Số nhà, tên đường, quận/huyện, tỉnh/TP"
                   disabled={isSubmitting}

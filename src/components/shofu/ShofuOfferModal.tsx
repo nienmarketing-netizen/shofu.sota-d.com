@@ -154,8 +154,8 @@ export function ShofuOfferModal() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.phone) {
-      setFormError('Vui lòng điền đầy đủ Tên và Số điện thoại.');
+    if (!formData.name.trim() || !formData.phone.trim() || !formData.clinic.trim() || !formData.address.trim()) {
+      setFormError('Vui lòng điền đầy đủ Họ tên, Số điện thoại, Phòng khám/Nơi công tác và Địa chỉ phòng khám.');
       return;
     }
     if (modalMode === 'product' && activeProductIds.length === 0 && !formData.wantsCustomOffer) {
@@ -531,9 +531,10 @@ export function ShofuOfferModal() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-2">Phòng khám / Nơi công tác</label>
+                      <label className="block text-sm font-bold text-slate-700 mb-2">Phòng khám / Nơi công tác *</label>
                       <input 
                         type="text" 
+                        required
                         value={formData.clinic}
                         onChange={(e) => setFormData({...formData, clinic: e.target.value})}
                         className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-slate-900/10 focus:border-slate-900 outline-none transition-all text-sm"
@@ -542,9 +543,10 @@ export function ShofuOfferModal() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-2">Địa chỉ phòng khám</label>
+                      <label className="block text-sm font-bold text-slate-700 mb-2">Địa chỉ phòng khám *</label>
                       <input 
                         type="text" 
+                        required
                         value={formData.address}
                         onChange={(e) => setFormData({...formData, address: e.target.value})}
                         className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-slate-900/10 focus:border-slate-900 outline-none transition-all text-sm"
