@@ -17,7 +17,8 @@ import {
   ChevronRight,
   AlertTriangle,
   Lock,
-  LogIn
+  LogIn,
+  GitBranch
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -30,6 +31,7 @@ import {
   DiagramConfig, 
   FaqItem, 
   TestimonialItem,
+  WorkflowData,
   IndirectRestorationData 
 } from './indirect-restoration/types';
 
@@ -37,6 +39,7 @@ import { Section1HeroEditor } from './indirect-restoration/Section1HeroEditor';
 import { Section2PainPointsEditor } from './indirect-restoration/Section2PainPointsEditor';
 import { Section3StepsEditor } from './indirect-restoration/Section3StepsEditor';
 import { Section4EvidenceEditor } from './indirect-restoration/Section4EvidenceEditor';
+import { SectionWorkflowEditor } from './indirect-restoration/SectionWorkflowEditor';
 import { Section5OfferEditor } from './indirect-restoration/Section5OfferEditor';
 import { Section6FaqEditor } from './indirect-restoration/Section6FaqEditor';
 import { Section7TestimonialsEditor } from './indirect-restoration/Section7TestimonialsEditor';
@@ -51,7 +54,7 @@ export default function IndirectRestorationEditor() {
   const [authError, setAuthError] = useState('');
 
   // Active Tab navigation
-  const [activeTab, setActiveTab] = useState<'hero' | 'pain-points' | 'gold-standard' | 'evidence' | 'offer' | 'faq' | 'testimonials' | 'preview'>('hero');
+  const [activeTab, setActiveTab] = useState<'hero' | 'pain-points' | 'gold-standard' | 'evidence' | 'workflow' | 'offer' | 'faq' | 'testimonials' | 'preview'>('hero');
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [saveMessage, setSaveMessage] = useState<string>('');
   const [commitSha, setCommitSha] = useState<string>('');
@@ -103,6 +106,9 @@ export default function IndirectRestorationEditor() {
   const [usp3, setUsp3] = useState(() => initialData.evidence.usp3);
   const [usp4, setUsp4] = useState(() => initialData.evidence.usp4);
   const [evidenceCtaText, setEvidenceCtaText] = useState<string>(() => initialData.evidence.ctaText || 'Trải nghiệm phác đồ 3 bước');
+
+  // Section Workflow: Clinical Workflow Rewrite & 3 Steps
+  const [workflow, setWorkflow] = useState<WorkflowData>(() => initialData.workflow);
 
   // Section 5: Offer
   const [offerBadge, setOfferBadge] = useState<string>(() => initialData.offer.badge || 'Đặc quyền đồng hành không thể từ chối');
@@ -186,6 +192,12 @@ export default function IndirectRestorationEditor() {
       if (d.evidence.usp3) setUsp3(d.evidence.usp3);
       if (d.evidence.usp4) setUsp4(d.evidence.usp4);
       if (typeof d.evidence.ctaText === 'string' && d.evidence.ctaText.trim()) setEvidenceCtaText(d.evidence.ctaText);
+    }
+    if (d.workflow) {
+      setWorkflow((prev) => ({
+        ...prev,
+        ...d.workflow
+      }));
     }
     if (d.offer) {
       if (typeof d.offer.badge === 'string' && d.offer.badge.trim()) setOfferBadge(d.offer.badge);
@@ -416,7 +428,7 @@ export default function IndirectRestorationEditor() {
         usp4,
         ctaText: evidenceCtaText
       },
-      workflow: defaultData.workflow,
+      workflow,
       offer: {
         badge: offerBadge,
         headline: offerHeadline,
@@ -581,10 +593,11 @@ export default function IndirectRestorationEditor() {
     { id: 'pain-points', label: '2. Nỗi đau lâm sàng', icon: AlertTriangle },
     { id: 'gold-standard', label: '3. Tiêu chuẩn vàng (BBX + BeautiLink)', icon: Layers },
     { id: 'evidence', label: '4. Bằng chứng khoa học (50 MPa & S-PRG)', icon: ShieldCheck },
-    { id: 'offer', label: '5. Gói ưu đãi & Quà tặng', icon: Gift },
-    { id: 'faq', label: '6. Câu hỏi thường gặp FAQ', icon: HelpCircle },
-    { id: 'testimonials', label: '7. Đánh giá Bác sĩ lâm sàng', icon: Quote },
-    { id: 'preview', label: '8. Xem trước toàn trang (Live Preview)', icon: Eye }
+    { id: 'workflow', label: '5. Phác đồ & Ma trận chai lọ', icon: GitBranch },
+    { id: 'offer', label: '6. Gói ưu đãi & Quà tặng', icon: Gift },
+    { id: 'faq', label: '7. Câu hỏi thường gặp FAQ', icon: HelpCircle },
+    { id: 'testimonials', label: '8. Đánh giá Bác sĩ lâm sàng', icon: Quote },
+    { id: 'preview', label: '9. Xem trước toàn trang (Live Preview)', icon: Eye }
   ];
 
   return (
@@ -798,6 +811,16 @@ export default function IndirectRestorationEditor() {
                   setUsp4={setUsp4}
                   ctaText={evidenceCtaText}
                   setCtaText={setEvidenceCtaText}
+                  onUploadImage={handleUploadImageFile}
+                  isUploadingImage={isUploadingImage}
+                  uploadingTarget={uploadingTarget}
+                />
+              )}
+
+              {activeTab === 'workflow' && (
+                <SectionWorkflowEditor
+                  workflow={workflow}
+                  setWorkflow={setWorkflow}
                   onUploadImage={handleUploadImageFile}
                   isUploadingImage={isUploadingImage}
                   uploadingTarget={uploadingTarget}

@@ -7,7 +7,8 @@ import {
   ShieldCheck, Zap, Coins, AlertTriangle, HeartPulse, Banknote, TrendingUp, 
   Droplet, Droplets, Microscope, ArrowRight, Gift, ChevronDown, CheckCircle2,
   Clock, Shield, BarChart3, TestTube, Quote, Image as ImageIcon,
-  Unlink, Layers, Umbrella, Sparkles
+  Unlink, Layers, Umbrella, Sparkles,
+  AlertCircle, ShieldAlert, DollarSign, Flame, Ban, XCircle, Activity, FileWarning
 } from 'lucide-react';
 
 const FaqItem = ({ question, answer }: { question: string, answer: React.ReactNode }) => {
@@ -133,6 +134,52 @@ const renderIndirectFeatureIcon = (iconName?: string, iconSvg?: string, colorCla
     case 'Layers': return <Layers className={cls} />;
     case 'Droplet': return <Droplet className={cls} />;
     default: return <CheckCircle2 className={cls} />;
+  }
+};
+
+const renderIndirectConsequenceIcon = (
+  iconName?: string,
+  iconSvg?: string,
+  iconColor?: string,
+  className = "w-6 h-6 sm:w-8 sm:h-8 shrink-0 mt-1"
+) => {
+  const isHexOrRgb = iconColor && (iconColor.startsWith('#') || iconColor.startsWith('rgb'));
+  const colorClass = (!isHexOrRgb && iconColor) ? iconColor : '';
+  const colorStyle = isHexOrRgb ? { color: iconColor } : undefined;
+
+  if (iconSvg) {
+    if (iconSvg.startsWith('<svg')) {
+      return (
+        <span
+          className={`inline-flex items-center justify-center [&>svg]:w-full [&>svg]:h-full ${className} ${colorClass}`}
+          style={colorStyle}
+          dangerouslySetInnerHTML={{ __html: iconSvg }}
+        />
+      );
+    }
+    return <img src={iconSvg} alt="Consequence icon" className={`${className} object-contain`} style={colorStyle} />;
+  }
+
+  const props = {
+    className: `${className} ${colorClass}`,
+    style: colorStyle
+  };
+
+  switch (iconName) {
+    case 'Coins': return <Coins {...props} />;
+    case 'TrendingUp': return <TrendingUp {...props} />;
+    case 'Clock': return <Clock {...props} />;
+    case 'AlertTriangle': return <AlertTriangle {...props} />;
+    case 'AlertCircle': return <AlertCircle {...props} />;
+    case 'ShieldAlert': return <ShieldAlert {...props} />;
+    case 'DollarSign': return <DollarSign {...props} />;
+    case 'Flame': return <Flame {...props} />;
+    case 'Zap': return <Zap {...props} />;
+    case 'Ban': return <Ban {...props} />;
+    case 'XCircle': return <XCircle {...props} />;
+    case 'Activity': return <Activity {...props} />;
+    case 'FileWarning': return <FileWarning {...props} />;
+    default: return <Coins {...props} />;
   }
 };
 
@@ -728,19 +775,21 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
           <div className="max-w-5xl mx-auto mb-16 lg:mb-24 flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             <div className="text-center lg:text-left flex-1">
               <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-bold text-[10px] min-[375px]:text-[11px] sm:text-xs md:text-sm tracking-wide mb-6 whitespace-nowrap">
-                <span>Triệt tiêu sai số lâm sàng & tài chính</span>
+                <span>{content.workflow?.badge || 'Triệt tiêu sai số lâm sàng & tài chính'}</span>
               </div>
-              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-0 tracking-tight">
-                Đập tan "ma trận" <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-400">chai lọ phục hình</span>
-              </h2>
+              <h2 
+                className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-0 tracking-tight"
+                dangerouslySetInnerHTML={{ 
+                  __html: content.workflow?.headline || 'Đập tan "ma trận" <br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-400">chai lọ phục hình</span>' 
+                }}
+              />
             </div>
             
             <div className="flex justify-center flex-1 w-full lg:w-auto mt-2 lg:mt-0">
               <div className="relative group inline-block">
                 <img 
                   referrerPolicy="no-referrer"
-                  src="/images/ma-tran-chai-lo-phuc-hinh.webp" 
+                  src={content.workflow?.image || "/images/ma-tran-chai-lo-phuc-hinh.webp"} 
                   alt="Ma trận chai lọ phục hình" 
                   className="w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[400px] h-auto object-contain drop-shadow-2xl grayscale opacity-70 group-hover:scale-105 transition-transform duration-500 rounded-2xl" 
                   loading="lazy"
@@ -759,95 +808,124 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
           {/* SỰ XUNG ĐỘT HÓA HỌC */}
           <div className="mb-20">
             <div className="text-center mb-10">
-              <h3 className="font-heading font-bold text-xl text-white mb-4">
-                Nguồn gốc "ma trận": <br className="block sm:hidden" />
-                <span className="text-[#00ADEF]">Sự xung đột hóa học</span>
-              </h3>
-              <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">Để thấu hiểu "ma trận chai lọ", cần nhìn vào <strong className="text-white">bản chất hóa học riêng biệt</strong> của từng <strong className="text-amber-400">giao diện bám dính</strong>.</p>
+              <h3 
+                className="font-heading font-bold text-xl text-white mb-4"
+                dangerouslySetInnerHTML={{ 
+                  __html: content.workflow?.interfacesTitle || 'Nguồn gốc "ma trận": <br class="block sm:hidden" /><span class="text-[#00ADEF]">Sự xung đột hóa học</span>' 
+                }}
+              />
+              <p 
+                className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto"
+                dangerouslySetInnerHTML={{ 
+                  __html: content.workflow?.interfacesSubtitle || 'Để thấu hiểu "ma trận chai lọ", cần nhìn vào <strong class="text-white">bản chất hóa học riêng biệt</strong> của từng <strong class="text-amber-400">giao diện bám dính</strong>.' 
+                }}
+              />
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {/* Sứ thủy tinh */}
-              <div className="bg-slate-800/50 border border-slate-700/50 p-6 sm:p-8 rounded-2xl flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
-                <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Sứ thủy tinh</h4>
-                <div className="flex justify-center mb-6">
-                  <img src="/images/su-thuy-tinh.webp" alt="Sứ thủy tinh" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
+              {(content.workflow?.interfaces || [
+                {
+                  title: 'Sứ thủy tinh',
+                  image: '/images/su-thuy-tinh.webp',
+                  description: 'Đòi hỏi soi mòn vi cơ học bằng <strong class="text-red-400">Acid HF</strong>, sau đó bắt buộc quét Silane độc lập để tạo mạng lưới liên kết siloxane.'
+                },
+                {
+                  title: 'Zirconia & kim loại',
+                  image: '/images/zironia.webp',
+                  description: 'Bề mặt trơ với <strong class="text-red-400">Acid HF</strong>. Bắt buộc phải có các Primer chứa monomer chức năng để tạo liên kết ion trực tiếp.'
+                },
+                {
+                  title: 'Mô răng',
+                  image: '/images/mo-rang.webp',
+                  description: 'Đòi hỏi hệ thống keo dán (Bond) để xâm nhập và tạo ra lớp lai (hybrid layer) vững chắc.'
+                }
+              ]).map((it: any, idx: number) => (
+                <div key={idx} className="bg-slate-800/50 border border-slate-700/50 p-6 sm:p-8 rounded-2xl flex flex-col relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
+                  <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">
+                    {it.title}
+                  </h4>
+                  {it.image && (
+                    <div className="flex justify-center mb-6">
+                      <img src={it.image} alt={it.title} className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
+                    </div>
+                  )}
+                  <p 
+                    className="text-slate-400 text-sm sm:text-base leading-relaxed text-center mt-auto"
+                    dangerouslySetInnerHTML={{ __html: it.description }}
+                  />
                 </div>
-                <p className="text-slate-400 text-sm sm:text-base leading-relaxed text-center mt-auto">
-                  Đòi hỏi soi mòn vi cơ học bằng <strong className="text-red-400">Acid HF</strong>, sau đó bắt buộc quét Silane độc lập để tạo mạng lưới liên kết siloxane.
-                </p>
-              </div>
-
-              {/* Zirconia */}
-              <div className="bg-slate-800/50 border border-slate-700/50 p-6 sm:p-8 rounded-2xl flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
-                <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Zirconia & kim loại</h4>
-                <div className="flex justify-center mb-6">
-                  <img src="/images/zironia.webp" alt="Zirconia & kim loại" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
-                </div>
-                <p className="text-slate-400 text-sm sm:text-base leading-relaxed text-center mt-auto">
-                  Bề mặt trơ với <strong className="text-red-400">Acid HF</strong>. Bắt buộc phải có các Primer chứa monomer chức năng để tạo liên kết ion trực tiếp.
-                </p>
-              </div>
-
-              {/* Mô răng */}
-              <div className="bg-slate-800/50 border border-slate-700/50 p-6 sm:p-8 rounded-2xl flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-[#00ADEF]"></div>
-                <h4 className="font-heading font-bold text-sm md:text-lg text-white mb-6 text-center pb-4 border-b border-slate-700">Mô răng</h4>
-                <div className="flex justify-center mb-6">
-                  <img src="/images/mo-rang.webp" alt="Mô răng" className="w-full max-w-[150px] h-auto object-contain" referrerPolicy="no-referrer" />
-                </div>
-                <p className="text-slate-400 text-sm sm:text-base leading-relaxed text-center mt-auto">
-                  Đòi hỏi hệ thống keo dán (Bond) để xâm nhập và tạo ra lớp lai (hybrid layer) vững chắc.
-                </p>
-              </div>
+              ))}
             </div>
 
             <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6 text-center flex flex-col sm:flex-row items-center justify-center gap-4 max-w-4xl mx-auto">
-              <p className="text-red-100 text-sm sm:text-base text-center">
-                Chính sự khác biệt lý hóa khắt khe này đã ép buộc quy trình lâm sàng phải <strong className="text-red-400 font-bold text-lg uppercase block mt-1">SỬ DỤNG HÀNG LOẠT <br className="sm:hidden" /> HOÁ CHẤT RỜI RẠC</strong>
-              </p>
+              <p 
+                className="text-red-100 text-sm sm:text-base text-center"
+                dangerouslySetInnerHTML={{ 
+                  __html: content.workflow?.calloutText || 'Chính sự khác biệt lý hóa khắt khe này đã ép buộc quy trình lâm sàng phải <strong class="text-red-400 font-bold text-lg uppercase block mt-1">SỬ DỤNG HÀNG LOẠT <br class="sm:hidden" /> HOÁ CHẤT RỜI RẠC</strong>' 
+                }}
+              />
             </div>
           </div>
 
           {/* HẬU QUẢ */}
           <div className="mb-24 bg-slate-800/30 rounded-3xl p-8 sm:p-12 border border-slate-700/50">
             <div className="text-center mb-12">
-              <h3 className="font-heading font-bold text-xl text-red-500 mb-4">
-                Hậu quả của chuỗi <br className="sm:hidden" /> thao tác cồng kềnh
-              </h3>
+              <h3 
+                className="font-heading font-bold text-xl text-red-500 mb-4"
+                dangerouslySetInnerHTML={{ 
+                  __html: content.workflow?.consequencesTitle || 'Hậu quả của chuỗi <br class="sm:hidden" /> thao tác cồng kềnh' 
+                }}
+              />
             </div>
             
             <div className="flex flex-col space-y-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
                 <div className="space-y-6 flex flex-col justify-center">
-                  <div className="flex gap-4">
-                    <Coins className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400 shrink-0 mt-1" />
-                    <p className="text-slate-300 leading-relaxed text-sm sm:text-base">Tỷ lệ <strong className="text-white">chi phí vật tư (COGS) liên tục leo thang</strong> do phức tạp trong <strong className="text-white">quản lý tồn kho</strong>.</p>
-                  </div>
-                  <div className="flex gap-4">
-                    <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-rose-400 shrink-0 mt-1" />
-                    <p className="text-slate-300 leading-relaxed text-sm sm:text-base">Sự gia tăng tuyến tính của số lượng thao tác lâm sàng tỷ lệ thuận với rủi ro xảy ra <strong className="text-white">"sai số nhân sự"</strong>.</p>
-                  </div>
-                  <div className="flex gap-4">
-                    <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-amber-400 shrink-0 mt-1" />
-                    <p className="text-slate-300 leading-relaxed text-sm sm:text-base">Chỉ một khoảnh khắc đưa nhầm chai Primer hoặc sai lệch thời gian lưu dung dịch, <strong className="text-white">toàn bộ cấu trúc dán dính sẽ sụp đổ.</strong></p>
-                  </div>
+                  {(content.workflow?.consequences || [
+                    'Tỷ lệ <strong class="text-white">chi phí vật tư (COGS) liên tục leo thang</strong> do phức tạp trong <strong class="text-white">quản lý tồn kho</strong>.',
+                    'Sự gia tăng tuyến tính của số lượng thao tác lâm sàng tỷ lệ thuận với rủi ro xảy ra <strong class="text-white">"sai số nhân sự"</strong>.',
+                    'Chỉ một khoảnh khắc đưa nhầm chai Primer hoặc sai lệch thời gian lưu dung dịch, <strong class="text-white">toàn bộ cấu trúc dán dính sẽ sụp đổ.</strong>'
+                  ]).map((c: any, cIdx: number) => {
+                    const text = typeof c === 'string' ? c : (c.text || '');
+                    const defaultIcons = ['Coins', 'TrendingUp', 'Clock'];
+                    const defaultColors = ['#34d399', '#fb7185', '#fbbf24'];
+                    const iconName = typeof c === 'string' ? defaultIcons[cIdx % 3] : (c.iconName || defaultIcons[cIdx % 3]);
+                    const iconSvg = typeof c === 'string' ? undefined : c.iconSvg;
+                    const iconColor = typeof c === 'string' ? defaultColors[cIdx % 3] : (c.iconColor || defaultColors[cIdx % 3]);
+
+                    return (
+                      <div key={cIdx} className="flex gap-4">
+                        {renderIndirectConsequenceIcon(iconName, iconSvg, iconColor)}
+                        <p 
+                          className="text-slate-300 leading-relaxed text-sm sm:text-base"
+                          dangerouslySetInnerHTML={{ __html: text }}
+                        />
+                      </div>
+                    );
+                  })}
                 </div>
                 {/* Visual Flowchart */}
                 <div className="flex flex-col items-center justify-center p-6 bg-slate-900/80 rounded-2xl border border-slate-700">
                   <div className="flex justify-center w-full">
-                    <img src="/images/chuoi-thao-tac-cong-kenh.webp" alt="Chuỗi thao tác cồng kềnh" className="w-full h-auto object-contain" referrerPolicy="no-referrer" />
+                    <img 
+                      src={content.workflow?.consequencesFlowImage || "/images/chuoi-thao-tac-cong-kenh.webp"} 
+                      alt="Chuỗi thao tác cồng kềnh" 
+                      className="w-full h-auto object-contain" 
+                      referrerPolicy="no-referrer" 
+                    />
                   </div>
                 </div>
               </div>
 
               <div className="flex flex-col items-center justify-center text-center gap-4 bg-red-500/10 p-6 sm:p-8 rounded-2xl border border-red-500/20 w-full mt-4">
                 <AlertTriangle className="w-8 h-8 sm:w-10 sm:h-10 text-red-500 shrink-0" />
-                <p className="text-red-200 leading-relaxed text-sm sm:text-base max-w-3xl">
-                  Hậu quả trực tiếp: <strong className="text-red-400 font-bold">Bong tróc phục hình, vi sút viền,</strong> và tình trạng <strong className="text-red-400 font-bold">nhạy cảm ê buốt trầm trọng</strong> cho bệnh nhân.
-                </p>
+                <p 
+                  className="text-red-200 leading-relaxed text-sm sm:text-base max-w-3xl"
+                  dangerouslySetInnerHTML={{ 
+                    __html: content.workflow?.consequencesWarning || 'Hậu quả trực tiếp: <strong class="text-red-400 font-bold">Bong tróc phục hình, vi sút viền,</strong> và tình trạng <strong class="text-red-400 font-bold">nhạy cảm ê buốt trầm trọng</strong> cho bệnh nhân.' 
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -856,18 +934,24 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
           <div className="max-w-4xl mx-auto">
             <div className="max-w-3xl mx-auto mb-16 flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <div className="text-center md:text-left flex-1">
-                <h3 className="font-heading font-bold text-2xl md:text-3xl text-white mb-4">
-                  Phác đồ <span className="text-[#00ADEF]">3 bước đơn giản</span>
-                </h3>
-                <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-                  Bác sĩ nay chỉ cần thực hiện <strong className="text-white">3 bước thao tác đơn giản</strong> với bộ đôi <span className="text-[#00ADEF] font-bold">BeautiBond Xtreme</span> và <span className="text-[#C43838] font-bold">BeautiLink SA</span>:
-                </p>
+                <h3 
+                  className="font-heading font-bold text-2xl md:text-3xl text-white mb-4"
+                  dangerouslySetInnerHTML={{ 
+                    __html: content.workflow?.protocolTitle || 'Phác đồ <span class="text-[#00ADEF]">3 bước đơn giản</span>' 
+                  }}
+                />
+                <p 
+                  className="text-slate-400 text-sm sm:text-base leading-relaxed"
+                  dangerouslySetInnerHTML={{ 
+                    __html: content.workflow?.protocolSubtitle || 'Bác sĩ nay chỉ cần thực hiện <strong class="text-white">3 bước thao tác đơn giản</strong> với bộ đôi <span class="text-[#00ADEF] font-bold">BeautiBond Xtreme</span> và <span class="text-[#C43838] font-bold">BeautiLink SA</span>:' 
+                  }}
+                />
               </div>
               
               <div className="flex justify-center flex-1 w-full md:w-auto">
                 <img 
                   referrerPolicy="no-referrer"
-                  src="/image/beautilink-bbx-new.webp" 
+                  src={content.workflow?.protocolImage || "/image/beautilink-bbx-new.webp"} 
                   alt="Bộ đôi BBX và BeautiLink SA" 
                   className="w-full max-w-[200px] sm:max-w-[250px] h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500" 
                   loading="lazy"
@@ -876,56 +960,48 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
             </div>
             
             <div className="space-y-6 relative before:absolute before:inset-0 before:ml-6 sm:before:ml-[3.25rem] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-[#00ADEF]/0 before:via-[#00ADEF]/50 before:to-[#00ADEF]/0">
-              
-              {/* Step 1 */}
-              <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-slate-900 bg-[#00ADEF] text-white font-heading font-bold text-xl shadow-[0_0_0_4px_rgba(0,173,239,0.2)] z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                  01
+              {(content.workflow?.steps || [
+                {
+                  stepNumber: '01',
+                  title: 'Bước 1: Thoa BeautiBond Xtreme',
+                  description: 'Chuẩn bị bề mặt cùi răng sạch và xử lý với BeautiBond Xtreme để sẵn sàng cho bước gắn.'
+                },
+                {
+                  stepNumber: '02',
+                  title: 'Bước 2: Thổi cát',
+                  description: 'Thổi hơi để dàn mỏng màng keo xuống ngưỡng <strong class="text-white">5µm</strong>. Sự bốc hơi dung môi làm tăng vọt nồng độ monomer acid, từ đó mở khóa màng bảo vệ của phân tử ARS.'
+                },
+                {
+                  stepNumber: '03',
+                  title: 'Bước 3: Trộn Cement và gắn phục hình',
+                  description: 'Đặt Cement vào lòng phục hình rồi đặt lên cùi răng và ấn lực vừa đủ. Sau đó quang trùng hợp 10-20 giây và đánh bóng.'
+                }
+              ]).map((step: any, sIdx: number) => (
+                <div key={sIdx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-slate-900 bg-[#00ADEF] text-white font-heading font-bold text-xl shadow-[0_0_0_4px_rgba(0,173,239,0.2)] z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                    {step.stepNumber || `0${sIdx + 1}`}
+                  </div>
+                  <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
+                    <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">
+                      {step.title}
+                    </h4>
+                    <p 
+                      className="text-slate-300 text-sm sm:text-base leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: step.description }}
+                    />
+                  </div>
                 </div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
-                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 1: Thoa BeautiBond Xtreme</h4>
-                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Chuẩn bị bề mặt cùi răng sạch và xử lý với BeautiBond Xtreme để sẵn sàng cho bước gắn.
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 2 */}
-              <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-slate-900 bg-[#00ADEF] text-white font-heading font-bold text-xl shadow-[0_0_0_4px_rgba(0,173,239,0.2)] z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                  02
-                </div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
-                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 2: Thổi cát</h4>
-                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Thổi hơi để dàn mỏng màng keo xuống ngưỡng <strong className="text-white">5µm</strong>. Sự bốc hơi dung môi làm tăng vọt nồng độ monomer acid, từ đó mở khóa màng bảo vệ của phân tử ARS.
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 3 */}
-              <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-slate-900 bg-[#00ADEF] text-white font-heading font-bold text-xl shadow-[0_0_0_4px_rgba(0,173,239,0.2)] z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                  03
-                </div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-slate-800/80 border border-[#00ADEF]/30 p-6 rounded-2xl shadow-lg hover:border-[#00ADEF] transition-colors">
-                  <h4 className="font-heading font-bold text-[#00ADEF] text-sm md:text-lg mb-2">Bước 3: Trộn Cement và gắn phục hình</h4>
-                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Đặt Cement vào lòng phục hình rồi đặt lên cùi răng và ấn lực vừa đủ. Sau đó quang trùng hợp 10-20 giây và đánh bóng.
-                  </p>
-                </div>
-              </div>
-
+              ))}
             </div>
           </div>
 
           <div className="mt-12 md:mt-16 text-center relative z-10">
             <button 
-               onClick={() => openCampaignModal("Trải nghiệm phác đồ 3 bước")}
+              onClick={() => openCampaignModal(content.workflow?.ctaText || "Trải nghiệm phác đồ 3 bước")}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
-              <span className="truncate">Trải nghiệm phác đồ 3 bước</span>
+              <span className="truncate">{content.workflow?.ctaText || "Trải nghiệm phác đồ 3 bước"}</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </button>
           </div>

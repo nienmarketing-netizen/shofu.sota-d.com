@@ -60,6 +60,32 @@ export interface TestimonialItem {
   text: string;
 }
 
+export interface WorkflowConsequenceItem {
+  iconName?: string;
+  iconSvg?: string;
+  iconColor?: string;
+  text: string;
+}
+
+export interface WorkflowData {
+  badge: string;
+  headline: string;
+  image: string;
+  interfacesTitle: string;
+  interfacesSubtitle: string;
+  interfaces: WorkflowInterfaceItem[];
+  calloutText?: string;
+  consequencesTitle?: string;
+  consequences?: (string | WorkflowConsequenceItem)[];
+  consequencesFlowImage?: string;
+  consequencesWarning?: string;
+  protocolTitle: string;
+  protocolSubtitle: string;
+  protocolImage: string;
+  steps: WorkflowStepItem[];
+  ctaText: string;
+}
+
 export interface IndirectRestorationData {
   hero: {
     badge: string;
@@ -119,19 +145,7 @@ export interface IndirectRestorationData {
     };
     ctaText: string;
   };
-  workflow: {
-    badge: string;
-    headline: string;
-    image: string;
-    interfacesTitle: string;
-    interfacesSubtitle: string;
-    interfaces: WorkflowInterfaceItem[];
-    protocolTitle: string;
-    protocolSubtitle: string;
-    protocolImage: string;
-    steps: WorkflowStepItem[];
-    ctaText: string;
-  };
+  workflow: WorkflowData;
   offer: {
     badge: string;
     headline: string;
