@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { X, Gift, ShoppingCart, CheckCircle, ArrowRight, Tag, ShieldCheck, CheckCircle2, Package, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useBodyScrollLock } from '../../utils/scrollLock';
 
 export function ShofuOfferModal() {
   const [isOpen, setIsOpen] = useState(false);
+  useBodyScrollLock(isOpen);
   const [modalMode, setModalMode] = useState<'combo' | 'product'>('combo');
   const [activeOfferId, setActiveOfferId] = useState<1 | 2>(1);
   const [activeProductIds, setActiveProductIds] = useState<Array<1 | 2 | 3 | 4>>([]);
@@ -22,7 +24,6 @@ export function ShofuOfferModal() {
   useEffect(() => {
     const handleOpen = (e: Event) => {
       setIsOpen(true);
-      document.body.style.overflow = 'hidden';
       const customEvent = e as CustomEvent;
       if (customEvent.detail && customEvent.detail.offerId) {
         setModalMode('combo');
@@ -44,7 +45,6 @@ export function ShofuOfferModal() {
       setIsSuccess(false);
       setFormData({ name: '', phone: '', clinic: '', address: '', notes: '', wantsCustomOffer: false });
       setFormError('');
-      document.body.style.overflow = 'auto';
     }, 300);
   };
 

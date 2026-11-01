@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, CheckCircle2 } from 'lucide-react';
+import { useBodyScrollLock } from '../utils/scrollLock';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -8,6 +9,7 @@ interface ContactModalProps {
 }
 
 export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
+  useBodyScrollLock(isOpen);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -132,7 +134,7 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
          onClick={onClose}
       />
       
-      <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 sm:p-8 animate-in fade-in zoom-in-95 duration-200">
+      <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 sm:p-8 animate-in fade-in zoom-in-95 duration-200 overflow-y-auto max-h-[90vh]">
         <button 
            onClick={onClose}
           className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors z-10"

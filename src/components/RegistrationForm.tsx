@@ -4,6 +4,7 @@ import { createPortal } from 'react-dom';
 import { UserCheck, QrCode, CheckCircle2, AlertCircle, Building, Phone, User, Loader2, X, Download } from 'lucide-react';
 import { Button } from './ui/Button';
 import { toPng } from 'html-to-image';
+import { useBodyScrollLock } from '../utils/scrollLock';
 
 export const RegistrationForm: React.FC = () => {
  const [fullName, setFullName] = useState('');
@@ -13,6 +14,7 @@ export const RegistrationForm: React.FC = () => {
  const [agreedTerms, setAgreedTerms] = useState(false);
  const [formSubmitted, setFormSubmitted] = useState(false);
  const [showPopup, setShowPopup] = useState(false);
+ useBodyScrollLock(showPopup);
  const ticketRef = useRef<HTMLDivElement>(null);
  const [isDownloading, setIsDownloading] = useState(false);
  const [errorMsg, setErrorMsg] = useState('');

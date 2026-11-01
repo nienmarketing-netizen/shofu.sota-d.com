@@ -5,6 +5,7 @@ import { Button } from './ui/Button';
 import { Input } from './ui/Input';
 import { Badge } from './ui/Badge';
 import { StakingVault } from '../types';
+import { useBodyScrollLock } from '../utils/scrollLock';
 
 const allVaults: StakingVault[] = [
  {
@@ -77,6 +78,7 @@ export const VaultsView: React.FC = () => {
 
  // Selected Vault for Staking Modal
  const [selectedVault, setSelectedVault] = useState<StakingVault | null>(null);
+ useBodyScrollLock(!!selectedVault);
  const [stakeAmount, setStakeAmount] = useState<string>('0.1');
  const [isStaking, setIsStaking] = useState(false);
  const [stakeStep, setStakeStep] = useState<'input' | 'confirming' | 'success'>('input');

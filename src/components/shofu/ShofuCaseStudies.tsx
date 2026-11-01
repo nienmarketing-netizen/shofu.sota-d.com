@@ -2,6 +2,7 @@ import { CtaButton } from "../ui/CtaButton";
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronLeft, ChevronRight, ZoomIn, ShoppingCart, ArrowUpRight } from 'lucide-react';
+import { useBodyScrollLock } from '../../utils/scrollLock';
 
 const caseStudies = [
   {
@@ -137,6 +138,7 @@ const slideVariants = {
 
 export function ShofuCaseStudies() {
   const [selectedCaseIndex, setSelectedCaseIndex] = useState(null);
+  useBodyScrollLock(selectedCaseIndex !== null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 

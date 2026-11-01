@@ -4,6 +4,7 @@ import { Button } from './ui/Button';
 import { Input } from './ui/Input';
 import { Badge } from './ui/Badge';
 import { AiChatMessage } from '../types';
+import { useBodyScrollLock } from '../utils/scrollLock';
 
 interface AiCopilotModalProps {
  isOpen: boolean;
@@ -11,6 +12,7 @@ interface AiCopilotModalProps {
 }
 
 export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({ isOpen, onClose }) => {
+ useBodyScrollLock(isOpen);
  const [messages, setMessages] = useState<AiChatMessage[]>([
   {
    id: '1',

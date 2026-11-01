@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, CheckCircle } from 'lucide-react';
+import { useBodyScrollLock } from '../utils/scrollLock';
 
 interface CampaignModalProps {
   isOpen: boolean;
@@ -8,6 +9,7 @@ interface CampaignModalProps {
 }
 
 export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
+  useBodyScrollLock(isOpen);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',

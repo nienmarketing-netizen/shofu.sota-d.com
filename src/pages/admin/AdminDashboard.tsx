@@ -21,6 +21,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useBodyScrollLock } from '../../utils/scrollLock';
 
 interface WebpageItem {
   id: string;
@@ -109,6 +110,7 @@ export default function AdminDashboard() {
   const [loginError, setLoginError] = useState('');
   const [rememberMe, setRememberMe] = useState(true);
   const [selectedPageForEdit, setSelectedPageForEdit] = useState<WebpageItem | null>(null);
+  useBodyScrollLock(!!selectedPageForEdit);
 
   useEffect(() => {
     const savedEmail = localStorage.getItem('shofu_cms_user_email');
