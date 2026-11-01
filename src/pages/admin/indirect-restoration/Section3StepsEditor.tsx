@@ -3,8 +3,8 @@ import { Bold, Plus, Trash2, Upload, Microscope, Umbrella, ShieldCheck, Clock, S
 import { ProductItem, DiagramConfig, applyFormat } from './types';
 
 interface Section3StepsEditorProps {
-  badge: string;
-  setBadge: React.Dispatch<React.SetStateAction<string>>;
+  badge?: string;
+  setBadge?: React.Dispatch<React.SetStateAction<string>>;
   headline: string;
   setHeadline: React.Dispatch<React.SetStateAction<string>>;
   description: string;
@@ -23,8 +23,6 @@ interface Section3StepsEditorProps {
 }
 
 export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
-  badge,
-  setBadge,
   headline,
   setHeadline,
   description,
@@ -137,18 +135,6 @@ export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
         </div>
 
         <div className="grid grid-cols-1 gap-6">
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-              Badge tiêu chuẩn
-            </label>
-            <input
-              type="text"
-              value={badge}
-              onChange={(e) => setBadge(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-amber-500 text-sm outline-none font-medium"
-              placeholder="Tiêu chuẩn vàng mới..."
-            />
-          </div>
 
           <div>
             <div className="flex items-center justify-between mb-2">
@@ -569,11 +555,6 @@ export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
         {/* Mock Gold Standard Container */}
         <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8 space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            {badge && (
-              <span className="inline-block px-3 py-1 rounded-full bg-amber-50 text-amber-600 border border-amber-200 font-mono text-xs font-bold uppercase tracking-wider">
-                {badge}
-              </span>
-            )}
             <div
               className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 leading-snug"
               dangerouslySetInnerHTML={{ __html: headline || '' }}

@@ -3,12 +3,12 @@ import { Bold, Plus, Trash2, AlertTriangle, Layers, Unlink, Banknote, Eye, Arrow
 import { PainPointItem, applyFormat } from './types';
 
 interface Section2PainPointsEditorProps {
-  badge: string;
-  setBadge: React.Dispatch<React.SetStateAction<string>>;
+  badge?: string;
+  setBadge?: React.Dispatch<React.SetStateAction<string>>;
   headline: string;
   setHeadline: React.Dispatch<React.SetStateAction<string>>;
-  description: string;
-  setDescription: React.Dispatch<React.SetStateAction<string>>;
+  description?: string;
+  setDescription?: React.Dispatch<React.SetStateAction<string>>;
   items: PainPointItem[];
   setItems: React.Dispatch<React.SetStateAction<PainPointItem[]>>;
   ctaText: string;
@@ -16,12 +16,8 @@ interface Section2PainPointsEditorProps {
 }
 
 export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> = ({
-  badge,
-  setBadge,
   headline,
   setHeadline,
-  description,
-  setDescription,
   items,
   setItems,
   ctaText,
@@ -68,20 +64,6 @@ export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> =
         </div>
 
         <div className="grid grid-cols-1 gap-6">
-          {/* Badge */}
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-              Badge phụ
-            </label>
-            <input
-              type="text"
-              value={badge}
-              onChange={(e) => setBadge(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 text-sm outline-none font-medium"
-              placeholder="Thực trạng lâm sàng..."
-            />
-          </div>
-
           {/* Headline */}
           <div>
             <div className="flex items-center justify-between mb-2">
@@ -129,26 +111,6 @@ export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> =
                 dangerouslySetInnerHTML={{ __html: headline || '<span class="text-slate-500 italic text-sm">Chưa có tiêu đề...</span>' }}
               />
             </div>
-          </div>
-
-          {/* Description */}
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-              Đoạn giải thích phụ
-            </label>
-            <textarea
-              rows={2}
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-red-500 text-sm outline-none"
-              placeholder="Mô tả bối cảnh..."
-            />
-            {description && (
-              <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 mt-2 text-xs text-slate-600 leading-relaxed font-body">
-                <span className="text-[10.5px] font-mono text-slate-400 block mb-1 uppercase font-bold">Xem trước mô tả:</span>
-                <div dangerouslySetInnerHTML={{ __html: description }} />
-              </div>
-            )}
           </div>
 
           {/* CTA Text */}
@@ -285,22 +247,10 @@ export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> =
         {/* Mock Dark Pain Points Section */}
         <div className="rounded-2xl bg-slate-950 border border-slate-800 p-6 sm:p-8 text-white space-y-6 shadow-2xl">
           <div className="text-center max-w-2xl mx-auto space-y-3">
-            {badge && (
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-mono text-xs font-bold uppercase tracking-wider">
-                <AlertTriangle className="w-3.5 h-3.5" />
-                <span>{badge}</span>
-              </div>
-            )}
             <div
               className="font-heading font-extrabold text-xl sm:text-2xl text-white leading-snug"
               dangerouslySetInnerHTML={{ __html: headline || '' }}
             />
-            {description && (
-              <div
-                className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: description }}
-              />
-            )}
           </div>
 
           {/* Cards Grid */}
