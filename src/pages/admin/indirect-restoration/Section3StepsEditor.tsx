@@ -1,6 +1,72 @@
 import React from 'react';
-import { Bold, Plus, Trash2, Upload, Microscope, Umbrella, ShieldCheck, Clock, Shield, Eye, CheckCircle2, ArrowRight } from 'lucide-react';
-import { ProductItem, DiagramConfig, applyFormat } from './types';
+import { 
+  Bold, Plus, Trash2, Upload, Microscope, Umbrella, ShieldCheck, Clock, Shield, 
+  Eye, CheckCircle2, ArrowRight, Sparkles, Zap, Layers, Activity, Droplet, RotateCcw 
+} from 'lucide-react';
+import { ProductItem, DiagramConfig, FeatureItem, applyFormat } from './types';
+
+export const DEFAULT_FEATURE_ICONS = [
+  { value: 'Microscope', label: 'Microscope (Kính hiển vi / Siêu mỏng)' },
+  { value: 'Umbrella', label: 'Umbrella (Kỵ nước / Kháng ẩm HEMA-Free)' },
+  { value: 'ShieldCheck', label: 'ShieldCheck (Bảo vệ kép / Kháng rò rỉ)' },
+  { value: 'Clock', label: 'Clock (Thời gian / Dọn dư nhanh)' },
+  { value: 'Shield', label: 'Shield (Lá chắn / Kháng axit S-PRG)' },
+  { value: 'Sparkles', label: 'Sparkles (Thẩm mỹ / Độ bóng cao)' },
+  { value: 'Zap', label: 'Zap (Lực dán mạnh / Năng lượng)' },
+  { value: 'Layers', label: 'Layers (Lớp màng / Khít sát)' },
+  { value: 'Activity', label: 'Activity (Hoạt tính sinh học)' },
+  { value: 'Droplet', label: 'Droplet (Độ loang thixotropic)' },
+  { value: 'CheckCircle2', label: 'CheckCircle2 (Tiêu chuẩn chất lượng)' },
+];
+
+export const renderFeatureIcon = (
+  iconName?: string,
+  iconSvg?: string,
+  className = "w-5 h-5"
+) => {
+  if (iconSvg) {
+    if (iconSvg.startsWith('<svg')) {
+      return (
+        <span
+          className={`inline-flex items-center justify-center [&>svg]:w-full [&>svg]:h-full ${className}`}
+          dangerouslySetInnerHTML={{ __html: iconSvg }}
+        />
+      );
+    }
+    return <img src={iconSvg} alt="Custom SVG" className={`${className} object-contain`} />;
+  }
+
+  switch (iconName) {
+    case 'Microscope': return <Microscope className={className} />;
+    case 'Umbrella': return <Umbrella className={className} />;
+    case 'ShieldCheck': return <ShieldCheck className={className} />;
+    case 'Clock': return <Clock className={className} />;
+    case 'Shield': return <Shield className={className} />;
+    case 'Sparkles': return <Sparkles className={className} />;
+    case 'Zap': return <Zap className={className} />;
+    case 'Layers': return <Layers className={className} />;
+    case 'Activity': return <Activity className={className} />;
+    case 'Droplet': return <Droplet className={className} />;
+    case 'CheckCircle2':
+    default:
+      return <CheckCircle2 className={className} />;
+  }
+};
+
+const handleSvgUpload = (file: File, callback: (svgStr: string) => void) => {
+  if (!file.name.toLowerCase().endsWith('.svg') && file.type !== 'image/svg+xml') {
+    alert('Vui lòng chọn tệp tin định dạng SVG (.svg)!');
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const result = e.target?.result as string;
+    if (result) {
+      callback(result);
+    }
+  };
+  reader.readAsDataURL(file);
+};
 
 interface Section3StepsEditorProps {
   badge?: string;
@@ -61,9 +127,13 @@ export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
     });
   };
 
-  const handleUpdateFeature1 = (index: number, field: 'title' | 'description' | 'iconName', val: string) => {
+  const handleUpdateFeature1 = (index: number, field: keyof FeatureItem, val: string | undefined) => {
     const updated = [...product1.features];
-    updated[index] = { ...updated[index], [field]: val };
+    if (val === undefined) {
+      delete updated[index][field];
+    } else {
+      updated[index] = { ...updated[index], [field]: val };
+    }
     setProduct1({ ...product1, features: updated });
   };
 
@@ -89,9 +159,13 @@ export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
     });
   };
 
-  const handleUpdateFeature2 = (index: number, field: 'title' | 'description' | 'iconName', val: string) => {
+  const handleUpdateFeature2 = (index: number, field: keyof FeatureItem, val: string | undefined) => {
     const updated = [...product2.features];
-    updated[index] = { ...updated[index], [field]: val };
+    if (val === undefined) {
+      delete updated[index][field];
+    } else {
+      updated[index] = { ...updated[index], [field]: val };
+    }
     setProduct2({ ...product2, features: updated });
   };
 
@@ -278,46 +352,168 @@ export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
         </div>
 
         {/* Features of Product 1 */}
-        <div className="space-y-3">
-          <div className="flex items-center justify-between">
-            <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-              Các tính năng cốt lõi
-            </label>
+        <div className="space-y-4">
+          <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <label className="text-xs font-bold text-slate-800 uppercase tracking-wider block">
+                Các tính năng cốt lõi ({product1.features.length})
+              </label>
+              <p className="text-[11px] text-slate-500 mt-0.5">
+                Mỗi tính năng gồm 3 thành phần: Biểu tượng (Icon/SVG), Tính năng kỹ thuật và Ưu điểm lâm sàng.
+              </p>
+            </div>
             <button
               type="button"
               onClick={handleAddFeature1}
-              className="text-xs font-bold text-[#00ADEF] hover:underline inline-flex items-center gap-1"
+              className="px-3 py-1.5 rounded-xl bg-sky-50 text-[#00ADEF] hover:bg-sky-100 text-xs font-bold inline-flex items-center gap-1.5 transition-colors border border-sky-200"
             >
               <Plus className="w-3.5 h-3.5" /> Thêm tính năng
             </button>
           </div>
-          {product1.features.map((feat, fIdx) => (
-            <div key={fIdx} className="p-3.5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-2">
-              <div className="flex items-center justify-between">
-                <input
-                  type="text"
-                  value={feat.title}
-                  onChange={(e) => handleUpdateFeature1(fIdx, 'title', e.target.value)}
-                  className="font-bold text-xs text-slate-800 bg-transparent outline-none flex-1"
-                  placeholder="Tiêu đề tính năng..."
-                />
-                <button
-                  type="button"
-                  onClick={() => handleDeleteFeature1(fIdx)}
-                  className="text-slate-400 hover:text-red-500 p-1"
-                >
-                  <Trash2 className="w-3.5 h-3.5" />
-                </button>
+
+          <div className="space-y-4">
+            {product1.features.map((feat, fIdx) => (
+              <div 
+                key={fIdx} 
+                className="p-5 rounded-2xl border border-slate-200 bg-slate-50/40 hover:bg-white hover:border-sky-300 transition-all space-y-4 shadow-xs"
+              >
+                {/* Header card */}
+                <div className="flex items-center justify-between pb-3 border-b border-slate-200/60">
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-6 h-6 rounded-full bg-sky-100 text-[#00ADEF] font-bold text-xs flex items-center justify-center">
+                      {fIdx + 1}
+                    </span>
+                    <span className="font-bold text-sm text-slate-900 truncate max-w-xs sm:max-w-md">
+                      {feat.title || `Tính năng #${fIdx + 1}`}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleDeleteFeature1(fIdx)}
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-slate-400 hover:text-red-600 hover:bg-red-50 text-xs font-medium transition-colors"
+                    title="Xóa tính năng này"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                    <span>Xóa</span>
+                  </button>
+                </div>
+
+                {/* 3 Thành phần của tính năng */}
+                <div className="grid grid-cols-1 gap-4">
+                  {/* Thành phần 1: Biểu tượng (Icon) */}
+                  <div className="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-[#00ADEF]" />
+                        1. Biểu tượng (Icon)
+                      </label>
+                      {feat.iconSvg ? (
+                        <span className="text-[10.5px] bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded-full font-bold">
+                          Đang dùng file SVG tải lên
+                        </span>
+                      ) : (
+                        <span className="text-[10.5px] text-slate-400 font-mono">
+                          Mặc định: {feat.iconName || 'Microscope'}
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                      {/* Icon preview box */}
+                      <div className="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 shadow-sm flex items-center justify-center shrink-0 p-2 text-[#00ADEF]">
+                        {renderFeatureIcon(feat.iconName, feat.iconSvg, "w-6 h-6")}
+                      </div>
+
+                      <div className="flex-1 w-full flex flex-wrap items-center gap-2">
+                        {/* Default icon dropdown */}
+                        <select
+                          value={feat.iconSvg ? 'custom-svg' : (feat.iconName || 'Microscope')}
+                          onChange={(e) => {
+                            if (e.target.value !== 'custom-svg') {
+                              handleUpdateFeature1(fIdx, 'iconSvg', undefined);
+                              handleUpdateFeature1(fIdx, 'iconName', e.target.value);
+                            }
+                          }}
+                          className="flex-1 min-w-[200px] px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 text-xs font-medium outline-none focus:border-[#00ADEF]"
+                        >
+                          {feat.iconSvg && (
+                            <option value="custom-svg">★ File SVG tùy chọn đang dùng</option>
+                          )}
+                          <optgroup label="Icon mặc định hệ thống">
+                            {DEFAULT_FEATURE_ICONS.map((ic) => (
+                              <option key={ic.value} value={ic.value}>
+                                {ic.label}
+                              </option>
+                            ))}
+                          </optgroup>
+                        </select>
+
+                        {/* Upload SVG button */}
+                        <label className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white border border-slate-300 hover:border-[#00ADEF] hover:bg-sky-50/50 text-slate-700 text-xs font-bold cursor-pointer transition-colors shadow-sm">
+                          <Upload className="w-3.5 h-3.5 text-[#00ADEF]" />
+                          <span>Tải file .SVG</span>
+                          <input
+                            type="file"
+                            accept=".svg,image/svg+xml"
+                            className="hidden"
+                            onChange={(e) => {
+                              const file = e.target.files?.[0];
+                              if (file) {
+                                handleSvgUpload(file, (svgData) => {
+                                  handleUpdateFeature1(fIdx, 'iconSvg', svgData);
+                                });
+                              }
+                            }}
+                          />
+                        </label>
+
+                        {/* Revert custom SVG */}
+                        {feat.iconSvg && (
+                          <button
+                            type="button"
+                            onClick={() => handleUpdateFeature1(fIdx, 'iconSvg', undefined)}
+                            className="inline-flex items-center gap-1 px-2.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-medium transition-colors"
+                            title="Quay lại dùng icon mặc định"
+                          >
+                            <RotateCcw className="w-3 h-3" />
+                            <span>Về mặc định</span>
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Thành phần 2: Tính năng kỹ thuật */}
+                  <div>
+                    <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                      2. Tính năng kỹ thuật
+                    </label>
+                    <input
+                      type="text"
+                      value={feat.title}
+                      onChange={(e) => handleUpdateFeature1(fIdx, 'title', e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 text-sm font-bold outline-none focus:border-[#00ADEF] focus:ring-2 focus:ring-sky-500/10"
+                      placeholder="Ví dụ: Độ dày màng siêu mỏng (chỉ 5µm)..."
+                    />
+                  </div>
+
+                  {/* Thành phần 3: Mô tả chi tiết ưu điểm lâm sàng */}
+                  <div>
+                    <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                      3. Mô tả chi tiết ưu điểm lâm sàng
+                    </label>
+                    <textarea
+                      rows={2}
+                      value={feat.description}
+                      onChange={(e) => handleUpdateFeature1(fIdx, 'description', e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 text-xs sm:text-sm font-medium outline-none focus:border-[#00ADEF] focus:ring-2 focus:ring-sky-500/10 leading-relaxed font-body"
+                      placeholder="Ví dụ: Khoá chặt vi kẽ ống ngà, không lo cộm khớp, ngăn ngừa đổi màu đường viền phục hình..."
+                    />
+                  </div>
+                </div>
               </div>
-              <textarea
-                rows={2}
-                value={feat.description}
-                onChange={(e) => handleUpdateFeature1(fIdx, 'description', e.target.value)}
-                className="w-full text-xs text-slate-600 bg-white border border-slate-200 rounded-lg p-2 outline-none font-mono"
-                placeholder="Mô tả tính năng..."
-              />
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
@@ -391,46 +587,168 @@ export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
         </div>
 
         {/* Features of Product 2 */}
-        <div className="space-y-3">
-          <div className="flex items-center justify-between">
-            <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-              Các tính năng cốt lõi
-            </label>
+        <div className="space-y-4">
+          <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <label className="text-xs font-bold text-slate-800 uppercase tracking-wider block">
+                Các tính năng cốt lõi ({product2.features.length})
+              </label>
+              <p className="text-[11px] text-slate-500 mt-0.5">
+                Mỗi tính năng gồm 3 thành phần: Biểu tượng (Icon/SVG), Tính năng kỹ thuật và Ưu điểm lâm sàng.
+              </p>
+            </div>
             <button
               type="button"
               onClick={handleAddFeature2}
-              className="text-xs font-bold text-red-600 hover:underline inline-flex items-center gap-1"
+              className="px-3 py-1.5 rounded-xl bg-red-50 text-red-600 hover:bg-red-100 text-xs font-bold inline-flex items-center gap-1.5 transition-colors border border-red-200"
             >
               <Plus className="w-3.5 h-3.5" /> Thêm tính năng
             </button>
           </div>
-          {product2.features.map((feat, fIdx) => (
-            <div key={fIdx} className="p-3.5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-2">
-              <div className="flex items-center justify-between">
-                <input
-                  type="text"
-                  value={feat.title}
-                  onChange={(e) => handleUpdateFeature2(fIdx, 'title', e.target.value)}
-                  className="font-bold text-xs text-slate-800 bg-transparent outline-none flex-1"
-                  placeholder="Tiêu đề tính năng..."
-                />
-                <button
-                  type="button"
-                  onClick={() => handleDeleteFeature2(fIdx)}
-                  className="text-slate-400 hover:text-red-500 p-1"
-                >
-                  <Trash2 className="w-3.5 h-3.5" />
-                </button>
+
+          <div className="space-y-4">
+            {product2.features.map((feat, fIdx) => (
+              <div 
+                key={fIdx} 
+                className="p-5 rounded-2xl border border-slate-200 bg-slate-50/40 hover:bg-white hover:border-red-300 transition-all space-y-4 shadow-xs"
+              >
+                {/* Header card */}
+                <div className="flex items-center justify-between pb-3 border-b border-slate-200/60">
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-6 h-6 rounded-full bg-red-100 text-red-600 font-bold text-xs flex items-center justify-center">
+                      {fIdx + 1}
+                    </span>
+                    <span className="font-bold text-sm text-slate-900 truncate max-w-xs sm:max-w-md">
+                      {feat.title || `Tính năng #${fIdx + 1}`}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleDeleteFeature2(fIdx)}
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-slate-400 hover:text-red-600 hover:bg-red-50 text-xs font-medium transition-colors"
+                    title="Xóa tính năng này"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                    <span>Xóa</span>
+                  </button>
+                </div>
+
+                {/* 3 Thành phần của tính năng */}
+                <div className="grid grid-cols-1 gap-4">
+                  {/* Thành phần 1: Biểu tượng (Icon) */}
+                  <div className="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <label className="text-[11px] font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-red-500" />
+                        1. Biểu tượng (Icon)
+                      </label>
+                      {feat.iconSvg ? (
+                        <span className="text-[10.5px] bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded-full font-bold">
+                          Đang dùng file SVG tải lên
+                        </span>
+                      ) : (
+                        <span className="text-[10.5px] text-slate-400 font-mono">
+                          Mặc định: {feat.iconName || 'Shield'}
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                      {/* Icon preview box */}
+                      <div className="w-12 h-12 rounded-xl bg-red-50 border border-red-100 shadow-sm flex items-center justify-center shrink-0 p-2 text-red-600">
+                        {renderFeatureIcon(feat.iconName, feat.iconSvg, "w-6 h-6")}
+                      </div>
+
+                      <div className="flex-1 w-full flex flex-wrap items-center gap-2">
+                        {/* Default icon dropdown */}
+                        <select
+                          value={feat.iconSvg ? 'custom-svg' : (feat.iconName || 'Shield')}
+                          onChange={(e) => {
+                            if (e.target.value !== 'custom-svg') {
+                              handleUpdateFeature2(fIdx, 'iconSvg', undefined);
+                              handleUpdateFeature2(fIdx, 'iconName', e.target.value);
+                            }
+                          }}
+                          className="flex-1 min-w-[200px] px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 text-xs font-medium outline-none focus:border-red-500"
+                        >
+                          {feat.iconSvg && (
+                            <option value="custom-svg">★ File SVG tùy chọn đang dùng</option>
+                          )}
+                          <optgroup label="Icon mặc định hệ thống">
+                            {DEFAULT_FEATURE_ICONS.map((ic) => (
+                              <option key={ic.value} value={ic.value}>
+                                {ic.label}
+                              </option>
+                            ))}
+                          </optgroup>
+                        </select>
+
+                        {/* Upload SVG button */}
+                        <label className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white border border-slate-300 hover:border-red-400 hover:bg-red-50/50 text-slate-700 text-xs font-bold cursor-pointer transition-colors shadow-sm">
+                          <Upload className="w-3.5 h-3.5 text-red-600" />
+                          <span>Tải file .SVG</span>
+                          <input
+                            type="file"
+                            accept=".svg,image/svg+xml"
+                            className="hidden"
+                            onChange={(e) => {
+                              const file = e.target.files?.[0];
+                              if (file) {
+                                handleSvgUpload(file, (svgData) => {
+                                  handleUpdateFeature2(fIdx, 'iconSvg', svgData);
+                                });
+                              }
+                            }}
+                          />
+                        </label>
+
+                        {/* Revert custom SVG */}
+                        {feat.iconSvg && (
+                          <button
+                            type="button"
+                            onClick={() => handleUpdateFeature2(fIdx, 'iconSvg', undefined)}
+                            className="inline-flex items-center gap-1 px-2.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-medium transition-colors"
+                            title="Quay lại dùng icon mặc định"
+                          >
+                            <RotateCcw className="w-3 h-3" />
+                            <span>Về mặc định</span>
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Thành phần 2: Tính năng kỹ thuật */}
+                  <div>
+                    <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                      2. Tính năng kỹ thuật
+                    </label>
+                    <input
+                      type="text"
+                      value={feat.title}
+                      onChange={(e) => handleUpdateFeature2(fIdx, 'title', e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 text-sm font-bold outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/10"
+                      placeholder="Ví dụ: Màng phim siêu mỏng 14µm..."
+                    />
+                  </div>
+
+                  {/* Thành phần 3: Mô tả chi tiết ưu điểm lâm sàng */}
+                  <div>
+                    <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                      3. Mô tả chi tiết ưu điểm lâm sàng
+                    </label>
+                    <textarea
+                      rows={2}
+                      value={feat.description}
+                      onChange={(e) => handleUpdateFeature2(fIdx, 'description', e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 text-xs sm:text-sm font-medium outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/10 leading-relaxed font-body"
+                      placeholder="Ví dụ: Chảy loang thixotropic tối ưu tạo đường hoàn tất vô hình..."
+                    />
+                  </div>
+                </div>
               </div>
-              <textarea
-                rows={2}
-                value={feat.description}
-                onChange={(e) => handleUpdateFeature2(fIdx, 'description', e.target.value)}
-                className="w-full text-xs text-slate-600 bg-white border border-slate-200 rounded-lg p-2 outline-none font-mono"
-                placeholder="Mô tả tính năng..."
-              />
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
@@ -567,23 +885,25 @@ export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
             {/* Step 1: BBX */}
             <div className="rounded-2xl border border-slate-200 bg-white p-5 space-y-4 shadow-sm">
               <div className="flex items-center justify-between">
-                <span className="px-2.5 py-1 rounded-lg bg-red-50 text-red-600 font-mono text-[11px] font-bold">
+                <span className="px-2.5 py-1 rounded-lg bg-sky-50 text-[#00ADEF] font-mono text-[11px] font-bold">
                   {product1.step || 'BƯỚC 1'}
                 </span>
                 <span className="text-xs font-bold text-slate-500">{product1.role}</span>
               </div>
-              <h4 className="font-heading font-bold text-base text-slate-900">{product1.name}</h4>
+              <h4 className="font-heading font-bold text-base text-slate-900">{product1.name || product1.title}</h4>
               <div className="h-40 rounded-xl bg-slate-50 flex items-center justify-center p-3 border border-slate-100 overflow-hidden">
                 {product1.image ? (
-                  <img src={product1.image} alt={product1.name} className="w-full h-full object-contain" />
+                  <img src={product1.image} alt={product1.name || product1.title} className="w-full h-full object-contain" />
                 ) : (
                   <span className="text-xs text-slate-400">Chưa có ảnh</span>
                 )}
               </div>
-              <ul className="space-y-1.5 pt-1">
-                {product1.features?.slice(0, 3).map((f, i) => (
-                  <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-red-500 shrink-0 mt-0.5" />
+              <ul className="space-y-2 pt-1">
+                {product1.features?.map((f, i) => (
+                  <li key={i} className="flex items-start gap-2.5 text-xs text-slate-600">
+                    <span className="shrink-0 mt-0.5 text-[#00ADEF]">
+                      {renderFeatureIcon(f.iconName, f.iconSvg, "w-4 h-4")}
+                    </span>
                     <span><strong className="text-slate-900 font-semibold">{f.title}:</strong> {f.description}</span>
                   </li>
                 ))}
@@ -591,25 +911,27 @@ export const Section3StepsEditor: React.FC<Section3StepsEditorProps> = ({
             </div>
 
             {/* Step 2: BeautiLink SA */}
-            <div className="rounded-2xl border border-blue-200 bg-white p-5 space-y-4 shadow-sm">
+            <div className="rounded-2xl border border-red-200 bg-white p-5 space-y-4 shadow-sm">
               <div className="flex items-center justify-between">
-                <span className="px-2.5 py-1 rounded-lg bg-blue-50 text-[#00ADEF] font-mono text-[11px] font-bold">
+                <span className="px-2.5 py-1 rounded-lg bg-red-50 text-red-600 font-mono text-[11px] font-bold">
                   {product2.step || 'BƯỚC 2'}
                 </span>
                 <span className="text-xs font-bold text-slate-500">{product2.role}</span>
               </div>
-              <h4 className="font-heading font-bold text-base text-slate-900">{product2.name}</h4>
+              <h4 className="font-heading font-bold text-base text-slate-900">{product2.name || product2.title}</h4>
               <div className="h-40 rounded-xl bg-slate-50 flex items-center justify-center p-3 border border-slate-100 overflow-hidden">
                 {product2.image ? (
-                  <img src={product2.image} alt={product2.name} className="w-full h-full object-contain" />
+                  <img src={product2.image} alt={product2.name || product2.title} className="w-full h-full object-contain" />
                 ) : (
                   <span className="text-xs text-slate-400">Chưa có ảnh</span>
                 )}
               </div>
-              <ul className="space-y-1.5 pt-1">
-                {product2.features?.slice(0, 3).map((f, i) => (
-                  <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00ADEF] shrink-0 mt-0.5" />
+              <ul className="space-y-2 pt-1">
+                {product2.features?.map((f, i) => (
+                  <li key={i} className="flex items-start gap-2.5 text-xs text-slate-600">
+                    <span className="shrink-0 mt-0.5 text-red-500">
+                      {renderFeatureIcon(f.iconName, f.iconSvg, "w-4 h-4")}
+                    </span>
                     <span><strong className="text-slate-900 font-semibold">{f.title}:</strong> {f.description}</span>
                   </li>
                 ))}

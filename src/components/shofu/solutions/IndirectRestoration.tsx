@@ -108,6 +108,34 @@ const YoutubeAutoplay = ({ videoId }: { videoId: string }) => {
   );
 };
 
+const renderIndirectFeatureIcon = (iconName?: string, iconSvg?: string, colorClass = "text-[#00ADEF]") => {
+  if (iconSvg) {
+    if (iconSvg.startsWith('<svg')) {
+      return (
+        <span
+          className="w-6 h-6 inline-flex items-center justify-center [&>svg]:w-full [&>svg]:h-full"
+          dangerouslySetInnerHTML={{ __html: iconSvg }}
+        />
+      );
+    }
+    return <img src={iconSvg} alt="Feature icon" className="w-6 h-6 object-contain" />;
+  }
+
+  const cls = `w-6 h-6 ${colorClass}`;
+  switch (iconName) {
+    case 'Microscope': return <Microscope className={cls} />;
+    case 'Umbrella': return <Umbrella className={cls} />;
+    case 'ShieldCheck': return <ShieldCheck className={cls} />;
+    case 'Clock': return <Clock className={cls} />;
+    case 'Shield': return <Shield className={cls} />;
+    case 'Sparkles': return <Sparkles className={cls} />;
+    case 'Zap': return <Zap className={cls} />;
+    case 'Layers': return <Layers className={cls} />;
+    case 'Droplet': return <Droplet className={cls} />;
+    default: return <CheckCircle2 className={cls} />;
+  }
+};
+
 export function IndirectRestoration({ overrideContent }: { overrideContent?: any } = {}) {
   const [content, setContent] = useState(overrideContent || defaultData);
   const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
@@ -296,98 +324,102 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
       <section className="py-20 lg:py-28 bg-slate-50 bg-grid-pattern relative overflow-hidden border-b border-slate-200">
         <div className="w-[90%] lg:w-[80%] mx-auto space-y-12 relative z-10">
         <div className="text-center w-full max-w-6xl mx-auto">
-          <h2 className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-[3rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">
-            <span className="text-amber-500">Tiêu chuẩn vàng</span> mới:<br />
-            <span className="inline-block lg:whitespace-nowrap">Bộ đôi liên kết sinh học <span className="text-[#00ADEF]">không thể phá hủy</span></span>
-          </h2>
-          <p className="font-body text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">Sự kết hợp hoàn hảo tạo nên khoảng ghép vô hình 24µm vững chắc.</p>
+          <h2 
+            className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-[3rem] text-slate-900 leading-[1.3] mb-4 tracking-tight"
+            dangerouslySetInnerHTML={{ 
+              __html: content.goldStandard?.headline || '<span class="text-amber-500">Tiêu chuẩn vàng</span> mới:<br /><span class="inline-block lg:whitespace-nowrap">Bộ đôi liên kết sinh học <span class="text-[#00ADEF]">không thể phá hủy</span></span>' 
+            }}
+          />
+          {content.goldStandard?.description && (
+            <p className="font-body text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+              {content.goldStandard.description}
+            </p>
+          )}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Product 1: BeautiBond Xtreme */}
           <div className="bg-white bg-gradient-to-br from-[#00ADEF]/5 to-[#007AA8]/10 rounded-[2rem] px-5 py-8 sm:p-8 md:p-12 border border-[#00ADEF]/20 relative overflow-hidden flex flex-col h-full justify-between">
             <div className="relative z-10">
-              <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">Keo dán BeautiBond Xtreme</h3>
-              <p className="text-[#007AA8] font-bold text-sm uppercase tracking-wider mb-6">Universal Thế hệ thứ 8</p>
+              <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">
+                {content.goldStandard?.product1?.title || 'Keo dán BeautiBond Xtreme'}
+              </h3>
+              <p className="text-[#007AA8] font-bold text-sm uppercase tracking-wider mb-6">
+                {content.goldStandard?.product1?.subtitle || 'Universal Thế hệ thứ 8'}
+              </p>
               
               {/* Product Image Area */}
               <div className="mb-8 relative z-10 flex justify-center items-center">
                 <div className="w-full rounded-2xl border border-[#00ADEF]/10 bg-white shadow-sm overflow-hidden relative group">
-                  <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png" alt="BeautiBond Xtreme" className="w-full h-auto object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                  <img 
+                    referrerPolicy="no-referrer" 
+                    src={content.goldStandard?.product1?.image || "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png"} 
+                    alt={content.goldStandard?.product1?.title || "BeautiBond Xtreme"} 
+                    className="w-full h-auto object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700" 
+                    loading="lazy" 
+                  />
                 </div>
               </div>
 
               <ul className="space-y-6">
-                <li className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Microscope className="w-6 h-6 text-[#00ADEF]" />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Độ dày màng siêu mỏng (chỉ 5µm)</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Khoá chặt vi kẽ ống ngà, không lo cộm khớp, ngăn ngừa đổi màu đường viền phục hình.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Umbrella className="w-6 h-6 text-[#00ADEF]" />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Công nghệ HEMA-Free kỵ nước</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Kháng hút nước, chống thủy phân và ngăn ngừa nhạy cảm ngà sau khi gắn.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <ShieldCheck className="w-6 h-6 text-[#00ADEF]" />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Tích hợp Monomer đa chức năng & Silane kháng acid (ARS)</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Tăng cường lực liên kết hóa học trực tiếp lên Men, Ngà, Zirconia và Sứ thủy tinh mà không cần bước quét primer rời.</p>
-                  </div>
-                </li>
+                {(content.goldStandard?.product1?.features || []).map((feat: any, idx: number) => (
+                  <li key={idx} className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                      {renderIndirectFeatureIcon(feat.iconName, feat.iconSvg, "text-[#00ADEF]")}
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">
+                        {feat.title}
+                      </h4>
+                      <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed font-body">
+                        {feat.description}
+                      </p>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
 
+          {/* Product 2: BeautiLink SA */}
           <div className="bg-white bg-gradient-to-br from-[#C43838]/5 to-[#8C2828]/10 rounded-[2rem] px-5 py-8 sm:p-8 md:p-12 border border-[#C43838]/20 relative overflow-hidden flex flex-col h-full justify-between">
             <div className="relative z-10">
-              <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">Xi măng BeautiLink SA</h3>
-              <p className="text-[#C43838] font-bold text-sm uppercase tracking-wider mb-6">Tự dán lưỡng trùng hợp tích hợp hạt độn Giomer S-PRG</p>
+              <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">
+                {content.goldStandard?.product2?.title || 'Xi măng BeautiLink SA'}
+              </h3>
+              <p className="text-[#C43838] font-bold text-sm uppercase tracking-wider mb-6">
+                {content.goldStandard?.product2?.subtitle || 'Tự dán lưỡng trùng hợp tích hợp hạt độn Giomer S-PRG'}
+              </p>
               
               {/* Product Image Area */}
               <div className="mb-8 relative z-10 flex justify-center items-center">
                 <div className="w-full rounded-2xl border border-[#C43838]/10 bg-white shadow-sm overflow-hidden relative group">
-                  <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png" alt="BeautiLink SA" className="w-full h-auto object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                  <img 
+                    referrerPolicy="no-referrer" 
+                    src={content.goldStandard?.product2?.image || "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png"} 
+                    alt={content.goldStandard?.product2?.title || "BeautiLink SA"} 
+                    className="w-full h-auto object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700" 
+                    loading="lazy" 
+                  />
                 </div>
               </div>
 
               <ul className="space-y-6">
-                <li className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Microscope className="w-6 h-6 text-[#C43838]" />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Màng phim siêu mỏng 14µm</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Chảy loang thixotropic tối ưu tạo đường hoàn tất vô hình.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Clock className="w-6 h-6 text-[#C43838]" />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Dọn dư "One-Sweep" 1-2 giây</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Hóa dẻo dạng gel đàn hồi, lấy sạch xi măng dư nguyên khối chỉ bằng một đường gạt.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Shield className="w-6 h-6 text-[#C43838]" />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">Hạt độn hoạt tính sinh học S-PRG</h4>
-                    <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed">Liên tục giải phóng và tái nạp 6 loại ion sinh học, hỗ trợ trung hòa acid và kháng mảng bám vi khuẩn, ngăn ngừa sâu răng tại vị trí đường hoàn tất.</p>
-                  </div>
-                </li>
+                {(content.goldStandard?.product2?.features || []).map((feat: any, idx: number) => (
+                  <li key={idx} className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                      {renderIndirectFeatureIcon(feat.iconName, feat.iconSvg, "text-[#C43838]")}
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-bold text-sm sm:text-[15px] mb-1 leading-snug text-slate-900">
+                        {feat.title}
+                      </h4>
+                      <p className="text-slate-600 text-[13px] sm:text-sm leading-relaxed font-body">
+                        {feat.description}
+                      </p>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -397,17 +429,20 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
         <div className="rounded-3xl py-8 max-w-6xl mx-auto">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
-            {/* Headline (Order 1 on Mobile, Top Left on Desktop) */}
+            {/* Headline */}
             <div className="order-1 lg:col-start-1 lg:row-start-1 lg:self-end">
-              <h4 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight">
-                Cấu trúc liên kết đa tầng <span className="text-[#00ADEF]">siêu mỏng</span> khít sát <span className="text-amber-500">tuyệt đối</span>
-              </h4>
+              <h4 
+                className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight"
+                dangerouslySetInnerHTML={{ 
+                  __html: content.goldStandard?.diagram?.title || 'Cấu trúc liên kết đa tầng <span class="text-[#00ADEF]">siêu mỏng</span> khít sát <span class="text-amber-500">tuyệt đối</span>' 
+                }}
+              />
             </div>
 
-            {/* Diagram Image (Order 2 on Mobile, Right Column on Desktop) */}
+            {/* Diagram Image */}
             <div className="order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 flex flex-col items-center w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto">
               <img 
-                src="/images/Shofu-double-hybrid-link-system.webp" 
+                src={content.goldStandard?.diagram?.image || "/images/Shofu-double-hybrid-link-system.webp"} 
                 alt="Sơ đồ cấu trúc liên kết đa tầng siêu mỏng 24µm" 
                 className="w-full h-auto object-contain drop-shadow-sm rounded-xl"
                 loading="lazy"
@@ -415,24 +450,28 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
               />
             </div>
 
-            {/* USPs and Text (Order 3 on Mobile, Bottom Left on Desktop) */}
+            {/* USPs and Text */}
             <div className="order-3 lg:col-start-1 lg:row-start-2 lg:self-start space-y-6">
-              <p className="text-slate-600 text-base leading-relaxed">
-                Sự kết hợp hoàn hảo giữa <strong className="text-slate-900">độ dày màng siêu mỏng (chỉ 5µm)</strong> của BeautiBond Xtreme và lớp <strong className="text-slate-900">xi măng siêu mỏng 14µm</strong> của BeautiLink SA tạo nên một <strong className="text-[#00ADEF]">khoảng ghép vô hình chỉ 24µm</strong>, thiết lập <strong className="text-amber-600">tiêu chuẩn mới</strong> trong phục hình gián tiếp.
-              </p>
+              <p 
+                className="text-slate-600 text-base leading-relaxed"
+                dangerouslySetInnerHTML={{ 
+                  __html: content.goldStandard?.diagram?.description || 'Sự kết hợp hoàn hảo giữa <strong class="text-slate-900">độ dày màng siêu mỏng (chỉ 5µm)</strong> của BeautiBond Xtreme và lớp <strong class="text-slate-900">xi măng siêu mỏng 14µm</strong> của BeautiLink SA tạo nên một <strong class="text-[#00ADEF]">khoảng ghép vô hình chỉ 24µm</strong>, thiết lập <strong class="text-amber-600">tiêu chuẩn mới</strong> trong phục hình gián tiếp.' 
+                }}
+              />
               <ul className="space-y-4 pt-2">
-                <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
-                  <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
-                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Thẩm mỹ hoàn hảo:</strong> Không đổi màu phục hình theo thời gian nhờ công nghệ HEMA-Free kỵ nước.</p>
-                </li>
-                <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
-                  <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
-                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Khớp cắn chuẩn xác:</strong> Triệt tiêu hoàn toàn rủi ro cộm cấn, kênh phục hình sau khi gắn.</p>
-                </li>
-                <li className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
-                  <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
-                  <p className="text-sm text-slate-700 leading-relaxed"><strong>Bảo vệ sinh học:</strong> Hạt độn S-PRG ngăn chặn vi khuẩn xâm nhập vi kẽ ống ngà, bảo vệ cùi răng sau khi gắn.</p>
-                </li>
+                {(content.goldStandard?.diagram?.points || [
+                  '<strong>Thẩm mỹ hoàn hảo:</strong> Không đổi màu phục hình theo thời gian nhờ công nghệ HEMA-Free kỵ nước.',
+                  '<strong>Khớp cắn chuẩn xác:</strong> Triệt tiêu hoàn toàn rủi ro cộm cấn, kênh phục hình sau khi gắn.',
+                  '<strong>Bảo vệ sinh học:</strong> Hạt độn S-PRG ngăn chặn vi khuẩn xâm nhập vi kẽ ống ngà, bảo vệ cùi răng sau khi gắn.'
+                ]).map((pt: string, idx: number) => (
+                  <li key={idx} className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/60 backdrop-blur-sm shadow-sm hover:bg-white/90 transition-colors">
+                    <CheckCircle2 className="w-6 h-6 text-[#00ADEF] shrink-0" />
+                    <p 
+                      className="text-sm text-slate-700 leading-relaxed font-body"
+                      dangerouslySetInnerHTML={{ __html: pt }}
+                    />
+                  </li>
+                ))}
               </ul>
             </div>
             
@@ -441,11 +480,11 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
 
         <div className="mt-4 md:mt-12 text-center">
           <button 
-             onClick={() => openCampaignModal("Yêu cầu tư vấn")}
+            onClick={() => openCampaignModal(content.goldStandard?.ctaText || "Yêu cầu tư vấn")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
-            <span className="truncate">Yêu cầu tư vấn</span>
+            <span className="truncate">{content.goldStandard?.ctaText || "Yêu cầu tư vấn"}</span>
             <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
           </button>
         </div>

@@ -16,6 +16,7 @@ export interface PainPointItem {
 
 export interface FeatureItem {
   iconName?: string;
+  iconSvg?: string;
   title: string;
   description: string;
 }
