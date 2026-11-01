@@ -180,7 +180,6 @@ export function ShofuOfferModal() {
       'Địa chỉ': formData.address,
       'Add': formData.address,
       'add': formData.address,
-      'address': formData.address,
       'Sản phẩm quan tâm': selectedPromoText,
       'Trạng thái Lead': 'Mới',
       'Ghi chú thêm': [formData.notes, formData.wantsCustomOffer ? 'Cần tư vấn thiết kế ưu đãi tùy chỉnh' : ''].filter(Boolean).join(' - '),

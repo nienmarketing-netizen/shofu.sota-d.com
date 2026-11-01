@@ -3,8 +3,8 @@ import { Bold, Plus, Trash2, Upload, Video, BarChart3, ShieldCheck, DollarSign, 
 import { applyFormat } from './types';
 
 interface Section4EvidenceEditorProps {
-  badge: string;
-  setBadge: React.Dispatch<React.SetStateAction<string>>;
+  badge?: string;
+  setBadge?: React.Dispatch<React.SetStateAction<string>>;
   headline: string;
   setHeadline: React.Dispatch<React.SetStateAction<string>>;
   description: string;
@@ -47,8 +47,6 @@ interface Section4EvidenceEditorProps {
 }
 
 export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
-  badge,
-  setBadge,
   headline,
   setHeadline,
   description,
@@ -86,18 +84,6 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
         </div>
 
         <div className="grid grid-cols-1 gap-6">
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-              Badge tiêu đề
-            </label>
-            <input
-              type="text"
-              value={badge}
-              onChange={(e) => setBadge(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-purple-500 text-sm outline-none font-medium"
-            />
-          </div>
-
           <div>
             <div className="flex items-center justify-between mb-2">
               <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">
@@ -141,6 +127,16 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
               onChange={(e) => setDescription(e.target.value)}
               className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-purple-500 text-sm outline-none font-mono"
             />
+            {/* Live Preview of Description */}
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 mt-2">
+              <span className="text-[10.5px] font-mono text-slate-500 font-bold uppercase tracking-wider block mb-1">
+                Xem trước Đoạn văn mô tả:
+              </span>
+              <div 
+                className="font-body text-sm text-slate-600 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: description || '<span class="text-slate-400 italic text-sm">Chưa nhập đoạn văn mô tả...</span>' }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -208,6 +204,16 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
               onChange={(e) => setUsp1({ ...usp1, description: e.target.value })}
               className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs text-slate-700 outline-none font-mono"
             />
+            {/* Live Preview of USP 1 Description */}
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 mt-2">
+              <span className="text-[10.5px] font-mono text-slate-500 font-bold uppercase tracking-wider block mb-1">
+                Xem trước Mô tả USP 1:
+              </span>
+              <div 
+                className="font-body text-xs sm:text-sm text-slate-700 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: usp1.description || '<span class="text-slate-400 italic text-xs">Chưa nhập mô tả...</span>' }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -275,7 +281,7 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
 
           <div>
             <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Mô tả kỹ thuật Tack-cure
+              Mô tả kỹ thuật Tack-cure (Hỗ trợ HTML)
             </label>
             <textarea
               rows={3}
@@ -283,6 +289,16 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
               onChange={(e) => setUsp2({ ...usp2, description: e.target.value })}
               className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs text-slate-700 outline-none font-mono"
             />
+            {/* Live Preview of USP 2 Description */}
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 mt-2">
+              <span className="text-[10.5px] font-mono text-slate-500 font-bold uppercase tracking-wider block mb-1">
+                Xem trước Mô tả USP 2:
+              </span>
+              <div 
+                className="font-body text-xs sm:text-sm text-slate-700 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: usp2.description || '<span class="text-slate-400 italic text-xs">Chưa nhập mô tả...</span>' }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -313,7 +329,7 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
 
           <div>
             <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Mô tả cơ chế "bình ắc quy sinh học"
+              Mô tả cơ chế "bình ắc quy sinh học" (Hỗ trợ HTML)
             </label>
             <textarea
               rows={3}
@@ -321,6 +337,16 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
               onChange={(e) => setUsp3({ ...usp3, description: e.target.value })}
               className="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs text-slate-700 outline-none font-mono"
             />
+            {/* Live Preview of USP 3 Description */}
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 mt-2">
+              <span className="text-[10.5px] font-mono text-slate-500 font-bold uppercase tracking-wider block mb-1">
+                Xem trước Mô tả USP 3:
+              </span>
+              <div 
+                className="font-body text-xs sm:text-sm text-slate-700 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: usp3.description || '<span class="text-slate-400 italic text-xs">Chưa nhập mô tả...</span>' }}
+              />
+            </div>
           </div>
 
           <div>
@@ -377,6 +403,11 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
                 onChange={(e) => setUsp4({ ...usp4, problemDescription: e.target.value })}
                 className="w-full px-3 py-1.5 rounded-lg border border-red-200 text-xs text-slate-700 outline-none font-mono"
               />
+              {/* Live Preview of Problem Description */}
+              <div className="p-2.5 rounded-lg bg-white border border-red-100 text-xs text-slate-700 leading-relaxed">
+                <span className="text-[10px] font-mono text-slate-400 font-bold uppercase block mb-0.5">Xem trước mô tả Vấn đề:</span>
+                <div dangerouslySetInnerHTML={{ __html: usp4.problemDescription || '<span class="text-slate-400 italic">Chưa nhập mô tả...</span>' }} />
+              </div>
               <input
                 type="text"
                 value={usp4.problemImage}
@@ -400,6 +431,11 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
                 onChange={(e) => setUsp4({ ...usp4, solutionDescription: e.target.value })}
                 className="w-full px-3 py-1.5 rounded-lg border border-blue-200 text-xs text-slate-700 outline-none font-mono"
               />
+              {/* Live Preview of Solution Description */}
+              <div className="p-2.5 rounded-lg bg-white border border-blue-100 text-xs text-slate-700 leading-relaxed">
+                <span className="text-[10px] font-mono text-slate-400 font-bold uppercase block mb-0.5">Xem trước mô tả Giải pháp:</span>
+                <div dangerouslySetInnerHTML={{ __html: usp4.solutionDescription || '<span class="text-slate-400 italic">Chưa nhập mô tả...</span>' }} />
+              </div>
               <input
                 type="text"
                 value={usp4.solutionImage}
@@ -436,11 +472,6 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
         {/* Mock Evidence Container */}
         <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8 space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            {badge && (
-              <span className="inline-block px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-mono text-xs font-bold uppercase tracking-wider">
-                {badge}
-              </span>
-            )}
             <div
               className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 leading-snug"
               dangerouslySetInnerHTML={{ __html: headline || '' }}

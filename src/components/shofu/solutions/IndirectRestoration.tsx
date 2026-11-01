@@ -496,13 +496,16 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
       <section className="py-20 lg:py-28 bg-slate-200 bg-grid-pattern relative overflow-hidden border-b border-slate-300">
         <div className="w-[90%] lg:w-[80%] mx-auto space-y-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight">
-            Sức mạnh <br className="sm:hidden" />
-            <span className="text-[#00ADEF]">thuyết phục</span> <span className="text-amber-500">tuyệt đối</span>
-          </h2>
-          <p className="font-body text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
-            <strong className="text-slate-900">Bảo chứng y văn vững chắc</strong> và hiệu suất thực tế được <strong className="text-emerald-600">kiểm chứng bởi Bác sĩ trên hơn 100 quốc gia</strong> và vùng lãnh thổ.
-          </p>
+          <h2 
+            className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] mb-4 tracking-tight"
+            dangerouslySetInnerHTML={{ __html: content.evidence?.headline || 'Sức mạnh <br class="sm:hidden" /><span class="text-[#00ADEF]">thuyết phục</span> <span class="text-amber-500">tuyệt đối</span>' }}
+          />
+          {content.evidence?.description && (
+            <p 
+              className="font-body text-base sm:text-lg text-slate-600 max-w-3xl mx-auto"
+              dangerouslySetInnerHTML={{ __html: content.evidence.description }}
+            />
+          )}
         </div>
         
         {/* USP 1 */}
@@ -511,29 +514,32 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-2">
               <span className="font-heading font-black text-xl">1</span>
             </div>
-            <h3 className="font-heading font-bold text-xl text-slate-900">Lực dán siêu cường không suy giảm qua 5,000 chu kỳ sốc nhiệt khắt khe</h3>
+            <h3 className="font-heading font-bold text-xl text-slate-900">
+              {content.evidence?.usp1?.title || 'Lực dán siêu cường không suy giảm qua 5,000 chu kỳ sốc nhiệt khắt khe'}
+            </h3>
             
-            {/* Mobile Image (Visible only on mobile, between headline and body) */}
+            {/* Mobile Image */}
             <div className="w-full md:hidden my-6">
               <img 
-                src="/images/share-bond-strength-on-zirconia%20copy.webp" 
-                alt="Lực dán trượt (MPa) trên Zirconia sau Lão hóa nhiệt" 
+                src={content.evidence?.usp1?.image || "/images/share-bond-strength-on-zirconia%20copy.webp"} 
+                alt={content.evidence?.usp1?.title || "Lực dán trượt (MPa)"} 
                 className="w-full h-auto object-contain rounded-2xl drop-shadow-sm border border-slate-200"
                 loading="lazy"
                 referrerPolicy="no-referrer"
               />
             </div>
 
-            <p className="font-body text-sm md:text-base text-slate-600 leading-relaxed">
-              Báo cáo của The Dental Advisor (Số 168 - Tháng 8/2024) ghi nhận BeautiLink SA đạt lực dán trượt khổng lồ <strong className="text-[#00ADEF] font-bold text-lg">~50 MPa</strong> và <strong className="text-slate-900 font-bold bg-amber-100 px-1 rounded">không suy giảm</strong> sau <strong className="text-slate-900 font-bold">5.000 chu kỳ sốc nhiệt</strong> (Thermocycling).
-            </p>
+            <p 
+              className="font-body text-sm md:text-base text-slate-600 leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: content.evidence?.usp1?.description || '' }}
+            />
           </div>
           
-          {/* Desktop Image (Visible only on md and up) */}
+          {/* Desktop Image */}
           <div className="w-full md:w-1/2 hidden md:block">
             <img 
-              src="/images/share-bond-strength-on-zirconia%20copy.webp" 
-              alt="Lực dán trượt (MPa) trên Zirconia sau Lão hóa nhiệt" 
+              src={content.evidence?.usp1?.image || "/images/share-bond-strength-on-zirconia%20copy.webp"} 
+              alt={content.evidence?.usp1?.title || "Lực dán trượt (MPa)"} 
               className="w-full h-auto object-contain rounded-2xl drop-shadow-sm border border-slate-200"
               loading="lazy"
               referrerPolicy="no-referrer"
@@ -547,13 +553,18 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-6">
               <span className="font-heading font-black text-xl">2</span>
             </div>
-            <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Kiểm soát dọn xi măng dư "One-Sweep"</h3>
+            <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">
+              {content.evidence?.usp2?.title || 'Kiểm soát dọn xi măng dư "One-Sweep"'}
+            </h3>
             
-            <YoutubeAutoplay videoId="K85voUZxMV8" />
+            {content.evidence?.usp2?.youtubeId && (
+              <YoutubeAutoplay videoId={content.evidence.usp2.youtubeId} />
+            )}
 
-            <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
-              Tiết kiệm đến <strong className="font-bold text-slate-800">30% thời gian</strong> trên ghế nha. Không còn nỗi lo cạo vụn xi măng quá đông cứng gây tổn thương và chảy máu viền nướu. Chỉ với <strong className="font-bold text-slate-800">1–2 giây chiếu đèn (Tack-cure)</strong>, xi măng đạt pha gel lý tưởng, cho phép dùng thám châm <strong className="font-bold text-slate-800">gạt sạch nguyên khối</strong> chỉ trong một thao tác duy nhất.
-            </p>
+            <p 
+              className="font-body text-sm text-slate-600 leading-relaxed mb-6"
+              dangerouslySetInnerHTML={{ __html: content.evidence?.usp2?.description || '' }}
+            />
             <div className="space-y-3">
               <div className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
                 <Clock className="w-6 h-6 text-amber-500 shrink-0" />
@@ -565,25 +576,30 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
               </div>
             </div>
 
-            <div className="mt-3 pt-3 border-t border-slate-100 flex justify-center -mx-4 sm:-mx-6">
-              <img 
-                src="/images/feedback-beautilink-SA.webp?v=1788334433590" 
-                alt="Đánh giá từ Bác sĩ về BeautiLink SA" 
-                className="w-full h-auto object-contain"
-                loading="lazy"
-                referrerPolicy="no-referrer"
-              />
-            </div>
+            {content.evidence?.usp2?.feedbackImage && (
+              <div className="mt-3 pt-3 border-t border-slate-100 flex justify-center -mx-4 sm:-mx-6">
+                <img 
+                  src={content.evidence.usp2.feedbackImage} 
+                  alt="Đánh giá từ Bác sĩ về BeautiLink SA" 
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            )}
           </div>
 
           <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-white p-8 md:p-10 shadow-sm hover:border-slate-200 hover:shadow-md transition-all">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 text-white mb-6">
               <span className="font-heading font-black text-xl">3</span>
             </div>
-            <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">Lá chắn Sinh học S-PRG</h3>
-            <p className="text-slate-600 text-sm leading-relaxed mb-6">
-              S-PRG là <strong className="text-emerald-600 font-bold">"bình ắc quy sinh học"</strong>. <strong className="text-[#00ADEF] font-bold text-base">6 Ion</strong> (F-, Sr2+, BO33-, Al3+, SiO32-, Na+) <strong className="text-slate-800 font-bold">liên tục khuếch tán</strong> qua màng dán để <strong className="text-slate-800 font-bold">bít kín ống ngà hở</strong>, <strong className="text-slate-800 font-bold">trung hòa axit</strong> và tạo lớp màng <strong className="text-slate-800 font-bold">ức chế hình thành Biofilm</strong>.
-            </p>
+            <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">
+              {content.evidence?.usp3?.title || 'Lá chắn Sinh học S-PRG'}
+            </h3>
+            <p 
+              className="text-slate-600 text-sm leading-relaxed mb-6"
+              dangerouslySetInnerHTML={{ __html: content.evidence?.usp3?.description || '' }}
+            />
             <div className="space-y-3">
               <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
                 <Shield className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
@@ -604,15 +620,17 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
             </div>
 
             {/* S-PRG Image */}
-            <div className="mt-3 flex justify-center -mx-4 sm:-mx-6">
-              <img 
-                src="/images/S-PRG-triet-tieu-e-buot.webp?v=1788334169447" 
-                alt="S-PRG Triệt tiêu ê buốt" 
-                className="w-full h-auto object-contain"
-                loading="lazy"
-                referrerPolicy="no-referrer"
-              />
-            </div>
+            {content.evidence?.usp3?.image && (
+              <div className="mt-3 flex justify-center -mx-4 sm:-mx-6">
+                <img 
+                  src={content.evidence.usp3.image} 
+                  alt={content.evidence?.usp3?.title || "S-PRG Triệt tiêu ê buốt"} 
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            )}
           </div>
         </div>
 
@@ -623,7 +641,7 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
               <span className="font-heading font-black text-xl">4</span>
             </div>
             <h3 className="font-heading font-bold text-xl text-slate-900 mb-4">
-              Tối ưu ROI – "Tuyên chiến" với lãng phí
+              {content.evidence?.usp4?.title || 'Tối ưu ROI – "Tuyên chiến" với lãng phí'}
             </h3>
           </div>
 
@@ -633,22 +651,27 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
               <div>
                 <div className="inline-flex items-center gap-2 mb-4 bg-red-500/10 border border-red-500/20 px-3 py-2 rounded-xl">
                   <AlertTriangle className="w-5 h-5 text-red-600 shrink-0" />
-                  <h4 className="font-heading font-bold text-sm md:text-base text-red-800">Sự thật "đắt đỏ" của vòi trộn Automix</h4>
+                  <h4 className="font-heading font-bold text-sm md:text-base text-red-800">
+                    {content.evidence?.usp4?.problemTitle || 'Sự thật "đắt đỏ" của vòi trộn Automix'}
+                  </h4>
                 </div>
-                <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
-                  Lượng xi măng kẹt lại trong vòi trộn (0.25g - 0.44g) <strong className="text-red-500 font-bold">lớn hơn hoặc bằng</strong> chính lượng xi măng được dùng cho răng của bệnh nhân.
-                </p>
-              </div>
-              
-              <div className="flex justify-center mt-auto">
-                <img 
-                  src="/images/voi-tron-automix-lang-phi-vat-lieu.webp?v=1788332053597" 
-                  alt="Lãng phí vật liệu khi dùng vòi trộn Automix" 
-                  className="w-full h-auto object-contain"
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
+                <p 
+                  className="font-body text-sm text-slate-600 leading-relaxed mb-6"
+                  dangerouslySetInnerHTML={{ __html: content.evidence?.usp4?.problemDescription || '' }}
                 />
               </div>
+              
+              {content.evidence?.usp4?.problemImage && (
+                <div className="flex justify-center mt-auto">
+                  <img 
+                    src={content.evidence.usp4.problemImage} 
+                    alt="Lãng phí vật liệu khi dùng vòi trộn Automix" 
+                    className="w-full h-auto object-contain"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              )}
             </div>
 
             {/* Block 2: Solution Comparison */}
@@ -656,33 +679,38 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
               <div>
                 <div className="inline-flex items-center gap-2 mb-4 bg-[#00ADEF]/10 border border-[#00ADEF]/20 px-3 py-2 rounded-xl">
                   <TrendingUp className="w-5 h-5 text-[#00ADEF] shrink-0" />
-                  <h4 className="font-heading font-bold text-sm md:text-base text-sky-800">Tối ưu lợi nhuận với BeautiLink SA</h4>
+                  <h4 className="font-heading font-bold text-sm md:text-base text-sky-800">
+                    {content.evidence?.usp4?.solutionTitle || 'Tối ưu lợi nhuận với BeautiLink SA'}
+                  </h4>
                 </div>
-                <p className="font-body text-sm text-slate-600 leading-relaxed mb-6">
-                  <strong className="text-slate-900">Chuẩn hóa quy trình</strong>, <strong className="text-[#00ADEF]">làm chủ lượng vật tư</strong> sử dụng, <strong className="text-slate-900">cắt giảm chi phí</strong> dán gắn về mức tối thiểu và giữ lại <strong className="text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded font-bold">nguồn lợi nhuận khổng lồ</strong> cho phòng khám.
-                </p>
-              </div>
-
-              <div className="flex justify-center mt-auto">
-                <img 
-                  src="/images/tiet-kiem-800tr-voi-beautilink-SA.webp?v=1788332482055" 
-                  alt="Tiết kiệm chi phí với BeautiLink SA" 
-                  className="w-full h-auto object-contain"
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
+                <p 
+                  className="font-body text-sm text-slate-600 leading-relaxed mb-6"
+                  dangerouslySetInnerHTML={{ __html: content.evidence?.usp4?.solutionDescription || '' }}
                 />
               </div>
+
+              {content.evidence?.usp4?.solutionImage && (
+                <div className="flex justify-center mt-auto">
+                  <img 
+                    src={content.evidence.usp4.solutionImage} 
+                    alt="Tiết kiệm chi phí với BeautiLink SA" 
+                    className="w-full h-auto object-contain"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
         
         <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-             onClick={() => openCampaignModal("Tư vấn giải pháp tối ưu chi phí")}
+            onClick={() => openCampaignModal(content.evidence?.ctaText || "Tư vấn giải pháp tối ưu chi phí")}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
-            <span className="truncate">Tư vấn giải pháp tối ưu chi phí</span>
+            <span className="truncate">{content.evidence?.ctaText || "Tư vấn giải pháp tối ưu chi phí"}</span>
             <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
           </button>
         </div>
