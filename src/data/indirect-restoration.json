@@ -27,12 +27,12 @@
     ],
     "ctaText": "NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI",
     "footerNote": "Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor",
-    "ctaFormTitle": "NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI - TEST",
-    "ctaFormDesc": "mô tả ngắn dưới tiên đề form.",
-    "ctaFormExtraHtml": "<strong>CHECK NỘI DUNG XEM SAO</strong>\n<p>\n<span class=\"text-[#00ADEF] font-bold\"><strong>1. Chúng ta có gì đây?</strong></span>\n<p>\nTest thử nội dung nhé! ",
-    "ctaRedirectThanks": true,
-    "ctaTargetUrl": "https://drive.google.com/drive/folders/1XEywgp-J_jRb64QLEpZEVPhfsmlX3tKd?usp=sharing",
-    "ctaResourceTitle": "TES THỬ NÚT TẢI TÀI LIỆU"
+    "ctaFormTitle": "",
+    "ctaFormDesc": "",
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "painPoints": {
     "badge": "Thực trạng lâm sàng",
