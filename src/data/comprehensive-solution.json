@@ -1,0 +1,396 @@
+{
+  "hero": {
+    "badge": "Chuẩn hóa lâm sàng cùng hệ sinh thái Giomer 360° – Triết lý MiCD từ Shofu (Nhật Bản)",
+    "headline": "Dập tắt ám ảnh bảo hành cùng hệ sinh thái trị liệu sinh học Giomer 360°",
+    "subheadline": "Bác sĩ chỉnh khớp chuẩn xác, sửa soạn bờ hoàn tất khít sát, cô lập đàng hoàng... nhưng bệnh nhân vẫn than phiền vì ê buốt sau trám xoang II, rớt mặt dán sứ Veneer, hoặc gây tổn thương mô nướu do dọn xi măng kẽ. Đã đến lúc nâng cấp toàn bộ \"đạn dược\" lâm sàng: Thay thế các vật liệu \"trơ\" thụ động cũ kỹ bằng Hệ sinh thái Trị liệu Sinh học Giomer 360° – Bảo vệ mô răng thật bền vững và dập tắt ám ảnh bảo hành!",
+    "image": "/image/shofu-giai-phap-toan-dien-5-san-pham-pc.webp",
+    "mobileImage": "/image/shofu-giai-phap-toan-dien-5-san-pham.webp",
+    "usps": [
+      {
+        "id": "usp-1",
+        "iconName": "🇯🇵",
+        "title": "100% Made in Japan",
+        "description": "Di sản Nha khoa từ Nhật Bản với hơn 100 năm lịch sử."
+      },
+      {
+        "id": "usp-2",
+        "iconName": "Microscope",
+        "title": "Bằng chứng Y văn JADA (Mỹ)",
+        "description": "Nghiên cứu lâm sàng theo dõi các phục hình trong 13 năm và ghi nhận kết quả về độ bền cũng như tình trạng sâu răng thứ phát."
+      },
+      {
+        "id": "usp-3",
+        "iconName": "ShieldCheck",
+        "title": "Công nghệ HEMA-Free & S-PRG Bioactive",
+        "description": "Triệt tiêu thủy phân, khóa chặt vi kẽ, giải phóng 6 ion tái khoáng hóa 24/7."
+      }
+    ],
+    "ctaText": "Sở hữu gói Master Ecosystem",
+    "secondaryCtaText": "Nhận E-Guide triệt tiêu ê buốt",
+    "ctaFormTitle": "Sở hữu gói Master Ecosystem - Tài trợ 100% quà tặng",
+    "ctaFormDesc": "Để lại thông tin để chuyên viên Sota-D liên hệ tư vấn và gửi báo giá ưu đãi độc quyền.",
+    "ctaRedirectThanks": false
+  },
+  "painPoints": {
+    "badge": "Điểm mù lâm sàng",
+    "headline": "4 \"điểm mù lâm sàng\" & nỗi đau dai dẳng",
+    "subheadline": "Bác sĩ không thao tác sai, nhưng chính việc dùng các vật liệu thụ động truyền thống đã vô tình biến các ca phục hình thành \"quả bom nổ chậm\":",
+    "cards": [
+      {
+        "id": "pain-1",
+        "number": "1",
+        "title": "Ám ảnh ê buốt & sâu răng tái phát xoang II",
+        "description": "Căn nguyên: Keo dán chứa monomer HEMA ưa nước bị thủy phân (ngậm nước bọt/dịch ngà) làm đứt gãy lớp lai dán sau vài tháng, tạo kẽ rò vi thể khiến vi khuẩn xâm nhập."
+      },
+      {
+        "id": "pain-2",
+        "number": "2",
+        "title": "Rủi ro đội phục hình & bong tróc veneer",
+        "description": "Căn nguyên: Màng keo dán quá dày gây cộm vướng khớp cắn, kết hợp keo dán thiếu Silane kháng axit khiến liên kết dán Zirconia/Sứ bị thoái hóa nhanh chóng."
+      },
+      {
+        "id": "pain-3",
+        "number": "3",
+        "title": "\"Nỗi sợ 7h tối\": Dọn xi măng kẽ tứa máu",
+        "description": "Căn nguyên: Xi măng Resin đông cứng cơ học quá nhanh hoặc bết dính, cạo mỏi tay làm rách nướu, tổn thương màng nha chu và gây ám ảnh viền dán hôi miệng."
+      },
+      {
+        "id": "pain-4",
+        "number": "4",
+        "title": "\"Thể tích chết\" & chảy máu dòng tiền vật tư",
+        "description": "Căn nguyên: Các vòi trộn Automix tiêu chuẩn kẹt lại từ 0.25g - 0.44g xi măng đắt tiền sau mỗi lần bơm, làm bốc hơi 30-40% lợi nhuận phòng khám mà Chủ nha khoa không hề biết."
+      }
+    ],
+    "calloutText": "Bác sĩ không thao tác sai, nhưng chính việc dùng các vật liệu thụ động truyền thống đã vô tình biến các ca phục hình thành \"quả bom nổ chậm\"",
+    "ctaText": "Khắc phục điểm mù lâm sàng ngay",
+    "ctaFormTitle": "Nhận giải pháp khắc phục điểm mù lâm sàng",
+    "ctaFormDesc": "Đăng ký nhận giải pháp xử lý triệt để 4 điểm mù lâm sàng từ Sota-D.",
+    "ctaRedirectThanks": false
+  },
+  "bioactive": {
+    "badge": "Bước ngoặt tư duy",
+    "headline": "Đừng chỉ \"trám bít lỗ hổng\" - Hãy dùng vật liệu có khả năng \"chữa lành\"!",
+    "intro": "Nha khoa hiện đại đã bước qua thời kỳ mài trám cơ học thụ động. Triết lý MiCD (Minimally Invasive Cosmetic Dentistry) hướng tới việc bảo tồn tối đa mô răng thật kết hợp cùng công nghệ hạt độn S-PRG (Surface Pre-Reacted Glass-ionomer) độc quyền của Shofu.",
+    "batteryTitle": "Lá chắn 6 ion sinh học (Giomer Molecular Shield)",
+    "batteryDesc": "Hạt độn S-PRG hoạt động như một \"Bình ắc quy sinh học\" liên tục phóng thích & tự sạc lại 6 loại ion y tế.",
+    "ions": [
+      {
+        "id": "ion-1",
+        "ionName": "F⁻ & Sr²⁺",
+        "title": "Tái khoáng hóa",
+        "description": "Hỗ trợ hình thành khoáng chất chứa fluor ở vùng ống ngà, góp phần làm giảm độ mở của ống ngà."
+      },
+      {
+        "id": "ion-2",
+        "ionName": "Na⁺ & SiO₃²⁻",
+        "title": "Phục hồi vi mô",
+        "description": "Thúc đẩy phục hồi vi mô ngà răng suy thoái một cách chủ động."
+      },
+      {
+        "id": "ion-3",
+        "ionName": "BO₃³⁻",
+        "title": "Kháng Biofilm",
+        "description": "Có thể làm giảm khả năng bám dính của S. mutans, góp phần hạn chế hình thành màng sinh học."
+      },
+      {
+        "id": "ion-4",
+        "ionName": "Al³⁺",
+        "title": "Trung hòa Axit",
+        "description": "Trung hòa axit chủ động, kiềm hóa môi trường khi pH tụt dưới 5.5."
+      }
+    ],
+    "ctaText": "Nâng cấp vật liệu sinh học S-PRG",
+    "ctaFormTitle": "Nâng cấp vật liệu sinh học S-PRG",
+    "ctaFormDesc": "Tư vấn ứng dụng công nghệ hạt độn Giomer 6 ion cho phòng khám.",
+    "ctaRedirectThanks": false
+  },
+  "coreProducts": {
+    "headline": "Hệ sinh thái 5 vũ khí cốt lõi",
+    "intro": "Combo Giải Pháp Toàn Diện bao bọc trọn vẹn nhu cầu lâm sàng hàng ngày tại phòng khám:",
+    "products": [
+      {
+        "id": "prod-1",
+        "stepNumber": "01",
+        "tag": "Keo dán thế hệ 8",
+        "name": "BeautiBond Xtreme (BBX) – 5ml",
+        "image": "/image/BeautiBond-Xtreme-One-Hand.webp",
+        "features": [
+          "Màng keo kỷ lục 5µm, 100% HEMA-Free kỵ nước (dung môi Acetone bay hơi chớp nhoáng).",
+          "Tích hợp ARS bọc giáp Silane & Monomer MDP, dán thẳng Zirconia/Sứ/Ngà chỉ với 1 chai."
+        ]
+      },
+      {
+        "id": "prod-2",
+        "stepNumber": "02",
+        "tag": "Xi măng resin tự dán",
+        "name": "BeautiLink SA – Tuýp khổng lồ 15.6g",
+        "image": "/image/Shofu-Cement-Beautilink-SA.webp",
+        "features": [
+          "Thể tích khổng lồ 9ml (15.6g) thực hiện được ~120 ca gắn (chỉ ~16.600đ/ca).",
+          "Màng xi măng 14µm, Tack-cure 1-2 giây lột sạch xi măng dư nguyên khối (One-Sweep)."
+        ]
+      },
+      {
+        "id": "prod-3",
+        "stepNumber": "03",
+        "tag": "Composite dạng bơm",
+        "name": "Beautifil Injectable X – 2.2g",
+        "image": "/image/phuc-hoi-truc-tiep-shofu-beautifil-injectable-x-new.webp",
+        "features": [
+          "Độ bền nén kỷ lục 400 MPa, đắp khối chịu lực ăn nhai trực tiếp xoang I, II, V.",
+          "Tính lưu biến Thixotropic tự lấp đầy hốc xoang vi thể, không đọng bọt khí."
+        ]
+      },
+      {
+        "id": "prod-4",
+        "stepNumber": "04",
+        "tag": "Composite đắp lớp",
+        "name": "Beautifil II / Beautifil II LS",
+        "image": "/image/phuc-hoi-truc-tiep-Shofu-beautifill-II-LS.webp",
+        "features": [
+          "Độ co ngót thể tích siêu thấp, chống bám mảng sinh học nhờ hạt độn S-PRG.",
+          "Hiệu ứng \"Tắc kè hoa\" tự động tiệp màu răng thật hoàn hảo."
+        ]
+      },
+      {
+        "id": "prod-5",
+        "stepNumber": "05",
+        "tag": "Phòng ngừa & phong tỏa",
+        "name": "Tự chọn 1 trong 2 giải pháp:",
+        "image": "/image/PRG-Barrier-Coat-Shofu.webp",
+        "features": [
+          "Bộ PRG Barrier Coat Mini-Kit: Véc-ni phủ 15µm trị liệu ê buốt 3-6 tháng.",
+          "Bộ BeautiSealant Set: Trám bít hố rãnh Self-Etch không rửa nước."
+        ]
+      }
+    ],
+    "ctaText": "Khám phá trọn bộ Hệ sinh thái Giomer",
+    "ctaFormTitle": "Nhận báo giá hệ sinh thái Giomer 360",
+    "ctaFormDesc": "Để lại thông tin để chuyên viên Sota-D gửi bảng giá chi tiết và hướng dẫn sử dụng 5 sản phẩm.",
+    "ctaRedirectThanks": false
+  },
+  "evidence": {
+    "headline": "Dữ liệu khoa học",
+    "subheadline": "Bằng chứng y văn & bảo chứng lâm sàng độc lập chứng minh hiệu quả tuyệt đối của hệ sinh thái Giomer 360°.",
+    "scientificPillars": [
+      {
+        "id": 1,
+        "icon": "🧬",
+        "title": "Đột phá cấp độ phân tử – Kháng bệnh sâu răng (Tạp chí Nature 2018)",
+        "points": [
+          "Cơ quan kiểm định: Khoa Nha Trẻ em – Đại học Osaka, Nhật Bản (Công bố trên Scientific Reports - Nature Research).",
+          "Cơ chế di truyền: Dịch chiết từ hạt độn S-PRG trực tiếp kìm hãm sự biểu hiện của gen pdh operon (Pyruvate Dehydrogenase) thuộc con đường chuyển hóa đường trung tâm của vi khuẩn Streptococcus mutans.",
+          "Outcome lâm sàng: Triệt tiêu khả năng bám dính tạo mảng sinh học (Biofilm) trên bề mặt phục hình, ngăn chặn tận gốc sự hình thành mảng bám khuẩn ngay cả trong môi trường giàu đường Sucrose."
+        ]
+      },
+      {
+        "id": 2,
+        "icon": "🏛️",
+        "title": "Bảo chứng lâm sàng dài hạn 13 năm (Tạp chí JADA - Đại học Florida, Mỹ)",
+        "points": [
+          "Tác giả: GS.TS Valeria V. Gordan và cộng sự (Đăng trên Journal of the American Dental Association - JADA).",
+          "Kết quả mốc 8 năm: Tỷ lệ lưu giữ phục hình 100%, 0% ê buốt sau điều trị, 0% sâu răng thứ phát ở viền dán.",
+          "Kết quả mốc 13 năm (13-Year Recall): 96% phục hình hoàn toàn sạch bóng sâu răng tái phát (chỉ 3% có dấu hiệu sâu thứ phát), khẳng định khả năng tái khoáng hóa và bảo vệ viền dán bền vững."
+        ]
+      },
+      {
+        "id": 3,
+        "icon": "🔗",
+        "title": "Lực dán áp đảo 45-50 MPa trên Zirconia (The Dental Advisor 2024 - Báo cáo số 168)",
+        "points": [
+          "Lực dán áp đảo trên Zirconia: Đạt 45 – 50 MPa ngay ở thời điểm 24h.",
+          "Thử thách lão hóa 5.000 chu kỳ nhồi nhiệt (Thermocycling 4°C/60°C): BeautiLink SA duy trì đường cong lực dán phẳng, 0% sút mão tự phát (zero spontaneous debonds).",
+          "Giải mã kiểu gãy \"Cohesive Failure\" (Đứt gãy nội tại khối): Báo cáo ghi nhận khối xi măng bị xé rách trước khi giao diện dán bị tróc khỏi Zirconia. Điều này chứng minh lực liên kết hóa học lớn hơn cả độ bền cơ học khối resin.",
+          "Độ dày màng xi măng 14µm: Bít kín vi kẽ bờ hoàn tất, tự chảy loang (Thixotropic) không đọng bọt khí."
+        ]
+      },
+      {
+        "id": 4,
+        "icon": "💧",
+        "title": "Kỷ lục màng keo siêu mỏng 5µm & Lực dán 34 MPa (Đại học SUNY Buffalo)",
+        "points": [
+          "Độ dày màng keo kỷ lục 5µm: Hơn 70% Bác sĩ khảo sát đánh giá màng keo siêu mỏng giúp phục hình khít sát tuyệt đối, không cộm khớp cắn.",
+          "Tỷ lệ trùng hợp 97% (Degree of Conversion): Giúp màng keo bền bỉ, không nứt vỡ hay bay hơi dịch ngà.",
+          "100% HEMA-Free (Dung môi Acetone): Triệt tiêu hoàn toàn rủi ro ngấm nước bọt/dịch ngà và hiện tượng thủy phân đứt gãy lớp lai dán theo thời gian.",
+          "Lực dán trượt song song (Shear Bond Strength): Đạt ~33.8 – 34.2 MPa đồng đều trên cả Men răng và Ngà răng mà không cần bước Etching hay Agitation lách cách."
+        ]
+      },
+      {
+        "id": 5,
+        "icon": "🦾",
+        "title": "Kỷ lục độ bền nén 400 MPa & Co ngót thể tích siêu thấp 0.85%",
+        "points": [
+          "Beautifil Injectable X (Composite Lỏng Đắp Khối): Độ bền nén kỷ lục 400 MPa & Độ bền uốn 130 MPa. Tỷ lệ hạt độn nano S-PRG cao (67 wt%) chịu lực ăn nhai trực tiếp xoang I, II, V và gờ múi. Tính lưu biến Thixotropic tự lấp đầy hốc xoang, tuyệt đối không đọng bọt khí.",
+          "Beautifil II LS (Composite Đặc Universal): Co ngót thể tích siêu thấp 0.85% & Ứng suất co ngót kỷ lục 2.72 MPa (thấp nhất trong các dòng nano-hybrid trên thị trường). Tỷ lệ hạt độn 83 wt%, độ bền nén 370 MPa, chống mài mòn và giữ độ bóng lâu dài."
+        ]
+      },
+      {
+        "id": 6,
+        "icon": "🧪",
+        "title": "Thử thách axit 28 ngày - Đại học Y Nha khoa Tokyo, Nhật Bản - Clinical Oral Investigations (2021/2022)",
+        "points": [
+          "Mô phỏng thử thách: Mẫu ngà răng gắn xi măng ngâm trong môi trường axit pH 4.5 (4 giờ/ngày) liên tục 28 ngày (mô phỏng môi trường miệng nguy cơ sâu răng cao).",
+          "Kết quả tái khoáng bờ hoàn tất: Nhóm xi măng S-PRG (BeautiLink SA) giữ nguyên độ cứng bề mặt ngà răng, độ sâu mất khoáng tiệm cận bằng 0. Các loại xi măng thông thường bị axit ăn mòn sâu và mất gần 50% độ cứng bề mặt ngà.",
+          "Cơ chế: Xuất hiện vùng tái khoáng hóa sáng đậm đặc ngay tại đường hoàn tất ngà răng nhờ phức hợp 6 ion (Fluoride, Strontium, Sodium, Borate, Aluminum, Silicate)."
+        ]
+      }
+    ],
+    "testimonialsHeadline": "Đánh giá từ chuyên gia lâm sàng quốc tế & trong nước",
+    "testimonialsRow1": [
+      {
+        "quote": "Công nghệ véc-ni PRG Barrier Coat và BeautiSealant ứng dụng S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ hoàn toàn bước Etching nhạy cảm.",
+        "name": "Dr. Shukan Kanuga",
+        "title": "Hiệp hội Nha khoa Trẻ em Hoa Kỳ, California"
+      },
+      {
+        "quote": "Từ ngày ứng dụng PRG Barrier Coat vào phòng khám, các ca mòn cổ răng và ê buốt ngà được xử lý cực kỳ nhẹ nhàng, bệnh nhân phản hồi rất tích cực vì không cần mài răng.",
+        "name": "BS. Nguyễn Văn Tuấn",
+        "title": "Phòng khám Nha khoa Nụ Cười Mới"
+      },
+      {
+        "quote": "Khả năng chống ê buốt ngà của PRG Barrier Coat kéo dài tới vài tháng là chìa khóa giúp phòng khám của tôi xử lý êm đẹp các ca tụt nướu và mòn cổ răng mà không cần xâm lấn mài mô răng.",
+        "name": "Prof. Tanaka",
+        "title": "Đại học Y khoa Tokyo, Nhật Bản"
+      },
+      {
+        "quote": "Trám hố rãnh với BeautiSealant thực sự thay đổi cách chúng tôi làm việc. Không cần Etching, không lo đọng nước bọt, bảo vệ răng sâu cho trẻ em nhanh chóng và an toàn tuyệt đối.",
+        "name": "BS. Lê Thị Bích Ngọc",
+        "title": "Nha khoa Trẻ em KidSmile"
+      },
+      {
+        "quote": "Hạt độn S-PRG là bước tiến vượt bậc của nha khoa phòng ngừa. Nó không chỉ trám bít mà còn chủ động giải phóng Fluoride và các ion có lợi để tái khoáng hóa men răng liên tục.",
+        "name": "Dr. Howard Farran",
+        "title": "Tạp chí Nha khoa Dentaltown"
+      }
+    ],
+    "testimonialsRow2": [
+      {
+        "quote": "Giải pháp phòng ngừa của Shofu giúp tôi xây dựng niềm tin tuyệt đối với phụ huynh khi điều trị cho trẻ. Đặc biệt là trẻ sợ đau, thao tác nhanh và êm ái là ưu điểm tuyệt đối.",
+        "name": "Dr. Takeshi Saito",
+        "title": "Chuyên gia Nha khoa Trẻ em, Tokyo"
+      },
+      {
+        "quote": "BeautiSealant bám dính tuyệt vời trên cả những bề mặt răng khó cô lập nước bọt nhất. Tôi chưa thấy sản phẩm trám bít hố rãnh nào có độ ổn định và tỷ lệ bong tróc thấp như vậy.",
+        "name": "BS. Trần Minh Quân",
+        "title": "Giám đốc chuyên môn Hệ thống Nha khoa Nụ Cười Xinh"
+      },
+      {
+        "quote": "Tôi dùng PRG Barrier Coat cho mọi bệnh nhân tẩy trắng răng nhạy cảm và bệnh nhân sau khi cạo vôi răng. Hiệu quả cắt cơn ê buốt gần như ngay lập tức và duy trì rất lâu.",
+        "name": "BS. Lâm Quế Chi",
+        "title": "Phòng khám Nha khoa Tâm An"
+      },
+      {
+        "quote": "Cơ chế phóng thích 6 loại ion của S-PRG mang lại sự an tâm tuyệt đối khi điều trị cho bệnh nhân có nguy cơ sâu răng cao. Nó như một lớp bảo vệ sinh học chủ động 24/7.",
+        "name": "Prof. Li Wei",
+        "title": "Khoa Răng Hàm Mặt, Đại học Bắc Kinh"
+      },
+      {
+        "quote": "Nếu bạn muốn thiết kế một quy trình nha khoa phòng ngừa chuẩn mực, thân thiện và hiệu quả dài lâu, thì hệ sinh thái S-PRG của Shofu là khoản đầu tư bắt buộc phải có.",
+        "name": "BS. Phạm Hoàng Yến",
+        "title": "Giám đốc chuyên môn Nha khoa Thẩm mỹ"
+      }
+    ],
+    "ctaText": "Gia nhập cộng đồng MiCD",
+    "ctaFormTitle": "Gia nhập cộng đồng MiCD",
+    "ctaFormDesc": "Kết nối với hơn 5.000 Bác sĩ và chuyên gia thực hành triết lý MiCD trên toàn quốc.",
+    "ctaRedirectThanks": false
+  },
+  "offer": {
+    "badge": "Ưu đãi độc quyền trong tháng này",
+    "headline": "Gói chuyển đổi: Master Ecosystem \"Hệ sinh thái Giomer 360°\"",
+    "subheadline": "(Chương trình hỗ trợ chuẩn hóa phòng khám từ Sota-D – Giới hạn đúng 15 phòng khám đăng ký sớm nhất)",
+    "coreBox": {
+      "title": "Bộ 5 sản phẩm cốt lõi",
+      "image": "/image/shofu-giai-phap-toan-dien-5-san-pham.webp",
+      "items": [
+        "01 Keo dán BeautiBond Xtreme (5ml)",
+        "01 Xi măng BeautiLink SA (15.6g)",
+        "01 Composite BeautiFil Injectable X",
+        "01 Composite BeautiFil II / LS",
+        "01 Bộ PRG Barrier Coat / BeautiSealant"
+      ]
+    },
+    "giftBox": {
+      "badge": "Tài trợ 100%",
+      "title": "Quà tặng & đặc quyền VIP",
+      "image": "/image/shofu-giai-phap-toan-dien-bo-qua-tang.webp",
+      "items": [
+        "01 Bộ đánh bóng Super-Snap Mini",
+        "01 Bộ mũi mài Composite Polishing CA",
+        "01 Lọ BBX Trial (2ml)",
+        "Bộ 3 Sổ tay E-Guidebook MiCD",
+        "Bộ video Masterclass phục hồi trực tiếp",
+        "Vé VIP Group Cố vấn 1:1 (90 ngày)"
+      ]
+    },
+    "originalPrice": "13.735.000đ",
+    "salePrice": "5.450.000đ",
+    "commitments": [
+      {
+        "title": "Dùng thử an tâm (30 ngày)",
+        "desc": "Nếu gặp khó khăn kỹ thuật, Chuyên gia sẽ Call 1:1 gỡ rối. Nếu không hợp tay, thu hồi và hoàn tiền 100% phần chưa dùng."
+      },
+      {
+        "title": "Bảo hiểm thói quen",
+        "desc": "Trong vòng 30 ngày, nếu không quen Handmix hoặc muốn đổi tông màu, hỗ trợ quy đổi 100% giá trị tương đương."
+      },
+      {
+        "title": "Minh bạch chất lượng (90 ngày)",
+        "desc": "Cam kết 1 đổi 1 ngay lập tức nếu sản phẩm có hiện tượng tách pha hay lỗi đông cứng kể từ khi mở nắp (<25°C)."
+      }
+    ],
+    "ctaText": "Đăng ký giữ chỗ Ưu đãi ngay",
+    "ctaFormTitle": "Đăng ký nhận Ưu đãi Master Ecosystem",
+    "ctaFormDesc": "Giữ 1 trong 15 suất hỗ trợ tài trợ quà tặng đặc quyền và giá dùng thử trải nghiệm.",
+    "ctaRedirectThanks": false
+  },
+  "faq": {
+    "headline": "Giải đáp hoài nghi lâm sàng",
+    "items": [
+      {
+        "id": "faq-1",
+        "q": "Dùng trọn bộ 5 sản phẩm Shofu này có bắt buộc phải thay đổi toàn bộ quy trình ở phòng khám không?",
+        "a": "Không cần. Hệ sinh thái Shofu được thiết kế theo triết lý \"True Universal\" (Phổ quát thật sự). Bác sĩ có thể áp dụng ngay vào quy trình sẵn có mà không cần mua thêm thiết bị hay dụng cụ đắt tiền nào khác."
+      },
+      {
+        "id": "faq-2",
+        "q": "Tuýp Xi măng BeautiLink SA Handmix 15.6g quá to, liệu dùng không kịp có bị hư hỏng không?",
+        "a": "Hoàn toàn không. BeautiLink SA sở hữu công nghệ xúc tác \"Ngủ đông\" (Hibernation) độc quyền, giúp duy trì độ tinh khiết hóa học và độ ổn định trong 24 tháng ở nhiệt độ phòng (<25°C). Chất lượng ca dán thứ 120 sắc nét y hệt ca đầu tiên."
+      },
+      {
+        "id": "faq-3",
+        "q": "Keo dán BeautiBond Xtreme (BBX) màng 5µm và Xi măng 14µm có đảm bảo lực dán cơ học cho mão Zirconia không?",
+        "a": "Lực dán đạt mức tuyệt đối >40–50 MPa. Màng keo 5µm và màng xi măng 14µm giúp tối ưu hóa khoảng trống vật liệu, giúp viền phục hình khít sát hoàn hảo, loại bỏ nguy cơ cộm khớp hay vi thấm đổi màu viền nướu."
+      },
+      {
+        "id": "faq-4",
+        "q": "Composite lỏng đắp khối Beautifil Injectable X và Composite đặc Beautifil II LS của Shofu có gì khác biệt so với các dòng Composite thông thường?",
+        "a": "Beautifil Injectable X sở hữu tính lưu biến Thixotropic tự lấp đầy mọi hốc xoang vi thể mà không đọng bọt khí, độ bền nén 400 MPa chịu lực nhai trực tiếp. Beautifil II LS có độ co ngót thể tích siêu thấp 0.85% và ứng suất 2.72 MPa, triệt tiêu vi kẽ và kháng bám mảng sinh học vi khuẩn."
+      },
+      {
+        "id": "faq-5",
+        "q": "Đối với bệnh nhân nhi hiếu động hoặc các ca mòn cổ răng ê buốt tàn nhẫn, tuyến phòng ngừa (PRG Barrier Coat & BeautiSealant) xử lý như thế nào?",
+        "a": "BeautiSealant loại bỏ hoàn toàn quy trình Etching Phosphoric và rửa nước, Self-Etch Primer chuẩn bị bề mặt chỉ 5 giây không lo ngấm nước bọt. PRG Barrier Coat phủ màng siêu mỏng 15µm không HEMA/Acetone, chiếu đèn 10 giây cắt đứt ê buốt tức thì và duy trì bảo vệ 3–6 tháng."
+      },
+      {
+        "id": "faq-6",
+        "q": "Tại sao nhiều ca phục hình được thực hiện rất kỹ nhưng sau vài tháng hay vài năm bệnh nhân vẫn than phiền vì ê buốt muộn hoặc vi thấm đổi màu viền nướu?",
+        "a": "Căn nguyên hàng đầu do thành phần HEMA ưa nước ngậm dịch ngà và nước bọt, bị thủy phân theo thời gian gây đứt gãy lớp lai dán. BBX loại bỏ hoàn toàn HEMA với màng keo kỷ lục 5µm và 4 monomer chức năng, khóa chặt 100% ống ngà và triệt tiêu nguy cơ ê buốt hậu phẫu."
+      },
+      {
+        "id": "faq-7",
+        "q": "Hạt độn sinh học S-PRG giải phóng 6 loại ion có bị \"cạn kiệt\" theo thời gian không? Khả năng chống sâu răng tái phát được chứng minh ra sao?",
+        "a": "Hoàn toàn không bị cạn kiệt. Hạt độn S-PRG hoạt động như một bình ắc quy sinh học 24/7, tự nạp lại ion khi chải răng với kem đánh răng chứa Fluoride (Release & Recharge). Nghiên cứu lâm sàng 13 năm từ JADA (ĐH Florida) ghi nhận 96% phục hình sạch bóng sâu răng thứ phát."
+      },
+      {
+        "id": "faq-8",
+        "q": "Việc dọn xi măng kẽ răng dư và bài toán chi phí vật tư được hệ sinh thái Shofu tối ưu như thế nào?",
+        "a": "Tack-cure 1–2 giây chuyển xi măng sang dạng gel dẻo, dùng thám châm bóc sạch nguyên khối trong 2 giây (One-Sweep) không gây chảy máu nướu. Tuýp BeautiLink SA Handmix 15.6g (9ml) triệt tiêu lãng phí vòi trộn, thực hiện được 120 ca với chi phí chỉ ~16.600đ/ca."
+      }
+    ],
+    "ctaText": "Bác sĩ còn câu hỏi? Nhận tư vấn ngay",
+    "ctaFormTitle": "Nhận tư vấn chuyên sâu 1:1",
+    "ctaFormDesc": "Đặt lịch tư vấn kỹ thuật trực tiếp cùng Chuyên gia vật liệu Sota-D.",
+    "ctaRedirectThanks": false
+  }
+}

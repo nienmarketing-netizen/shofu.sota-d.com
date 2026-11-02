@@ -407,6 +407,15 @@ export default function AdminDashboard() {
                     <span>Chỉnh sửa nội dung</span>
                     <ChevronRight className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform" />
                   </Link>
+                ) : page.id === 'giai-phap-toan-dien' ? (
+                  <Link
+                    to="/admin/editor/giai-phap-toan-dien"
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-[#8C2828] hover:bg-red-900 text-white font-mono text-xs font-bold py-2.5 px-4 rounded-xl shadow-md shadow-red-900/15 hover:shadow-lg transition-all duration-300"
+                  >
+                    <Edit3 className="w-3.5 h-3.5" />
+                    <span>Chỉnh sửa nội dung</span>
+                    <ChevronRight className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform" />
+                  </Link>
                 ) : (
                   <button
                     onClick={() => setSelectedPageForEdit(page)}
