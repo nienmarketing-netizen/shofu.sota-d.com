@@ -775,7 +775,10 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
               className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-slate-900 leading-[1.3] tracking-tight"
               dangerouslySetInnerHTML={{ __html: leadMagnet.headline }}
             />
-            <p className="font-body text-slate-600 mt-4 max-w-2xl mx-auto text-base sm:text-lg">{leadMagnet.description}</p>
+            <div 
+              className="font-body text-slate-600 mt-4 max-w-2xl mx-auto text-base sm:text-lg"
+              dangerouslySetInnerHTML={{ __html: leadMagnet.description }}
+            />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -783,8 +786,14 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
             <div className="bg-white rounded-3xl p-8 lg:p-10 border border-slate-200 shadow-xl flex flex-col justify-between hover:shadow-2xl transition-shadow">
               <div>
                 <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-sky-100 text-[#00ADEF] font-bold text-xs tracking-wide mb-6">{leadMagnet.ebookCard.badge}</div>
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4 leading-snug">{leadMagnet.ebookCard.title}</h3>
-                <p className="text-slate-600 text-sm sm:text-base mb-8 leading-relaxed">{leadMagnet.ebookCard.description}</p>
+                <h3 
+                  className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4 leading-snug"
+                  dangerouslySetInnerHTML={{ __html: leadMagnet.ebookCard.title }}
+                />
+                <div 
+                  className="text-slate-600 text-sm sm:text-base mb-8 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: leadMagnet.ebookCard.description }}
+                />
               </div>
               <CtaButton 
                 onClick={() => openCampaignModal(
@@ -807,8 +816,14 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
             <div className="bg-white rounded-3xl p-8 lg:p-10 border border-slate-200 shadow-xl flex flex-col justify-between hover:shadow-2xl transition-shadow">
               <div>
                 <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs tracking-wide mb-6">{leadMagnet.sampleCard.badge}</div>
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4 leading-snug">{leadMagnet.sampleCard.title}</h3>
-                <p className="text-slate-600 text-sm sm:text-base mb-8 leading-relaxed">{leadMagnet.sampleCard.description}</p>
+                <h3 
+                  className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-4 leading-snug"
+                  dangerouslySetInnerHTML={{ __html: leadMagnet.sampleCard.title }}
+                />
+                <div 
+                  className="text-slate-600 text-sm sm:text-base mb-8 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: leadMagnet.sampleCard.description }}
+                />
               </div>
               <CtaButton 
                 onClick={() => openCampaignModal(
