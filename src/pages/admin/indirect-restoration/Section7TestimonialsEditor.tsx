@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Bold, Plus, Trash2, Quote, UserCheck, MessageSquare, Eye, User, Star } from 'lucide-react';
 import { TestimonialItem, applyFormat } from './types';
+import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
 
 interface Section7TestimonialsEditorProps {
   headline: string;
@@ -11,6 +12,18 @@ interface Section7TestimonialsEditorProps {
   setRow1: React.Dispatch<React.SetStateAction<TestimonialItem[]>>;
   row2: TestimonialItem[];
   setRow2: React.Dispatch<React.SetStateAction<TestimonialItem[]>>;
+  formTitle?: string;
+  setFormTitle?: React.Dispatch<React.SetStateAction<string>>;
+  formDesc?: string;
+  setFormDesc?: React.Dispatch<React.SetStateAction<string>>;
+  formExtraHtml?: string;
+  setFormExtraHtml?: React.Dispatch<React.SetStateAction<string>>;
+  redirectThanks?: boolean;
+  setRedirectThanks?: React.Dispatch<React.SetStateAction<boolean>>;
+  targetUrl?: string;
+  setTargetUrl?: React.Dispatch<React.SetStateAction<string>>;
+  resourceTitle?: string;
+  setResourceTitle?: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const Section7TestimonialsEditor: React.FC<Section7TestimonialsEditorProps> = ({
@@ -21,7 +34,19 @@ export const Section7TestimonialsEditor: React.FC<Section7TestimonialsEditorProp
   row1,
   setRow1,
   row2,
-  setRow2
+  setRow2,
+  formTitle,
+  setFormTitle,
+  formDesc,
+  setFormDesc,
+  formExtraHtml,
+  setFormExtraHtml,
+  redirectThanks,
+  setRedirectThanks,
+  targetUrl,
+  setTargetUrl,
+  resourceTitle,
+  setResourceTitle
 }) => {
   const [activeRow, setActiveRow] = useState<'row1' | 'row2'>('row1');
 
@@ -116,17 +141,24 @@ export const Section7TestimonialsEditor: React.FC<Section7TestimonialsEditorProp
             </div>
           </div>
 
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-              Chữ trên nút CTA cuối
-            </label>
-            <input
-              type="text"
-              value={ctaText}
-              onChange={(e) => setCtaText(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#00ADEF] text-sm font-bold outline-none"
-            />
-          </div>
+          {/* Cấu hình Nút CTA & Form Popup */}
+          <CtaFormConfigEditor
+            label="Nút CTA Section 7 (Cảm nhận chuyên gia)"
+            ctaText={ctaText}
+            onChangeCtaText={setCtaText}
+            formTitle={formTitle || ''}
+            onChangeFormTitle={(val) => setFormTitle && setFormTitle(val)}
+            formDesc={formDesc || ''}
+            onChangeFormDesc={(val) => setFormDesc && setFormDesc(val)}
+            formExtraHtml={formExtraHtml || ''}
+            onChangeFormExtraHtml={(val) => setFormExtraHtml && setFormExtraHtml(val)}
+            redirectThanks={redirectThanks || false}
+            onChangeRedirectThanks={(val) => setRedirectThanks && setRedirectThanks(val)}
+            targetUrl={targetUrl || ''}
+            onChangeTargetUrl={(val) => setTargetUrl && setTargetUrl(val)}
+            resourceTitle={resourceTitle || ''}
+            onChangeResourceTitle={(val) => setResourceTitle && setResourceTitle(val)}
+          />
         </div>
       </div>
 

@@ -118,8 +118,34 @@ export function DirectRestoration() {
     loadDynamicContent();
   }, []);
 
-  const openCampaignModal = (title: string) => {
-    setCampaignModalTitle(title);
+  const [modalConfig, setModalConfig] = useState<{
+    title: string;
+    formTitle?: string;
+    formDescription?: string;
+    extraContentHtml?: string;
+    redirectThanks?: boolean;
+    targetUrl?: string;
+    resourceTitle?: string;
+    ctaId?: string;
+  }>({ title: '' });
+
+  const openCampaignModal = (config: string | {
+    title: string;
+    formTitle?: string;
+    formDescription?: string;
+    extraContentHtml?: string;
+    redirectThanks?: boolean;
+    targetUrl?: string;
+    resourceTitle?: string;
+    ctaId?: string;
+  }) => {
+    if (typeof config === 'string') {
+      setCampaignModalTitle(config);
+      setModalConfig({ title: config });
+    } else {
+      setCampaignModalTitle(config.title);
+      setModalConfig(config);
+    }
     setIsCampaignModalOpen(true);
   };
 
@@ -239,7 +265,16 @@ const faqs = [
             </ul>
 
             <CtaButton ctaName="MoKhoaCombo_MiCD" 
-               onClick={() => openCampaignModal("Mở khóa combo phục hồi MiCD & nhận bộ kít mài bóng")}
+               onClick={() => openCampaignModal({
+                 title: content.hero?.ctaText || "Mở khóa combo phục hồi MiCD & nhận bộ kít mài bóng",
+                 formTitle: content.hero?.ctaFormTitle,
+                 formDescription: content.hero?.ctaFormDesc,
+                 extraContentHtml: content.hero?.ctaFormExtraHtml,
+                 redirectThanks: content.hero?.ctaRedirectThanks,
+                 targetUrl: content.hero?.ctaTargetUrl,
+                 resourceTitle: content.hero?.ctaResourceTitle,
+                 ctaId: "direct_hero_cta"
+               })}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <span className="truncate">{content.hero?.ctaText || "MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG"}</span>
@@ -489,7 +524,16 @@ const faqs = [
           {/* Bottom CTA */}
           <div className="mt-12 md:mt-16 text-center">
             <CtaButton ctaName="SoHuuTronBoGiaiPhap" 
-               onClick={() => openCampaignModal("Sở hữu trọn bộ giải pháp phục hồi sinh học & Đặc quyền đào tạo 1:1")}
+               onClick={() => openCampaignModal({
+                 title: content.painPoints?.ctaText || "TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP",
+                 formTitle: content.painPoints?.ctaFormTitle,
+                 formDescription: content.painPoints?.ctaFormDesc,
+                 extraContentHtml: content.painPoints?.ctaFormExtraHtml,
+                 redirectThanks: content.painPoints?.ctaRedirectThanks,
+                 targetUrl: content.painPoints?.ctaTargetUrl,
+                 resourceTitle: content.painPoints?.ctaResourceTitle,
+                 ctaId: "direct_pain_points_cta"
+               })}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <span className="truncate">{content.painPoints?.ctaText || "TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP"}</span>
@@ -1297,9 +1341,18 @@ const faqs = [
             </ul>
           </div>
 
-          <div className="flex justify-center w-full">
+          <div className="text-center mt-10">
             <CtaButton ctaName="DangKyNhanUuDaiNgay" 
-               onClick={() => openCampaignModal("Mở khóa combo phục hồi MiCD & nhận bộ kít mài bóng")}
+               onClick={() => openCampaignModal({
+                 title: content.offer?.ctaText || "Mở khóa combo phục hồi MiCD & nhận bộ kít mài bóng",
+                 formTitle: content.offer?.ctaFormTitle,
+                 formDescription: content.offer?.ctaFormDesc,
+                 extraContentHtml: content.offer?.ctaFormExtraHtml,
+                 redirectThanks: content.offer?.ctaRedirectThanks,
+                 targetUrl: content.offer?.ctaTargetUrl,
+                 resourceTitle: content.offer?.ctaResourceTitle,
+                 ctaId: "direct_offer_cta"
+               })}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <span className="truncate">{content.offer?.ctaText || "ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY"}</span>
@@ -1313,6 +1366,13 @@ const faqs = [
         isOpen={isCampaignModalOpen}
         onClose={() => setIsCampaignModalOpen(false)}
         title={campaignModalTitle}
+        formTitle={modalConfig.formTitle}
+        formDescription={modalConfig.formDescription}
+        extraContentHtml={modalConfig.extraContentHtml}
+        redirectThanks={modalConfig.redirectThanks}
+        targetUrl={modalConfig.targetUrl}
+        resourceTitle={modalConfig.resourceTitle}
+        ctaId={modalConfig.ctaId}
       />
     </div>
   );

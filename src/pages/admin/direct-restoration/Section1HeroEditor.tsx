@@ -12,6 +12,7 @@ import {
   Info 
 } from 'lucide-react';
 import { UspItem, applyFormat } from './types';
+import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
 
 interface Section1HeroEditorProps {
   heroBadge: string;
@@ -29,6 +30,18 @@ interface Section1HeroEditorProps {
   handleUpdateUsp: (id: string, field: 'title' | 'description' | 'iconName', val: string) => void;
   heroCtaText: string;
   setHeroCtaText: React.Dispatch<React.SetStateAction<string>>;
+  formTitle?: string;
+  setFormTitle?: React.Dispatch<React.SetStateAction<string>>;
+  formDesc?: string;
+  setFormDesc?: React.Dispatch<React.SetStateAction<string>>;
+  formExtraHtml?: string;
+  setFormExtraHtml?: React.Dispatch<React.SetStateAction<string>>;
+  redirectThanks?: boolean;
+  setRedirectThanks?: React.Dispatch<React.SetStateAction<boolean>>;
+  targetUrl?: string;
+  setTargetUrl?: React.Dispatch<React.SetStateAction<string>>;
+  resourceTitle?: string;
+  setResourceTitle?: React.Dispatch<React.SetStateAction<string>>;
   uploadingTarget: string;
   handleUploadImageFile: (file: File, targetKey: string, onSuccess: (url: string) => void) => void;
   handleUploadUspSvg: (file: File, uspId: string) => void;
@@ -50,6 +63,18 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
   handleUpdateUsp,
   heroCtaText,
   setHeroCtaText,
+  formTitle,
+  setFormTitle,
+  formDesc,
+  setFormDesc,
+  formExtraHtml,
+  setFormExtraHtml,
+  redirectThanks,
+  setRedirectThanks,
+  targetUrl,
+  setTargetUrl,
+  resourceTitle,
+  setResourceTitle,
   uploadingTarget,
   handleUploadImageFile,
   handleUploadUspSvg
@@ -395,23 +420,24 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
         </div>
       </div>
 
-      {/* 6. CTA Button */}
-      <div className="space-y-2 pt-2 border-t border-slate-100">
-        <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
-          6. Text nút CTA Button
-        </label>
-        <div className="flex items-center gap-3">
-          <input
-            type="text"
-            value={heroCtaText}
-            onChange={(e) => setHeroCtaText(e.target.value)}
-            className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 font-mono font-bold"
-          />
-          <div className="px-5 py-3 rounded-xl bg-[#00ADEF] text-white text-xs font-mono font-bold whitespace-nowrap shadow-sm">
-            {heroCtaText}
-          </div>
-        </div>
-      </div>
+      {/* 6. CTA Button & Form Popup Config */}
+      <CtaFormConfigEditor
+        label="Nút CTA Hero (Phục hồi trực tiếp)"
+        ctaText={heroCtaText}
+        onChangeCtaText={setHeroCtaText}
+        formTitle={formTitle || ''}
+        onChangeFormTitle={(val) => setFormTitle && setFormTitle(val)}
+        formDesc={formDesc || ''}
+        onChangeFormDesc={(val) => setFormDesc && setFormDesc(val)}
+        formExtraHtml={formExtraHtml || ''}
+        onChangeFormExtraHtml={(val) => setFormExtraHtml && setFormExtraHtml(val)}
+        redirectThanks={redirectThanks || false}
+        onChangeRedirectThanks={(val) => setRedirectThanks && setRedirectThanks(val)}
+        targetUrl={targetUrl || ''}
+        onChangeTargetUrl={(val) => setTargetUrl && setTargetUrl(val)}
+        resourceTitle={resourceTitle || ''}
+        onChangeResourceTitle={(val) => setResourceTitle && setResourceTitle(val)}
+      />
     </div>
   );
 };

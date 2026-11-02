@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bold, Upload, Video } from 'lucide-react';
 import { applyFormat } from './types';
+import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
 
 interface Section4EvidenceEditorProps {
   badge?: string;
@@ -41,6 +42,18 @@ interface Section4EvidenceEditorProps {
   setUsp4: React.Dispatch<React.SetStateAction<any>>;
   ctaText: string;
   setCtaText: React.Dispatch<React.SetStateAction<string>>;
+  formTitle?: string;
+  setFormTitle?: React.Dispatch<React.SetStateAction<string>>;
+  formDesc?: string;
+  setFormDesc?: React.Dispatch<React.SetStateAction<string>>;
+  formExtraHtml?: string;
+  setFormExtraHtml?: React.Dispatch<React.SetStateAction<string>>;
+  redirectThanks?: boolean;
+  setRedirectThanks?: React.Dispatch<React.SetStateAction<boolean>>;
+  targetUrl?: string;
+  setTargetUrl?: React.Dispatch<React.SetStateAction<string>>;
+  resourceTitle?: string;
+  setResourceTitle?: React.Dispatch<React.SetStateAction<string>>;
   onUploadImage: (file: File, targetKey: string, onSuccess: (url: string) => void) => void;
   isUploadingImage: boolean;
   uploadingTarget: string;
@@ -61,6 +74,18 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
   setUsp4,
   ctaText,
   setCtaText,
+  formTitle,
+  setFormTitle,
+  formDesc,
+  setFormDesc,
+  formExtraHtml,
+  setFormExtraHtml,
+  redirectThanks,
+  setRedirectThanks,
+  targetUrl,
+  setTargetUrl,
+  resourceTitle,
+  setResourceTitle,
   onUploadImage,
   isUploadingImage,
   uploadingTarget
@@ -138,6 +163,25 @@ export const Section4EvidenceEditor: React.FC<Section4EvidenceEditorProps> = ({
               />
             </div>
           </div>
+
+          {/* Cấu hình Nút CTA & Form Popup */}
+          <CtaFormConfigEditor
+            label="Nút CTA Section 4 (Bằng chứng khoa học)"
+            ctaText={ctaText}
+            onChangeCtaText={setCtaText}
+            formTitle={formTitle || ''}
+            onChangeFormTitle={(val) => setFormTitle && setFormTitle(val)}
+            formDesc={formDesc || ''}
+            onChangeFormDesc={(val) => setFormDesc && setFormDesc(val)}
+            formExtraHtml={formExtraHtml || ''}
+            onChangeFormExtraHtml={(val) => setFormExtraHtml && setFormExtraHtml(val)}
+            redirectThanks={redirectThanks || false}
+            onChangeRedirectThanks={(val) => setRedirectThanks && setRedirectThanks(val)}
+            targetUrl={targetUrl || ''}
+            onChangeTargetUrl={(val) => setTargetUrl && setTargetUrl(val)}
+            resourceTitle={resourceTitle || ''}
+            onChangeResourceTitle={(val) => setResourceTitle && setResourceTitle(val)}
+          />
         </div>
       </div>
 

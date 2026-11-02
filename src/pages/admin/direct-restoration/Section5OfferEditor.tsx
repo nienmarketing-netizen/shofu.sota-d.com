@@ -1,5 +1,6 @@
 import React from 'react';
 import { Upload, RefreshCw, Plus, Trash2, ShieldCheck, Gift, Package, DollarSign, Sparkles, CheckCircle2 } from 'lucide-react';
+import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
 
 interface Section5OfferEditorProps {
   // General offer
@@ -9,6 +10,18 @@ interface Section5OfferEditorProps {
   setOfferHeadline: React.Dispatch<React.SetStateAction<string>>;
   offerCtaText: string;
   setOfferCtaText: React.Dispatch<React.SetStateAction<string>>;
+  formTitle?: string;
+  setFormTitle?: React.Dispatch<React.SetStateAction<string>>;
+  formDesc?: string;
+  setFormDesc?: React.Dispatch<React.SetStateAction<string>>;
+  formExtraHtml?: string;
+  setFormExtraHtml?: React.Dispatch<React.SetStateAction<string>>;
+  redirectThanks?: boolean;
+  setRedirectThanks?: React.Dispatch<React.SetStateAction<boolean>>;
+  targetUrl?: string;
+  setTargetUrl?: React.Dispatch<React.SetStateAction<string>>;
+  resourceTitle?: string;
+  setResourceTitle?: React.Dispatch<React.SetStateAction<string>>;
 
   // Box 1: Core products
   coreTitle: string;
@@ -60,6 +73,18 @@ export const Section5OfferEditor: React.FC<Section5OfferEditorProps> = ({
   setOfferHeadline,
   offerCtaText,
   setOfferCtaText,
+  formTitle,
+  setFormTitle,
+  formDesc,
+  setFormDesc,
+  formExtraHtml,
+  setFormExtraHtml,
+  redirectThanks,
+  setRedirectThanks,
+  targetUrl,
+  setTargetUrl,
+  resourceTitle,
+  setResourceTitle,
 
   coreTitle,
   setCoreTitle,
@@ -152,16 +177,25 @@ export const Section5OfferEditor: React.FC<Section5OfferEditorProps> = ({
           </div>
         </div>
 
-        <div className="space-y-2">
-          <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
-            Chữ hiển thị trên Nút Kêu Gọi Hành Động (CTA Button)
-          </label>
-          <input
-            type="text"
-            value={offerCtaText}
-            onChange={(e) => setOfferCtaText(e.target.value)}
-            placeholder="ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY"
-            className="w-full bg-white border border-slate-200 rounded-xl p-3 text-sm font-bold text-slate-900 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none"
+        <div className="pt-2">
+          <CtaFormConfigEditor
+            label="Nút Kêu Gọi Hành Động (CTA) - Khối Combo & Quà tặng"
+            buttonText={offerCtaText}
+            setButtonText={setOfferCtaText}
+            formTitle={formTitle}
+            setFormTitle={setFormTitle}
+            formDesc={formDesc}
+            setFormDesc={setFormDesc}
+            formExtraHtml={formExtraHtml}
+            setFormExtraHtml={setFormExtraHtml}
+            redirectThanks={redirectThanks}
+            setRedirectThanks={setRedirectThanks}
+            targetUrl={targetUrl}
+            setTargetUrl={setTargetUrl}
+            resourceTitle={resourceTitle}
+            setResourceTitle={setResourceTitle}
+            defaultTitle="Đăng ký nhận combo ưu đãi MiCD Shofu"
+            ctaIdHint="direct_offer_cta"
           />
         </div>
       </div>

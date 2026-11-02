@@ -24,6 +24,7 @@ import {
   Image as ImageIcon
 } from 'lucide-react';
 import { WorkflowData, WorkflowInterfaceItem, WorkflowStepItem, WorkflowConsequenceItem } from './types';
+import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
 
 export const CONSEQUENCE_ICONS = [
   { value: 'Coins', label: 'Coins (Chi phí vật tư / Tiền)' },
@@ -883,18 +884,24 @@ export const SectionWorkflowEditor: React.FC<SectionWorkflowEditorProps> = ({
               )}
             </div>
 
-            <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
-                Nút kêu gọi hành động CTA (ctaText)
-              </label>
-              <input
-                type="text"
-                value={workflow.ctaText || ''}
-                onChange={(e) => handleUpdate('ctaText', e.target.value)}
-                placeholder="Trải nghiệm phác đồ 3 bước"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-bold text-slate-800 focus:border-[#00ADEF] outline-none"
-              />
-            </div>
+            {/* Cấu hình Nút CTA & Form Popup */}
+            <CtaFormConfigEditor
+              label="Nút CTA Quy trình lâm sàng (Workflow)"
+              ctaText={workflow.ctaText || ''}
+              onChangeCtaText={(val) => handleUpdate('ctaText', val)}
+              formTitle={(workflow as any).ctaFormTitle || ''}
+              onChangeFormTitle={(val) => handleUpdate('ctaFormTitle', val)}
+              formDesc={(workflow as any).ctaFormDesc || ''}
+              onChangeFormDesc={(val) => handleUpdate('ctaFormDesc', val)}
+              formExtraHtml={(workflow as any).ctaFormExtraHtml || ''}
+              onChangeFormExtraHtml={(val) => handleUpdate('ctaFormExtraHtml', val)}
+              redirectThanks={Boolean((workflow as any).ctaRedirectThanks)}
+              onChangeRedirectThanks={(val) => handleUpdate('ctaRedirectThanks', val)}
+              targetUrl={(workflow as any).ctaTargetUrl || ''}
+              onChangeTargetUrl={(val) => handleUpdate('ctaTargetUrl', val)}
+              resourceTitle={(workflow as any).ctaResourceTitle || ''}
+              onChangeResourceTitle={(val) => handleUpdate('ctaResourceTitle', val)}
+            />
           </div>
         </div>
 

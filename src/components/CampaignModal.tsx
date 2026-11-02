@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { X, CheckCircle } from 'lucide-react';
 import { useBodyScrollLock } from '../utils/scrollLock';
 
@@ -6,9 +7,28 @@ interface CampaignModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
+  formTitle?: string;
+  formDescription?: string;
+  extraContentHtml?: string;
+  redirectThanks?: boolean;
+  targetUrl?: string;
+  resourceTitle?: string;
+  ctaId?: string;
 }
 
-export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
+export function CampaignModal({ 
+  isOpen, 
+  onClose, 
+  title,
+  formTitle,
+  formDescription,
+  extraContentHtml,
+  redirectThanks = false,
+  targetUrl = '',
+  resourceTitle = '',
+  ctaId = ''
+}: CampaignModalProps) {
+  const navigate = useNavigate();
   useBodyScrollLock(isOpen);
   const [formData, setFormData] = useState({
     name: '',
@@ -78,7 +98,8 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
       });
 
       setIsSubmitting(false);
-      setIsSuccess(true);
+
+      const effectiveFormName = formTitle || title;
       
       // Tracking sự kiện đăng ký thành công
       if (typeof window !== 'undefined') {
@@ -86,8 +107,9 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
         win.dataLayer = win.dataLayer || [];
         win.dataLayer.push({
           event: 'generate_lead',
-          form_name: title,
+          form_name: effectiveFormName,
           event_id: eventId,
+          cta_id: ctaId || ''
         });
       }
       // Bắn CAPI Meta
@@ -98,13 +120,25 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
           body: JSON.stringify({
             email: "",
             phone: formData.phone,
-            formName: title,
+            formName: effectiveFormName,
             eventSourceUrl: typeof window !== 'undefined' ? window.location.href : '',
             event_id: eventId
           })
         }).catch(err => console.error('Lỗi khi đẩy CAPI ngầm:', err));
       } catch (capiErr) {
         console.error('Lỗi khi đẩy CAPI:', capiErr);
+      }
+
+      if (redirectThanks) {
+        const params = new URLSearchParams();
+        if (ctaId) params.set('cta_id', ctaId);
+        params.set('cta_name', effectiveFormName);
+        if (targetUrl) params.set('target_url', targetUrl);
+        if (resourceTitle) params.set('resource_title', resourceTitle);
+        onClose();
+        navigate(`/thanks?${params.toString()}`);
+      } else {
+        setIsSuccess(true);
       }
 
     } catch (err) {
@@ -184,11 +218,11 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
         ) : (
           <div className="animate-in fade-in duration-300">
             <h3 className="font-heading font-bold text-2xl text-slate-900 mb-2 text-center">
-              {title}
+              {formTitle || title}
             </h3>
             
             <p className="text-center font-body text-sm text-slate-600 mb-6">
-              Quý Bác sĩ vui lòng dành thời gian điền thông tin bên dưới:
+              {formDescription || 'Quý Bác sĩ vui lòng dành thời gian điền thông tin bên dưới:'}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4" noValidate>
@@ -275,6 +309,13 @@ export function CampaignModal({ isOpen, onClose, title }: CampaignModalProps) {
                   disabled={isSubmitting}
                 />
               </div>
+
+              {extraContentHtml && (
+                <div 
+                  className="pt-3 pb-1 text-slate-800 text-sm font-body leading-relaxed border-t border-slate-100 space-y-2 [&_h4]:font-bold [&_h4]:text-slate-900 [&_h4]:text-sm [&_h4]:uppercase [&_h4]:tracking-wider [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1 [&_strong]:text-slate-900"
+                  dangerouslySetInnerHTML={{ __html: extraContentHtml }}
+                />
+              )}
 
               <div className="mt-6 mb-2 text-center font-body text-xs text-slate-500 space-y-1">
                 <p>Nếu Quý Bác sĩ cần hỗ trợ ngay, vui lòng liên hệ hotline:</p>

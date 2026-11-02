@@ -80,6 +80,12 @@ export default function IndirectRestorationEditor() {
   const [heroUsps, setHeroUsps] = useState<UspItem[]>(() => initialData.hero.usps || []);
   const [heroCtaText, setHeroCtaText] = useState<string>(() => initialData.hero.ctaText || 'NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI');
   const [heroFooterNote, setHeroFooterNote] = useState<string>(() => initialData.hero.footerNote || 'Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor');
+  const [heroFormTitle, setHeroFormTitle] = useState<string>(() => initialData.hero.ctaFormTitle || '');
+  const [heroFormDesc, setHeroFormDesc] = useState<string>(() => initialData.hero.ctaFormDesc || '');
+  const [heroFormExtraHtml, setHeroFormExtraHtml] = useState<string>(() => initialData.hero.ctaFormExtraHtml || '');
+  const [heroRedirectThanks, setHeroRedirectThanks] = useState<boolean>(() => Boolean(initialData.hero.ctaRedirectThanks));
+  const [heroTargetUrl, setHeroTargetUrl] = useState<string>(() => initialData.hero.ctaTargetUrl || '');
+  const [heroResourceTitle, setHeroResourceTitle] = useState<string>(() => initialData.hero.ctaResourceTitle || '');
 
   // Section 2: Pain Points
   const [painBadge, setPainBadge] = useState<string>(() => initialData.painPoints.badge || 'Thực trạng lâm sàng');
@@ -87,6 +93,12 @@ export default function IndirectRestorationEditor() {
   const [painDesc, setPainDesc] = useState<string>(() => initialData.painPoints.description || '');
   const [painItems, setPainItems] = useState<PainPointItem[]>(() => initialData.painPoints.items || []);
   const [painCtaText, setPainCtaText] = useState<string>(() => initialData.painPoints.ctaText || 'TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO');
+  const [painFormTitle, setPainFormTitle] = useState<string>(() => initialData.painPoints.ctaFormTitle || '');
+  const [painFormDesc, setPainFormDesc] = useState<string>(() => initialData.painPoints.ctaFormDesc || '');
+  const [painFormExtraHtml, setPainFormExtraHtml] = useState<string>(() => initialData.painPoints.ctaFormExtraHtml || '');
+  const [painRedirectThanks, setPainRedirectThanks] = useState<boolean>(() => Boolean(initialData.painPoints.ctaRedirectThanks));
+  const [painTargetUrl, setPainTargetUrl] = useState<string>(() => initialData.painPoints.ctaTargetUrl || '');
+  const [painResourceTitle, setPainResourceTitle] = useState<string>(() => initialData.painPoints.ctaResourceTitle || '');
 
   // Section 3: Gold Standard & Products & Diagram
   const [goldBadge, setGoldBadge] = useState<string>(() => initialData.goldStandard.badge || 'Tiêu chuẩn vàng mới');
@@ -96,6 +108,12 @@ export default function IndirectRestorationEditor() {
   const [product2, setProduct2] = useState<ProductItem>(() => initialData.goldStandard.product2);
   const [diagram, setDiagram] = useState<DiagramConfig>(() => initialData.goldStandard.diagram);
   const [goldCtaText, setGoldCtaText] = useState<string>(() => initialData.goldStandard.ctaText || 'Yêu cầu tư vấn');
+  const [goldFormTitle, setGoldFormTitle] = useState<string>(() => initialData.goldStandard.ctaFormTitle || '');
+  const [goldFormDesc, setGoldFormDesc] = useState<string>(() => initialData.goldStandard.ctaFormDesc || '');
+  const [goldFormExtraHtml, setGoldFormExtraHtml] = useState<string>(() => initialData.goldStandard.ctaFormExtraHtml || '');
+  const [goldRedirectThanks, setGoldRedirectThanks] = useState<boolean>(() => Boolean(initialData.goldStandard.ctaRedirectThanks));
+  const [goldTargetUrl, setGoldTargetUrl] = useState<string>(() => initialData.goldStandard.ctaTargetUrl || '');
+  const [goldResourceTitle, setGoldResourceTitle] = useState<string>(() => initialData.goldStandard.ctaResourceTitle || '');
 
   // Section 4: Evidence & 4 USPs
   const [evidenceBadge, setEvidenceBadge] = useState<string>(() => initialData.evidence.badge || 'Bằng chứng khoa học');
@@ -106,6 +124,12 @@ export default function IndirectRestorationEditor() {
   const [usp3, setUsp3] = useState(() => initialData.evidence.usp3);
   const [usp4, setUsp4] = useState(() => initialData.evidence.usp4);
   const [evidenceCtaText, setEvidenceCtaText] = useState<string>(() => initialData.evidence.ctaText || 'Trải nghiệm phác đồ 3 bước');
+  const [evidenceFormTitle, setEvidenceFormTitle] = useState<string>(() => initialData.evidence.ctaFormTitle || '');
+  const [evidenceFormDesc, setEvidenceFormDesc] = useState<string>(() => initialData.evidence.ctaFormDesc || '');
+  const [evidenceFormExtraHtml, setEvidenceFormExtraHtml] = useState<string>(() => initialData.evidence.ctaFormExtraHtml || '');
+  const [evidenceRedirectThanks, setEvidenceRedirectThanks] = useState<boolean>(() => Boolean(initialData.evidence.ctaRedirectThanks));
+  const [evidenceTargetUrl, setEvidenceTargetUrl] = useState<string>(() => initialData.evidence.ctaTargetUrl || '');
+  const [evidenceResourceTitle, setEvidenceResourceTitle] = useState<string>(() => initialData.evidence.ctaResourceTitle || '');
 
   // Section Workflow: Clinical Workflow Rewrite & 3 Steps
   const [workflow, setWorkflow] = useState<WorkflowData>(() => initialData.workflow);
@@ -123,6 +147,12 @@ export default function IndirectRestorationEditor() {
   const [offerPrice, setOfferPrice] = useState<string>(() => initialData.offer.offerPrice || '1.497.000vnđ');
   const [offerCtaText, setOfferCtaText] = useState<string>(() => initialData.offer.ctaText || 'ĐĂNG KÝ COMBO "GIOMER KHÔNG Ê BUỐT"');
   const [offerGuarantee, setOfferGuarantee] = useState<string>(() => initialData.offer.guarantee || 'Hoàn tiền 100% nếu Bác sĩ không hài lòng.');
+  const [offerFormTitle, setOfferFormTitle] = useState<string>(() => initialData.offer.ctaFormTitle || '');
+  const [offerFormDesc, setOfferFormDesc] = useState<string>(() => initialData.offer.ctaFormDesc || '');
+  const [offerFormExtraHtml, setOfferFormExtraHtml] = useState<string>(() => initialData.offer.ctaFormExtraHtml || '');
+  const [offerRedirectThanks, setOfferRedirectThanks] = useState<boolean>(() => Boolean(initialData.offer.ctaRedirectThanks));
+  const [offerTargetUrl, setOfferTargetUrl] = useState<string>(() => initialData.offer.ctaTargetUrl || '');
+  const [offerResourceTitle, setOfferResourceTitle] = useState<string>(() => initialData.offer.ctaResourceTitle || '');
 
   // Section 6: FAQs
   const [faqs, setFaqs] = useState<FaqItem[]>(() => initialData.faqs || []);
@@ -132,6 +162,12 @@ export default function IndirectRestorationEditor() {
   const [testimonialsCtaText, setTestimonialsCtaText] = useState<string>(() => initialData.testimonials.ctaText || 'Gia nhập cộng đồng MiCD');
   const [testimonialsRow1, setTestimonialsRow1] = useState<TestimonialItem[]>(() => initialData.testimonials.row1 || []);
   const [testimonialsRow2, setTestimonialsRow2] = useState<TestimonialItem[]>(() => initialData.testimonials.row2 || []);
+  const [testimonialsFormTitle, setTestimonialsFormTitle] = useState<string>(() => initialData.testimonials.ctaFormTitle || '');
+  const [testimonialsFormDesc, setTestimonialsFormDesc] = useState<string>(() => initialData.testimonials.ctaFormDesc || '');
+  const [testimonialsFormExtraHtml, setTestimonialsFormExtraHtml] = useState<string>(() => initialData.testimonials.ctaFormExtraHtml || '');
+  const [testimonialsRedirectThanks, setTestimonialsRedirectThanks] = useState<boolean>(() => Boolean(initialData.testimonials.ctaRedirectThanks));
+  const [testimonialsTargetUrl, setTestimonialsTargetUrl] = useState<string>(() => initialData.testimonials.ctaTargetUrl || '');
+  const [testimonialsResourceTitle, setTestimonialsResourceTitle] = useState<string>(() => initialData.testimonials.ctaResourceTitle || '');
 
   const handleAdminLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -166,6 +202,12 @@ export default function IndirectRestorationEditor() {
       if (Array.isArray(d.hero.usps) && d.hero.usps.length > 0) setHeroUsps(d.hero.usps);
       if (typeof d.hero.ctaText === 'string' && d.hero.ctaText.trim()) setHeroCtaText(d.hero.ctaText);
       if (typeof d.hero.footerNote === 'string' && d.hero.footerNote.trim()) setHeroFooterNote(d.hero.footerNote);
+      if (typeof d.hero.ctaFormTitle === 'string') setHeroFormTitle(d.hero.ctaFormTitle);
+      if (typeof d.hero.ctaFormDesc === 'string') setHeroFormDesc(d.hero.ctaFormDesc);
+      if (typeof d.hero.ctaFormExtraHtml === 'string') setHeroFormExtraHtml(d.hero.ctaFormExtraHtml);
+      if (typeof d.hero.ctaRedirectThanks !== 'undefined') setHeroRedirectThanks(Boolean(d.hero.ctaRedirectThanks));
+      if (typeof d.hero.ctaTargetUrl === 'string') setHeroTargetUrl(d.hero.ctaTargetUrl);
+      if (typeof d.hero.ctaResourceTitle === 'string') setHeroResourceTitle(d.hero.ctaResourceTitle);
     }
     if (d.painPoints) {
       if (typeof d.painPoints.badge === 'string' && d.painPoints.badge.trim()) setPainBadge(d.painPoints.badge);
@@ -173,6 +215,12 @@ export default function IndirectRestorationEditor() {
       if (typeof d.painPoints.description === 'string' && d.painPoints.description.trim()) setPainDesc(d.painPoints.description);
       if (Array.isArray(d.painPoints.items) && d.painPoints.items.length > 0) setPainItems(d.painPoints.items);
       if (typeof d.painPoints.ctaText === 'string' && d.painPoints.ctaText.trim()) setPainCtaText(d.painPoints.ctaText);
+      if (typeof d.painPoints.ctaFormTitle === 'string') setPainFormTitle(d.painPoints.ctaFormTitle);
+      if (typeof d.painPoints.ctaFormDesc === 'string') setPainFormDesc(d.painPoints.ctaFormDesc);
+      if (typeof d.painPoints.ctaFormExtraHtml === 'string') setPainFormExtraHtml(d.painPoints.ctaFormExtraHtml);
+      if (typeof d.painPoints.ctaRedirectThanks !== 'undefined') setPainRedirectThanks(Boolean(d.painPoints.ctaRedirectThanks));
+      if (typeof d.painPoints.ctaTargetUrl === 'string') setPainTargetUrl(d.painPoints.ctaTargetUrl);
+      if (typeof d.painPoints.ctaResourceTitle === 'string') setPainResourceTitle(d.painPoints.ctaResourceTitle);
     }
     if (d.goldStandard) {
       if (typeof d.goldStandard.badge === 'string' && d.goldStandard.badge.trim()) setGoldBadge(d.goldStandard.badge);
@@ -182,6 +230,12 @@ export default function IndirectRestorationEditor() {
       if (d.goldStandard.product2) setProduct2(d.goldStandard.product2);
       if (d.goldStandard.diagram) setDiagram(d.goldStandard.diagram);
       if (typeof d.goldStandard.ctaText === 'string' && d.goldStandard.ctaText.trim()) setGoldCtaText(d.goldStandard.ctaText);
+      if (typeof d.goldStandard.ctaFormTitle === 'string') setGoldFormTitle(d.goldStandard.ctaFormTitle);
+      if (typeof d.goldStandard.ctaFormDesc === 'string') setGoldFormDesc(d.goldStandard.ctaFormDesc);
+      if (typeof d.goldStandard.ctaFormExtraHtml === 'string') setGoldFormExtraHtml(d.goldStandard.ctaFormExtraHtml);
+      if (typeof d.goldStandard.ctaRedirectThanks !== 'undefined') setGoldRedirectThanks(Boolean(d.goldStandard.ctaRedirectThanks));
+      if (typeof d.goldStandard.ctaTargetUrl === 'string') setGoldTargetUrl(d.goldStandard.ctaTargetUrl);
+      if (typeof d.goldStandard.ctaResourceTitle === 'string') setGoldResourceTitle(d.goldStandard.ctaResourceTitle);
     }
     if (d.evidence) {
       if (typeof d.evidence.badge === 'string' && d.evidence.badge.trim()) setEvidenceBadge(d.evidence.badge);
@@ -192,6 +246,12 @@ export default function IndirectRestorationEditor() {
       if (d.evidence.usp3) setUsp3(d.evidence.usp3);
       if (d.evidence.usp4) setUsp4(d.evidence.usp4);
       if (typeof d.evidence.ctaText === 'string' && d.evidence.ctaText.trim()) setEvidenceCtaText(d.evidence.ctaText);
+      if (typeof d.evidence.ctaFormTitle === 'string') setEvidenceFormTitle(d.evidence.ctaFormTitle);
+      if (typeof d.evidence.ctaFormDesc === 'string') setEvidenceFormDesc(d.evidence.ctaFormDesc);
+      if (typeof d.evidence.ctaFormExtraHtml === 'string') setEvidenceFormExtraHtml(d.evidence.ctaFormExtraHtml);
+      if (typeof d.evidence.ctaRedirectThanks !== 'undefined') setEvidenceRedirectThanks(Boolean(d.evidence.ctaRedirectThanks));
+      if (typeof d.evidence.ctaTargetUrl === 'string') setEvidenceTargetUrl(d.evidence.ctaTargetUrl);
+      if (typeof d.evidence.ctaResourceTitle === 'string') setEvidenceResourceTitle(d.evidence.ctaResourceTitle);
     }
     if (d.workflow) {
       setWorkflow((prev) => ({
@@ -212,6 +272,12 @@ export default function IndirectRestorationEditor() {
       if (typeof d.offer.offerPrice === 'string' && d.offer.offerPrice.trim()) setOfferPrice(d.offer.offerPrice);
       if (typeof d.offer.ctaText === 'string' && d.offer.ctaText.trim()) setOfferCtaText(d.offer.ctaText);
       if (typeof d.offer.guarantee === 'string' && d.offer.guarantee.trim()) setOfferGuarantee(d.offer.guarantee);
+      if (typeof d.offer.ctaFormTitle === 'string') setOfferFormTitle(d.offer.ctaFormTitle);
+      if (typeof d.offer.ctaFormDesc === 'string') setOfferFormDesc(d.offer.ctaFormDesc);
+      if (typeof d.offer.ctaFormExtraHtml === 'string') setOfferFormExtraHtml(d.offer.ctaFormExtraHtml);
+      if (typeof d.offer.ctaRedirectThanks !== 'undefined') setOfferRedirectThanks(Boolean(d.offer.ctaRedirectThanks));
+      if (typeof d.offer.ctaTargetUrl === 'string') setOfferTargetUrl(d.offer.ctaTargetUrl);
+      if (typeof d.offer.ctaResourceTitle === 'string') setOfferResourceTitle(d.offer.ctaResourceTitle);
     }
     if (Array.isArray(d.faqs) && d.faqs.length > 0) {
       setFaqs(d.faqs);
@@ -221,6 +287,12 @@ export default function IndirectRestorationEditor() {
       if (typeof d.testimonials.ctaText === 'string' && d.testimonials.ctaText.trim()) setTestimonialsCtaText(d.testimonials.ctaText);
       if (Array.isArray(d.testimonials.row1) && d.testimonials.row1.length > 0) setTestimonialsRow1(d.testimonials.row1);
       if (Array.isArray(d.testimonials.row2) && d.testimonials.row2.length > 0) setTestimonialsRow2(d.testimonials.row2);
+      if (typeof d.testimonials.ctaFormTitle === 'string') setTestimonialsFormTitle(d.testimonials.ctaFormTitle);
+      if (typeof d.testimonials.ctaFormDesc === 'string') setTestimonialsFormDesc(d.testimonials.ctaFormDesc);
+      if (typeof d.testimonials.ctaFormExtraHtml === 'string') setTestimonialsFormExtraHtml(d.testimonials.ctaFormExtraHtml);
+      if (typeof d.testimonials.ctaRedirectThanks !== 'undefined') setTestimonialsRedirectThanks(Boolean(d.testimonials.ctaRedirectThanks));
+      if (typeof d.testimonials.ctaTargetUrl === 'string') setTestimonialsTargetUrl(d.testimonials.ctaTargetUrl);
+      if (typeof d.testimonials.ctaResourceTitle === 'string') setTestimonialsResourceTitle(d.testimonials.ctaResourceTitle);
     }
   };
 
@@ -400,14 +472,26 @@ export default function IndirectRestorationEditor() {
         imageSizeNote: heroImageSizeNote,
         usps: heroUsps,
         ctaText: heroCtaText,
-        footerNote: heroFooterNote
+        footerNote: heroFooterNote,
+        ctaFormTitle: heroFormTitle,
+        ctaFormDesc: heroFormDesc,
+        ctaFormExtraHtml: heroFormExtraHtml,
+        ctaRedirectThanks: heroRedirectThanks,
+        ctaTargetUrl: heroTargetUrl,
+        ctaResourceTitle: heroResourceTitle
       },
       painPoints: {
         badge: painBadge,
         headline: painHeadline,
         description: painDesc,
         items: painItems,
-        ctaText: painCtaText
+        ctaText: painCtaText,
+        ctaFormTitle: painFormTitle,
+        ctaFormDesc: painFormDesc,
+        ctaFormExtraHtml: painFormExtraHtml,
+        ctaRedirectThanks: painRedirectThanks,
+        ctaTargetUrl: painTargetUrl,
+        ctaResourceTitle: painResourceTitle
       },
       goldStandard: {
         badge: goldBadge,
@@ -416,7 +500,13 @@ export default function IndirectRestorationEditor() {
         product1,
         product2,
         diagram,
-        ctaText: goldCtaText
+        ctaText: goldCtaText,
+        ctaFormTitle: goldFormTitle,
+        ctaFormDesc: goldFormDesc,
+        ctaFormExtraHtml: goldFormExtraHtml,
+        ctaRedirectThanks: goldRedirectThanks,
+        ctaTargetUrl: goldTargetUrl,
+        ctaResourceTitle: goldResourceTitle
       },
       evidence: {
         badge: evidenceBadge,
@@ -426,7 +516,13 @@ export default function IndirectRestorationEditor() {
         usp2,
         usp3,
         usp4,
-        ctaText: evidenceCtaText
+        ctaText: evidenceCtaText,
+        ctaFormTitle: evidenceFormTitle,
+        ctaFormDesc: evidenceFormDesc,
+        ctaFormExtraHtml: evidenceFormExtraHtml,
+        ctaRedirectThanks: evidenceRedirectThanks,
+        ctaTargetUrl: evidenceTargetUrl,
+        ctaResourceTitle: evidenceResourceTitle
       },
       workflow,
       offer: {
@@ -441,13 +537,25 @@ export default function IndirectRestorationEditor() {
         originalPrice: offerOriginalPrice,
         offerPrice: offerPrice,
         ctaText: offerCtaText,
-        guarantee: offerGuarantee
+        guarantee: offerGuarantee,
+        ctaFormTitle: offerFormTitle,
+        ctaFormDesc: offerFormDesc,
+        ctaFormExtraHtml: offerFormExtraHtml,
+        ctaRedirectThanks: offerRedirectThanks,
+        ctaTargetUrl: offerTargetUrl,
+        ctaResourceTitle: offerResourceTitle
       },
       testimonials: {
         headline: testimonialsHeadline,
         ctaText: testimonialsCtaText,
         row1: testimonialsRow1,
-        row2: testimonialsRow2
+        row2: testimonialsRow2,
+        ctaFormTitle: testimonialsFormTitle,
+        ctaFormDesc: testimonialsFormDesc,
+        ctaFormExtraHtml: testimonialsFormExtraHtml,
+        ctaRedirectThanks: testimonialsRedirectThanks,
+        ctaTargetUrl: testimonialsTargetUrl,
+        ctaResourceTitle: testimonialsResourceTitle
       },
       faqs
     };
@@ -750,6 +858,18 @@ export default function IndirectRestorationEditor() {
                   setCtaText={setHeroCtaText}
                   footerNote={heroFooterNote}
                   setFooterNote={setHeroFooterNote}
+                  formTitle={heroFormTitle}
+                  setFormTitle={setHeroFormTitle}
+                  formDesc={heroFormDesc}
+                  setFormDesc={setHeroFormDesc}
+                  formExtraHtml={heroFormExtraHtml}
+                  setFormExtraHtml={setHeroFormExtraHtml}
+                  redirectThanks={heroRedirectThanks}
+                  setRedirectThanks={setHeroRedirectThanks}
+                  targetUrl={heroTargetUrl}
+                  setTargetUrl={setHeroTargetUrl}
+                  resourceTitle={heroResourceTitle}
+                  setResourceTitle={setHeroResourceTitle}
                   onUploadImage={handleUploadImageFile}
                   isUploadingImage={isUploadingImage}
                   uploadingTarget={uploadingTarget}
@@ -768,6 +888,18 @@ export default function IndirectRestorationEditor() {
                   setItems={setPainItems}
                   ctaText={painCtaText}
                   setCtaText={setPainCtaText}
+                  formTitle={painFormTitle}
+                  setFormTitle={setPainFormTitle}
+                  formDesc={painFormDesc}
+                  setFormDesc={setPainFormDesc}
+                  formExtraHtml={painFormExtraHtml}
+                  setFormExtraHtml={setPainFormExtraHtml}
+                  redirectThanks={painRedirectThanks}
+                  setRedirectThanks={setPainRedirectThanks}
+                  targetUrl={painTargetUrl}
+                  setTargetUrl={setPainTargetUrl}
+                  resourceTitle={painResourceTitle}
+                  setResourceTitle={setPainResourceTitle}
                 />
               )}
 
@@ -787,6 +919,18 @@ export default function IndirectRestorationEditor() {
                   setDiagram={setDiagram}
                   ctaText={goldCtaText}
                   setCtaText={setGoldCtaText}
+                  formTitle={goldFormTitle}
+                  setFormTitle={setGoldFormTitle}
+                  formDesc={goldFormDesc}
+                  setFormDesc={setGoldFormDesc}
+                  formExtraHtml={goldFormExtraHtml}
+                  setFormExtraHtml={setGoldFormExtraHtml}
+                  redirectThanks={goldRedirectThanks}
+                  setRedirectThanks={setGoldRedirectThanks}
+                  targetUrl={goldTargetUrl}
+                  setTargetUrl={setGoldTargetUrl}
+                  resourceTitle={goldResourceTitle}
+                  setResourceTitle={setGoldResourceTitle}
                   onUploadImage={handleUploadImageFile}
                   isUploadingImage={isUploadingImage}
                   uploadingTarget={uploadingTarget}
@@ -811,6 +955,18 @@ export default function IndirectRestorationEditor() {
                   setUsp4={setUsp4}
                   ctaText={evidenceCtaText}
                   setCtaText={setEvidenceCtaText}
+                  formTitle={evidenceFormTitle}
+                  setFormTitle={setEvidenceFormTitle}
+                  formDesc={evidenceFormDesc}
+                  setFormDesc={setEvidenceFormDesc}
+                  formExtraHtml={evidenceFormExtraHtml}
+                  setFormExtraHtml={setEvidenceFormExtraHtml}
+                  redirectThanks={evidenceRedirectThanks}
+                  setRedirectThanks={setEvidenceRedirectThanks}
+                  targetUrl={evidenceTargetUrl}
+                  setTargetUrl={setEvidenceTargetUrl}
+                  resourceTitle={evidenceResourceTitle}
+                  setResourceTitle={setEvidenceResourceTitle}
                   onUploadImage={handleUploadImageFile}
                   isUploadingImage={isUploadingImage}
                   uploadingTarget={uploadingTarget}
@@ -853,6 +1009,18 @@ export default function IndirectRestorationEditor() {
                   setCtaText={setOfferCtaText}
                   guarantee={offerGuarantee}
                   setGuarantee={setOfferGuarantee}
+                  formTitle={offerFormTitle}
+                  setFormTitle={setOfferFormTitle}
+                  formDesc={offerFormDesc}
+                  setFormDesc={setOfferFormDesc}
+                  formExtraHtml={offerFormExtraHtml}
+                  setFormExtraHtml={setOfferFormExtraHtml}
+                  redirectThanks={offerRedirectThanks}
+                  setRedirectThanks={setOfferRedirectThanks}
+                  targetUrl={offerTargetUrl}
+                  setTargetUrl={setOfferTargetUrl}
+                  resourceTitle={offerResourceTitle}
+                  setResourceTitle={setOfferResourceTitle}
                   onUploadImage={handleUploadImageFile}
                   isUploadingImage={isUploadingImage}
                   uploadingTarget={uploadingTarget}
@@ -876,6 +1044,18 @@ export default function IndirectRestorationEditor() {
                   setRow1={setTestimonialsRow1}
                   row2={testimonialsRow2}
                   setRow2={setTestimonialsRow2}
+                  formTitle={testimonialsFormTitle}
+                  setFormTitle={setTestimonialsFormTitle}
+                  formDesc={testimonialsFormDesc}
+                  setFormDesc={setTestimonialsFormDesc}
+                  formExtraHtml={testimonialsFormExtraHtml}
+                  setFormExtraHtml={setTestimonialsFormExtraHtml}
+                  redirectThanks={testimonialsRedirectThanks}
+                  setRedirectThanks={setTestimonialsRedirectThanks}
+                  targetUrl={testimonialsTargetUrl}
+                  setTargetUrl={setTestimonialsTargetUrl}
+                  resourceTitle={testimonialsResourceTitle}
+                  setResourceTitle={setTestimonialsResourceTitle}
                 />
               )}
 

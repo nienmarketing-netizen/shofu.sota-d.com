@@ -11,6 +11,7 @@ import {
   CheckCircle2 
 } from 'lucide-react';
 import { PainPointItem, applyFormat } from './types';
+import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
 
 interface Section2PainPointsEditorProps {
   painBadge: string;
@@ -68,6 +69,18 @@ interface Section2PainPointsEditorProps {
   setPainNewSchoolFooter: React.Dispatch<React.SetStateAction<string>>;
   painCtaText: string;
   setPainCtaText: React.Dispatch<React.SetStateAction<string>>;
+  formTitle?: string;
+  setFormTitle?: React.Dispatch<React.SetStateAction<string>>;
+  formDesc?: string;
+  setFormDesc?: React.Dispatch<React.SetStateAction<string>>;
+  formExtraHtml?: string;
+  setFormExtraHtml?: React.Dispatch<React.SetStateAction<string>>;
+  redirectThanks?: boolean;
+  setRedirectThanks?: React.Dispatch<React.SetStateAction<boolean>>;
+  targetUrl?: string;
+  setTargetUrl?: React.Dispatch<React.SetStateAction<string>>;
+  resourceTitle?: string;
+  setResourceTitle?: React.Dispatch<React.SetStateAction<string>>;
   uploadingTarget: string;
   handleUploadImageFile: (file: File, targetKey: string, onSuccess: (url: string) => void) => void;
 }
@@ -128,6 +141,18 @@ export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> =
   setPainNewSchoolFooter,
   painCtaText,
   setPainCtaText,
+  formTitle,
+  setFormTitle,
+  formDesc,
+  setFormDesc,
+  formExtraHtml,
+  setFormExtraHtml,
+  redirectThanks,
+  setRedirectThanks,
+  targetUrl,
+  setTargetUrl,
+  resourceTitle,
+  setResourceTitle,
   uploadingTarget,
   handleUploadImageFile
 }) => {
@@ -744,21 +769,26 @@ export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> =
       </div>
 
       {/* 8. CTA Button */}
-      <div className="space-y-2 pt-4 border-t border-slate-100">
-        <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
-          8. Text nút CTA Button Section 2
-        </label>
-        <div className="flex items-center gap-3">
-          <input
-            type="text"
-            value={painCtaText}
-            onChange={(e) => setPainCtaText(e.target.value)}
-            className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 font-mono font-bold"
-          />
-          <div className="px-5 py-3 rounded-xl bg-[#00ADEF] text-white text-xs font-mono font-bold whitespace-nowrap shadow-sm">
-            {painCtaText}
-          </div>
-        </div>
+      <div className="pt-4 border-t border-slate-100">
+        <CtaFormConfigEditor
+          label="Nút Kêu Gọi Hành Động (CTA) - Section 2: Góc khuất lâm sàng"
+          buttonText={painCtaText}
+          setButtonText={setPainCtaText}
+          formTitle={formTitle}
+          setFormTitle={setFormTitle}
+          formDesc={formDesc}
+          setFormDesc={setFormDesc}
+          formExtraHtml={formExtraHtml}
+          setFormExtraHtml={setFormExtraHtml}
+          redirectThanks={redirectThanks}
+          setRedirectThanks={setRedirectThanks}
+          targetUrl={targetUrl}
+          setTargetUrl={setTargetUrl}
+          resourceTitle={resourceTitle}
+          setResourceTitle={setResourceTitle}
+          defaultTitle="Tư vấn giải pháp phục hồi trực tiếp MiCD"
+          ctaIdHint="direct_pain_points_cta"
+        />
       </div>
     </div>
   );

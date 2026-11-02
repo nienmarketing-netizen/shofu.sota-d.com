@@ -294,6 +294,12 @@ export default function DirectRestorationEditor() {
     }
   ]);
   const [heroCtaText, setHeroCtaText] = useState('MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG');
+  const [heroFormTitle, setHeroFormTitle] = useState('');
+  const [heroFormDesc, setHeroFormDesc] = useState('');
+  const [heroFormExtraHtml, setHeroFormExtraHtml] = useState('');
+  const [heroRedirectThanks, setHeroRedirectThanks] = useState(false);
+  const [heroTargetUrl, setHeroTargetUrl] = useState('');
+  const [heroResourceTitle, setHeroResourceTitle] = useState('');
 
   // --- SECTION 2: GÓC KHUẤT LÂM SÀNG ---
   const [painBadge, setPainBadge] = useState('Góc khuất lâm sàng');
@@ -352,6 +358,12 @@ export default function DirectRestorationEditor() {
   const [painNewSchoolFooter, setPainNewSchoolFooter] = useState('Thành quả: Triệt tiêu ê buốt, bảo tồn cấu trúc ngà sống dài lâu.');
 
   const [painCtaText, setPainCtaText] = useState('TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP');
+  const [painFormTitle, setPainFormTitle] = useState('');
+  const [painFormDesc, setPainFormDesc] = useState('');
+  const [painFormExtraHtml, setPainFormExtraHtml] = useState('');
+  const [painRedirectThanks, setPainRedirectThanks] = useState(false);
+  const [painTargetUrl, setPainTargetUrl] = useState('');
+  const [painResourceTitle, setPainResourceTitle] = useState('');
 
   // --- SECTION 3: 3 BƯỚC TỐI GIẢN ---
   const [stepsBadge, setStepsBadge] = useState('Quy trình lâm sàng chuẩn hóa');
@@ -489,6 +501,12 @@ export default function DirectRestorationEditor() {
   const [offerBadge, setOfferBadge] = useState('Đặc quyền đồng hành không thể từ chối');
   const [offerHeadline, setOfferHeadline] = useState('Gói giải pháp đồng bộ combo "Phục hồi sinh học MiCD - Chặn đứng ê buốt"');
   const [offerCtaText, setOfferCtaText] = useState('ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY');
+  const [offerFormTitle, setOfferFormTitle] = useState('');
+  const [offerFormDesc, setOfferFormDesc] = useState('');
+  const [offerFormExtraHtml, setOfferFormExtraHtml] = useState('');
+  const [offerRedirectThanks, setOfferRedirectThanks] = useState(false);
+  const [offerTargetUrl, setOfferTargetUrl] = useState('');
+  const [offerResourceTitle, setOfferResourceTitle] = useState('');
   const [offerCoreTitle, setOfferCoreTitle] = useState('Bộ 3 sản phẩm cốt lõi');
   const [coreProductImage, setCoreProductImage] = useState('/image/phuc-hoi-truc-tiep.webp');
   const [offerCoreProductsList, setOfferCoreProductsList] = useState<string[]>([
@@ -610,6 +628,12 @@ export default function DirectRestorationEditor() {
       if (d.hero.image) setHeroImage(d.hero.image);
       if (Array.isArray(d.hero.usps) && d.hero.usps.length > 0) setHeroUsps(d.hero.usps);
       if (d.hero.ctaText) setHeroCtaText(d.hero.ctaText);
+      if (d.hero.ctaFormTitle !== undefined) setHeroFormTitle(d.hero.ctaFormTitle);
+      if (d.hero.ctaFormDesc !== undefined) setHeroFormDesc(d.hero.ctaFormDesc);
+      if (d.hero.ctaFormExtraHtml !== undefined) setHeroFormExtraHtml(d.hero.ctaFormExtraHtml);
+      if (d.hero.ctaRedirectThanks !== undefined) setHeroRedirectThanks(Boolean(d.hero.ctaRedirectThanks));
+      if (d.hero.ctaTargetUrl !== undefined) setHeroTargetUrl(d.hero.ctaTargetUrl);
+      if (d.hero.ctaResourceTitle !== undefined) setHeroResourceTitle(d.hero.ctaResourceTitle);
     }
     if (d.painPoints) {
       if (d.painPoints.badge) setPainBadge(d.painPoints.badge);
@@ -653,6 +677,12 @@ export default function DirectRestorationEditor() {
         }
       }
       if (d.painPoints.ctaText) setPainCtaText(d.painPoints.ctaText);
+      if (d.painPoints.ctaFormTitle !== undefined) setPainFormTitle(d.painPoints.ctaFormTitle);
+      if (d.painPoints.ctaFormDesc !== undefined) setPainFormDesc(d.painPoints.ctaFormDesc);
+      if (d.painPoints.ctaFormExtraHtml !== undefined) setPainFormExtraHtml(d.painPoints.ctaFormExtraHtml);
+      if (d.painPoints.ctaRedirectThanks !== undefined) setPainRedirectThanks(Boolean(d.painPoints.ctaRedirectThanks));
+      if (d.painPoints.ctaTargetUrl !== undefined) setPainTargetUrl(d.painPoints.ctaTargetUrl);
+      if (d.painPoints.ctaResourceTitle !== undefined) setPainResourceTitle(d.painPoints.ctaResourceTitle);
     }
     if (d.stepsSection) {
       if (d.stepsSection.badge) setStepsBadge(d.stepsSection.badge);
@@ -758,6 +788,12 @@ export default function DirectRestorationEditor() {
         setOfferGuaranteesList(d.offer.guarantees);
       }
       if (d.offer.ctaText) setOfferCtaText(d.offer.ctaText);
+      if (d.offer.ctaFormTitle !== undefined) setOfferFormTitle(d.offer.ctaFormTitle);
+      if (d.offer.ctaFormDesc !== undefined) setOfferFormDesc(d.offer.ctaFormDesc);
+      if (d.offer.ctaFormExtraHtml !== undefined) setOfferFormExtraHtml(d.offer.ctaFormExtraHtml);
+      if (d.offer.ctaRedirectThanks !== undefined) setOfferRedirectThanks(Boolean(d.offer.ctaRedirectThanks));
+      if (d.offer.ctaTargetUrl !== undefined) setOfferTargetUrl(d.offer.ctaTargetUrl);
+      if (d.offer.ctaResourceTitle !== undefined) setOfferResourceTitle(d.offer.ctaResourceTitle);
     }
     if (Array.isArray(d.faqs) && d.faqs.length > 0) {
       setFaqsList(d.faqs);
@@ -1200,7 +1236,13 @@ export default function DirectRestorationEditor() {
         image: heroImage,
         imageSizeNote: heroImageSizeNote,
         usps: heroUsps,
-        ctaText: heroCtaText
+        ctaText: heroCtaText,
+        ctaFormTitle: heroFormTitle,
+        ctaFormDesc: heroFormDesc,
+        ctaFormExtraHtml: heroFormExtraHtml,
+        ctaRedirectThanks: heroRedirectThanks,
+        ctaTargetUrl: heroTargetUrl,
+        ctaResourceTitle: heroResourceTitle
       },
       painPoints: {
         badge: painBadge,
@@ -1236,7 +1278,13 @@ export default function DirectRestorationEditor() {
             footer: painNewSchoolFooter
           }
         },
-        ctaText: painCtaText
+        ctaText: painCtaText,
+        ctaFormTitle: painFormTitle,
+        ctaFormDesc: painFormDesc,
+        ctaFormExtraHtml: painFormExtraHtml,
+        ctaRedirectThanks: painRedirectThanks,
+        ctaTargetUrl: painTargetUrl,
+        ctaResourceTitle: painResourceTitle
       },
       stepsSection: {
         badge: stepsBadge,
@@ -1278,7 +1326,13 @@ export default function DirectRestorationEditor() {
         offerPrice: offerPrice,
         guaranteeTitle: offerGuaranteeTitle,
         guarantees: offerGuaranteesList,
-        ctaText: offerCtaText
+        ctaText: offerCtaText,
+        ctaFormTitle: offerFormTitle,
+        ctaFormDesc: offerFormDesc,
+        ctaFormExtraHtml: offerFormExtraHtml,
+        ctaRedirectThanks: offerRedirectThanks,
+        ctaTargetUrl: offerTargetUrl,
+        ctaResourceTitle: offerResourceTitle
       },
       faqs: faqsList,
       testimonials: {
@@ -1717,6 +1771,18 @@ export default function DirectRestorationEditor() {
               handleUpdateUsp={handleUpdateUsp}
               heroCtaText={heroCtaText}
               setHeroCtaText={setHeroCtaText}
+              formTitle={heroFormTitle}
+              setFormTitle={setHeroFormTitle}
+              formDesc={heroFormDesc}
+              setFormDesc={setHeroFormDesc}
+              formExtraHtml={heroFormExtraHtml}
+              setFormExtraHtml={setHeroFormExtraHtml}
+              redirectThanks={heroRedirectThanks}
+              setRedirectThanks={setHeroRedirectThanks}
+              targetUrl={heroTargetUrl}
+              setTargetUrl={setHeroTargetUrl}
+              resourceTitle={heroResourceTitle}
+              setResourceTitle={setHeroResourceTitle}
               uploadingTarget={uploadingTarget}
               handleUploadImageFile={handleUploadImageFile}
               handleUploadUspSvg={handleUploadUspSvg}
@@ -1781,6 +1847,18 @@ export default function DirectRestorationEditor() {
               setPainNewSchoolFooter={setPainNewSchoolFooter}
               painCtaText={painCtaText}
               setPainCtaText={setPainCtaText}
+              formTitle={painFormTitle}
+              setFormTitle={setPainFormTitle}
+              formDesc={painFormDesc}
+              setFormDesc={setPainFormDesc}
+              formExtraHtml={painFormExtraHtml}
+              setFormExtraHtml={setPainFormExtraHtml}
+              redirectThanks={painRedirectThanks}
+              setRedirectThanks={setPainRedirectThanks}
+              targetUrl={painTargetUrl}
+              setTargetUrl={setPainTargetUrl}
+              resourceTitle={painResourceTitle}
+              setResourceTitle={setPainResourceTitle}
               uploadingTarget={uploadingTarget}
               handleUploadImageFile={handleUploadImageFile}
             />
@@ -1852,6 +1930,18 @@ export default function DirectRestorationEditor() {
               setOfferHeadline={setOfferHeadline}
               offerCtaText={offerCtaText}
               setOfferCtaText={setOfferCtaText}
+              formTitle={offerFormTitle}
+              setFormTitle={setOfferFormTitle}
+              formDesc={offerFormDesc}
+              setFormDesc={setOfferFormDesc}
+              formExtraHtml={offerFormExtraHtml}
+              setFormExtraHtml={setOfferFormExtraHtml}
+              redirectThanks={offerRedirectThanks}
+              setRedirectThanks={setOfferRedirectThanks}
+              targetUrl={offerTargetUrl}
+              setTargetUrl={setOfferTargetUrl}
+              resourceTitle={offerResourceTitle}
+              setResourceTitle={setOfferResourceTitle}
               coreTitle={offerCoreTitle}
               setCoreTitle={setOfferCoreTitle}
               coreProductImage={coreProductImage}

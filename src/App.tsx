@@ -7,12 +7,15 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import DirectRestorationEditor from './pages/admin/DirectRestorationEditor';
 import IndirectRestorationEditor from './pages/admin/IndirectRestorationEditor';
 
+import ThanksPage from './pages/ThanksPage';
+
 export default function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<ShofuLanding />} />
         <Route path="/videc2026" element={<VidecLanding />} />
+        <Route path="/thanks" element={<ThanksPage />} />
         {/* Admin CMS Portal */}
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/editor/phuc-hoi-truc-tiep" element={<DirectRestorationEditor />} />

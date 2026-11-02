@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bold, Sparkles, Plus, Trash2, Upload, ShieldCheck, Zap, Coins, Eye, Gift, ArrowRight } from 'lucide-react';
 import { UspItem, applyFormat } from './types';
+import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
 
 interface Section1HeroEditorProps {
   badge: string;
@@ -18,6 +19,18 @@ interface Section1HeroEditorProps {
   setCtaText: React.Dispatch<React.SetStateAction<string>>;
   footerNote: string;
   setFooterNote: React.Dispatch<React.SetStateAction<string>>;
+  formTitle?: string;
+  setFormTitle?: React.Dispatch<React.SetStateAction<string>>;
+  formDesc?: string;
+  setFormDesc?: React.Dispatch<React.SetStateAction<string>>;
+  formExtraHtml?: string;
+  setFormExtraHtml?: React.Dispatch<React.SetStateAction<string>>;
+  redirectThanks?: boolean;
+  setRedirectThanks?: React.Dispatch<React.SetStateAction<boolean>>;
+  targetUrl?: string;
+  setTargetUrl?: React.Dispatch<React.SetStateAction<string>>;
+  resourceTitle?: string;
+  setResourceTitle?: React.Dispatch<React.SetStateAction<string>>;
   onUploadImage: (file: File, targetKey: string, onSuccess: (url: string) => void) => void;
   isUploadingImage: boolean;
   uploadingTarget: string;
@@ -39,6 +52,18 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
   setCtaText,
   footerNote,
   setFooterNote,
+  formTitle,
+  setFormTitle,
+  formDesc,
+  setFormDesc,
+  formExtraHtml,
+  setFormExtraHtml,
+  redirectThanks,
+  setRedirectThanks,
+  targetUrl,
+  setTargetUrl,
+  resourceTitle,
+  setResourceTitle,
   onUploadImage,
   isUploadingImage,
   uploadingTarget
@@ -241,33 +266,26 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
             </div>
           </div>
 
-          {/* CTA Button text & Footer note */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                Chữ trên nút CTA chính
-              </label>
-              <input
-                type="text"
-                value={ctaText}
-                onChange={(e) => setCtaText(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#00ADEF] text-sm font-bold outline-none"
-                placeholder="NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI"
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                Dòng ghi chú dưới CTA
-              </label>
-              <input
-                type="text"
-                value={footerNote}
-                onChange={(e) => setFooterNote(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#00ADEF] text-sm outline-none"
-                placeholder="Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor"
-              />
-            </div>
-          </div>
+          {/* Cấu hình Nút CTA Hero & Form Popup */}
+          <CtaFormConfigEditor
+            label="Nút CTA Hero (Đầu trang)"
+            ctaText={ctaText}
+            onChangeCtaText={setCtaText}
+            footerNote={footerNote}
+            onChangeFooterNote={setFooterNote}
+            formTitle={formTitle || ''}
+            onChangeFormTitle={(val) => setFormTitle && setFormTitle(val)}
+            formDesc={formDesc || ''}
+            onChangeFormDesc={(val) => setFormDesc && setFormDesc(val)}
+            formExtraHtml={formExtraHtml || ''}
+            onChangeFormExtraHtml={(val) => setFormExtraHtml && setFormExtraHtml(val)}
+            redirectThanks={redirectThanks || false}
+            onChangeRedirectThanks={(val) => setRedirectThanks && setRedirectThanks(val)}
+            targetUrl={targetUrl || ''}
+            onChangeTargetUrl={(val) => setTargetUrl && setTargetUrl(val)}
+            resourceTitle={resourceTitle || ''}
+            onChangeResourceTitle={(val) => setResourceTitle && setResourceTitle(val)}
+          />
         </div>
       </div>
 

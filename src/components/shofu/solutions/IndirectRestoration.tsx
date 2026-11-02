@@ -11,7 +11,7 @@ import {
   AlertCircle, ShieldAlert, DollarSign, Flame, Ban, XCircle, Activity, FileWarning
 } from 'lucide-react';
 
-const FaqItem = ({ question, answer }: { question: string, answer: React.ReactNode }) => {
+const FaqItem: React.FC<{ question: string; answer: React.ReactNode }> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white mb-4 transition-all duration-300">
@@ -187,6 +187,16 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
   const [content, setContent] = useState(overrideContent || defaultData);
   const [isCampaignModalOpen, setIsCampaignModalOpen] = useState(false);
   const [campaignModalTitle, setCampaignModalTitle] = useState('');
+  const [modalConfig, setModalConfig] = useState<{
+    title: string;
+    formTitle?: string;
+    formDescription?: string;
+    extraContentHtml?: string;
+    redirectThanks?: boolean;
+    targetUrl?: string;
+    resourceTitle?: string;
+    ctaId?: string;
+  }>({ title: '' });
 
   useEffect(() => {
     if (overrideContent) {
@@ -241,8 +251,23 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
     loadDynamicContent();
   }, []);
 
-  const openCampaignModal = (title: string) => {
-    setCampaignModalTitle(title);
+  const openCampaignModal = (config: string | {
+    title: string;
+    formTitle?: string;
+    formDescription?: string;
+    extraContentHtml?: string;
+    redirectThanks?: boolean;
+    targetUrl?: string;
+    resourceTitle?: string;
+    ctaId?: string;
+  }) => {
+    if (typeof config === 'string') {
+      setCampaignModalTitle(config);
+      setModalConfig({ title: config });
+    } else {
+      setCampaignModalTitle(config.title);
+      setModalConfig(config);
+    }
     setIsCampaignModalOpen(true);
   };
 
@@ -301,7 +326,16 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
             </ul>
 
             <button 
-              onClick={() => openCampaignModal(content.hero?.ctaText || "Nhận mẫu thử BBX 2ml & Ưu đãi")}
+              onClick={() => openCampaignModal({
+                title: content.hero?.ctaText || "Nhận mẫu thử BBX 2ml & Ưu đãi",
+                formTitle: content.hero?.ctaFormTitle,
+                formDescription: content.hero?.ctaFormDesc,
+                extraContentHtml: content.hero?.ctaFormExtraHtml,
+                redirectThanks: content.hero?.ctaRedirectThanks,
+                targetUrl: content.hero?.ctaTargetUrl,
+                resourceTitle: content.hero?.ctaResourceTitle,
+                ctaId: "hero_cta"
+              })}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -355,7 +389,16 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
 
         <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-             onClick={() => openCampaignModal(content.painPoints?.ctaText || "TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO")}
+            onClick={() => openCampaignModal({
+              title: content.painPoints?.ctaText || "TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO",
+              formTitle: content.painPoints?.ctaFormTitle,
+              formDescription: content.painPoints?.ctaFormDesc,
+              extraContentHtml: content.painPoints?.ctaFormExtraHtml,
+              redirectThanks: content.painPoints?.ctaRedirectThanks,
+              targetUrl: content.painPoints?.ctaTargetUrl,
+              resourceTitle: content.painPoints?.ctaResourceTitle,
+              ctaId: "pain_points_cta"
+            })}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -527,7 +570,16 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
 
         <div className="mt-4 md:mt-12 text-center">
           <button 
-            onClick={() => openCampaignModal(content.goldStandard?.ctaText || "Yêu cầu tư vấn")}
+            onClick={() => openCampaignModal({
+              title: content.goldStandard?.ctaText || "Yêu cầu tư vấn",
+              formTitle: content.goldStandard?.ctaFormTitle,
+              formDescription: content.goldStandard?.ctaFormDesc,
+              extraContentHtml: content.goldStandard?.ctaFormExtraHtml,
+              redirectThanks: content.goldStandard?.ctaRedirectThanks,
+              targetUrl: content.goldStandard?.ctaTargetUrl,
+              resourceTitle: content.goldStandard?.ctaResourceTitle,
+              ctaId: "gold_standard_cta"
+            })}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -753,7 +805,16 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
         
         <div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-            onClick={() => openCampaignModal(content.evidence?.ctaText || "Tư vấn giải pháp tối ưu chi phí")}
+            onClick={() => openCampaignModal({
+              title: content.evidence?.ctaText || "Tư vấn giải pháp tối ưu chi phí",
+              formTitle: content.evidence?.ctaFormTitle,
+              formDescription: content.evidence?.ctaFormDesc,
+              extraContentHtml: content.evidence?.ctaFormExtraHtml,
+              redirectThanks: content.evidence?.ctaRedirectThanks,
+              targetUrl: content.evidence?.ctaTargetUrl,
+              resourceTitle: content.evidence?.ctaResourceTitle,
+              ctaId: "evidence_cta"
+            })}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -997,7 +1058,16 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
 
           <div className="mt-12 md:mt-16 text-center relative z-10">
             <button 
-              onClick={() => openCampaignModal(content.workflow?.ctaText || "Trải nghiệm phác đồ 3 bước")}
+              onClick={() => openCampaignModal({
+                title: content.workflow?.ctaText || "Trải nghiệm phác đồ 3 bước",
+                formTitle: (content.workflow as any)?.ctaFormTitle,
+                formDescription: (content.workflow as any)?.ctaFormDesc,
+                extraContentHtml: (content.workflow as any)?.ctaFormExtraHtml,
+                redirectThanks: (content.workflow as any)?.ctaRedirectThanks,
+                targetUrl: (content.workflow as any)?.ctaTargetUrl,
+                resourceTitle: (content.workflow as any)?.ctaResourceTitle,
+                ctaId: "workflow_cta"
+              })}
               className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
             >
               <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
@@ -1087,16 +1157,23 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
         </div>
         {/* Re-open w-[90%] container for the button */}
         <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
-<div className="mt-12 md:mt-16 text-center relative z-10">
           <button 
-             onClick={() => openCampaignModal(content.testimonials?.ctaText || "Gia nhập cộng đồng MiCD")}
+            onClick={() => openCampaignModal({
+              title: content.testimonials?.ctaText || "Gia nhập cộng đồng MiCD",
+              formTitle: content.testimonials?.ctaFormTitle,
+              formDescription: content.testimonials?.ctaFormDesc,
+              extraContentHtml: content.testimonials?.ctaFormExtraHtml,
+              redirectThanks: content.testimonials?.ctaRedirectThanks,
+              targetUrl: content.testimonials?.ctaTargetUrl,
+              resourceTitle: content.testimonials?.ctaResourceTitle,
+              ctaId: "testimonials_cta"
+            })}
             className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-sky-500 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
           >
             <Gift className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0" />
             <span className="truncate">{content.testimonials?.ctaText || "Gia nhập cộng đồng MiCD"}</span>
             <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
           </button>
-        </div>
         </div>
       </section>
 
@@ -1190,7 +1267,16 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
 
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full">
                 <button 
-                   onClick={() => openCampaignModal(content.offer?.ctaText || "Đăng ký combo 'Giomer không ê buốt'")}
+                  onClick={() => openCampaignModal({
+                    title: content.offer?.ctaText || "Đăng ký combo 'Giomer không ê buốt'",
+                    formTitle: content.offer?.ctaFormTitle,
+                    formDescription: content.offer?.ctaFormDesc,
+                    extraContentHtml: content.offer?.ctaFormExtraHtml,
+                    redirectThanks: content.offer?.ctaRedirectThanks,
+                    targetUrl: content.offer?.ctaTargetUrl,
+                    resourceTitle: content.offer?.ctaResourceTitle,
+                    ctaId: "offer_combo_cta"
+                  })}
                   className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-[#00ADEF] text-white px-3 sm:px-8 py-3 sm:py-4 rounded-full font-mono text-[10.5px] min-[375px]:text-xs sm:text-sm font-bold uppercase tracking-tight sm:tracking-wider hover:bg-white hover:text-slate-900 hover:shadow-xl hover:shadow-white/20 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto whitespace-nowrap flex-nowrap"
                 >
                   <span className="truncate">{content.offer?.ctaText || "ĐĂNG KÝ COMBO \"GIOMER KHÔNG Ê BUỐT\""}</span>
@@ -1240,6 +1326,13 @@ export function IndirectRestoration({ overrideContent }: { overrideContent?: any
         isOpen={isCampaignModalOpen}
         onClose={() => setIsCampaignModalOpen(false)}
         title={campaignModalTitle}
+        formTitle={modalConfig.formTitle}
+        formDescription={modalConfig.formDescription}
+        extraContentHtml={modalConfig.extraContentHtml}
+        redirectThanks={modalConfig.redirectThanks}
+        targetUrl={modalConfig.targetUrl}
+        resourceTitle={modalConfig.resourceTitle}
+        ctaId={modalConfig.ctaId}
       />
     </div>
   );

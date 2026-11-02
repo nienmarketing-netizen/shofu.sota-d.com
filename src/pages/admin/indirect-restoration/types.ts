@@ -84,6 +84,12 @@ export interface WorkflowData {
   protocolImage: string;
   steps: WorkflowStepItem[];
   ctaText: string;
+  ctaFormTitle?: string;
+  ctaFormDesc?: string;
+  ctaFormExtraHtml?: string;
+  ctaRedirectThanks?: boolean;
+  ctaTargetUrl?: string;
+  ctaResourceTitle?: string;
 }
 
 export interface IndirectRestorationData {
@@ -96,6 +102,12 @@ export interface IndirectRestorationData {
     usps: UspItem[];
     ctaText: string;
     footerNote?: string;
+    ctaFormTitle?: string;
+    ctaFormDesc?: string;
+    ctaFormExtraHtml?: string;
+    ctaRedirectThanks?: boolean;
+    ctaTargetUrl?: string;
+    ctaResourceTitle?: string;
   };
   painPoints: {
     badge: string;
@@ -103,6 +115,12 @@ export interface IndirectRestorationData {
     description: string;
     items: PainPointItem[];
     ctaText: string;
+    ctaFormTitle?: string;
+    ctaFormDesc?: string;
+    ctaFormExtraHtml?: string;
+    ctaRedirectThanks?: boolean;
+    ctaTargetUrl?: string;
+    ctaResourceTitle?: string;
   };
   goldStandard: {
     badge: string;
@@ -112,6 +130,12 @@ export interface IndirectRestorationData {
     product2: ProductItem;
     diagram: DiagramConfig;
     ctaText: string;
+    ctaFormTitle?: string;
+    ctaFormDesc?: string;
+    ctaFormExtraHtml?: string;
+    ctaRedirectThanks?: boolean;
+    ctaTargetUrl?: string;
+    ctaResourceTitle?: string;
   };
   evidence: {
     badge: string;
@@ -144,8 +168,21 @@ export interface IndirectRestorationData {
       solutionImage: string;
     };
     ctaText: string;
+    ctaFormTitle?: string;
+    ctaFormDesc?: string;
+    ctaFormExtraHtml?: string;
+    ctaRedirectThanks?: boolean;
+    ctaTargetUrl?: string;
+    ctaResourceTitle?: string;
   };
-  workflow: WorkflowData;
+  workflow: WorkflowData & {
+    ctaFormTitle?: string;
+    ctaFormDesc?: string;
+    ctaFormExtraHtml?: string;
+    ctaRedirectThanks?: boolean;
+    ctaTargetUrl?: string;
+    ctaResourceTitle?: string;
+  };
   offer: {
     badge: string;
     headline: string;
@@ -159,12 +196,24 @@ export interface IndirectRestorationData {
     offerPrice: string;
     ctaText: string;
     guarantee: string;
+    ctaFormTitle?: string;
+    ctaFormDesc?: string;
+    ctaFormExtraHtml?: string;
+    ctaRedirectThanks?: boolean;
+    ctaTargetUrl?: string;
+    ctaResourceTitle?: string;
   };
   testimonials: {
     headline: string;
     ctaText: string;
     row1: TestimonialItem[];
     row2: TestimonialItem[];
+    ctaFormTitle?: string;
+    ctaFormDesc?: string;
+    ctaFormExtraHtml?: string;
+    ctaRedirectThanks?: boolean;
+    ctaTargetUrl?: string;
+    ctaResourceTitle?: string;
   };
   faqs: FaqItem[];
 }

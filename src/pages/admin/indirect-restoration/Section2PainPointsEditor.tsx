@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bold, Plus, Trash2, AlertTriangle, Layers, Unlink, Banknote, Eye, ArrowRight } from 'lucide-react';
 import { PainPointItem, applyFormat } from './types';
+import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
 
 interface Section2PainPointsEditorProps {
   badge?: string;
@@ -13,6 +14,18 @@ interface Section2PainPointsEditorProps {
   setItems: React.Dispatch<React.SetStateAction<PainPointItem[]>>;
   ctaText: string;
   setCtaText: React.Dispatch<React.SetStateAction<string>>;
+  formTitle?: string;
+  setFormTitle?: React.Dispatch<React.SetStateAction<string>>;
+  formDesc?: string;
+  setFormDesc?: React.Dispatch<React.SetStateAction<string>>;
+  formExtraHtml?: string;
+  setFormExtraHtml?: React.Dispatch<React.SetStateAction<string>>;
+  redirectThanks?: boolean;
+  setRedirectThanks?: React.Dispatch<React.SetStateAction<boolean>>;
+  targetUrl?: string;
+  setTargetUrl?: React.Dispatch<React.SetStateAction<string>>;
+  resourceTitle?: string;
+  setResourceTitle?: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> = ({
@@ -21,7 +34,19 @@ export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> =
   items,
   setItems,
   ctaText,
-  setCtaText
+  setCtaText,
+  formTitle,
+  setFormTitle,
+  formDesc,
+  setFormDesc,
+  formExtraHtml,
+  setFormExtraHtml,
+  redirectThanks,
+  setRedirectThanks,
+  targetUrl,
+  setTargetUrl,
+  resourceTitle,
+  setResourceTitle
 }) => {
   const handleAddItem = () => {
     const newId = `pain-${Date.now()}`;
@@ -113,19 +138,24 @@ export const Section2PainPointsEditor: React.FC<Section2PainPointsEditorProps> =
             </div>
           </div>
 
-          {/* CTA Text */}
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-              Nút kêu gọi hành động (CTA)
-            </label>
-            <input
-              type="text"
-              value={ctaText}
-              onChange={(e) => setCtaText(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:border-[#00ADEF] text-sm font-bold outline-none"
-              placeholder="TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO"
-            />
-          </div>
+          {/* Cấu hình Nút CTA & Form Popup */}
+          <CtaFormConfigEditor
+            label="Nút CTA Section 2 (Nỗi đau lâm sàng)"
+            ctaText={ctaText}
+            onChangeCtaText={setCtaText}
+            formTitle={formTitle || ''}
+            onChangeFormTitle={(val) => setFormTitle && setFormTitle(val)}
+            formDesc={formDesc || ''}
+            onChangeFormDesc={(val) => setFormDesc && setFormDesc(val)}
+            formExtraHtml={formExtraHtml || ''}
+            onChangeFormExtraHtml={(val) => setFormExtraHtml && setFormExtraHtml(val)}
+            redirectThanks={redirectThanks || false}
+            onChangeRedirectThanks={(val) => setRedirectThanks && setRedirectThanks(val)}
+            targetUrl={targetUrl || ''}
+            onChangeTargetUrl={(val) => setTargetUrl && setTargetUrl(val)}
+            resourceTitle={resourceTitle || ''}
+            onChangeResourceTitle={(val) => setResourceTitle && setResourceTitle(val)}
+          />
         </div>
       </div>
 

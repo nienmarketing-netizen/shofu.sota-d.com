@@ -7,3 +7,13 @@ coverage/
 .env*
 !.env.example
 .git_corrupted/
+*.sh
+*.cjs
+test*.js
+debug-*.js
+get-*.js
+screenshot*.png
+test*.png
+tmp_*.txt
+*.txt
+body.html

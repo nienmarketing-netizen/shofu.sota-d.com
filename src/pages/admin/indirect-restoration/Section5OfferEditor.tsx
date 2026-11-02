@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bold, Plus, Trash2, Upload, Gift, DollarSign, ShieldCheck, Eye, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { applyFormat } from './types';
+import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
 
 interface Section5OfferEditorProps {
   badge: string;
@@ -27,6 +28,18 @@ interface Section5OfferEditorProps {
   setCtaText: React.Dispatch<React.SetStateAction<string>>;
   guarantee: string;
   setGuarantee: React.Dispatch<React.SetStateAction<string>>;
+  formTitle?: string;
+  setFormTitle?: React.Dispatch<React.SetStateAction<string>>;
+  formDesc?: string;
+  setFormDesc?: React.Dispatch<React.SetStateAction<string>>;
+  formExtraHtml?: string;
+  setFormExtraHtml?: React.Dispatch<React.SetStateAction<string>>;
+  redirectThanks?: boolean;
+  setRedirectThanks?: React.Dispatch<React.SetStateAction<boolean>>;
+  targetUrl?: string;
+  setTargetUrl?: React.Dispatch<React.SetStateAction<string>>;
+  resourceTitle?: string;
+  setResourceTitle?: React.Dispatch<React.SetStateAction<string>>;
   onUploadImage: (file: File, targetKey: string, onSuccess: (url: string) => void) => void;
   isUploadingImage: boolean;
   uploadingTarget: string;
@@ -57,6 +70,18 @@ export const Section5OfferEditor: React.FC<Section5OfferEditorProps> = ({
   setCtaText,
   guarantee,
   setGuarantee,
+  formTitle,
+  setFormTitle,
+  formDesc,
+  setFormDesc,
+  formExtraHtml,
+  setFormExtraHtml,
+  redirectThanks,
+  setRedirectThanks,
+  targetUrl,
+  setTargetUrl,
+  resourceTitle,
+  setResourceTitle,
   onUploadImage,
   isUploadingImage,
   uploadingTarget
@@ -179,18 +204,26 @@ export const Section5OfferEditor: React.FC<Section5OfferEditorProps> = ({
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-                Chữ nút đăng ký
-              </label>
-              <input
-                type="text"
-                value={ctaText}
-                onChange={(e) => setCtaText(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#00ADEF] text-sm font-bold outline-none"
-              />
-            </div>
+          {/* Cấu hình Nút CTA & Form Popup */}
+          <CtaFormConfigEditor
+            label="Nút CTA Gói Ưu Đãi Combo (Section 5)"
+            ctaText={ctaText}
+            onChangeCtaText={setCtaText}
+            formTitle={formTitle || ''}
+            onChangeFormTitle={(val) => setFormTitle && setFormTitle(val)}
+            formDesc={formDesc || ''}
+            onChangeFormDesc={(val) => setFormDesc && setFormDesc(val)}
+            formExtraHtml={formExtraHtml || ''}
+            onChangeFormExtraHtml={(val) => setFormExtraHtml && setFormExtraHtml(val)}
+            redirectThanks={redirectThanks || false}
+            onChangeRedirectThanks={(val) => setRedirectThanks && setRedirectThanks(val)}
+            targetUrl={targetUrl || ''}
+            onChangeTargetUrl={(val) => setTargetUrl && setTargetUrl(val)}
+            resourceTitle={resourceTitle || ''}
+            onChangeResourceTitle={(val) => setResourceTitle && setResourceTitle(val)}
+          />
+
+          <div className="grid grid-cols-1 gap-4">
             <div>
               <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
                 Cam kết bảo chứng
