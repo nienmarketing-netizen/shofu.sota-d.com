@@ -18,6 +18,7 @@ import { CampaignModal } from '../../CampaignModal';
 import { CtaButton } from '../../ui/CtaButton';
 import defaultData from '../../../data/preventive-dentistry.json';
 import { PreventiveDentistryData } from '../../../pages/admin/preventive-dentistry/types';
+import { renderUspIcon } from '../../../pages/admin/preventive-dentistry/Section1HeroEditor';
 
 const AccordionItem: React.FC<{ question: string; answer: React.ReactNode; isOpen: boolean; onClick: () => void }> = ({ question, answer, isOpen, onClick }) => {
   return (
@@ -222,8 +223,8 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
             <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {hero.usps.map((usp, idx) => (
                 <li key={usp.id || idx} className="flex flex-row sm:flex-col items-start sm:items-center text-left sm:text-center gap-4 sm:gap-3 p-4 sm:p-5 rounded-xl border border-slate-200/80 bg-white/70 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-red-50 flex items-center justify-center shrink-0">
-                    <span className="text-xl sm:text-2xl">{usp.iconName}</span>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-red-50 flex items-center justify-center shrink-0 text-[#C43838]">
+                    {renderUspIcon(usp.iconName, "w-5 h-5 sm:w-6 sm:h-6 text-[#C43838]")}
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 text-base mb-1 leading-snug">{usp.title}</h4>

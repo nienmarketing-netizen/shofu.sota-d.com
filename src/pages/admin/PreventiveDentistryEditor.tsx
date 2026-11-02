@@ -736,42 +736,47 @@ export default function PreventiveDentistryEditor() {
         </div>
       )}
 
-      {/* Main Navigation Tabs */}
-      <nav className="bg-white border-b border-slate-200 px-4 sm:px-6 overflow-x-auto no-scrollbar">
-        <div className="flex gap-1 min-w-max py-2">
-          {[
-            { id: 'hero', label: '1. Hero & USPs', icon: Sparkles },
-            { id: 'pain-points', label: '2. Điểm mù lâm sàng', icon: AlertTriangle },
-            { id: 'bioactive', label: '3. Triết lý MiCD & 6 Ion', icon: Zap },
-            { id: 'core-products', label: '4. Sản phẩm cốt lõi', icon: Package },
-            { id: 'evidence', label: '5. Bằng chứng & Đánh giá', icon: ShieldCheck },
-            { id: 'offer', label: '6. Gói ưu đãi tháng', icon: Gift },
-            { id: 'lead-magnet', label: '7. Tài liệu & Mẫu thử', icon: BookOpen },
-            { id: 'faq', label: '8. FAQ Giải đáp', icon: HelpCircle },
-            { id: 'preview', label: 'Xem trước trang', icon: Eye }
-          ].map(tab => {
-            const Icon = tab.icon;
-            const isActive = activeTab === tab.id;
-            return (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
-                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                  isActive 
-                    ? 'bg-emerald-50 text-emerald-800 border border-emerald-300 font-bold shadow-sm'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                }`}
-              >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-emerald-600' : 'text-slate-400'}`} />
-                <span>{tab.label}</span>
-              </button>
-            );
-          })}
-        </div>
-      </nav>
+      {/* Main Workspace Layout: Sticky Left Sidebar + Content */}
+      <div className="flex-1 flex flex-col lg:flex-row w-full max-w-7xl mx-auto items-start">
+        {/* Main Navigation Tabs */}
+        <nav className="w-full lg:w-64 xl:w-72 shrink-0 bg-white lg:bg-transparent border-b lg:border-b-0 lg:border-r border-slate-200 lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-5rem)] overflow-y-auto p-3 sm:p-4 z-30">
+          <div className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 px-2 hidden lg:block">
+            Mục chỉnh sửa
+          </div>
+          <div className="flex lg:flex-col gap-1.5 overflow-x-auto lg:overflow-x-visible no-scrollbar pb-1 lg:pb-0">
+            {[
+              { id: 'hero', label: '1. Hero & USPs', icon: Sparkles },
+              { id: 'pain-points', label: '2. Điểm mù lâm sàng', icon: AlertTriangle },
+              { id: 'bioactive', label: '3. Triết lý MiCD & 6 Ion', icon: Zap },
+              { id: 'core-products', label: '4. Sản phẩm cốt lõi', icon: Package },
+              { id: 'evidence', label: '5. Bằng chứng & Đánh giá', icon: ShieldCheck },
+              { id: 'offer', label: '6. Gói ưu đãi tháng', icon: Gift },
+              { id: 'lead-magnet', label: '7. Tài liệu & Mẫu thử', icon: BookOpen },
+              { id: 'faq', label: '8. FAQ Giải đáp', icon: HelpCircle },
+              { id: 'preview', label: 'Xem trước trang', icon: Eye }
+            ].map(tab => {
+              const Icon = tab.icon;
+              const isActive = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id as any)}
+                  className={`w-full text-left inline-flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 lg:shrink ${
+                    isActive 
+                      ? 'bg-emerald-600 text-white font-bold shadow-sm shadow-emerald-700/20' 
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70 bg-white lg:bg-white/70 border lg:border-transparent border-slate-200'
+                  }`}
+                >
+                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-slate-400'}`} />
+                  <span className="truncate">{tab.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </nav>
 
-      {/* Tab Contents Container */}
-      <main className="flex-1 max-w-6xl w-full mx-auto p-4 sm:p-6 lg:p-8">
+        {/* Tab Contents Container */}
+        <main className="flex-1 min-w-0 p-4 sm:p-6 lg:p-8 w-full">
         {isLoadingInitialData && (
           <div className="flex items-center justify-center p-8 text-slate-500 gap-2">
             <RefreshCw className="w-5 h-5 animate-spin text-emerald-600" />
@@ -1059,6 +1064,7 @@ export default function PreventiveDentistryEditor() {
           </div>
         )}
       </main>
+      </div>
     </div>
   );
 }
