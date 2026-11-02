@@ -25,7 +25,13 @@
         "description": "Chống sâu răng tái phát nhờ cơ chế phóng thích và tự sạc lại 6 loại ion của hạt độn S-PRG."
       }
     ],
-    "ctaText": "MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG"
+    "ctaText": "MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG",
+    "ctaFormTitle": "MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG - Test phát xem sao",
+    "ctaFormDesc": "Mô tả ngắn dưới tiêu đề form nhé! ",
+    "ctaFormExtraHtml": "<strong>Chúng ta có gì đây?</strong>\n<p>\n<strong><span class=\"text-[#00ADEF] font-bold\">Test thử text đổi màu.</span></strong>\n<p>\n1. Này kia xem sao.",
+    "ctaRedirectThanks": true,
+    "ctaTargetUrl": "https://drive.google.com/drive/folders/1XEywgp-J_jRb64QLEpZEVPhfsmlX3tKd",
+    "ctaResourceTitle": "Test nút tải tài liệu"
   },
   "painPoints": {
     "badge": "Góc khuất lâm sàng",
@@ -111,7 +117,13 @@
         "footer": "Thành quả: Triệt tiêu ê buốt, bảo tồn cấu trúc ngà sống dài lâu."
       }
     },
-    "ctaText": "TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP"
+    "ctaText": "TƯ VẤN GIẢI PHÁP PHỤC HỒI TRỰC TIẾP",
+    "ctaFormTitle": "",
+    "ctaFormDesc": "",
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "stepsSection": {
     "badge": "Quy trình lâm sàng chuẩn hóa",
@@ -281,7 +293,13 @@
       "Bảo chứng 2 (Bảo hiểm thói quen): Trong 30 ngày, nếu thao tác không hợp, hỗ trợ thu hồi sản phẩm chưa dùng và quy đổi vật tư khác giá trị tương đương.",
       "Bảo chứng 3 (Bảo hành tồn kho 90 ngày): Đổi mới 1-1 ngay lập tức nếu lỗi đông cứng khi mở nắp trong vòng 90 ngày."
     ],
-    "ctaText": "ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY"
+    "ctaText": "ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY",
+    "ctaFormTitle": "",
+    "ctaFormDesc": "",
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "faqs": [
     {
