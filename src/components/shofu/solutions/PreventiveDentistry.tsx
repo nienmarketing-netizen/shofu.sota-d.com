@@ -56,14 +56,15 @@ const FeedbackCard: React.FC<{ item: any }> = ({ item }) => (
   <div className="w-[320px] sm:w-[400px] shrink-0 bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:bg-slate-800 transition-colors">
      <div>
        <Quote className="w-8 h-8 text-slate-500 mb-4 opacity-50" />
-       <p className="font-body text-slate-300 text-sm sm:text-base leading-relaxed italic mb-6">
-         "{item.quote}"
-       </p>
+       <p 
+         className="font-body text-slate-300 text-sm sm:text-base leading-relaxed italic mb-6"
+         dangerouslySetInnerHTML={{ __html: item.quote ? (item.quote.startsWith('"') ? item.quote : `"${item.quote}"`) : '' }}
+       />
      </div>
      <div className="flex items-center gap-4">
         <div className="text-left">
-           <p className="font-bold text-white text-sm">{item.name}</p>
-           <p className="text-slate-400 text-xs mt-0.5">{item.title}</p>
+           <p className="font-bold text-white text-sm" dangerouslySetInnerHTML={{ __html: item.name || '' }} />
+           <p className="text-slate-400 text-xs mt-0.5" dangerouslySetInnerHTML={{ __html: item.title || '' }} />
         </div>
      </div>
   </div>
@@ -568,9 +569,10 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
               className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[2.75rem] text-white leading-[1.3] mb-6 tracking-tight"
               dangerouslySetInnerHTML={{ __html: evidence.headline }}
             />
-            <p className="font-body text-base sm:text-lg text-slate-300 max-w-2xl mx-auto italic">
-              {evidence.quote}
-            </p>
+            <p 
+              className="font-body text-base sm:text-lg text-slate-300 max-w-2xl mx-auto italic"
+              dangerouslySetInnerHTML={{ __html: evidence.quote }}
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -579,7 +581,10 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
               <div className="w-16 h-16 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center border border-blue-500/30">
                 <BookOpen className="w-8 h-8" />
               </div>
-              <h3 className="font-heading font-bold text-lg sm:text-2xl text-white">{evidence.study1.title}</h3>
+              <h3 
+                className="font-heading font-bold text-lg sm:text-2xl text-white"
+                dangerouslySetInnerHTML={{ __html: evidence.study1.title }}
+              />
               <ul className="space-y-4">
                 {evidence.study1.points.map((pt, idx) => (
                   <li key={idx} className="flex gap-3 items-start">
@@ -595,7 +600,10 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
               <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center border border-emerald-500/30">
                 <Microscope className="w-8 h-8" />
               </div>
-              <h3 className="font-heading font-bold text-lg sm:text-2xl text-white">{evidence.study2.title}</h3>
+              <h3 
+                className="font-heading font-bold text-lg sm:text-2xl text-white"
+                dangerouslySetInnerHTML={{ __html: evidence.study2.title }}
+              />
               <p 
                 className="text-slate-300 font-body text-sm sm:text-base leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: evidence.study2.description }}
@@ -605,7 +613,10 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
 
           {/* Testimonials */}
           <div className="text-center mb-8">
-            <h3 className="font-heading font-bold text-xl sm:text-2xl text-white">{evidence.testimonialsHeadline}</h3>
+            <h3 
+              className="font-heading font-bold text-xl sm:text-2xl text-white"
+              dangerouslySetInnerHTML={{ __html: evidence.testimonialsHeadline }}
+            />
           </div>
           <div className="w-full relative py-4 mask-image-horizontal">
             <div className="flex w-max animate-marquee-slow hover:[animation-play-state:paused] gap-6">
