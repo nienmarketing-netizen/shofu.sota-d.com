@@ -36,12 +36,15 @@ import {
   ScientificPillarItem,
   TestimonialItem,
   CommitmentItem,
+  KeyMetricItem,
   FaqItem
 } from './comprehensive-solution/types';
 import { Section1HeroEditor } from './comprehensive-solution/Section1HeroEditor';
 import { Section2PainPointsEditor } from './comprehensive-solution/Section2PainPointsEditor';
 import { Section3BioactiveEditor } from './comprehensive-solution/Section3BioactiveEditor';
 import { Section4EcosystemEditor } from './comprehensive-solution/Section4EcosystemEditor';
+import { Section5EvidenceEditor } from './comprehensive-solution/Section5EvidenceEditor';
+import { Section6OfferEditor } from './comprehensive-solution/Section6OfferEditor';
 
 export default function ComprehensiveSolutionEditor() {
   // Authentication Gate
@@ -136,6 +139,7 @@ export default function ComprehensiveSolutionEditor() {
   // Section 5: Evidence
   const [evidenceHeadline, setEvidenceHeadline] = useState<string>(() => initialData.evidence.headline || 'Dữ liệu khoa học');
   const [evidenceSubheadline, setEvidenceSubheadline] = useState<string>(() => initialData.evidence.subheadline || '');
+  const [keyStats, setKeyStats] = useState<KeyMetricItem[]>(() => initialData.evidence.keyStats || []);
   const [scientificPillars, setScientificPillars] = useState<ScientificPillarItem[]>(() => initialData.evidence.scientificPillars || []);
   const [testimonialsHeadline, setTestimonialsHeadline] = useState<string>(() => initialData.evidence.testimonialsHeadline || 'Đánh giá từ chuyên gia lâm sàng quốc tế & trong nước');
   const [testimonialsRow1, setTestimonialsRow1] = useState<TestimonialItem[]>(() => initialData.evidence.testimonialsRow1 || []);
@@ -143,11 +147,17 @@ export default function ComprehensiveSolutionEditor() {
   const [evidenceCtaText, setEvidenceCtaText] = useState<string>(() => initialData.evidence.ctaText || 'Gia nhập cộng đồng MiCD');
   const [evidenceFormTitle, setEvidenceFormTitle] = useState<string>(() => initialData.evidence.ctaFormTitle || '');
   const [evidenceFormDesc, setEvidenceFormDesc] = useState<string>(() => initialData.evidence.ctaFormDesc || '');
+  const [evidenceFormExtraHtml, setEvidenceFormExtraHtml] = useState<string>(() => initialData.evidence.ctaFormExtraHtml || '');
+  const [evidenceRedirectThanks, setEvidenceRedirectThanks] = useState<boolean>(() => initialData.evidence.ctaRedirectThanks || false);
+  const [evidenceTargetUrl, setEvidenceTargetUrl] = useState<string>(() => initialData.evidence.ctaTargetUrl || '');
+  const [evidenceResourceTitle, setEvidenceResourceTitle] = useState<string>(() => initialData.evidence.ctaResourceTitle || '');
 
   // Section 6: Offer
   const [offerBadge, setOfferBadge] = useState<string>(() => initialData.offer.badge || 'Ưu đãi độc quyền trong tháng này');
   const [offerHeadline, setOfferHeadline] = useState<string>(() => initialData.offer.headline || '');
   const [offerSubheadline, setOfferSubheadline] = useState<string>(() => initialData.offer.subheadline || '');
+  const [countdownNotice, setCountdownNotice] = useState<string>(() => initialData.offer.countdownNotice || 'Giới hạn đúng 15 phòng khám đăng ký sớm nhất trong tháng');
+  const [savingsPercent, setSavingsPercent] = useState<string>(() => initialData.offer.savingsPercent || 'Tiết kiệm 60%');
   const [offerCoreBox, setOfferCoreBox] = useState(() => initialData.offer.coreBox);
   const [offerGiftBox, setOfferGiftBox] = useState(() => initialData.offer.giftBox);
   const [offerOriginalPrice, setOfferOriginalPrice] = useState<string>(() => initialData.offer.originalPrice || '13.735.000đ');
@@ -156,6 +166,10 @@ export default function ComprehensiveSolutionEditor() {
   const [offerCtaText, setOfferCtaText] = useState<string>(() => initialData.offer.ctaText || 'Đăng ký giữ chỗ Ưu đãi ngay');
   const [offerFormTitle, setOfferFormTitle] = useState<string>(() => initialData.offer.ctaFormTitle || '');
   const [offerFormDesc, setOfferFormDesc] = useState<string>(() => initialData.offer.ctaFormDesc || '');
+  const [offerFormExtraHtml, setOfferFormExtraHtml] = useState<string>(() => initialData.offer.ctaFormExtraHtml || '');
+  const [offerRedirectThanks, setOfferRedirectThanks] = useState<boolean>(() => initialData.offer.ctaRedirectThanks || false);
+  const [offerTargetUrl, setOfferTargetUrl] = useState<string>(() => initialData.offer.ctaTargetUrl || '');
+  const [offerResourceTitle, setOfferResourceTitle] = useState<string>(() => initialData.offer.ctaResourceTitle || '');
 
   // Section 7: FAQ
   const [faqHeadline, setFaqHeadline] = useState<string>(() => initialData.faq.headline || 'Giải đáp hoài nghi lâm sàng');
@@ -227,6 +241,7 @@ export default function ComprehensiveSolutionEditor() {
       evidence: {
         headline: evidenceHeadline,
         subheadline: evidenceSubheadline,
+        keyStats,
         scientificPillars,
         testimonialsHeadline,
         testimonialsRow1,
@@ -234,12 +249,17 @@ export default function ComprehensiveSolutionEditor() {
         ctaText: evidenceCtaText,
         ctaFormTitle: evidenceFormTitle,
         ctaFormDesc: evidenceFormDesc,
-        ctaRedirectThanks: false
+        ctaFormExtraHtml: evidenceFormExtraHtml,
+        ctaRedirectThanks: evidenceRedirectThanks,
+        ctaTargetUrl: evidenceTargetUrl,
+        ctaResourceTitle: evidenceResourceTitle
       },
       offer: {
         badge: offerBadge,
         headline: offerHeadline,
         subheadline: offerSubheadline,
+        countdownNotice,
+        savingsPercent,
         coreBox: offerCoreBox,
         giftBox: offerGiftBox,
         originalPrice: offerOriginalPrice,
@@ -248,7 +268,10 @@ export default function ComprehensiveSolutionEditor() {
         ctaText: offerCtaText,
         ctaFormTitle: offerFormTitle,
         ctaFormDesc: offerFormDesc,
-        ctaRedirectThanks: false
+        ctaFormExtraHtml: offerFormExtraHtml,
+        ctaRedirectThanks: offerRedirectThanks,
+        ctaTargetUrl: offerTargetUrl,
+        ctaResourceTitle: offerResourceTitle
       },
       faq: {
         headline: faqHeadline,
@@ -322,6 +345,7 @@ export default function ComprehensiveSolutionEditor() {
     if (data.evidence) {
       if (data.evidence.headline) setEvidenceHeadline(data.evidence.headline);
       if (data.evidence.subheadline) setEvidenceSubheadline(data.evidence.subheadline);
+      if (data.evidence.keyStats) setKeyStats(data.evidence.keyStats);
       if (data.evidence.scientificPillars) setScientificPillars(data.evidence.scientificPillars);
       if (data.evidence.testimonialsHeadline) setTestimonialsHeadline(data.evidence.testimonialsHeadline);
       if (data.evidence.testimonialsRow1) setTestimonialsRow1(data.evidence.testimonialsRow1);
@@ -329,11 +353,17 @@ export default function ComprehensiveSolutionEditor() {
       if (data.evidence.ctaText) setEvidenceCtaText(data.evidence.ctaText);
       if (data.evidence.ctaFormTitle) setEvidenceFormTitle(data.evidence.ctaFormTitle);
       if (data.evidence.ctaFormDesc) setEvidenceFormDesc(data.evidence.ctaFormDesc);
+      if (data.evidence.ctaFormExtraHtml !== undefined) setEvidenceFormExtraHtml(data.evidence.ctaFormExtraHtml);
+      if (data.evidence.ctaRedirectThanks !== undefined) setEvidenceRedirectThanks(data.evidence.ctaRedirectThanks);
+      if (data.evidence.ctaTargetUrl !== undefined) setEvidenceTargetUrl(data.evidence.ctaTargetUrl);
+      if (data.evidence.ctaResourceTitle !== undefined) setEvidenceResourceTitle(data.evidence.ctaResourceTitle);
     }
     if (data.offer) {
       if (data.offer.badge) setOfferBadge(data.offer.badge);
       if (data.offer.headline) setOfferHeadline(data.offer.headline);
       if (data.offer.subheadline) setOfferSubheadline(data.offer.subheadline);
+      if (data.offer.countdownNotice !== undefined) setCountdownNotice(data.offer.countdownNotice);
+      if (data.offer.savingsPercent !== undefined) setSavingsPercent(data.offer.savingsPercent);
       if (data.offer.coreBox) setOfferCoreBox(data.offer.coreBox);
       if (data.offer.giftBox) setOfferGiftBox(data.offer.giftBox);
       if (data.offer.originalPrice) setOfferOriginalPrice(data.offer.originalPrice);
@@ -342,6 +372,10 @@ export default function ComprehensiveSolutionEditor() {
       if (data.offer.ctaText) setOfferCtaText(data.offer.ctaText);
       if (data.offer.ctaFormTitle) setOfferFormTitle(data.offer.ctaFormTitle);
       if (data.offer.ctaFormDesc) setOfferFormDesc(data.offer.ctaFormDesc);
+      if (data.offer.ctaFormExtraHtml !== undefined) setOfferFormExtraHtml(data.offer.ctaFormExtraHtml);
+      if (data.offer.ctaRedirectThanks !== undefined) setOfferRedirectThanks(data.offer.ctaRedirectThanks);
+      if (data.offer.ctaTargetUrl !== undefined) setOfferTargetUrl(data.offer.ctaTargetUrl);
+      if (data.offer.ctaResourceTitle !== undefined) setOfferResourceTitle(data.offer.ctaResourceTitle);
     }
     if (data.faq) {
       if (data.faq.headline) setFaqHeadline(data.faq.headline);
@@ -710,7 +744,7 @@ export default function ComprehensiveSolutionEditor() {
                 CMS: Giải pháp toàn diện (Master Ecosystem)
               </h1>
               <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-red-100 text-[#8C2828] border border-red-200">
-                Giai đoạn 3: MiCD & 5 Vũ khí
+                Giai đoạn 4: Bằng chứng 13 năm & Gói ưu đãi
               </span>
             </div>
             <p className="text-xs text-slate-500 font-mono hidden sm:block">
@@ -955,187 +989,78 @@ export default function ComprehensiveSolutionEditor() {
 
           {/* TAB 5: EVIDENCE */}
           {activeTab === 'evidence' && (
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-                <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
-                  <h2 className="font-heading font-extrabold text-lg text-slate-900 flex items-center gap-2">
-                    <Microscope className="w-5 h-5 text-emerald-600" />
-                    Section 5: Bằng chứng 13 năm ĐH Florida & Y văn quốc tế
-                  </h2>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                    6 Luận điểm
-                  </span>
-                </div>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Tiêu đề Section
-                    </label>
-                    <input
-                      type="text"
-                      value={evidenceHeadline}
-                      onChange={(e) => setEvidenceHeadline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Đoạn dẫn nhập
-                    </label>
-                    <textarea
-                      rows={2}
-                      value={evidenceSubheadline}
-                      onChange={(e) => setEvidenceSubheadline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* 6 Scientific Pillars Accordion Preview */}
-              <div className="bg-slate-900 text-white rounded-2xl p-6 border border-slate-800 shadow-md space-y-4">
-                <h3 className="font-heading font-bold text-base text-white mb-2 flex items-center justify-between">
-                  <span className="text-cyan-400">6 Trụ cột dữ liệu y văn & nghiên cứu lâm sàng</span>
-                  <span className="text-xs font-mono text-slate-400">{scientificPillars.length} đề tài</span>
-                </h3>
-
-                <div className="space-y-3">
-                  {scientificPillars.map((pillar) => (
-                    <div key={pillar.id} className="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
-                      <div className="flex items-center gap-2.5 mb-2">
-                        <span className="text-xl">{pillar.icon}</span>
-                        <h4 className="font-heading font-bold text-sm text-white">
-                          {pillar.title}
-                        </h4>
-                      </div>
-                      <ul className="space-y-1.5 pl-6 list-disc text-xs text-slate-300">
-                        {pillar.points.map((pt, pIdx) => (
-                          <li key={pIdx} className="leading-relaxed">{pt}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <Section5EvidenceEditor
+              evidenceHeadline={evidenceHeadline}
+              setEvidenceHeadline={setEvidenceHeadline}
+              evidenceSubheadline={evidenceSubheadline}
+              setEvidenceSubheadline={setEvidenceSubheadline}
+              keyStats={keyStats}
+              setKeyStats={setKeyStats}
+              scientificPillars={scientificPillars}
+              setScientificPillars={setScientificPillars}
+              testimonialsHeadline={testimonialsHeadline}
+              setTestimonialsHeadline={setTestimonialsHeadline}
+              testimonialsRow1={testimonialsRow1}
+              setTestimonialsRow1={setTestimonialsRow1}
+              testimonialsRow2={testimonialsRow2}
+              setTestimonialsRow2={setTestimonialsRow2}
+              evidenceCtaText={evidenceCtaText}
+              setEvidenceCtaText={setEvidenceCtaText}
+              evidenceFormTitle={evidenceFormTitle}
+              setEvidenceFormTitle={setEvidenceFormTitle}
+              evidenceFormDesc={evidenceFormDesc}
+              setEvidenceFormDesc={setEvidenceFormDesc}
+              evidenceFormExtraHtml={evidenceFormExtraHtml}
+              setEvidenceFormExtraHtml={setEvidenceFormExtraHtml}
+              evidenceRedirectThanks={evidenceRedirectThanks}
+              setEvidenceRedirectThanks={setEvidenceRedirectThanks}
+              evidenceTargetUrl={evidenceTargetUrl}
+              setEvidenceTargetUrl={setEvidenceTargetUrl}
+              evidenceResourceTitle={evidenceResourceTitle}
+              setEvidenceResourceTitle={setEvidenceResourceTitle}
+            />
           )}
 
           {/* TAB 6: OFFER */}
           {activeTab === 'offer' && (
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-                <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
-                  <h2 className="font-heading font-extrabold text-lg text-slate-900 flex items-center gap-2">
-                    <Gift className="w-5 h-5 text-[#8C2828]" />
-                    Section 6: Gói ưu đãi & Quà tặng VIP (Master Ecosystem)
-                  </h2>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-amber-50 text-amber-700 border border-amber-200">
-                    Combo Độc Quyền
-                  </span>
-                </div>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Badge ưu đãi
-                    </label>
-                    <input
-                      type="text"
-                      value={offerBadge}
-                      onChange={(e) => setOfferBadge(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Tiêu đề gói ưu đãi
-                    </label>
-                    <input
-                      type="text"
-                      value={offerHeadline}
-                      onChange={(e) => setOfferHeadline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Dòng chú thích giới hạn số lượng
-                    </label>
-                    <input
-                      type="text"
-                      value={offerSubheadline}
-                      onChange={(e) => setOfferSubheadline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Giá gốc (Gạch chân)
-                      </label>
-                      <input
-                        type="text"
-                        value={offerOriginalPrice}
-                        onChange={(e) => setOfferOriginalPrice(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm font-bold focus:outline-none focus:border-[#8C2828]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Mức đầu tư trải nghiệm (Giá ưu đãi)
-                      </label>
-                      <input
-                        type="text"
-                        value={offerSalePrice}
-                        onChange={(e) => setOfferSalePrice(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-emerald-700 text-sm font-extrabold focus:outline-none focus:border-[#8C2828]"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Box 1 & 2 Preview */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
-                  <h4 className="font-heading font-bold text-sm text-slate-900 mb-3 text-[#8C2828]">
-                    {offerCoreBox.title}
-                  </h4>
-                  <ul className="space-y-2 text-xs text-slate-600">
-                    {offerCoreBox.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="bg-slate-900 text-white rounded-2xl p-5 border border-slate-800 shadow-sm">
-                  <div className="flex items-center justify-between mb-3">
-                    <h4 className="font-heading font-bold text-sm text-amber-400">
-                      {offerGiftBox.title}
-                    </h4>
-                    <span className="text-[10px] bg-amber-400 text-slate-950 font-bold px-2 py-0.5 rounded-full">
-                      {offerGiftBox.badge}
-                    </span>
-                  </div>
-                  <ul className="space-y-2 text-xs text-slate-300">
-                    {offerGiftBox.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <Gift className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <Section6OfferEditor
+              offerBadge={offerBadge}
+              setOfferBadge={setOfferBadge}
+              offerHeadline={offerHeadline}
+              setOfferHeadline={setOfferHeadline}
+              offerSubheadline={offerSubheadline}
+              setOfferSubheadline={setOfferSubheadline}
+              countdownNotice={countdownNotice}
+              setCountdownNotice={setCountdownNotice}
+              offerOriginalPrice={offerOriginalPrice}
+              setOfferOriginalPrice={setOfferOriginalPrice}
+              offerSalePrice={offerSalePrice}
+              setOfferSalePrice={setOfferSalePrice}
+              savingsPercent={savingsPercent}
+              setSavingsPercent={setSavingsPercent}
+              offerCoreBox={offerCoreBox}
+              setOfferCoreBox={setOfferCoreBox}
+              offerGiftBox={offerGiftBox}
+              setOfferGiftBox={setOfferGiftBox}
+              commitments={commitments}
+              setCommitments={setCommitments}
+              offerCtaText={offerCtaText}
+              setOfferCtaText={setOfferCtaText}
+              offerFormTitle={offerFormTitle}
+              setOfferFormTitle={setOfferFormTitle}
+              offerFormDesc={offerFormDesc}
+              setOfferFormDesc={setOfferFormDesc}
+              offerFormExtraHtml={offerFormExtraHtml}
+              setOfferFormExtraHtml={setOfferFormExtraHtml}
+              offerRedirectThanks={offerRedirectThanks}
+              setOfferRedirectThanks={setOfferRedirectThanks}
+              offerTargetUrl={offerTargetUrl}
+              setOfferTargetUrl={setOfferTargetUrl}
+              offerResourceTitle={offerResourceTitle}
+              setOfferResourceTitle={setOfferResourceTitle}
+              uploadingTarget={uploadingTarget}
+              handleUploadImageFile={handleUploadImageFile}
+            />
           )}
 
           {/* TAB 7: FAQ */}

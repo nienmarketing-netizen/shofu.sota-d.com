@@ -57,6 +57,14 @@ export interface FaqItem {
   a: string;
 }
 
+export interface KeyMetricItem {
+  id: string;
+  value: string;
+  label: string;
+  description: string;
+  badge?: string;
+}
+
 export interface ComprehensiveSolutionData {
   hero: {
     badge: string;
@@ -118,10 +126,17 @@ export interface ComprehensiveSolutionData {
   evidence: {
     headline: string;
     subheadline: string;
+    keyStats?: KeyMetricItem[];
     scientificPillars: ScientificPillarItem[];
     testimonialsHeadline: string;
     testimonialsRow1: TestimonialItem[];
     testimonialsRow2: TestimonialItem[];
+    expertQuote?: {
+      quote: string;
+      name: string;
+      title: string;
+      avatar?: string;
+    };
     ctaText: string;
     ctaFormTitle?: string;
     ctaFormDesc?: string;
@@ -134,6 +149,8 @@ export interface ComprehensiveSolutionData {
     badge: string;
     headline: string;
     subheadline: string;
+    countdownNotice?: string;
+    savingsPercent?: string;
     coreBox: {
       title: string;
       image: string;
