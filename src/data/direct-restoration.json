@@ -26,12 +26,12 @@
       }
     ],
     "ctaText": "MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG",
-    "ctaFormTitle": "MỞ KHÓA COMBO PHỤC HỒI MiCD & QUÀ TẶNG - Test phát xem sao",
-    "ctaFormDesc": "Mô tả ngắn dưới tiêu đề form nhé! ",
-    "ctaFormExtraHtml": "<strong>Chúng ta có gì đây?</strong>\n<p>\n<strong><span class=\"text-[#00ADEF] font-bold\">Test thử text đổi màu.</span></strong>\n<p>\n1. Này kia xem sao.",
-    "ctaRedirectThanks": true,
-    "ctaTargetUrl": "https://drive.google.com/drive/folders/1XEywgp-J_jRb64QLEpZEVPhfsmlX3tKd",
-    "ctaResourceTitle": "Test nút tải tài liệu"
+    "ctaFormTitle": "",
+    "ctaFormDesc": "",
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "painPoints": {
     "badge": "Góc khuất lâm sàng",
