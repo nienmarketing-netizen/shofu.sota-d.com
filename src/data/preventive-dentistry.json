@@ -1,7 +1,7 @@
 {
   "hero": {
-    "badge": "✦ Triết lý nha khoa phòng ngừa MiCD & trị liệu sinh học từ Shofu (Nhật Bản) ✦",
-    "headline": "Làm chủ giải pháp nha khoa phòng ngừa theo triết lý MiCD",
+    "badge": "✦ Triết lý nha khoa phòng ngừa MiCD & trị liệu sinh học từ Shofu (Nhật Bản) ✦ - test",
+    "headline": "Làm chủ giải pháp nha khoa phòng ngừa theo triết lý MiCD - <span class=\"text-[#C43838] font-bold\">Test thử</span>",
     "body": "PRG Barrier Coat tạo lớp phủ giúp che kín ống ngà lộ và giảm ê buốt, với thời gian bảo vệ lên đến 6 tháng. BeautiSealant trám bít hố rãnh bằng primer tự xoi mòn, không cần bước xoi mòn bằng axit phosphoric. Công nghệ S‑PRG hỗ trợ phóng thích ion, góp phần bảo vệ bề mặt răng.",
     "image": "/image/Shofu-giai-phap-nha-khoa-phong-ngua.webp",
     "imageSizeNote": "Khuyến nghị: 1100 × 900 px (PNG / WebP tách nền, dung lượng < 350KB)",
@@ -26,10 +26,13 @@
       }
     ],
     "ctaText": "NHẬN ƯU ĐÃI GÓI PHÒNG NGỪA CHỦ ĐỘNG",
-    "secondaryCtaText": "NHẬN SỔ TAY PHÁC ĐỒ PHÒNG NGỪA",
+    "secondaryCtaText": "NHẬN SỔ TAY PHÁC ĐỒ PHÒNG NGỪA - test",
     "ctaFormTitle": "Đăng Ký Nhận Ưu Đãi Gói Phòng Ngừa Chủ Động",
     "ctaFormDesc": "Để lại thông tin để chuyên viên Sota-D liên hệ tư vấn và gửi báo giá ưu đãi độc quyền.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "painPoints": {
     "badge": "Điểm mù lâm sàng",
@@ -60,7 +63,10 @@
     "ctaText": "TÌM HIỂU GIẢI PHÁP KHẮC PHỤC NGAY",
     "ctaFormTitle": "Tìm Hiểu Giải Pháp Nha Khoa Phòng Ngừa Shofu",
     "ctaFormDesc": "Nhận phác đồ ứng dụng vật liệu sinh học ngăn ngừa ê buốt và sâu răng tái phát.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "bioactive": {
     "badge": "Triết lý MiCD",
@@ -98,7 +104,10 @@
     "ctaText": "TƯ VẤN ỨNG DỤNG CÔNG NGHỆ GIOMER",
     "ctaFormTitle": "Tư Vấn Ứng Dụng Công Nghệ Giomer & Hạt Độn S-PRG",
     "ctaFormDesc": "Đăng ký để được chuyên viên Sota-D hỗ trợ tư vấn chuyên sâu về vật liệu sinh học Shofu.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "coreProducts": {
     "headline": "Giải pháp phòng ngừa chủ động từ Shofu",
@@ -149,7 +158,10 @@
     "ctaText": "NHẬN BÁO GIÁ VÀ TƯ VẤN SẢN PHẨM",
     "ctaFormTitle": "Nhận Báo Giá & Tư Vấn Bộ Đôi Phòng Ngừa Shofu",
     "ctaFormDesc": "Để lại thông tin nhận báo giá PRG Barrier Coat & BeautiSealant.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "evidence": {
     "headline": "Bằng chứng y văn vững chắc",
@@ -223,7 +235,10 @@
     "ctaText": "ỨNG DỤNG NGAY CHO PHÒNG KHÁM",
     "ctaFormTitle": "Đăng Ký Tư Vấn Ứng Dụng Vật Liệu Sinh Học Shofu",
     "ctaFormDesc": "Đội ngũ chuyên môn Sota-D sẽ liên hệ tư vấn giải pháp phù hợp với mô hình phòng khám của Bác sĩ.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "offer": {
     "badge": "Ưu đãi độc quyền trong tháng này",
@@ -252,7 +267,10 @@
     "ctaText": "ĐĂNG KÝ MUA NGAY",
     "ctaFormTitle": "Đặt Mua Gói Khởi Động Nha Khoa Phòng Ngừa - 2.545.000đ",
     "ctaFormDesc": "Để lại thông tin để nhân viên Sota-D xác nhận đơn hàng và gửi tặng kèm trọn bộ quà tặng đặc quyền.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "leadMagnet": {
     "headline": "Dành cho Bác sĩ cần thêm thông tin",
@@ -303,6 +321,9 @@
     "ctaText": "BÁC SĨ CÒN CÂU HỎI? NHẬN TƯ VẤN NGAY",
     "ctaFormTitle": "Bác sĩ còn câu hỏi? Nhận tư vấn ngay",
     "ctaFormDesc": "Chuyên viên kỹ thuật Sota-D sẽ trực tiếp trao đổi và giải đáp chi tiết cùng Bác sĩ.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   }
 }
