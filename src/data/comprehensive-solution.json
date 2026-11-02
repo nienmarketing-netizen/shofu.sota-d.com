@@ -1,6 +1,6 @@
 {
   "hero": {
-    "badge": "Chuẩn hóa lâm sàng cùng hệ sinh thái Giomer 360° – Triết lý MiCD từ Shofu (Nhật Bản)",
+    "badge": "Chuẩn hóa lâm sàng cùng hệ sinh thái Giomer 360° – Triết lý MiCD từ Shofu (Nhật Bản) - test",
     "headline": "Dập tắt ám ảnh bảo hành cùng hệ sinh thái trị liệu sinh học Giomer 360°",
     "subheadline": "Bác sĩ chỉnh khớp chuẩn xác, sửa soạn bờ hoàn tất khít sát, cô lập đàng hoàng... nhưng bệnh nhân vẫn than phiền vì ê buốt sau trám xoang II, rớt mặt dán sứ Veneer, hoặc gây tổn thương mô nướu do dọn xi măng kẽ. Đã đến lúc nâng cấp toàn bộ \"đạn dược\" lâm sàng: Thay thế các vật liệu \"trơ\" thụ động cũ kỹ bằng Hệ sinh thái Trị liệu Sinh học Giomer 360° – Bảo vệ mô răng thật bền vững và dập tắt ám ảnh bảo hành!",
     "image": "/image/shofu-giai-phap-toan-dien-5-san-pham-pc.webp",
@@ -29,7 +29,10 @@
     "secondaryCtaText": "Nhận E-Guide triệt tiêu ê buốt",
     "ctaFormTitle": "Sở hữu gói Master Ecosystem - Tài trợ 100% quà tặng",
     "ctaFormDesc": "Để lại thông tin để chuyên viên Sota-D liên hệ tư vấn và gửi báo giá ưu đãi độc quyền.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "painPoints": {
     "badge": "Điểm mù lâm sàng",
@@ -65,7 +68,10 @@
     "ctaText": "Khắc phục điểm mù lâm sàng ngay",
     "ctaFormTitle": "Nhận giải pháp khắc phục điểm mù lâm sàng",
     "ctaFormDesc": "Đăng ký nhận giải pháp xử lý triệt để 4 điểm mù lâm sàng từ Sota-D.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "bioactive": {
     "badge": "Bước ngoặt tư duy",
@@ -102,7 +108,10 @@
     "ctaText": "Nâng cấp vật liệu sinh học S-PRG",
     "ctaFormTitle": "Nâng cấp vật liệu sinh học S-PRG",
     "ctaFormDesc": "Tư vấn ứng dụng công nghệ hạt độn Giomer 6 ion cho phòng khám.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "coreProducts": {
     "headline": "Hệ sinh thái 5 vũ khí cốt lõi",
@@ -167,11 +176,15 @@
     "ctaText": "Khám phá trọn bộ Hệ sinh thái Giomer",
     "ctaFormTitle": "Nhận báo giá hệ sinh thái Giomer 360",
     "ctaFormDesc": "Để lại thông tin để chuyên viên Sota-D gửi bảng giá chi tiết và hướng dẫn sử dụng 5 sản phẩm.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "evidence": {
     "headline": "Dữ liệu khoa học",
     "subheadline": "Bằng chứng y văn & bảo chứng lâm sàng độc lập chứng minh hiệu quả tuyệt đối của hệ sinh thái Giomer 360°.",
+    "keyStats": [],
     "scientificPillars": [
       {
         "id": 1,
@@ -293,12 +306,17 @@
     "ctaText": "Gia nhập cộng đồng MiCD",
     "ctaFormTitle": "Gia nhập cộng đồng MiCD",
     "ctaFormDesc": "Kết nối với hơn 5.000 Bác sĩ và chuyên gia thực hành triết lý MiCD trên toàn quốc.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "offer": {
     "badge": "Ưu đãi độc quyền trong tháng này",
     "headline": "Gói chuyển đổi: Master Ecosystem \"Hệ sinh thái Giomer 360°\"",
     "subheadline": "(Chương trình hỗ trợ chuẩn hóa phòng khám từ Sota-D – Giới hạn đúng 15 phòng khám đăng ký sớm nhất)",
+    "countdownNotice": "Giới hạn đúng 15 phòng khám đăng ký sớm nhất trong tháng",
+    "savingsPercent": "Tiết kiệm 60%",
     "coreBox": {
       "title": "Bộ 5 sản phẩm cốt lõi",
       "image": "/image/shofu-giai-phap-toan-dien-5-san-pham.webp",
@@ -342,7 +360,10 @@
     "ctaText": "Đăng ký giữ chỗ Ưu đãi ngay",
     "ctaFormTitle": "Đăng ký nhận Ưu đãi Master Ecosystem",
     "ctaFormDesc": "Giữ 1 trong 15 suất hỗ trợ tài trợ quà tặng đặc quyền và giá dùng thử trải nghiệm.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   },
   "faq": {
     "headline": "Giải đáp hoài nghi lâm sàng",
@@ -391,6 +412,9 @@
     "ctaText": "Bác sĩ còn câu hỏi? Nhận tư vấn ngay",
     "ctaFormTitle": "Nhận tư vấn chuyên sâu 1:1",
     "ctaFormDesc": "Đặt lịch tư vấn kỹ thuật trực tiếp cùng Chuyên gia vật liệu Sota-D.",
-    "ctaRedirectThanks": false
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
   }
 }
