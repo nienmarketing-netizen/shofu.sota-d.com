@@ -26,13 +26,7 @@
       }
     ],
     "ctaText": "NHẬN MẪU THỬ BBX 2ml & ƯU ĐÃI",
-    "footerNote": "Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor",
-    "ctaFormTitle": "",
-    "ctaFormDesc": "",
-    "ctaFormExtraHtml": "",
-    "ctaRedirectThanks": false,
-    "ctaTargetUrl": "",
-    "ctaResourceTitle": ""
+    "footerNote": "Trọn gói giải pháp bảo chứng bởi JADA & Dental Advisor"
   },
   "painPoints": {
     "badge": "Thực trạng lâm sàng",
@@ -58,13 +52,7 @@
         "description": "Vòi trộn Automix <strong class=\"text-red-400\">lãng phí 0.25g - 0.44g xi măng</strong> kẹt lại mỗi lần bơm, gây hao hụt chi phí vật liệu trong mỗi ca gắn. Cộng thêm hàng tá chai Primer sứ lỉnh kỉnh dễ bay hơi làm <strong class=\"text-red-400\">gia tăng chi phí điều trị trên mỗi ca</strong>."
       }
     ],
-    "ctaText": "TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO",
-    "ctaFormTitle": "",
-    "ctaFormDesc": "",
-    "ctaFormExtraHtml": "",
-    "ctaRedirectThanks": false,
-    "ctaTargetUrl": "",
-    "ctaResourceTitle": ""
+    "ctaText": "TƯ VẤN GIẢI PHÁP TRIỆT TIÊU RỦI RO"
   },
   "goldStandard": {
     "badge": "Tiêu chuẩn vàng mới",
@@ -124,13 +112,7 @@
         "<strong>Bảo vệ sinh học:</strong> Hạt độn S-PRG ngăn chặn vi khuẩn xâm nhập vi kẽ ống ngà, bảo vệ cùi răng sau khi gắn."
       ]
     },
-    "ctaText": "Yêu cầu tư vấn",
-    "ctaFormTitle": "",
-    "ctaFormDesc": "",
-    "ctaFormExtraHtml": "",
-    "ctaRedirectThanks": false,
-    "ctaTargetUrl": "",
-    "ctaResourceTitle": ""
+    "ctaText": "Yêu cầu tư vấn"
   },
   "evidence": {
     "badge": "Bảo chứng y văn & Hiệu suất",
@@ -167,13 +149,7 @@
       "solutionDescription": "<strong class=\"text-slate-900\">Chuẩn hóa quy trình</strong>, <strong class=\"text-[#00ADEF]\">làm chủ lượng vật tư</strong> sử dụng, <strong class=\"text-slate-900\">cắt giảm chi phí</strong> dán gắn về mức tối thiểu và giữ lại <strong class=\"text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded font-bold\">nguồn lợi nhuận khổng lồ</strong> cho phòng khám.",
       "solutionImage": "/images/tiet-kiem-800tr-voi-beautilink-SA.webp?v=1788332482055"
     },
-    "ctaText": "Tư vấn giải pháp tối ưu chi phí",
-    "ctaFormTitle": "",
-    "ctaFormDesc": "",
-    "ctaFormExtraHtml": "",
-    "ctaRedirectThanks": false,
-    "ctaTargetUrl": "",
-    "ctaResourceTitle": ""
+    "ctaText": "Tư vấn giải pháp tối ưu chi phí"
   },
   "workflow": {
     "badge": "Triệt tiêu sai số lâm sàng & tài chính",
@@ -260,13 +236,7 @@
     "originalPrice": "3.250.000đ",
     "offerPrice": "1.497.000vnđ",
     "ctaText": "ĐĂNG KÝ COMBO \"GIOMER KHÔNG Ê BUỐT\"",
-    "guarantee": "Hoàn tiền 100% nếu Bác sĩ không hài lòng.",
-    "ctaFormTitle": "",
-    "ctaFormDesc": "",
-    "ctaFormExtraHtml": "",
-    "ctaRedirectThanks": false,
-    "ctaTargetUrl": "",
-    "ctaResourceTitle": ""
+    "guarantee": "Hoàn tiền 100% nếu Bác sĩ không hài lòng."
   },
   "testimonials": {
     "headline": "<span class=\"text-[#00ADEF]\">Hàng ngàn nha sĩ và chuyên gia</span> đã chọn",
@@ -358,13 +328,7 @@
         "role": "Nha khoa Cao cấp, Brazil",
         "text": "\"Màng keo dán siêu mỏng giúp việc gắn các mặt dán veneer trở nên chính xác tuyệt đối mà không sợ cộm khớp hay làm đổi màu phục hình sứ.\""
       }
-    ],
-    "ctaFormTitle": "",
-    "ctaFormDesc": "",
-    "ctaFormExtraHtml": "",
-    "ctaRedirectThanks": false,
-    "ctaTargetUrl": "",
-    "ctaResourceTitle": ""
+    ]
   },
   "faqs": [
     {

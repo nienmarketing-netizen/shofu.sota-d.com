@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { CheckCircle2, Download, ArrowLeft, Phone, ExternalLink, Sparkles } from 'lucide-react';
+import { CheckCircle2, Download, ArrowLeft, Phone, ExternalLink } from 'lucide-react';
 
 export default function ThanksPage() {
   const [searchParams] = useSearchParams();
@@ -26,20 +26,26 @@ export default function ThanksPage() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col justify-between font-sans selection:bg-[#00ADEF] selection:text-white">
       {/* Header bar */}
-      <header className="w-full bg-white border-b border-slate-200 py-4 px-6 flex items-center justify-between shadow-sm">
-        <Link to="/" className="flex items-center gap-2 text-slate-900 font-heading font-black text-lg tracking-tight hover:text-[#00ADEF] transition-colors">
-          <span className="w-8 h-8 rounded-lg bg-[#00ADEF] flex items-center justify-center text-white font-bold text-sm">
-            S
-          </span>
-          <span>SHOFU <span className="text-[#00ADEF]">SOTA-D</span></span>
-        </Link>
-        <Link 
-          to="/" 
-          className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Về trang chủ</span>
-        </Link>
+      <header className="w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-3 shadow-sm sticky top-0 z-50">
+        <div className="w-[90%] lg:w-[80%] mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <Link to="/" className="hover:opacity-80 transition-opacity">
+              <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Sota-D%20logo%20(1).png" alt="Sota-D" className="h-6 sm:h-8 object-contain" />
+            </Link>
+            <div className="w-[1px] h-5 sm:h-6 bg-slate-300"></div>
+            <Link to="/" className="hover:opacity-80 transition-opacity">
+              <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Logo_Shofu%20(1).png" alt="Shofu" className="h-6 sm:h-8 object-contain" />
+            </Link>
+          </div>
+
+          <Link 
+            to="/" 
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full bg-slate-100 text-slate-700 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-slate-200 transition-colors shadow-sm"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>TRỞ VỀ TRANG CHỦ</span>
+          </Link>
+        </div>
       </header>
 
       {/* Main Content */}
@@ -51,12 +57,11 @@ export default function ThanksPage() {
           </div>
 
           {/* Heading */}
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-[#00ADEF] text-xs font-bold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
-            Đăng ký thành công
+          <span className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-sky-50 text-[#00ADEF] text-xs sm:text-sm font-semibold tracking-wide mb-3">
+            Sota-D đã nhận được thông tin của Quý Bác sĩ
           </span>
-          <h1 className="font-heading font-black text-2xl sm:text-3xl text-slate-900 mb-3 tracking-tight">
-            Cảm Ơn Quý Bác Sĩ!
+          <h1 className="font-heading font-black text-2xl sm:text-3xl text-slate-900 mb-3 tracking-tight uppercase">
+            CẢM ƠN QUÝ BÁC SĨ!
           </h1>
           <p className="font-body text-slate-600 text-sm sm:text-base mb-6 max-w-lg mx-auto leading-relaxed">
             Hệ thống đã ghi nhận thông tin đăng ký cho mục <strong className="text-slate-900 font-semibold">"{ctaName}"</strong>. Đội ngũ chuyên môn Sota-D sẽ liên hệ hỗ trợ Bác sĩ trong thời gian sớm nhất.
