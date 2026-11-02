@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface UspItem {
   id: string;
   iconName: string;
@@ -163,3 +165,48 @@ export interface ComprehensiveSolutionData {
     ctaResourceTitle?: string;
   };
 }
+
+export const applyFormat = (
+  tag: 'strong' | 'cyan' | 'red' | 'amber' | 'br',
+  setter: React.Dispatch<React.SetStateAction<string>>,
+  textareaId?: string
+) => {
+  const el = textareaId ? (document.getElementById(textareaId) as HTMLTextAreaElement | null) : null;
+  if (el) {
+    const start = el.selectionStart;
+    const end = el.selectionEnd;
+    const val = el.value;
+    const selected = val.substring(start, end);
+    let replacement = '';
+    if (tag === 'strong') replacement = `<strong>${selected || 'chữ in đậm'}</strong>`;
+    else if (tag === 'cyan') replacement = `<span class="text-[#00ADEF] font-bold">${selected || 'chữ xanh'}</span>`;
+    else if (tag === 'red') replacement = `<span class="text-[#8C2828] font-bold">${selected || 'chữ đỏ'}</span>`;
+    else if (tag === 'amber') replacement = `<span class="text-slate-900 bg-amber-400 px-1.5 py-0.5 rounded font-bold">${selected || 'nổi bật'}</span>`;
+    else if (tag === 'br') replacement = `<br/>\n`;
+
+    const newVal = val.substring(0, start) + replacement + val.substring(end);
+    setter(newVal);
+    setTimeout(() => {
+      el.focus();
+      const cursor = start + replacement.length;
+      el.setSelectionRange(cursor, cursor);
+    }, 20);
+    return;
+  }
+
+  const selection = window.getSelection()?.toString();
+  if (tag === 'br') {
+    setter((prev) => prev + '<br/>\n');
+    return;
+  }
+  if (!selection) {
+    alert('Vui lòng bôi đen đoạn chữ cần định dạng trước khi bấm nút.');
+    return;
+  }
+  let wrapped = '';
+  if (tag === 'strong') wrapped = `<strong>${selection}</strong>`;
+  if (tag === 'cyan') wrapped = `<span class="text-[#00ADEF] font-bold">${selection}</span>`;
+  if (tag === 'red') wrapped = `<span class="text-[#8C2828] font-bold">${selection}</span>`;
+  if (tag === 'amber') wrapped = `<span class="text-slate-900 bg-amber-400 px-1.5 py-0.5 rounded font-bold">${selection}</span>`;
+  setter((prev) => prev.replace(selection, wrapped));
+};

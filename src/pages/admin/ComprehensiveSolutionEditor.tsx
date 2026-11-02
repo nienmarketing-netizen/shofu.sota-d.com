@@ -38,6 +38,8 @@ import {
   CommitmentItem,
   FaqItem
 } from './comprehensive-solution/types';
+import { Section1HeroEditor } from './comprehensive-solution/Section1HeroEditor';
+import { Section2PainPointsEditor } from './comprehensive-solution/Section2PainPointsEditor';
 
 export default function ComprehensiveSolutionEditor() {
   // Authentication Gate
@@ -79,6 +81,10 @@ export default function ComprehensiveSolutionEditor() {
   const [heroSecondaryCtaText, setHeroSecondaryCtaText] = useState<string>(() => initialData.hero.secondaryCtaText || 'Nhận E-Guide triệt tiêu ê buốt');
   const [heroFormTitle, setHeroFormTitle] = useState<string>(() => initialData.hero.ctaFormTitle || '');
   const [heroFormDesc, setHeroFormDesc] = useState<string>(() => initialData.hero.ctaFormDesc || '');
+  const [heroFormExtraHtml, setHeroFormExtraHtml] = useState<string>(() => initialData.hero.ctaFormExtraHtml || '');
+  const [heroRedirectThanks, setHeroRedirectThanks] = useState<boolean>(() => initialData.hero.ctaRedirectThanks || false);
+  const [heroTargetUrl, setHeroTargetUrl] = useState<string>(() => initialData.hero.ctaTargetUrl || '');
+  const [heroResourceTitle, setHeroResourceTitle] = useState<string>(() => initialData.hero.ctaResourceTitle || '');
 
   // Section 2: Pain Points
   const [painBadge, setPainBadge] = useState<string>(() => initialData.painPoints.badge || 'Điểm mù lâm sàng');
@@ -89,6 +95,14 @@ export default function ComprehensiveSolutionEditor() {
   const [painCtaText, setPainCtaText] = useState<string>(() => initialData.painPoints.ctaText || 'Khắc phục điểm mù lâm sàng ngay');
   const [painFormTitle, setPainFormTitle] = useState<string>(() => initialData.painPoints.ctaFormTitle || '');
   const [painFormDesc, setPainFormDesc] = useState<string>(() => initialData.painPoints.ctaFormDesc || '');
+  const [painFormExtraHtml, setPainFormExtraHtml] = useState<string>(() => initialData.painPoints.ctaFormExtraHtml || '');
+  const [painRedirectThanks, setPainRedirectThanks] = useState<boolean>(() => initialData.painPoints.ctaRedirectThanks || false);
+  const [painTargetUrl, setPainTargetUrl] = useState<string>(() => initialData.painPoints.ctaTargetUrl || '');
+  const [painResourceTitle, setPainResourceTitle] = useState<string>(() => initialData.painPoints.ctaResourceTitle || '');
+
+  // Uploading state
+  const [isUploadingImage, setIsUploadingImage] = useState<boolean>(false);
+  const [uploadingTarget, setUploadingTarget] = useState<string>('');
 
   // Section 3: Bioactive
   const [bioBadge, setBioBadge] = useState<string>(() => initialData.bioactive.badge || 'Bước ngoặt tư duy');
@@ -154,7 +168,10 @@ export default function ComprehensiveSolutionEditor() {
         secondaryCtaText: heroSecondaryCtaText,
         ctaFormTitle: heroFormTitle,
         ctaFormDesc: heroFormDesc,
-        ctaRedirectThanks: false
+        ctaFormExtraHtml: heroFormExtraHtml,
+        ctaRedirectThanks: heroRedirectThanks,
+        ctaTargetUrl: heroTargetUrl,
+        ctaResourceTitle: heroResourceTitle
       },
       painPoints: {
         badge: painBadge,
@@ -165,7 +182,10 @@ export default function ComprehensiveSolutionEditor() {
         ctaText: painCtaText,
         ctaFormTitle: painFormTitle,
         ctaFormDesc: painFormDesc,
-        ctaRedirectThanks: false
+        ctaFormExtraHtml: painFormExtraHtml,
+        ctaRedirectThanks: painRedirectThanks,
+        ctaTargetUrl: painTargetUrl,
+        ctaResourceTitle: painResourceTitle
       },
       bioactive: {
         badge: bioBadge,
@@ -237,6 +257,10 @@ export default function ComprehensiveSolutionEditor() {
       if (data.hero.secondaryCtaText) setHeroSecondaryCtaText(data.hero.secondaryCtaText);
       if (data.hero.ctaFormTitle) setHeroFormTitle(data.hero.ctaFormTitle);
       if (data.hero.ctaFormDesc) setHeroFormDesc(data.hero.ctaFormDesc);
+      if (data.hero.ctaFormExtraHtml !== undefined) setHeroFormExtraHtml(data.hero.ctaFormExtraHtml);
+      if (data.hero.ctaRedirectThanks !== undefined) setHeroRedirectThanks(data.hero.ctaRedirectThanks);
+      if (data.hero.ctaTargetUrl !== undefined) setHeroTargetUrl(data.hero.ctaTargetUrl);
+      if (data.hero.ctaResourceTitle !== undefined) setHeroResourceTitle(data.hero.ctaResourceTitle);
     }
     if (data.painPoints) {
       if (data.painPoints.badge) setPainBadge(data.painPoints.badge);
@@ -247,6 +271,10 @@ export default function ComprehensiveSolutionEditor() {
       if (data.painPoints.ctaText) setPainCtaText(data.painPoints.ctaText);
       if (data.painPoints.ctaFormTitle) setPainFormTitle(data.painPoints.ctaFormTitle);
       if (data.painPoints.ctaFormDesc) setPainFormDesc(data.painPoints.ctaFormDesc);
+      if (data.painPoints.ctaFormExtraHtml !== undefined) setPainFormExtraHtml(data.painPoints.ctaFormExtraHtml);
+      if (data.painPoints.ctaRedirectThanks !== undefined) setPainRedirectThanks(data.painPoints.ctaRedirectThanks);
+      if (data.painPoints.ctaTargetUrl !== undefined) setPainTargetUrl(data.painPoints.ctaTargetUrl);
+      if (data.painPoints.ctaResourceTitle !== undefined) setPainResourceTitle(data.painPoints.ctaResourceTitle);
     }
     if (data.bioactive) {
       if (data.bioactive.badge) setBioBadge(data.bioactive.badge);
@@ -298,6 +326,163 @@ export default function ComprehensiveSolutionEditor() {
       if (data.faq.ctaFormTitle) setFaqFormTitle(data.faq.ctaFormTitle);
       if (data.faq.ctaFormDesc) setFaqFormDesc(data.faq.ctaFormDesc);
     }
+  };
+
+  // Section 1 USP Handlers
+  const handleAddUsp = () => {
+    setHeroUsps(prev => [
+      ...prev,
+      {
+        id: 'usp-' + Date.now(),
+        iconName: '🇯🇵',
+        title: 'Tiêu đề USP mới',
+        description: 'Mô tả chi tiết...'
+      }
+    ]);
+  };
+
+  const handleDeleteUsp = (id: string) => {
+    setHeroUsps(prev => prev.filter(u => u.id !== id));
+  };
+
+  const handleUpdateUsp = (id: string, field: 'title' | 'description' | 'iconName', val: string) => {
+    setHeroUsps(prev => prev.map(u => u.id === id ? { ...u, [field]: val } : u));
+  };
+
+  // Section 2 Pain Points Card Handlers
+  const handleAddCard = () => {
+    setPainCards(prev => [
+      ...prev,
+      {
+        id: 'pain-' + Date.now(),
+        number: (prev.length + 1).toString(),
+        title: 'Điểm mù lâm sàng mới',
+        description: '<strong class="text-red-300">Căn nguyên:</strong> Mô tả chi tiết căn nguyên thất bại...'
+      }
+    ]);
+  };
+
+  const handleDeleteCard = (id: string) => {
+    setPainCards(prev => prev.filter(c => c.id !== id));
+  };
+
+  const handleUpdateCard = (id: string, field: 'number' | 'title' | 'description', val: string) => {
+    setPainCards(prev => prev.map(c => c.id === id ? { ...c, [field]: val } : c));
+  };
+
+  // Image file uploader
+  const handleUploadImageFile = async (file: File, targetKey: string, onSuccess: (url: string) => void) => {
+    if (!file) return;
+    setIsUploadingImage(true);
+    setUploadingTarget(targetKey);
+
+    const reader = new FileReader();
+    reader.onload = async () => {
+      try {
+        const fileData = reader.result as string;
+        let uploaded = false;
+        let finalPath = '';
+        let shaRes = '';
+
+        // 1. Thử gọi API nội bộ /api/cms/upload-image
+        try {
+          const res = await fetch('/api/cms/upload-image', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              fileName: file.name,
+              fileData: fileData,
+              folder: 'image'
+            })
+          });
+          const json = await res.json();
+          if (res.ok && json.success) {
+            uploaded = true;
+            finalPath = json.filePath;
+            shaRes = json.commitSha || 'unknown';
+          }
+        } catch (apiErr) {
+          console.warn('API upload image error, fallback to direct GitHub:', apiErr);
+        }
+
+        // 2. Fallback gọi trực tiếp GitHub REST API
+        if (!uploaded) {
+          const base64Content = fileData.includes(',') ? fileData.split(',')[1] : fileData;
+          const dotIndex = file.name.lastIndexOf('.');
+          const nameWithoutExt = dotIndex !== -1 ? file.name.substring(0, dotIndex) : file.name;
+          const ext = dotIndex !== -1 ? file.name.substring(dotIndex).toLowerCase() : '.png';
+          let cleanBase = nameWithoutExt
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/đ/g, 'd')
+            .replace(/Đ/g, 'D')
+            .replace(/[^a-zA-Z0-9_-]/g, '-')
+            .replace(/-+/g, '-')
+            .replace(/^-|-$/g, '')
+            .toLowerCase();
+          if (!cleanBase) cleanBase = 'img-' + Date.now();
+          const finalFileName = `${cleanBase}${ext}`;
+          const repoPath = `public/image/${finalFileName}`;
+
+          const getImageSha = async () => {
+            try {
+              const getRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO_FULL}/contents/${repoPath}?ref=main&_t=${Date.now()}`, {
+                headers: {
+                  Authorization: `Bearer ${GITHUB_TOKEN_CLIENT}`,
+                  Accept: 'application/vnd.github.v3+json',
+                  'Cache-Control': 'no-cache'
+                },
+                cache: 'no-store'
+              });
+              if (getRes.ok) {
+                const fileInfo = await getRes.json();
+                return fileInfo.sha;
+              }
+            } catch (e) {}
+            return undefined;
+          };
+
+          let sha = await getImageSha();
+          let putRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO_FULL}/contents/${repoPath}`, {
+            method: 'PUT',
+            headers: {
+              Authorization: `Bearer ${GITHUB_TOKEN_CLIENT}`,
+              Accept: 'application/vnd.github.v3+json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: `CMS: Tải lên hình ảnh ${repoPath} [Comprehensive Solution]`,
+              content: base64Content,
+              branch: 'main',
+              ...(sha ? { sha } : {})
+            })
+          });
+
+          if (putRes.ok) {
+            const gitData = await putRes.json();
+            uploaded = true;
+            finalPath = `/image/${finalFileName}`;
+            shaRes = gitData.commit?.sha?.substring(0, 7) || 'unknown';
+          }
+        }
+
+        if (uploaded) {
+          onSuccess(finalPath);
+          setSaveStatus('saved');
+          setCommitSha(shaRes);
+          setSaveMessage(`Đã tải lên và commit ảnh thành công vào GitHub: ${finalPath}`);
+          setTimeout(() => setSaveStatus('idle'), 5000);
+        } else {
+          alert('Không thể tải ảnh lên máy chủ. Vui lòng thử lại!');
+        }
+      } catch (err: any) {
+        alert('Lỗi khi tải ảnh: ' + err.message);
+      } finally {
+        setIsUploadingImage(false);
+        setUploadingTarget('');
+      }
+    };
+    reader.readAsDataURL(file);
   };
 
   // 1. Load latest data on mount
@@ -501,7 +686,7 @@ export default function ComprehensiveSolutionEditor() {
                 CMS: Giải pháp toàn diện (Master Ecosystem)
               </h1>
               <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-red-100 text-[#8C2828] border border-red-200">
-                Giai đoạn 1: Sườn dữ liệu
+                Giai đoạn 2: Hero & Điểm mù
               </span>
             </div>
             <p className="text-xs text-slate-500 font-mono hidden sm:block">
@@ -616,206 +801,72 @@ export default function ComprehensiveSolutionEditor() {
         <main className="flex-1 p-4 sm:p-6 lg:p-8 w-full max-w-4xl">
           {/* TAB 1: HERO */}
           {activeTab === 'hero' && (
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-                <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
-                  <h2 className="font-heading font-extrabold text-lg text-slate-900 flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-[#8C2828]" />
-                    Section 1: Hero Section (Tiêu đề & CTA)
-                  </h2>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-red-50 text-[#8C2828] border border-red-200">
-                    Mở đầu
-                  </span>
-                </div>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Badge chạy chữ marquee
-                    </label>
-                    <input
-                      type="text"
-                      value={heroBadge}
-                      onChange={(e) => setHeroBadge(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Tiêu đề chính (Headline)
-                    </label>
-                    <textarea
-                      rows={2}
-                      value={heroHeadline}
-                      onChange={(e) => setHeroHeadline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Đoạn dẫn nhập (Subheadline / Body)
-                    </label>
-                    <textarea
-                      rows={4}
-                      value={heroSubheadline}
-                      onChange={(e) => setHeroSubheadline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Ảnh Hero PC (Đường dẫn)
-                      </label>
-                      <input
-                        type="text"
-                        value={heroImage}
-                        onChange={(e) => setHeroImage(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Ảnh Hero Mobile (Đường dẫn)
-                      </label>
-                      <input
-                        type="text"
-                        value={heroMobileImage}
-                        onChange={(e) => setHeroMobileImage(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Nút CTA chính
-                      </label>
-                      <input
-                        type="text"
-                        value={heroCtaText}
-                        onChange={(e) => setHeroCtaText(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Nút CTA phụ (Tải E-Guide)
-                      </label>
-                      <input
-                        type="text"
-                        value={heroSecondaryCtaText}
-                        onChange={(e) => setHeroSecondaryCtaText(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* 3 USPs Preview Card */}
-              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-                <h3 className="font-heading font-bold text-base text-slate-900 mb-3 flex items-center justify-between">
-                  <span>3 Điểm nhấn nổi bật (USPs)</span>
-                  <span className="text-xs text-slate-400 font-mono">{heroUsps.length} mục</span>
-                </h3>
-                <div className="space-y-3">
-                  {heroUsps.map((usp, idx) => (
-                    <div key={usp.id || idx} className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
-                      <span className="text-xl shrink-0 mt-0.5">{usp.iconName}</span>
-                      <div className="flex-1 min-w-0">
-                        <div className="font-bold text-slate-900 text-sm">{usp.title}</div>
-                        <div className="text-slate-600 text-xs mt-0.5 leading-relaxed">{usp.description}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <Section1HeroEditor
+              heroBadge={heroBadge}
+              setHeroBadge={setHeroBadge}
+              heroHeadline={heroHeadline}
+              setHeroHeadline={setHeroHeadline}
+              heroSubheadline={heroSubheadline}
+              setHeroSubheadline={setHeroSubheadline}
+              heroImage={heroImage}
+              setHeroImage={setHeroImage}
+              heroMobileImage={heroMobileImage}
+              setHeroMobileImage={setHeroMobileImage}
+              heroUsps={heroUsps}
+              handleAddUsp={handleAddUsp}
+              handleDeleteUsp={handleDeleteUsp}
+              handleUpdateUsp={handleUpdateUsp}
+              heroCtaText={heroCtaText}
+              setHeroCtaText={setHeroCtaText}
+              heroSecondaryCtaText={heroSecondaryCtaText}
+              setHeroSecondaryCtaText={setHeroSecondaryCtaText}
+              heroFormTitle={heroFormTitle}
+              setHeroFormTitle={setHeroFormTitle}
+              heroFormDesc={heroFormDesc}
+              setHeroFormDesc={setHeroFormDesc}
+              heroFormExtraHtml={heroFormExtraHtml}
+              setHeroFormExtraHtml={setHeroFormExtraHtml}
+              heroRedirectThanks={heroRedirectThanks}
+              setHeroRedirectThanks={setHeroRedirectThanks}
+              heroTargetUrl={heroTargetUrl}
+              setHeroTargetUrl={setHeroTargetUrl}
+              heroResourceTitle={heroResourceTitle}
+              setHeroResourceTitle={setHeroResourceTitle}
+              uploadingTarget={uploadingTarget}
+              handleUploadImageFile={handleUploadImageFile}
+            />
           )}
 
           {/* TAB 2: PAIN POINTS */}
           {activeTab === 'pain-points' && (
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-                <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
-                  <h2 className="font-heading font-extrabold text-lg text-slate-900 flex items-center gap-2">
-                    <AlertTriangle className="w-5 h-5 text-amber-500" />
-                    Section 2: 4 Điểm mù lâm sàng & Nỗi đau dai dẳng
-                  </h2>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-amber-50 text-amber-700 border border-amber-200">
-                    Dark Theme
-                  </span>
-                </div>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Tiêu đề Section
-                    </label>
-                    <input
-                      type="text"
-                      value={painHeadline}
-                      onChange={(e) => setPainHeadline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Đoạn dẫn chứng (Subheadline)
-                    </label>
-                    <textarea
-                      rows={3}
-                      value={painSubheadline}
-                      onChange={(e) => setPainSubheadline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Nội dung Callout chốt hạ
-                    </label>
-                    <input
-                      type="text"
-                      value={painCallout}
-                      onChange={(e) => setPainCallout(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* 4 Cards Grid */}
-              <div className="bg-slate-900 text-white rounded-2xl p-6 border border-slate-800 shadow-md">
-                <h3 className="font-heading font-bold text-base text-white mb-4 flex items-center justify-between">
-                  <span className="text-amber-400">Danh sách 4 Thẻ điểm mù lâm sàng</span>
-                  <span className="text-xs font-mono text-slate-400">4 thẻ</span>
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {painCards.map((card, idx) => (
-                    <div key={card.id || idx} className="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="w-7 h-7 rounded-lg bg-red-500/20 text-red-400 font-bold text-sm flex items-center justify-center">
-                          {card.number || (idx + 1)}
-                        </span>
-                        <h4 className="font-heading font-bold text-sm text-white line-clamp-1">
-                          {card.title}
-                        </h4>
-                      </div>
-                      <p className="text-xs text-slate-300 leading-relaxed line-clamp-3">
-                        {card.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <Section2PainPointsEditor
+              painBadge={painBadge}
+              setPainBadge={setPainBadge}
+              painHeadline={painHeadline}
+              setPainHeadline={setPainHeadline}
+              painSubheadline={painSubheadline}
+              setPainSubheadline={setPainSubheadline}
+              painCards={painCards}
+              handleAddCard={handleAddCard}
+              handleDeleteCard={handleDeleteCard}
+              handleUpdateCard={handleUpdateCard}
+              painCallout={painCallout}
+              setPainCallout={setPainCallout}
+              painCtaText={painCtaText}
+              setPainCtaText={setPainCtaText}
+              painFormTitle={painFormTitle}
+              setPainFormTitle={setPainFormTitle}
+              painFormDesc={painFormDesc}
+              setPainFormDesc={setPainFormDesc}
+              painFormExtraHtml={painFormExtraHtml}
+              setPainFormExtraHtml={setPainFormExtraHtml}
+              painRedirectThanks={painRedirectThanks}
+              setPainRedirectThanks={setPainRedirectThanks}
+              painTargetUrl={painTargetUrl}
+              setPainTargetUrl={setPainTargetUrl}
+              painResourceTitle={painResourceTitle}
+              setPainResourceTitle={setPainResourceTitle}
+            />
           )}
 
           {/* TAB 3: BIOACTIVE */}
