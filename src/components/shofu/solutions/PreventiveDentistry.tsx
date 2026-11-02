@@ -666,19 +666,23 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
               dangerouslySetInnerHTML={{ __html: offer.headline }}
             />
             
-            <p className="text-red-100 font-body text-base sm:text-lg leading-relaxed opacity-90 max-w-2xl mx-auto">
-              {offer.subheadline}
-            </p>
+            <p 
+              className="text-red-100 font-body text-base sm:text-lg leading-relaxed opacity-90 max-w-2xl mx-auto"
+              dangerouslySetInnerHTML={{ __html: offer.subheadline }}
+            />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
             <div className="bg-red-950/30 border border-red-900/50 rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col">
               <div className="w-full relative mb-6 flex justify-center items-center">
                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-red-500/25 blur-[60px] rounded-full pointer-events-none"></div>
-                 <img loading="lazy" src={offer.coreBox.image} alt={offer.coreBox.title} referrerPolicy="no-referrer" className="w-full h-auto object-contain max-h-[240px] drop-shadow-[0_20px_50px_rgba(220,38,38,0.2)] hover:drop-shadow-[0_20px_50px_rgba(220,38,38,0.4)] hover:scale-110 transition-all duration-500 mx-auto relative z-10" />
+                 <img loading="lazy" src={offer.coreBox.image} alt="Bộ sản phẩm cốt lõi" referrerPolicy="no-referrer" className="w-full h-auto object-contain max-h-[240px] drop-shadow-[0_20px_50px_rgba(220,38,38,0.2)] hover:drop-shadow-[0_20px_50px_rgba(220,38,38,0.4)] hover:scale-110 transition-all duration-500 mx-auto relative z-10" />
               </div>
               <div className="space-y-4 flex-1">
-                 <h4 className="font-heading font-bold text-lg text-amber-300 border-b border-red-900/50 pb-2">{offer.coreBox.title}</h4>
+                 <h4 
+                   className="font-heading font-bold text-lg text-amber-300 border-b border-red-900/50 pb-2"
+                   dangerouslySetInnerHTML={{ __html: offer.coreBox.title }}
+                 />
                  <ul className="space-y-3 font-body text-sm sm:text-base">
                     {offer.coreBox.items.map((it, idx) => (
                       <li key={idx} className="flex items-start gap-3">
@@ -693,10 +697,13 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
             <div className="bg-red-950/30 border border-red-900/50 rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col">
               <div className="w-full relative mb-6 flex justify-center items-center">
                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-amber-500/25 blur-[60px] rounded-full pointer-events-none"></div>
-                 <img loading="lazy" src={offer.giftBox.image} alt={offer.giftBox.title} referrerPolicy="no-referrer" className="w-full h-auto object-contain max-h-[240px] drop-shadow-[0_20px_50px_rgba(245,158,11,0.2)] hover:drop-shadow-[0_20px_50px_rgba(245,158,11,0.4)] hover:scale-110 transition-all duration-500 mx-auto relative z-10" />
+                 <img loading="lazy" src={offer.giftBox.image} alt="Bộ quà tặng" referrerPolicy="no-referrer" className="w-full h-auto object-contain max-h-[240px] drop-shadow-[0_20px_50px_rgba(245,158,11,0.2)] hover:drop-shadow-[0_20px_50px_rgba(245,158,11,0.4)] hover:scale-110 transition-all duration-500 mx-auto relative z-10" />
               </div>
               <div className="space-y-4 flex-1">
-                 <h4 className="font-heading font-bold text-lg text-amber-300 border-b border-red-900/50 pb-2">{offer.giftBox.title}</h4>
+                 <h4 
+                   className="font-heading font-bold text-lg text-amber-300 border-b border-red-900/50 pb-2"
+                   dangerouslySetInnerHTML={{ __html: offer.giftBox.title }}
+                 />
                  <ul className="space-y-3 font-body text-sm sm:text-base">
                     {offer.giftBox.items.map((it, idx) => (
                       <li key={idx} className="flex items-start gap-3">
@@ -750,7 +757,10 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
             
             <div className="mt-4 flex justify-center">
                <div className="inline-flex items-center justify-center px-3 sm:px-4 py-1.5 sm:py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full w-full sm:w-auto">
-                  <span className="text-emerald-300 font-medium text-[11px] min-[375px]:text-xs sm:text-sm whitespace-nowrap text-center w-full">{offer.guaranteeText}</span>
+                  <span 
+                    className="text-emerald-300 font-medium text-[11px] min-[375px]:text-xs sm:text-sm text-center w-full"
+                    dangerouslySetInnerHTML={{ __html: offer.guaranteeText }}
+                  />
                </div>
             </div>
           </div>
