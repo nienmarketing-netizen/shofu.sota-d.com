@@ -40,6 +40,8 @@ import {
 } from './comprehensive-solution/types';
 import { Section1HeroEditor } from './comprehensive-solution/Section1HeroEditor';
 import { Section2PainPointsEditor } from './comprehensive-solution/Section2PainPointsEditor';
+import { Section3BioactiveEditor } from './comprehensive-solution/Section3BioactiveEditor';
+import { Section4EcosystemEditor } from './comprehensive-solution/Section4EcosystemEditor';
 
 export default function ComprehensiveSolutionEditor() {
   // Authentication Gate
@@ -114,6 +116,10 @@ export default function ComprehensiveSolutionEditor() {
   const [bioCtaText, setBioCtaText] = useState<string>(() => initialData.bioactive.ctaText || 'Nâng cấp vật liệu sinh học S-PRG');
   const [bioFormTitle, setBioFormTitle] = useState<string>(() => initialData.bioactive.ctaFormTitle || '');
   const [bioFormDesc, setBioFormDesc] = useState<string>(() => initialData.bioactive.ctaFormDesc || '');
+  const [bioFormExtraHtml, setBioFormExtraHtml] = useState<string>(() => initialData.bioactive.ctaFormExtraHtml || '');
+  const [bioRedirectThanks, setBioRedirectThanks] = useState<boolean>(() => initialData.bioactive.ctaRedirectThanks || false);
+  const [bioTargetUrl, setBioTargetUrl] = useState<string>(() => initialData.bioactive.ctaTargetUrl || '');
+  const [bioResourceTitle, setBioResourceTitle] = useState<string>(() => initialData.bioactive.ctaResourceTitle || '');
 
   // Section 4: 5 Products
   const [prodHeadline, setProdHeadline] = useState<string>(() => initialData.coreProducts.headline || 'Hệ sinh thái 5 vũ khí cốt lõi');
@@ -122,6 +128,10 @@ export default function ComprehensiveSolutionEditor() {
   const [prodCtaText, setProdCtaText] = useState<string>(() => initialData.coreProducts.ctaText || 'Khám phá trọn bộ Hệ sinh thái Giomer');
   const [prodFormTitle, setProdFormTitle] = useState<string>(() => initialData.coreProducts.ctaFormTitle || '');
   const [prodFormDesc, setProdFormDesc] = useState<string>(() => initialData.coreProducts.ctaFormDesc || '');
+  const [prodFormExtraHtml, setProdFormExtraHtml] = useState<string>(() => initialData.coreProducts.ctaFormExtraHtml || '');
+  const [prodRedirectThanks, setProdRedirectThanks] = useState<boolean>(() => initialData.coreProducts.ctaRedirectThanks || false);
+  const [prodTargetUrl, setProdTargetUrl] = useState<string>(() => initialData.coreProducts.ctaTargetUrl || '');
+  const [prodResourceTitle, setProdResourceTitle] = useState<string>(() => initialData.coreProducts.ctaResourceTitle || '');
 
   // Section 5: Evidence
   const [evidenceHeadline, setEvidenceHeadline] = useState<string>(() => initialData.evidence.headline || 'Dữ liệu khoa học');
@@ -197,7 +207,10 @@ export default function ComprehensiveSolutionEditor() {
         ctaText: bioCtaText,
         ctaFormTitle: bioFormTitle,
         ctaFormDesc: bioFormDesc,
-        ctaRedirectThanks: false
+        ctaFormExtraHtml: bioFormExtraHtml,
+        ctaRedirectThanks: bioRedirectThanks,
+        ctaTargetUrl: bioTargetUrl,
+        ctaResourceTitle: bioResourceTitle
       },
       coreProducts: {
         headline: prodHeadline,
@@ -206,7 +219,10 @@ export default function ComprehensiveSolutionEditor() {
         ctaText: prodCtaText,
         ctaFormTitle: prodFormTitle,
         ctaFormDesc: prodFormDesc,
-        ctaRedirectThanks: false
+        ctaFormExtraHtml: prodFormExtraHtml,
+        ctaRedirectThanks: prodRedirectThanks,
+        ctaTargetUrl: prodTargetUrl,
+        ctaResourceTitle: prodResourceTitle
       },
       evidence: {
         headline: evidenceHeadline,
@@ -286,6 +302,10 @@ export default function ComprehensiveSolutionEditor() {
       if (data.bioactive.ctaText) setBioCtaText(data.bioactive.ctaText);
       if (data.bioactive.ctaFormTitle) setBioFormTitle(data.bioactive.ctaFormTitle);
       if (data.bioactive.ctaFormDesc) setBioFormDesc(data.bioactive.ctaFormDesc);
+      if (data.bioactive.ctaFormExtraHtml !== undefined) setBioFormExtraHtml(data.bioactive.ctaFormExtraHtml);
+      if (data.bioactive.ctaRedirectThanks !== undefined) setBioRedirectThanks(data.bioactive.ctaRedirectThanks);
+      if (data.bioactive.ctaTargetUrl !== undefined) setBioTargetUrl(data.bioactive.ctaTargetUrl);
+      if (data.bioactive.ctaResourceTitle !== undefined) setBioResourceTitle(data.bioactive.ctaResourceTitle);
     }
     if (data.coreProducts) {
       if (data.coreProducts.headline) setProdHeadline(data.coreProducts.headline);
@@ -294,6 +314,10 @@ export default function ComprehensiveSolutionEditor() {
       if (data.coreProducts.ctaText) setProdCtaText(data.coreProducts.ctaText);
       if (data.coreProducts.ctaFormTitle) setProdFormTitle(data.coreProducts.ctaFormTitle);
       if (data.coreProducts.ctaFormDesc) setProdFormDesc(data.coreProducts.ctaFormDesc);
+      if (data.coreProducts.ctaFormExtraHtml !== undefined) setProdFormExtraHtml(data.coreProducts.ctaFormExtraHtml);
+      if (data.coreProducts.ctaRedirectThanks !== undefined) setProdRedirectThanks(data.coreProducts.ctaRedirectThanks);
+      if (data.coreProducts.ctaTargetUrl !== undefined) setProdTargetUrl(data.coreProducts.ctaTargetUrl);
+      if (data.coreProducts.ctaResourceTitle !== undefined) setProdResourceTitle(data.coreProducts.ctaResourceTitle);
     }
     if (data.evidence) {
       if (data.evidence.headline) setEvidenceHeadline(data.evidence.headline);
@@ -660,7 +684,7 @@ export default function ComprehensiveSolutionEditor() {
   const tabList: { key: TabKey; label: string; icon: any; countNote?: string }[] = [
     { key: 'hero', label: '1. Hero Section', icon: Zap },
     { key: 'pain-points', label: '2. 4 Điểm mù lâm sàng', icon: AlertTriangle, countNote: `${painCards.length} Thẻ` },
-    { key: 'bioactive', label: '3. MiCD & S-PRG 6 Ion', icon: RefreshCw, countNote: '6 Ion' },
+    { key: 'bioactive', label: '3. MiCD & S-PRG 6 Ion', icon: RefreshCw, countNote: `${bioIons.length} Ion` },
     { key: 'products', label: '4. Hệ sinh thái 5 sản phẩm', icon: Package, countNote: `${products.length} Sản phẩm` },
     { key: 'evidence', label: '5. Bằng chứng 13 năm', icon: Microscope, countNote: `${scientificPillars.length} Luận điểm` },
     { key: 'offer', label: '6. Gói ưu đãi & Quà tặng', icon: Gift, countNote: 'VIP Combo' },
@@ -686,7 +710,7 @@ export default function ComprehensiveSolutionEditor() {
                 CMS: Giải pháp toàn diện (Master Ecosystem)
               </h1>
               <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-red-100 text-[#8C2828] border border-red-200">
-                Giai đoạn 2: Hero & Điểm mù
+                Giai đoạn 3: MiCD & 5 Vũ khí
               </span>
             </div>
             <p className="text-xs text-slate-500 font-mono hidden sm:block">
@@ -871,168 +895,62 @@ export default function ComprehensiveSolutionEditor() {
 
           {/* TAB 3: BIOACTIVE */}
           {activeTab === 'bioactive' && (
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-                <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
-                  <h2 className="font-heading font-extrabold text-lg text-slate-900 flex items-center gap-2">
-                    <RefreshCw className="w-5 h-5 text-blue-600" />
-                    Section 3: Bước ngoặt tư duy (MiCD & S-PRG 6 Ion)
-                  </h2>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-blue-50 text-blue-700 border border-blue-200">
-                    Triết lý MiCD
-                  </span>
-                </div>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Tiêu đề chuyển đổi tư duy
-                    </label>
-                    <input
-                      type="text"
-                      value={bioHeadline}
-                      onChange={(e) => setBioHeadline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Đoạn dẫn giải MiCD & S-PRG
-                    </label>
-                    <textarea
-                      rows={3}
-                      value={bioIntro}
-                      onChange={(e) => setBioIntro(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Tiêu đề bình ắc quy ion
-                      </label>
-                      <input
-                        type="text"
-                        value={bioBatteryTitle}
-                        onChange={(e) => setBioBatteryTitle(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Nút CTA Section
-                      </label>
-                      <input
-                        type="text"
-                        value={bioCtaText}
-                        onChange={(e) => setBioCtaText(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* 4 Ion Pillars */}
-              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-                <h3 className="font-heading font-bold text-base text-slate-900 mb-4">
-                  4 Cột trụ phóng thích Ion sinh học
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {bioIons.map((ion, idx) => (
-                    <div key={ion.id || idx} className="p-4 rounded-xl bg-gradient-to-b from-white to-slate-50 border border-slate-200 text-center">
-                      <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-700 font-bold text-xs flex items-center justify-center mx-auto mb-2">
-                        {ion.ionName}
-                      </div>
-                      <div className="font-bold text-slate-900 text-sm mb-1">{ion.title}</div>
-                      <div className="text-slate-600 text-xs leading-relaxed">{ion.description}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <Section3BioactiveEditor
+              bioBadge={bioBadge}
+              setBioBadge={setBioBadge}
+              bioHeadline={bioHeadline}
+              setBioHeadline={setBioHeadline}
+              bioIntro={bioIntro}
+              setBioIntro={setBioIntro}
+              bioBatteryTitle={bioBatteryTitle}
+              setBioBatteryTitle={setBioBatteryTitle}
+              bioBatteryDesc={bioBatteryDesc}
+              setBioBatteryDesc={setBioBatteryDesc}
+              bioIons={bioIons}
+              setBioIons={setBioIons}
+              bioCtaText={bioCtaText}
+              setBioCtaText={setBioCtaText}
+              bioFormTitle={bioFormTitle}
+              setBioFormTitle={setBioFormTitle}
+              bioFormDesc={bioFormDesc}
+              setBioFormDesc={setBioFormDesc}
+              bioFormExtraHtml={bioFormExtraHtml}
+              setBioFormExtraHtml={setBioFormExtraHtml}
+              bioRedirectThanks={bioRedirectThanks}
+              setBioRedirectThanks={setBioRedirectThanks}
+              bioTargetUrl={bioTargetUrl}
+              setBioTargetUrl={setBioTargetUrl}
+              bioResourceTitle={bioResourceTitle}
+              setBioResourceTitle={setBioResourceTitle}
+            />
           )}
 
           {/* TAB 4: PRODUCTS */}
           {activeTab === 'products' && (
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-                <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
-                  <h2 className="font-heading font-extrabold text-lg text-slate-900 flex items-center gap-2">
-                    <Package className="w-5 h-5 text-[#8C2828]" />
-                    Section 4: Hệ sinh thái 5 vũ khí cốt lõi
-                  </h2>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-purple-50 text-purple-700 border border-purple-200">
-                    5 Sản phẩm
-                  </span>
-                </div>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Tiêu đề Section
-                    </label>
-                    <input
-                      type="text"
-                      value={prodHeadline}
-                      onChange={(e) => setProdHeadline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Đoạn giới thiệu
-                    </label>
-                    <textarea
-                      rows={2}
-                      value={prodIntro}
-                      onChange={(e) => setProdIntro(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* 5 Products List */}
-              <div className="space-y-4">
-                {products.map((prod, idx) => (
-                  <div key={prod.id || idx} className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start gap-5">
-                    <div className="w-full sm:w-32 h-28 bg-slate-50 rounded-xl border border-slate-100 p-2 shrink-0 flex items-center justify-center overflow-hidden">
-                      <img 
-                        src={prod.image} 
-                        alt={prod.name} 
-                        className="w-full h-full object-contain" 
-                        onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-mono font-bold text-[#8C2828] bg-red-50 px-2 py-0.5 rounded-md border border-red-100">
-                          {prod.stepNumber || `0${idx + 1}`}
-                        </span>
-                        <span className="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">
-                          {prod.tag}
-                        </span>
-                      </div>
-                      <h4 className="font-heading font-bold text-base text-slate-900 mb-2">
-                        {prod.name}
-                      </h4>
-                      <ul className="space-y-1.5 text-xs text-slate-600">
-                        {prod.features.map((feat, fIdx) => (
-                          <li key={fIdx} className="flex items-start gap-2">
-                            <span className="text-emerald-500 font-bold">✓</span>
-                            <span>{feat}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Section4EcosystemEditor
+              prodHeadline={prodHeadline}
+              setProdHeadline={setProdHeadline}
+              prodIntro={prodIntro}
+              setProdIntro={setProdIntro}
+              products={products}
+              setProducts={setProducts}
+              prodCtaText={prodCtaText}
+              setProdCtaText={setProdCtaText}
+              prodFormTitle={prodFormTitle}
+              setProdFormTitle={setProdFormTitle}
+              prodFormDesc={prodFormDesc}
+              setProdFormDesc={setProdFormDesc}
+              prodFormExtraHtml={prodFormExtraHtml}
+              setProdFormExtraHtml={setProdFormExtraHtml}
+              prodRedirectThanks={prodRedirectThanks}
+              setProdRedirectThanks={setProdRedirectThanks}
+              prodTargetUrl={prodTargetUrl}
+              setProdTargetUrl={setProdTargetUrl}
+              prodResourceTitle={prodResourceTitle}
+              setProdResourceTitle={setProdResourceTitle}
+              uploadingTarget={uploadingTarget}
+              handleUploadImageFile={handleUploadImageFile}
+            />
           )}
 
           {/* TAB 5: EVIDENCE */}

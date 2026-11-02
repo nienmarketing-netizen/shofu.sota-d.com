@@ -19,6 +19,7 @@ export interface IonItem {
   ionName: string;
   title: string;
   description: string;
+  color?: string;
 }
 
 export interface EcosystemProductItem {
@@ -28,6 +29,8 @@ export interface EcosystemProductItem {
   name: string;
   image: string;
   features: string[];
+  specs?: string;
+  indications?: string;
 }
 
 export interface ScientificPillarItem {
