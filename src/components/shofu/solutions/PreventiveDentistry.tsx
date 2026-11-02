@@ -308,8 +308,14 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
                 }`}>
                   <AlertTriangle className="w-6 h-6" />
                 </div>
-                <h3 className="font-heading font-bold text-lg sm:text-xl text-white">{item.title}</h3>
-                <p className="font-body text-slate-400 text-sm leading-relaxed">{item.description}</p>
+                <h3 
+                  className="font-heading font-bold text-lg sm:text-xl text-white"
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                />
+                <p 
+                  className="font-body text-slate-400 text-sm leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: item.description }}
+                />
               </div>
             ))}
           </div>

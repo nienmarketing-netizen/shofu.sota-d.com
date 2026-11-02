@@ -3,45 +3,97 @@ import { Bold, List, Type, Palette, Sparkles, ExternalLink, Sliders, ChevronDown
 
 export interface CtaFormConfigEditorProps {
   label?: string;
-  ctaText: string;
-  onChangeCtaText: (val: string) => void;
+  ctaText?: string;
+  onChangeCtaText?: (val: string) => void;
   footerNote?: string;
   onChangeFooterNote?: (val: string) => void;
   formTitle?: string;
-  onChangeFormTitle: (val: string) => void;
+  onChangeFormTitle?: (val: string) => void;
+  title?: string;
+  setTitle?: (val: string) => void;
   formDesc?: string;
-  onChangeFormDesc: (val: string) => void;
+  onChangeFormDesc?: (val: string) => void;
+  description?: string;
+  setDescription?: (val: string) => void;
   formExtraHtml?: string;
-  onChangeFormExtraHtml: (val: string) => void;
+  onChangeFormExtraHtml?: (val: string) => void;
+  extraHtml?: string;
+  setExtraHtml?: (val: string) => void;
   redirectThanks?: boolean;
-  onChangeRedirectThanks: (val: boolean) => void;
+  onChangeRedirectThanks?: (val: boolean) => void;
+  setRedirectThanks?: (val: boolean) => void;
   targetUrl?: string;
-  onChangeTargetUrl: (val: string) => void;
+  onChangeTargetUrl?: (val: string) => void;
+  setTargetUrl?: (val: string) => void;
   resourceTitle?: string;
-  onChangeResourceTitle: (val: string) => void;
+  onChangeResourceTitle?: (val: string) => void;
+  setResourceTitle?: (val: string) => void;
 }
 
 export const CtaFormConfigEditor: React.FC<CtaFormConfigEditorProps> = ({
   label = 'Cấu hình Nút CTA & Form Popup',
-  ctaText,
-  onChangeCtaText,
+  ctaText = '',
+  onChangeCtaText = (_val: string) => {},
   footerNote,
   onChangeFooterNote,
   formTitle = '',
   onChangeFormTitle,
+  title = '',
+  setTitle,
   formDesc = '',
   onChangeFormDesc,
+  description = '',
+  setDescription,
   formExtraHtml = '',
   onChangeFormExtraHtml,
+  extraHtml = '',
+  setExtraHtml,
   redirectThanks = false,
   onChangeRedirectThanks,
+  setRedirectThanks,
   targetUrl = '',
   onChangeTargetUrl,
+  setTargetUrl,
   resourceTitle = '',
   onChangeResourceTitle,
+  setResourceTitle,
 }) => {
   const [isOpenAdvanced, setIsOpenAdvanced] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
+
+  // Resolved values and setters supporting both prop patterns
+  const effectiveFormTitle = formTitle || title;
+  const handleFormTitleChange = (val: string) => {
+    if (onChangeFormTitle) onChangeFormTitle(val);
+    if (setTitle) setTitle(val);
+  };
+
+  const effectiveFormDesc = formDesc || description;
+  const handleFormDescChange = (val: string) => {
+    if (onChangeFormDesc) onChangeFormDesc(val);
+    if (setDescription) setDescription(val);
+  };
+
+  const effectiveFormExtraHtml = formExtraHtml || extraHtml;
+  const handleFormExtraHtmlChange = (val: string) => {
+    if (onChangeFormExtraHtml) onChangeFormExtraHtml(val);
+    if (setExtraHtml) setExtraHtml(val);
+  };
+
+  const handleToggleRedirectThanks = (checked: boolean) => {
+    if (onChangeRedirectThanks) onChangeRedirectThanks(checked);
+    if (setRedirectThanks) setRedirectThanks(checked);
+  };
+
+  const handleTargetUrlChange = (val: string) => {
+    if (onChangeTargetUrl) onChangeTargetUrl(val);
+    if (setTargetUrl) setTargetUrl(val);
+  };
+
+  const handleResourceTitleChange = (val: string) => {
+    if (onChangeResourceTitle) onChangeResourceTitle(val);
+    if (setResourceTitle) setResourceTitle(val);
+  };
 
   // Helper formatting for HTML textarea
   const insertSnippet = (tagOpen: string, tagClose: string, defaultPlaceholder: string = '') => {
@@ -160,8 +212,8 @@ export const CtaFormConfigEditor: React.FC<CtaFormConfigEditorProps> = ({
               </label>
               <input
                 type="text"
-                value={formTitle}
-                onChange={(e) => onChangeFormTitle(e.target.value)}
+                value={effectiveFormTitle}
+                onChange={(e) => handleFormTitleChange(e.target.value)}
                 className="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm text-slate-900 focus:border-[#00ADEF] outline-none"
                 placeholder={`Mặc định theo chữ nút: "${ctaText || 'Nhận ưu đãi'}"`}
               />
@@ -177,8 +229,8 @@ export const CtaFormConfigEditor: React.FC<CtaFormConfigEditorProps> = ({
               </label>
               <input
                 type="text"
-                value={formDesc}
-                onChange={(e) => onChangeFormDesc(e.target.value)}
+                value={effectiveFormDesc}
+                onChange={(e) => handleFormDescChange(e.target.value)}
                 className="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm text-slate-900 focus:border-[#00ADEF] outline-none"
                 placeholder="Ví dụ: Quý Bác sĩ vui lòng điền thông tin bên dưới để mở khóa kho video lâm sàng"
               />
@@ -234,8 +286,8 @@ export const CtaFormConfigEditor: React.FC<CtaFormConfigEditorProps> = ({
               <textarea
                 id={`cta-extra-html-${label}`}
                 rows={4}
-                value={formExtraHtml}
-                onChange={(e) => onChangeFormExtraHtml(e.target.value)}
+                value={effectiveFormExtraHtml}
+                onChange={(e) => handleFormExtraHtmlChange(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs font-mono text-slate-900 focus:border-[#00ADEF] outline-none leading-relaxed"
                 placeholder="Nhập nội dung HTML hoặc bấm các nút phía trên để chèn nhanh..."
               />
@@ -252,19 +304,19 @@ export const CtaFormConfigEditor: React.FC<CtaFormConfigEditorProps> = ({
                 </span>
                 <div className="bg-white rounded-xl p-4 border border-slate-200 shadow-sm max-w-sm mx-auto text-center space-y-3">
                   <h6 className="font-heading font-bold text-lg text-slate-900">
-                    {formTitle || ctaText || 'Tiêu đề Form'}
+                    {effectiveFormTitle || ctaText || 'Tiêu đề Form'}
                   </h6>
                   <p className="text-xs text-slate-600">
-                    {formDesc || 'Quý Bác sĩ vui lòng dành thời gian điền thông tin bên dưới:'}
+                    {effectiveFormDesc || 'Quý Bác sĩ vui lòng dành thời gian điền thông tin bên dưới:'}
                   </p>
                   <div className="space-y-2 text-left opacity-60 pointer-events-none">
                     <div className="h-7 bg-slate-100 rounded border border-slate-200 text-[11px] px-2 flex items-center text-slate-400">Tên Bác sĩ *</div>
                     <div className="h-7 bg-slate-100 rounded border border-slate-200 text-[11px] px-2 flex items-center text-slate-400">Số điện thoại (Zalo) *</div>
                   </div>
-                  {formExtraHtml && (
+                  {effectiveFormExtraHtml && (
                     <div 
                       className="text-left text-xs pt-2 border-t border-slate-100 space-y-1.5"
-                      dangerouslySetInnerHTML={{ __html: formExtraHtml }}
+                      dangerouslySetInnerHTML={{ __html: effectiveFormExtraHtml }}
                     />
                   )}
                   <div className="pt-2">
@@ -283,8 +335,8 @@ export const CtaFormConfigEditor: React.FC<CtaFormConfigEditorProps> = ({
               <label className="flex items-center gap-3 cursor-pointer select-none">
                 <input
                   type="checkbox"
-                  checked={redirectThanks}
-                  onChange={(e) => onChangeRedirectThanks(e.target.checked)}
+                  checked={Boolean(redirectThanks)}
+                  onChange={(e) => handleToggleRedirectThanks(e.target.checked)}
                   className="w-4 h-4 rounded text-[#00ADEF] focus:ring-[#00ADEF] border-slate-300 accent-[#00ADEF]"
                 />
                 <div>
@@ -298,7 +350,7 @@ export const CtaFormConfigEditor: React.FC<CtaFormConfigEditorProps> = ({
               </label>
             </div>
 
-            {redirectThanks && (
+            {Boolean(redirectThanks) && (
               <div className="pt-3 border-t border-slate-100 space-y-3 animate-in fade-in duration-200">
                 <div>
                   <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
@@ -308,7 +360,7 @@ export const CtaFormConfigEditor: React.FC<CtaFormConfigEditorProps> = ({
                     <input
                       type="url"
                       value={targetUrl}
-                      onChange={(e) => onChangeTargetUrl(e.target.value)}
+                      onChange={(e) => handleTargetUrlChange(e.target.value)}
                       className="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs font-mono text-slate-900 focus:border-[#00ADEF] outline-none"
                       placeholder="https://drive.google.com/... hoặc link tải file"
                     />
@@ -325,7 +377,7 @@ export const CtaFormConfigEditor: React.FC<CtaFormConfigEditorProps> = ({
                   <input
                     type="text"
                     value={resourceTitle}
-                    onChange={(e) => onChangeResourceTitle(e.target.value)}
+                    onChange={(e) => handleResourceTitleChange(e.target.value)}
                     className="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm text-slate-900 focus:border-[#00ADEF] outline-none"
                     placeholder="Mặc định: Truy Cập / Tải Tài Liệu Ngay (VD: Mở Kho Video Lâm Sàng Ngay)"
                   />
