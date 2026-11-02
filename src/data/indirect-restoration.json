@@ -201,18 +201,18 @@
     "steps": [
       {
         "stepNumber": "01",
-        "title": "Bước 1: Thoa BeautiBond Xtreme",
-        "description": "Chuẩn bị bề mặt cùi răng sạch và xử lý với BeautiBond Xtreme để sẵn sàng cho bước gắn."
+        "title": "Bước 1: Xử lý cùi răng và lòng mão với keo dán BeautiBond Xtreme",
+        "description": "Keo dán BBX được áp dụng với cùi răng và lòng mão trong trường hợp phục hình có độ lưu giữ cơ học thấp."
       },
       {
         "stepNumber": "02",
-        "title": "Bước 2: Thổi cát",
-        "description": "Thổi hơi để dàn mỏng màng keo xuống ngưỡng <strong class=\"text-white\">5µm</strong>. Sự bốc hơi dung môi làm tăng vọt nồng độ monomer acid, từ đó mở khóa màng bảo vệ của phân tử ARS."
+        "title": "Bước 2: Trộn xi măng Beautilink SA",
+        "description": "Với BeautiLink SA Handmix, lấy lượng xi măng vừa đủ, Trộn đều tay trong vòng <strong class=\"text-white\">10 – 15 giây</strong>. Đưa xi măng vào lòng phục hình."
       },
       {
         "stepNumber": "03",
-        "title": "Bước 3: Trộn Cement và gắn phục hình",
-        "description": "Đặt Cement vào lòng phục hình rồi đặt lên cùi răng và ấn lực vừa đủ. Sau đó quang trùng hợp 10-20 giây và đánh bóng."
+        "title": "Bước 3: Gắn phục hình và chiếu đèn",
+        "description": "Đặt phục hình lên cùi răng với lực vừa đủ. Chiếu đèn 1–2 giây và gạt bỏ xi măng dư. Chiếu đèn mỗi hướng bao gồm cả đường hoàn tất: đèn LED 10 giây | đèn Halogen 20 giây."
       }
     ],
     "ctaText": "Trải nghiệm phác đồ 3 bước"
