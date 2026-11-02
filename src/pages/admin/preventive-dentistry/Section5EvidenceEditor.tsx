@@ -65,7 +65,7 @@ export const Section5EvidenceEditor: React.FC<Section5EvidenceEditorProps> = ({
   setFormDesc = () => {},
   formExtraHtml = '',
   setFormExtraHtml = () => {},
-  redirectThanks = true,
+  redirectThanks = false,
   setRedirectThanks = () => {},
   targetUrl = '',
   setTargetUrl = () => {},
@@ -330,17 +330,26 @@ export const Section5EvidenceEditor: React.FC<Section5EvidenceEditorProps> = ({
         </div>
 
         <CtaFormConfigEditor
-          title={formTitle}
+          label="CTA & Form Section 5"
+          ctaText={ctaText}
+          onChangeCtaText={setCtaText}
+          formTitle={formTitle}
+          onChangeFormTitle={setFormTitle}
           setTitle={setFormTitle}
-          description={formDesc}
+          formDesc={formDesc}
+          onChangeFormDesc={setFormDesc}
           setDescription={setFormDesc}
-          extraHtml={formExtraHtml}
+          formExtraHtml={formExtraHtml}
+          onChangeFormExtraHtml={setFormExtraHtml}
           setExtraHtml={setFormExtraHtml}
           redirectThanks={redirectThanks}
+          onChangeRedirectThanks={setRedirectThanks}
           setRedirectThanks={setRedirectThanks}
           targetUrl={targetUrl}
+          onChangeTargetUrl={setTargetUrl}
           setTargetUrl={setTargetUrl}
           resourceTitle={resourceTitle}
+          onChangeResourceTitle={setResourceTitle}
           setResourceTitle={setResourceTitle}
         />
       </div>

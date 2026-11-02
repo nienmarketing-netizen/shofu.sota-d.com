@@ -382,9 +382,10 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
               <div className="block lg:hidden w-full relative pt-2 pb-6">
                  <img loading="lazy" src={bioactive.image} alt="Công nghệ S-PRG giải phóng 6 Ion" referrerPolicy="no-referrer" className="w-full max-w-[320px] mx-auto h-auto object-contain relative z-10 drop-shadow-xl" />
               </div>
-              <h3 className="font-heading font-bold text-lg sm:text-xl text-slate-900 pt-4">
-                {bioactive.sPrgTitle}
-              </h3>
+              <h3 
+                className="font-heading font-bold text-lg sm:text-xl text-slate-900 pt-4"
+                dangerouslySetInnerHTML={{ __html: bioactive.sPrgTitle }}
+              />
               <p 
                 className="font-body text-slate-600 text-base leading-relaxed pb-4"
                 dangerouslySetInnerHTML={{ __html: bioactive.sPrgDesc }}
@@ -407,8 +408,14 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
                     <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div className="flex-1 text-left sm:text-center">
-                    <h4 className="font-heading font-bold text-slate-900 text-base mb-1 sm:mb-2 leading-tight">{ion.ionName}</h4>
-                    <p className="font-body text-slate-600 text-sm leading-relaxed">{ion.description}</p>
+                    <h4 
+                      className="font-heading font-bold text-slate-900 text-base mb-1 sm:mb-2 leading-tight"
+                      dangerouslySetInnerHTML={{ __html: ion.ionName }}
+                    />
+                    <p 
+                      className="font-body text-slate-600 text-sm leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: ion.description }}
+                    />
                   </div>
                 </div>
               );
@@ -454,9 +461,10 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
                      <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-red-50 text-red-600 font-bold text-xs tracking-wide w-fit">
                        {coreProducts.product1.tag}
                      </div>
-                     <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight">
-                        {coreProducts.product1.title}
-                     </h3>
+                     <h3 
+                        className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight"
+                        dangerouslySetInnerHTML={{ __html: coreProducts.product1.title }}
+                     />
                      {/* Mobile Image */}
                      <div className="block lg:hidden w-full relative py-4">
                         <img loading="lazy" src={coreProducts.product1.image} alt={coreProducts.product1.title} referrerPolicy="no-referrer" className="w-full max-w-[300px] mx-auto h-auto object-contain drop-shadow-xl" />
@@ -477,8 +485,11 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
                     <div key={idx} className="flex gap-3 items-start p-3 sm:p-4 rounded-xl border transition-colors bg-red-50/50 border-red-100 hover:bg-red-50 hover:border-red-200">
                        <CheckCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
                        <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                          <strong className="text-slate-900 font-bold">{feat.title}: </strong>
-                          {feat.description}
+                          <strong 
+                            className="text-slate-900 font-bold mr-1"
+                            dangerouslySetInnerHTML={{ __html: feat.title.endsWith(':') ? feat.title : `${feat.title}:` }}
+                          />
+                          <span dangerouslySetInnerHTML={{ __html: feat.description }} />
                        </div>
                     </div>
                   ))}
@@ -492,9 +503,10 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
                      <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs tracking-wide w-fit">
                        {coreProducts.product2.tag}
                      </div>
-                     <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight">
-                        {coreProducts.product2.title}
-                     </h3>
+                     <h3 
+                        className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 leading-tight"
+                        dangerouslySetInnerHTML={{ __html: coreProducts.product2.title }}
+                     />
                      {/* Mobile Image */}
                      <div className="block lg:hidden w-full relative py-4">
                         <img loading="lazy" src={coreProducts.product2.image} alt={coreProducts.product2.title} referrerPolicy="no-referrer" className="w-full max-w-[300px] mx-auto h-auto object-contain drop-shadow-xl" />
@@ -515,8 +527,11 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
                     <div key={idx} className="flex gap-3 items-start p-3 sm:p-4 rounded-xl bg-blue-50/50 border border-blue-100 hover:bg-blue-50 hover:border-blue-200 transition-colors">
                        <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
                        <div className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                          <strong className="text-slate-900 font-bold">{feat.title}: </strong>
-                          {feat.description}
+                          <strong 
+                            className="text-slate-900 font-bold mr-1"
+                            dangerouslySetInnerHTML={{ __html: feat.title.endsWith(':') ? feat.title : `${feat.title}:` }}
+                          />
+                          <span dangerouslySetInnerHTML={{ __html: feat.description }} />
                        </div>
                     </div>
                   ))}

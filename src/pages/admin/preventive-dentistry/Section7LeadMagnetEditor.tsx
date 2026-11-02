@@ -140,7 +140,8 @@ export const Section7LeadMagnetEditor: React.FC<Section7LeadMagnetEditorProps> =
             setDescription={(val) => setEbookCard((prev) => ({ ...prev, ctaFormDesc: typeof val === 'function' ? val(prev.ctaFormDesc || '') : val }))}
             extraHtml={ebookCard.ctaFormExtraHtml || ''}
             setExtraHtml={(val) => setEbookCard((prev) => ({ ...prev, ctaFormExtraHtml: typeof val === 'function' ? val(prev.ctaFormExtraHtml || '') : val }))}
-            redirectThanks={ebookCard.ctaRedirectThanks}
+            redirectThanks={Boolean(ebookCard.ctaRedirectThanks)}
+            onChangeRedirectThanks={(val) => setEbookCard((prev) => ({ ...prev, ctaRedirectThanks: val }))}
             setRedirectThanks={(val) => setEbookCard((prev) => ({ ...prev, ctaRedirectThanks: typeof val === 'function' ? val(Boolean(prev.ctaRedirectThanks)) : val }))}
             targetUrl={ebookCard.ctaTargetUrl || ''}
             setTargetUrl={(val) => setEbookCard((prev) => ({ ...prev, ctaTargetUrl: typeof val === 'function' ? val(prev.ctaTargetUrl || '') : val }))}
@@ -209,7 +210,8 @@ export const Section7LeadMagnetEditor: React.FC<Section7LeadMagnetEditorProps> =
             setDescription={(val) => setSampleCard((prev) => ({ ...prev, ctaFormDesc: typeof val === 'function' ? val(prev.ctaFormDesc || '') : val }))}
             extraHtml={sampleCard.ctaFormExtraHtml || ''}
             setExtraHtml={(val) => setSampleCard((prev) => ({ ...prev, ctaFormExtraHtml: typeof val === 'function' ? val(prev.ctaFormExtraHtml || '') : val }))}
-            redirectThanks={sampleCard.ctaRedirectThanks}
+            redirectThanks={Boolean(sampleCard.ctaRedirectThanks)}
+            onChangeRedirectThanks={(val) => setSampleCard((prev) => ({ ...prev, ctaRedirectThanks: val }))}
             setRedirectThanks={(val) => setSampleCard((prev) => ({ ...prev, ctaRedirectThanks: typeof val === 'function' ? val(Boolean(prev.ctaRedirectThanks)) : val }))}
             targetUrl={sampleCard.ctaTargetUrl || ''}
             setTargetUrl={(val) => setSampleCard((prev) => ({ ...prev, ctaTargetUrl: typeof val === 'function' ? val(prev.ctaTargetUrl || '') : val }))}
