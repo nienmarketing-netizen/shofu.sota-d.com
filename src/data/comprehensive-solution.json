@@ -32,7 +32,13 @@
     "ctaFormExtraHtml": "",
     "ctaRedirectThanks": false,
     "ctaTargetUrl": "",
-    "ctaResourceTitle": ""
+    "ctaResourceTitle": "",
+    "secondaryCtaFormTitle": "Đăng ký nhận E-Guide & Tài liệu lâm sàng Giomer",
+    "secondaryCtaFormDesc": "Điền thông tin bên dưới để tải trọn bộ E-Guide và phác đồ lâm sàng sinh học S-PRG từ Shofu.",
+    "secondaryCtaFormExtraHtml": "",
+    "secondaryCtaRedirectThanks": false,
+    "secondaryCtaTargetUrl": "",
+    "secondaryCtaResourceTitle": ""
   },
   "painPoints": {
     "badge": "Điểm mù lâm sàng",
