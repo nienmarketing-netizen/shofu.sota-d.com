@@ -106,7 +106,7 @@
     "ctaFormDesc": "Đăng ký để được chuyên viên Sota-D hỗ trợ tư vấn chuyên sâu về vật liệu sinh học Shofu. - test tiếp xem nào",
     "ctaFormExtraHtml": "<strong>Cái này là test</strong>\n<br>\n<br>\nNày test màu<span class=\"text-[#00ADEF] font-bold\">chữ xanh</span>",
     "ctaRedirectThanks": true,
-    "ctaTargetUrl": "shofu.sota-d.com/videc2026",
+    "ctaTargetUrl": "https://shofu.sota-d.com/videc2026",
     "ctaResourceTitle": "Test nút"
   },
   "coreProducts": {
