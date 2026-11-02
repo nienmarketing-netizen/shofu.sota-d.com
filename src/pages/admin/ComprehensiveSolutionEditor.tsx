@@ -45,6 +45,7 @@ import { Section3BioactiveEditor } from './comprehensive-solution/Section3Bioact
 import { Section4EcosystemEditor } from './comprehensive-solution/Section4EcosystemEditor';
 import { Section5EvidenceEditor } from './comprehensive-solution/Section5EvidenceEditor';
 import { Section6OfferEditor } from './comprehensive-solution/Section6OfferEditor';
+import { Section7FaqEditor } from './comprehensive-solution/Section7FaqEditor';
 
 export default function ComprehensiveSolutionEditor() {
   // Authentication Gate
@@ -177,6 +178,10 @@ export default function ComprehensiveSolutionEditor() {
   const [faqCtaText, setFaqCtaText] = useState<string>(() => initialData.faq.ctaText || 'Bác sĩ còn câu hỏi? Nhận tư vấn ngay');
   const [faqFormTitle, setFaqFormTitle] = useState<string>(() => initialData.faq.ctaFormTitle || '');
   const [faqFormDesc, setFaqFormDesc] = useState<string>(() => initialData.faq.ctaFormDesc || '');
+  const [faqFormExtraHtml, setFaqFormExtraHtml] = useState<string>(() => initialData.faq.ctaFormExtraHtml || '');
+  const [faqRedirectThanks, setFaqRedirectThanks] = useState<boolean>(() => initialData.faq.ctaRedirectThanks || false);
+  const [faqTargetUrl, setFaqTargetUrl] = useState<string>(() => initialData.faq.ctaTargetUrl || '');
+  const [faqResourceTitle, setFaqResourceTitle] = useState<string>(() => initialData.faq.ctaResourceTitle || '');
 
   // Build full payload for saving
   const buildPayload = (): ComprehensiveSolutionData => {
@@ -279,7 +284,10 @@ export default function ComprehensiveSolutionEditor() {
         ctaText: faqCtaText,
         ctaFormTitle: faqFormTitle,
         ctaFormDesc: faqFormDesc,
-        ctaRedirectThanks: false
+        ctaFormExtraHtml: faqFormExtraHtml,
+        ctaRedirectThanks: faqRedirectThanks,
+        ctaTargetUrl: faqTargetUrl,
+        ctaResourceTitle: faqResourceTitle
       }
     };
   };
@@ -383,6 +391,10 @@ export default function ComprehensiveSolutionEditor() {
       if (data.faq.ctaText) setFaqCtaText(data.faq.ctaText);
       if (data.faq.ctaFormTitle) setFaqFormTitle(data.faq.ctaFormTitle);
       if (data.faq.ctaFormDesc) setFaqFormDesc(data.faq.ctaFormDesc);
+      if (data.faq.ctaFormExtraHtml !== undefined) setFaqFormExtraHtml(data.faq.ctaFormExtraHtml);
+      if (data.faq.ctaRedirectThanks !== undefined) setFaqRedirectThanks(data.faq.ctaRedirectThanks);
+      if (data.faq.ctaTargetUrl !== undefined) setFaqTargetUrl(data.faq.ctaTargetUrl);
+      if (data.faq.ctaResourceTitle !== undefined) setFaqResourceTitle(data.faq.ctaResourceTitle);
     }
   };
 
@@ -1065,66 +1077,26 @@ export default function ComprehensiveSolutionEditor() {
 
           {/* TAB 7: FAQ */}
           {activeTab === 'faq' && (
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
-                <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
-                  <h2 className="font-heading font-extrabold text-lg text-slate-900 flex items-center gap-2">
-                    <HelpCircle className="w-5 h-5 text-blue-600" />
-                    Section 7: FAQ Giải đáp hoài nghi lâm sàng
-                  </h2>
-                  <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-blue-50 text-blue-700 border border-blue-200">
-                    {faqs.length} Câu hỏi
-                  </span>
-                </div>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Tiêu đề Section FAQ
-                    </label>
-                    <input
-                      type="text"
-                      value={faqHeadline}
-                      onChange={(e) => setFaqHeadline(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Nút CTA dưới FAQ
-                    </label>
-                    <input
-                      type="text"
-                      value={faqCtaText}
-                      onChange={(e) => setFaqCtaText(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-[#8C2828]"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* FAQs List */}
-              <div className="space-y-3">
-                {faqs.map((faq, idx) => (
-                  <div key={faq.id || idx} className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
-                    <div className="flex items-start gap-3">
-                      <span className="w-6 h-6 rounded-full bg-blue-50 text-blue-600 font-mono font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                        Q{idx + 1}
-                      </span>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="font-heading font-bold text-sm text-slate-900 mb-2 leading-snug">
-                          {faq.q}
-                        </h4>
-                        <p className="text-xs text-slate-600 leading-relaxed bg-slate-50 p-3 rounded-xl border border-slate-100">
-                          {faq.a}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Section7FaqEditor
+              faqHeadline={faqHeadline}
+              setFaqHeadline={setFaqHeadline}
+              faqs={faqs}
+              setFaqs={setFaqs}
+              faqCtaText={faqCtaText}
+              setFaqCtaText={setFaqCtaText}
+              faqFormTitle={faqFormTitle}
+              setFaqFormTitle={setFaqFormTitle}
+              faqFormDesc={faqFormDesc}
+              setFaqFormDesc={setFaqFormDesc}
+              faqFormExtraHtml={faqFormExtraHtml}
+              setFaqFormExtraHtml={setFaqFormExtraHtml}
+              faqRedirectThanks={faqRedirectThanks}
+              setFaqRedirectThanks={setFaqRedirectThanks}
+              faqTargetUrl={faqTargetUrl}
+              setFaqTargetUrl={setFaqTargetUrl}
+              faqResourceTitle={faqResourceTitle}
+              setFaqResourceTitle={setFaqResourceTitle}
+            />
           )}
         </main>
       </div>

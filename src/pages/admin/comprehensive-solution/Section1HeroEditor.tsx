@@ -54,6 +54,18 @@ interface Section1HeroEditorProps {
   handleUploadImageFile?: (file: File, targetKey: string, onSuccess: (url: string) => void) => void;
 }
 
+export const renderUspIcon = (iconName: string) => {
+  if (iconName === 'Microscope') return <Microscope className="w-4 h-4 text-emerald-600" />;
+  if (iconName === 'ShieldCheck') return <ShieldCheck className="w-4 h-4 text-red-600" />;
+  if (iconName === 'Layers') return <Layers className="w-4 h-4 text-blue-600" />;
+  if (iconName === 'Sparkles') return <Sparkles className="w-4 h-4 text-amber-500" />;
+  if (iconName === 'Award') return <Award className="w-4 h-4 text-purple-600" />;
+  if (iconName?.startsWith('/') || iconName?.startsWith('http')) {
+    return <img src={iconName} alt="icon" className="w-4 h-4 object-contain" />;
+  }
+  return <span className="text-base leading-none">{iconName || '🇯🇵'}</span>;
+};
+
 export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
   heroBadge,
   setHeroBadge,
@@ -89,19 +101,6 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
   handleUploadImageFile
 }) => {
   const [showLivePreview, setShowLivePreview] = useState(true);
-
-  // Render icon preview for USP
-  const renderUspIcon = (iconName: string) => {
-    if (iconName === 'Microscope') return <Microscope className="w-4 h-4 text-emerald-600" />;
-    if (iconName === 'ShieldCheck') return <ShieldCheck className="w-4 h-4 text-red-600" />;
-    if (iconName === 'Layers') return <Layers className="w-4 h-4 text-blue-600" />;
-    if (iconName === 'Sparkles') return <Sparkles className="w-4 h-4 text-amber-500" />;
-    if (iconName === 'Award') return <Award className="w-4 h-4 text-purple-600" />;
-    if (iconName?.startsWith('/') || iconName?.startsWith('http')) {
-      return <img src={iconName} alt="icon" className="w-4 h-4 object-contain" />;
-    }
-    return <span className="text-base leading-none">{iconName || '🇯🇵'}</span>;
-  };
 
   return (
     <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-9 shadow-sm space-y-8 animate-fadeIn">
