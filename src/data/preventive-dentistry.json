@@ -70,7 +70,7 @@
   },
   "bioactive": {
     "badge": "Triết lý MiCD",
-    "headline": "Từ phục hình thụ động đến trị liệu sinh học chủ động",
+    "headline": "Từ phục hình thụ động đến trị liệu sinh học chủ động - <span class=\"text-emerald-600 font-bold\">test thử</span>",
     "description": "Để giải quyết tận gốc nguy cơ sâu răng và nhạy cảm ngà, vật liệu nha khoa không được phép nằm \"trơ\" cơ học. Vật liệu phải SỐNG và tương tác liên tục với môi trường miệng.",
     "sPrgTitle": "Cốt lõi công nghệ hạt độn sinh học S-PRG (Giomer) khép kín 3 lớp:",
     "sPrgDesc": "Không giống như Fluoride dạng véc-ni thụ động dễ bị trôi, hạt độn S-PRG (Surface Pre-Reacted Glass-ionomer) của Shofu chứa lõi thủy tinh đa chức năng fluoro-boro-alumino-silicate, hoạt động như một \"Bình ắc quy sinh học\" liên tục giải phóng và tự sạc lại 6 loại ion y tế:",
@@ -102,12 +102,12 @@
       }
     ],
     "ctaText": "TƯ VẤN ỨNG DỤNG CÔNG NGHỆ GIOMER",
-    "ctaFormTitle": "Tư Vấn Ứng Dụng Công Nghệ Giomer & Hạt Độn S-PRG",
-    "ctaFormDesc": "Đăng ký để được chuyên viên Sota-D hỗ trợ tư vấn chuyên sâu về vật liệu sinh học Shofu.",
-    "ctaFormExtraHtml": "",
-    "ctaRedirectThanks": false,
-    "ctaTargetUrl": "",
-    "ctaResourceTitle": ""
+    "ctaFormTitle": "Tư Vấn Ứng Dụng Công Nghệ Giomer & Hạt Độn S-PRG - Test thử xem",
+    "ctaFormDesc": "Đăng ký để được chuyên viên Sota-D hỗ trợ tư vấn chuyên sâu về vật liệu sinh học Shofu. - test tiếp xem nào",
+    "ctaFormExtraHtml": "<strong>Cái này là test</strong>\n<br>\n<br>\nNày test màu<span class=\"text-[#00ADEF] font-bold\">chữ xanh</span>",
+    "ctaRedirectThanks": true,
+    "ctaTargetUrl": "shofu.sota-d.com/videc2026",
+    "ctaResourceTitle": "Test nút"
   },
   "coreProducts": {
     "headline": "Giải pháp phòng ngừa chủ động từ Shofu",
