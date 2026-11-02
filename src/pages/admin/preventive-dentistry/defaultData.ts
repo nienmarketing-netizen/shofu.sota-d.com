@@ -1,0 +1,310 @@
+import { PreventiveDentistryData } from './types';
+
+export const DEFAULT_PREVENTIVE_DATA: PreventiveDentistryData = {
+  hero: {
+    badge: "✦ Triết lý nha khoa phòng ngừa MiCD & trị liệu sinh học từ Shofu (Nhật Bản) ✦",
+    headline: "Làm chủ giải pháp nha khoa phòng ngừa theo triết lý MiCD",
+    body: "PRG Barrier Coat tạo lớp phủ giúp che kín ống ngà lộ và giảm ê buốt, với thời gian bảo vệ lên đến 6 tháng. BeautiSealant trám bít hố rãnh bằng primer tự xoi mòn, không cần bước xoi mòn bằng axit phosphoric. Công nghệ S‑PRG hỗ trợ phóng thích ion, góp phần bảo vệ bề mặt răng.",
+    image: "/image/Shofu-giai-phap-nha-khoa-phong-ngua.webp",
+    imageSizeNote: "Khuyến nghị: 1100 × 900 px (PNG / WebP tách nền, dung lượng < 350KB)",
+    usps: [
+      {
+        id: "usp-1",
+        iconName: "🇯🇵",
+        title: "Made in Japan",
+        description: "Công nghệ hạt độn S-PRG độc quyền từ Tập đoàn Shofu."
+      },
+      {
+        id: "usp-2",
+        iconName: "🧪",
+        title: "Chứng nhận Y văn",
+        description: "JADA & Nature 2018 chứng minh khả năng trung hòa axit và ức chế S. mutans."
+      },
+      {
+        id: "usp-3",
+        iconName: "🛡️",
+        title: "Màng phủ HEMA-Free",
+        description: "Tự dán, kỵ nước, không cồn, không Acetone, an toàn cho trẻ em và người già."
+      }
+    ],
+    ctaText: "NHẬN ƯU ĐÃI GÓI PHÒNG NGỪA CHỦ ĐỘNG",
+    secondaryCtaText: "NHẬN SỔ TAY PHÁC ĐỒ PHÒNG NGỪA",
+    ctaFormTitle: "Đăng Ký Nhận Ưu Đãi Gói Phòng Ngừa Chủ Động",
+    ctaFormDesc: "Để lại thông tin để chuyên viên Sota-D liên hệ tư vấn và gửi báo giá ưu đãi độc quyền.",
+    ctaRedirectThanks: true
+  },
+  painPoints: {
+    badge: "Điểm mù lâm sàng",
+    headline: "Có phải Bác sĩ đang bế tắc trước những ca bệnh \"không thể trám bít\" này mỗi ngày?",
+    description: "Nha khoa truyền thống dạy chúng ta cách \"mài và trám\" khi lỗ sâu đã xuất hiện. Nhưng đối với nhóm bệnh nhân nguy cơ cao hoặc tổn thương mô răng chưa đến mức phải can thiệp xâm lấn, Bác sĩ thường rơi vào 3 điểm mù lâm sàng âm thầm đe dọa uy tín phòng khám:",
+    items: [
+      {
+        id: "pain-1",
+        iconName: "AlertTriangle",
+        title: "1. Ám ảnh ê buốt tái phát ở bệnh nhân mòn răng, tụt nướu & tẩy trắng",
+        description: "Bôi các chất chống ê buốt thông thường chỉ mang tính chất \"giảm đau ngọn\". Sau vài ngày đến vài tuần, màng phủ bị rửa trôi, ống ngà hở trở lại khiến bệnh nhân tiếp tục than phiền vì nhạy cảm nóng lạnh."
+      },
+      {
+        id: "pain-2",
+        iconName: "AlertTriangle",
+        title: "2. Rào cản kỹ thuật khi trám bít hố rãnh (Sealant) cho trẻ nhỏ hiếu động",
+        description: "Trẻ em không thể ngồi yên để Bác sĩ thực hiện quy trình Acid Etching rửa nước – thổi khô lách cách. Chỉ một giọt nước bọt ngấm vào là toàn bộ màng Sealant bị bong tróc, tạo kẽ hở cho vi khuẩn ẩn nấp gây sâu răng bùng phát dưới lớp trám."
+      },
+      {
+        id: "pain-3",
+        iconName: "AlertTriangle",
+        title: "3. Sự bất lực trước nhóm bệnh nhân nguy cơ sâu răng cao (Caries Risk)",
+        description: "Bệnh nhân đang niềng răng (quanh mắc cài bám đầy mảng bám), răng chen chúc khó vệ sinh, đốm trắng đe dọa mất khoáng hay người già lộ chân răng... Vật liệu trám thụ động thông thường hoàn toàn \"bất động\", không có khả năng chống lại sự tấn công của axit vi khuẩn."
+      }
+    ],
+    calloutText: "Bác sĩ không thao tác sai, nhưng chính việc dùng VẬT LIỆU THỤ ĐỘNG đã vô tình biến các vùng nguy cơ thành \"quả bom nổ chậm\" dưới nướu!",
+    image: "/image/nha-khoa-phong-ngua-va-nhung-diem-mu.webp",
+    ctaText: "TÌM HIỂU GIẢI PHÁP KHẮC PHỤC NGAY",
+    ctaFormTitle: "Tìm Hiểu Giải Pháp Nha Khoa Phòng Ngừa Shofu",
+    ctaFormDesc: "Nhận phác đồ ứng dụng vật liệu sinh học ngăn ngừa ê buốt và sâu răng tái phát.",
+    ctaRedirectThanks: true
+  },
+  bioactive: {
+    badge: "Triết lý MiCD",
+    headline: "Từ phục hình thụ động đến trị liệu sinh học chủ động",
+    description: "Để giải quyết tận gốc nguy cơ sâu răng và nhạy cảm ngà, vật liệu nha khoa không được phép nằm \"trơ\" cơ học. Vật liệu phải SỐNG và tương tác liên tục với môi trường miệng.",
+    sPrgTitle: "Cốt lõi công nghệ hạt độn sinh học S-PRG (Giomer) khép kín 3 lớp:",
+    sPrgDesc: "Không giống như Fluoride dạng véc-ni thụ động dễ bị trôi, hạt độn S-PRG (Surface Pre-Reacted Glass-ionomer) của Shofu chứa lõi thủy tinh đa chức năng fluoro-boro-alumino-silicate, hoạt động như một \"Bình ắc quy sinh học\" liên tục giải phóng và tự sạc lại 6 loại ion y tế:",
+    image: "/image/Shofu-S-PRG-technology.webp",
+    ions: [
+      {
+        id: "ion-1",
+        ionName: "F⁻ & Sr²⁺",
+        description: "Tái khoáng hóa ngà răng, bít kín vĩnh viễn các ống ngà hở.",
+        colorTheme: "rose"
+      },
+      {
+        id: "ion-2",
+        ionName: "Na⁺ & SiO₃²⁻",
+        description: "Thúc đẩy sự phục hồi vi mô cấu trúc ngà răng bị suy thoái.",
+        colorTheme: "blue"
+      },
+      {
+        id: "ion-3",
+        ionName: "BO₃³⁻",
+        description: "Ức chế vi khuẩn S. mutans, triệt tiêu sự hình thành Biofilm.",
+        colorTheme: "amber"
+      },
+      {
+        id: "ion-4",
+        ionName: "Al³⁺",
+        description: "Trung hòa axit chủ động, ngăn chặn triệt để quá trình khử khoáng.",
+        colorTheme: "emerald"
+      }
+    ],
+    ctaText: "TƯ VẤN ỨNG DỤNG CÔNG NGHỆ GIOMER",
+    ctaFormTitle: "Tư Vấn Ứng Dụng Công Nghệ Giomer & Hạt Độn S-PRG",
+    ctaFormDesc: "Đăng ký để được chuyên viên Sota-D hỗ trợ tư vấn chuyên sâu về vật liệu sinh học Shofu.",
+    ctaRedirectThanks: true
+  },
+  coreProducts: {
+    headline: "Giải pháp phòng ngừa chủ động từ Shofu",
+    product1: {
+      tag: "1. Màng phủ sinh học chống ê buốt",
+      title: "PRG Barrier Coat – Áo giáp bioactive mỏng 15µm",
+      image: "/image/PRG-Barrier-Coat-Shofu.webp",
+      description: "Vật liệu phủ bảo vệ ngà răng sinh học không chứa HEMA, không cồn, không Acetone, giải phóng ion kéo dài lên đến 6 tháng chỉ sau một lần bôi duy nhất.",
+      features: [
+        {
+          title: "HEMA-Free & Acetone-Free",
+          description: "An toàn tuyệt đối, kỵ nước (hydrophobic) giúp màng phủ kháng mòn tối đa trước nước bọt. Không gây viêm nướu, không kích ứng tủy."
+        },
+        {
+          title: "Màng phủ siêu mỏng 15 micron",
+          description: "Tự dán dính, không gây cộm cấn khớp cắn hay thay đổi hình thể răng."
+        },
+        {
+          title: "Quy trình tinh gọn",
+          description: "Bôi màng phủ sinh học ➔ Chiếu đèn 10 giây ➔ Lau sạch lớp ức chế oxy bằng bông ẩm. Không cần Etching, không nhạy cảm kỹ thuật."
+        },
+        {
+          title: "Chỉ định lâm sàng đa năng",
+          description: "Điều trị triệt tiêu ê buốt tức thì do mòn răng, mòn cổ, tụt nướu, nhạy cảm sau tẩy trắng. Bảo vệ chống sâu răng chủ động."
+        }
+      ]
+    },
+    product2: {
+      tag: "2. Trám bít hố rãnh",
+      title: "BeautiSealant – Self-etching sealant không cần Etching",
+      image: "/image/BeautiSealant-shofu.webp",
+      description: "Giải pháp trám bít hố rãnh thế hệ mới giúp tối ưu hóa thời gian ghế nha (Chair-time) cho Bác sĩ Nha khoa Trẻ em và Nha khoa Tổng quát.",
+      features: [
+        {
+          title: "Zero Etching Technique",
+          description: "Sử dụng Self-Etch Primer dịu nhẹ chứa Monomer MDP dán dính hóa học chắc chắn mà không cần dùng Axit Phosphoric Etching rửa nước."
+        },
+        {
+          title: "Đầu bơm Tip 27Ga siêu nhỏ",
+          description: "Tự san bằng và đắp lót len lỏi chính xác vào các đáy hố rãnh hẹp mà không tạo bọt khí."
+        },
+        {
+          title: "Tích hợp S-PRG Ion Shield",
+          description: "Bảo vệ hố rãnh khỏi mảng bám vi khuẩn, liên tục sạc Fluoride từ kem đánh răng hàng ngày."
+        }
+      ]
+    },
+    ctaText: "NHẬN BÁO GIÁ VÀ TƯ VẤN SẢN PHẨM",
+    ctaFormTitle: "Nhận Báo Giá & Tư Vấn Bộ Đôi Phòng Ngừa Shofu",
+    ctaFormDesc: "Để lại thông tin nhận báo giá PRG Barrier Coat & BeautiSealant.",
+    ctaRedirectThanks: true
+  },
+  evidence: {
+    headline: "Bằng chứng y văn vững chắc",
+    quote: "\"Chất lượng của bất kỳ công nghệ nha khoa nào cũng phải được bảo chứng bằng dữ liệu lâm sàng thực tế.\"",
+    study1: {
+      title: "1. Bảo chứng y văn JADA (Đại học Florida - Theo dõi 8 năm & 13 năm)",
+      points: [
+        "Mốc 8 năm: 100% Tỷ lệ lưu giữ phục hình | 0% Ê buốt ngà | 0% Sâu răng thứ phát.",
+        "Mốc 13 năm: 96% Phục hình hoàn toàn sạch bóng sâu răng tái phát, chứng minh khả năng phòng thủ sinh học vĩnh cửu của hệ sinh thái Giomer."
+      ]
+    },
+    study2: {
+      title: "2. Nghiên cứu đột phá từ Tạp chí Nature (Scientific Reports 2018)",
+      description: "Thử nghiệm kính hiển vi điện tử quét (SEM) minh chứng: Sau 24 giờ không đánh răng, bề mặt chứa hạt độn S-PRG hoàn toàn sạch bóng vi khuẩn, hoàn toàn không bị lớp màng sinh học Biofilm bám đọng so với các vật liệu composite trơ thông thường."
+    },
+    testimonialsHeadline: "3. Đánh giá từ chuyên gia lâm sàng quốc tế & trong nước",
+    testimonialsRow1: [
+      {
+        quote: "Công nghệ màng phủ sinh học PRG Barrier Coat và BeautiSealant ứng dụng S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ hoàn toàn bước Etching nhạy cảm.",
+        name: "Dr. Shukan Kanuga",
+        title: "Hiệp hội Nha khoa Trẻ em Hoa Kỳ, California"
+      },
+      {
+        quote: "Từ ngày ứng dụng PRG Barrier Coat vào phòng khám, các ca mòn cổ răng và ê buốt ngà được xử lý cực kỳ nhẹ nhàng, bệnh nhân phản hồi rất tích cực vì không cần mài răng.",
+        name: "BS. Nguyễn Văn Tuấn",
+        title: "Phòng khám Nha khoa Nụ Cười Mới"
+      },
+      {
+        quote: "Khả năng chống ê buốt ngà của PRG Barrier Coat kéo dài tới vài tháng là chìa khóa giúp phòng khám của tôi xử lý êm đẹp các ca tụt nướu và mòn cổ răng mà không cần xâm lấn mài mô răng.",
+        name: "Prof. Tanaka",
+        title: "Đại học Y khoa Tokyo, Nhật Bản"
+      },
+      {
+        quote: "Trám hố rãnh với BeautiSealant thực sự thay đổi cách chúng tôi làm việc. Không cần Etching, không lo đọng nước bọt, bảo vệ răng sâu cho trẻ em nhanh chóng và an toàn tuyệt đối.",
+        name: "BS. Lê Thị Bích Ngọc",
+        title: "Nha khoa Trẻ em KidSmile"
+      },
+      {
+        quote: "Hạt độn S-PRG là bước tiến vượt bậc của nha khoa phòng ngừa. Nó không chỉ trám bít mà còn chủ động giải phóng Fluoride và các ion có lợi để tái khoáng hóa men răng liên tục.",
+        name: "Dr. Howard Farran",
+        title: "Tạp chí Nha khoa Dentaltown"
+      }
+    ],
+    testimonialsRow2: [
+      {
+        quote: "Giải pháp phòng ngừa của Shofu giúp tôi xây dựng niềm tin tuyệt đối với phụ huynh khi điều trị cho trẻ. Đặc biệt là trẻ sợ đau, thao tác nhanh và êm ái là ưu điểm tuyệt đối.",
+        name: "BS. Trần Trọng Cường",
+        title: "Bác sĩ trưởng khoa Răng Hàm Mặt"
+      },
+      {
+        quote: "Tôi dùng Giomer cho tất cả các ca sâu răng nguy cơ cao. Khả năng tái - nạp Fluoride như một trạm sạc bảo vệ răng khỏi axit vi khuẩn là điều mà composite thông thường không làm được.",
+        name: "Dr. Sarah Collins",
+        title: "Chuyên gia Nha khoa Tổng quát, Úc"
+      },
+      {
+        quote: "Màng bảo vệ PRG Barrier Coat thực sự hiệu quả với những bệnh nhân niềng răng. Việc bôi xung quanh mắc cài giúp ngăn ngừa đốm trắng do mất khoáng rất rõ rệt sau 6 tháng theo dõi.",
+        name: "BS. Phạm Minh Đạt",
+        title: "Chuyên gia Chỉnh nha quốc tế"
+      },
+      {
+        quote: "Nha khoa bảo tồn sinh học với Giomer giúp chúng ta bảo vệ ngà sống một cách chủ động. Không chỉ phục hình, chúng ta đang trị liệu cho mô răng thực sự.",
+        name: "Dr. David Clark",
+        title: "Học viện Bioclear, Hoa Kỳ"
+      },
+      {
+        quote: "Sự kết hợp giữa BeautiSealant và PRG Barrier Coat mang lại một hệ sinh thái phòng ngừa toàn diện. Dễ sử dụng, độ dán dính tuyệt vời và hoàn toàn không gây ê buốt.",
+        name: "BS. Phạm Hoàng Yến",
+        title: "Giám đốc chuyên môn Nha khoa Thẩm mỹ"
+      }
+    ],
+    ctaText: "ỨNG DỤNG NGAY CHO PHÒNG KHÁM",
+    ctaFormTitle: "Đăng Ký Tư Vấn Ứng Dụng Vật Liệu Sinh Học Shofu",
+    ctaFormDesc: "Đội ngũ chuyên môn Sota-D sẽ liên hệ tư vấn giải pháp phù hợp với mô hình phòng khám của Bác sĩ.",
+    ctaRedirectThanks: true
+  },
+  offer: {
+    badge: "Ưu đãi độc quyền trong tháng này",
+    headline: "Gói khởi động: \"Nha khoa phòng ngừa & trị liệu sinh học MiCD\"",
+    subheadline: "(Đặc quyền hỗ trợ trải nghiệm lâm sàng từ Sota-D – Giới hạn 20 phòng khám đăng ký sớm nhất)",
+    coreBox: {
+      title: "Bộ sản phẩm cốt lõi",
+      image: "/image/Shofu-giai-phap-nha-khoa-phuc-hoi-san-pham-cot-loi-new.webp",
+      items: [
+        "01 Bộ PRG Barrier Coat Mini-Kit (8 liều Base + 0.9ml Active)",
+        "01 Bộ BeautiSealant Set (01 Tuýp Paste 1.2g + 01 Chai Primer 6ml)"
+      ]
+    },
+    giftBox: {
+      title: "Bộ quà tặng tài trợ 100%",
+      image: "/image/giai-phap-nha-khoa-phuc-hoi-shofu-qua-tang-dac-quyen.webp",
+      items: [
+        "Bonus 1: Bộ đĩa đánh bóng mịn Super-Snap Mini Kit",
+        "Bonus 2: E-Guidebook Phác đồ \"Triệt Tiêu Ê Buốt & Kiểm Soát Sâu Răng Nguy Cơ Cao Theo Triết Lý MiCD\"",
+        "Bonus 3: Vé Đặc Quyền Zalo VIP Group - Cố vấn lâm sàng 1:1 cùng Chuyên gia Sota-D trong 30 ngày"
+      ]
+    },
+    originalPrice: "6.495.000đ",
+    salePrice: "2.545.000đ",
+    guaranteeText: "Hoàn tiền 100% nếu Bác sĩ không hài lòng!",
+    ctaText: "ĐĂNG KÝ MUA NGAY",
+    ctaFormTitle: "Đặt Mua Gói Khởi Động Nha Khoa Phòng Ngừa - 2.545.000đ",
+    ctaFormDesc: "Để lại thông tin để nhân viên Sota-D xác nhận đơn hàng và gửi tặng kèm trọn bộ quà tặng đặc quyền.",
+    ctaRedirectThanks: true
+  },
+  leadMagnet: {
+    headline: "Dành cho Bác sĩ cần thêm thông tin",
+    description: "Nếu Bác sĩ cần thêm thông tin y văn hoặc muốn thử nghiệm trước khi quyết định đặt hàng, hãy nhận ngay tài liệu chuyên môn và mẫu thử dưới đây:",
+    ebookCard: {
+      badge: "Sổ tay lâm sàng độc quyền",
+      title: "Phác đồ triệt tiêu ê buốt & kiểm soát sâu răng nguy cơ cao theo triết lý MiCD",
+      description: "Nội dung: Hướng dẫn từng bước xử lý mòn cổ răng, tụt nướu, chăm sóc răng niềng quanh mắc cài và quy trình trám hố rãnh không Etching.",
+      ctaText: "NHẬN EBOOK QUA ZALO",
+      ctaFormTitle: "Điền SĐT nhận Ebook MiCD qua Zalo",
+      ctaFormDesc: "Tài liệu sẽ được gửi tự động qua Zalo trong vòng 2 phút.",
+      ctaRedirectThanks: true
+    },
+    sampleCard: {
+      badge: "Nhận kit mẫu thử",
+      title: "Đăng ký nhận kit mẫu thử tận phòng khám",
+      description: "Sota-D dành tặng 30 suất trải nghiệm mẫu thử PRG Barrier Coat giao tận tay Bác sĩ trên toàn quốc hoàn toàn Miễn Phí.",
+      ctaText: "ĐĂNG KÝ NHẬN MẪU THỬ",
+      ctaFormTitle: "Đăng ký nhận Sample Kit PRG Barrier Coat",
+      ctaFormDesc: "Mẫu thử sẽ được gửi đến địa chỉ phòng khám của Bác sĩ hoàn toàn miễn phí.",
+      ctaRedirectThanks: true
+    }
+  },
+  faq: {
+    headline: "Giải đáp hoài nghi lâm sàng",
+    items: [
+      {
+        id: "faq-1",
+        q: "Lớp phủ PRG Barrier Coat mỏng 15µm có dễ bị chải răng làm trôi không? Tác dụng kéo dài bao lâu?",
+        a: "PRG Barrier Coat chứa monomer tự dán dính kỵ nước, bám chặt vào ngà răng và chịu được tác động cơ học chải răng hàng ngày. Tác dụng giải phóng ion chống ê buốt và kháng khuẩn duy trì kéo dài từ 3 đến 6 tháng cho 1 lần bôi."
+      },
+      {
+        id: "faq-2",
+        q: "BeautiSealant không Etching bằng Axit Phosphoric thì lực dán dính có đảm bảo không bị sút màng Sealant?",
+        a: "Hoàn toàn đảm bảo. BeautiSealant sử dụng Self-Etch Primer chứa monomer chức năng MDP dịu nhẹ, tạo liên kết vi cơ học và hóa học bền vững với men răng mà không làm phá hủy men răng trẻ em, đồng thời loại bỏ rào cản nhạy cảm kỹ thuật do độ ẩm."
+      },
+      {
+        id: "faq-3",
+        q: "Sản phẩm có chứa HEMA hay gây kích ứng mô nướu trẻ em không?",
+        a: "Toàn bộ dòng sản phẩm phòng ngừa của Shofu (PRG Barrier Coat & BeautiSealant) đều là HEMA-Free, Acetone-Free, Alcohol-Free, vô cùng êm dịu, không gây bỏng rát mô nướu và an toàn tuyệt đối cho trẻ nhỏ cũng như bệnh nhân lớn tuổi."
+      },
+      {
+        id: "faq-4",
+        q: "Hạt độn S-PRG giải phóng ion liên tục thì màng phủ có bị xốp hay đục màu theo thời gian không?",
+        a: "Không. Cấu trúc S-PRG được bọc trong màng biến tính bề mặt bền vững, các ion khuếch tán qua mạng lưới vi mô mà không làm phá hủy cấu trúc khung polyme, giúp màng phủ giữ độ trong suốt và nhẵn mịn vĩnh cửu."
+      }
+    ],
+    ctaText: "BÁC SĨ CÒN CÂU HỎI? NHẬN TƯ VẤN NGAY",
+    ctaFormTitle: "Bác sĩ còn câu hỏi? Nhận tư vấn ngay",
+    ctaFormDesc: "Chuyên viên kỹ thuật Sota-D sẽ trực tiếp trao đổi và giải đáp chi tiết cùng Bác sĩ.",
+    ctaRedirectThanks: true
+  }
+};

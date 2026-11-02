@@ -6,6 +6,7 @@ import SolutionLanding from './pages/SolutionLanding';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import DirectRestorationEditor from './pages/admin/DirectRestorationEditor';
 import IndirectRestorationEditor from './pages/admin/IndirectRestorationEditor';
+import PreventiveDentistryEditor from './pages/admin/PreventiveDentistryEditor';
 
 import ThanksPage from './pages/ThanksPage';
 
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/editor/phuc-hoi-truc-tiep" element={<DirectRestorationEditor />} />
         <Route path="/admin/editor/phuc-hinh-gian-tiep" element={<IndirectRestorationEditor />} />
+        <Route path="/admin/editor/nha-khoa-phong-ngua" element={<PreventiveDentistryEditor />} />
         <Route path="/admin/*" element={<AdminDashboard />} />
         {/* 301 Permanent Redirect for legacy link */}
         <Route 
