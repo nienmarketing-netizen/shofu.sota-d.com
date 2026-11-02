@@ -38,6 +38,18 @@ interface Section1HeroEditorProps {
   setHeroCtaText: React.Dispatch<React.SetStateAction<string>>;
   heroSecondaryCtaText?: string;
   setHeroSecondaryCtaText?: React.Dispatch<React.SetStateAction<string>>;
+  heroSecondaryFormTitle?: string;
+  setHeroSecondaryFormTitle?: React.Dispatch<React.SetStateAction<string>>;
+  heroSecondaryFormDesc?: string;
+  setHeroSecondaryFormDesc?: React.Dispatch<React.SetStateAction<string>>;
+  heroSecondaryFormExtraHtml?: string;
+  setHeroSecondaryFormExtraHtml?: React.Dispatch<React.SetStateAction<string>>;
+  heroSecondaryRedirectThanks?: boolean;
+  setHeroSecondaryRedirectThanks?: React.Dispatch<React.SetStateAction<boolean>>;
+  heroSecondaryTargetUrl?: string;
+  setHeroSecondaryTargetUrl?: React.Dispatch<React.SetStateAction<string>>;
+  heroSecondaryResourceTitle?: string;
+  setHeroSecondaryResourceTitle?: React.Dispatch<React.SetStateAction<string>>;
   heroFormTitle?: string;
   setHeroFormTitle?: React.Dispatch<React.SetStateAction<string>>;
   heroFormDesc?: string;
@@ -85,6 +97,18 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
   setHeroCtaText,
   heroSecondaryCtaText = 'Nhận E-Guide triệt tiêu ê buốt',
   setHeroSecondaryCtaText,
+  heroSecondaryFormTitle,
+  setHeroSecondaryFormTitle,
+  heroSecondaryFormDesc,
+  setHeroSecondaryFormDesc,
+  heroSecondaryFormExtraHtml,
+  setHeroSecondaryFormExtraHtml,
+  heroSecondaryRedirectThanks = false,
+  setHeroSecondaryRedirectThanks,
+  heroSecondaryTargetUrl,
+  setHeroSecondaryTargetUrl,
+  heroSecondaryResourceTitle,
+  setHeroSecondaryResourceTitle,
   heroFormTitle,
   setHeroFormTitle,
   heroFormDesc,
@@ -454,18 +478,25 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
         </div>
       </div>
 
-      {/* 6. Nút CTA phụ */}
+      {/* 6. Nút CTA phụ (Tải E-Guide / Tài liệu) & Form Popup Config */}
       {setHeroSecondaryCtaText && (
-        <div className="space-y-2 pt-2 border-t border-slate-100">
-          <label className="block text-xs font-mono font-bold text-slate-700 uppercase tracking-wider">
-            6. Nút CTA phụ (Tải E-Guide / Tài liệu)
-          </label>
-          <input
-            type="text"
-            value={heroSecondaryCtaText}
-            onChange={(e) => setHeroSecondaryCtaText(e.target.value)}
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-900 focus:bg-white focus:border-[#8C2828] outline-none"
-            placeholder="Nhận E-Guide triệt tiêu ê buốt"
+        <div className="pt-2 border-t border-slate-100">
+          <CtaFormConfigEditor
+            label="6. Nút CTA phụ (Tải E-Guide / Tài liệu)"
+            ctaText={heroSecondaryCtaText}
+            onChangeCtaText={setHeroSecondaryCtaText}
+            formTitle={heroSecondaryFormTitle || ''}
+            onChangeFormTitle={(val) => setHeroSecondaryFormTitle && setHeroSecondaryFormTitle(val)}
+            formDesc={heroSecondaryFormDesc || ''}
+            onChangeFormDesc={(val) => setHeroSecondaryFormDesc && setHeroSecondaryFormDesc(val)}
+            formExtraHtml={heroSecondaryFormExtraHtml || ''}
+            onChangeFormExtraHtml={(val) => setHeroSecondaryFormExtraHtml && setHeroSecondaryFormExtraHtml(val)}
+            redirectThanks={heroSecondaryRedirectThanks}
+            onChangeRedirectThanks={(val) => setHeroSecondaryRedirectThanks && setHeroSecondaryRedirectThanks(val)}
+            targetUrl={heroSecondaryTargetUrl || ''}
+            onChangeTargetUrl={(val) => setHeroSecondaryTargetUrl && setHeroSecondaryTargetUrl(val)}
+            resourceTitle={heroSecondaryResourceTitle || ''}
+            onChangeResourceTitle={(val) => setHeroSecondaryResourceTitle && setHeroSecondaryResourceTitle(val)}
           />
         </div>
       )}
@@ -473,7 +504,7 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
       {/* 7. Nút CTA chính & Form Popup Config qua CtaFormConfigEditor */}
       <div className="pt-2 border-t border-slate-100">
         <CtaFormConfigEditor
-          label="Nút CTA Hero (Sở hữu gói Master Ecosystem)"
+          label="7. Nút CTA chính Hero (Sở hữu gói Master Ecosystem)"
           ctaText={heroCtaText}
           onChangeCtaText={setHeroCtaText}
           formTitle={heroFormTitle || ''}

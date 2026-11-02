@@ -336,13 +336,13 @@ export const ComprehensiveSolution: React.FC<{ overrideContent?: ComprehensiveSo
                 {hero.secondaryCtaText && (
                   <CtaButton 
                     onClick={() => openCampaignModal(
-                      hero.secondaryCtaText,
-                      hero.secondaryCtaText,
-                      hero.ctaFormDesc,
-                      hero.ctaFormExtraHtml,
-                      hero.ctaRedirectThanks,
-                      hero.ctaTargetUrl,
-                      hero.ctaResourceTitle
+                      hero.secondaryCtaFormTitle || hero.secondaryCtaText,
+                      hero.secondaryCtaFormTitle || hero.secondaryCtaText,
+                      hero.secondaryCtaFormDesc ?? hero.ctaFormDesc,
+                      hero.secondaryCtaFormExtraHtml ?? hero.ctaFormExtraHtml,
+                      hero.secondaryCtaRedirectThanks ?? hero.ctaRedirectThanks,
+                      hero.secondaryCtaTargetUrl ?? hero.ctaTargetUrl,
+                      hero.secondaryCtaResourceTitle ?? hero.ctaResourceTitle
                     )} 
                     className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#8C2828] border-2 border-[#8C2828] px-6 py-4 rounded-full font-mono text-sm font-bold tracking-wide hover:bg-red-50 hover:shadow-lg transition-all duration-300"
                   >

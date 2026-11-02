@@ -85,6 +85,12 @@ export default function ComprehensiveSolutionEditor() {
   const [heroUsps, setHeroUsps] = useState<UspItem[]>(() => initialData.hero.usps || []);
   const [heroCtaText, setHeroCtaText] = useState<string>(() => initialData.hero.ctaText || 'Sở hữu gói Master Ecosystem');
   const [heroSecondaryCtaText, setHeroSecondaryCtaText] = useState<string>(() => initialData.hero.secondaryCtaText || 'Nhận E-Guide triệt tiêu ê buốt');
+  const [heroSecondaryFormTitle, setHeroSecondaryFormTitle] = useState<string>(() => initialData.hero.secondaryCtaFormTitle || '');
+  const [heroSecondaryFormDesc, setHeroSecondaryFormDesc] = useState<string>(() => initialData.hero.secondaryCtaFormDesc || '');
+  const [heroSecondaryFormExtraHtml, setHeroSecondaryFormExtraHtml] = useState<string>(() => initialData.hero.secondaryCtaFormExtraHtml || '');
+  const [heroSecondaryRedirectThanks, setHeroSecondaryRedirectThanks] = useState<boolean>(() => initialData.hero.secondaryCtaRedirectThanks || false);
+  const [heroSecondaryTargetUrl, setHeroSecondaryTargetUrl] = useState<string>(() => initialData.hero.secondaryCtaTargetUrl || '');
+  const [heroSecondaryResourceTitle, setHeroSecondaryResourceTitle] = useState<string>(() => initialData.hero.secondaryCtaResourceTitle || '');
   const [heroFormTitle, setHeroFormTitle] = useState<string>(() => initialData.hero.ctaFormTitle || '');
   const [heroFormDesc, setHeroFormDesc] = useState<string>(() => initialData.hero.ctaFormDesc || '');
   const [heroFormExtraHtml, setHeroFormExtraHtml] = useState<string>(() => initialData.hero.ctaFormExtraHtml || '');
@@ -200,7 +206,13 @@ export default function ComprehensiveSolutionEditor() {
         ctaFormExtraHtml: heroFormExtraHtml,
         ctaRedirectThanks: heroRedirectThanks,
         ctaTargetUrl: heroTargetUrl,
-        ctaResourceTitle: heroResourceTitle
+        ctaResourceTitle: heroResourceTitle,
+        secondaryCtaFormTitle: heroSecondaryFormTitle,
+        secondaryCtaFormDesc: heroSecondaryFormDesc,
+        secondaryCtaFormExtraHtml: heroSecondaryFormExtraHtml,
+        secondaryCtaRedirectThanks: heroSecondaryRedirectThanks,
+        secondaryCtaTargetUrl: heroSecondaryTargetUrl,
+        secondaryCtaResourceTitle: heroSecondaryResourceTitle
       },
       painPoints: {
         badge: painBadge,
@@ -308,6 +320,12 @@ export default function ComprehensiveSolutionEditor() {
       if (data.hero.ctaRedirectThanks !== undefined) setHeroRedirectThanks(data.hero.ctaRedirectThanks);
       if (data.hero.ctaTargetUrl !== undefined) setHeroTargetUrl(data.hero.ctaTargetUrl);
       if (data.hero.ctaResourceTitle !== undefined) setHeroResourceTitle(data.hero.ctaResourceTitle);
+      if (data.hero.secondaryCtaFormTitle !== undefined) setHeroSecondaryFormTitle(data.hero.secondaryCtaFormTitle);
+      if (data.hero.secondaryCtaFormDesc !== undefined) setHeroSecondaryFormDesc(data.hero.secondaryCtaFormDesc);
+      if (data.hero.secondaryCtaFormExtraHtml !== undefined) setHeroSecondaryFormExtraHtml(data.hero.secondaryCtaFormExtraHtml);
+      if (data.hero.secondaryCtaRedirectThanks !== undefined) setHeroSecondaryRedirectThanks(data.hero.secondaryCtaRedirectThanks);
+      if (data.hero.secondaryCtaTargetUrl !== undefined) setHeroSecondaryTargetUrl(data.hero.secondaryCtaTargetUrl);
+      if (data.hero.secondaryCtaResourceTitle !== undefined) setHeroSecondaryResourceTitle(data.hero.secondaryCtaResourceTitle);
     }
     if (data.painPoints) {
       if (data.painPoints.badge) setPainBadge(data.painPoints.badge);
@@ -755,9 +773,6 @@ export default function ComprehensiveSolutionEditor() {
               <h1 className="font-heading font-extrabold text-base sm:text-lg text-slate-900">
                 CMS: Giải pháp toàn diện (Master Ecosystem)
               </h1>
-              <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-red-100 text-[#8C2828] border border-red-200">
-                Giai đoạn 4: Bằng chứng 13 năm & Gói ưu đãi
-              </span>
             </div>
             <p className="text-xs text-slate-500 font-mono hidden sm:block">
               /giai-phap/giai-phap-toan-dien
@@ -855,16 +870,6 @@ export default function ComprehensiveSolutionEditor() {
               );
             })}
           </div>
-
-          <div className="mt-6 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-900 hidden lg:block">
-            <p className="font-bold flex items-center gap-1.5 mb-1 text-amber-950">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-              Khung CMS Giai đoạn 1
-            </p>
-            <p className="text-amber-800/90 leading-relaxed text-[11px]">
-              Dữ liệu cấu trúc được đồng bộ trực tiếp với file <code className="font-mono bg-white/70 px-1 py-0.5 rounded">src/data/comprehensive-solution.json</code> và API GitHub.
-            </p>
-          </div>
         </nav>
 
         {/* Content Area */}
@@ -890,6 +895,18 @@ export default function ComprehensiveSolutionEditor() {
               setHeroCtaText={setHeroCtaText}
               heroSecondaryCtaText={heroSecondaryCtaText}
               setHeroSecondaryCtaText={setHeroSecondaryCtaText}
+              heroSecondaryFormTitle={heroSecondaryFormTitle}
+              setHeroSecondaryFormTitle={setHeroSecondaryFormTitle}
+              heroSecondaryFormDesc={heroSecondaryFormDesc}
+              setHeroSecondaryFormDesc={setHeroSecondaryFormDesc}
+              heroSecondaryFormExtraHtml={heroSecondaryFormExtraHtml}
+              setHeroSecondaryFormExtraHtml={setHeroSecondaryFormExtraHtml}
+              heroSecondaryRedirectThanks={heroSecondaryRedirectThanks}
+              setHeroSecondaryRedirectThanks={setHeroSecondaryRedirectThanks}
+              heroSecondaryTargetUrl={heroSecondaryTargetUrl}
+              setHeroSecondaryTargetUrl={setHeroSecondaryTargetUrl}
+              heroSecondaryResourceTitle={heroSecondaryResourceTitle}
+              setHeroSecondaryResourceTitle={setHeroSecondaryResourceTitle}
               heroFormTitle={heroFormTitle}
               setHeroFormTitle={setHeroFormTitle}
               heroFormDesc={heroFormDesc}

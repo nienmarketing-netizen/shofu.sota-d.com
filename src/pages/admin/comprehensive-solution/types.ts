@@ -81,6 +81,12 @@ export interface ComprehensiveSolutionData {
     ctaRedirectThanks?: boolean;
     ctaTargetUrl?: string;
     ctaResourceTitle?: string;
+    secondaryCtaFormTitle?: string;
+    secondaryCtaFormDesc?: string;
+    secondaryCtaFormExtraHtml?: string;
+    secondaryCtaRedirectThanks?: boolean;
+    secondaryCtaTargetUrl?: string;
+    secondaryCtaResourceTitle?: string;
   };
   painPoints: {
     badge: string;
