@@ -1,7 +1,7 @@
 {
   "hero": {
-    "badge": "✦ Triết lý nha khoa phòng ngừa MiCD & trị liệu sinh học từ Shofu (Nhật Bản) ✦ - test",
-    "headline": "Làm chủ giải pháp nha khoa phòng ngừa theo triết lý MiCD - <span class=\"text-[#C43838] font-bold\">Test thử</span>",
+    "badge": "✦ Triết lý nha khoa phòng ngừa MiCD & trị liệu sinh học từ Shofu (Nhật Bản) ✦",
+    "headline": "Làm chủ giải pháp nha khoa phòng ngừa theo triết lý MiCD",
     "body": "PRG Barrier Coat tạo lớp phủ giúp che kín ống ngà lộ và giảm ê buốt, với thời gian bảo vệ lên đến 6 tháng. BeautiSealant trám bít hố rãnh bằng primer tự xoi mòn, không cần bước xoi mòn bằng axit phosphoric. Công nghệ S‑PRG hỗ trợ phóng thích ion, góp phần bảo vệ bề mặt răng.",
     "image": "/image/Shofu-giai-phap-nha-khoa-phong-ngua.webp",
     "imageSizeNote": "Khuyến nghị: 1100 × 900 px (PNG / WebP tách nền, dung lượng < 350KB)",
@@ -26,7 +26,7 @@
       }
     ],
     "ctaText": "NHẬN ƯU ĐÃI GÓI PHÒNG NGỪA CHỦ ĐỘNG",
-    "secondaryCtaText": "NHẬN SỔ TAY PHÁC ĐỒ PHÒNG NGỪA - test",
+    "secondaryCtaText": "NHẬN SỔ TAY PHÁC ĐỒ PHÒNG NGỪA",
     "ctaFormTitle": "Đăng Ký Nhận Ưu Đãi Gói Phòng Ngừa Chủ Động",
     "ctaFormDesc": "Để lại thông tin để chuyên viên Sota-D liên hệ tư vấn và gửi báo giá ưu đãi độc quyền.",
     "ctaFormExtraHtml": "",
