@@ -395,11 +395,17 @@ export default function PreventiveDentistryEditor() {
     const loadLatestData = async () => {
       setIsLoadingInitialData(true);
       try {
-        const res = await fetch('/api/cms/load?page=preventive-dentistry');
+        const res = await fetch(`/api/cms/load?page=preventive-dentistry&_t=${Date.now()}`, {
+          cache: 'no-store',
+          headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache' }
+        });
         if (res.ok) {
           const json = await res.json();
           if (json.success && json.data) {
             applyDataToState(json.data);
+            try {
+              localStorage.setItem('shofu_preventive_dentistry_data', JSON.stringify(json.data));
+            } catch (e) {}
           }
         }
       } catch (err) {

@@ -81,8 +81,11 @@ export const CtaFormConfigEditor: React.FC<CtaFormConfigEditorProps> = ({
   };
 
   const handleToggleRedirectThanks = (checked: boolean) => {
-    if (onChangeRedirectThanks) onChangeRedirectThanks(checked);
-    if (setRedirectThanks) setRedirectThanks(checked);
+    if (onChangeRedirectThanks) {
+      onChangeRedirectThanks(checked);
+    } else if (setRedirectThanks) {
+      setRedirectThanks(checked);
+    }
   };
 
   const handleTargetUrlChange = (val: string) => {

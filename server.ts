@@ -146,6 +146,9 @@ async function startServer() {
 
   // CMS Content APIs
   app.get("/api/cms/load", async (req, res) => {
+    res.set("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+    res.set("Pragma", "no-cache");
+    res.set("Expires", "0");
     try {
       const page = (req.query.page as string) || "direct-restoration";
       const filePath = path.join(process.cwd(), "src", "data", `${page}.json`);

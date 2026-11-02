@@ -109,7 +109,7 @@ export function PreventiveDentistry({ overrideContent }: { overrideContent?: Pre
       formTitle: formTitle || title,
       formDescription: formDesc,
       extraContentHtml: extraHtml,
-      redirectThanks: redirectThanks ?? true,
+      redirectThanks: redirectThanks ?? false,
       targetUrl,
       resourceTitle
     });
