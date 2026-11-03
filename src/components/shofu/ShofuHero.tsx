@@ -55,10 +55,14 @@ export function ShofuHero({ data, onCTA }: ShofuHeroProps) {
               className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white border border-slate-200 shadow-sm mb-6 max-w-full overflow-hidden"
             >
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00ADEF] animate-pulse shrink-0"></span>
-              <span className="font-mono text-[9px] min-[375px]:text-[10px] sm:text-xs font-medium text-slate-700 tracking-tight sm:tracking-wide whitespace-nowrap">
-                <span className="sm:hidden"><strong className="font-bold text-[#C43838]">{badgePrefix}</strong> - {badgeHighlight}</span>
-                <span className="hidden sm:inline"><strong className="font-bold text-[#C43838]">{badgePrefix}</strong> - {badgeHighlight}</span>
-              </span>
+              <span 
+                className="font-mono text-[9px] min-[375px]:text-[10px] sm:text-xs font-medium text-slate-700 tracking-tight sm:tracking-wide whitespace-nowrap"
+                dangerouslySetInnerHTML={{
+                  __html: (data?.badgePrefix && !data?.badgeHighlight?.includes(data.badgePrefix))
+                    ? `<strong class="font-bold text-[#C43838]">${data.badgePrefix}</strong> - ${data.badgeHighlight}`
+                    : (data?.badgeHighlight || '<strong class="font-bold text-[#C43838]">Sota-D</strong> - Đối tác phân phối chính thức Shofu tại Việt Nam')
+                }}
+              />
             </motion.div>
             
             {data?.headline ? (

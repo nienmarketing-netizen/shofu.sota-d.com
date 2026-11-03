@@ -104,6 +104,22 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
     setUsps(prev => prev.filter(u => u.id !== id));
   };
 
+  const currentBadgeText = badgePrefix 
+    ? (badgeHighlight.includes(badgePrefix) ? badgeHighlight : `<strong class="text-[#C43838]">${badgePrefix}</strong> - ${badgeHighlight}`)
+    : badgeHighlight;
+
+  const handleBadgeChange = (val: string | ((prev: string) => string)) => {
+    if (typeof val === 'function') {
+      const nextVal = val(currentBadgeText);
+      setBadgeHighlight(nextVal);
+    } else {
+      setBadgeHighlight(val);
+    }
+    if (badgePrefix) {
+      setBadgePrefix('');
+    }
+  };
+
   return (
     <div className="space-y-8 animate-fadeIn">
       {/* Header section info */}
@@ -133,36 +149,65 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
 
       {/* 1. Badge Pill */}
       <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
-        <h4 className="font-heading font-bold text-slate-900 text-sm uppercase tracking-wider flex items-center gap-2">
-          <Sparkles className="w-4 h-4 text-[#00ADEF]" />
-          <span>1. Huy hiệu đầu trang (Badge Pill)</span>
-        </h4>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Thương hiệu nhấn mạnh (Đỏ)
-            </label>
-            <input
-              type="text"
-              value={badgePrefix}
-              onChange={(e) => setBadgePrefix(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:border-[#00ADEF] outline-none"
-              placeholder="Sota-D"
-            />
-          </div>
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Nội dung mô tả đối tác
-            </label>
-            <input
-              type="text"
-              value={badgeHighlight}
-              onChange={(e) => setBadgeHighlight(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:border-[#00ADEF] outline-none"
-              placeholder="Đối tác phân phối chính thức Shofu tại Việt Nam"
-            />
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h4 className="font-heading font-bold text-slate-900 text-sm uppercase tracking-wider flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-[#00ADEF]" />
+            <span>1. Huy hiệu đầu trang (Badge Pill - Hỗ trợ HTML)</span>
+          </h4>
+          <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
+            <button
+              type="button"
+              onClick={() => applyFormat('strong', handleBadgeChange, 'hero-badge-input')}
+              className="px-2 py-1 rounded hover:bg-white text-xs font-bold text-slate-700 transition-colors flex items-center gap-1"
+            >
+              <Bold className="w-3 h-3" /> Bold
+            </button>
+            <button
+              type="button"
+              onClick={() => applyFormat('red', handleBadgeChange, 'hero-badge-input')}
+              className="px-2 py-1 rounded hover:bg-white text-xs font-bold text-[#8C2828] transition-colors flex items-center gap-1"
+            >
+              <Palette className="w-3 h-3" /> Đỏ
+            </button>
+            <button
+              type="button"
+              onClick={() => applyFormat('cyan', handleBadgeChange, 'hero-badge-input')}
+              className="px-2 py-1 rounded hover:bg-white text-xs font-bold text-[#00ADEF] transition-colors flex items-center gap-1"
+            >
+              <Palette className="w-3 h-3" /> Xanh
+            </button>
           </div>
         </div>
+
+        <div>
+          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+            Nội dung Huy hiệu (Gộp 1 khối, hỗ trợ thẻ HTML tùy biến)
+          </label>
+          <textarea
+            id="hero-badge-input"
+            rows={2}
+            value={currentBadgeText}
+            onChange={(e) => handleBadgeChange(e.target.value)}
+            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 font-mono text-xs text-slate-900 focus:border-[#00ADEF] outline-none leading-relaxed"
+            placeholder='<strong class="text-[#C43838]">Sota-D</strong> - Đối tác phân phối chính thức Shofu tại Việt Nam'
+          />
+        </div>
+
+        {/* Live Preview for Badge Pill */}
+        {showLivePreview && (
+          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row sm:items-center gap-3">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider shrink-0">
+              Xem trước:
+            </span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm max-w-full overflow-hidden">
+              <span className="w-2 h-2 rounded-full bg-[#00ADEF] animate-pulse shrink-0"></span>
+              <span 
+                className="font-mono text-xs text-slate-700 tracking-wide"
+                dangerouslySetInnerHTML={{ __html: currentBadgeText || 'Huy hiệu' }}
+              />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* 2. Headline & Subheadline with HTML Toolbars */}
