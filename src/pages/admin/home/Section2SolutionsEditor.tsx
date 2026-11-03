@@ -25,7 +25,9 @@ import {
   CheckCircle2,
   ShoppingCart,
   Check,
-  Info
+  Info,
+  Plus,
+  Trash2
 } from 'lucide-react';
 import { 
   SolutionCardItem, 
@@ -106,6 +108,32 @@ export const Section2SolutionsEditor: React.FC<Section2SolutionsEditorProps> = (
 
   const handleUpdateOffer = (id: number, field: keyof SpecialOfferItem, val: string) => {
     setSpecialOffers(prev => prev.map(o => o.id === id ? { ...o, [field]: val } : o));
+  };
+
+  const handleAddOffer = () => {
+    const nextId = specialOffers.length > 0 
+      ? Math.max(...specialOffers.map(o => Number(o.id) || 0)) + 1 
+      : 1;
+    const newOffer: SpecialOfferItem = {
+      id: nextId,
+      badge: 'ƯU ĐÃI MỚI',
+      headerText: 'Sản phẩm ưu đãi',
+      headerImage: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-7-tang-2-Beautifill-II.webp',
+      title: 'Tên chương trình ưu đãi',
+      subtitle: 'Dòng sản phẩm áp dụng',
+      desc: 'Thông tin chi tiết điều kiện và quyền lợi áp dụng cho phòng khám.',
+      oldPrice: '',
+      newPrice: ''
+    };
+    setSpecialOffers(prev => [...prev, newOffer]);
+  };
+
+  const handleDeleteOffer = (id: number) => {
+    if (specialOffers.length <= 1) {
+      alert('Cần giữ lại ít nhất 1 thẻ ưu đãi trong danh sách!');
+      return;
+    }
+    setSpecialOffers(prev => prev.filter(o => o.id !== id));
   };
 
   const renderIconPreview = (iconVal: string) => {
@@ -530,27 +558,35 @@ export const Section2SolutionsEditor: React.FC<Section2SolutionsEditorProps> = (
           </div>
         </div>
 
-        {/* Cấu hình Khung Bên Trái (4 Thẻ Ưu Đãi Đặc Biệt) */}
+        {/* Cấu hình Khung Bên Trái (Thẻ Ưu Đãi Đặc Biệt) */}
         <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-5">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="flex items-center gap-2">
               <Gift className="w-4 h-4 text-[#D93025]" />
               <h5 className="font-heading font-bold text-sm text-slate-900 uppercase tracking-wider">
-                Cấu hình Khung Bên Trái (4 Thẻ Ưu Đãi Cho Bác Sĩ Tick Chọn)
+                Cấu hình Khung Bên Trái (Thẻ Ưu Đãi Cho Bác Sĩ Tick Chọn)
               </h5>
+              <span className="text-[11px] font-mono text-slate-500 bg-white px-2 py-0.5 rounded border border-slate-200">
+                {specialOffers.length} thẻ
+              </span>
             </div>
-            <span className="text-[11px] font-mono text-slate-500">
-              {specialOffers.length} Thẻ ưu đãi
-            </span>
+            <button
+              type="button"
+              onClick={handleAddOffer}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#D93025] hover:bg-red-700 text-white font-mono text-xs font-bold shadow-sm transition-all active:scale-[0.98]"
+            >
+              <Plus className="w-3.5 h-3.5" />
+              <span>Thêm thẻ ưu đãi</span>
+            </button>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {specialOffers.map((offer, index) => (
               <div 
                 key={offer.id || index + 1}
-                className="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-xs space-y-4 hover:border-slate-300 transition-all"
+                className="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-xs space-y-4 hover:border-slate-300 transition-all relative"
               >
-                {/* Header card index & badge preview */}
+                {/* Header card index & badge preview & delete */}
                 <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
                   <div className="flex items-center gap-2">
                     <span className="w-6 h-6 rounded-lg bg-red-100 text-[#D93025] font-bold flex items-center justify-center text-xs font-mono">
@@ -560,11 +596,21 @@ export const Section2SolutionsEditor: React.FC<Section2SolutionsEditorProps> = (
                       {offer.title || `Ưu đãi #${index + 1}`}
                     </strong>
                   </div>
-                  {offer.badge && (
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-[#D93025] text-white shadow-xs">
-                      {offer.badge}
-                    </span>
-                  )}
+                  <div className="flex items-center gap-2">
+                    {offer.badge && (
+                      <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-[#D93025] text-white shadow-xs">
+                        {offer.badge}
+                      </span>
+                    )}
+                    <button
+                      type="button"
+                      onClick={() => handleDeleteOffer(offer.id)}
+                      title="Xóa thẻ ưu đãi này"
+                      className="p-1.5 rounded-lg text-slate-400 hover:text-red-600 hover:bg-red-50 border border-transparent hover:border-red-200 transition-colors"
+                    >
+                      <Trash2 className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
                 </div>
 
                 {/* 1. Hình ảnh ưu đãi */}
@@ -636,6 +682,17 @@ export const Section2SolutionsEditor: React.FC<Section2SolutionsEditorProps> = (
                 </div>
               </div>
             ))}
+
+            <button
+              type="button"
+              onClick={handleAddOffer}
+              className="col-span-full border-2 border-dashed border-slate-300 hover:border-[#D93025] hover:bg-red-50/40 rounded-2xl p-5 text-center text-slate-600 hover:text-[#D93025] font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer group"
+            >
+              <div className="w-7 h-7 rounded-full bg-slate-100 group-hover:bg-[#D93025] group-hover:text-white flex items-center justify-center text-slate-500 transition-colors">
+                <Plus className="w-4 h-4" />
+              </div>
+              <span className="font-heading uppercase tracking-wider">Thêm thẻ ưu đãi mới vào Pop-up</span>
+            </button>
           </div>
         </div>
 

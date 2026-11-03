@@ -15,7 +15,7 @@ export function ShofuOfferModal({ specialOffers, formTitle, formDesc }: ShofuOff
   useBodyScrollLock(isOpen);
   const [modalMode, setModalMode] = useState<'combo' | 'product'>('combo');
   const [activeOfferId, setActiveOfferId] = useState<1 | 2>(1);
-  const [activeProductIds, setActiveProductIds] = useState<Array<1 | 2 | 3 | 4>>([]);
+  const [activeProductIds, setActiveProductIds] = useState<number[]>([]);
   const [formData, setFormData] = useState({ name: '', phone: '', clinic: '', address: '', notes: '', wantsCustomOffer: false });
   const [formError, setFormError] = useState('');
 
@@ -449,7 +449,7 @@ export function ShofuOfferModal({ specialOffers, formTitle, formDesc }: ShofuOff
                       <div 
                         key={key}
                          onClick={() => {
-                          const id = Number(key) as 1|2|3|4;
+                          const id = Number(key);
                           setActiveProductIds(prev => prev.includes(id) ? prev.filter(pId => pId !== id) : [...prev, id]);
                         }}
                         className={`relative rounded-xl overflow-hidden bg-white border-2 cursor-pointer transition-all duration-300 flex flex-col ${isActive ? 'border-[#00ADEF] shadow-lg shadow-[#00ADEF]/20' : 'border-transparent shadow hover:border-slate-300'}`}
