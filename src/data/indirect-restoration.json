@@ -78,7 +78,7 @@
         {
           "iconName": "Microscope",
           "title": "Tích hợp  Công nghệ Monomer 4 chức năng với phosphate ester monomer và công nghệ ARS mới",
-          "description": "Tăng cường liên kết hóa học trên nhiều bề mặt, ứng dụng linh hoạt cho phục hồi trực tiếp và gián tiếp, không cần primer rời. "
+          "description": "MDP chức năng tối ưu khả năng liên kết bền vững với men, ngà, zirconia và kim loại.\nSilane với công nghệ ARS đảm bảo độ bền liên kết cho phục hình sứ thủy tinh (Emax, VIntage Prime Press)."
         },
         {
           "iconName": "Umbrella",
@@ -87,8 +87,8 @@
         },
         {
           "iconName": "ShieldCheck",
-          "title": "Độ dày màng siêu mỏng chỉ 5µm",
-          "description": "Tăng cường lực liên kết hóa học trực tiếp lên Men, Ngà, Zirconia và Sứ thủy tinh mà không cần bước quét primer rời."
+          "title": "Tối ưu chi phí",
+          "description": "Đầu bơm được thiết kế giúp kiểm soát lượng keo khi chiết, hạn chế lãng phí. Mỗi chai cung cấp lên đến 260 giọt, đáp ứng nhiều lần sử dụng."
         }
       ]
     },
@@ -104,22 +104,22 @@
         },
         {
           "iconName": "Clock",
-          "title": "Tối ưu hóa tồn kho",
-          "description": "Liên kết bền vững trên đa dạng vật liệu từ Zirconia đến sứ thẩm mỹ ,giúp phòng khám tinh gọn danh mục vật tư và tối ưu chi phí lưu kho hiệu quả. "
+          "title": "Tối ưu hóa tồn kho, giảm hao phí ",
+          "description": "Khả năng bám dính đáng tin cậy trên các bề mặt vật liệu nha khoa từ zirconia, lithium disilicate, kim loại, hybrid ceramic."
         },
         {
           "iconName": "Shield",
-          "title": "Dọn dư \"One-Sweep\" dễ dàng",
-          "description": "Tính lưu biến Thixotropic giúp xi măng chảy loang, thích ứng sát khít đường hoàn tất; đồng thời tạo trạng thái gel đàn hồi, cho phép lấy sạch xi măng dư nguyên khối chỉ bằng một đường gạt. "
+          "title": "Dọn sạch xi măng dư, “One-sweep” dễ dàng",
+          "description": "Beautilink SA có tính thixotropic (độ chảy) lý tưởng, giúp vật liệu dàn trải đều khi đặt phục hình, tạo lớp xi măng đồng nhất, không bọt khí, với độ dày ổn định khoảng 14 µm."
         }
       ]
     },
     "diagram": {
-      "title": "Giải pháp che màu <span class=\"text-[#00ADEF]\">tối ưu</span> hài hòa <span class=\"text-amber-500\">phẩm mỹ phục hình</span>",
+      "title": "Các tông màu <span class=\"text-[#00ADEF]\">thiết yếu</span> cho <span class=\"text-amber-500\">quy trình lâm sàng hàng ngày</span>",
       "image": "/image/mau-bsa.webp",
       "description": "BeautiLink SA có 3 màu <strong class=\"text-slate-900\">Clear, Ivory, Opaque </strong> với độ ổn định màu cao, đáp ứng nhu cầu thẩm mỹ trong phục hình gián tiếp. Từ <strong class=\"text-[#00ADEF]\">độ trong tự nhiên </strong> đến  <strong class=\"text-[#00ADEF]\"> khả năng che cùi răng sậm màu</strong>. Đối với cùi kim loại, hãng khuyến nghị chọn <strong class=\"text-amber-500\">màu Opaque</strong> để che màu nền và <strong class=\"text-amber-500\"> tối ưu kết quả thẩm mỹ.</strong>",
       "points": [
-        "<strong>Clear – Độ trong tự nhiên:</strong> Độ trong cao, hạn chế ảnh hưởng đến màu sắc, giúp thể hiện thẩm mỹ của nền răng và phục hình.",
+        "<strong>Clear – Độ trong tự nhiên:</strong> Độ trong cao, không ảnh hưởng đến màu sắc phục hình.",
         "<strong>Ivory - Thẩm mỹ hài hòa:</strong> Tông màu tương đương A2, phù hợp với các trường hợp có đường hoàn tất trên nướu.",
         "<strong>Opaque - Chủ động che màu:</strong> Tông màu tương đương A3 với khả năng che màu cao, phù hợp cho cùi kim loại hoặc cùi răng đổi màu."
       ]
