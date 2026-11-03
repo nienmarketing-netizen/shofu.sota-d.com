@@ -511,7 +511,7 @@ export const DEFAULT_HOME_DATA: HomePageData = {
     badge: 'TÀI LIỆU ĐỘC QUYỀN MIỄN PHÍ',
     headline: 'CẨM NANG LÂM SÀNG: PHỤC HỒI & PHÒNG NGỪA SHOFU',
     subheadline: 'Tổng hợp phác đồ điều trị, video ca thực tế và các nghiên cứu khoa học từ chuyên gia Shofu toàn cầu',
-    coverImage: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/image/tri-lieu-sinh-hoc-micd.webp',
+    coverImage: '',
     benefits: [
       'Quy trình dán - gắn 3 bước chuẩn Nhật Bản cho phục hình Zirconia & Sứ thủy tinh',
       'Phác đồ chặn đứng ê buốt sau trám răng xoang II với keo HEMA-Free',
@@ -520,7 +520,7 @@ export const DEFAULT_HOME_DATA: HomePageData = {
     ],
     ctaButtonText: 'NHẬN TÀI LIỆU & BÁO GIÁ NGAY',
     ctaFormTitle: 'Đăng ký nhận Cẩm nang Lâm sàng Shofu',
-    ctaFormDesc: 'Quý Bác sĩ vui lòng điền thông tin để hệ thống tự động gửi tài liệu qua Email/Zalo:',
+    ctaFormDesc: '',
     ctaFormExtraHtml: '',
     ctaRedirectThanks: true,
     ctaTargetUrl: 'https://shofu.sota-d.com/tai-lieu-lam-sang',

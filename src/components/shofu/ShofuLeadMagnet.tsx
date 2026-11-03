@@ -22,8 +22,8 @@ export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.phone.trim() || !formData.clinic.trim()) {
-      setFormError('Bác sĩ vui lòng điền đầy đủ Họ tên, Số điện thoại và Phòng khám/Nơi công tác.');
+    if (!formData.name.trim() || !formData.phone.trim() || !formData.clinic.trim() || !formData.address.trim()) {
+      setFormError('Bác sĩ vui lòng điền đầy đủ Họ tên, Số điện thoại, Phòng khám/Nơi công tác và Địa chỉ phòng khám.');
       return;
     }
     setFormError('');
@@ -184,8 +184,8 @@ export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
               )}
             </ul>
 
-            {/* ẢNH BÌA / MOCKUP TÀI LIỆU E-BOOK NẰM PHÍA DƯỚI CÁC ĐIỂM GIÁ TRỊ NỔI BẬT (CỘT TRÁI) */}
-            {data?.coverImage && (
+            {/* ẢNH BÌA / MOCKUP TÀI LIỆU E-BOOK NẰM PHÍA DƯỚI CÁC ĐIỂM GIÁ TRỊ NỔI BẬT (CỘT TRÁI - NẾU CÓ ẢNH THÌ HIỂN THỊ, KHÔNG CÓ THÌ ẨN) */}
+            {Boolean(data?.coverImage && data.coverImage.trim()) && (
               <div className="mt-8 pt-4">
                 <div className="relative group rounded-2xl overflow-hidden border border-slate-200/90 shadow-lg bg-gradient-to-br from-slate-50 via-white to-sky-50/20 p-4 max-w-md">
                   <img
@@ -236,16 +236,14 @@ export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
                       <span className="w-24 text-slate-500">Phòng khám:</span>
                       <span className="font-bold text-slate-900 flex-1">{formData.clinic}</span>
                     </div>
+                    <div className="flex">
+                      <span className="w-24 text-slate-500">Địa chỉ:</span>
+                      <span className="font-bold text-slate-900 flex-1">{formData.address}</span>
+                    </div>
                     {formData.email && (
                       <div className="flex">
                         <span className="w-24 text-slate-500">Email:</span>
                         <span className="font-bold text-slate-900 flex-1">{formData.email}</span>
-                      </div>
-                    )}
-                    {formData.address && (
-                      <div className="flex">
-                        <span className="w-24 text-slate-500">Địa chỉ:</span>
-                        <span className="font-bold text-slate-900 flex-1">{formData.address}</span>
                       </div>
                     )}
                   </div>
@@ -280,9 +278,11 @@ export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
                   <h3 className="font-heading font-extrabold text-lg text-slate-900">
                     {data?.ctaFormTitle || 'Đăng Ký Nhận Cẩm Nang & Báo Giá'}
                   </h3>
-                  <p className="font-body text-xs text-slate-500 mt-1">
-                    {data?.ctaFormDesc || 'Điền thông tin để nhận bản mềm PDF qua Zalo & Email ngay lập tức'}
-                  </p>
+                  {Boolean(data?.ctaFormDesc && data.ctaFormDesc.trim()) && (
+                    <p className="font-body text-xs text-slate-500 mt-1">
+                      {data.ctaFormDesc}
+                    </p>
+                  )}
                 </div>
 
                 {data?.ctaFormExtraHtml && (
@@ -361,14 +361,15 @@ export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
                   />
                 </div>
 
-                {/* 5. Địa chỉ phòng khám (nhận bản in) */}
+                {/* 5. Địa chỉ phòng khám (Bắt buộc) */}
                 <div className="mb-3.5">
                   <label className="block font-mono text-[11px] font-bold text-slate-700 uppercase mb-1.5 flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-slate-400" />
-                    <span>Địa chỉ phòng khám (Nhận quà / bản in)</span>
+                    <MapPin className="w-3.5 h-3.5 text-[#00ADEF]" />
+                    <span>Địa chỉ phòng khám <strong className="text-red-500">*</strong></span>
                   </label>
                   <input 
                     type="text" 
+                    required
                     value={formData.address}
                     onChange={(e) => setFormData({...formData, address: e.target.value})}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF]"

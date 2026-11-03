@@ -376,7 +376,7 @@ export const Section7LeadMagnetEditor: React.FC<Section7LeadMagnetEditorProps> =
               </ul>
 
               {/* Ảnh bìa / mockup cẩm nang nằm phía dưới các điểm giá trị nổi bật */}
-              {coverImage && (
+              {Boolean(coverImage && coverImage.trim()) && (
                 <div className="pt-3">
                   <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3 max-w-sm">
                     <img 
@@ -398,9 +398,11 @@ export const Section7LeadMagnetEditor: React.FC<Section7LeadMagnetEditorProps> =
                 <h5 className="font-heading font-bold text-sm text-slate-900">
                   {ctaFormTitle || 'Đăng Ký Nhận Cẩm Nang & Báo Giá'}
                 </h5>
-                <p className="text-[11px] text-slate-500 mt-0.5">
-                  {ctaFormDesc || 'Điền thông tin để nhận bản mềm PDF qua Zalo & Email ngay lập tức'}
-                </p>
+                {Boolean(ctaFormDesc && ctaFormDesc.trim()) && (
+                  <p className="text-[11px] text-slate-500 mt-0.5">
+                    {ctaFormDesc}
+                  </p>
+                )}
               </div>
 
               <div className="space-y-2.5 text-left text-xs">
