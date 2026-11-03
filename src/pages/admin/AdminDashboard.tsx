@@ -46,7 +46,7 @@ const WEBPAGES: WebpageItem[] = [
     badgeClass: 'bg-red-50 text-[#8C2828] border-red-200',
     accentColor: '#8C2828',
     description: 'Trang giới thiệu tổng thể thương hiệu Shofu Nhật Bản 100+ năm, triết lý sinh học MiCD, các dòng giải pháp Giomer và ca lâm sàng tiêu biểu.',
-    lastUpdated: '14/10/2026',
+    lastUpdated: 'Hôm nay',
     sections: ['Hero Di sản', 'Video 100 năm', 'Về Shofu & MiCD', 'Hệ sinh thái giải pháp', 'Case Studies', 'Ưu đãi & Đăng ký']
   },
   {
@@ -380,7 +380,16 @@ export default function AdminDashboard() {
                   <ExternalLink className="w-4 h-4" />
                 </a>
 
-                {page.id === 'phuc-hoi-truc-tiep' ? (
+                {page.id === 'home' ? (
+                  <Link
+                    to="/admin/editor/home"
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-[#8C2828] hover:bg-red-900 text-white font-mono text-xs font-bold py-2.5 px-4 rounded-xl shadow-md shadow-red-900/15 hover:shadow-lg transition-all duration-300"
+                  >
+                    <Edit3 className="w-3.5 h-3.5" />
+                    <span>Chỉnh sửa nội dung</span>
+                    <ChevronRight className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform" />
+                  </Link>
+                ) : page.id === 'phuc-hoi-truc-tiep' ? (
                   <Link
                     to="/admin/editor/phuc-hoi-truc-tiep"
                     className="flex-1 inline-flex items-center justify-center gap-2 bg-[#8C2828] hover:bg-red-900 text-white font-mono text-xs font-bold py-2.5 px-4 rounded-xl shadow-md shadow-red-900/15 hover:shadow-lg transition-all duration-300"

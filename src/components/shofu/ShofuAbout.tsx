@@ -1,11 +1,28 @@
 import React, { useState } from 'react';
 import { Hexagon, Activity, ShieldCheck, Zap, Layers, Microscope, Award, TrendingUp, BookOpen, Target, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { HomeAboutSection } from '../../pages/admin/home/types';
 
-export function ShofuAbout() {
-  const [isReportExpanded, setIsReportExpanded] = useState(false);
+interface ShofuAboutProps {
+  data?: HomeAboutSection;
+}
 
-  const ions = [
+const renderIonIcon = (name: string) => {
+  switch (name) {
+    case 'Fluoride': return ShieldCheck;
+    case 'Borate': return Activity;
+    case 'Aluminum': return Zap;
+    case 'Silicate': return Hexagon;
+    case 'Strontium': return ShieldCheck;
+    case 'Sodium': return Zap;
+    default: return ShieldCheck;
+  }
+};
+
+export function ShofuAbout({ data }: ShofuAboutProps) {
+  const [isReportExpanded, setIsReportExpanded] = useState(data?.reportExpandedByDefault || false);
+
+  const defaultIons = [
     { name: 'Fluoride', desc: 'Tái khoáng hóa men răng', icon: ShieldCheck, color: 'text-[#00ADEF]' },
     { name: 'Borate', desc: 'Kháng khuẩn mạnh mẽ', icon: Activity, color: 'text-[#C43838]' },
     { name: 'Aluminum', desc: 'Giảm ê buốt chủ động', icon: Zap, color: 'text-[#00ADEF]' },
@@ -13,6 +30,31 @@ export function ShofuAbout() {
     { name: 'Strontium', desc: 'Trung hòa axit mảng bám', icon: ShieldCheck, color: 'text-[#00ADEF]' },
     { name: 'Sodium', desc: 'Xúc tác phản ứng sinh học', icon: Zap, color: 'text-[#C43838]' },
   ];
+
+  const ionsList = (data?.ions && data.ions.length > 0)
+    ? data.ions.map(ion => ({
+        name: ion.name,
+        desc: ion.desc,
+        color: ion.color || 'text-[#00ADEF]',
+        icon: renderIonIcon(ion.name)
+      }))
+    : defaultIons;
+
+  const historyImage = data?.historyImage || "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/Shofu-1922-office.webp";
+  const statsList = (data?.historyStats && data.historyStats.length > 0)
+    ? data.historyStats
+    : [
+        { value: '1922', label: 'Năm Thành Lập' },
+        { value: '100+', label: 'Quốc Gia Phân Phối' }
+      ];
+
+  const layersList = (data?.layers && data.layers.length > 0)
+    ? data.layers
+    : [
+        { number: '01', title: 'Lõi thủy tinh đa chức năng', desc: 'Kho dự trữ ion khổng lồ từ phức hợp fluoro-boro-alumino-silicate.' },
+        { number: '02', title: 'Lớp pha Glass-ionomer', desc: 'Hình thành từ phản ứng với axit polyacrylic, tạo ma trận trao đổi ion ổn định.' },
+        { number: '03', title: 'Lớp biến tính bề mặt', desc: 'Bảo vệ lõi thủy tinh khỏi suy thoái cơ học nhưng vẫn duy trì kênh dẫn ion.' }
+      ];
 
   return (
     <section id="about-shofu" className="py-20 relative border-b border-slate-200 bg-slate-100 bg-grid-pattern overflow-hidden">
@@ -26,33 +68,59 @@ export function ShofuAbout() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-6 uppercase">
-              Di Sản <span className="text-[#C43838]">100 Năm</span> <br />
-              Nha Khoa <span className="text-[#00ADEF]">Nhật Bản</span>
-            </h2>
-            <p className="font-body text-base text-slate-600 mb-6 leading-relaxed">
-              Kể từ khi thành lập năm 1922 tại Kyoto, Shofu đã không ngừng <strong className="text-slate-900">tiên phong</strong> trong việc phát triển các vật liệu nha khoa mang tính <strong className="text-[#00ADEF]">đột phá</strong>. Sự tỉ mỉ, độ chính xác và <strong className="text-[#C43838]">cam kết chất lượng tuyệt đối</strong> của người Nhật được đúc kết trong từng sản phẩm.
-            </p>
-            <p className="font-body text-base text-slate-600 mb-8 leading-relaxed">
-              Hôm nay, Shofu tự hào là một trong những tập đoàn nha khoa toàn cầu, mang đến <strong className="text-slate-900">giải pháp lâm sàng đáng tin cậy</strong> cho hàng triệu Bác sĩ tại <strong className="text-[#00ADEF]">hơn 100 quốc gia</strong>.
-            </p>
+            {data?.historyHeadline ? (
+              <h2 
+                className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-6 uppercase"
+                dangerouslySetInnerHTML={{ __html: data.historyHeadline }}
+              />
+            ) : (
+              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-6 uppercase">
+                Di Sản <span className="text-[#C43838]">100 Năm</span> <br />
+                Nha Khoa <span className="text-[#00ADEF]">Nhật Bản</span>
+              </h2>
+            )}
+
+            {data?.historyDesc1 ? (
+              <p 
+                className="font-body text-base text-slate-600 mb-6 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: data.historyDesc1 }}
+              />
+            ) : (
+              <p className="font-body text-base text-slate-600 mb-6 leading-relaxed">
+                Kể từ khi thành lập năm 1922 tại Kyoto, Shofu đã không ngừng <strong className="text-slate-900">tiên phong</strong> trong việc phát triển các vật liệu nha khoa mang tính <strong className="text-[#00ADEF]">đột phá</strong>. Sự tỉ mỉ, độ chính xác và <strong className="text-[#C43838]">cam kết chất lượng tuyệt đối</strong> của người Nhật được đúc kết trong từng sản phẩm.
+              </p>
+            )}
+
+            {data?.historyDesc2 ? (
+              <p 
+                className="font-body text-base text-slate-600 mb-8 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: data.historyDesc2 }}
+              />
+            ) : (
+              <p className="font-body text-base text-slate-600 mb-8 leading-relaxed">
+                Hôm nay, Shofu tự hào là một trong những tập đoàn nha khoa toàn cầu, mang đến <strong className="text-slate-900">giải pháp lâm sàng đáng tin cậy</strong> cho hàng triệu Bác sĩ tại <strong className="text-[#00ADEF]">hơn 100 quốc gia</strong>.
+              </p>
+            )}
+
             <div className="flex items-center gap-6 pt-6 border-t border-slate-200">
-              <div>
-                <div className="font-heading font-bold text-3xl text-[#C43838]">1922</div>
-                <div className="font-mono text-xs text-slate-500 uppercase mt-1">Năm Thành Lập</div>
-              </div>
-              <div className="w-[1px] h-10 bg-slate-200"></div>
-              <div>
-                <div className="font-heading font-bold text-3xl text-[#00ADEF]">100+</div>
-                <div className="font-mono text-xs text-slate-500 uppercase mt-1">Quốc Gia Phân Phối</div>
-              </div>
+              {statsList.map((st, i) => (
+                <React.Fragment key={i}>
+                  {i > 0 && <div className="w-[1px] h-10 bg-slate-200"></div>}
+                  <div>
+                    <div className={`font-heading font-bold text-3xl ${i === 0 ? 'text-[#C43838]' : 'text-[#00ADEF]'}`}>
+                      {st.value}
+                    </div>
+                    <div className="font-mono text-xs text-slate-500 uppercase mt-1">{st.label}</div>
+                  </div>
+                </React.Fragment>
+              ))}
             </div>
           </motion.div>
           
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#00ADEF]/20 to-[#C43838]/20 rounded-3xl blur-3xl transform -rotate-6 opacity-60"></div>
             <img referrerPolicy="no-referrer" 
-              src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/Shofu-1922-office.webp" 
+              src={historyImage} 
               alt="Shofu History 1922" 
               className="relative w-full h-auto object-cover rounded-3xl mix-blend-multiply"
               style={{ 
@@ -61,7 +129,7 @@ export function ShofuAbout() {
               }}
               onError={(e) => {
                 if (!e.currentTarget.src.includes("cdn.jsdelivr.net")) {
-                  e.currentTarget.src = "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/Shofu-1922-office.webp";
+                  e.currentTarget.src = historyImage;
                 }
               }}
             />
@@ -79,20 +147,23 @@ export function ShofuAbout() {
             <div className="relative z-10">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-sm">
                 <BookOpen className="w-4 h-4 text-[#00ADEF]" />
-                <span className="font-mono text-xs font-bold text-white uppercase tracking-widest">Báo cáo Chuyên môn</span>
+                <span className="font-mono text-xs font-bold text-white uppercase tracking-widest">
+                  {data?.reportBadge || 'Báo cáo Chuyên môn'}
+                </span>
               </div>
-              <h3 className="font-heading font-extrabold text-3xl md:text-5xl text-white mb-6 leading-tight">
-                Công nghệ hạt độn sinh học <span className="text-[#00ADEF]">S-PRG</span>
-              </h3>
+              <h3 
+                className="font-heading font-extrabold text-3xl md:text-5xl text-white mb-6 leading-tight"
+                dangerouslySetInnerHTML={{ __html: data?.reportHeadline || 'Công nghệ hạt độn sinh học <span class="text-[#00ADEF]">S-PRG</span>' }}
+              />
               <p className="font-body text-lg text-slate-300 max-w-3xl leading-relaxed mb-8">
-                Từ phục hồi thụ động sang trị liệu sinh học chủ động. S-PRG không đơn thuần là hạt độn, mà là một cỗ máy vi thể thay đổi hoàn toàn môi trường phục hình.
+                {data?.reportDesc || 'Từ phục hồi thụ động sang trị liệu sinh học chủ động. S-PRG không đơn thuần là hạt độn, mà là một cỗ máy vi thể thay đổi hoàn toàn môi trường phục hình.'}
               </p>
               
               <button 
                  onClick={() => setIsReportExpanded(!isReportExpanded)}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#00ADEF] text-white font-bold hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm sm:text-base"
               >
-                {isReportExpanded ? 'Thu gọn báo cáo' : 'Xem toàn bộ thông tin'}
+                {isReportExpanded ? 'Thu gọn báo cáo' : (data?.reportButtonText || 'Xem toàn bộ thông tin')}
                 {isReportExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
               </button>
             </div>
@@ -116,26 +187,22 @@ export function ShofuAbout() {
                   <Layers className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-heading font-bold text-2xl text-slate-900">Cấu trúc 3 lớp phức hợp</h4>
-                  <p className="font-mono text-sm text-[#00ADEF] font-semibold uppercase">Biên độ an toàn vượt trội</p>
+                  <h4 className="font-heading font-bold text-2xl text-slate-900">
+                    {data?.layersHeadline || 'Cấu trúc 3 lớp phức hợp'}
+                  </h4>
+                  <p className="font-mono text-sm text-[#00ADEF] font-semibold uppercase">
+                    {data?.layersSubtitle || 'Biên độ an toàn vượt trội'}
+                  </p>
                 </div>
               </div>
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="p-6 rounded-2xl bg-white shadow-sm border border-slate-200 hover:border-[#00ADEF]/30 transition-colors">
-                  <div className="font-heading font-bold text-4xl text-slate-200 mb-4">01</div>
-                  <h5 className="font-heading font-bold text-lg text-slate-900 mb-2">Lõi thủy tinh đa chức năng</h5>
-                  <p className="font-body text-sm text-slate-600 leading-relaxed">Kho dự trữ ion khổng lồ từ phức hợp fluoro-boro-alumino-silicate.</p>
-                </div>
-                <div className="p-6 rounded-2xl bg-white shadow-sm border border-slate-200 hover:border-[#00ADEF]/30 transition-colors">
-                  <div className="font-heading font-bold text-4xl text-slate-200 mb-4">02</div>
-                  <h5 className="font-heading font-bold text-lg text-slate-900 mb-2">Lớp pha Glass-ionomer</h5>
-                  <p className="font-body text-sm text-slate-600 leading-relaxed">Hình thành từ phản ứng với axit polyacrylic, tạo ma trận trao đổi ion ổn định.</p>
-                </div>
-                <div className="p-6 rounded-2xl bg-white shadow-sm border border-slate-200 hover:border-[#00ADEF]/30 transition-colors">
-                  <div className="font-heading font-bold text-4xl text-slate-200 mb-4">03</div>
-                  <h5 className="font-heading font-bold text-lg text-slate-900 mb-2">Lớp biến tính bề mặt</h5>
-                  <p className="font-body text-sm text-slate-600 leading-relaxed">Bảo vệ lõi thủy tinh khỏi suy thoái cơ học nhưng vẫn duy trì kênh dẫn ion.</p>
-                </div>
+                {layersList.map((layer, idx) => (
+                  <div key={idx} className="p-6 rounded-2xl bg-white shadow-sm border border-slate-200 hover:border-[#00ADEF]/30 transition-colors">
+                    <div className="font-heading font-bold text-4xl text-slate-200 mb-4">{layer.number || `0${idx + 1}`}</div>
+                    <h5 className="font-heading font-bold text-lg text-slate-900 mb-2">{layer.title}</h5>
+                    <p className="font-body text-sm text-slate-600 leading-relaxed">{layer.desc}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -146,12 +213,16 @@ export function ShofuAbout() {
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-heading font-bold text-2xl text-slate-900">Lá chắn 6 ion sinh học</h4>
-                  <p className="font-mono text-sm text-[#00ADEF] font-semibold uppercase">Cơ chế pH-buffering & Recharge/Release</p>
+                  <h4 className="font-heading font-bold text-2xl text-slate-900">
+                    {data?.ionsHeadline || 'Lá chắn 6 ion sinh học'}
+                  </h4>
+                  <p className="font-mono text-sm text-[#00ADEF] font-semibold uppercase">
+                    {data?.ionsSubtitle || 'Cơ chế pH-buffering & Recharge/Release'}
+                  </p>
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8">
-                {ions.map((ion) => (
+                {ionsList.map((ion) => (
                   <div key={ion.name} className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
                     <ion.icon className={`w-8 h-8 shrink-0 ${ion.color}`} />
                     <div>
@@ -164,13 +235,19 @@ export function ShofuAbout() {
               <div className="bg-slate-900 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex-1">
                   <h5 className="font-heading font-bold text-xl text-white mb-3">Cơ chế pH-buffering</h5>
-                  <p className="font-body text-sm text-slate-300 leading-relaxed">Khi pH môi trường giảm xuống dưới ngưỡng <span className="text-[#00ADEF] font-bold">5.5</span>, vật liệu chủ động giải phóng ion để trung hòa axit, ngăn chặn khử khoáng ngà răng.</p>
+                  <p 
+                    className="font-body text-sm text-slate-300 leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: data?.phBufferingDesc || 'Khi pH môi trường giảm xuống dưới ngưỡng <span class="text-[#00ADEF] font-bold">5.5</span>, vật liệu chủ động giải phóng ion để trung hòa axit, ngăn chặn khử khoáng ngà răng.' }}
+                  />
                 </div>
                 <div className="w-px h-16 bg-slate-700 hidden md:block"></div>
                 <div className="w-full h-px bg-slate-700 block md:hidden"></div>
                 <div className="flex-1">
                   <h5 className="font-heading font-bold text-xl text-white mb-3">Tái - nạp (Recharge & Release)</h5>
-                  <p className="font-body text-sm text-slate-300 leading-relaxed">Hấp thụ F- từ các nguồn ngoại sinh (kem đánh răng) để duy trì đặc tính trị liệu suốt đời phục hình. Lớp bảo hiểm vững chắc cho bệnh nhân.</p>
+                  <p 
+                    className="font-body text-sm text-slate-300 leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: data?.rechargeReleaseDesc || 'Hấp thụ F- từ các nguồn ngoại sinh (kem đánh răng) để duy trì đặc tính trị liệu suốt đời phục hình. Lớp bảo hiểm vững chắc cho bệnh nhân.' }}
+                  />
                 </div>
               </div>
             </div>

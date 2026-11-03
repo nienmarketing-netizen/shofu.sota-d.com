@@ -21,6 +21,17 @@ export default async function handler(req, res) {
     const clientIp = req.headers["x-forwarded-for"] || req.socket?.remoteAddress || "";
     const userAgent = req.headers["user-agent"] || "";
 
+    // Sanitize event_source_url to strip sensitive query params / hash
+    let sanitizedUrl = eventSourceUrl;
+    if (typeof eventSourceUrl === 'string' && eventSourceUrl.trim()) {
+      try {
+        const u = new URL(eventSourceUrl.trim());
+        sanitizedUrl = `${u.protocol}//${u.host}${u.pathname}`;
+      } catch {
+        sanitizedUrl = eventSourceUrl.split('?')[0].split('#')[0];
+      }
+    }
+
     const payload = {
       data: [
         {
@@ -28,7 +39,7 @@ export default async function handler(req, res) {
           event_time: Math.floor(Date.now() / 1000),
           event_id: finalEventId,
           action_source: "website",
-          event_source_url: eventSourceUrl,
+          event_source_url: sanitizedUrl,
           user_data: {
             client_ip_address: clientIp,
             client_user_agent: userAgent,

@@ -1,0 +1,339 @@
+{
+  "hero": {
+    "badgePrefix": "Sota-D",
+    "badgeHighlight": "Đối tác phân phối chính thức Shofu tại Việt Nam",
+    "badgeSuffix": "",
+    "headline": "GIẢI PHÁP NHA KHOA <br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-600 py-2 whitespace-nowrap\">CHUẨN MỰC NHẬT BẢN</span>",
+    "subheadline": "Hệ sinh thái vật liệu nha khoa tiên tiến tích hợp công nghệ hạt độn sinh học <strong class=\"text-[#00ADEF]\">S-PRG độc quyền</strong>. <strong class=\"text-slate-900\">Tối ưu quy trình lâm sàng</strong>, mang lại hiệu quả <strong class=\"text-slate-900\">phục hình bền vững</strong> và <strong class=\"text-emerald-600\">bảo vệ mô răng chủ động</strong>.",
+    "image": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/background-hero-section-full-solution-shofu.webp",
+    "mobileImage": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/background-hero-section-full-solution-shofu.webp",
+    "usps": [
+      { "id": "1", "icon": "Atom", "title": "VẬT LIỆU SINH HỌC" },
+      { "id": "2", "icon": "ShieldCheck", "title": "CÔNG NGHỆ HEMA-FREE" },
+      { "id": "3", "icon": "Feather", "title": "CAN THIỆP TỐI THIỂU" },
+      { "id": "4", "icon": "Zap", "title": "QUY TRÌNH TỐI GIẢN" }
+    ],
+    "ctaText": "Nhận Tư Vấn Ngay",
+    "ctaFormTitle": "Đăng ký tư vấn giải pháp Shofu",
+    "ctaFormDesc": "Quý Bác sĩ vui lòng để lại thông tin, đội ngũ chuyên viên Sota-D sẽ liên hệ tư vấn trong 15 phút:",
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
+  },
+  "solutions": {
+    "headline": "Giải Pháp Lâm Sàng <span class=\"text-[#00ADEF]\">Trọng Tâm</span>",
+    "subheadline": "Khám phá hệ sinh thái sản phẩm Shofu được thiết kế <strong class=\"text-slate-900\">chuyên sâu cho từng chỉ định lâm sàng</strong>, giúp <strong class=\"text-emerald-600\">nâng cao chất lượng điều trị</strong> và <strong class=\"text-amber-600\">tối ưu chi phí vận hành</strong> tại phòng khám.",
+    "solutions": [
+      {
+        "id": "preventive",
+        "slug": "nha-khoa-phong-ngua",
+        "title": "Nha Khoa Phòng Ngừa",
+        "badge": "Chủ động",
+        "icon": "ShieldPlus",
+        "bgClass": "bg-gradient-to-br from-[#33BDF2] to-[#00ADEF]"
+      },
+      {
+        "id": "direct",
+        "slug": "phuc-hoi-truc-tiep",
+        "title": "Phục Hồi Trực Tiếp",
+        "badge": "Thẩm mỹ",
+        "icon": "Syringe",
+        "bgClass": "bg-gradient-to-br from-[#00ADEF] to-[#006F9E]"
+      },
+      {
+        "id": "indirect",
+        "slug": "phuc-hinh-gian-tiep",
+        "title": "Phục Hình Gián Tiếp",
+        "badge": "Bền vững",
+        "icon": "Gem",
+        "bgClass": "bg-gradient-to-br from-[#F05A54] to-[#D9383A]"
+      },
+      {
+        "id": "masterclass",
+        "slug": "giai-phap-toan-dien",
+        "title": "Giải Pháp Toàn Diện",
+        "badge": "Toàn diện",
+        "icon": "Layers",
+        "bgClass": "bg-gradient-to-br from-[#C43838] to-[#801D1D]"
+      }
+    ],
+    "bestsellersHeadline": "Sản phẩm bán chạy",
+    "bestsellers": [
+      {
+        "id": "1",
+        "category": "COMPOSITE CAO CẤP",
+        "name": "Beautifil Injectable X",
+        "tagline": "Bơm vật liệu và tạo hình cùng một lúc",
+        "image": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautifil-injectable-x.png"
+      },
+      {
+        "id": "2",
+        "category": "KEO DÁN ĐA NĂNG HEMA-FREE",
+        "name": "BeautiBond Xtreme",
+        "tagline": "Đa dạng chỉ định, tối ưu quy trình",
+        "image": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png"
+      },
+      {
+        "id": "3",
+        "category": "XI MĂNG RESIN TỰ DÁN",
+        "name": "Beautilink SA",
+        "tagline": "Một cement - Đa dạng khả năng dán dính",
+        "image": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png"
+      },
+      {
+        "id": "4",
+        "category": "MŨI ĐÁNH BÓNG HOÀN THIỆN",
+        "name": "Super-Snap X-Treme",
+        "tagline": "Bề mặt hoàn hảo tự nhiên",
+        "image": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/super-snap-xtreme.webp"
+      }
+    ],
+    "ctaText": "Xem ưu đãi và đặt hàng",
+    "ctaFormTitle": "Mở khóa bảng giá & ưu đãi Shofu",
+    "ctaFormDesc": "Nhập thông tin để nhận bảng báo giá chi tiết và ưu đãi độc quyền phân phối chính hãng:",
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": false,
+    "ctaTargetUrl": "",
+    "ctaResourceTitle": ""
+  },
+  "offers": {
+    "badge": "Ưu đãi giới hạn số lượng",
+    "headline": "MUA HÀNG <span class=\"text-[#00ADEF]\">KHÔNG RỦI RO</span>",
+    "countdownDays": 3,
+    "countdownHours": 14,
+    "countdownMinutes": 25,
+    "countdownSeconds": 0,
+    "packages": [
+      {
+        "id": 1,
+        "badge": "COMBO HOT",
+        "title1": "Combo phục hình gián tiếp",
+        "title2": "Giomer không ê buốt",
+        "description": "Chuẩn hóa phác đồ dán - gắn phục hình gián tiếp 3 bước: Khóa kín ống ngà bằng màng dán kỵ nước HEMA-Free (<strong class=\"text-[#00ADEF]\">BeautiBond Xtreme</strong>), kết hợp Xi măng tự dán sinh học (<strong class=\"text-emerald-400\">BeautiLink SA</strong>) giải phóng 6 ion – Giảm thiểu nguy cơ thủy phân liên kết và bảo vệ viền sinh học bền vững.",
+        "originalPrice": "3.250.000đ",
+        "salePrice": "1.497.000vnđ",
+        "refundBadge": "Hoàn tiền 100% nếu Bác sĩ không hài lòng",
+        "spotsLeftText": "Chỉ còn 15 suất",
+        "accentColor": "#00ADEF",
+        "ctaText": "ĐĂNG KÝ NGAY",
+        "ctaFormTitle": "Đăng ký Combo Phục hình gián tiếp (1.497.000đ)",
+        "ctaFormDesc": "Quý Bác sĩ vui lòng để lại thông tin để nhận ưu đãi và hỗ trợ giao hàng tận nơi:",
+        "ctaFormExtraHtml": "",
+        "ctaRedirectThanks": false,
+        "ctaTargetUrl": "",
+        "ctaResourceTitle": ""
+      },
+      {
+        "id": 2,
+        "badge": "ƯU ĐÃI ĐẶC BIỆT",
+        "title1": "Gói khởi động Phục Hồi MiCD",
+        "title2": "Giải pháp phục hồi thẩm mỹ sinh học",
+        "description": "Đồng bộ hóa quy trình phục hồi thẩm mỹ từ dán dính đến đánh bóng chỉ trong một gói giải pháp. <strong class=\"text-emerald-400\">Loại bỏ các bước nhạy cảm kỹ thuật</strong>, bịt kín xoang sâu phức tạp, kết thúc bằng bộ mũi mài mịn màng chính hãng giúp <strong class=\"text-amber-400\">mô nướu lành thương hồng hào</strong> và <strong class=\"text-emerald-400\">ngăn mảng bám tích tụ</strong>.",
+        "originalPrice": "7.250.000đ",
+        "salePrice": "3.250.000đ",
+        "refundBadge": "Hoàn tiền 100% nếu Bác sĩ không hài lòng",
+        "spotsLeftText": "Chỉ còn 8 suất",
+        "accentColor": "#C43838",
+        "ctaText": "NHẬN ƯU ĐÃI",
+        "ctaFormTitle": "Đăng ký Gói khởi động Phục Hồi MiCD (3.250.000đ)",
+        "ctaFormDesc": "Quý Bác sĩ vui lòng để lại thông tin để giữ suất ưu đãi kèm bộ quà tặng chính hãng:",
+        "ctaFormExtraHtml": "",
+        "ctaRedirectThanks": false,
+        "ctaTargetUrl": "",
+        "ctaResourceTitle": ""
+      }
+    ]
+  },
+  "about": {
+    "historyHeadline": "Di Sản <span class=\"text-[#C43838]\">100 Năm</span> <br />Nha Khoa <span class=\"text-[#00ADEF]\">Nhật Bản</span>",
+    "historyDesc1": "Kể từ khi thành lập năm 1922 tại Kyoto, Shofu đã không ngừng <strong class=\"text-slate-900\">tiên phong</strong> trong việc phát triển các vật liệu nha khoa mang tính <strong class=\"text-[#00ADEF]\">đột phá</strong>. Sự tỉ mỉ, độ chính xác và <strong class=\"text-[#C43838]\">cam kết chất lượng tuyệt đối</strong> của người Nhật được đúc kết trong từng sản phẩm.",
+    "historyDesc2": "Hôm nay, Shofu tự hào là một trong những tập đoàn nha khoa toàn cầu, mang đến <strong class=\"text-slate-900\">giải pháp lâm sàng đáng tin cậy</strong> cho hàng triệu Bác sĩ tại <strong class=\"text-[#00ADEF]\">hơn 100 quốc gia</strong>.",
+    "historyStats": [
+      { "value": "1922", "label": "NĂM THÀNH LẬP" },
+      { "value": "100+", "label": "QUỐC GIA PHÂN PHỐI" }
+    ],
+    "historyImage": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/Shofu-1922-office.webp",
+    "reportBadge": "Báo cáo Chuyên môn",
+    "reportHeadline": "Công nghệ hạt độn sinh học <span class=\"text-[#00ADEF]\">S-PRG</span>",
+    "reportDesc": "Từ phục hồi thụ động sang trị liệu sinh học chủ động. S-PRG không đơn thuần là hạt độn, mà là một cỗ máy vi thể thay đổi hoàn toàn môi trường phục hình.",
+    "reportButtonText": "Xem toàn bộ thông tin",
+    "reportExpandedByDefault": false,
+    "layersHeadline": "Cấu trúc 3 lớp phức hợp",
+    "layersSubtitle": "Biên độ an toàn vượt trội",
+    "layers": [
+      {
+        "number": "01",
+        "title": "Lõi thủy tinh đa chức năng",
+        "desc": "Kho dự trữ ion khổng lồ từ phức hợp fluoro-boro-alumino-silicate."
+      },
+      {
+        "number": "02",
+        "title": "Lớp pha Glass-ionomer",
+        "desc": "Hình thành từ phản ứng với axit polyacrylic, tạo ma trận trao đổi ion ổn định."
+      },
+      {
+        "number": "03",
+        "title": "Lớp biến tính bề mặt",
+        "desc": "Bảo vệ lõi thủy tinh khỏi suy thoái cơ học nhưng vẫn duy trì kênh dẫn ion."
+      }
+    ],
+    "ionsHeadline": "Lá chắn 6 ion sinh học",
+    "ionsSubtitle": "Cơ chế pH-buffering & Recharge/Release",
+    "ions": [
+      { "name": "Fluoride", "desc": "Tái khoáng hóa men răng", "color": "text-[#00ADEF]" },
+      { "name": "Borate", "desc": "Kháng khuẩn mạnh mẽ", "color": "text-[#C43838]" },
+      { "name": "Aluminum", "desc": "Giảm ê buốt chủ động", "color": "text-[#00ADEF]" },
+      { "name": "Silicate", "desc": "Thúc đẩy canxi hóa", "color": "text-[#C43838]" },
+      { "name": "Strontium", "desc": "Trung hòa axit mảng bám", "color": "text-[#00ADEF]" },
+      { "name": "Sodium", "desc": "Xúc tác phản ứng sinh học", "color": "text-[#C43838]" }
+    ],
+    "phBufferingDesc": "Khi pH môi trường giảm xuống dưới ngưỡng <span class=\"text-[#00ADEF] font-bold\">5.5</span>, vật liệu chủ động giải phóng ion để trung hòa axit, ngăn chặn khử khoáng ngà răng.",
+    "rechargeReleaseDesc": "Hấp thụ F- từ các nguồn ngoại sinh (kem đánh răng) để duy trì đặc tính trị liệu suốt đời phục hình. Lớp bảo hiểm vững chắc cho bệnh nhân.",
+    "natureBadge": "Nature Research 2018",
+    "natureHeadline": "Đột phá kháng khuẩn cấp độ phân tử",
+    "natureDesc": "Đại học Osaka chứng minh cơ chế ức chế gen độc bản của dịch chiết S-PRG.",
+    "naturePoints": [
+      {
+        "title": "Vô hiệu hóa gen \"pdh operon\"",
+        "desc": "Kìm hãm cụm gen Pyruvate Dehydrogenase của vi khuẩn S. mutans."
+      },
+      {
+        "title": "Đứt gãy con đường sinh hóa",
+        "desc": "Triệt tiêu nguồn năng lượng từ quá trình chuyển hóa đường của vi khuẩn."
+      },
+      {
+        "title": "Cơ chế bỏ đói (Starvation)",
+        "desc": "Vi khuẩn không thể tạo ra axit và màng sinh học ngay cả khi có mặt đường sucrose."
+      }
+    ],
+    "floridaBadge": "JADA - Univ of Florida",
+    "floridaHeadline": "Bảo chứng lâm sàng 8 năm",
+    "floridaDesc": "Nghiên cứu độc lập từ TS. Valeria V. Gordan chứng minh độ bền vững tuyệt đối.",
+    "floridaStat1Value": "100%",
+    "floridaStat1Label": "Tỷ lệ lưu giữ thành công",
+    "floridaStat1Desc": "Không ghi nhận ca sâu răng thứ phát hay thất bại lâm sàng nào sau 8 năm.",
+    "floridaStat2Value": "0%",
+    "floridaStat2Label": "Nhạy cảm sau điều trị",
+    "floridaStat2Desc": "Triệt tiêu hoàn toàn ê buốt, bảo vệ uy tín phòng khám.",
+    "floridaStat3Desc": "Tích tụ vi khuẩn tối thiểu so với bám dính dày đặc trên composite thường.",
+    "roiHeadline": "Thực chiến lâm sàng & tối ưu ROI",
+    "roiDesc": "Quyết định đầu tư chiến lược bảo vệ lợi nhuận và gia tăng Brand Equity cho phòng khám.",
+    "roiCards": [
+      {
+        "title": "Tối ưu hóa quy trình",
+        "desc": "Hiệu ứng Chameleon truyền sáng mô phỏng men và ngà tự nhiên, thẩm mỹ cao không cần đắp lớp phức tạp."
+      },
+      {
+        "title": "Đặc tính vận hành",
+        "desc": "Độ nhớt lý tưởng, không dính dụng cụ (non-sticky), hỗ trợ thao tác điêu khắc nhanh chóng, chính xác."
+      },
+      {
+        "title": "Giảm chi phí ẩn",
+        "desc": "Triệt tiêu ê buốt và co ngót cực thấp (0.85%) giúp chấm dứt ca bảo hành không sinh lời."
+      }
+    ]
+  },
+  "socialProof": {
+    "headline": "Bảo Chứng Bởi Các Chuyên Gia Lâm Sàng",
+    "subheadline": "Hàng ngàn Bác sĩ trên toàn thế giới tin chọn Shofu để nâng cao tiêu chuẩn phục hồi và phòng ngừa",
+    "testimonials": [
+      {
+        "id": "1",
+        "name": "Dr. Shukan Kanuga, DDS, MSD",
+        "role": "Chuyên khoa Nha nhi (ABPD), California, Mỹ",
+        "topic": "Nha khoa trẻ em & Hiệu quả vận hành phòng khám",
+        "content": "Dòng sản phẩm tự dán ứng dụng công nghệ S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ 2 bước nhạy cảm kỹ thuật là etch và bond. Đây thực sự là một công cụ thu hút khách hàng tuyệt vời cho phòng khám khi các bậc cha mẹ luôn hạnh phúc chia sẻ câu chuyện thành công này với người thân của họ!",
+        "avatar": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/Shukan-Kanuga_img.png"
+      },
+      {
+        "id": "2",
+        "name": "BS. Dương Bảo Ngọc",
+        "role": "Chuyên gia Phục hồi Thẩm mỹ",
+        "topic": "Thẩm mỹ & Bảo vệ tối ưu",
+        "content": "Chất lượng bề mặt và đặc tính quang học của Beautifil Injectable X thực sự khác biệt. Tính năng kháng khuẩn từ hạt S-PRG mang lại sự an tâm tuyệt đối khi tôi thực hiện các ca phục hồi răng sau phức tạp.",
+        "avatar": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BS.Ngo%CC%A3c.png"
+      },
+      {
+        "id": "3",
+        "name": "Dr. Jennifer Bell, DDS, FAGD, FICD",
+        "role": "Thành viên Viện Thẩm mỹ Nha khoa Quốc tế, Mỹ",
+        "topic": "Sự dịch chuyển sang Nha khoa trị liệu sinh học",
+        "content": "Nha khoa hiện đại đang dịch chuyển mạnh mẽ sang xu hướng lựa chọn các vật liệu sinh học có khả năng tự sửa chữa mô răng và duy trì lợi ích trị liệu lâu dài cho bệnh nhân sau khi kết thúc điều trị. Hệ thống Giomer đáp ứng trọn vẹn điều này nhờ cơ chế trung hòa axit, phóng thích và tái nạp ion liên tục, cùng khả năng kháng khuẩn vượt trội.",
+        "avatar": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/Dr.%20Jennifer%20Bell,%20DDS,%20FAGD,%20FICD.jpg"
+      },
+      {
+        "id": "4",
+        "name": "ThS.BS Trần Quang Khánh",
+        "role": "Trainer MiCD Global Network",
+        "topic": "Khóa kín viền ngà & Không ê buốt",
+        "content": "Hệ thống xi măng dán của Shofu vượt ra khỏi định nghĩa kết dính cơ học thông thường. Sự cộng hưởng giữa màng keo kỵ nước bít kín ống ngà và khả năng giải phóng 6 ion sinh học liên tục giúp giảm thiểu tối đa nguy cơ nhạy cảm ngà và bảo vệ nướu tại đường hoàn tất.",
+        "avatar": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BS%20Kha%CC%81nh.png"
+      },
+      {
+        "id": "5",
+        "name": "Dr. Frank J. Milnar, DDS, AAACD",
+        "role": "Chuyên gia Thẩm mỹ Nha khoa (AACD), Mỹ",
+        "topic": "Thẩm mỹ tự nhiên – \"Hòa sắc vô ảnh\" không đắp lớp",
+        "content": "Khả năng khúc xạ, truyền truyền và khuếch tán ánh sáng tương đồng tự nhiên với cả men và ngà răng thật giúp phục hồi tệp màu hoàn hảo vào mô răng xung quanh. Nhờ hiệu ứng tắc kè hoa đỉnh cao này, Bác sĩ chỉ cần sử dụng kỹ thuật đơn giản vẫn đạt được kết quả thẩm mỹ tối ưu mà không cần đắp lớp layering phức tạp.",
+        "avatar": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/Dr.%20Frank%20J.%20Milnar,%20DDS,%20AAACD.jpg"
+      }
+    ]
+  },
+  "caseStudies": {
+    "headline": "Ca Lâm Sàng Tiêu Biểu",
+    "subheadline": "Tổng hợp các quy trình điều trị thực tế sử dụng hệ sinh thái vật liệu Shofu Nhật Bản",
+    "caseStudies": [
+      {
+        "id": 1,
+        "title": "Đóng khe thưa",
+        "doctor": "Sử dụng: Beautifil Injectable X",
+        "coverImage": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.1.webp",
+        "description": "Ca lâm sàng phục hình thẩm mỹ đóng khe thưa (diastema closure) cho hai răng cửa giữa hàm trên (răng 11 và 21). Quy trình sử dụng kỹ thuật đắp composite trực tiếp kết hợp hệ thống vật liệu dán và phục hồi thẩm mỹ của Shofu nhằm lấp đầy khoảng trống, tái tạo lại tỷ lệ răng cân đối và mang lại nụ cười tự nhiên nhất cho bệnh nhân.",
+        "images": [
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.1.webp", "note": "<strong class=\"text-slate-900\">Tình trạng ban đầu:</strong> Khoảng thưa rõ rệt giữa hai răng 11 và 21, gây mất thẩm mỹ khi giao tiếp." },
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.2.webp", "note": "<strong class=\"text-slate-900\">Cách ly và đánh dấu:</strong> Răng được cách ly tuyệt đối bằng <span class=\"text-[#00ADEF] font-bold\">đê cao su</span> để đảm bảo môi trường khô ráo. Bác sĩ dùng bút đánh dấu định hướng quá trình đắp vật liệu cân xứng." },
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.3.webp", "note": "<strong class=\"text-slate-900\">Đặt màng khuôn trong suốt:</strong> Màng khuôn trong suốt được đặt vào kẽ răng để định hình thành bên, tạo độ phồng tự nhiên." },
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.4.webp", "note": "<strong class=\"text-slate-900\">Xử lý bề mặt và Dán:</strong> Xử lý và bôi keo dán <span class=\"text-[#00ADEF] font-bold\">Shofu BeautiBond Xtreme</span> tạo độ bám dính vi cơ học vượt trội." },
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.5.webp", "note": "<strong class=\"text-slate-900\">Tạo hình sơ khởi:</strong> Khoảng thưa được đóng kín hoàn toàn bằng cách đắp composite thẩm mỹ <span class=\"text-[#00ADEF] font-bold\">Shofu Beautifil II</span>." },
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-1.6.webp", "note": "<strong class=\"text-slate-900\">Kết quả sau cùng:</strong> Phục hình hoàn thiện sau khi đánh bóng kỹ lưỡng bằng đĩa <span class=\"text-[#00ADEF] font-bold\">Super-Snap</span> và mũi cao su <span class=\"text-[#00ADEF] font-bold\">OneGloss</span>." }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Phục hồi xoang II sâu",
+        "doctor": "Sử dụng: Beautilink SA & BeautiBond",
+        "coverImage": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.1.webp",
+        "description": "Quy trình phục hồi thẩm mỹ và chức năng cho răng cối nhỏ hàm dưới bị sâu răng loại II lớn. Quy trình sử dụng hệ thống dán và composite tiên tiến của Shofu để đạt được kết quả tự nhiên, bền vững và tương thích sinh học.",
+        "images": [
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.1.webp", "note": "<strong class=\"text-slate-900\">Tình trạng ban đầu:</strong> Lỗ sâu loại II lớn ở răng cối nhỏ hàm dưới liên quan mặt nhai và mặt bên." },
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.2.webp", "note": "<strong class=\"text-slate-900\">Đặt đê cao su & Phát hiện sâu răng:</strong> Sử dụng <span class=\"text-[#00ADEF] font-bold\">Shofu Caries Detector</span> để xác định và làm sạch triệt để ngà bệnh." },
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.3.webp", "note": "<strong class=\"text-slate-900\">Sửa soạn xoang:</strong> Xoang hoàn tất, sạch sẽ và tối ưu cho dán dính sinh học." },
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.4.webp", "note": "<strong class=\"text-slate-900\">Đặt khuôn & Chêm:</strong> Tái tạo hình thể mặt bên và điểm tiếp xúc kẽ răng tự nhiên." },
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.5.webp", "note": "<strong class=\"text-slate-900\">Xói mòn:</strong> Gel Etchant Shofu tạo vi hốc bám dính." },
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.6.webp", "note": "<strong class=\"text-slate-900\">Bôi chất dán:</strong> Keo BeautiBond Xtreme bít kín ống ngà, ngừa ê buốt." },
+          { "url": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/Case%20Study/case-study-2.7.webp", "note": "<strong class=\"text-slate-900\">Phục hình hoàn tất:</strong> Đắp Beautifil II, đánh bóng hoàn mỹ bằng Super-Snap." }
+        ]
+      }
+    ]
+  },
+  "leadMagnet": {
+    "badge": "TÀI LIỆU ĐỘC QUYỀN MIỄN PHÍ",
+    "headline": "CẨM NANG LÂM SÀNG: PHỤC HỒI & PHÒNG NGỪA SHOFU",
+    "subheadline": "Tổng hợp phác đồ điều trị, video ca thực tế và các nghiên cứu khoa học từ chuyên gia Shofu toàn cầu",
+    "coverImage": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/image/tri-lieu-sinh-hoc-micd.webp",
+    "benefits": [
+      "Quy trình dán - gắn 3 bước chuẩn Nhật Bản cho phục hình Zirconia & Sứ thủy tinh",
+      "Phác đồ chặn đứng ê buốt sau trám răng xoang II với keo HEMA-Free",
+      "Bộ sưu tập 20+ ca lâm sàng thực tế kèm thông số thao tác chi tiết",
+      "Toàn văn nghiên cứu JADA 8 năm & Nature Research 2018"
+    ],
+    "ctaButtonText": "NHẬN TÀI LIỆU & BÁO GIÁ NGAY",
+    "ctaFormTitle": "Đăng ký nhận Cẩm nang Lâm sàng Shofu",
+    "ctaFormDesc": "Quý Bác sĩ vui lòng điền thông tin để hệ thống tự động gửi tài liệu qua Email/Zalo:",
+    "ctaFormExtraHtml": "",
+    "ctaRedirectThanks": true,
+    "ctaTargetUrl": "https://shofu.sota-d.com/tai-lieu-lam-sang",
+    "ctaResourceTitle": "Tải Trọn Bộ Cẩm Nang Ngay"
+  }
+}

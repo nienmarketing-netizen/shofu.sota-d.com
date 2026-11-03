@@ -3,8 +3,14 @@ import React, { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { ShieldCheck, Microscope, Link as LinkIcon, Users, Star, Quote, ShoppingCart, ArrowUpRight, CheckCircle2, TrendingUp } from 'lucide-react';
+import { HomeSocialProofSection } from '../../pages/admin/home/types';
 
-export function ShofuSocialProof() {
+interface ShofuSocialProofProps {
+  data?: HomeSocialProofSection;
+  onCTA?: () => void;
+}
+
+export function ShofuSocialProof({ data, onCTA }: ShofuSocialProofProps = {}) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 10000, stopOnInteraction: true })]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -74,6 +80,8 @@ export function ShofuSocialProof() {
     }
   ];
 
+  const displayTestimonials = (data?.testimonials && data.testimonials.length > 0) ? data.testimonials : testimonials;
+
   return (
     <section id="social-proof" className="py-24 relative border-b border-slate-200 bg-slate-50 bg-grid-pattern overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-50"></div>
@@ -82,14 +90,28 @@ export function ShofuSocialProof() {
         <div className="text-center mb-20">
           <div className="inline-flex items-center justify-center gap-2 bg-[#00ADEF]/10 px-3 py-1.5 lg:px-4 lg:py-2 rounded-full mb-6 border border-[#00ADEF]/20">
             <ShieldCheck className="w-4 h-4 text-[#00ADEF]" />
-            <span className="font-mono text-xs font-bold text-[#00ADEF] uppercase tracking-widest">Bảo Chứng Toàn Cầu</span>
+            <span className="font-mono text-xs font-bold text-[#00ADEF] uppercase tracking-widest">{data?.badge || 'Bảo Chứng Toàn Cầu'}</span>
           </div>
-          <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 mb-6 leading-[1.4] max-w-3xl mx-auto uppercase">
-            <span className="text-[#00ADEF]">4 Trụ Cột Khoa Học</span> <br className="hidden md:block" />Khẳng Định Vị Thế
-          </h2>
-          <p className="font-body text-lg text-slate-600 max-w-2xl mx-auto">
-            Hệ thống dữ liệu lâm sàng <strong className="text-slate-900">độc lập, nghiêm ngặt và minh bạch</strong> nhất từ các viện nghiên cứu hàng đầu thế giới <strong className="text-emerald-600">minh chứng cho chất lượng</strong> của Shofu.
-          </p>
+          {data?.headline ? (
+            <h2 
+              className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 mb-6 leading-[1.4] max-w-3xl mx-auto uppercase"
+              dangerouslySetInnerHTML={{ __html: data.headline }}
+            />
+          ) : (
+            <h2 className="font-heading font-extrabold text-3xl md:text-5xl text-slate-900 mb-6 leading-[1.4] max-w-3xl mx-auto uppercase">
+              <span className="text-[#00ADEF]">4 Trụ Cột Khoa Học</span> <br className="hidden md:block" />Khẳng Định Vị Thế
+            </h2>
+          )}
+          {data?.subheadline ? (
+            <p 
+              className="font-body text-lg text-slate-600 max-w-2xl mx-auto"
+              dangerouslySetInnerHTML={{ __html: data.subheadline }}
+            />
+          ) : (
+            <p className="font-body text-lg text-slate-600 max-w-2xl mx-auto">
+              Hệ thống dữ liệu lâm sàng <strong className="text-slate-900">độc lập, nghiêm ngặt và minh bạch</strong> nhất từ các viện nghiên cứu hàng đầu thế giới <strong className="text-emerald-600">minh chứng cho chất lượng</strong> của Shofu.
+            </p>
+          )}
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-24">
@@ -244,7 +266,7 @@ export function ShofuSocialProof() {
 
         {/* CTA Button After Pillars */}
         <div className="mt-8 mb-20 flex justify-center">
-          <CtaButton ctaName="MoKhoaUuDai" onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
+          <CtaButton ctaName="MoKhoaUuDai" onClick={onCTA || (() => window.dispatchEvent(new CustomEvent("open-offer-modal")))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
             <ShoppingCart className="w-5 h-5" />
             <span>Xem ưu đãi và đặt hàng</span>
             <ArrowUpRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -254,7 +276,7 @@ export function ShofuSocialProof() {
         {/* Testimonials Quotes */}
         <div className="relative overflow-hidden bg-transparent" ref={emblaRef}>
           <div className="flex touch-pan-y">
-            {testimonials.map((test, index) => (
+            {displayTestimonials.map((test, index) => (
               <div key={index} className="w-full md:w-1/2 shrink-0 px-2 lg:px-4">
                 <div className="bg-white rounded-[20px] lg:rounded-3xl p-6 sm:p-8 lg:p-10 relative shadow-sm border border-slate-200 h-full flex flex-col max-w-4xl mx-auto cursor-grab active:cursor-grabbing">
                   <Quote className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8 w-10 h-10 lg:w-12 lg:h-12 text-slate-100" />
@@ -292,7 +314,7 @@ export function ShofuSocialProof() {
           
           {/* Pagination Indicators */}
           <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
+            {displayTestimonials.map((_, index) => (
               <button
                 key={index}
                  onClick={() => scrollTo(index)}
@@ -306,7 +328,7 @@ export function ShofuSocialProof() {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <CtaButton ctaName="MoKhoaUuDai" onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
+          <CtaButton ctaName="MoKhoaUuDai" onClick={onCTA || (() => window.dispatchEvent(new CustomEvent("open-offer-modal")))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
             <ShoppingCart className="w-5 h-5" />
             <span>Xem ưu đãi và đặt hàng</span>
             <ArrowUpRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />

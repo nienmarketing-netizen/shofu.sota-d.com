@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-import { Download, FileText, CheckCircle2, Loader2 } from 'lucide-react';
+import { Download, FileText, CheckCircle2, Loader2, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import { HomeLeadMagnetSection } from '../../pages/admin/home/types';
 
-export function ShofuLeadMagnet() {
+interface ShofuLeadMagnetProps {
+  data?: HomeLeadMagnetSection;
+}
+
+export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
@@ -14,7 +19,7 @@ export function ShofuLeadMagnet() {
     const payload = {
       'Nguồn Lead': 'Landing Page Shofu (Lead Magnet)',
       'URL/Creative': typeof window !== 'undefined' ? window.location.href : '',
-      'Loại Yêu Cầu': 'Tài liệu độc quyền & Báo giá',
+      'Loại Yêu Cầu': data?.ctaFormTitle || 'Tài liệu độc quyền & Báo giá',
       'Tên Bác sĩ': formData.name,
       'Số điện thoại (Zalo)': formData.phone,
       'Phòng khám / Nơi công tác': formData.email ? `Email: ${formData.email}` : '',
@@ -23,14 +28,14 @@ export function ShofuLeadMagnet() {
       'Add': '',
       'add': '',
       'address': '',
-      'Sản phẩm quan tâm': 'Tài liệu độc quyền & Báo giá Shofu',
+      'Sản phẩm quan tâm': data?.ctaResourceTitle || 'Tài liệu độc quyền & Báo giá Shofu',
       'Trạng thái Lead': 'Mới',
       'Ghi chú thêm': formData.email ? `Email: ${formData.email}` : '',
       name: formData.name,
       phone: formData.phone,
       clinic: formData.email ? `Email: ${formData.email}` : '',
       wantsCustomOffer: 'No',
-      selectedPromos: 'Lead Magnet: Đăng ký nhận tài liệu độc quyền'
+      selectedPromos: `Lead Magnet: ${data?.ctaFormTitle || 'Đăng ký nhận tài liệu độc quyền'}`
     };
 
     const webhookUrl = "https://script.google.com/macros/s/AKfycbznlzlBDxDLpbQJKvMN95LdTTsOG3QAkTqkxPbvSQGBL1iDM8nXKA2_NUgboHqdcMcn8A/exec";
@@ -47,12 +52,23 @@ export function ShofuLeadMagnet() {
     .then(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
+      if (data?.ctaRedirectThanks) {
+        const params = new URLSearchParams();
+        if (data.ctaTargetUrl) params.set('targetUrl', data.ctaTargetUrl);
+        if (data.ctaResourceTitle) params.set('resourceTitle', data.ctaResourceTitle);
+        window.location.href = `/thanks?${params.toString()}`;
+      }
     })
     .catch(err => {
       console.error(err);
       setIsSubmitting(false);
-      // fallback
       setIsSubmitted(true);
+      if (data?.ctaRedirectThanks) {
+        const params = new URLSearchParams();
+        if (data.ctaTargetUrl) params.set('targetUrl', data.ctaTargetUrl);
+        if (data.ctaResourceTitle) params.set('resourceTitle', data.ctaResourceTitle);
+        window.location.href = `/thanks?${params.toString()}`;
+      }
     });
   };
 
@@ -73,24 +89,49 @@ export function ShofuLeadMagnet() {
           <div className="flex-1">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 border border-red-100 mb-6">
               <FileText className="w-4 h-4 text-[#C43838]" />
-              <span className="font-mono text-xs font-bold text-[#C43838] uppercase tracking-widest">Tài Liệu Độc Quyền</span>
+              <span className="font-mono text-xs font-bold text-[#C43838] uppercase tracking-widest">{data?.badge || 'Tài Liệu Độc Quyền'}</span>
             </div>
             
-            <h2 className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-4 leading-[1.3] sm:leading-tight">
-              Nhận trọn bộ <br />
-              tài liệu độc quyền, <br />
-              <span className="text-[#00ADEF]">video protocol chi tiết</span>
-            </h2>
+            {data?.headline ? (
+              <h2 
+                className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-4 leading-[1.3] sm:leading-tight"
+                dangerouslySetInnerHTML={{ __html: data.headline }}
+              />
+            ) : (
+              <h2 className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-4 leading-[1.3] sm:leading-tight">
+                Nhận trọn bộ <br />
+                tài liệu độc quyền, <br />
+                <span className="text-[#00ADEF]">video protocol chi tiết</span>
+              </h2>
+            )}
             
-            <p className="font-body text-slate-600 mb-8">
-              Đăng ký ngay để nhận <strong className="text-amber-600">báo giá chiết khấu đặc biệt</strong> dành cho Phòng khám/Nha khoa, kèm theo <strong className="text-[#00ADEF]">cẩm nang lâm sàng chi tiết</strong> quy trình ứng dụng vật liệu Shofu.
-            </p>
+            {data?.subheadline ? (
+              <p 
+                className="font-body text-slate-600 mb-8"
+                dangerouslySetInnerHTML={{ __html: data.subheadline }}
+              />
+            ) : (
+              <p className="font-body text-slate-600 mb-8">
+                Đăng ký ngay để nhận <strong className="text-amber-600">báo giá chiết khấu đặc biệt</strong> dành cho Phòng khám/Nha khoa, kèm theo <strong className="text-[#00ADEF]">cẩm nang lâm sàng chi tiết</strong> quy trình ứng dụng vật liệu Shofu.
+              </p>
+            )}
             
             <ul className="space-y-3 font-body text-sm text-slate-700">
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Cẩm nang chống ê buốt với Giomer</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Protocol Posterior Restoration</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Protocol 3D Printed Technical</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Ưu đãi đặc biệt gói phục hồi MiCD</li>
+              {data?.benefits && data.benefits.length > 0 ? (
+                data.benefits.map((benefit, idx) => (
+                  <li key={idx} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-[#00ADEF] shrink-0" />
+                    <span dangerouslySetInnerHTML={{ __html: benefit }} />
+                  </li>
+                ))
+              ) : (
+                <>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Cẩm nang chống ê buốt với Giomer</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Protocol Posterior Restoration</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Protocol 3D Printed Technical</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#00ADEF]" /> Ưu đãi đặc biệt gói phục hồi MiCD</li>
+                </>
+              )}
             </ul>
           </div>
 
@@ -192,7 +233,7 @@ export function ShofuLeadMagnet() {
                   ) : (
                     <>
                       <Download className="w-4 h-4" />
-                      Nhận Tài Liệu Ngay
+                      {data?.ctaButtonText || 'Nhận Tài Liệu Ngay'}
                     </>
                   )}
                 </button>

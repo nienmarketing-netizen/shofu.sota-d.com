@@ -2,12 +2,19 @@ import { CtaButton } from "../ui/CtaButton";
 import React from 'react';
 import { ArrowRight, Atom, ShieldCheck, Feather, Zap } from 'lucide-react';
 import { motion } from 'motion/react';
+import { HomeHeroSection } from '../../pages/admin/home/types';
+import { renderHeroUspIcon } from '../../pages/admin/home/Section1HeroEditor';
 
 interface ShofuHeroProps {
+  data?: HomeHeroSection;
   onCTA: () => void;
 }
 
-export function ShofuHero({ onCTA }: ShofuHeroProps) {
+export function ShofuHero({ data, onCTA }: ShofuHeroProps) {
+  const heroImage = data?.image || "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/background-hero-section-full-solution-shofu.webp";
+  const badgePrefix = data?.badgePrefix || "Sota-D";
+  const badgeHighlight = data?.badgeHighlight || "Đối tác phân phối chính thức Shofu tại Việt Nam";
+
   return (
     <section className="relative pb-20 lg:pb-32 overflow-hidden border-b border-slate-200 bg-transparent">
       {/* Background Decor */}
@@ -22,7 +29,7 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
         className="w-[90%] lg:w-[80%] mx-auto relative z-10 mb-10 md:mb-16 mix-blend-multiply opacity-90"
       >
         <img referrerPolicy="no-referrer"
-          src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/background-hero-section-full-solution-shofu.webp"
+          src={heroImage}
           alt="Shofu Full Solution"
           className="w-full h-auto object-cover block mix-blend-multiply"
           loading="eager"
@@ -30,7 +37,7 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
           fetchPriority="high"
           onError={(e) => {
             if (!e.currentTarget.src.includes("cdn.jsdelivr.net")) {
-              e.currentTarget.src = "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/background-hero-section-full-solution-shofu.webp";
+              e.currentTarget.src = heroImage;
             }
           }}
         />
@@ -49,31 +56,51 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
             >
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00ADEF] animate-pulse shrink-0"></span>
               <span className="font-mono text-[9px] min-[375px]:text-[10px] sm:text-xs font-medium text-slate-700 tracking-tight sm:tracking-wide whitespace-nowrap">
-                <span className="sm:hidden"><strong className="font-bold text-[#C43838]">Sota-D</strong> - Đối tác chính thức của Shofu tại Việt Nam</span>
-                <span className="hidden sm:inline"><strong className="font-bold text-[#C43838]">Sota-D</strong> - Đối tác phân phối chính thức Shofu tại Việt Nam</span>
+                <span className="sm:hidden"><strong className="font-bold text-[#C43838]">{badgePrefix}</strong> - {badgeHighlight}</span>
+                <span className="hidden sm:inline"><strong className="font-bold text-[#C43838]">{badgePrefix}</strong> - {badgeHighlight}</span>
               </span>
             </motion.div>
             
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-[1.3] mb-6 uppercase tracking-tight"
-            >
-              Giải Pháp Nha Khoa <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-600 py-2 whitespace-nowrap">
-                Chuẩn Mực Nhật Bản
-              </span>
-            </motion.h1>
+            {data?.headline ? (
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-[1.3] mb-6 uppercase tracking-tight"
+                dangerouslySetInnerHTML={{ __html: data.headline }}
+              />
+            ) : (
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="font-heading font-extrabold text-2xl min-[375px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-[1.3] mb-6 uppercase tracking-tight"
+              >
+                Giải Pháp Nha Khoa <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADEF] to-blue-600 py-2 whitespace-nowrap">
+                  Chuẩn Mực Nhật Bản
+                </span>
+              </motion.h1>
+            )}
             
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto"
-            >
-              Hệ sinh thái vật liệu nha khoa tiên tiến tích hợp công nghệ hạt độn sinh học <strong className="text-[#00ADEF]">S-PRG độc quyền</strong>. <strong className="text-slate-900">Tối ưu quy trình lâm sàng</strong>, mang lại hiệu quả <strong className="text-slate-900">phục hình bền vững</strong> và <strong className="text-emerald-600">bảo vệ mô răng chủ động</strong>.
-            </motion.p>
+            {data?.subheadline ? (
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto"
+                dangerouslySetInnerHTML={{ __html: data.subheadline }}
+              />
+            ) : (
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="font-body text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto"
+              >
+                Hệ sinh thái vật liệu nha khoa tiên tiến tích hợp công nghệ hạt độn sinh học <strong className="text-[#00ADEF]">S-PRG độc quyền</strong>. <strong className="text-slate-900">Tối ưu quy trình lâm sàng</strong>, mang lại hiệu quả <strong className="text-slate-900">phục hình bền vững</strong> và <strong className="text-emerald-600">bảo vệ mô răng chủ động</strong>.
+              </motion.p>
+            )}
 
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -85,7 +112,7 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
                  onClick={onCTA}
                 className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#00ADEF] text-white font-mono text-sm font-bold uppercase tracking-wider hover:bg-sky-500 transition-all shadow-xl shadow-sky-500/30 flex items-center justify-center gap-2 group"
               >
-                Nhận Tư Vấn Ngay
+                {data?.ctaText || 'Nhận Tư Vấn Ngay'}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </CtaButton>
             </motion.div>
@@ -98,33 +125,46 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
             className="w-full bg-white rounded-2xl border border-slate-200/80 shadow-xl shadow-slate-200/50 overflow-hidden relative z-20"
           >
             <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-slate-200/80">
-              <div className="flex flex-col xl:flex-row items-center justify-center text-center xl:text-left gap-2 sm:gap-3 py-5 px-3 sm:py-6 sm:px-4 group bg-slate-50/50 hover:bg-slate-50 transition-colors">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-sky-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <Atom className="w-5 h-5 sm:w-6 sm:h-6 text-[#00ADEF]" />
-                </div>
-                <div className="font-mono text-[10px] sm:text-xs xl:text-sm font-bold text-slate-900 leading-snug">VẬT LIỆU SINH HỌC</div>
-              </div>
-              
-              <div className="flex flex-col xl:flex-row items-center justify-center text-center xl:text-left gap-2 sm:gap-3 py-5 px-3 sm:py-6 sm:px-4 group bg-slate-50/50 hover:bg-slate-50 transition-colors">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-red-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-[#C43838]" />
-                </div>
-                <div className="font-mono text-[10px] sm:text-xs xl:text-sm font-bold text-slate-900 leading-snug">CÔNG NGHỆ HEMA-FREE</div>
-              </div>
+              {data?.usps && data.usps.length > 0 ? (
+                data.usps.map((usp, idx) => (
+                  <div key={usp.id || idx} className="flex flex-col xl:flex-row items-center justify-center text-center xl:text-left gap-2 sm:gap-3 py-5 px-3 sm:py-6 sm:px-4 group bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-sky-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      {renderHeroUspIcon(usp.icon)}
+                    </div>
+                    <div className="font-mono text-[10px] sm:text-xs xl:text-sm font-bold text-slate-900 leading-snug">{usp.title}</div>
+                  </div>
+                ))
+              ) : (
+                <>
+                  <div className="flex flex-col xl:flex-row items-center justify-center text-center xl:text-left gap-2 sm:gap-3 py-5 px-3 sm:py-6 sm:px-4 group bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-sky-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <Atom className="w-5 h-5 sm:w-6 sm:h-6 text-[#00ADEF]" />
+                    </div>
+                    <div className="font-mono text-[10px] sm:text-xs xl:text-sm font-bold text-slate-900 leading-snug">VẬT LIỆU SINH HỌC</div>
+                  </div>
+                  
+                  <div className="flex flex-col xl:flex-row items-center justify-center text-center xl:text-left gap-2 sm:gap-3 py-5 px-3 sm:py-6 sm:px-4 group bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-red-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-[#C43838]" />
+                    </div>
+                    <div className="font-mono text-[10px] sm:text-xs xl:text-sm font-bold text-slate-900 leading-snug">CÔNG NGHỆ HEMA-FREE</div>
+                  </div>
 
-              <div className="flex flex-col xl:flex-row items-center justify-center text-center xl:text-left gap-2 sm:gap-3 py-5 px-3 sm:py-6 sm:px-4 group bg-slate-50/50 hover:bg-slate-50 transition-colors">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-sky-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <Feather className="w-5 h-5 sm:w-6 sm:h-6 text-[#00ADEF]" />
-                </div>
-                <div className="font-mono text-[10px] sm:text-xs xl:text-sm font-bold text-slate-900 leading-snug">CAN THIỆP TỐI THIỂU</div>
-              </div>
+                  <div className="flex flex-col xl:flex-row items-center justify-center text-center xl:text-left gap-2 sm:gap-3 py-5 px-3 sm:py-6 sm:px-4 group bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-sky-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <Feather className="w-5 h-5 sm:w-6 sm:h-6 text-[#00ADEF]" />
+                    </div>
+                    <div className="font-mono text-[10px] sm:text-xs xl:text-sm font-bold text-slate-900 leading-snug">CAN THIỆP TỐI THIỂU</div>
+                  </div>
 
-              <div className="flex flex-col xl:flex-row items-center justify-center text-center xl:text-left gap-2 sm:gap-3 py-5 px-3 sm:py-6 sm:px-4 group bg-slate-50/50 hover:bg-slate-50 transition-colors">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-red-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#C43838]" />
-                </div>
-                <div className="font-mono text-[10px] sm:text-xs xl:text-sm font-bold text-slate-900 leading-snug">QUY TRÌNH TỐI GIẢN</div>
-              </div>
+                  <div className="flex flex-col xl:flex-row items-center justify-center text-center xl:text-left gap-2 sm:gap-3 py-5 px-3 sm:py-6 sm:px-4 group bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-red-50 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#C43838]" />
+                    </div>
+                    <div className="font-mono text-[10px] sm:text-xs xl:text-sm font-bold text-slate-900 leading-snug">QUY TRÌNH TỐI GIẢN</div>
+                  </div>
+                </>
+              )}
             </div>
           </motion.div>
         </div>

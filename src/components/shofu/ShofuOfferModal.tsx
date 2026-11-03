@@ -225,7 +225,7 @@ export function ShofuOfferModal() {
             email: "",
             phone: formData.phone,
             formName: modalMode === 'combo' ? offerDetails[activeOfferId].name : 'Sản phẩm lẻ',
-            eventSourceUrl: typeof window !== 'undefined' ? window.location.href : '',
+            eventSourceUrl: typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : '',
             event_id: eventId
           })
         }).catch(err => console.error('Lỗi khi đẩy CAPI ngầm:', err));

@@ -8,6 +8,7 @@ import DirectRestorationEditor from './pages/admin/DirectRestorationEditor';
 import IndirectRestorationEditor from './pages/admin/IndirectRestorationEditor';
 import PreventiveDentistryEditor from './pages/admin/PreventiveDentistryEditor';
 import ComprehensiveSolutionEditor from './pages/admin/ComprehensiveSolutionEditor';
+import HomeEditor from './pages/admin/HomeEditor';
 
 import ThanksPage from './pages/ThanksPage';
 
@@ -20,6 +21,8 @@ export default function App() {
         <Route path="/thanks" element={<ThanksPage />} />
         {/* Admin CMS Portal */}
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/editor/home" element={<HomeEditor />} />
+        <Route path="/admin/editor/trang-chu" element={<HomeEditor />} />
         <Route path="/admin/editor/phuc-hoi-truc-tiep" element={<DirectRestorationEditor />} />
         <Route path="/admin/editor/phuc-hinh-gian-tiep" element={<IndirectRestorationEditor />} />
         <Route path="/admin/editor/nha-khoa-phong-ngua" element={<PreventiveDentistryEditor />} />

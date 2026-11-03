@@ -136,35 +136,43 @@ const slideVariants = {
   })
 };
 
-export function ShofuCaseStudies() {
-  const [selectedCaseIndex, setSelectedCaseIndex] = useState(null);
+import { HomeCaseStudiesSection } from '../../pages/admin/home/types';
+
+interface ShofuCaseStudiesProps {
+  data?: HomeCaseStudiesSection;
+  onCTA?: () => void;
+}
+
+export function ShofuCaseStudies({ data, onCTA }: ShofuCaseStudiesProps = {}) {
+  const displayCases = (data?.caseStudies && data.caseStudies.length > 0) ? data.caseStudies : caseStudies;
+  const [selectedCaseIndex, setSelectedCaseIndex] = useState<number | null>(null);
   useBodyScrollLock(selectedCaseIndex !== null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
-  const handleNext = (e) => {
+  const handleNext = (e: any) => {
     e.stopPropagation();
     if (selectedCaseIndex === null) return;
-    const totalImages = caseStudies[selectedCaseIndex].images.length;
+    const totalImages = displayCases[selectedCaseIndex].images.length;
     setDirection(1);
     setCurrentImageIndex((prev) => (prev < totalImages - 1 ? prev + 1 : 0));
   };
 
-  const handlePrev = (e) => {
+  const handlePrev = (e: any) => {
     e.stopPropagation();
     if (selectedCaseIndex === null) return;
-    const totalImages = caseStudies[selectedCaseIndex].images.length;
+    const totalImages = displayCases[selectedCaseIndex].images.length;
     setDirection(-1);
     setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : totalImages - 1));
   };
 
-  const openModal = (index) => {
+  const openModal = (index: number) => {
     setSelectedCaseIndex(index);
     setCurrentImageIndex(0);
     setDirection(0);
   };
 
-  const hasMultipleImages = selectedCaseIndex !== null && caseStudies[selectedCaseIndex].images.length > 1;
+  const hasMultipleImages = selectedCaseIndex !== null && displayCases[selectedCaseIndex]?.images?.length > 1;
 
   return (
     <section id="case-studies" className="py-20 relative border-t border-slate-200 bg-slate-50 bg-grid-pattern overflow-hidden">
@@ -178,23 +186,37 @@ export function ShofuCaseStudies() {
           transition={{ duration: 0.6 }}
         >
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 mb-6 shadow-sm">
-            <span className="font-mono text-xs font-bold text-slate-600 uppercase tracking-widest">Thư viện Case Study</span>
+            <span className="font-mono text-xs font-bold text-slate-600 uppercase tracking-widest">{data?.badge || 'Thư viện Case Study'}</span>
           </div>
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight">
-            Hiệu quả vượt trội từ <br />
-            <span className="text-[#00ADEF]">thực tế lâm sàng</span>
-          </h2>
-          <p className="font-body text-slate-600 max-w-2xl mx-auto">
-            Khám phá những ca điều trị thành công sử dụng vật liệu nha khoa Shofu.
-            <strong className="text-slate-900"> Công nghệ S-PRG</strong> và hệ thống vật liệu tiên tiến mang lại <strong className="text-emerald-600">kết quả thẩm mỹ</strong> và <strong className="text-amber-600">độ bền tối ưu</strong>.
-          </p>
+          {data?.headline ? (
+            <h2 
+              className="font-heading font-extrabold text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight"
+              dangerouslySetInnerHTML={{ __html: data.headline }}
+            />
+          ) : (
+            <h2 className="font-heading font-extrabold text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight">
+              Hiệu quả vượt trội từ <br />
+              <span className="text-[#00ADEF]">thực tế lâm sàng</span>
+            </h2>
+          )}
+          {data?.subheadline ? (
+            <p 
+              className="font-body text-slate-600 max-w-2xl mx-auto"
+              dangerouslySetInnerHTML={{ __html: data.subheadline }}
+            />
+          ) : (
+            <p className="font-body text-slate-600 max-w-2xl mx-auto">
+              Khám phá những ca điều trị thành công sử dụng vật liệu nha khoa Shofu.
+              <strong className="text-slate-900"> Công nghệ S-PRG</strong> và hệ thống vật liệu tiên tiến mang lại <strong className="text-emerald-600">kết quả thẩm mỹ</strong> và <strong className="text-amber-600">độ bền tối ưu</strong>.
+            </p>
+          )}
         </motion.div>
       </div>
 
       {/* Instagram-style Grid */}
       <div className="w-[90%] lg:w-[80%] mx-auto mb-16 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 sm:gap-2">
-          {caseStudies.map((item, index) => (
+          {displayCases.map((item, index) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -223,7 +245,7 @@ export function ShofuCaseStudies() {
 
       {/* CTA Button */}
       <div className="text-center px-4 relative z-10">
-        <button onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
+        <button onClick={onCTA || (() => window.dispatchEvent(new CustomEvent("open-offer-modal")))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
           <ShoppingCart className="w-5 h-5" />
           <span>Xem ưu đãi và đặt hàng</span>
           <ArrowUpRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -263,9 +285,9 @@ export function ShofuCaseStudies() {
                 <AnimatePresence initial={false} custom={direction}>
                   <motion.img
                     key={currentImageIndex}
-                    src={caseStudies[selectedCaseIndex].images[currentImageIndex].url}
+                    src={displayCases[selectedCaseIndex].images[currentImageIndex]?.url}
                     referrerPolicy="no-referrer"
-                    alt={`${caseStudies[selectedCaseIndex].title} - Image ${currentImageIndex + 1}`}
+                    alt={`${displayCases[selectedCaseIndex].title} - Image ${currentImageIndex + 1}`}
                     custom={direction}
                     variants={slideVariants}
                     initial="enter"
@@ -282,7 +304,7 @@ export function ShofuCaseStudies() {
                 {/* Image Counter */}
                 {hasMultipleImages && (
                   <div className="absolute top-4 left-4 bg-black/60 text-white text-xs font-mono px-3 py-1.5 rounded-full z-[120]">
-                    {currentImageIndex + 1} / {caseStudies[selectedCaseIndex].images.length}
+                    {currentImageIndex + 1} / {displayCases[selectedCaseIndex].images.length}
                   </div>
                 )}
 
@@ -308,14 +330,14 @@ export function ShofuCaseStudies() {
               {/* Info Area with text transition */}
               <div className="w-full md:w-[350px] shrink-0 bg-white p-6 md:p-8 flex flex-col justify-center">
                 <div className="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-mono font-bold mb-4 w-fit">
-                  Case Study #{caseStudies[selectedCaseIndex].id}
+                  Case Study #{displayCases[selectedCaseIndex].id}
                 </div>
                 <h3 className="font-heading font-bold text-2xl text-slate-900 mb-2">
-                  {caseStudies[selectedCaseIndex].title}
+                  {displayCases[selectedCaseIndex].title}
                 </h3>
                 <div 
                   className="text-[#00ADEF] font-bold text-sm mb-4"
-                  dangerouslySetInnerHTML={{ __html: caseStudies[selectedCaseIndex].doctor }}
+                  dangerouslySetInnerHTML={{ __html: displayCases[selectedCaseIndex].doctor }}
                 />
                 <div className="w-12 h-1 bg-slate-200 mb-4"></div>
                 
@@ -329,7 +351,7 @@ export function ShofuCaseStudies() {
                       transition={{ duration: 0.2 }}
                       className="font-body text-slate-600 leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: caseStudies[selectedCaseIndex].images[currentImageIndex].note || caseStudies[selectedCaseIndex].description
+                        __html: displayCases[selectedCaseIndex].images[currentImageIndex]?.note || displayCases[selectedCaseIndex].description
                       }}
                     />
                   </AnimatePresence>

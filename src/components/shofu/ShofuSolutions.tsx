@@ -3,10 +3,26 @@ import React from 'react';
 import { Crown, Sparkles, Layers, ShieldPlus, ArrowUpRight, Syringe, Gem, ShoppingCart } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link, useNavigate } from 'react-router-dom';
+import { HomeSolutionsSection } from '../../pages/admin/home/types';
 
-export function ShofuSolutions() {
+interface ShofuSolutionsProps {
+  data?: HomeSolutionsSection;
+  onCTA?: () => void;
+}
+
+const renderSolutionIcon = (iconName: string) => {
+  switch (iconName) {
+    case 'ShieldPlus': return ShieldPlus;
+    case 'Syringe': return Syringe;
+    case 'Gem': return Gem;
+    case 'Layers': return Layers;
+    default: return Sparkles;
+  }
+};
+
+export function ShofuSolutions({ data, onCTA }: ShofuSolutionsProps) {
   const navigate = useNavigate();
-  const solutions = [
+  const defaultSolutions = [
     {
       id: 'preventive',
       slug: 'nha-khoa-phong-ngua',
@@ -37,6 +53,13 @@ export function ShofuSolutions() {
     }
   ];
 
+  const solutionsList = (data?.solutions && data.solutions.length > 0)
+    ? data.solutions.map(s => ({
+        ...s,
+        icon: renderSolutionIcon(s.icon)
+      }))
+    : defaultSolutions;
+
   const containerVariants = {
     hidden: {},
     visible: {
@@ -55,6 +78,14 @@ export function ShofuSolutions() {
     }
   };
 
+  const handleCtaClick = () => {
+    if (onCTA) {
+      onCTA();
+    } else {
+      window.dispatchEvent(new CustomEvent("open-offer-modal"));
+    }
+  };
+
   return (
     <section id="solutions" className="py-20 relative border-b border-slate-200 bg-slate-200 bg-grid-pattern overflow-hidden">
       <div className="w-[90%] lg:w-[80%] mx-auto">
@@ -65,12 +96,27 @@ export function ShofuSolutions() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">
-            Giải Pháp Lâm Sàng <span className="text-[#00ADEF]">Trọng Tâm</span>
-          </h2>
-          <p className="font-body text-base text-slate-600 max-w-2xl mx-auto">
-            Khám phá hệ sinh thái sản phẩm Shofu được thiết kế <strong className="text-slate-900">chuyên sâu cho từng chỉ định lâm sàng</strong>, giúp <strong className="text-emerald-600">nâng cao chất lượng điều trị</strong> và <strong className="text-amber-600">tối ưu chi phí vận hành</strong> tại phòng khám.
-          </p>
+          {data?.headline ? (
+            <h2 
+              className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase"
+              dangerouslySetInnerHTML={{ __html: data.headline }}
+            />
+          ) : (
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-4 uppercase">
+              Giải Pháp Lâm Sàng <span className="text-[#00ADEF]">Trọng Tâm</span>
+            </h2>
+          )}
+
+          {data?.subheadline ? (
+            <p 
+              className="font-body text-base text-slate-600 max-w-2xl mx-auto leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: data.subheadline }}
+            />
+          ) : (
+            <p className="font-body text-base text-slate-600 max-w-2xl mx-auto">
+              Khám phá hệ sinh thái sản phẩm Shofu được thiết kế <strong className="text-slate-900">chuyên sâu cho từng chỉ định lâm sàng</strong>, giúp <strong className="text-emerald-600">nâng cao chất lượng điều trị</strong> và <strong className="text-amber-600">tối ưu chi phí vận hành</strong> tại phòng khám.
+            </p>
+          )}
         </motion.div>
 
         <motion.div 
@@ -80,12 +126,12 @@ export function ShofuSolutions() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         >
-          {solutions.map((sol) => (
+          {solutionsList.map((sol) => (
             <motion.div 
               variants={cardVariants}
               key={sol.id}
               onClick={() => navigate(`/giai-phap/${sol.slug}`)}
-              className={`relative overflow-hidden rounded-xl sm:rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${sol.bgClass}`}
+              className={`relative overflow-hidden rounded-xl sm:rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${sol.bgClass || 'bg-[#00ADEF]'}`}
             >
               <div className="p-8 sm:p-10 w-full h-full flex flex-col items-center justify-center relative z-10">
                 {/* Subtle Pattern Overlay */}
@@ -119,7 +165,7 @@ export function ShofuSolutions() {
             className="text-center mb-8"
           >
             <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 uppercase">
-              Sản phẩm bán chạy
+              {data?.bestsellersHeadline || 'Sản phẩm bán chạy'}
             </h3>
           </motion.div>
           
@@ -130,60 +176,55 @@ export function ShofuSolutions() {
             viewport={{ once: true, margin: "-100px" }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
-            
-            {/* Product 1 */}
-            <motion.div variants={cardVariants} className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
-                <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautifil-injectable-x.png" alt="Beautifil Injectable X" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" />
-              </div>
-              <div className="font-mono text-[10px] text-[#00ADEF] font-semibold uppercase tracking-widest mb-2">COMPOSITE CAO CẤP</div>
-              <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Beautifil Injectable X</h4>
-              <div className="font-mono text-xs text-slate-500 mb-4">Bơm vật liệu và tạo hình cùng một lúc</div>
-
-            </motion.div>
-
-            {/* Product 2 */}
-            <motion.div variants={cardVariants} className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
-                <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png" alt="BeautiBond Xtreme" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" />
-              </div>
-              <div className="font-mono text-[10px] text-[#00ADEF] font-semibold uppercase tracking-widest mb-2">KEO DÁN ĐA NĂNG HEMA-FREE</div>
-              <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">BeautiBond Xtreme</h4>
-              <div className="font-mono text-xs text-slate-500 mb-4">Đa dạng chỉ định, tối ưu quy trình</div>
-
-            </motion.div>
-
-            {/* Product 3 */}
-            <motion.div variants={cardVariants} className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
-                <img referrerPolicy="no-referrer" src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png" alt="Beautilink SA" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" />
-              </div>
-              <div className="font-mono text-[10px] text-[#C43838] font-semibold uppercase tracking-widest mb-2">XI MĂNG RESIN TỰ DÁN</div>
-              <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Beautilink SA</h4>
-              <div className="font-mono text-xs text-slate-500 mb-4">Một cement - Đa dạng khả năng dán dính</div>
-
-            </motion.div>
-
-            {/* Product 4 */}
-            <motion.div variants={cardVariants} className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
-                <img referrerPolicy="no-referrer" 
-                  src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/super-snap-xtreme.webp" 
-                  alt="Super-Snap X-Treme" 
-                  className="w-full h-full object-cover mix-blend-multiply" loading="lazy" 
-                  onError={(e) => {
-                    if (!e.currentTarget.src.includes("cdn.jsdelivr.net")) {
-                      e.currentTarget.src = "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/super-snap-xtreme.webp";
-                    }
-                  }}
-                />
-              </div>
-              <div className="font-mono text-[10px] text-[#8C2828] font-semibold uppercase tracking-widest mb-2">MŨI ĐÁNH BÓNG HOÀN THIỆN</div>
-              <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">Super-Snap X-Treme</h4>
-              <div className="font-mono text-xs text-slate-500 mb-4">Bề mặt hoàn hảo tự nhiên</div>
-
-            </motion.div>
-            
+            {(data?.bestsellers && data.bestsellers.length > 0 ? data.bestsellers : [
+              {
+                id: '1',
+                category: 'COMPOSITE CAO CẤP',
+                name: 'Beautifil Injectable X',
+                tagline: 'Bơm vật liệu và tạo hình cùng một lúc',
+                image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautifil-injectable-x.png'
+              },
+              {
+                id: '2',
+                category: 'KEO DÁN ĐA NĂNG HEMA-FREE',
+                name: 'BeautiBond Xtreme',
+                tagline: 'Đa dạng chỉ định, tối ưu quy trình',
+                image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png'
+              },
+              {
+                id: '3',
+                category: 'XI MĂNG RESIN TỰ DÁN',
+                name: 'Beautilink SA',
+                tagline: 'Một cement - Đa dạng khả năng dán dính',
+                image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png'
+              },
+              {
+                id: '4',
+                category: 'MŨI ĐÁNH BÓNG HOÀN THIỆN',
+                name: 'Super-Snap X-Treme',
+                tagline: 'Bề mặt hoàn hảo tự nhiên',
+                image: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@f081ef33bfcfda01a376c61118e98a95a99fb6bc/public/images/super-snap-xtreme.webp'
+              }
+            ]).map((prod) => (
+              <motion.div 
+                key={prod.id} 
+                variants={cardVariants} 
+                className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col items-center text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="w-full aspect-[16/9] bg-slate-100 rounded-xl mb-5 overflow-hidden flex items-center justify-center p-0">
+                  <img 
+                    referrerPolicy="no-referrer" 
+                    src={prod.image} 
+                    alt={prod.name} 
+                    className="w-full h-full object-cover mix-blend-multiply" 
+                    loading="lazy" 
+                  />
+                </div>
+                <div className="font-mono text-[10px] text-[#00ADEF] font-semibold uppercase tracking-widest mb-2">{prod.category}</div>
+                <h4 className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-2 leading-tight">{prod.name}</h4>
+                <div className="font-mono text-xs text-slate-500 mb-4">{prod.tagline}</div>
+              </motion.div>
+            ))}
           </motion.div>
 
           <motion.div 
@@ -193,9 +234,13 @@ export function ShofuSolutions() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-10 sm:mt-12 flex justify-center"
           >
-            <CtaButton ctaName="MoKhoaUuDai" onClick={() => window.dispatchEvent(new CustomEvent("open-offer-modal"))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
+            <CtaButton 
+              ctaName="MoKhoaUuDai" 
+              onClick={handleCtaClick} 
+              className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1"
+            >
               <ShoppingCart className="w-5 h-5" />
-              <span>Xem ưu đãi và đặt hàng</span>
+              <span>{data?.ctaText || 'Xem ưu đãi và đặt hàng'}</span>
               <ArrowUpRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </CtaButton>
           </motion.div>
@@ -204,3 +249,4 @@ export function ShofuSolutions() {
     </section>
   );
 }
+
