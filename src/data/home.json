@@ -283,8 +283,57 @@
     ]
   },
   "socialProof": {
-    "headline": "Bảo Chứng Bởi Các Chuyên Gia Lâm Sàng",
-    "subheadline": "Hàng ngàn Bác sĩ trên toàn thế giới tin chọn Shofu để nâng cao tiêu chuẩn phục hồi và phòng ngừa",
+    "badge": "Bảo Chứng Toàn Cầu",
+    "headline": "<span class=\"text-[#00ADEF]\">4 Trụ Cột Khoa Học</span> <br className=\"hidden md:block\" />Khẳng Định Vị Thế",
+    "subheadline": "Hệ thống dữ liệu lâm sàng <strong class=\"text-slate-900\">độc lập, nghiêm ngặt và minh bạch</strong> nhất từ các viện nghiên cứu hàng đầu thế giới <strong class=\"text-emerald-600\">minh chứng cho chất lượng</strong> của Shofu.",
+    "pillar1": {
+      "tag": "Đại học Florida (JADA)",
+      "title": "Bảo chứng lâm sàng 13 năm",
+      "box1Title": "Kết quả sau 8 năm (JADA 2007)",
+      "stat1Value": "100",
+      "stat1Label": "Lưu giữ",
+      "stat2Value": "0",
+      "stat2Label": "Sâu răng",
+      "stat3Value": "0",
+      "stat3Label": "Nhạy cảm",
+      "box2Title": "Tái khám 13 năm",
+      "box2Desc": "Sạch sâu răng viền dán",
+      "box2Value": "97"
+    },
+    "pillar2": {
+      "tag": "ĐH Osaka (Nature 2018)",
+      "title": "Bằng chứng sinh học phân tử",
+      "point1Title": "Ức chế Gen (pdh operon)",
+      "point1Desc": "Cắt đứt nguồn năng lượng của vi khuẩn S. mutans.",
+      "point2Title": "Phá hủy Biofilm",
+      "point2Desc": "Suy yếu bám dính kỵ nước, dễ dàng bị rửa trôi."
+    },
+    "pillar3": {
+      "tag": "Dental Advisor & SUNY",
+      "title": "Chứng cứ thép về lực dán",
+      "item1Name": "BeautiLink SA",
+      "item1Sub": "(Trên Zirconia)",
+      "item1Badge": "5.000 Chu kỳ lão hóa",
+      "item1Value": "45-50",
+      "item1Unit": "MPa",
+      "item2Name": "BeautiBond (Không cần Etch)",
+      "enamelLabel": "Men răng",
+      "enamelValue": "26.4",
+      "dentinLabel": "Ngà răng",
+      "dentinValue": "27.8"
+    },
+    "pillar4": {
+      "tag": "Khảo sát 350 Bác sĩ",
+      "title": "Thực tế lâm sàng",
+      "stat1Value": "75",
+      "stat1Title": "Thao tác tốt hơn",
+      "stat1Desc": "Đặc tính thao tác, trộn và độ chảy lỏng vượt trội.",
+      "stat2Value": "86",
+      "stat2Title": "Thong thả thao tác",
+      "stat2Desc": "Thời gian làm việc (Working time) lý tưởng."
+    },
+    "ctaText1": "Xem ưu đãi và đặt hàng",
+    "ctaText2": "Xem ưu đãi và đặt hàng",
     "testimonials": [
       {
         "id": "1",

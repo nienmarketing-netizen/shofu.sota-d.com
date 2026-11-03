@@ -41,7 +41,11 @@ import {
   IonBioItem, 
   TestimonialItem, 
   CaseStudyItem,
-  SpecialOfferItem
+  SpecialOfferItem,
+  SciencePillar1,
+  SciencePillar2,
+  SciencePillar3,
+  SciencePillar4
 } from './home/types';
 import { Section1HeroEditor } from './home/Section1HeroEditor';
 import { Section2SolutionsEditor } from './home/Section2SolutionsEditor';
@@ -151,8 +155,15 @@ export default function HomeEditor() {
   const [roiDesc, setRoiDesc] = useState<string>(() => initialData.about?.roiDesc || '');
 
   // --- 5. Social Proof States ---
+  const [socialBadge, setSocialBadge] = useState<string>(() => initialData.socialProof?.badge || 'Bảo Chứng Toàn Cầu');
   const [socialHeadline, setSocialHeadline] = useState<string>(() => initialData.socialProof?.headline || '');
   const [socialSubheadline, setSocialSubheadline] = useState<string>(() => initialData.socialProof?.subheadline || '');
+  const [socialPillar1, setSocialPillar1] = useState<SciencePillar1>(() => initialData.socialProof?.pillar1 || DEFAULT_HOME_DATA.socialProof.pillar1 || {});
+  const [socialPillar2, setSocialPillar2] = useState<SciencePillar2>(() => initialData.socialProof?.pillar2 || DEFAULT_HOME_DATA.socialProof.pillar2 || {});
+  const [socialPillar3, setSocialPillar3] = useState<SciencePillar3>(() => initialData.socialProof?.pillar3 || DEFAULT_HOME_DATA.socialProof.pillar3 || {});
+  const [socialPillar4, setSocialPillar4] = useState<SciencePillar4>(() => initialData.socialProof?.pillar4 || DEFAULT_HOME_DATA.socialProof.pillar4 || {});
+  const [socialCtaText1, setSocialCtaText1] = useState<string>(() => initialData.socialProof?.ctaText1 || 'Xem ưu đãi và đặt hàng');
+  const [socialCtaText2, setSocialCtaText2] = useState<string>(() => initialData.socialProof?.ctaText2 || 'Xem ưu đãi và đặt hàng');
   const [testimonials, setTestimonials] = useState<TestimonialItem[]>(() => initialData.socialProof?.testimonials || []);
 
   // --- 6. Case Studies States ---
@@ -258,8 +269,15 @@ export default function HomeEditor() {
         roiCards: initialData.about?.roiCards || []
       },
       socialProof: {
+        badge: socialBadge,
         headline: socialHeadline,
         subheadline: socialSubheadline,
+        pillar1: socialPillar1,
+        pillar2: socialPillar2,
+        pillar3: socialPillar3,
+        pillar4: socialPillar4,
+        ctaText1: socialCtaText1,
+        ctaText2: socialCtaText2,
         testimonials
       },
       caseStudies: {
@@ -351,8 +369,15 @@ export default function HomeEditor() {
       if (data.about.roiDesc) setRoiDesc(data.about.roiDesc);
     }
     if (data.socialProof) {
+      if (data.socialProof.badge) setSocialBadge(data.socialProof.badge);
       if (data.socialProof.headline) setSocialHeadline(data.socialProof.headline);
       if (data.socialProof.subheadline) setSocialSubheadline(data.socialProof.subheadline);
+      if (data.socialProof.pillar1) setSocialPillar1(data.socialProof.pillar1);
+      if (data.socialProof.pillar2) setSocialPillar2(data.socialProof.pillar2);
+      if (data.socialProof.pillar3) setSocialPillar3(data.socialProof.pillar3);
+      if (data.socialProof.pillar4) setSocialPillar4(data.socialProof.pillar4);
+      if (data.socialProof.ctaText1) setSocialCtaText1(data.socialProof.ctaText1);
+      if (data.socialProof.ctaText2) setSocialCtaText2(data.socialProof.ctaText2);
       if (data.socialProof.testimonials) setTestimonials(data.socialProof.testimonials);
     }
     if (data.caseStudies) {
@@ -822,10 +847,24 @@ export default function HomeEditor() {
 
           {activeTab === 'social-proof' && (
             <Section5SocialProofEditor
+              badge={socialBadge}
+              setBadge={setSocialBadge}
               headline={socialHeadline}
               setHeadline={setSocialHeadline}
               subheadline={socialSubheadline}
               setSubheadline={setSocialSubheadline}
+              pillar1={socialPillar1}
+              setPillar1={setSocialPillar1}
+              pillar2={socialPillar2}
+              setPillar2={setSocialPillar2}
+              pillar3={socialPillar3}
+              setPillar3={setSocialPillar3}
+              pillar4={socialPillar4}
+              setPillar4={setSocialPillar4}
+              ctaText1={socialCtaText1}
+              setCtaText1={setSocialCtaText1}
+              ctaText2={socialCtaText2}
+              setCtaText2={setSocialCtaText2}
               testimonials={testimonials}
               setTestimonials={setTestimonials}
             />

@@ -171,10 +171,66 @@ export interface TestimonialItem {
   avatar: string;
 }
 
+export interface SciencePillar1 {
+  tag?: string;
+  title?: string;
+  box1Title?: string;
+  stat1Value?: string;
+  stat1Label?: string;
+  stat2Value?: string;
+  stat2Label?: string;
+  stat3Value?: string;
+  stat3Label?: string;
+  box2Title?: string;
+  box2Desc?: string;
+  box2Value?: string;
+}
+
+export interface SciencePillar2 {
+  tag?: string;
+  title?: string;
+  point1Title?: string;
+  point1Desc?: string;
+  point2Title?: string;
+  point2Desc?: string;
+}
+
+export interface SciencePillar3 {
+  tag?: string;
+  title?: string;
+  item1Name?: string;
+  item1Sub?: string;
+  item1Badge?: string;
+  item1Value?: string;
+  item1Unit?: string;
+  item2Name?: string;
+  enamelLabel?: string;
+  enamelValue?: string;
+  dentinLabel?: string;
+  dentinValue?: string;
+}
+
+export interface SciencePillar4 {
+  tag?: string;
+  title?: string;
+  stat1Value?: string;
+  stat1Title?: string;
+  stat1Desc?: string;
+  stat2Value?: string;
+  stat2Title?: string;
+  stat2Desc?: string;
+}
+
 export interface HomeSocialProofSection {
   badge?: string;
   headline: string;
   subheadline: string;
+  pillar1?: SciencePillar1;
+  pillar2?: SciencePillar2;
+  pillar3?: SciencePillar3;
+  pillar4?: SciencePillar4;
+  ctaText1?: string;
+  ctaText2?: string;
   testimonials: TestimonialItem[];
 }
 
