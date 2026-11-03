@@ -151,7 +151,7 @@ export default function ShofuLanding() {
         />
         <ShofuSolutions 
           data={homeData.solutions} 
-          onCTA={handleSolutionsCTA} 
+          onCTA={handleOpenOfferModal} 
         />
         <ShofuOffers 
           data={homeData.offers} 
@@ -175,7 +175,11 @@ export default function ShofuLanding() {
 
       <ShofuFooter />
 
-      <ShofuOfferModal />
+      <ShofuOfferModal 
+        specialOffers={homeData.solutions?.specialOffers}
+        formTitle={homeData.solutions?.offerModalFormTitle}
+        formDesc={homeData.solutions?.offerModalFormDesc}
+      />
       <ContactModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 

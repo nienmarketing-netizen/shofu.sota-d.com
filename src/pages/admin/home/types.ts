@@ -41,6 +41,18 @@ export interface BestsellerProductItem {
   image: string;
 }
 
+export interface SpecialOfferItem {
+  id: number;
+  badge: string;
+  headerImage: string;
+  headerText?: string;
+  title: string;
+  subtitle: string;
+  desc: string;
+  oldPrice?: string;
+  newPrice?: string;
+}
+
 export interface HomeSolutionsSection {
   headline: string;
   subheadline: string;
@@ -48,6 +60,9 @@ export interface HomeSolutionsSection {
   bestsellersHeadline: string;
   bestsellers: BestsellerProductItem[];
   ctaText: string;
+  offerModalFormTitle?: string;
+  offerModalFormDesc?: string;
+  specialOffers?: SpecialOfferItem[];
   ctaFormTitle?: string;
   ctaFormDesc?: string;
   ctaFormExtraHtml?: string;

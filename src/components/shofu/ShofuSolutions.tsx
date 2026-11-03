@@ -1,6 +1,25 @@
 import { CtaButton } from "../ui/CtaButton";
 import React from 'react';
-import { Crown, Sparkles, Layers, ShieldPlus, ArrowUpRight, Syringe, Gem, ShoppingCart } from 'lucide-react';
+import { 
+  Crown, 
+  Sparkles, 
+  Layers, 
+  ShieldPlus, 
+  ArrowUpRight, 
+  Syringe, 
+  Gem, 
+  ShoppingCart,
+  ShieldCheck,
+  Activity,
+  HeartPulse,
+  Stethoscope,
+  Zap,
+  Award,
+  Package,
+  Microscope,
+  Smile,
+  CircleDot
+} from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link, useNavigate } from 'react-router-dom';
 import { HomeSolutionsSection } from '../../pages/admin/home/types';
@@ -10,14 +29,29 @@ interface ShofuSolutionsProps {
   onCTA?: () => void;
 }
 
+const ICON_MAP: Record<string, React.ElementType> = {
+  ShieldPlus,
+  Syringe,
+  Gem,
+  Layers,
+  Sparkles,
+  ShieldCheck,
+  Activity,
+  HeartPulse,
+  Stethoscope,
+  Zap,
+  Award,
+  Package,
+  Microscope,
+  Smile,
+  CircleDot
+};
+
 const renderSolutionIcon = (iconName: string) => {
-  switch (iconName) {
-    case 'ShieldPlus': return ShieldPlus;
-    case 'Syringe': return Syringe;
-    case 'Gem': return Gem;
-    case 'Layers': return Layers;
-    default: return Sparkles;
+  if (ICON_MAP[iconName]) {
+    return ICON_MAP[iconName];
   }
+  return Sparkles;
 };
 
 export function ShofuSolutions({ data, onCTA }: ShofuSolutionsProps) {
@@ -56,9 +90,14 @@ export function ShofuSolutions({ data, onCTA }: ShofuSolutionsProps) {
   const solutionsList = (data?.solutions && data.solutions.length > 0)
     ? data.solutions.map(s => ({
         ...s,
-        icon: renderSolutionIcon(s.icon)
+        iconComponent: renderSolutionIcon(s.icon),
+        rawIcon: s.icon
       }))
-    : defaultSolutions;
+    : defaultSolutions.map(s => ({
+        ...s,
+        iconComponent: s.icon,
+        rawIcon: ''
+      }));
 
   const containerVariants = {
     hidden: {},
@@ -137,7 +176,15 @@ export function ShofuSolutions({ data, onCTA }: ShofuSolutionsProps) {
                 {/* Subtle Pattern Overlay */}
                 <div className="absolute inset-0 opacity-10 bg-grid-pattern mix-blend-overlay pointer-events-none"></div>
                 
-                <sol.icon className="w-10 h-10 sm:w-12 sm:h-12 text-white mb-4 sm:mb-5 stroke-[1.5] relative z-10 group-hover:scale-110 transition-transform duration-300" />
+                {sol.rawIcon && (sol.rawIcon.startsWith('http') || sol.rawIcon.startsWith('/') || sol.rawIcon.startsWith('data:')) ? (
+                  <img 
+                    src={sol.rawIcon} 
+                    alt={sol.title} 
+                    className="w-10 h-10 sm:w-12 sm:h-12 object-contain mb-4 sm:mb-5 relative z-10 group-hover:scale-110 transition-transform duration-300 filter brightness-0 invert" 
+                  />
+                ) : (
+                  <sol.iconComponent className="w-10 h-10 sm:w-12 sm:h-12 text-white mb-4 sm:mb-5 stroke-[1.5] relative z-10 group-hover:scale-110 transition-transform duration-300" />
+                )}
                 
                 <h3 className="font-mono font-bold text-xs sm:text-sm text-white tracking-widest uppercase relative z-10">
                   {sol.title}

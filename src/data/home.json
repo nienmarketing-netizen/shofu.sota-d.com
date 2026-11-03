@@ -90,6 +90,54 @@
       }
     ],
     "ctaText": "Xem ưu đãi và đặt hàng",
+    "offerModalFormTitle": "Đăng ký ngay",
+    "offerModalFormDesc": "Quý Bác sĩ vui lòng điền thông tin bên dưới để Sota-D liên hệ hỗ trợ và giữ ưu đãi:",
+    "specialOffers": [
+      {
+        "id": 1,
+        "badge": "TẶNG 2 TUÝP",
+        "headerText": "BeautiFil Composite",
+        "headerImage": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-7-tang-2-Beautifill-II.webp",
+        "title": "Mua 7 Tặng 2",
+        "subtitle": "Dòng Composite BeautiFil",
+        "desc": "Áp dụng cho BeautiFil Injectable X/X SL hoặc BeautiFil II. Giảm sâu chi phí vốn trên mỗi ca phục hình.",
+        "oldPrice": "",
+        "newPrice": ""
+      },
+      {
+        "id": 2,
+        "badge": "TIẾT KIỆM 20%",
+        "headerText": "BeautiFil II LS",
+        "headerImage": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-4-tang-1-Beautifil-II-LS.webp",
+        "title": "Mua 4 Tặng 1",
+        "subtitle": "Composite Thẩm Mỹ BeautiFil II LS",
+        "desc": "Sở hữu dòng composite có độ co rút cực thấp (0.85% Vol) và kháng mòn cao.",
+        "oldPrice": "",
+        "newPrice": ""
+      },
+      {
+        "id": 3,
+        "badge": "GIẢM TRỰC TIẾP",
+        "headerText": "BeautiBond Xtreme",
+        "headerImage": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-giam-gia-truc-tiep-BBX.webp",
+        "title": "Trợ Giá Trực Tiếp",
+        "subtitle": "Keo Dán BeautiBond Xtreme (BBX)",
+        "desc": "Trải nghiệm keo dán công nghệ Quadra-Functional Monomer (chứa 10-MDP) với mức giá cực kỳ tối ưu.",
+        "oldPrice": "",
+        "newPrice": ""
+      },
+      {
+        "id": 4,
+        "badge": "TIẾT KIỆM GẦN 50%",
+        "headerText": "BeautiLink SA 15.6g",
+        "headerImage": "https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-1-tang-1-BLSA-BBX.webp",
+        "title": "Mua 1 Tặng 1",
+        "subtitle": "Xi Măng Gắn BeautiLink SA 15.6g",
+        "desc": "Mua 01 hộp BeautiLink SA 15.6g, tặng ngay 01 bộ keo dán Universal BeautiBond Xtreme .",
+        "oldPrice": "",
+        "newPrice": ""
+      }
+    ],
     "ctaFormTitle": "Mở khóa bảng giá & ưu đãi Shofu",
     "ctaFormDesc": "Nhập thông tin để nhận bảng báo giá chi tiết và ưu đãi độc quyền phân phối chính hãng:",
     "ctaFormExtraHtml": "",

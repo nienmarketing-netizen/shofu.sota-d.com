@@ -2,8 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { X, Gift, ShoppingCart, CheckCircle, ArrowRight, Tag, ShieldCheck, CheckCircle2, Package, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useBodyScrollLock } from '../../utils/scrollLock';
+import { SpecialOfferItem } from '../../pages/admin/home/types';
 
-export function ShofuOfferModal() {
+interface ShofuOfferModalProps {
+  specialOffers?: SpecialOfferItem[];
+  formTitle?: string;
+  formDesc?: string;
+}
+
+export function ShofuOfferModal({ specialOffers, formTitle, formDesc }: ShofuOfferModalProps = {}) {
   const [isOpen, setIsOpen] = useState(false);
   useBodyScrollLock(isOpen);
   const [modalMode, setModalMode] = useState<'combo' | 'product'>('combo');
@@ -152,6 +159,61 @@ export function ShofuOfferModal() {
     }
   };
 
+  const defaultProductDetailsList: SpecialOfferItem[] = [
+    {
+      id: 1,
+      name: 'Mua 7 Tặng 2 Dòng Composite BeautiFil',
+      badge: 'TẶNG 2 TUÝP',
+      headerText: 'BeautiFil Composite',
+      headerImage: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-7-tang-2-Beautifill-II.webp',
+      title: 'Mua 7 Tặng 2',
+      subtitle: 'Dòng Composite BeautiFil',
+      desc: 'Áp dụng cho BeautiFil Injectable X/X SL hoặc BeautiFil II. Giảm sâu chi phí vốn trên mỗi ca phục hình.',
+      oldPrice: '',
+      newPrice: ''
+    } as any,
+    {
+      id: 2,
+      name: 'Mua 4 Tặng 1 Composite Thẩm Mỹ BeautiFil II LS',
+      badge: 'TIẾT KIỆM 20%',
+      headerText: 'BeautiFil II LS',
+      headerImage: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-4-tang-1-Beautifil-II-LS.webp',
+      title: 'Mua 4 Tặng 1',
+      subtitle: 'Composite Thẩm Mỹ BeautiFil II LS',
+      desc: 'Sở hữu dòng composite có độ co rút cực thấp (0.85% Vol) và kháng mòn cao.',
+      oldPrice: '',
+      newPrice: ''
+    } as any,
+    {
+      id: 3,
+      name: 'Trợ Giá Trực Tiếp Keo Dán BeautiBond Xtreme',
+      badge: 'GIẢM TRỰC TIẾP',
+      headerImage: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-giam-gia-truc-tiep-BBX.webp',
+      headerText: 'BeautiBond Xtreme',
+      title: 'Trợ Giá Trực Tiếp',
+      subtitle: 'Keo Dán BeautiBond Xtreme (BBX)',
+      desc: 'Trải nghiệm keo dán công nghệ Quadra-Functional Monomer (chứa 10-MDP) với mức giá cực kỳ tối ưu.',
+      oldPrice: '',
+      newPrice: ''
+    } as any,
+    {
+      id: 4,
+      name: 'Mua 1 Tặng 1 Xi Măng Gắn BeautiLink SA 15.6g',
+      badge: 'TIẾT KIỆM GẦN 50%',
+      headerText: 'BeautiLink SA 15.6g',
+      headerImage: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/shofu.sota-d.com@main/public/images/CTKM-mua-1-tang-1-BLSA-BBX.webp',
+      title: 'Mua 1 Tặng 1',
+      subtitle: 'Xi Măng Gắn BeautiLink SA 15.6g',
+      desc: 'Mua 01 hộp BeautiLink SA 15.6g, tặng ngay 01 bộ keo dán Universal BeautiBond Xtreme .',
+      oldPrice: '',
+      newPrice: ''
+    } as any
+  ];
+
+  const productOffersList: SpecialOfferItem[] = (specialOffers && specialOffers.length > 0)
+    ? specialOffers
+    : defaultProductDetailsList;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.phone.trim() || !formData.clinic.trim() || !formData.address.trim()) {
@@ -167,7 +229,12 @@ export function ShofuOfferModal() {
     const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 11);
     const selectedPromoText = modalMode === 'combo' 
       ? offerDetails[activeOfferId].name 
-      : (activeProductIds.length > 0 ? activeProductIds.map(id => productDetails[id].name).join(", ") : "Xem ưu đãi & đặt hàng");
+      : (activeProductIds.length > 0 
+          ? activeProductIds.map(id => {
+              const matched = productOffersList.find(p => p.id === id);
+              return matched ? `${matched.title} (${matched.subtitle})` : `Ưu đãi #${id}`;
+            }).join(", ") 
+          : "Xem ưu đãi & đặt hàng");
 
     const payload = {
       'Nguồn Lead': 'Landing Page Shofu (Xem ưu đãi và đặt hàng)',
@@ -372,10 +439,10 @@ export function ShofuOfferModal() {
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-                  {(Object.keys(productDetails) as unknown as Array<1|2|3|4>).map((key) => {
-                    const offer = productDetails[key];
+                  {productOffersList.map((offer) => {
+                    const key = offer.id;
                     const isActive = activeProductIds.includes(Number(key) as 1|2|3|4);
-                    const newPriceParts = offer.newPrice.split(':');
+                    const newPriceParts = (offer.newPrice || '').split(':');
                     const hasColon = newPriceParts.length > 1;
 
                     return (
@@ -501,8 +568,8 @@ export function ShofuOfferModal() {
               ) : (
                 <div className="max-w-md mx-auto w-full">
                   <div className="mb-8 text-center sm:text-left">
-                    <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 mb-3">Đăng ký ngay</h3>
-                    <p className="text-sm sm:text-base text-slate-600">Quý Bác sĩ vui lòng điền thông tin bên dưới để Sota-D liên hệ hỗ trợ và giữ ưu đãi:</p>
+                    <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 mb-3">{formTitle || 'Đăng ký ngay'}</h3>
+                    <p className="text-sm sm:text-base text-slate-600">{formDesc || 'Quý Bác sĩ vui lòng điền thông tin bên dưới để Sota-D liên hệ hỗ trợ và giữ ưu đãi:'}</p>
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-5">

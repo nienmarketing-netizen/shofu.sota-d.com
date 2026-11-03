@@ -40,7 +40,8 @@ import {
   AboutStatItem, 
   IonBioItem, 
   TestimonialItem, 
-  CaseStudyItem 
+  CaseStudyItem,
+  SpecialOfferItem
 } from './home/types';
 import { Section1HeroEditor } from './home/Section1HeroEditor';
 import { Section2SolutionsEditor } from './home/Section2SolutionsEditor';
@@ -101,6 +102,15 @@ export default function HomeEditor() {
   const [bestsellersHeadline, setBestsellersHeadline] = useState<string>(() => initialData.solutions?.bestsellersHeadline || 'Sản phẩm bán chạy');
   const [bestsellers, setBestsellers] = useState<BestsellerProductItem[]>(() => initialData.solutions?.bestsellers || []);
   const [solutionsCtaText, setSolutionsCtaText] = useState<string>(() => initialData.solutions?.ctaText || 'Xem ưu đãi và đặt hàng');
+  const [solutionsSpecialOffers, setSolutionsSpecialOffers] = useState<SpecialOfferItem[]>(() => 
+    initialData.solutions?.specialOffers || DEFAULT_HOME_DATA.solutions.specialOffers || []
+  );
+  const [solutionsOfferModalFormTitle, setSolutionsOfferModalFormTitle] = useState<string>(() => 
+    initialData.solutions?.offerModalFormTitle || 'Đăng ký ngay'
+  );
+  const [solutionsOfferModalFormDesc, setSolutionsOfferModalFormDesc] = useState<string>(() => 
+    initialData.solutions?.offerModalFormDesc || 'Quý Bác sĩ vui lòng điền thông tin bên dưới để Sota-D liên hệ hỗ trợ và giữ ưu đãi:'
+  );
   const [solutionsCtaFormTitle, setSolutionsCtaFormTitle] = useState<string>(() => initialData.solutions?.ctaFormTitle || '');
   const [solutionsCtaFormDesc, setSolutionsCtaFormDesc] = useState<string>(() => initialData.solutions?.ctaFormDesc || '');
   const [solutionsCtaFormExtraHtml, setSolutionsCtaFormExtraHtml] = useState<string>(() => initialData.solutions?.ctaFormExtraHtml || '');
@@ -191,6 +201,9 @@ export default function HomeEditor() {
         bestsellersHeadline,
         bestsellers,
         ctaText: solutionsCtaText,
+        offerModalFormTitle: solutionsOfferModalFormTitle,
+        offerModalFormDesc: solutionsOfferModalFormDesc,
+        specialOffers: solutionsSpecialOffers,
         ctaFormTitle: solutionsCtaFormTitle,
         ctaFormDesc: solutionsCtaFormDesc,
         ctaFormExtraHtml: solutionsCtaFormExtraHtml,
@@ -295,6 +308,9 @@ export default function HomeEditor() {
       if (data.solutions.bestsellersHeadline) setBestsellersHeadline(data.solutions.bestsellersHeadline);
       if (data.solutions.bestsellers) setBestsellers(data.solutions.bestsellers);
       if (data.solutions.ctaText) setSolutionsCtaText(data.solutions.ctaText);
+      if (data.solutions.specialOffers) setSolutionsSpecialOffers(data.solutions.specialOffers);
+      if (data.solutions.offerModalFormTitle) setSolutionsOfferModalFormTitle(data.solutions.offerModalFormTitle);
+      if (data.solutions.offerModalFormDesc) setSolutionsOfferModalFormDesc(data.solutions.offerModalFormDesc);
       if (data.solutions.ctaFormTitle) setSolutionsCtaFormTitle(data.solutions.ctaFormTitle);
       if (data.solutions.ctaFormDesc) setSolutionsCtaFormDesc(data.solutions.ctaFormDesc);
       if (data.solutions.ctaFormExtraHtml !== undefined) setSolutionsCtaFormExtraHtml(data.solutions.ctaFormExtraHtml);
@@ -729,18 +745,12 @@ export default function HomeEditor() {
               setBestsellers={setBestsellers}
               ctaText={solutionsCtaText}
               setCtaText={setSolutionsCtaText}
-              ctaFormTitle={solutionsCtaFormTitle}
-              setCtaFormTitle={setSolutionsCtaFormTitle}
-              ctaFormDesc={solutionsCtaFormDesc}
-              setCtaFormDesc={setSolutionsCtaFormDesc}
-              ctaFormExtraHtml={solutionsCtaFormExtraHtml}
-              setCtaFormExtraHtml={setSolutionsCtaFormExtraHtml}
-              ctaRedirectThanks={solutionsCtaRedirectThanks}
-              setCtaRedirectThanks={setSolutionsCtaRedirectThanks}
-              ctaTargetUrl={solutionsCtaTargetUrl}
-              setCtaTargetUrl={setSolutionsCtaTargetUrl}
-              ctaResourceTitle={solutionsCtaResourceTitle}
-              setCtaResourceTitle={setSolutionsCtaResourceTitle}
+              offerModalFormTitle={solutionsOfferModalFormTitle}
+              setOfferModalFormTitle={setSolutionsOfferModalFormTitle}
+              offerModalFormDesc={solutionsOfferModalFormDesc}
+              setOfferModalFormDesc={setSolutionsOfferModalFormDesc}
+              specialOffers={solutionsSpecialOffers}
+              setSpecialOffers={setSolutionsSpecialOffers}
             />
           )}
 
