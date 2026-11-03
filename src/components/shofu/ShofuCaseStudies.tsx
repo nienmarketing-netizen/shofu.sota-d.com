@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronLeft, ChevronRight, ZoomIn, ShoppingCart, ArrowUpRight } from 'lucide-react';
 import { useBodyScrollLock } from '../../utils/scrollLock';
+import { HomeCaseStudiesSection, CaseStudyItem } from '../../pages/admin/home/types';
 
-const caseStudies = [
+const caseStudies: CaseStudyItem[] = [
   {
     id: 1,
     title: "Đóng khe thưa",
@@ -136,8 +137,6 @@ const slideVariants = {
   })
 };
 
-import { HomeCaseStudiesSection } from '../../pages/admin/home/types';
-
 interface ShofuCaseStudiesProps {
   data?: HomeCaseStudiesSection;
   onCTA?: () => void;
@@ -245,9 +244,9 @@ export function ShofuCaseStudies({ data, onCTA }: ShofuCaseStudiesProps = {}) {
 
       {/* CTA Button */}
       <div className="text-center px-4 relative z-10">
-        <button onClick={onCTA || (() => window.dispatchEvent(new CustomEvent("open-offer-modal")))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1">
+        <button onClick={onCTA || (() => window.dispatchEvent(new CustomEvent("open-offer-modal")))} className="group relative inline-flex items-center justify-center gap-2 bg-[#00ADEF] text-white px-8 py-4 rounded-full font-heading font-bold text-base sm:text-lg hover:bg-slate-900 hover:shadow-xl hover:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
           <ShoppingCart className="w-5 h-5" />
-          <span>Xem ưu đãi và đặt hàng</span>
+          <span>{data?.ctaText || 'Xem ưu đãi và đặt hàng'}</span>
           <ArrowUpRight className="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
         </button>
       </div>
@@ -330,7 +329,7 @@ export function ShofuCaseStudies({ data, onCTA }: ShofuCaseStudiesProps = {}) {
               {/* Info Area with text transition */}
               <div className="w-full md:w-[350px] shrink-0 bg-white p-6 md:p-8 flex flex-col justify-center">
                 <div className="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-mono font-bold mb-4 w-fit">
-                  Case Study #{displayCases[selectedCaseIndex].id}
+                  {displayCases[selectedCaseIndex].caseNumber || `Case Study #${displayCases[selectedCaseIndex].id}`}
                 </div>
                 <h3 className="font-heading font-bold text-2xl text-slate-900 mb-2">
                   {displayCases[selectedCaseIndex].title}

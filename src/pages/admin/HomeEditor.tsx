@@ -167,9 +167,17 @@ export default function HomeEditor() {
   const [testimonials, setTestimonials] = useState<TestimonialItem[]>(() => initialData.socialProof?.testimonials || []);
 
   // --- 6. Case Studies States ---
+  const [casesBadge, setCasesBadge] = useState<string>(() => initialData.caseStudies?.badge || 'Thư viện Case Study');
   const [casesHeadline, setCasesHeadline] = useState<string>(() => initialData.caseStudies?.headline || '');
   const [casesSubheadline, setCasesSubheadline] = useState<string>(() => initialData.caseStudies?.subheadline || '');
-  const [caseStudies, setCaseStudies] = useState<CaseStudyItem[]>(() => initialData.caseStudies?.caseStudies || []);
+  const [casesCtaText, setCasesCtaText] = useState<string>(() => initialData.caseStudies?.ctaText || 'Xem ưu đãi và đặt hàng');
+  const [caseStudies, setCaseStudies] = useState<CaseStudyItem[]>(() => {
+    const saved = initialData.caseStudies?.caseStudies;
+    if (!saved || saved.length < DEFAULT_HOME_DATA.caseStudies.caseStudies.length) {
+      return DEFAULT_HOME_DATA.caseStudies.caseStudies;
+    }
+    return saved;
+  });
 
   // --- 7. Lead Magnet States ---
   const [leadBadge, setLeadBadge] = useState<string>(() => initialData.leadMagnet?.badge || '');
@@ -281,8 +289,10 @@ export default function HomeEditor() {
         testimonials
       },
       caseStudies: {
+        badge: casesBadge,
         headline: casesHeadline,
         subheadline: casesSubheadline,
+        ctaText: casesCtaText,
         caseStudies
       },
       leadMagnet: {
@@ -381,9 +391,17 @@ export default function HomeEditor() {
       if (data.socialProof.testimonials) setTestimonials(data.socialProof.testimonials);
     }
     if (data.caseStudies) {
+      if (data.caseStudies.badge) setCasesBadge(data.caseStudies.badge);
       if (data.caseStudies.headline) setCasesHeadline(data.caseStudies.headline);
       if (data.caseStudies.subheadline) setCasesSubheadline(data.caseStudies.subheadline);
-      if (data.caseStudies.caseStudies) setCaseStudies(data.caseStudies.caseStudies);
+      if (data.caseStudies.ctaText) setCasesCtaText(data.caseStudies.ctaText);
+      if (data.caseStudies.caseStudies) {
+        if (data.caseStudies.caseStudies.length < DEFAULT_HOME_DATA.caseStudies.caseStudies.length) {
+          setCaseStudies(DEFAULT_HOME_DATA.caseStudies.caseStudies);
+        } else {
+          setCaseStudies(data.caseStudies.caseStudies);
+        }
+      }
     }
     if (data.leadMagnet) {
       if (data.leadMagnet.badge) setLeadBadge(data.leadMagnet.badge);
@@ -872,10 +890,14 @@ export default function HomeEditor() {
 
           {activeTab === 'case-studies' && (
             <Section6CaseStudiesEditor
+              badge={casesBadge}
+              setBadge={setCasesBadge}
               headline={casesHeadline}
               setHeadline={setCasesHeadline}
               subheadline={casesSubheadline}
               setSubheadline={setCasesSubheadline}
+              ctaText={casesCtaText}
+              setCtaText={setCasesCtaText}
               caseStudies={caseStudies}
               setCaseStudies={setCaseStudies}
             />

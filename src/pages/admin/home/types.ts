@@ -241,6 +241,7 @@ export interface CaseStudyImageItem {
 
 export interface CaseStudyItem {
   id: number;
+  caseNumber?: string;
   title: string;
   doctor: string;
   coverImage: string;
@@ -252,6 +253,7 @@ export interface HomeCaseStudiesSection {
   badge?: string;
   headline: string;
   subheadline: string;
+  ctaText?: string;
   caseStudies: CaseStudyItem[];
 }
 
