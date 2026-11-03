@@ -6,7 +6,9 @@ import {
   Plus, 
   Trash2, 
   CheckCircle2, 
-  FileText 
+  FileText,
+  Palette,
+  Image as ImageIcon
 } from 'lucide-react';
 import { applyFormat } from './types';
 import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
@@ -102,65 +104,170 @@ export const Section7LeadMagnetEditor: React.FC<Section7LeadMagnetEditorProps> =
           </button>
         </div>
         <p className="text-xs text-slate-500">
-          Tùy biến tài liệu lâm sàng độc quyền, 4 điểm lợi ích của cẩm nang và cấu hình form nhận / link tải tài liệu.
+          Tùy biến tài liệu lâm sàng độc quyền, tiêu đề/mô tả định dạng HTML, các điểm lợi ích, ảnh mockup bên cột trái và form thu lead đồng bộ.
         </p>
       </div>
 
-      {/* 1. Badge, Headline & Subheadline */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
+      {/* 1. Badge, Headline & Subheadline (Hỗ trợ HTML) */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-5">
         <div>
-          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
             Huy hiệu trên cùng (Badge)
           </label>
           <input
             type="text"
             value={badge}
             onChange={(e) => setBadge(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm text-slate-900 focus:border-[#00ADEF] outline-none"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm font-bold text-slate-900 focus:border-[#00ADEF] outline-none"
             placeholder="TÀI LIỆU ĐỘC QUYỀN MIỄN PHÍ"
           />
         </div>
 
+        {/* Headline with HTML tools */}
         <div>
-          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-            Tiêu đề Cẩm nang lâm sàng
-          </label>
-          <input
-            type="text"
+          <div className="flex items-center justify-between mb-1.5 flex-wrap gap-2">
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider">
+              Tiêu đề Cẩm nang lâm sàng (Hỗ trợ HTML)
+            </label>
+            <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg">
+              <button
+                type="button"
+                onClick={() => applyFormat('strong', setHeadline, 'leadmagnet-headline-input')}
+                title="In đậm chữ đang chọn"
+                className="px-2 py-0.5 rounded text-[11px] font-bold bg-white text-slate-700 hover:text-black border border-slate-200 shadow-2xs flex items-center gap-1"
+              >
+                <Bold className="w-3 h-3" />
+                <span>Đậm</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => applyFormat('cyan', setHeadline, 'leadmagnet-headline-input')}
+                title="Đổi màu Xanh Shofu"
+                className="px-2 py-0.5 rounded text-[11px] font-bold bg-sky-50 text-[#00ADEF] hover:bg-sky-100 border border-sky-200 shadow-2xs flex items-center gap-1"
+              >
+                <Palette className="w-3 h-3" />
+                <span>Xanh</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => applyFormat('red', setHeadline, 'leadmagnet-headline-input')}
+                title="Đổi màu Đỏ"
+                className="px-2 py-0.5 rounded text-[11px] font-bold bg-red-50 text-[#C43838] hover:bg-red-100 border border-red-200 shadow-2xs flex items-center gap-1"
+              >
+                <Palette className="w-3 h-3" />
+                <span>Đỏ</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => applyFormat('amber', setHeadline, 'leadmagnet-headline-input')}
+                title="Nổi bật vàng"
+                className="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-50 text-amber-800 hover:bg-amber-100 border border-amber-200 shadow-2xs flex items-center gap-1"
+              >
+                <Palette className="w-3 h-3" />
+                <span>Vàng</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => applyFormat('br', setHeadline, 'leadmagnet-headline-input')}
+                title="Chèn ngắt dòng"
+                className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-white text-slate-700 hover:text-black border border-slate-200 shadow-2xs"
+              >
+                &lt;br /&gt;
+              </button>
+            </div>
+          </div>
+          <textarea
+            id="leadmagnet-headline-input"
+            rows={2}
             value={headline}
             onChange={(e) => setHeadline(e.target.value)}
             className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm font-bold text-slate-900 focus:border-[#00ADEF] outline-none"
             placeholder="CẨM NANG LÂM SÀNG: PHỤC HỒI & PHÒNG NGỪA SHOFU"
           />
+          <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-xl">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">
+              Xem trước HTML tiêu đề:
+            </span>
+            <div
+              className="text-base font-extrabold text-slate-900 leading-snug"
+              dangerouslySetInnerHTML={{ __html: headline || '(Chưa nhập tiêu đề)' }}
+            />
+          </div>
         </div>
 
+        {/* Subheadline with HTML tools */}
         <div>
-          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-            Mô tả tóm tắt nội dung
-          </label>
+          <div className="flex items-center justify-between mb-1.5 flex-wrap gap-2">
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider">
+              Mô tả tóm tắt nội dung (Hỗ trợ HTML)
+            </label>
+            <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg">
+              <button
+                type="button"
+                onClick={() => applyFormat('strong', setSubheadline, 'leadmagnet-subheadline-input')}
+                title="In đậm chữ đang chọn"
+                className="px-2 py-0.5 rounded text-[11px] font-bold bg-white text-slate-700 hover:text-black border border-slate-200 shadow-2xs flex items-center gap-1"
+              >
+                <Bold className="w-3 h-3" />
+                <span>Đậm</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => applyFormat('cyan', setSubheadline, 'leadmagnet-subheadline-input')}
+                title="Đổi màu Xanh Shofu"
+                className="px-2 py-0.5 rounded text-[11px] font-bold bg-sky-50 text-[#00ADEF] hover:bg-sky-100 border border-sky-200 shadow-2xs flex items-center gap-1"
+              >
+                <Palette className="w-3 h-3" />
+                <span>Xanh</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => applyFormat('red', setSubheadline, 'leadmagnet-subheadline-input')}
+                title="Đổi màu Đỏ"
+                className="px-2 py-0.5 rounded text-[11px] font-bold bg-red-50 text-[#C43838] hover:bg-red-100 border border-red-200 shadow-2xs flex items-center gap-1"
+              >
+                <Palette className="w-3 h-3" />
+                <span>Đỏ</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => applyFormat('amber', setSubheadline, 'leadmagnet-subheadline-input')}
+                title="Nổi bật vàng"
+                className="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-50 text-amber-800 hover:bg-amber-100 border border-amber-200 shadow-2xs flex items-center gap-1"
+              >
+                <Palette className="w-3 h-3" />
+                <span>Vàng</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => applyFormat('br', setSubheadline, 'leadmagnet-subheadline-input')}
+                title="Chèn ngắt dòng"
+                className="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-white text-slate-700 hover:text-black border border-slate-200 shadow-2xs"
+              >
+                &lt;br /&gt;
+              </button>
+            </div>
+          </div>
           <textarea
-            rows={2}
+            id="leadmagnet-subheadline-input"
+            rows={3}
             value={subheadline}
             onChange={(e) => setSubheadline(e.target.value)}
             className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-900 focus:border-[#00ADEF] outline-none leading-relaxed"
           />
-        </div>
-
-        <div>
-          <ImageUploaderField
-            label="Ảnh Bìa / Mockup Tài Liệu E-book"
-            badge="Lead Magnet Cover"
-            value={coverImage}
-            onChange={setCoverImage}
-            targetKey="leadmagnet-cover"
-            folder="images"
-            aspectRatio="h-36"
-            recommendation="Ảnh mockup sách E-book, cẩm nang lâm sàng hoặc video protocol"
-          />
+          <div className="mt-2 p-3 bg-slate-50 border border-slate-200 rounded-xl">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">
+              Xem trước HTML mô tả:
+            </span>
+            <div
+              className="text-xs text-slate-700 leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: subheadline || '(Chưa nhập mô tả)' }}
+            />
+          </div>
         </div>
       </div>
 
-      {/* 2. 4 Benefits List */}
+      {/* 2. Các điểm giá trị nổi bật của Cẩm nang (4) */}
       <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
         <div className="flex items-center justify-between">
           <h4 className="font-heading font-bold text-slate-900 text-sm uppercase tracking-wider flex items-center gap-2">
@@ -201,9 +308,27 @@ export const Section7LeadMagnetEditor: React.FC<Section7LeadMagnetEditorProps> =
         </div>
       </div>
 
-      {/* 3. CTA Form & Thanks Page Config */}
+      {/* 3. Ảnh Bìa / Mockup Tài Liệu E-book - NẰM PHÍA DƯỚI CÁC ĐIỂM GIÁ TRỊ NỔI BẬT CỦA CẨM NANG (CỘT BÊN TRÁI) */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-4">
+        <h4 className="font-heading font-bold text-slate-900 text-sm uppercase tracking-wider flex items-center gap-2">
+          <ImageIcon className="w-4 h-4 text-[#00ADEF]" />
+          <span>Ảnh Bìa / Mockup Tài Liệu E-book (Vị trí: Nằm phía dưới các điểm giá trị)</span>
+        </h4>
+        <ImageUploaderField
+          label="Ảnh Bìa / Mockup Tài Liệu E-book"
+          badge="Lead Magnet Cover"
+          value={coverImage}
+          onChange={setCoverImage}
+          targetKey="leadmagnet-cover"
+          folder="images"
+          aspectRatio="h-40"
+          recommendation="Ảnh mockup sách E-book, cẩm nang lâm sàng hoặc video protocol (nằm ở cột trái bên dưới các điểm giá trị)"
+        />
+      </div>
+
+      {/* 4. Cấu hình Form Thu Lead & Nút Đăng Ký */}
       <CtaFormConfigEditor
-        label="Nút Đăng Ký Nhận Tài Liệu & Điều Hướng Trang Cảm Ơn"
+        label="Nút Đăng Ký Nhận Tài Liệu & Cấu Hình Form Thu Lead Đồng Bộ"
         ctaText={ctaButtonText}
         onChangeCtaText={setCtaButtonText}
         formTitle={ctaFormTitle}
@@ -226,8 +351,9 @@ export const Section7LeadMagnetEditor: React.FC<Section7LeadMagnetEditorProps> =
           <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
             Xem trước Khối Nhận Tài Liệu Độc Quyền (Lead Magnet):
           </span>
-          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center">
-            <div className="flex-1 space-y-4">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-start">
+            {/* Cột bên trái: Badge + Headline + Subheadline + 4 Điểm nổi bật + ẢNH BÌA/MOCKUP DƯỚI CÙNG */}
+            <div className="flex-1 space-y-4 w-full">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-[#C43838] border border-red-100 text-xs font-bold">
                 <FileText className="w-3.5 h-3.5" />
                 <span>{badge || 'Tài Liệu Độc Quyền'}</span>
@@ -248,32 +374,78 @@ export const Section7LeadMagnetEditor: React.FC<Section7LeadMagnetEditorProps> =
                   </li>
                 ))}
               </ul>
-            </div>
 
-            <div className="w-full md:w-80 shrink-0 bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center space-y-3">
+              {/* Ảnh bìa / mockup cẩm nang nằm phía dưới các điểm giá trị nổi bật */}
               {coverImage && (
-                <div className="h-32 rounded-xl bg-white flex items-center justify-center p-2 border border-slate-200 mb-2 overflow-hidden">
-                  <img src={coverImage} alt="Ebook preview" className="max-h-full object-contain" />
+                <div className="pt-3">
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3 max-w-sm">
+                    <img 
+                      src={coverImage} 
+                      alt="Mockup E-book" 
+                      className="max-h-48 w-auto mx-auto object-contain drop-shadow-sm rounded-lg" 
+                    />
+                    <div className="text-[10px] text-center font-mono text-slate-400 mt-2">
+                      Ảnh mockup cẩm nang (cột trái)
+                    </div>
+                  </div>
                 </div>
               )}
-              <div className="space-y-2 text-left">
-                <div className="h-8 bg-white rounded-lg border border-slate-200 px-3 flex items-center text-xs text-slate-400">
-                  BS. Nguyễn Văn A
+            </div>
+
+            {/* Cột bên phải: Form thu lead đồng bộ */}
+            <div className="w-full md:w-96 shrink-0 bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3.5">
+              <div className="text-center pb-1 border-b border-slate-200/80">
+                <h5 className="font-heading font-bold text-sm text-slate-900">
+                  {ctaFormTitle || 'Đăng Ký Nhận Cẩm Nang & Báo Giá'}
+                </h5>
+                <p className="text-[11px] text-slate-500 mt-0.5">
+                  {ctaFormDesc || 'Điền thông tin để nhận bản mềm PDF qua Zalo & Email ngay lập tức'}
+                </p>
+              </div>
+
+              <div className="space-y-2.5 text-left text-xs">
+                <div>
+                  <span className="text-[10px] font-bold text-slate-500 uppercase block mb-1">Tên Bác sĩ / Nha khoa *</span>
+                  <div className="h-9 bg-white rounded-xl border border-slate-200 px-3 flex items-center text-slate-400">
+                    BS. Nguyễn Văn A
+                  </div>
                 </div>
-                <div className="h-8 bg-white rounded-lg border border-slate-200 px-3 flex items-center text-xs text-slate-400">
-                  0967 287 139
+                <div>
+                  <span className="text-[10px] font-bold text-slate-500 uppercase block mb-1">Số điện thoại (Zalo) *</span>
+                  <div className="h-9 bg-white rounded-xl border border-slate-200 px-3 flex items-center text-slate-400">
+                    0967 287 139
+                  </div>
                 </div>
-                <div className="h-8 bg-white rounded-lg border border-slate-200 px-3 flex items-center text-xs text-slate-400">
-                  bacsi@nhakhoa.com
+                <div>
+                  <span className="text-[10px] font-bold text-slate-500 uppercase block mb-1">Phòng khám / Nơi công tác *</span>
+                  <div className="h-9 bg-white rounded-xl border border-slate-200 px-3 flex items-center text-slate-400">
+                    Nha khoa Sài Gòn
+                  </div>
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold text-slate-500 uppercase block mb-1">Địa chỉ Email</span>
+                  <div className="h-9 bg-white rounded-xl border border-slate-200 px-3 flex items-center text-slate-400">
+                    bacsi@nhakhoa.com
+                  </div>
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold text-slate-500 uppercase block mb-1">Ghi chú / Nhu cầu</span>
+                  <div className="h-9 bg-white rounded-xl border border-slate-200 px-3 flex items-center text-slate-400">
+                    Gửi tài liệu bản in + báo giá
+                  </div>
                 </div>
               </div>
+
               <button
                 type="button"
-                className="w-full py-2.5 bg-[#00ADEF] text-white rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-xs"
+                className="w-full py-3 bg-[#00ADEF] text-white rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md shadow-sky-500/20"
               >
-                <Download className="w-3.5 h-3.5" />
+                <Download className="w-4 h-4" />
                 <span>{ctaButtonText || 'Nhận Tài Liệu Ngay'}</span>
               </button>
+              <p className="text-[10px] text-center text-slate-400">
+                Cam kết bảo mật thông tin tuyệt đối theo tiêu chuẩn Sota-D.
+              </p>
             </div>
           </div>
         </div>
