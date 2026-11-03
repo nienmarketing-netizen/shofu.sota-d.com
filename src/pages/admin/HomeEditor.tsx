@@ -173,10 +173,10 @@ export default function HomeEditor() {
   const [casesCtaText, setCasesCtaText] = useState<string>(() => initialData.caseStudies?.ctaText || 'Xem ưu đãi và đặt hàng');
   const [caseStudies, setCaseStudies] = useState<CaseStudyItem[]>(() => {
     const saved = initialData.caseStudies?.caseStudies;
-    if (!saved || saved.length < DEFAULT_HOME_DATA.caseStudies.caseStudies.length) {
-      return DEFAULT_HOME_DATA.caseStudies.caseStudies;
+    if (saved && Array.isArray(saved) && saved.length > 0) {
+      return saved;
     }
-    return saved;
+    return DEFAULT_HOME_DATA.caseStudies.caseStudies;
   });
 
   // --- 7. Lead Magnet States ---
@@ -395,12 +395,8 @@ export default function HomeEditor() {
       if (data.caseStudies.headline) setCasesHeadline(data.caseStudies.headline);
       if (data.caseStudies.subheadline) setCasesSubheadline(data.caseStudies.subheadline);
       if (data.caseStudies.ctaText) setCasesCtaText(data.caseStudies.ctaText);
-      if (data.caseStudies.caseStudies) {
-        if (data.caseStudies.caseStudies.length < DEFAULT_HOME_DATA.caseStudies.caseStudies.length) {
-          setCaseStudies(DEFAULT_HOME_DATA.caseStudies.caseStudies);
-        } else {
-          setCaseStudies(data.caseStudies.caseStudies);
-        }
+      if (data.caseStudies.caseStudies && Array.isArray(data.caseStudies.caseStudies)) {
+        setCaseStudies(data.caseStudies.caseStudies);
       }
     }
     if (data.leadMagnet) {
