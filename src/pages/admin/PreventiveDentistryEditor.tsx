@@ -57,6 +57,7 @@ export default function PreventiveDentistryEditor() {
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [saveMessage, setSaveMessage] = useState<string>('');
   const [commitSha, setCommitSha] = useState<string>('');
+  const [dataSource, setDataSource] = useState<'github' | 'local' | 'default'>('default');
   const [isLoadingInitialData, setIsLoadingInitialData] = useState<boolean>(false);
   const [isUploadingImage, setIsUploadingImage] = useState<boolean>(false);
   const [uploadingTarget, setUploadingTarget] = useState<string>('');
@@ -403,6 +404,8 @@ export default function PreventiveDentistryEditor() {
           const json = await res.json();
           if (json.success && json.data) {
             applyDataToState(json.data);
+            setDataSource(json.source || 'github');
+            if (json.sha) setCommitSha(json.sha.substring(0, 7));
             try {
               localStorage.setItem('shofu_preventive_dentistry_data', JSON.stringify(json.data));
             } catch (e) {}
@@ -410,6 +413,7 @@ export default function PreventiveDentistryEditor() {
         }
       } catch (err) {
         console.warn('Could not fetch from /api/cms/load, fallback to local file', err);
+        setDataSource('local');
       } finally {
         setIsLoadingInitialData(false);
       }
@@ -695,6 +699,12 @@ export default function PreventiveDentistryEditor() {
         </div>
 
         <div className="flex items-center gap-2.5">
+          {/* Source badge */}
+          <span className="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-slate-100 text-[11px] font-mono text-slate-600 border border-slate-200">
+            <span className={`w-2 h-2 rounded-full ${dataSource === 'github' ? 'bg-emerald-500' : 'bg-blue-500'}`}></span>
+            {isLoadingInitialData ? 'Đang nạp...' : (dataSource === 'github' ? 'GitHub Sync' : 'Local Data')}
+          </span>
+
           <a
             href="/giai-phap/nha-khoa-phong-ngua"
             target="_blank"
