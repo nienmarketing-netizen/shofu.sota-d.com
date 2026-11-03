@@ -13,6 +13,7 @@ import {
   ImageIcon 
 } from 'lucide-react';
 import { IonBioItem, AboutCardItem, AboutStatItem, applyFormat } from './types';
+import { ImageUploaderField } from '../components/ImageUploaderField';
 
 interface Section4AboutEditorProps {
   historyHeadline: string;
@@ -238,15 +239,16 @@ export const Section4AboutEditor: React.FC<Section4AboutEditorProps> = ({
             </div>
           ))}
 
-          <div className="p-3.5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-            <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider">
-              URL Ảnh Di sản Shofu 1922
-            </label>
-            <input
-              type="text"
+          <div className="sm:col-span-3">
+            <ImageUploaderField
+              label="Ảnh Di sản Shofu 1922 (Kyoto)"
+              badge="Lịch sử thương hiệu"
               value={historyImage}
-              onChange={(e) => setHistoryImage(e.target.value)}
-              className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 font-mono text-xs text-slate-800 bg-white focus:border-[#00ADEF] outline-none"
+              onChange={setHistoryImage}
+              targetKey="about-history-img"
+              folder="images"
+              aspectRatio="h-44"
+              recommendation="Ảnh tư liệu lịch sử Shofu Kyoto 1922"
             />
           </div>
         </div>
@@ -393,6 +395,77 @@ export const Section4AboutEditor: React.FC<Section4AboutEditorProps> = ({
           </div>
         </div>
       </div>
+
+      {/* Live Preview for Section 4 */}
+      {showLivePreview && (
+        <div className="bg-slate-900 rounded-2xl p-6 text-white space-y-6">
+          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+            Xem trước Khối Di sản & Công nghệ S-PRG:
+          </span>
+
+          {/* History Preview */}
+          <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div className="space-y-3">
+              <h4 
+                className="font-heading font-extrabold text-xl text-white uppercase"
+                dangerouslySetInnerHTML={{ __html: historyHeadline || 'Di sản Shofu' }}
+              />
+              <p 
+                className="text-xs text-slate-300 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: historyDesc1 }}
+              />
+              <p 
+                className="text-xs text-slate-400 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: historyDesc2 }}
+              />
+              <div className="flex gap-4 pt-2">
+                {historyStats.map((st, i) => (
+                  <div key={i} className="text-left">
+                    <span className="text-xl font-bold text-[#00ADEF] block">{st.value}</span>
+                    <span className="text-[10px] text-slate-400 uppercase">{st.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="h-44 rounded-xl bg-slate-900 flex items-center justify-center overflow-hidden border border-slate-700 p-2">
+              <img src={historyImage} alt="Shofu 1922" className="max-h-full object-contain mix-blend-screen" />
+            </div>
+          </div>
+
+          {/* 3 Layers Preview */}
+          <div className="space-y-3">
+            <h5 className="font-heading font-bold text-sm text-[#00ADEF] uppercase tracking-wider">
+              {layersHeadline || 'Cấu trúc 3 lớp bảo vệ'}
+            </h5>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              {layers.map((l, i) => (
+                <div key={i} className="p-3 bg-slate-800 rounded-xl border border-slate-700">
+                  <span className="text-xs font-mono font-bold text-[#C43838] block mb-1">
+                    Lớp {l.number}
+                  </span>
+                  <strong className="text-xs text-white block mb-1">{l.title}</strong>
+                  <p className="text-[11px] text-slate-400 leading-relaxed">{l.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 6 Ions Preview */}
+          <div className="space-y-3">
+            <h5 className="font-heading font-bold text-sm text-red-400 uppercase tracking-wider">
+              {ionsHeadline || 'Lá chắn 6 Ion sinh học'}
+            </h5>
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-2">
+              {ions.map((ion, idx) => (
+                <div key={idx} className="p-2.5 bg-slate-800 rounded-xl border border-slate-700 text-center">
+                  <span className="text-xs font-bold text-white block">{ion.name}</span>
+                  <span className="text-[10px] text-slate-400 block mt-0.5 leading-tight">{ion.desc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

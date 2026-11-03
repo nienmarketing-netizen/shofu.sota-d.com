@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { applyFormat } from './types';
 import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
+import { ImageUploaderField } from '../components/ImageUploaderField';
 
 interface Section7LeadMagnetEditorProps {
   badge: string;
@@ -146,14 +147,15 @@ export const Section7LeadMagnetEditor: React.FC<Section7LeadMagnetEditorProps> =
         </div>
 
         <div>
-          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-            URL Ảnh Bìa Tài Liệu
-          </label>
-          <input
-            type="text"
+          <ImageUploaderField
+            label="Ảnh Bìa / Mockup Tài Liệu E-book"
+            badge="Lead Magnet Cover"
             value={coverImage}
-            onChange={(e) => setCoverImage(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 font-mono text-xs text-slate-800 focus:border-[#00ADEF] outline-none"
+            onChange={setCoverImage}
+            targetKey="leadmagnet-cover"
+            folder="images"
+            aspectRatio="h-36"
+            recommendation="Ảnh mockup sách E-book, cẩm nang lâm sàng hoặc video protocol"
           />
         </div>
       </div>
@@ -217,6 +219,65 @@ export const Section7LeadMagnetEditor: React.FC<Section7LeadMagnetEditorProps> =
         resourceTitle={ctaResourceTitle}
         onChangeResourceTitle={setCtaResourceTitle}
       />
+
+      {/* Live Preview for Lead Magnet */}
+      {showLivePreview && (
+        <div className="bg-slate-100 border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-6">
+          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+            Xem trước Khối Nhận Tài Liệu Độc Quyền (Lead Magnet):
+          </span>
+          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1 space-y-4">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-[#C43838] border border-red-100 text-xs font-bold">
+                <FileText className="w-3.5 h-3.5" />
+                <span>{badge || 'Tài Liệu Độc Quyền'}</span>
+              </div>
+              <h4 
+                className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 leading-snug"
+                dangerouslySetInnerHTML={{ __html: headline || 'Tiêu đề tài liệu' }}
+              />
+              <p 
+                className="text-xs sm:text-sm text-slate-600 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: subheadline || 'Mô tả tài liệu' }}
+              />
+              <ul className="space-y-2 text-xs text-slate-700">
+                {benefits.map((b, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#00ADEF] shrink-0" />
+                    <span dangerouslySetInnerHTML={{ __html: b }} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="w-full md:w-80 shrink-0 bg-slate-50 p-5 rounded-2xl border border-slate-200 text-center space-y-3">
+              {coverImage && (
+                <div className="h-32 rounded-xl bg-white flex items-center justify-center p-2 border border-slate-200 mb-2 overflow-hidden">
+                  <img src={coverImage} alt="Ebook preview" className="max-h-full object-contain" />
+                </div>
+              )}
+              <div className="space-y-2 text-left">
+                <div className="h-8 bg-white rounded-lg border border-slate-200 px-3 flex items-center text-xs text-slate-400">
+                  BS. Nguyễn Văn A
+                </div>
+                <div className="h-8 bg-white rounded-lg border border-slate-200 px-3 flex items-center text-xs text-slate-400">
+                  0967 287 139
+                </div>
+                <div className="h-8 bg-white rounded-lg border border-slate-200 px-3 flex items-center text-xs text-slate-400">
+                  bacsi@nhakhoa.com
+                </div>
+              </div>
+              <button
+                type="button"
+                className="w-full py-2.5 bg-[#00ADEF] text-white rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-xs"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>{ctaButtonText || 'Nhận Tài Liệu Ngay'}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

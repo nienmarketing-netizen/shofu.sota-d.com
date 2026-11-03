@@ -370,6 +370,65 @@ export const Section3OffersEditor: React.FC<Section3OffersEditorProps> = ({
             />
           </div>
         ))}
+
+        {/* Live Preview of Package Cards */}
+        {showLivePreview && (
+          <div className="bg-slate-900 rounded-2xl p-6 text-white space-y-4">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+              Xem trước 2 Thẻ Combo Ưu đãi:
+            </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {packages.map((pkg) => (
+                <div key={pkg.id} className="bg-slate-800 rounded-2xl p-5 border border-slate-700 space-y-3 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-mono font-bold uppercase px-2.5 py-0.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/30">
+                        {pkg.badge}
+                      </span>
+                      <span className="text-[11px] font-mono text-amber-400 font-bold">
+                        {pkg.spotsLeftText}
+                      </span>
+                    </div>
+                    <h5 className="font-heading font-bold text-lg text-white">
+                      {pkg.title1}
+                    </h5>
+                    <p className="text-xs text-slate-400">
+                      {pkg.title2}
+                    </p>
+                    <p 
+                      className="text-xs text-slate-300 leading-relaxed pt-2 border-t border-slate-700/60"
+                      dangerouslySetInnerHTML={{ __html: pkg.description }}
+                    />
+                  </div>
+
+                  <div className="pt-3 border-t border-slate-700/80 space-y-3">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-xl font-extrabold text-[#00ADEF]">
+                        {pkg.salePrice}
+                      </span>
+                      {pkg.originalPrice && (
+                        <span className="text-xs text-slate-500 line-through">
+                          {pkg.originalPrice}
+                        </span>
+                      )}
+                    </div>
+                    <div className="text-[11px] text-emerald-400 font-medium flex items-center gap-1">
+                      <ShieldCheck className="w-3.5 h-3.5" />
+                      <span>{pkg.refundBadge}</span>
+                    </div>
+                    <button 
+                      type="button"
+                      className="w-full py-2.5 px-4 rounded-xl font-bold text-xs text-white uppercase tracking-wider"
+                      style={{ backgroundColor: pkg.accentColor || '#00ADEF' }}
+                    >
+                      {pkg.ctaText || 'Đặt mua ngay'}
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

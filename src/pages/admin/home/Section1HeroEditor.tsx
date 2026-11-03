@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { UspItem, applyFormat } from './types';
 import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
+import { ImageUploaderField } from '../components/ImageUploaderField';
 
 interface Section1HeroEditorProps {
   badgePrefix: string;
@@ -292,40 +293,26 @@ export const Section1HeroEditor: React.FC<Section1HeroEditorProps> = ({
           <span>3. Hình ảnh Banner Hero</span>
         </h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Ảnh chính (Desktop)
-            </label>
-            <input
-              type="text"
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 font-mono text-xs text-slate-900 focus:border-[#00ADEF] outline-none mb-2"
-              placeholder="/images/...webp hoặc URL ảnh"
-            />
-            {image && (
-              <div className="h-28 rounded-xl bg-slate-100 border border-slate-200 overflow-hidden flex items-center justify-center p-2">
-                <img src={image} alt="Hero desktop" className="max-h-full object-contain" />
-              </div>
-            )}
-          </div>
-          <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Ảnh phụ (Mobile / Banner thu gọn)
-            </label>
-            <input
-              type="text"
-              value={mobileImage}
-              onChange={(e) => setMobileImage(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 font-mono text-xs text-slate-900 focus:border-[#00ADEF] outline-none mb-2"
-              placeholder="/images/...webp hoặc URL ảnh"
-            />
-            {mobileImage && (
-              <div className="h-28 rounded-xl bg-slate-100 border border-slate-200 overflow-hidden flex items-center justify-center p-2">
-                <img src={mobileImage} alt="Hero mobile" className="max-h-full object-contain" />
-              </div>
-            )}
-          </div>
+          <ImageUploaderField
+            label="Ảnh chính (Desktop PC)"
+            badge="Khuyên dùng 1200x800px"
+            value={image}
+            onChange={setImage}
+            targetKey="hero-desktop"
+            folder="images"
+            aspectRatio="h-36"
+            recommendation="Ảnh PNG/WebP trong suốt tách nền hoặc banner ngang độ phân giải cao"
+          />
+          <ImageUploaderField
+            label="Ảnh phụ (Mobile / Thu gọn)"
+            badge="Khuyên dùng 600x500px"
+            value={mobileImage}
+            onChange={setMobileImage}
+            targetKey="hero-mobile"
+            folder="images"
+            aspectRatio="h-36"
+            recommendation="Ảnh tối ưu cho khung nhìn điện thoại di động"
+          />
         </div>
       </div>
 

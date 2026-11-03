@@ -10,6 +10,7 @@ import {
   UserCheck 
 } from 'lucide-react';
 import { TestimonialItem, applyFormat } from './types';
+import { ImageUploaderField } from '../components/ImageUploaderField';
 
 interface Section5SocialProofEditorProps {
   headline: string;
@@ -194,15 +195,15 @@ export const Section5SocialProofEditor: React.FC<Section5SocialProofEditorProps>
               </div>
 
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">
-                  URL Ảnh đại diện (Avatar)
-                </label>
-                <input
-                  type="text"
+                <ImageUploaderField
+                  label={`Ảnh chân dung ${t.name || 'Bác sĩ'}`}
+                  badge="Avatar Bác sĩ"
                   value={t.avatar}
-                  onChange={(e) => handleUpdateTestimonial(t.id, 'avatar', e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-slate-300 font-mono text-[11px] text-slate-700 bg-white focus:border-[#00ADEF] outline-none"
-                  placeholder="https://... hoặc /images/..."
+                  onChange={(url) => handleUpdateTestimonial(t.id, 'avatar', url)}
+                  targetKey={`doctor-avatar-${t.id}`}
+                  folder="images"
+                  aspectRatio="h-28"
+                  recommendation="Khuyên dùng ảnh chân dung chụp chính diện tỉ lệ 1:1"
                 />
               </div>
 
@@ -220,6 +221,44 @@ export const Section5SocialProofEditor: React.FC<Section5SocialProofEditorProps>
             </div>
           ))}
         </div>
+
+        {/* Live Preview for Testimonials */}
+        {showLivePreview && (
+          <div className="p-4 rounded-xl bg-slate-100 border border-slate-200 mt-6 space-y-3">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+              Xem trước Thẻ Đánh giá Chuyên gia:
+            </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {testimonials.map((t, idx) => (
+                <div key={t.id || idx} className="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs space-y-3 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <Quote className="w-6 h-6 text-slate-300" />
+                    <span className="font-heading font-bold text-sm text-slate-900 block">
+                      {t.topic}
+                    </span>
+                    <p className="text-xs text-slate-600 italic leading-relaxed">
+                      "{t.content}"
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 pt-3 border-t border-slate-100">
+                    <img
+                      src={t.avatar}
+                      alt={t.name}
+                      className="w-10 h-10 rounded-full object-cover border border-slate-200"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="%2394a3b8" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg>';
+                      }}
+                    />
+                    <div>
+                      <strong className="text-xs text-slate-900 block font-heading">{t.name}</strong>
+                      <span className="text-[11px] text-slate-500 block">{t.role}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

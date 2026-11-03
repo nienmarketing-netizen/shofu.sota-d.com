@@ -10,6 +10,7 @@ import {
   ChevronUp 
 } from 'lucide-react';
 import { CaseStudyItem, applyFormat } from './types';
+import { ImageUploaderField } from '../components/ImageUploaderField';
 
 interface Section6CaseStudiesEditorProps {
   headline: string;
@@ -29,6 +30,7 @@ export const Section6CaseStudiesEditor: React.FC<Section6CaseStudiesEditorProps>
   setCaseStudies,
 }) => {
   const [expandedCaseId, setExpandedCaseId] = useState<number | null>(1);
+  const [showLivePreview, setShowLivePreview] = useState(true);
 
   const handleUpdateCase = (id: number, field: keyof CaseStudyItem, val: any) => {
     setCaseStudies(prev => prev.map(c => c.id === id ? { ...c, [field]: val } : c));
@@ -85,6 +87,14 @@ export const Section6CaseStudiesEditor: React.FC<Section6CaseStudiesEditorProps>
               Ca Lâm Sàng Tiêu Biểu (Case Studies)
             </h3>
           </div>
+          <button
+            type="button"
+            onClick={() => setShowLivePreview(!showLivePreview)}
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#00ADEF] bg-sky-50 hover:bg-sky-100 border border-sky-200 px-3 py-1.5 rounded-xl transition-colors"
+          >
+            <Eye className="w-3.5 h-3.5" />
+            <span>{showLivePreview ? 'Ẩn Preview' : 'Xem Live Preview'}</span>
+          </button>
         </div>
         <p className="text-xs text-slate-500">
           Quản lý các ca lâm sàng, ảnh bìa, ghi chú từng bước điều trị và vật liệu Shofu áp dụng.
@@ -186,14 +196,15 @@ export const Section6CaseStudiesEditor: React.FC<Section6CaseStudiesEditorProps>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-                      URL Ảnh bìa ca
-                    </label>
-                    <input
-                      type="text"
+                    <ImageUploaderField
+                      label={`Ảnh bìa ca ${cs.title || 'lâm sàng'}`}
+                      badge={`Case #${cs.id}`}
                       value={cs.coverImage}
-                      onChange={(e) => handleUpdateCase(cs.id, 'coverImage', e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-slate-300 font-mono text-xs text-slate-800 focus:border-[#00ADEF] outline-none"
+                      onChange={(url) => handleUpdateCase(cs.id, 'coverImage', url)}
+                      targetKey={`case-cover-${cs.id}`}
+                      folder="images"
+                      aspectRatio="h-36"
+                      recommendation="Ảnh vuông hoặc tỉ lệ 4:3 rõ nét"
                     />
                   </div>
 
@@ -227,7 +238,7 @@ export const Section6CaseStudiesEditor: React.FC<Section6CaseStudiesEditorProps>
 
                     <div className="space-y-3">
                       {cs.images.map((img, imgIdx) => (
-                        <div key={imgIdx} className="p-3.5 rounded-xl border border-slate-200 bg-slate-50 space-y-2 relative group">
+                        <div key={imgIdx} className="p-3.5 rounded-xl border border-slate-200 bg-slate-50 space-y-3 relative group">
                           <div className="flex items-center justify-between gap-2">
                             <span className="text-[11px] font-mono font-bold text-slate-500">
                               Bước 0{imgIdx + 1}
@@ -241,23 +252,27 @@ export const Section6CaseStudiesEditor: React.FC<Section6CaseStudiesEditorProps>
                             </button>
                           </div>
 
-                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                             <div>
-                              <input
-                                type="text"
+                              <ImageUploaderField
+                                label={`Ảnh bước ${imgIdx + 1}`}
                                 value={img.url}
-                                onChange={(e) => handleUpdateStepImage(cs.id, imgIdx, 'url', e.target.value)}
-                                className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 font-mono text-[11px] text-slate-800 bg-white outline-none"
-                                placeholder="URL ảnh bước..."
+                                onChange={(url) => handleUpdateStepImage(cs.id, imgIdx, 'url', url)}
+                                targetKey={`case-${cs.id}-step-${imgIdx}`}
+                                folder="images"
+                                aspectRatio="h-28"
                               />
                             </div>
-                            <div className="sm:col-span-2">
-                              <input
-                                type="text"
+                            <div className="sm:col-span-2 space-y-1">
+                              <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+                                Chú thích bước thực hiện (Hỗ trợ HTML)
+                              </label>
+                              <textarea
+                                rows={4}
                                 value={img.note}
                                 onChange={(e) => handleUpdateStepImage(cs.id, imgIdx, 'note', e.target.value)}
-                                className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs text-slate-900 bg-white outline-none"
-                                placeholder="Chú thích bước thực hiện (hỗ trợ HTML)..."
+                                className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs text-slate-900 bg-white outline-none leading-relaxed"
+                                placeholder="<strong class='text-slate-900'>Bước:</strong> ..."
                               />
                             </div>
                           </div>
@@ -271,6 +286,37 @@ export const Section6CaseStudiesEditor: React.FC<Section6CaseStudiesEditorProps>
           );
         })}
       </div>
+
+      {/* Live Preview for Case Studies */}
+      {showLivePreview && (
+        <div className="p-6 rounded-2xl bg-slate-100 border border-slate-200 space-y-4">
+          <div className="flex items-center justify-between">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+              Xem trước Lưới Thư Viện Case Studies (Instagram-style):
+            </span>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {caseStudies.map((cs) => (
+              <div key={cs.id} className="relative aspect-square rounded-xl bg-slate-800 overflow-hidden group shadow-xs">
+                <img
+                  src={cs.coverImage}
+                  alt={cs.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="%2394a3b8" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/></svg>';
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-3 text-white">
+                  <span className="text-[9px] font-mono font-bold text-[#00ADEF] uppercase">Case #{cs.id}</span>
+                  <strong className="text-xs font-heading font-bold truncate">{cs.title}</strong>
+                  <span className="text-[10px] text-slate-300 truncate" dangerouslySetInnerHTML={{ __html: cs.doctor }} />
+                  <span className="text-[9px] text-slate-400 mt-1 font-mono">{cs.images.length} bước</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

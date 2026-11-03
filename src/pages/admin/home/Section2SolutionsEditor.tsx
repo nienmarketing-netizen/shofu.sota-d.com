@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { SolutionCardItem, BestsellerProductItem, applyFormat } from './types';
 import { CtaFormConfigEditor } from '../components/CtaFormConfigEditor';
+import { ImageUploaderField } from '../components/ImageUploaderField';
 
 interface Section2SolutionsEditorProps {
   headline: string;
@@ -268,13 +269,16 @@ export const Section2SolutionsEditor: React.FC<Section2SolutionsEditorProps> = (
           {bestsellers.map((prod) => (
             <div key={prod.id} className="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-3 flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-full aspect-[16/9] rounded-lg bg-white border border-slate-200 overflow-hidden flex items-center justify-center p-1">
-                  {prod.image ? (
-                    <img src={prod.image} alt={prod.name} className="max-h-full object-contain" />
-                  ) : (
-                    <ImageIcon className="w-6 h-6 text-slate-300" />
-                  )}
-                </div>
+                <ImageUploaderField
+                  label={prod.name || 'Ảnh sản phẩm'}
+                  badge={prod.category}
+                  value={prod.image}
+                  onChange={(url) => handleUpdateProduct(prod.id, 'image', url)}
+                  targetKey={`bestseller-${prod.id}`}
+                  folder="image"
+                  aspectRatio="h-28"
+                  recommendation="Ảnh sản phẩm nền trắng/trong suốt"
+                />
 
                 <div>
                   <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">
@@ -311,23 +315,41 @@ export const Section2SolutionsEditor: React.FC<Section2SolutionsEditorProps> = (
                     className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-[11px] text-slate-600 bg-white focus:border-[#00ADEF] outline-none"
                   />
                 </div>
-
-                <div>
-                  <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">
-                    URL hình ảnh
-                  </label>
-                  <input
-                    type="text"
-                    value={prod.image}
-                    onChange={(e) => handleUpdateProduct(prod.id, 'image', e.target.value)}
-                    className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 font-mono text-[10px] text-slate-700 bg-white focus:border-[#00ADEF] outline-none"
-                    placeholder="URL ảnh sản phẩm"
-                  />
-                </div>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Live Preview for Bestsellers */}
+        {showLivePreview && (
+          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 mt-4 space-y-3">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+              Xem trước hiển thị Bestseller Showcase:
+            </span>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {bestsellers.map((prod) => (
+                <div key={prod.id} className="p-3 bg-white rounded-xl border border-slate-200 text-center shadow-xs">
+                  <div className="h-20 flex items-center justify-center p-1 mb-2 bg-slate-50 rounded-lg">
+                    {prod.image ? (
+                      <img src={prod.image} alt={prod.name} className="max-h-full object-contain" />
+                    ) : (
+                      <ImageIcon className="w-5 h-5 text-slate-300" />
+                    )}
+                  </div>
+                  <span className="text-[9px] font-mono text-[#00ADEF] uppercase font-bold block truncate">
+                    {prod.category}
+                  </span>
+                  <strong className="text-xs text-slate-900 block truncate mt-0.5">
+                    {prod.name}
+                  </strong>
+                  <p className="text-[10px] text-slate-500 truncate mt-0.5">
+                    {prod.tagline}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* 4. CTA Button & Popup / Thanks Page Config */}
