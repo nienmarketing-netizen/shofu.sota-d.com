@@ -5,6 +5,7 @@ import { UserCheck, QrCode, CheckCircle2, AlertCircle, Building, Phone, User, Lo
 import { Button } from './ui/Button';
 import { toPng } from 'html-to-image';
 import { useBodyScrollLock } from '../utils/scrollLock';
+import { getMetaCookies, getTargetAccount } from '../utils/metaTracking';
 
 export const RegistrationForm: React.FC = () => {
  const [fullName, setFullName] = useState('');
@@ -91,6 +92,9 @@ export const RegistrationForm: React.FC = () => {
     setFormSubmitted(true);
     setShowPopup(true);
     
+    const { _fbp, _fbc } = getMetaCookies();
+    const targetAccount = getTargetAccount();
+
     // Tracking sự kiện đăng ký thành công
     if (typeof window !== 'undefined') {
       const win = window as any;
@@ -98,8 +102,9 @@ export const RegistrationForm: React.FC = () => {
       win.dataLayer.push({
         event: 'generate_lead',
         form_name: 'VIDEC 2024 Registration',
-          event_id: eventId,
-        });
+        event_id: eventId,
+        target_account: targetAccount,
+      });
     }
     // Bắn CAPI Meta
     try {
@@ -110,9 +115,12 @@ export const RegistrationForm: React.FC = () => {
           email: "",
           phone: phone,
           formName: 'VIDEC 2024 Registration',
-          eventSourceUrl: typeof window !== 'undefined' ? window.location.href : '',
-            event_id: eventId
-          })
+          eventSourceUrl: typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : '',
+          event_id: eventId,
+          _fbp,
+          _fbc,
+          targetAccount,
+        })
       }).catch(err => console.error('Lỗi khi đẩy CAPI ngầm:', err));
     } catch (capiErr) {
       console.error('Lỗi khi đẩy CAPI:', capiErr);

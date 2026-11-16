@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Download, FileText, CheckCircle2, Loader2, ArrowRight, Building2, User, Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
 import { motion } from 'motion/react';
 import { HomeLeadMagnetSection } from '../../pages/admin/home/types';
+import { getMetaCookies, getTargetAccount } from '../../utils/metaTracking';
 
 interface ShofuLeadMagnetProps {
   data?: HomeLeadMagnetSection;
@@ -71,6 +72,9 @@ export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
       setIsSubmitting(false);
       setIsSubmitted(true);
 
+      const { _fbp, _fbc } = getMetaCookies();
+      const targetAccount = getTargetAccount();
+
       // Tracking GTM & dataLayer
       if (typeof window !== 'undefined') {
         const win = window as any;
@@ -79,6 +83,7 @@ export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
           event: 'generate_lead',
           form_name: data?.ctaFormTitle || 'Lead Magnet E-book',
           event_id: eventId,
+          target_account: targetAccount,
         });
       }
 
@@ -92,7 +97,10 @@ export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
             phone: formData.phone,
             formName: data?.ctaFormTitle || 'Lead Magnet E-book',
             eventSourceUrl: typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : '',
-            event_id: eventId
+            event_id: eventId,
+            _fbp,
+            _fbc,
+            targetAccount,
           })
         }).catch(err => console.error('Lỗi khi đẩy CAPI ngầm:', err));
       } catch (capiErr) {

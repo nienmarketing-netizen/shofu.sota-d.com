@@ -1,8 +1,41 @@
+import "dotenv/config";
 import express from "express";
 import path from "path";
 import fs from "fs";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
+
+function normalizePhone(phone?: string): string | undefined {
+  if (!phone || typeof phone !== "string") return undefined;
+
+  let digits = phone.replace(/[^\d]/g, "");
+  if (!digits) return undefined;
+
+  if (digits.startsWith("0084")) {
+    digits = digits.slice(2);
+  }
+  if (digits.startsWith("840")) {
+    digits = "84" + digits.slice(3);
+  } else if (digits.startsWith("0")) {
+    digits = "84" + digits.slice(1);
+  }
+
+  if (digits.startsWith("84")) {
+    return `+${digits}`;
+  }
+
+  return `+${digits}`;
+}
+
+function sanitizeEventSourceUrl(rawUrl?: string): string | undefined {
+  if (typeof rawUrl !== "string" || !rawUrl.trim()) return undefined;
+  try {
+    const u = new URL(rawUrl.trim());
+    return `${u.protocol}//${u.host}${u.pathname}`;
+  } catch {
+    return rawUrl.split("?")[0].split("#")[0];
+  }
+}
 
 async function startServer() {
   const app = express();
@@ -86,61 +119,190 @@ async function startServer() {
   });
 
   
-  // Meta CAPI Endpoint
+  // Meta CAPI Endpoint (Multi-account routing + Phone E.164 normalization + _fbp/_fbc)
   app.post("/api/meta-capi", async (req, res) => {
     try {
-      const { email, phone, formName, eventSourceUrl, event_id } = req.body;
-      
-      const PIXEL_ID = "3049027828780371";
-      const ACCESS_TOKEN = "EAAzL5m13KeABSUZAKUekFNzN8fuKak9erfFU2ccK1P78wxHAY2yaUlZCH9hBPAmq2pOjEeY82MRbdgkPlBka2yqWdMePdIfL4yXeplZBwFrfezrDndqZBzHRapMKCy4zKPOI6POpn30nvuYtva9DZBTVQGfXnHjmQnIVTudMYT2lZBZCZA6a05wHqJgRtOzRKQZDZD";
+      const {
+        email,
+        phone,
+        formName,
+        eventSourceUrl,
+        event_id,
+        eventId,
+        _fbp,
+        _fbc,
+        fbp,
+        fbc,
+        targetAccount,
+      } = req.body || {};
 
-      const crypto = await import("crypto");
-      const hash = (str) => {
-        if (!str) return undefined;
-        return crypto.createHash("sha256").update(str.trim().toLowerCase()).digest("hex");
+      const finalEventId = event_id || eventId;
+
+      const accountKey = String(targetAccount || "A").trim().toUpperCase() === "B" ? "B" : "A";
+      const accountConfigs: Record<"A" | "B", { pixelId?: string; accessToken?: string; testEventCode?: string }> = {
+        A: {
+          pixelId: process.env.PIXEL_ID_1,
+          accessToken: process.env.CAPI_TOKEN_1,
+          testEventCode: process.env.TEST_EVENT_CODE_1,
+        },
+        B: {
+          pixelId: process.env.PIXEL_ID_2,
+          accessToken: process.env.CAPI_TOKEN_2,
+          testEventCode: process.env.TEST_EVENT_CODE_2,
+        },
       };
 
-      const clientIp = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
-      const userAgent = req.headers["user-agent"];
+      const { pixelId, accessToken, testEventCode } = accountConfigs[accountKey];
+
+      if (!pixelId || !accessToken) {
+        console.error(`Missing Meta CAPI credentials in environment variables for Account ${accountKey}`);
+        return res.status(500).json({
+          success: false,
+          error: `Missing Meta CAPI configuration for Account ${accountKey}`,
+        });
+      }
+
+      const crypto = await import("crypto");
+      const hashSha256 = (str?: string) => {
+        if (!str || typeof str !== "string") return undefined;
+        const cleaned = str.trim().toLowerCase();
+        if (!cleaned) return undefined;
+        return crypto.createHash("sha256").update(cleaned).digest("hex");
+      };
+
+      const normalizedEmail = typeof email === "string" ? email.trim().toLowerCase() : undefined;
+      const normalizedPhone = normalizePhone(phone);
+
+      const hashedEmail = hashSha256(normalizedEmail);
+      const hashedPhone = hashSha256(normalizedPhone);
+
+      const rawForwardedIp = req.headers["x-forwarded-for"];
+      const clientIp =
+        (Array.isArray(rawForwardedIp)
+          ? rawForwardedIp[0]
+          : typeof rawForwardedIp === "string"
+          ? rawForwardedIp.split(",")[0].trim()
+          : "") ||
+        req.socket.remoteAddress ||
+        "";
+      const userAgent = req.headers["user-agent"] || "";
+
+      const finalFbp = typeof (_fbp || fbp) === "string" ? (_fbp || fbp).trim() : undefined;
+      const finalFbc = typeof (_fbc || fbc) === "string" ? (_fbc || fbc).trim() : undefined;
+
+      const userData = {
+        ...(clientIp ? { client_ip_address: clientIp } : {}),
+        ...(userAgent ? { client_user_agent: userAgent } : {}),
+        ...(hashedEmail ? { em: hashedEmail } : {}),
+        ...(hashedPhone ? { ph: hashedPhone } : {}),
+        ...(finalFbp ? { fbp: finalFbp } : {}),
+        ...(finalFbc ? { fbc: finalFbc } : {}),
+      };
+
+      const sanitizedUrl = sanitizeEventSourceUrl(eventSourceUrl);
 
       const payload = {
         data: [
           {
             event_name: "Lead",
             event_time: Math.floor(Date.now() / 1000),
-            event_id: event_id,
+            ...(finalEventId ? { event_id: finalEventId } : {}),
             action_source: "website",
-            event_source_url: eventSourceUrl,
-            user_data: {
-              client_ip_address: clientIp,
-              client_user_agent: userAgent,
-              em: hash(email),
-              ph: hash(phone)
-            },
+            ...(sanitizedUrl ? { event_source_url: sanitizedUrl } : {}),
+            user_data: userData,
             custom_data: {
-              form_name: formName
-            }
-          }
-        ]
+              form_name: formName,
+              target_account: accountKey,
+            },
+          },
+        ],
+        ...(testEventCode ? { test_event_code: testEventCode } : {}),
       };
 
-      const response = await fetch(`https://graph.facebook.com/v19.0/${PIXEL_ID}/events?access_token=${ACCESS_TOKEN}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
+      const response = await fetch(
+        `https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${accessToken}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
 
       const data = await response.json();
-      
+
       if (!response.ok) {
-        console.error("Meta CAPI Error:", data);
-        return res.status(400).json({ success: false, error: data });
+        console.error(`Meta CAPI Error (Account ${accountKey}):`, data);
+        return res.status(400).json({ success: false, account: accountKey, error: data });
       }
 
-      res.json({ success: true, data });
+      return res.json({ success: true, account: accountKey, data });
     } catch (err: any) {
       console.error("Meta CAPI Server Error:", err);
-      res.status(500).json({ success: false, error: err.message });
+      return res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+  // Meta CAPI Trigger Test Endpoint (GET only)
+  app.get("/api/trigger-test", async (req, res) => {
+    res.set("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+    res.set("Pragma", "no-cache");
+    res.set("Expires", "0");
+
+    try {
+      const crypto = await import("crypto");
+      const nowMs = Date.now();
+      const eventId = `test_${crypto.randomUUID()}`;
+
+      const rawProto = req.headers["x-forwarded-proto"];
+      const proto = (Array.isArray(rawProto) ? rawProto[0] : rawProto || "http")
+        .split(",")[0]
+        .trim();
+      const rawHost = req.headers["x-forwarded-host"] || req.headers.host || `localhost:${PORT}`;
+      const host = (Array.isArray(rawHost) ? rawHost[0] : rawHost).split(",")[0].trim();
+
+      const internalCapiUrl = `http://127.0.0.1:${PORT}/api/meta-capi`;
+
+      const mockPayload = {
+        targetAccount: "A",
+        email: "qa.doctor@shofu-test.vn",
+        phone: " 090 123-4567 ",
+        formName: "Trigger Test Endpoint (Account A)",
+        eventSourceUrl: `${proto}://${host}/api/trigger-test`,
+        event_id: eventId,
+        _fbp: `fb.1.${nowMs}.123456789`,
+        _fbc: `fb.1.${nowMs}.IwAR0TriggerTestFbclid123456789`,
+      };
+
+      const forwardHeaders: Record<string, string> = {
+        "Content-Type": "application/json",
+      };
+      if (req.headers["user-agent"]) {
+        forwardHeaders["User-Agent"] = String(req.headers["user-agent"]);
+      }
+      if (req.headers["x-forwarded-for"]) {
+        forwardHeaders["x-forwarded-for"] = String(req.headers["x-forwarded-for"]);
+      }
+
+      const capiResponse = await fetch(internalCapiUrl, {
+        method: "POST",
+        headers: forwardHeaders,
+        body: JSON.stringify(mockPayload),
+      });
+
+      const rawText = await capiResponse.text();
+      try {
+        const capiJson = JSON.parse(rawText);
+        return res.status(capiResponse.status).json(capiJson);
+      } catch {
+        return res.status(capiResponse.status).json({
+          success: false,
+          error: "Non-JSON response from /api/meta-capi",
+          raw: rawText,
+        });
+      }
+    } catch (err: any) {
+      console.error("Trigger Test Error:", err);
+      return res.status(500).json({ success: false, error: err.message });
     }
   });
 

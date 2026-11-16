@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, Gift, ShoppingCart, CheckCircle, ArrowRight, Tag, ShieldCheck, CheckCircle2, Package, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useBodyScrollLock } from '../../utils/scrollLock';
+import { getMetaCookies, getTargetAccount } from '../../utils/metaTracking';
 import { SpecialOfferItem } from '../../pages/admin/home/types';
 
 interface ShofuOfferModalProps {
@@ -273,6 +274,9 @@ export function ShofuOfferModal({ specialOffers, formTitle, formDesc }: ShofuOff
       setIsSubmitting(false);
       setIsSuccess(true);
 
+      const { _fbp, _fbc } = getMetaCookies();
+      const targetAccount = getTargetAccount();
+
       // Tracking sự kiện đăng ký thành công
       if (typeof window !== 'undefined') {
         const win = window as any;
@@ -281,6 +285,7 @@ export function ShofuOfferModal({ specialOffers, formTitle, formDesc }: ShofuOff
           event: 'generate_lead',
           form_name: modalMode === 'combo' ? offerDetails[activeOfferId].name : 'Sản phẩm lẻ',
           event_id: eventId,
+          target_account: targetAccount,
         });
       }
       // Bắn CAPI Meta
@@ -293,7 +298,10 @@ export function ShofuOfferModal({ specialOffers, formTitle, formDesc }: ShofuOff
             phone: formData.phone,
             formName: modalMode === 'combo' ? offerDetails[activeOfferId].name : 'Sản phẩm lẻ',
             eventSourceUrl: typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : '',
-            event_id: eventId
+            event_id: eventId,
+            _fbp,
+            _fbc,
+            targetAccount,
           })
         }).catch(err => console.error('Lỗi khi đẩy CAPI ngầm:', err));
       } catch (capiErr) {

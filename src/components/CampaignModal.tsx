@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { X, CheckCircle } from 'lucide-react';
 import { useBodyScrollLock } from '../utils/scrollLock';
+import { getMetaCookies, getTargetAccount } from '../utils/metaTracking';
 
 interface CampaignModalProps {
   isOpen: boolean;
@@ -101,6 +102,9 @@ export function CampaignModal({
 
       const effectiveFormName = formTitle || title;
       
+      const { _fbp, _fbc } = getMetaCookies();
+      const targetAccount = getTargetAccount();
+
       // Tracking sự kiện đăng ký thành công
       if (typeof window !== 'undefined') {
         const win = window as any;
@@ -109,7 +113,8 @@ export function CampaignModal({
           event: 'generate_lead',
           form_name: effectiveFormName,
           event_id: eventId,
-          cta_id: ctaId || ''
+          cta_id: ctaId || '',
+          target_account: targetAccount,
         });
       }
       // Bắn CAPI Meta
@@ -121,8 +126,11 @@ export function CampaignModal({
             email: "",
             phone: formData.phone,
             formName: effectiveFormName,
-            eventSourceUrl: typeof window !== 'undefined' ? window.location.href : '',
-            event_id: eventId
+            eventSourceUrl: typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : '',
+            event_id: eventId,
+            _fbp,
+            _fbc,
+            targetAccount,
           })
         }).catch(err => console.error('Lỗi khi đẩy CAPI ngầm:', err));
       } catch (capiErr) {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, CheckCircle2 } from 'lucide-react';
 import { useBodyScrollLock } from '../utils/scrollLock';
+import { getMetaCookies, getTargetAccount } from '../utils/metaTracking';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -89,6 +90,9 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
       setIsSubmitting(false);
       setIsSuccess(true);
       
+      const { _fbp, _fbc } = getMetaCookies();
+      const targetAccount = getTargetAccount();
+
       // Tracking sự kiện đăng ký thành công
       if (typeof window !== 'undefined') {
         const win = window as any;
@@ -97,6 +101,7 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
           event: 'generate_lead',
           form_name: title,
           event_id: eventId,
+          target_account: targetAccount,
         });
       }
       // Bắn CAPI Meta
@@ -108,8 +113,11 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
             email: "",
             phone: formData.phone,
             formName: title,
-            eventSourceUrl: typeof window !== 'undefined' ? window.location.href : '',
-            event_id: eventId
+            eventSourceUrl: typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : '',
+            event_id: eventId,
+            _fbp,
+            _fbc,
+            targetAccount,
           })
         }).catch(err => console.error('Lỗi khi đẩy CAPI ngầm:', err));
       } catch (capiErr) {
