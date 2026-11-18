@@ -113,7 +113,7 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
             email: "",
             phone: formData.phone,
             formName: title,
-            eventSourceUrl: typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : '',
+            eventSourceUrl: typeof window !== 'undefined' ? window.location.origin : '',
             event_id: eventId,
             _fbp,
             _fbc,

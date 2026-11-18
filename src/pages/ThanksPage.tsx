@@ -4,14 +4,29 @@ import { CheckCircle2, Download, ArrowLeft, Phone, ExternalLink } from 'lucide-r
 
 export default function ThanksPage() {
   const [searchParams] = useSearchParams();
-  const ctaId = searchParams.get('cta_id') || '';
-  const ctaName = searchParams.get('cta_name') || 'Yêu cầu của Quý Bác sĩ';
-  const targetUrl = searchParams.get('target_url') || '';
-  const resourceTitle = searchParams.get('resource_title') || 'Truy Cập / Tải Tài Liệu Ngay';
+
+  const storedData = React.useMemo(() => {
+    if (typeof window === 'undefined') return null;
+    try {
+      const raw = window.sessionStorage.getItem('shofu_thanks_payload');
+      return raw ? JSON.parse(raw) : null;
+    } catch {
+      return null;
+    }
+  }, []);
+
+  const ctaId = searchParams.get('cta_id') || storedData?.ctaId || '';
+  const ctaName = searchParams.get('cta_name') || storedData?.ctaName || 'Yêu cầu của Quý Bác sĩ';
+  const targetUrl = searchParams.get('target_url') || searchParams.get('targetUrl') || storedData?.targetUrl || '';
+  const resourceTitle = searchParams.get('resource_title') || searchParams.get('resourceTitle') || storedData?.resourceTitle || 'Truy Cập / Tải Tài Liệu Ngay';
 
   useEffect(() => {
-    // Tracking lượt truy cập Thanks Page
     if (typeof window !== 'undefined') {
+      // Làm sạch thanh địa chỉ ngay lập tức để Meta Pixel (GTM PageView) không thu thập chuỗi query nhạy cảm
+      if (window.location.search) {
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+
       const win = window as any;
       win.dataLayer = win.dataLayer || [];
       win.dataLayer.push({

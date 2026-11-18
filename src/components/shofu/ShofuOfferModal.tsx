@@ -297,7 +297,7 @@ export function ShofuOfferModal({ specialOffers, formTitle, formDesc }: ShofuOff
             email: "",
             phone: formData.phone,
             formName: modalMode === 'combo' ? offerDetails[activeOfferId].name : 'Sản phẩm lẻ',
-            eventSourceUrl: typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : '',
+            eventSourceUrl: typeof window !== 'undefined' ? window.location.origin : '',
             event_id: eventId,
             _fbp,
             _fbc,

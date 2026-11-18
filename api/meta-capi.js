@@ -26,9 +26,10 @@ function sanitizeEventSourceUrl(rawUrl) {
   if (typeof rawUrl !== "string" || !rawUrl.trim()) return undefined;
   try {
     const u = new URL(rawUrl.trim());
-    return `${u.protocol}//${u.host}${u.pathname}`;
+    // Chỉ giữ lại Root Domain (origin) để tránh các từ khóa nha khoa/y tế trong đường dẫn (/giai-phap/nha-khoa-...) bị bộ lọc Health & Wellness của Meta chặn
+    return `${u.protocol}//${u.host}/`;
   } catch {
-    return rawUrl.split("?")[0].split("#")[0];
+    return undefined;
   }
 }
 

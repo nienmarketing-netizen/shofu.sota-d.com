@@ -115,7 +115,7 @@ export const RegistrationForm: React.FC = () => {
           email: "",
           phone: phone,
           formName: 'VIDEC 2024 Registration',
-          eventSourceUrl: typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : '',
+          eventSourceUrl: typeof window !== 'undefined' ? window.location.origin : '',
           event_id: eventId,
           _fbp,
           _fbc,

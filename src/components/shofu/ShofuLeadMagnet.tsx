@@ -96,7 +96,7 @@ export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
             email: formData.email || '',
             phone: formData.phone,
             formName: data?.ctaFormTitle || 'Lead Magnet E-book',
-            eventSourceUrl: typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : '',
+            eventSourceUrl: typeof window !== 'undefined' ? window.location.origin : '',
             event_id: eventId,
             _fbp,
             _fbc,
@@ -108,10 +108,19 @@ export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
       }
 
       if (data?.ctaRedirectThanks) {
-        const params = new URLSearchParams();
-        if (data.ctaTargetUrl) params.set('targetUrl', data.ctaTargetUrl);
-        if (data.ctaResourceTitle) params.set('resourceTitle', data.ctaResourceTitle);
-        window.location.href = `/thanks?${params.toString()}`;
+        try {
+          window.sessionStorage.setItem(
+            'shofu_thanks_payload',
+            JSON.stringify({
+              ctaName: data?.ctaFormTitle || 'Lead Magnet E-book',
+              targetUrl: data.ctaTargetUrl || '',
+              resourceTitle: data.ctaResourceTitle || '',
+            })
+          );
+        } catch {
+          // Ignore storage error
+        }
+        window.location.href = '/thanks';
       }
     })
     .catch(err => {
@@ -119,10 +128,19 @@ export function ShofuLeadMagnet({ data }: ShofuLeadMagnetProps = {}) {
       setIsSubmitting(false);
       setIsSubmitted(true);
       if (data?.ctaRedirectThanks) {
-        const params = new URLSearchParams();
-        if (data.ctaTargetUrl) params.set('targetUrl', data.ctaTargetUrl);
-        if (data.ctaResourceTitle) params.set('resourceTitle', data.ctaResourceTitle);
-        window.location.href = `/thanks?${params.toString()}`;
+        try {
+          window.sessionStorage.setItem(
+            'shofu_thanks_payload',
+            JSON.stringify({
+              ctaName: data?.ctaFormTitle || 'Lead Magnet E-book',
+              targetUrl: data.ctaTargetUrl || '',
+              resourceTitle: data.ctaResourceTitle || '',
+            })
+          );
+        } catch {
+          // Ignore storage error
+        }
+        window.location.href = '/thanks';
       }
     });
   };

@@ -126,7 +126,7 @@ export function CampaignModal({
             email: "",
             phone: formData.phone,
             formName: effectiveFormName,
-            eventSourceUrl: typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : '',
+            eventSourceUrl: typeof window !== 'undefined' ? window.location.origin : '',
             event_id: eventId,
             _fbp,
             _fbc,
@@ -138,13 +138,21 @@ export function CampaignModal({
       }
 
       if (redirectThanks) {
-        const params = new URLSearchParams();
-        if (ctaId) params.set('cta_id', ctaId);
-        params.set('cta_name', effectiveFormName);
-        if (targetUrl) params.set('target_url', targetUrl);
-        if (resourceTitle) params.set('resource_title', resourceTitle);
+        try {
+          window.sessionStorage.setItem(
+            'shofu_thanks_payload',
+            JSON.stringify({
+              ctaId: ctaId || '',
+              ctaName: effectiveFormName,
+              targetUrl: targetUrl || '',
+              resourceTitle: resourceTitle || '',
+            })
+          );
+        } catch {
+          // Ignore storage error
+        }
         onClose();
-        navigate(`/thanks?${params.toString()}`);
+        navigate('/thanks');
       } else {
         setIsSuccess(true);
       }
